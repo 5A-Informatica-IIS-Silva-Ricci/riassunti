@@ -1,0 +1,673 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Italo Calvino</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="18c77d1a-48dc-42ba-9459-dcf91a91af6b" class="page serif"><header><div class="page-header-icon undefined"><span class="icon">⛰️</span></div><h1 class="page-title">Italo Calvino</h1><table class="properties"><tbody><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data nascita</th><td>1923</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Anni vita</th><td>62</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data morte</th><td>1985</td></tr></tbody></table></header><div class="page-body"><nav id="f1ebc667-1735-47c3-8689-10f190bf9880" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a1097b08-deb3-4068-87b3-af9116dd1ab6">Biografia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ab324100-037e-4875-be7a-3eeeafb9727f">La scrittura “realistica”</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#55987325-a559-47f3-a763-7780c8f95431">Il sentiero dei nidi di ragno</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b95fe33-eb8d-4a82-abf6-12a48a4c9962">La scrittura fantastico fiabesca e la riflessione sui problemi sociali</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#27fb2b87-a409-4e6f-81f5-098b7a6764d0">Riassunto</a></div></nav><h1 id="a1097b08-deb3-4068-87b3-af9116dd1ab6" class="">Biografia</h1><p id="75267110-d9db-4330-bb00-429a503a290a" class="">Italo Calvino si è sempre presentato come un uomo <strong>riluttante a parlarse di sé, </strong>dati biografici non ne dava mai o li dava falsi.</p><p id="bbb90f41-0bae-4012-8cf8-ac81ca51818a" class="">Erano inoltre ben note la sua <strong>timidezza</strong> nel parlare e la sua indole restia a condurre una conversazione.</p><p id="ae303bfe-ed21-487e-b16d-0c388d5846db" class="">Eppure ha rilasciato nella sua vita più di <strong>duecento interviste</strong>.</p><p id="a5165f25-117e-4719-adbc-21c7340ee5b4" class="">Come si spiega questa <strong>contraddizione?</strong> Consapevole della funzione che l’intellettuale riveste nella società del secondo Novecento, Calvino non si sottrae alle domande e al confronto, e accetta il suo ruolo pubblico, tuttavia è molto <strong>attento alla propria immagne.</strong></p><p id="290950c8-7cfe-4a26-b4ec-26f4fe5b7613" class="">Porge con discrezione una chiave di lettura di sé, quella dell’uomo coerente ma no nstatico, mai appagato né immobile.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1a1d3b8c-7d7b-4e49-8ebf-68ec9de5f81c"><div style="font-size:1.5em"><span class="icon">🐣</span></div><div style="width:100%">Italo Calvino nasce nel <strong>1923</strong> in una famiglia di scienziati</div></figure><p id="06d70647-e0a4-4bf4-8f25-f50546ec1f2a" class="">Il padre è un agronomo di fama internazionale, la madre è laureata in scienze naturali.</p><p id="171b8694-af70-43e2-a719-b41cfe61943c" class="">Tuttavia quello <strong>sguardo scientifico sulla realtà</strong> a cui Calvino sembra dichiararsi estraneo non manca di alsciare tracce nella sua produzione letteraria, manifestandosi come desiderio di esattezza.</p><p id="f6b52e78-6200-45ff-a725-bd304344f839" class="">Proprio a causa dell’attività lavorativa del padre Calvino nasce lontano dall’Italia, a <strong>Santiago de Las Vegas, </strong>a Cuba.</p><p id="5e2423e4-bb1f-4185-8621-06bbdb389ee9" class="">Il paesaggio che però continuerà a ripresentarsi nei suoi libri come ambiente naturale persistente è quello di Sanremo, in Liguria, dove la sua famiglia si trasferisce a metà degli anni Venti.</p><p id="5128a903-6f23-4d83-8150-cf8b88bee787" class="">A quell’epoca Sanremo rappresenta una cittadina <strong>cosmopolita</strong>, luogo d’incontro popolato di figure interessanti ed eccentriche provenienti da tutta Europa.</p><p id="9438db48-1e13-41ac-8a8c-c375c6c880e7" class="">Qui Calvino trascorre l’infanzia e l’adolecenza, in un <strong>ambiente benestante e laico</strong>, senza una vera consapevolezza dei contrasti politici che agitano l’Italia fascista.</p><p id="959209d0-4fe7-4a6c-a585-768a6ce8e0b1" class="">I suoi genitori sono ostili a Mussolini, ma più per un rifiuto dell’arroganza e della volgarità fasciste che per una vera scelta politica; per molto tempo il giovane Calvino non sente la necessità di assumere posizioni nette.</p><p id="57a89b54-6136-4f26-80be-8de219656e76" class="">Negli anni liceali scrive i <strong>primi racconti</strong>, ma la sua passione per la letteratura resta un <strong>segreto inconfessabile</strong> in famiglia.</p><p id="9dca42d2-3901-4e50-a765-8a9056674eef" class="">Per tradizione familiare si iscrive dunque alla <strong>facoltà di Agraria</strong> a Torino e sostiene i primi esami.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="01e30d31-9059-463e-8e14-7800ead94990"><div style="font-size:1.5em"><span class="icon">💭</span></div><div style="width:100%">Nel 1943 la sua posizione politica diviene più definita: festeggia con gli amici la caduta di Mussolini.</div></figure><p id="8d11a4ea-5b7b-41c9-abd0-2679d528575b" class="">Poi, l’8 Settembre 1943, <strong>si sottrae alla chiamata alle armi</strong> della Repubblica di Salò e nel 1944 si unisce ad una brigata comunista.</p><p id="c65f30d5-0562-4782-8311-1f0baf70e791" class="">L’esperienza della <strong>guerra partigiana</strong> segna per lui il passaggio da una fase della vita ad un’altra: dal mondo protetto del ragazzo borghese si vede improvvisamente proiettato in una condizione adulta.</p><p id="ab64d9da-7dfb-42c6-872e-88a2d4a41db2" class="">Nelle brigate dei partigiani percepisce contraddizioni ed elementi incomprensibili, ma anche un desiderio di riscatto.</p><p id="fee3020a-15f7-4b2f-a21e-88f13e99e4ee" class="">Nel dopoguerra pertanto aderisce al Partito comunista e inizia un periodo di <strong>attiva militanza politica.</strong></p><hr id="c7722c29-eb10-4b28-88cf-02fa6249b626"/><p id="18747c49-e575-4747-8a40-87b324ec8548" class="">Nel 1945 si trasferisce a Torino, abbandona gli studi di agraria e si iscrive a Lettere; diviene <strong>amico di Cesare Pavese.</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a5957bf0-0bac-4901-ad72-c441ed73d8cc"><div style="font-size:1.5em"><span class="icon">💼</span></div><div style="width:100%">Il 1946 è l’anno in cui Calvino inizia a collaborare con la casa Editrice Einaudi, e il suo primo incarico è quello di <strong>vendere libri a rate.</strong></div></figure><p id="19bc07bc-f93f-449c-a4c2-624a989c3ed6" class="">Non è un periodo semplice dal punto di vista economico; vive in una “gelida soffitta torinese” vicina alla stazione.</p><p id="60d9ee5c-63ca-441e-871b-5a73e8ed334e" class="">Spesso per guadagnare qualcosa rivende l’olio ligure portato da casa.</p><p id="a9dba29d-6351-444f-8061-0ece2ae95da8" class="">Riesce però a pubblicare alcuni racconti sui quotidiani e in pochi mesi scrive il suo <strong>primo romanzo, </strong><em>Il sentiero dei nidi di ragno</em>, dedicato all’esperienza della lotta partigiana, che l’editore Einaudi accetta di pubblicare nel 1947.</p><p id="daa4ae5f-5455-42d7-8a2a-d1498b4b7ee8" class="">Progressivamente la posizione di Calvino presso Einaudi diviene più significativa: passa a occuparsi dell’ufficio stampa, poi dal 1950 è <strong>assunto</strong> stabilmente <strong>come redattore.</strong></p><p id="0fd31399-5458-408c-863a-3987ed7111a0" class="">Tra i suoi compiti vi è anche quello di <strong>esaminare manoscritti </strong>e di rispondere a coloro che non saranno mai scelti per la pubblicazione.</p><p id="9905168c-68ae-4d99-bb10-b9dde1dd916f" class="">Nella casa editrice Calvino ha soprattutto la possibliità di <strong>inserirsi nel gruppo intellettuale </strong>che più di ogni altro delinea il panorama culturale italiano del dopoguerra.</p><hr id="d2e2cbfe-ceaa-478b-9ca9-6f25d85aee4c"/><p id="6d2bdb3c-dbdc-4d92-8771-56497337cdd0" class="">Fondamentale nella giovinezza di Calvino è <strong>l’esperienza politica</strong>.</p><p id="9d4c837f-d02e-40ea-af6c-b004bffbed0a" class="">Con l’adesione al Partito comuinsta inizia per lui un periodo di attiva militanza.</p><p id="12d94e9c-4ef2-4e8b-b7ac-f949a3f1db9e" class="">Collabora con l’organo principale del partito, partecipa a incontri e dibattiti, si accosta al movimento operaio.</p><p id="c74a3dfa-9138-4b93-bed3-149df5442c10" class="">Tuttavia in lui viene maturando un <strong>dissidio</strong> tra il desiderio di essere al servizio della verità e della giustizia sociale e l’obbligo di giustificare i metodi autoritari sovietici per ordine del partito.</p><p id="450513d9-0ee7-4d88-b6ff-6f2abcae8d7b" class="">Quando nel 1956 il segretario Chruscev denuncia i crimini di Stalin e apre un percorso di rinnovamento, Calvino si impegna nel dibattito interno al PCI affinchè il partito elabori una <strong>linea italiana per il comunismo</strong>, pienamente autonoma da quella sovietica.</p><p id="4fae9f96-234e-4797-9d08-5675695a599a" class="">Le sue attese però vanno deluse: nell’ottobre del 1956 <strong>la rivoluzione ungherese</strong> viene <strong>repressa con violenza </strong>dai carri armati russi.</p><p id="98955456-1478-4a80-b464-eb80e858ef36" class="">Calvino <strong>lascia il partito</strong> e rinuncia alla collaborazione con “l’Unità”, spiegando le sue ragioni in un lungo articolo nell’agosto del <strong>1957</strong>.</p><p id="8085d1c1-dcb2-4b10-ab69-5b5ba9f027ca" class="">Dopo alcuni mesi di silenzio, Calvino si impegna nuovamente su <strong>temi d’attualità</strong> e scrive alcuni lucidi saggi sulla crisi dello spirito rivoluzionario e sulle avanguardie ideologiche marxiste.</p><p id="79541953-ad80-489e-a90b-9fc1147fbd12" class="">Nella sua esperienza di narratore, Calvino ha manifestato un continuo desiderio di “cambiare rotta”, di <strong>ricercare</strong> sempre <strong>forme espressive nuove.</strong></p><p id="e1fb0117-b503-49d3-b5dd-1e133fcee4fa" class="">Negli anni Cinquanta pubblica una <strong>trilogia di racconti fantastico - allegorici </strong>(<em>Il visconte dimezzato, il barone rampante, il cavaliere inesistente), </em>cura una scelta e trascrizione di duecento <strong>fiabe</strong> della tradizione folkloristica regionale, raccoglie una cospicua antologia di suoi <em><strong>Racconti</strong></em> e scrive un libro che affronta in modo diretto una realtà problematica del presente.</p><p id="781fe31c-9b20-4059-8485-655f36cafa4c" class="">La critica si mostra fin dall’inizio piuttosto ben disposta nei suoi confronti, ma la sua <strong>notorietà</strong> si consolida soprattutto <strong>negli anni Sessanta,</strong> e Calvino riceve molte <strong>offerte di collaborazioni</strong> da parte di quotidiani, riviste, cinema, teatro, televisione.</p><p id="abae4689-e288-465c-b9e0-a5844fd85b40" class="">Davanti a tante richieste il suo atteggiamento oscilla tra la curiosità e il timore di disperdersi. Si può dire che Calvino riesca a coniugare la disponibilità a esplorare i nuovi mezzi di comunicazione con la <strong>disciplina rigorosa</strong> necessaria alla scrittura.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="bcb67ef5-0014-4bdb-878b-2fd0d653e9c4"><div style="font-size:1.5em"><span class="icon">🔖</span></div><div style="width:100%">Nel 1963 pubblica altri due <strong>testi realistici </strong>e un <strong>romanzo per ragazzi</strong> a metà strada tra il filone fiabesco e quello realistico.</div></figure><p id="cb9cb22f-4f3a-4357-8833-3e5f36d0e26c" class="">Seguono <strong>raccolte di racconti</strong> che sviluppano in modo fantastico ipotesi e formule scientifiche.</p><hr id="fbea1f2a-18be-45e9-9c4a-2bad4888df47"/><p id="971382d4-8f1e-4eb2-8837-00a316d8a9bb" class="">Nel 1980 Calvino raccoglie i suoi principali contributi saggistici nel libro <em>Una pietra sopra</em><strong><em>, </em></strong>con il quale sembra voler chiudere la stagione dell’”<strong>impegno”</strong>, ricapitolando le tappe del suo percorso di <strong>intellettuale</strong> chiamato a offrire nella sua epoca storica una <strong>chiave di lettura del reale</strong></p><p id="59770397-fd07-4c71-acdc-78c04ac545f2" class="">Calvino ne indica le tre principali fasi, corrispondenti all’incirca a tre decenni:<div class="indented"><ul id="a567b9c8-a2b4-43fa-8cfe-ecf6cbd897c9" class="bulleted-list"><li style="list-style-type:disc">il <strong>momento militante</strong> (anni Cinquanta), in cui ha creduto che la narrativa avesse una valenza politica;</li></ul><ul id="9ecafa24-32e5-4d0f-828c-9f9111882d1b" class="bulleted-list"><li style="list-style-type:disc">la <strong>scoperta della complessità</strong> (anni Sessanta), quando la società gli è parsa “sempre meno padroneggiabile”;</li></ul><ul id="d9c2699c-1b3a-47a2-8bf8-415c72c4b5ad" class="bulleted-list"><li style="list-style-type:disc">la <strong>perplessità sistematica</strong> (anni Settanta), in cui viene meno la sua fiducia nella possibilità di indirizzare il corso degli eventi.</li></ul></div></p><p id="c318635a-b137-4074-82b8-acb0f5b8a79c" class="">Anche nelal narrativa Calvino assume il <strong>ruolo dell’osservatore distaccato,</strong> che convoglia ogni energia nella descrizione.</p><hr id="305d7c63-1ff0-4ceb-a943-088dbad2942d"/><p id="90feb0e4-718c-45b0-9e86-8ecb6272a480" class="">Calvino dunque <strong>interpreta</strong> come scrittore e come intellettuale <strong>quarant’anni di cultura italiana: </strong>attraversa diverse correnti letterarie, come il Neorealismo.</p><p id="f8b4ec79-26e2-4733-bdf1-3a68feb0e596" class="">Negli ultimi anni appare sempre meno ottimista: anche di fronte alla <strong>fatica di comprendere il mondo</strong>, non rinuncia mai a tenere desta una vigile <strong>fiducia nelle capacità della ragione</strong>, secondo il modello del razionalismo settecentesco.</p><hr id="f1729f0b-6124-4b7c-ba85-c52f7e657b62"/><p id="cf5a47bd-06ed-4912-b35d-caf4a9ddf8a1" class="">Nell’estate <strong>1985 </strong>Calvino labora a un <strong>ciclo di lezioni</strong> che gli è stato chiesto dall’Università di Harvard, ma è colto da un malore improvviso.</p><p id="194d8b47-367f-4616-9336-d935f824afb0" class="">Viene ricoverato in un ospedale di Siena e muore pochi giorni dopo.</p><p id="2396efc2-7570-4113-a996-123ae6d60d3f" class="">Gli appunti di quegli interventi usciranno postumi con il titolo di <em>Lezioni americane</em> e suggeriscono cinque <strong>valori da conservare</strong> per il nuovo millennio: “Leggerezza”, “Rapidità”, “Esattezza”, “Visibilità”, “Molteplicità”.</p><p id="8832c717-a579-450c-b269-5548d9f3a320" class="">
+</p><hr id="d10c44f1-011d-4917-bfb5-560a9f8def80"/><p id="e5de8c90-7e9b-46e7-90bd-76a71bd93831" class="">
+</p><h2 id="ab324100-037e-4875-be7a-3eeeafb9727f" class="">La scrittura “realistica”</h2><p id="a6c695ef-95c8-4977-8d54-fa929717896b" class="">La partecipazione alla Resistenza è fondamentale per la formazione umana e politica di Calivino.</p><p id="42a04508-3d42-4987-bed2-a9d12b294f8a" class="">I mesi che trascorre insieme con le brigate partigiane comuniste sulle Preapli liguri sono per lui molto duri, ma gli permettono di <strong>sentirsi parte di un momento storico </strong>decisivo.</p><p id="92ebf25a-acda-43fb-81b7-b7620f226cce" class="">Dopo la liberazione avverte quindi come molti altri l’urgenza di raccontare, di rappresentare in tutta la loro concretezza fatti, personaggi, ambienti; desidera però trovare un modo per unire la forza dell’esperienza con la necessaria distanza dalla situazione personale, per potere creare una <strong>rappresentazione</strong> esemplare, in quale modo <strong>epica</strong>, in cui tutti si possano rispecchiare.</p><p id="ea9158f3-e286-4925-9f6c-25f6f1d9aef0" class="">Sceglie dunque di ispirarsi a un ragazzino reale conosciuto nelle formazioni partigiane e di renderlo protagonista di una <strong>storia inventata, </strong>in cui affiorano persone e ricordi concreti, ma che vengono modificati e deformati dall’immaginazione.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="fa55170a-6001-4e27-a236-9632be3ebd23"><div style="font-size:1.5em"><span class="icon">🔖</span></div><div style="width:100%">Nasce così il romanzo <em><strong>Il sentiero dei nidi di ragno</strong></em>, scritto in pochi mesi e pubblicato dall’editore Einaudi.</div></figure><p id="db6c2a3c-57f9-4caa-a86b-4a0ad72a151a" class="">
+</p><p id="6f87aa61-c4ad-47d5-8446-04a5d7599299" class=""><em>Il sentiero dei nidi di ragno</em> può essere letto in molti modi.</p><p id="55ee0c44-a9d3-48c9-888f-ccc6128c410a" class="">É un romanzo picaresco, ossia una narrazione che vede come protagonisti <strong>uomini di condizione sociale umile</strong><em><strong>, </strong></em>che cercano di sopravvivere grazie a una serie di espedienti e attraverso vicende tragiche e grottesche.</p><p id="9984efce-0126-46af-8478-ae1a0ec3d147" class="">Nonostante i limiti umani e culturali di coloro che hanno combattuto,  per Calvino gli <strong>ideali</strong> della Resistenza restano validi e <strong>degni di essere perseguiti</strong>. Come spiega nel libro il commisario Kim, alcuni lottano per la terra, altri per migliori condizioni di lavoro, altri per vaghe idee intellettuali, altri ancora per il desiderio di una casa lontana; in tutti comunque c’è un autentico <strong>furore</strong>, una spinta di <strong>riscatto umano</strong>.</p><p id="41b0720f-8502-41b9-8468-5167c99b2507" class="">Proprio questa tensione morale trasforma anche i peggiori tra i partigiani in <strong>protagonisti attivi e generosi.</strong></p><p id="8c11123e-5983-4ea2-b302-513e59200508" class="">Nel primo romanzo di Calvino emergono anche molti elementi propri della narrazione fiabesca.</p><p id="369ce5bc-fa71-454a-a77d-b3e19d171aa7" class="">Ad esempio, il personaggio principale è un bambino che passa attraverso <strong>numerose avventure e prove; </strong>esiste un <strong>luogo misterioso</strong> e segreto in cui può rifugiarsi e nascondere il suo <strong>tesoro, </strong>sognando di portarvi l’amico ideale; la <strong>pistola</strong> è “<strong>l’oggetto magico”</strong> che dovrebbe servirgli per entrare definitivamente nel mondo degli adulti; <strong>l’apparizione</strong> di Cugino nella nebbia ricorda quella di un gigante buono, per l’aspetto fisico massiccio e il linguaggio burbero ma gentile; il gesto di Pin che getta dietro di sé nel bosco nòccioli di ciliegia, sperando così di farsi ritrovare da Lupo Rosso <strong>rinvia alla fiaba di Pollicino.</strong></p><p id="79239ca2-9607-4aa2-92ac-4f39a1fd28a8" class="">Quella di Pin è anche la storia di una formazione mancata.</p><p id="af052853-3b7b-4ae4-b251-447049464874" class="">Pin è un bambino gettato nel mondo degli adulti, che si finge forte e spregiudicato parlando di armi e di donne, ma che di fatto <strong>continua a essere infantile</strong>: si abbandona ai sogni e alle fantasie, cerca protezione, desidera un vero amico, vorrebbe che i grandi si interessassero come lui alle tane dei ragni.</p><p id="0cb15ae1-435b-4b24-98ae-9fe78414fdef" class="">Alla fine del libro Pin è convinto che Cugino si rechi da sua sorella come cliente, mentre il partigiano va ad ucciderla, in quanto spia dei fascisti, proprio con la pistola prestatagli dal ragazzino.</p><p id="38e27bbd-dc48-425e-9970-656587553946" class="">Pin non è sfiorato dal sospetto, anzi, crede con gioia alla bugia che Cugino gli racconta al suo ritorno, e <strong>si lascia prendere per mano</strong>, come un bambino accanto ad un padre.</p><p id="5a8c7c5d-a4e3-4091-aa97-3c0bea7f2e6e" class="">Il percorso di formazione non si è compiuto: il bambino <strong>rimane</strong> tale, o forse Pin, che era stato costretto troppo presto a mostrarsi grande, è finalmente libero di essere un bambino inconsapevole, protetto da una figura paterna nella notte.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="fdb5a760-4d48-4709-bb36-ce563cccebc7"><div style="font-size:1.5em"><span class="icon">🔖</span></div><div style="width:100%">Tra il 1945 e il 1948 Calvino scrive anche una <strong>trentina di racconti</strong> che confluiscono nel volume <em>Ultimo viene il corvo</em>, pubblicato nel 1949.</div></figure><p id="cefd6b01-c9c7-4867-8bf3-dd26badd3ea8" class="">Le storie sviluppano memorie legate alla Resistenza e alla guerra, ricordi dell’infanzia ligure, vicende ambientate nella difficile situazione sociale ed economica dell’immediato dopoguerra.</p><p id="fba0c00a-b287-4865-b196-e3e0fef07f03" class="">I protagonisti sono ragazzini, e Calvino <strong>esplora possibillità narrative</strong> differenti, compiendo veri e propri “<strong>esercizi di stile”</strong>.</p><hr id="b3b00b8b-8239-433a-98bc-d4e2f388854b"/><p id="0a3b3c50-d0d4-41f1-8e4d-2eafd0aa6d88" class="">
+</p><h1 id="55987325-a559-47f3-a763-7780c8f95431" class="">Il sentiero dei nidi di ragno</h1><p id="e8cf4246-95b3-476b-ac46-8cdf18d9fdef" class="">Per una nuova edizione del <em>Sentiero dei nidi di ragno</em> apparsa nel 1964, Calvino scrive una lunga <em>Prefazione</em>, che si presenta come una <strong>riflessione dell’autore sulla propria opera.</strong></p><p id="47006a50-5282-4cd4-abba-12a6f7994aba" class="">Tutti coloro che avevano vissuto la guerra e la Resistenza erano carichi di <strong>storie da raccontare</strong> e in un momento in cui finalmente era di nuovo possibile <strong>esprimersi in libertà</strong> si andava accumulando una sorta di “<strong>tradizione orale</strong>”.</p><p id="c2f5d16a-f48f-409d-9952-49e4adb39560" class="">Secondo Calvino, <em>I Malavoglia </em>di Giovanni <strong>Verga</strong> erano i <strong>punti di riferimento</strong> per i giovani scrittori desiderosi soprattutto di riuscire a trovare un modo per trasformare il “materiale grezzo” dell’esperienza in un’opera letteraria in grado di esprimere “il sapore aspro della vita”.</p><p id="5549afdd-c5fb-4063-b318-08930403d563" class="">Calvino individua come radice del Neorealismo proprio questa <strong>ricerca di una forma</strong> in grado di dare sapore di verità a contenuti urgenti; egli sentiva di <strong>avere a disposizione un paesaggio suo.</strong></p><p id="c28b6783-97a2-4ba8-bdab-5eca6b208f75" class="">L’autore ripete più volte che <em>Il sentiero dei nidi di ragno</em><strong><em><em> </em></em></strong>è il <strong>primo romanzo</strong> che ha scritto, e ne <strong>sottolinea alcuni limiti</strong> che attrivuisce alla sua ingenuità giovanile: il tentativo quasi folkloristico di inserire espressioni in dialetto, modi di dire popolari e canzoni.</p><p id="2ccac3dd-b2f1-47ba-b3d6-1c89e5f3ac22" class="">Sentendosi protagonista di un <strong>momento decisivo della storia</strong>, Calvino avverte una <strong>responsabilità</strong> che rischia di paralizzarlo: per questo adotta il <strong>punto di vista di un bambino</strong>, per raccontare gli eventi da una prospettiva inconsueta.</p><p id="d2ea01b0-94f7-4e3f-9c19-e099dd9b1291" class="">Il modo in cui Pin guarda gli adulti corrisponde simbolicamente a quello con cui Calvino, affronta la <strong>realtà brutale della guera partigiana.</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="761db96c-3440-4f79-a562-a1add6e80542"><div style="font-size:1.5em"><span class="icon">💭</span></div><div style="width:100%">Lo scrittore non intende rappresentare la guerra partigiana in modo celebrativo e retorico, mostrando la <strong>realtà</strong> anche <strong>imperfetta e brutale</strong> del mondo partigiano, vuole dimostrare ai benpensanti che anche coloro che si erano gettati nella lotta senza motivazioni ideali e con tanti difetti umani erano comunque divenuti delle “forze storiche attive”, erano stati spinti da uno <strong>slancio che li aveva resi migliori.</strong><p id="88ec9977-7442-48c4-ba1c-254b9b34fd27" class="">Calvino afferma di avere voluto scrivere imitando lo stile asciutto di <strong>Hemingway</strong> e la sincerità e il vigore degli scrittori russi degli anni Venti.</p></div></figure><p id="6f7f618d-b116-4c54-816c-ad26bea4e4e9" class="">Da questo insieme di suggestioni letterarie è derivato al <em>Sentiero dei nidi di ragno</em> un inconfondibile <strong>tono fiabesco</strong> che Pavese è stato il primo a notare, e che Calvino riconosce come uno degli elementi caratteristici del proprio stile.</p><p id="9e5d5ca2-25ed-414f-b9a5-6469e15221f6" class="">La riflessione di Calvino si chiude con l’ammissione di una parziale sconfitta. Non è <em>Il sentiero dei nidi di ragno</em> il romanzo “epico” della Resistenza.</p><p id="69cdb946-927c-41a2-92b2-14715c6ac1ce" class="">Infine, ripensando alla propria esperienza, Calvino si rimprovera per non avere avuto la pazienza di <strong>custodire più a lungo quel patrimonio di memorie.</strong></p><p id="f83545af-1436-4eb5-b7f0-b43745470c05" class="">La <strong>scrittura a “caldo”</strong> infatti secondo Calvino brucia i ricordi, ne fissa alcuni in una forma definitiva e cancella tutti gli altri.</p><hr id="6ae8f143-979d-4987-a114-7116fb12292c"/><h1 id="2b95fe33-eb8d-4a82-abf6-12a48a4c9962" class="">La scrittura fantastico fiabesca e la riflessione sui problemi sociali</h1><p id="892c7093-00d2-4eb7-8d44-19c46896cada" class="">Poco prima della sua morte improvvisa, Calvino spiega di avere ideato a metà degli anni Cinquanta tre racconti lunghi realistici accomunati dalla scelta di una <strong>forma narrativa tradizionale</strong>, dalla volontà di <strong>indagare temi del presente</strong> e di mostrare la reazione di un intellettuale di fronte agli aspetti negativi della società e della condizione umana in generale.</p><p id="88946584-9136-4a7d-a4ed-fc99be4710e4" class="">Si tratta di <em>La speculazione edilizia, La giorna d’uno scrutatore, La nuvola di smog.</em></p><p id="c17e909e-a0a7-407f-a693-c819d635cd6a" class="">Sebbene continui a trattare temi di attualità in romanzi realistici come <em>La speculazione</em> <em>edilizia </em>e <em>La nuvola di smog</em>, negli anni Cinquanta Calvino si dedica soprattuttto alla <strong>narrazione fantastico - fiabesca</strong> e ciò lo espone al rischio di essere accusato di “<strong>disimpegno intellettuale</strong>”.</p><p id="8faa043e-9ac7-410a-a491-2aebb554a399" class="">In realtà il tentativo di Calvino è quello di <strong>coniugare leggerezza e impegno</strong><em><strong><strong>: </strong></strong></em>egli inventa storie inverosimili perchè ha ben presente la natura pedagogica della fiaba, che contiene sempre un ammaesstramento morale.</p><p id="4aae03e4-4dbb-4456-9645-df8dc69afb4d" class="">Scrive pertanto tre romanzi che prendono spunto da <strong>immagini fantastiche</strong> ma che intendono rappresentare <strong>tematiche esistenziali dell’uomo contemporaneo.</strong></p><p id="8b205c80-ee75-4537-b8fe-4eb74d5c0a8d" class="">Di questo periodo fanno parte: <em>Il visconte dimezzato, Il barone rampante, Il cavaliere inesistente.</em></p><p id="ce9b4550-0417-40f5-8763-388736e422f9" class="">Nei tre romanzi si possono individuare alcune caratteristiche affini:<div class="indented"><ul id="7ef2a3ee-1f78-4504-9291-b456b7224363" class="bulleted-list"><li style="list-style-type:disc">si tratta di storie <strong>inverosimili</strong>, con protagonisti irreali;</li></ul><ul id="6e3650df-12d7-4a2b-a20f-28d9df47732f" class="bulleted-list"><li style="list-style-type:disc">lo <strong>spazio</strong> è immaginario, il <strong>tempo </strong>è lontano dal presente;</li></ul><ul id="b3c12354-164b-4b42-bf51-f8bd9b9f5b7b" class="bulleted-list"><li style="list-style-type:disc">i contesti sono <strong>storicamente riconoscibili;</strong></li></ul><ul id="615f017f-eb65-4d31-a369-db8226ce672d" class="bulleted-list"><li style="list-style-type:disc">l’<strong>io narrante</strong> è sempre <strong>interno;</strong></li></ul><ul id="acfb3090-2388-42bd-a31d-9596f3e2b2be" class="bulleted-list"><li style="list-style-type:disc">le tre storie hanno una valenza <strong>allegorica.</strong></li></ul></div></p><hr id="1e8132e0-cb46-4f23-ab3d-420b86f9c415"/><p id="82e1820d-abcf-4533-ae79-9913bdaac289" class="">Negli anni Cinquanta Calvino si dedica inoltre a un accurato lavoro di ricerca e sistemazione del <strong>patrimonio di fiabe popolari </strong>di tutte le regioni d’Italia.</p><p id="2376d4f2-50a1-41aa-b2f5-b4dd928eb672" class="">Tra le varie versioni Calvino sceglie quelle a suo giudizio più belle e originali e le <strong>traduce dal dialetto</strong> per renderle accessibili al pubblico.</p><p id="6f5a938b-be1f-482b-9b06-a71648830a4a" class="">Inoltre lo scrittore<strong> aggiunge elementi di invenzione</strong> là dove gli pare necessario.</p><p id="6d2cc736-daf9-4900-b473-bf18c15ccc24" class="">Attraverso questo lavoro Calvino si convince sempre di più del fatto che tra fiaba e realtà non vi sia contrapposizione</p><hr id="767b47dc-6338-4d6e-8f5b-149c33ff3dd5"/><h1 id="27fb2b87-a409-4e6f-81f5-098b7a6764d0" class="">Riassunto</h1><figure id="8f7844c2-3d30-4485-991b-cfb9dca63b73" class="image"><a href="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Screenshot_2022-05-26_at_18.28.43.png"><img style="width:1906px" src="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Screenshot_2022-05-26_at_18.28.43.png"/></a></figure></div></article></body></html>

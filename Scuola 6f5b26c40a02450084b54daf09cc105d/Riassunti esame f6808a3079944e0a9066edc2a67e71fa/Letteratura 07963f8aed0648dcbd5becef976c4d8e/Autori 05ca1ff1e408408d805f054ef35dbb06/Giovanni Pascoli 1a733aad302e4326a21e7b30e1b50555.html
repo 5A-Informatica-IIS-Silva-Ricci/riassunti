@@ -1,0 +1,671 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Giovanni Pascoli</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1a733aad-302e-4326-a21e-7b30e1b50555" class="page serif"><header><div class="page-header-icon undefined"><span class="icon">👶🏼</span></div><h1 class="page-title">Giovanni Pascoli</h1><table class="properties"><tbody><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data nascita</th><td>1855</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Anni vita</th><td>57</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data morte</th><td>1912</td></tr></tbody></table></header><div class="page-body"><nav id="8a962b75-1b16-49f8-89a1-f60c1c59aac0" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#66a7660d-2904-4cba-a6ed-1231c3c0567b">Biografia</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ba08a2be-bcd5-4b36-8118-b14e02a1570d">Il fanciullino</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#9204af7c-c5db-4d7c-aa36-f37d0bb0c8da">Myricae</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#07c5e283-eced-48a3-b29b-57a0c3d08eb1">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#9d593931-b43d-4115-9c1b-d5540b1bda9a">I canti di castelvecchio</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#64b143fa-da28-403b-9f8d-46e90b9b334e">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#4f5da3ed-060b-44f6-8e89-6ddf33a6594d">Riassunto</a></div></nav><h1 id="66a7660d-2904-4cba-a6ed-1231c3c0567b" class="">Biografia</h1><p id="56b25c0c-bb5e-4a8b-894f-ce5add3999f1" class="">Nasce a San Mauro di Romagna nel 1855, quarto di dieci figli, in una famiglia non ricca ma di condizioni economiche discrete grazie al lavoro del padre, amministratore di una grande tenuta nobiliare.</p><p id="3bad1c1e-1250-491c-92a5-60784cf834b0" class="">All’età di sette anni viene madnato in un prestigioso collegio dove apprende in modo eccellente le lingue classiche.</p><p id="7e1846cd-fbbb-4c0d-980c-0aa4c5cbde2c" class="">Nel <strong>1867</strong> avviene però un <strong>evento drammatico</strong>, destinato a modificare le sorti della famiglia e a segnare in modo definitivo l’esistenza di Pascoli: il <strong>10 agosto</strong> di quell’anno suo <strong>padre</strong> viene <strong>ucciso</strong> da due sicari in un agguato.</p><p id="3c89b771-974b-42d2-86c0-e6acc08ec618" class="">Negli anni immediatamente successivi si sussegguono altri <strong>lutti dolorosi</strong>: muoiono la sorella maggiore, la madre e il fratello.</p><p id="07e082d2-8e95-42b9-94f0-ec499133e6a3" class="">Il peggioramento delle condizioni economiche rende impossibile per Pascoli restare a Urbino ed egli termina gli studi a Firenze in una scuola meno costosa.</p><p id="eb825d17-54fe-455d-8231-a6dc92aa9429" class="">Grazie al conseguimento di una borsa di studio si iscrive alla facoltà di Lettere di Bologna, dove insegna Giosue <strong>Carducci.</strong></p><p id="900cef56-c195-45f2-a23e-441b36057aff" class="">Nel 1876 gli viene però revocata la borsa di studio e tale perdia, unita alla morte improvvisa del fratello, rende estremamente <strong>precarie</strong> le sue <strong>condizioni economiche </strong>e gli impedisce di pagare le tasse universitarie per l’anno successivo.</p><p id="4008380c-4bcd-4415-b613-21aee60438f9" class="">Tuttavia continua a frequentare le lezioni come libero uditore e riceve un appoggio dallo stesso Carducci, che lo raccomanda come supplente al ginnasio.</p><p id="3d6a4e4d-09bf-427d-a20a-36a8ba905924" class="">Nello stesso anno, una nuova manifestazione di dissenso gli costa <strong>tre mesi di reclusione.</strong></p><p id="ce4b6b71-0898-43d8-be49-a53d9beab4ac" class="">Le sue condizioni economiche migliorane perchè riesce a ottenere nuovamente una borsa di studio e nel 1882 egli consegue finalmente la laurea.</p><p id="81972e13-de8c-4c2f-b71d-9a04e28e7911" class="">Pascoli, che non si era mai allontanato dall’Emilia-Romagna, vive con grande spaesamento il suo primo incarico di <strong>professore di latino e greco</strong> in un liceo di Matera.</p><p id="579954d8-244b-4163-a5ad-3687b03dd6c0" class="">Nel 1884 Pascoli ottiene il trasferimento a Livorno: è l’occasione per affittare una villa in cui risiedere con le due sorelle nubili, con le quali tenta di <strong>ricostruire il “nido” familiare.</strong></p><p id="4402e4f8-a64a-4ad6-9aa3-d2d1723e1533" class="">La scrittura di poesie iniziata durante il periodo universitario si intensifica e prende la forma di collaborazioni con riviste.</p><hr id="c05d751e-0588-4691-a563-2d69f8ddd18f"/><p id="5c26c538-87ae-4a0e-b9cc-02f58df60bb4" class="">Tra Pascoli e d’Annunzio vi è un rapporto che oscilla continuamente tra <strong>stima e avversione</strong>, soprattutto da parte di Pascoli, che vive un tormentato senso di invidia per la maggiore fama riconosciuta al collega ed è ossessionato dalla <strong>paura di subire plagi</strong> da lui.</p><p id="daf775e7-7e9e-47ef-8260-98b4d37e1884" class="">I rapporti si incrinano quando d’Annunzio chiede a Pascoli una serie di esempi su come tradurre metricamente in italiano un coro della tragedia greca <em>Antigone</em>, e Pascoli tace per molti mesi.</p><p id="4ce4cb06-a05c-4e85-a3d5-99a33ac6ab59" class="">Quando gli risponde non manda i versi richiesti, ma spiega di avere intenzioni di redigere un saggio teorico sull’argomento.</p><p id="7424c000-749c-4e01-a434-0241369183d3" class="">A questo punto i contatti tra i due sono sospesi e tra il 1900 e il 1903 si moltiplicano le <strong>manifestazioni di acredine da parte di Pascoli</strong>, che continua a temere plagi e manipolazioni.</p><p id="f98c499c-3372-4d3f-9311-a6c83eb87ec1" class="">E’ d’Annunzio a fare il primo passo verso la riconciliazione, quando dedica a Pascoli la poesia posta alla conclusione della raccolta <em>Alcyone</em>.</p><p id="e9551388-d663-4352-b937-4dffcd50f2ba" class="">Pascoli reagirà alternando momenti di disponibilità e stima ad altri di diffidenza e riserbo.</p><hr id="940e354b-7f4d-48a7-b9e6-ad8a40459d00"/><p id="14e01e2a-2054-4094-89aa-0d395c6182d7" class="">Nel corso degli anni Novanta la carriera di Pascoli sembra finalmente decollare.</p><p id="f9059e2e-00d1-43a3-80f6-09cc69ae6f99" class="">Scrive anche per “Il Marzocco”, sul quale trovano posto le sue più importanti <strong>riflessioni di poetica</strong>, poi èdite integralmente con il titolo <em><strong>Il Fanciullino</strong></em>.</p><p id="71a89f04-5db0-4d36-a307-c79aff1a1631" class="">Nel 1895 avviene una svolta nella vita privata di Pascoli: la sorella <strong>Ida si fidanza</strong> e dopo pochi mesi <strong>si sposa</strong>, determinando la rottura di quel “nido” familiare.</p><p id="65dc1235-80e6-4708-a630-883e3623d88f" class="">La scelta di Ida provoca un <strong>grande turbamento</strong> nel poeta e soprattutto teme il vincolo sempre più stretto che si verrà a creare con <strong>Maria</strong>.</p><p id="1db8eeb1-49da-4e3a-b290-ed420d120063" class="">Nel 1896 Pascoli prende contatti per lettera con una facoltosa cugina, <strong>Imelde Morri</strong>, alla quale in segreto propone le nozze.</p><p id="0a0fbac1-f260-4213-8a22-c7bbf2f76455" class="">La cugina accetta, e Pascoli tenta di organizzare tutto in poche settimane all’insaputa della sorella.</p><p id="a3f8d577-a836-49de-8b46-865bc53a82e1" class="">Venuta a conoscenza del progetto, Maria cerca di ostacolarlo mettendo i due promessi sposi uno contro l’altro e Pascoli <strong>rinuncia al matrimonio.</strong></p><p id="f71fea52-d732-4dd6-a9c0-463a9e33a7ab" class="">Pascoli e Maria affittano la casa di <strong>Casatelvecchio di Barga </strong>che diventa il <strong>rifugio</strong> più caro.</p><hr id="9ceb35f4-98fd-44d6-9990-002c29586383"/><p id="ef439540-28ed-4564-a79d-4501e23d787e" class="">Pascoli riesce a diventare docente universitario nel 1895, a <strong>Bologna,</strong> ma non è del tutto soddisfatto dell’incarico, perchè si tratta di un insegnamento che considera secondario rispetto ad altri.</p><p id="691dd348-3d1e-43e3-9582-79327032f4f1" class="">Accetta quindi l’offerta di insegnare Letteratura latina a <strong>Messina</strong> e si trasferisce in Sicilia.</p><p id="5f91315c-d674-4b99-855a-b46a5b982842" class="">Qui, dopo un <strong>periodo difficile</strong>, Pascoli si inserisce nel tessuto intellettuale della città.</p><p id="9ed96f26-976c-46ef-9bca-b3b6931d1c07" class="">Dopo una parentesi all’Università di <strong>Pisa</strong>, dove lavora alla stesura dei <em>Canti di castelvecchio</em>, per Pascoli giugne finalmente l’occasione di ricoprire la cattedra di <strong>Letteratura italiana</strong> da lui tanto desiderata: è chiamato infatti a <strong>Bologna</strong> per subentrare a Carducci.</p><p id="c5d686ce-0f40-4bbb-8ae7-4c4e3db91f14" class="">Nell’ultima fase della sua vita è sollecitato a intervenire nella vita pubblica italiana dal suo ruolo universitario, come pure dall’influenza del modello carducciano e dannunziano del poeta-vate, ossia dell’<strong>intellettuale</strong> che si pone quale <strong>guida della società</strong> e che esalta figure da imitare.</p><p id="056c30cd-861b-485f-b51a-ae5697dc104c" class="">Le ultime raccolte sono dunque caratterizzate da una <strong>poesia di tipo risorgimentale, </strong>in cui celebra modelli di umanità come Garibaldi: escono <em>Odi e inni, Canzoni di re Enzio, i Poemi italici.</em></p><p id="f2d85393-a91e-4a26-9089-909e681b7e32" class="">Nello stesso anno tiene a Barga un discorso poi pubblicato come <em><strong>La grande proletarie si è mossa</strong></em>, in cui giustifica la guerra coloniale in Libia: è l’approdo finale del suo socialismo.</p><p id="030fbacd-28f8-4acc-9334-526074ca1542" class="">Pascoli muore nel 1912 per una malattia al fegato.</p><hr id="c5fc6dbd-e309-4920-8a7c-43ad23196097"/><h1 id="ba08a2be-bcd5-4b36-8118-b14e02a1570d" class="">Il fanciullino</h1><p id="086bfad7-dd8d-4d19-bde2-816deec5afa9" class="">Il saggio intitolato <em>Il fanciullino</em> esce a puntato sulla rivista “Il Marzocco” nel 1897, ampliato e rielaborato viene poi inserito da Pascoli nella raccolta <em>Miei pensieri di varia umanità</em>, infine nei <em>Pensieri e discorsi.</em></p><p id="52c24953-2f7f-4308-b6eb-e7412239bcd3" class="">Nella forma definitiva è un testo inventi brevi capitoli, in cui Pascoli espone la sua poetica, ossia le sue idee su che cosa sia la poesia e su quali siano i compiti del poeta.</p><p id="7b38af94-91b8-49cd-8c08-847853d25f67" class="">L’autore non procede con rigore argomentativo, ma con eloquenza appassionata e con immagini simboliche, delineando una concezione della <strong>poesia come attività non razionale</strong>, spontanea, che nasce dalla fantasia e dall’immaginazione.</p><hr id="026c67e9-6b8f-4789-8c33-32485b7aab7b"/><p id="edc11cb4-ab7e-4539-bc1c-2ebc0a957f2d" class="">Per rappresentare la sensibilit poetica Pascoli si serve del simbolo del “fanciullo”, un essere che guarda al mondo in modo ingenuo, con lo stupore di chi vede ogni cosa per la prima volta; grazie <strong>all’intuizione spontanea</strong> il “fanciullo” sa immaginare e cogliere aspetti inconsueti della realtà senza le barriere e i condizionamenti dettati dalla ragione.</p><p id="b6518c2b-8af0-4f05-bef1-b2d966f201a4" class="">Questa creatura è <strong>presente in ogni persona</strong>: nell’infanzia coincide con il bambino, mentre nell’età adulta viene messa in disparte, perchè l’uomo maturo adotta uno sguardo razionale sul mondo, è attento ai propri obiettivi e doveri, si esprime in modo serio e convenzionale, senza dare spazio all’immaginazione e fantastia.</p><p id="3259b163-f747-412e-a541-5bf4a5aa2617" class="">Nell’uomo tuttavia il “fanciullino” non scompare: resta oresente in ciascuno e può riemergere, manifestandosi con reazioni spontanee e imprevedibili davanti ai fatti della vita.</p><hr id="2324a9d9-d827-4ef1-a628-fd90b72ba776"/><p id="4e71e737-ba13-403b-8d92-9659ea2c5cfe" class="">Il “fanciullino” possiede due qualità straoirdinarie: la capacità di “vedere” e quella di “dare il nome alle cose”.</p><p id="14ed28d1-ba54-43ce-93e1-6b7e20807955" class="">Senza l’assillo del tempo e degli obblighi da rispettare, egli agisce seguendo il proprio istinto e il proprio stupore, soffermandosi a vedere, ascoltare, toccare ogni cosa.</p><p id="61fe9b7b-4497-4a71-a459-6629e30fa573" class="">Nel guardare assume <strong>punti di vista inediti</strong>, portando in primo piano un particolare apparentemente insignificante per ammirarlo, oppure ponendosi a una certa distanza per vedere ciò che altrimenti, per le sue eccessive dimensioni, sfuggirebbe.</p><p id="6a4eb9ad-262c-4392-a160-2eee09cdc8f8" class="">Inoltre <strong>scopre affinità e legami tra le cose</strong>, mettendo in relazione elementi anche molto lontani tra loro.</p><p id="9fed9c1c-8955-44a3-b115-2c2a86e67200" class="">Si tratta evidentemente di una <strong>fanciullezza</strong> non realistica ma <strong>ideale</strong>, che rappresenta l’infanzia stessa del mondo, quell’età antica mitizzata nella quale vi era un rapporto spontaneo e immediato tra l’uomo e la natura.</p><hr id="0cfdbc11-edee-4a93-89b6-8e892aad84ec"/><p id="09d0a230-c563-4728-85b9-13f0e2581cad" class="">Sebbene il “fanciullino” sia presente in tutti, soltanto il poeta è in grado di conservarne davvero lo spirito e di dargli voce, attraverso la poesia.</p><p id="8ffb37c0-3518-4866-a6ba-1d5e0cb589a7" class="">Per Pascoli la <strong>poesia</strong> è uno <strong>stato di illuminazione interiore</strong>, che dipende dalla capacità del soggetto di cogliere, all’esterno o all’interno di sé, un dettaglio sempre, un elemento anche banale sfuggito a tutti.</p><p id="6f1fa37e-4288-45ed-9920-d8bcc35dd3a6" class="">Il fatto che il poeta volga la sua attenzione agli oggetti più comuni e semplici non implica che egli sia un uomo ingenuo o incolto.</p><p id="ab604270-4899-431f-8a07-09aafef60809" class="">Pascoli è insegnante di liceo e poi professore universitario, egli non intende certo svalutare la formazione culturale quando indica la via della semplicità, ma assume piuttosto una posizione <strong>polmeica nei confronti</strong> della tradizione letteraria, appesantita dalla mania <strong>dell’”accademismo”, </strong>della retorica, della forma fine a se stessa.</p><p id="51e3ef62-3d83-493c-a7db-a2dc2c28e343" class="">Il poeta è dunque colui che comprende come l’oggetto più umile possa rivelarsi qualcosa di molto prezioso: perchè questo avvenga occorre uno sguardo attento, ma anche l’”<strong>arte del togliere</strong>”.</p><p id="59d1feea-de8e-4c3b-90f6-7ef1ccc4c6ad" class="">Nel Fanciullino Pascoli riprende a sviluppa questo aspetto: il poeta conosce bene il patrimonio retorico e letterario ma sa <strong>rinunciare a tutti gli ornamenti inutili</strong>, si limita ad ascoltare e a comuincare ciò che il suo “fanciullino” interiore gli suggerisce.</p><p id="f344bb6a-ecdf-4dc0-80b9-cb5c6f5da6a6" class="">Inoltre la poesia non deve perseguire intenzionalmente alcuno scopo pratico o sociale: non ne ha bisogno perchè è <strong>utile di per se stessa</strong>, per il solo fatto di esistere.</p><p id="308e174a-a9af-4752-815d-36811f19fb55" class="">Pascoli sostiene che la capacità di comprendere la poesia è in tutti però avverte con chiarezza che soltanto pochi sono in grado di far rivivere dentro di sé il “fanciullino” e dargli voce.</p><p id="09923274-a817-449d-bddd-d36d30bdf521" class="">Sotto questo aspetto pAscoli non è troppo dissimile da d’Annunzio: sia pure in modo diverso, entrambi rivendicano il ruolo del <strong>poeta come mediatore</strong> indispensabile per l’interpretazione del mondo e la formazione dell’uomo.</p><hr id="c003b802-3902-4836-8268-e8c668882573"/><h1 id="9204af7c-c5db-4d7c-aa36-f37d0bb0c8da" class="">Myricae</h1><p id="ed4b06f0-e01a-418d-8410-323200d15016" class=""><em>Myricae</em> esce per la prima volta nel 1891 come opuscolo per le nozze di un amico, ma Pascoli tel tempo aggiunge, rielabora testi, progetta raggruppamenti interni tra i componimenti, accentua tematiche e atmosfere che gli stanno a cuore: l’edizione definitiva è <strong>quasi un altro libro</strong>, venutosi a formare nel corso di dodici anni, durante i quale le iniziali ventidue poesie sono diventate centocinquantasei.</p><p id="e0aeb699-26e3-41ae-bd7f-6921dd96e2d4" class="">Il titolo è ispirato a un <strong>verso di Virgilio</strong>, in cui il poeta latino dichiara di volersi allontanare dal tema agreste che contraddistingue la raccolta per trattare un argomento più alto con uno stile più elevato.</p><p id="5e3b7740-dad9-40fc-818c-86377192a7d9" class="">Il verso virgiliano assume <strong>significato opposto</strong>: vi si afferma dunque che le Myricae, o “tamerici”, piante modeste e comuni, piacciono e sono apprezzate, così come la vita umile di campagna che esse rappresentano.</p><p id="af372536-3c60-4755-a292-cc087544e8c1" class="">La <strong>semplicità</strong> delle poesie di Pascoli tuttavia è <strong>soltanto apparente</strong>, poichè proprio gli oggetti più comuni pososno alludere a temi generali che riguardano l’esistenza umana, la presenza del male, il mistero del dolore e della morte.</p><hr id="8c1ddf39-f2d0-41df-95f6-eece8efa1f2c"/><p id="9e471bfa-0040-469e-8e77-f09e1bb32bb3" class="">E’ possibile individuare nella poesia <strong>due discorsi paralleli</strong>, l’un generato dal dato letterale del testo, l’altro da ciò a cui esso allude.</p><p id="347928d0-0a86-42a3-8535-a471e4b0204c" class="">Occorre dunque uno <strong>sforzo interpretativo</strong> da parte del lettore, il quale deve rivolgere la sua attenzione a tutti gli elementi del testo e coglierne le suggestioni.</p><p id="045bc9bf-57a7-443b-aebe-82e714a32bef" class="">Alcune immagini assumono una valenza precisa, tanto che si può parlare di <strong>simboli ricorrenti</strong>, perchè il legame tra l’oggetto e l’idea si ripropone identico e resta inalterato in più testi.</p><p id="e31e7abc-7c5c-4064-b35a-da5dd3561a4b" class="">Altre immagini invece costituiscono simboli più difficili da decifrare, perchè assumono significati <strong>diversi a seconda dei contesti</strong>.</p><p id="74da639e-10b7-4265-a0a8-820e4e2a5c61" class="">Anche l’io lirico offre un’<strong>immagine di sé non univoca</strong>: talora si rappresenta come un padre, talore invece assume l’atteggiamento di un bambino segnato dal dolore e dalla solitudine, che cerca compassione.</p><p id="aaa781b9-8676-46e0-8106-a81df0186683" class="">Ugualmente i famigliari morti sono figure desiderate e rimpiante, ma da cui il poeta non riesce a liberarsi, tanto che sente la necessità di offrire loro tributi di memoria per tenere a bada la propria angoscia.</p><p id="ab5daea4-ddfc-48cf-92ac-df94a1c81dc6" class="">In Pascoli affiora l’oscuro <strong>senso di colpa</strong> di essere sopravvissuto alla morte dei propri cari.</p><p id="c25c0f5a-9a4c-4e2d-9272-4f52a9f1c028" class=""> </p><hr id="b2b3490a-4572-4085-b6e9-1759a62d03de"/><p id="7ad64a06-84af-4771-a73e-01c7acb0a251" class="">I poeti classici che sono oggetto di <strong>imitazione diretta</strong> da parte di Pascoli nelle poesie in latino (Omero, Virgilio, Catullo e Orazio) costituiscono un significativo repertorio tematico, lessicale e stilistico anche per la sua poesia in lingua italiana.</p><p id="95a4ce1e-2837-461a-9bf0-2dcebda524a0" class="">Allo stesso modo, <strong>Dante e Leopardi</strong> sono citati in modo esplicito, oppure recuperati per <strong>affinità tematiche</strong>.</p><hr id="b3c1b2a6-ec30-4e47-b97a-d03cbfba49f4"/><p id="5ff3a893-41fa-4807-bfa6-b9916d62ae75" class="">Poichè il rapporto di Pascoli con la realtà è inquieto, non più guidato nè da valori romantici nè dalla fiducia nella scienza, le forme attraverso le quali si esprime non possono che essere nuove.</p><p id="28211061-e2e7-43b3-9b5b-def675425cd8" class="">I critici hanno usato la formula di “accordo eretico” con la tradizione per indiciare come Pacoli sia fortemente <strong>radicato nella sua epoca</strong>, ma al tempo stesso imprima una <strong>svolta</strong> alla lingua della tradizione, soprattutto sul piano fonico, lessicale e sintattico.</p><p id="060e8dd6-336d-492c-bc08-7a6971c5b62f" class="">Caratteristica delle <em>Myricae</em> è la <strong>brevità.
+</strong>Spesso mancano i <strong>nessi logici</strong> espliciti, di tipo temporale o casuale; il discorso procede con accostamenti improvvisi, salti inattesi e ritorni all’indietro.</p><p id="7a37b647-4a22-4888-beaa-cb98742eb337" class="">All’assenza di nessi logici supplisce in qualche modo la forte presenza di legami sonori all’interno del testo, attraverso rime, anche interne.</p><p id="18775762-de02-472b-b8d3-28921975d615" class="">Sono ricorrenti le <strong>onomatopee.</strong></p><p id="195ee654-6827-4819-a989-44592cd9b841" class="">Si è parlato per Pascoli di un vero e proprio <strong>Fonosimbolismo</strong>, ossia la capacità delle <strong>sillabe</strong> di diventare<strong> portatrici di significato</strong> semplicemente in base al loro suono.</p><p id="77997400-04b7-448e-ab42-6cdaec9db98d" class="">Hanno particolare rilevanza le <strong>metafore e le analogie</strong>, che esprimono associazioni imeddiate e intuitive compiute dall’io lirico tra gli oggetti.</p><p id="580404f1-7ddf-4e40-8e2e-6c5e641a9811" class="">Vi è una presenza importante di <strong>sinestesie, </strong>che rimandano all’idea baudelairiana e simbolista per cui <strong>la natura è un tutto unitario</strong> in cui si celano segrete corrispondenze.</p><p id="37e7a024-584a-4f3c-b213-cb0d44dcaf85" class="">Sul piano lessicale troviamo alcune innovaioni all’interno di un tessuto linguistico ancora abbastanza uniforme: la tendenza a mescolare alto e basso, termini dialettali e lingua letteraria.</p><p id="ab89d620-61d5-4d07-bc29-667628ea5ca1" class="">Particolarmente significata è però la capacità di <strong>accogliere la prosa nella poesia</strong>, inserendo nei versi frammenti di dialogo e voci del linguaggio quotidiano.</p><p id="1ed16cb0-aa65-4db7-904f-820bb2e606cb" class="">Sul piano metrico Pascoli rispetta la tradizione per la scelta di forme chiude, ma si mostra innovativo nell’adottare <strong>versi poco comuni e strutture metriche</strong> note, ma <strong>desuete</strong>.</p><p id="ac6a8059-317e-4ad5-afb9-c76deca5f5f6" class="">Il <strong>ritmo frammentato</strong> di Pascoli gli permette di evidenziare il particolare, il dettaglio, senza che tuttavia vengano meno l’unità e la regolarità della forma.</p><hr id="bd98e461-6100-4e76-9f93-8124f2aaab46"/><p id="32882718-f64d-401e-b4f8-8884a54ba135" class="">E’ possibile inoltre identificare alcune opposizioni ricorrenti, che si riproporranno in tutta l’opera del poeta.</p><p id="f8f34fad-489b-41d6-9a14-5503d59d6319" class="">La prima contrapposizione è quella tra ripetizioni e sperimentalismo.</p><p id="bad0a8f0-a5db-4e34-b8be-4b15580b9cb6" class="">Pascoli insiste in modo quasi ossessivo su alcuni temi, in particolare su quello che è stato definito il suo “<strong>romanzo familiare</strong>”, ossia la vicenda dell’uccisione del padre.</p><p id="e7f649e0-fc40-4ecc-8b76-f2cb8510d813" class="">Alla ripetizione di temi identici si oppone la <strong>varietà delle forme</strong>.</p><p id="16877d67-604d-4249-bb1d-b0bae4f97aee" class="">Si potrebbe dire che Pascoli tenti di recuperare nella poesia quel legame con i cari divenuto impossibile nella vita, e parallelamente cerhci forme sempre nuove per rielaborare la sua tragedia familiare.</p><p id="cedad78b-0c90-4dee-9aaf-3d2dd4c8ee49" class="">Nell’opera di Pascoli convivono la precisione del dettaglio e la costruzione di atmosfere indefinite: da un lato emerge la volontà di <strong>rendere esattamente il dato reale</strong>, con grande accuratezza nella scelta dei nomi.</p><p id="b96e1c8c-a9ea-45bf-afd9-f076337999da" class="">D’altro canto si coglie la tendenza opposta a <strong>dissolvere l’immagine nell’indeterminato</strong>.</p><p id="fd399aa3-df43-4a9f-82a6-182dec04343e" class="">Il particolare preciso che affiora nell’atmosfera indeterminata si carica così di significati simbolici misteriosi.</p><p id="ba6240e6-4840-4317-8b55-1c93cf3162f2" class="">Lo sguardo delp oeta si fissa spesso sul dettaglio, lo isola e pare esaurire in esso tutto il suo interesse, descrivendolo in forma lirica.</p><p id="512f1643-2404-4a6a-a4d1-e5c79d2636d9" class="">
+</p><h2 id="07c5e283-eced-48a3-b29b-57a0c3d08eb1" class="">Brani</h2><p id="35d2ac65-d790-4812-9979-ec9313ff3ce7" class="">→ “X Agosto” </p><p id="dbbe0679-e3b9-4543-8ce0-06cb249dcde6" class="">→ “Temporale”</p><p id="5705de94-5701-4670-9a5b-3ab02f7bb14c" class="">→ “Il lampo”</p><p id="4a8e3c47-6846-4b4b-b223-33b6bf237e14" class="">→ “Il tuono”</p><p id="ee5d357b-12cf-4794-b98b-e51f6bfa6b10" class="">→ “Novembre”</p><hr id="bce4648c-dbff-45ca-bee5-9ba43b971fd8"/><h1 id="9d593931-b43d-4115-9c1b-d5540b1bda9a" class="">I canti di castelvecchio</h1><p id="2981dfc3-9161-47b9-a342-686ecd71f66b" class="">Mentre continua a lavorare a <em>Myricae</em>, Pascoli realizza nel 1903 un’altra raccolta intitolata <em>I canti di castelvecchio</em>, poi <strong>ripubblicata più volte</strong> con accrescimenti e modifiche.</p><p id="449ceaeb-b953-492c-9dcf-4b37c67afcbe" class="">Il titolo cita esplicitamente un luogo caro, Castelvecchio di Barga, dove Pascoli si era trasferito con la sorella nel <strong>tentativo di ricreare quell’intimità familiare e domestica perduta</strong> con la morte dei suoi cari.</p><p id="65207308-6f83-40be-8c96-939251ea3585" class="">Nel titolo si può cogliere anche un rimando ai <em>Canti</em> di Leopardi, con i quali vi sono alcuni punti di contatto, a partire dalla <strong>predilezione per il vago e l’indefinito</strong>, alla percezione della sofferenza che permea il mondo, all’idea del piacere come cessazione del dolore.</p><p id="204afbe9-d9ea-40f0-8111-15d711e80139" class="">La successione delle poesie non segue l’ordine cronologico di composizione ma risponde a un <strong>criterio tematico</strong>: i testi sono disposti secondo il susseguirsi delle stagioni e mostrano <strong>l’alternarsi di vita e morto nel ciclo naturale</strong>, mentre nell’esistenza umana la morte incombe come evento irreparabile, frutto di violenza o di un mistero inspiegabile.</p><p id="5563a9d4-5eb4-4cb1-8660-fb55c8a94e24" class="">I testi sono più lunghi di quelli di <em>Myricae</em>, sono <strong>composizioni più ampie e articolate</strong>, in cui prevalgono i novennari e i senari, con ritmi spezzati e pause inattese.</p><p id="3f1468b6-9253-409b-87fc-747347beedcb" class="">Il simbolismo che costituiva una delle novità di <em>Myricae</em> viene ulteriormente accentuato: talora con <strong>allusioni scoperte e dichiarate,</strong>talora invece con <strong>immagini misteriore ed evocative</strong>.</p><p id="a3d84f63-7677-4926-a50f-6b360072bf24" class="">In questa raccolta si fa più intensa anche la tendenza al plurilinguismo: abbondano i <strong>termini tecnici</strong> e quelli garfagnini, al punto che il poeta inserì un lessico per illustrare il significato delle <strong>espressioni dialettati e gergali.</strong></p><h2 id="64b143fa-da28-403b-9f8d-46e90b9b334e" class="">Brani</h2><p id="02ec7cc2-f5ac-4d35-86e1-ae32384feaff" class="">→ “La mia sera” - 349/350</p><hr id="b7630bff-583a-429d-9f7d-bd53a1b6a252"/><h1 id="4f5da3ed-060b-44f6-8e89-6ddf33a6594d" class="">Riassunto</h1><figure id="0c16bcf9-3357-471d-a406-130168cbce63" class="image"><a href="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20119.png"><img style="width:1857px" src="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20119.png"/></a></figure></div></article></body></html>

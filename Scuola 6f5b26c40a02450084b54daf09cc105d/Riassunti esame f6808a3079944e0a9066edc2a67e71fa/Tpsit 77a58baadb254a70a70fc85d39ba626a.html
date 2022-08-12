@@ -1,0 +1,792 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Tpsit</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="77a58baa-db25-4a70-a70f-c85d39ba626a" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📡</span></div><h1 class="page-title">Tpsit</h1><table class="properties"><tbody></tbody></table></header><div class="page-body"><nav id="a5cd4f97-21f0-4a2b-87fc-a86648696db5" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#533aad85-9961-4c21-a03a-9e28ccf6211e">I sistemi distribuiti</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b2a4feef-cccb-438a-98d5-1efbe38487c5">Classificazione dei sistemi distribuiti</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#21557cde-b033-4a33-9ac4-0ce1ab450ec1">Vantaggi dei sistemi distribuiti 👍🏼</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#31b8c59b-a2b7-4daa-bb7f-823fdef31e9c">Svantaggi legati alla distribuzione 👎🏼</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c7485aa5-acab-4084-8cf0-df17890ac5b6">Evoluzione dei sistemi distribuiti</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7e3c53b7-8a09-41a8-9909-d983899dfe47"><strong>SISD</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f94310f8-fc4c-4e6c-b2d6-0b3d31919fe6"><strong>SIMD</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#c87e93b3-5a9f-45e3-9489-d58761354a7c"><strong>MISD</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#9fbb5456-9ce0-490b-9890-04f4e6af5c47"><strong>MIMD</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#3821f079-87ef-4963-b775-fa8c5d467476">Cluster computing</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d7f91da6-2981-4ef7-b626-d9e521b97689">Grid computing</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a1365d5c-e1e9-4d31-8751-6cc76558af31">Architettura a terminali remoti</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#def0527d-5b2d-4c01-9f0a-bc298975db30">Architettura client-server</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b86f474e-9842-4fd7-942e-05a578240a88">Architettura WEB-centric</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a77e968a-2716-43a4-a5fd-feef3f2c6d60">Architettura cooperativa</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0bc4247b-cb4c-4562-b160-df22e24b807a">Architettura completamente distribuita</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#40d3624e-e936-40eb-bed3-931e2d54bd7a">Architettura a livelli</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#3089d2f0-7e3c-4b24-b496-029427f61157">La comunicazione nel Web con protocollo HTTP</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#17cea2ff-f606-4f27-8636-e7e2e5be06b7">HTTP e il modello client - server</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#90608f98-9c6d-431d-862b-aec439516f5f">Il protocollo HTTP</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f8344b4d-67b0-4799-a148-82567964d83b">Tipi di connessioni</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f751747a-2d2b-4bf9-bb13-c8ea2e03abb2">HTTP Request</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b88e9a22-7204-4a97-ac12-b83b75a7bde7">Messaggio di risposta: HTTP Response</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#873d1f7e-751a-45f2-bc6b-f96a17c5d2ec">Metodi HTTP</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#aa58607c-0979-4833-a5f3-baac711829c2">I codici di stato</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1f46e195-13d4-4545-96ef-1621404eb1bf">Le applicazioni Web e il modello client - server</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#3726f3a2-4ec6-4461-aa4e-b5a596c49e13">Tecnologie del Web</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7c4190fe-0e2a-4d9e-b428-98248e67af64">Livelli e strati</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#6dc8ae10-b202-4f2d-9e02-5f140bea3d78">Architettura a un livello - 1 tier</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#cae2086d-c7c1-431d-895f-7d7c69cae479">Architettura a due livelli - 2 tier</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#93281789-3699-48f4-afe9-928535a510bb">Le applicazioni di rete</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0302ea38-78c8-49e0-a30e-9a5a2c7b5a41">Applicazioni di rete</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ed5267d4-bb9f-443a-9e3e-8008cabb1fd6">Identificazione di un servizio mediante socket</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#bb601eb2-9343-4843-abf0-139a0d4a6203">Architettura per l’applicazione di rete</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a77afa53-e3cc-424b-abe7-a35b51488773">Servizi offerti dallo strato di trasporto</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#0de73071-612f-4861-96e4-5656c27c863d">Applicazione di rete</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#b729deb7-4100-45c5-9ec4-556dbf8b6385">Le porte di comunicazione e i socket</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#d9295ac1-6e7e-4544-a14a-e1da8c13269b">Socket e i processi client - server</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#93aa0bd3-2f7f-4ea5-b558-83542479f990">La connessione tramite socket</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#03de1835-9351-4b35-8868-7ebd8eb7108b">Famiglie e tipi di socket</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b3f5f45f-202c-415c-bd60-40fe16b522ce">Tipi di socket</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#32f79c18-ebe6-4e08-9320-8ab947de33b9">Stream socket</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#68c001ea-1140-43e6-af48-eb62a992bf4a">Datagram socket</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ae36e34d-4611-4191-b91e-0c35034e8293">Trasmissione unicast e multicast</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1d2dcb50-11d9-41a6-97a2-44803c947a89">Esempio socket in Java</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#2acc33ab-b0a5-4d76-a846-e22b32e2c6fd">Stream socket</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#a0c3118f-ab92-4391-abbf-e9f776f15064">Datagram socket</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#0a12022c-11b7-4f21-8f4c-50d6c9b302e7">Esempio applicativo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ae9f25c5-3abc-4cc2-91fc-32fb54e6d6f5">Le applicazioni lato server</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f5c1c3f9-408c-4514-817b-592a45467b14">Common Gateway Interface (CGI)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0f0070fa-c6d5-4ef4-a523-6ccd27f2d400">Servlet</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ee474691-a460-4ce2-8e16-922bad427548">Ciclo di vita di una servlet</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#221cd465-37b3-4841-867b-818425f10306">Vantaggi delle servlet</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#4d29f303-6345-4f54-a676-54a00fb5b4b4">Svantaggi delle servlet</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#6840dce6-024a-4a97-872c-f330d4de4276">Connessione a database tramite JDBC</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#5cf482d0-aa37-4144-b8e5-d0d64023bca9"><strong>JSP</strong></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#afe334b8-e355-4b3b-bbf0-3de2f5f1961d">Web Service</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f235d964-7204-4516-9341-e95e06cbbb1a"><strong>Definizione</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a6511800-5498-42b5-8660-8351ef0196f2"><strong>SOAP</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1b79089e-882d-4725-8f0f-46a8810f7a86"><strong>REST</strong></a></div></nav><h1 id="533aad85-9961-4c21-a03a-9e28ccf6211e" class="">I sistemi distribuiti</h1><p id="8a5abc44-2f2a-41d5-af16-712ebde6ae73" class="">Le architetture dei <mark class="highlight-teal">sistemi informativi</mark> si sono sviluppate ed evolute nel corso degli anni passando da schemi centralizzati<mark class="highlight-red"> </mark>a modelli distribuiti<mark class="highlight-red">.</mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e113a9a5-4b93-4f60-8f0c-1d895595739f"><div style="font-size:1.5em"><span class="icon">🔑</span></div><div style="width:100%">Nei <strong><mark class="highlight-pink">sistemi centralizzati</mark></strong> le applicazioni girano in un singolo processore, o comunque su <strong><mark class="highlight-pink">un solo host</mark></strong><mark class="highlight-red"> </mark>che costituisce l’unico componente autonomo nel sistema.
+Un sistema informatico è centralizzato<mark class="highlight-red"> </mark>quando <strong><mark class="highlight-pink">dati e applicazioni</mark></strong> risiedono in un <mark class="highlight-pink"><strong>unico nodo elaborativo</strong></mark>.</div></figure><p id="f9a9b5a5-4a38-425b-a88f-dd5ff5df81fa" class="block-color-gray_background">Un sistema informatico<mark class="highlight-red"> </mark>si dice <strong><mark class="highlight-teal">distribuito</mark></strong><mark class="highlight-red"> </mark>se almeno una delle seguenti due condizioni è verificata:</p><ul id="93c1654b-854e-43f1-809c-0a4baaf35d2f" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-yellow">elaborazione distribuita</mark></strong>: le applicazioni risiedono su più host che collaborano tra loro;</li></ul><ul id="4c304521-8dcc-4fa6-b007-bd82c7a2e15b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>base di dati distribuita</strong></mark>: il patrimonio informativo è ospitato su più host.</li></ul><p id="31451fd7-1c7d-434f-b0f9-a37f4798824f" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="6392e1b6-a01a-45c4-96ef-cdf97b568edd"><div style="font-size:1.5em"><span class="icon">🔑</span></div><div style="width:100%"><em>Un sistema distribuito è costituito da un insieme di applicazioni logicamente indipendenti che collaborano per il perseguimento di obiettivi comuni attraverso un’infrastruttura di comunicazione hardware e software</em>.</div></figure><p id="13d97e53-b8e7-4619-9a49-187038330232" class="">Alle applicazioni vengono dati nomi diversi in funzione dei diversi ruoli:</p><ul id="4e062bc3-2720-4d4d-896d-de182242f7f2" class="bulleted-list"><li style="list-style-type:disc">Cliente (<mark class="highlight-yellow"><strong>client</strong></mark>)</li></ul><ul id="fb555206-e66f-450e-8be2-a9f9d48ce5a5" class="bulleted-list"><li style="list-style-type:disc">Servente (<mark class="highlight-yellow"><strong>server</strong></mark>)</li></ul><ul id="143ac72c-f4b2-4228-bdaf-f2b00eb7947f" class="bulleted-list"><li style="list-style-type:disc">Attore (<mark class="highlight-yellow"><strong>actor</strong></mark>): quando assume sia il ruolo di cliente che quello di servente.</li></ul><p id="69b6e7f0-a37b-421c-a794-37f53c234d70" class="">
+</p><h2 id="b2a4feef-cccb-438a-98d5-1efbe38487c5" class="">Classificazione dei sistemi distribuiti</h2><ol type="1" id="501a0bbd-a6fe-4d11-b07e-79b361cbe40a" class="numbered-list" start="1"><li><mark class="highlight-teal">Sistemi di calcolo distribuiti</mark> che generalmente sono configurati per il calcolo ad alte prestazioni:<ul id="d56ae98a-ba88-4672-ac2e-ebe7499f7a59" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow">cluster computing</mark>: connessione di <strong>computer omogenei</strong> allo scopo di parallelizzare l’elaborazione.</li></ul><ul id="d95a3819-823a-4d0a-85f8-44ad096b76e6" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow">grid computing</mark>: la cooperazione di calcolo può essere effettuata anche utilizzando <strong>macchine eterogenee</strong>.</li></ul></li></ol><ol type="1" id="66795061-5aee-419a-bbdf-a7c19f95e799" class="numbered-list" start="2"><li><mark class="highlight-teal">Sistemi informativi distribuiti</mark>: tra questi sistemi troviamo il <strong>Web</strong>, che risulta essere il più grande sistema distribuito.</li></ol><ol type="1" id="606ab965-3bd1-46c4-bbe8-83cde09bbfe3" class="numbered-list" start="3"><li><mark class="highlight-teal">Sistemi distribuiti pervasivi </mark>che sono una nuova generazione di sistemi che hanno tipicamente <strong>connessioni di rete wireless</strong> che generalmente sono sottoparti di sistemi più grandi.</li></ol><h2 id="21557cde-b033-4a33-9ac4-0ce1ab450ec1" class="">Vantaggi dei sistemi distribuiti 👍🏼</h2><p id="62cdcbad-18ca-4617-9b26-02119f9fdf95" class=""><strong>Affidabilità</strong></p><p id="0a3a33c9-b50e-425f-bcb3-7feed9d178f7" class=""><mark class="highlight-orange_background">Grazie alla sua ridondanza è in grado di “sopravvivere” ad un guasto di un suo componente.</mark></p><p id="a5ce798a-a542-4030-ae40-4423487d0631" class=""><strong>Integrazione</strong></p><p id="ef99e403-3a22-445a-acc8-33e6a649e408" class="">Capacità di un sistema distribuito di <mark class="highlight-orange_background">integrare componenti spesso eterogenei tra loro</mark>, sia per tipologia hardware, sia per sistema operativo.</p><p id="1224beba-7317-4db1-a4c5-7c8c3411c197" class="">Sono stati <mark class="highlight-orange_background">definiti appositi linguaggi</mark> come <code>XML</code> e notazioni <code>JSON</code> per <mark class="highlight-orange_background">favorire lo scambio di informazioni nel web </mark>e permettere un’agevole ed efficiente pubblicazione di dati complessi.</p><p id="596740a6-c1e6-4748-bff8-6294bb2b4305" class=""><strong>Trasparenza</strong></p><p id="b6612612-136f-43c7-802f-ef983344b9bf" class="">Come trasparenza si intende il concetto di <mark class="highlight-orange_background"><em>vedere</em></mark><mark class="highlight-orange_background"> il sistema distribuito non come un insieme di componenti ma come un unico sistema di elaborazione</mark>.</p><p id="ed191d0c-f08d-472f-9c44-0c7dcafa1580" class="">Esistono otto forme di trasparenza:</p><ol type="1" id="b32b7810-a107-4258-ab44-d7d352452cb8" class="numbered-list" start="1"><li>di <mark class="highlight-yellow"><strong>accesso</strong></mark>: accedere a risorse locali e remote con le stesse operazioni, in modo unico e uniforme.</li></ol><ol type="1" id="60b8d5ef-624f-4aa5-8872-6a2d440a4a9e" class="numbered-list" start="2"><li>di <mark class="highlight-yellow"><strong>locazione</strong></mark>: nascondere dove è localizzata una risorsa e permettere di accedere a essa senza conoscerne la locazione.</li></ol><ol type="1" id="6c0df269-dc31-4572-90d5-0a93a75ec7ac" class="numbered-list" start="3"><li>di <mark class="highlight-yellow"><strong>concorrenza</strong></mark>: si permette ai processi di operare in maniera concorrente.</li></ol><ol type="1" id="b5b5e2e6-affc-42a2-ac7b-73207a68f2d1" class="numbered-list" start="4"><li>di <mark class="highlight-yellow"><strong>replicazione</strong></mark>: le operazioni di duplicazione vengono effettuate all’insaputa degli utenti.</li></ol><ol type="1" id="20ca473a-3bd3-450c-96b2-f1c09e4dc72f" class="numbered-list" start="5"><li>ai <mark class="highlight-yellow"><strong>guasti</strong></mark>: viene mascherato il guasto e il recovery di una risorsa.</li></ol><ol type="1" id="fb02a089-83ff-4490-93f7-3d5b00d18da7" class="numbered-list" start="6"><li>alla <mark class="highlight-yellow"><strong>migrazione</strong></mark>: si nasconde l’eventuale spostamento di una risorsa senza interferire sulla sua modalità di accesso.</li></ol><ol type="1" id="96bf6b2d-c309-4bef-aa30-f4fa753d2ea1" class="numbered-list" start="7"><li>alle <mark class="highlight-yellow"><strong>prestazioni</strong></mark>: vengono nascoste le operazioni necessarie per riconfigurare il sistema al variare del carico.</li></ol><ol type="1" id="19a0d082-b26f-4d92-9913-4da16c1d3f15" class="numbered-list" start="8"><li>di <mark class="highlight-yellow"><strong>scalabilità</strong></mark>: il sistema viene espanso senza interrompere o modificare il funzionamento.</li></ol><p id="43aa5ecf-6f57-442a-a45d-1b04915d0cab" class=""><strong>Economicità</strong></p><p id="cce476eb-f67b-44d4-9b37-419ff51ed3a7" class="">Generalmente i sistemi distribuiti offrono spesso un <mark class="highlight-orange_background">miglior rapporto prezzo/qualità</mark> dei sistemi centralizzati basati su mainframe.</p><p id="465d0ec6-3ea3-4a05-97e9-fec23ef3aa21" class=""><strong>Apertura</strong></p><p id="219babee-3c83-49d1-9218-4e1a58067fff" class="">Con la definizione di <mark class="highlight-orange_background">protocolli standard</mark> si favorisce l’<mark class="highlight-orange_background">apertura all’hardware e software</mark> di fornitori diversi in modo da avere:<div class="indented"><ul id="65db586b-76e3-49e9-8816-b79dab10a49b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow">interoperabilità</mark>: implementazioni diverse su elaboratori di diverso tipo possono coesistere per comporre un unico sistema.</li></ul><ul id="0d1b5732-fd69-42ec-84ce-8e304afb052b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow">portabilità</mark>: un’applicazione sviluppata su un sistema operativo può funzionare su di un altro presentando la medesima interfaccia all’utente in modo da non modificare l’operatività.</li></ul><ul id="40c2a30b-8192-40ae-852c-113996be8d97" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow">ampliabilità</mark>: è relativamente semplice <em>far crescere</em> il sistema aggiungendo sia componenti hardware che software.</li></ul></div></p><p id="d6ccbb6d-897f-4ff6-9bb5-e0814fa97a4e" class=""><strong>Connettività e Collaborazione</strong></p><p id="132a62e9-755d-462e-9ec8-9576dc361977" class="">Nei sistemi distribuiti la possibilità di <mark class="highlight-orange_background">condividere risorse hardware e software comporta vantaggi economici</mark>. Per esempio è possibile condividere apparecchiature speciali di costo elevato, quali stampanti particolari, plotter, ecc..</p><p id="a45f499f-8236-4ff4-9f0d-cea3f18b06cb" class=""><strong>Prestazioni e scalabilità</strong></p><p id="84de17b9-52b5-4aa2-8035-46a2f2f31303" class="">La crescita di un sistema distribuito con l’<mark class="highlight-orange_background">aggiunta di nuove risorse</mark> e, quindi, di nuovi servizi, fornisce a tutti i suoi componenti un miglioramento delle prestazioni e permette di <mark class="highlight-orange_background">sostenere l’aumento del carico di richieste</mark>: questa possibilità prende il nome di <strong><mark class="highlight-orange_background">scalabilità orizzontale</mark></strong>.</p><p id="c1bd0d0b-e7f2-4e6b-ada4-df63d225e5eb" class=""><strong>Tolleranza ai guasti</strong></p><p id="420eea88-c5d8-4507-9cb2-f192dd72c796" class="">La <mark class="highlight-orange_background">possibilità di replicare risorse offre una certa garanzia di tolleranza ai guasti</mark>; la presenza di un componente guasto non deve pregiudicare il funzionamento del sistema ma, al limite, introdurre solo inefficienze in termini di tempo di risposta.</p><h2 id="31b8c59b-a2b7-4daa-bb7f-823fdef31e9c" class="">Svantaggi legati alla distribuzione 👎🏼</h2><p id="40cadbfb-4d85-4a22-8714-6ae7718bb445" class=""><strong>Complessità</strong></p><p id="ead07a15-284a-46a8-8855-de154c32d9f6" class="">Proprio per la struttura hardware i <mark class="highlight-orange_background">sistemi distribuiti sono più complessi di quelli centralizzati</mark>: richiedono <mark class="highlight-orange_background">strumenti per la l’interconnessione degli host e tecniche per l’instradamento corretto dei messaggi</mark>.</p><p id="8d9142d4-0e62-47fd-ad1b-c7793e5a4d06" class=""><strong>Sicurezza</strong></p><p id="94a7b21d-03ca-47fd-b650-d7f1e6d82037" class="">Con la connessione di più host tra loro si crea la possibilità di accedere a dati e risorse anche a chi non ne ha il diritto: <mark class="highlight-orange_background">nascono nuove problematiche connesse alla sicurezza</mark> che nel caso di sistemi centralizzati erano inesistenti.</p><p id="7cc4c22b-82a5-4b71-a892-46d167300d4d" class=""><strong>Comunicazione</strong></p><p id="6e187924-d0cb-4027-9171-39198312abc9" class="">Il trasferimento a distanza delle informazioni richiede <mark class="highlight-orange_background">nuove tipologie di sistemi di telecomunicazione</mark>, sia cablati sia wireless, e l’<mark class="highlight-orange_background">aumento esponenziale degli utenti</mark> fa sì che giornalmente <mark class="highlight-orange_background">aumenti la richiesta di bande trasmissive</mark>, anche per migliorare la qualità del servizio offerto.</p><hr id="4c00980e-4ea5-4864-aa9a-f4d43f984337"/><h1 id="c7485aa5-acab-4084-8cf0-df17890ac5b6" class="">Evoluzione dei sistemi distribuiti</h1><p id="25c3bbfd-d0aa-4640-a340-0e61ff01fdc8" class=""><strong>Architetture distribuite hardware: dalle SISD al cluster di PC</strong></p><p id="16dd26c3-0496-4572-a245-7b6e022c7f0e" class="">Esistono diverse possibilità per classificare le architetture hardware. Noi ricordiamo quella di <mark class="highlight-teal"><strong>Flynn</strong></mark> che si basa sui due flussi di informazioni normalmente presenti nei calcolatori: <div class="indented"><ul id="daec57d5-08c7-48b2-8b7d-f42d7b322774" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow">Flusso delle istruzioni</mark></li></ul><ul id="db760b82-becd-4ec7-b33e-eaa0b4c93031" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow">Flusso dei dati</mark></li></ul></div></p><table id="cc1c096d-c5c7-49b0-9f07-b4e55dea39bf" class="simple-table"><thead class="simple-table-header"><tr id="1e735e31-1e49-4c0a-af42-fe8943fc8e08"><th id="Yzd@" class="simple-table-header-color simple-table-header"></th><th id="_oVh" class="simple-table-header-color simple-table-header">Dati singoli</th><th id="IDyD" class="simple-table-header-color simple-table-header">Dati multipli</th></tr></thead><tbody><tr id="ba7ef8e3-d7a9-4179-8885-07fd389d915a"><td id="Yzd@" class="">Istruzioni singole</td><td id="_oVh" class="">SISD</td><td id="IDyD" class="">SIMD</td></tr><tr id="df8e0933-5cc6-428e-8206-742ce55c2281"><td id="Yzd@" class="">Istruzioni multiple</td><td id="_oVh" class="">MISD</td><td id="IDyD" class="">MIMD</td></tr></tbody></table><h2 id="7e3c53b7-8a09-41a8-9909-d983899dfe47" class=""><strong>SISD</strong></h2><p id="f3eebb83-03d0-44ff-8d72-c4a01ad6d0de" class="">Un elaboratore come la macchine di <mark class="highlight-orange_background"><strong>Von Neumann</strong></mark><mark class="highlight-orange_background"> che ha un solo flusso dati e un solo flusso istruzioni</mark> è una macchina Single Instruction stream - Single Data stream (SISD): tutte le macchine che hanno <mark class="highlight-orange_background">una singola CPU</mark> come i personal computer, le workstation e i mainframe appartengono a questa categoria.</p><h2 id="f94310f8-fc4c-4e6c-b2d6-0b3d31919fe6" class=""><strong>SIMD</strong></h2><p id="0369974d-b691-4509-b9e9-6cfb3fabfc51" class="">Nelle macchine <mark class="highlight-orange_background">SIMD l’elaborazione avviene su più flussi dati in contemporanea ma con un singolo flusso di istruzioni</mark>.</p><h2 id="c87e93b3-5a9f-45e3-9489-d58761354a7c" class=""><strong>MISD</strong></h2><p id="b67278e8-d31f-4ab4-abcf-72f8995bb302" class="">A questa categoria appartengono gli elaboratori che <mark class="highlight-orange_background">eseguono più istruzioni sullo stesso flusso dati</mark>: nel modello di calcolo MISD esistono quindi <mark class="highlight-orange_background">più processori</mark>, ognuno con un <mark class="highlight-orange_background">proprio flusso di istruzioni</mark> che verranno eseguite sullo <mark class="highlight-orange_background">stesso flusso di dati</mark>.</p><p id="4ef5a2ca-6622-4440-b56a-888f532a9dcc" class="">Con questa tipologia di architettura a<mark class="highlight-orange_background"> oggi non sono ancora state costruite macchine da commercializzare</mark>.</p><h2 id="9fbb5456-9ce0-490b-9890-04f4e6af5c47" class=""><strong>MIMD</strong></h2><p id="bd5a7bb8-1fc6-4f14-8405-36b84944908f" class="">L’architettura Multiple Instruction stream - Multiple Data stream comprende tutte le tipologie di elaboratori composti da <mark class="highlight-orange_background">più unità centrali di elaborazione indipendenti che possono lavorare su stream di dati anch’essi indipendenti</mark>.</p><p id="aa53e6c2-1ce2-4b03-af0a-4bc4d27b4e43" class="">Viene effettuata un ulteriore classificazione delle macchine MIMD in riferimento a come è suddivisa la memoria fisica, e cioè possiamo avere:<div class="indented"><ul id="b8663614-ab77-4bf3-aee9-deb1c8fb3310" class="bulleted-list"><li style="list-style-type:disc">Macchine MIMD a <mark class="highlight-yellow">memoria fisica condivisa </mark>→ <strong>multiprocessor</strong></li></ul><ul id="d2f1a595-6d94-4c25-8ee5-6dc085017703" class="bulleted-list"><li style="list-style-type:disc">Macchine MIMD a <mark class="highlight-yellow">memoria privata</mark>→ <strong>multicomputer</strong></li></ul></div></p><h2 id="3821f079-87ef-4963-b775-fa8c5d467476" class="">Cluster computing</h2><p id="1bfbacec-a3d3-4f14-a067-a81704aec2b4" class="">Con cluster computing si intende un <mark class="highlight-teal">sistema distribuito costituito da un insieme di nodi ad alte prestazioni interconnessi tramite una rete locale ad alta velocità</mark>: devono essere <strong><mark class="highlight-teal">omogenei</mark></strong>, cioè i singoli nodi hanno lo stesso sistema operativo, hardware molto simile e sono connessi attraverso la stessa rete.</p><p id="80838fa3-40c6-458f-998a-87a1bf4bee7e" class="">Differisce da una rete di PC principalmente per:<div class="indented"><ul id="4851fea4-2f96-44ce-a919-89d0a031d899" class="bulleted-list"><li style="list-style-type:disc">la potenza di elaborazione ad alte prestazioni</li></ul><ul id="a61f4fea-d620-445f-8656-df77cdfdb8c6" class="bulleted-list"><li style="list-style-type:disc">la velocità del trasferimento dati</li></ul><ul id="67cf19c8-cf89-467d-b13e-6f3bba435cf9" class="bulleted-list"><li style="list-style-type:disc">la centralizzazione fisica delle macchine, tutti i PC sono montati sullo stesso rack</li></ul><ul id="31b4af76-fbfd-4bee-99b2-654562940afe" class="bulleted-list"><li style="list-style-type:disc">la presenza di una applicazione di management che permette di lanciare processi su altri PC, monitorare il loro comportamento ecc.</li></ul></div></p><p id="0dc0f2ed-a6c1-472b-b9b0-51d910dfe0c6" class="">Abbiamo due possibili architetture:<div class="indented"><ol type="1" id="bf6040f8-58c8-4cdc-8068-c39e00c332bc" class="numbered-list" start="1"><li><strong>Organizzazione gerarchica con singolo nodo principale</strong></li></ol><ol type="1" id="c08c8c0c-0c52-481e-bd49-8ded798b2130" class="numbered-list" start="2"><li>organizzazione <strong>Single System Image</strong>: per esempio MOSIX, che effettua un <mark class="highlight-yellow">bilanciamento automatico del carico</mark> effettuando una eventuale migrazione di processi.</li></ol></div></p><h2 id="d7f91da6-2981-4ef7-b626-d9e521b97689" class="">Grid computing</h2><p id="2375ff54-e6ca-4d18-92a9-444325a8c039" class="">Con grid computing si <mark class="highlight-teal">intende un sistema distribuito di calcolo altamente decentralizzato</mark>, composto da un grand numero di nodi disposti a griglia (grid) e caratterizzati da un grado elevato di <mark class="highlight-teal"><strong>eterogeneità</strong></mark> sia per hardware, per il software, la tecnologia di rete, le politiche di sicurezza e molto altro.</p><p id="1a1bd289-6732-4f85-99e7-bdafb6924a83" class=""><strong>Sistemi distribuiti pervasivi</strong></p><p id="3e2a972e-9b64-48ff-b270-5b88f1ca4610" class="">Questa è una nuova generazione di SD i cui nodi sono piccoli, mobili, con connessioni di rete wireless e spesso facenti parte di un sistema più grande.</p><p id="e24be0d0-a204-4bdc-be0d-19d4e4c5a3c2" class=""><strong>Reti domestiche e domotica</strong></p><p id="6e20e716-b767-450d-8484-05130bbdb1b6" class="">Le reti domestiche sono caratterizzate dall’assenza di un amministratore di sistema e generalmente sono sistemi completamente auto-configuranti e autogestiti in quanto generalmente gli utenti non hanno conoscenze specifiche di connettività</p><p id="714e4fc8-bb82-4214-b9c1-15572723f4c7" class=""><strong>Wearable computing</strong></p><p id="5ea97054-ec3b-4d57-8ffa-2a731a588f22" class="">Oggi i sistemi wearable computing sono essenzialmente utilizzati per l’assistenza sanitaria ed effettuano il monitoraggio di parametri biologici o memorizzando i dati in un computer palmare oppure trasmettendo i dati a un sistema di archiviazione remoto.</p><h2 id="a1365d5c-e1e9-4d31-8751-6cc76558af31" class="">Architettura a terminali remoti</h2><p id="e6d50ef7-e7dc-476f-9e40-9ab3e52a8c38" class="">Tutte le operazioni vengono effettuate da un<mark class="highlight-orange_background">’unica entità centrale alla quale sono collegati terminali privi di capacità di elaborazione</mark> che si limitano a visualizzare e inviare e ricevere le informazioni alla entità centrale.</p><h2 id="def0527d-5b2d-4c01-9f0a-bc298975db30" class="">Architettura client-server</h2><p id="69d842ce-edea-4c92-a53d-8fad614ac582" class=""><mark class="highlight-orange_background">I client richiedono un servizio a un server </mark><mark class="highlight-orange_background"><em>di competenza</em></mark><mark class="highlight-orange_background">, che è in grado di esaudirne la richiesta, la elabora e invia la risposta.</mark></p><p id="df69b523-e151-436a-bf47-d1d4f71f83cb" class="">Possono essere presenti più server che offrono più servizi contemporaneamente così come più client possono richiedere lo stesso servizio o servizi differenti sia a server diverso che allo stesso server.</p><p id="66de4808-1ee9-459e-99f5-c7abfb6c20c8" class="">Inoltre un server può essere contemporaneamente anche client: quindi può essere server per uno, o più, servizi e client per altri richiedendo i servizi che necessita ad altri server.</p><h2 id="b86f474e-9842-4fd7-942e-05a578240a88" class="">Architettura WEB-centric</h2><p id="f644490f-c3e3-4d73-a264-036d4fb0dbd3" class="">L’evoluzione che negli ultimi anni ha caratterizzato i sistemi distribuiti riguarda il Web: la diffusione capillare delle piattaforme mobili ha provocato uno spostamento delle applicazioni sul server facendo  regredire gli host quasi a host utilizzati solo per l’interfaccia grafica verso l’utente.</p><p id="f6af68ef-7b22-407e-bddd-4c94093d544e" class="">Il <mark class="highlight-orange_background">Web server è il centro del sistema distribuito al quale i client vi accedono per ottenere dei servizi</mark>: tutta la computazione avviene sui server che restituisce ai client il risultato.</p><h2 id="a77e968a-2716-43a4-a5fd-feef3f2c6d60" class="">Architettura cooperativa</h2><p id="f9516776-c888-4da2-8a62-7a8c1a582c63" class="">L’evoluzione dell’architettura client-server è l’architettura cooperativa che si basa su e<mark class="highlight-orange_background">ntità autonome che esportano e richiedono servizi secondo il modello di sviluppo a componenti</mark> per la programmazione lato server proprio della programmazione a oggetti.</p><h2 id="0bc4247b-cb4c-4562-b160-df22e24b807a" class="">Architettura completamente distribuita</h2><p id="4f635cf1-7807-4685-bdfc-4dbefef759af" class="">In opposizione alla architettura Web-centric troviamo l’architettura completamente distribuita, tipica di sistemi dove è necessaria la cooperazione di gruppi di entità paritetiche, come nei sistemi groupware, che <mark class="highlight-orange_background">dialogano tra loro offrendo ciascuno i propri servizi e richiedendo servizi che spesso risultano essere duplicati per garantire l’immunità ai guasti</mark>.</p><h2 id="40d3624e-e936-40eb-bed3-931e2d54bd7a" class="">Architettura a livelli</h2><p id="252821da-44ab-4ef2-b139-1be7bf3aed3b" class="">Per alleggerire il carico elaborativo dei serventi sono state introdotte le applicazioni multilivello, nelle quali avviene la <mark class="highlight-teal">separazione delle funzionalità logiche del software in più livelli</mark>.</p><p id="98c81d7b-4edf-43df-b8fd-acb632f363f4" class="">Si introducono gli <mark class="highlight-teal"><strong>strumenti</strong></mark><mark class="highlight-teal"><em> </em></mark><mark class="highlight-teal"><strong>di</strong></mark><mark class="highlight-teal"> </mark><mark class="highlight-teal"><strong>middleware</strong></mark>, cioè uno strato software <em>in mezzo</em> che si colloca sopra al sistema operativo ma sotto i programmi applicativi, e sono l’evoluzione dei sistemi operativi distribuiti.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="6974d560-7c00-4233-a1a2-14721bd300ba"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Il middleware ha lo scopo di realizzare la comunicazione e le interazioni tra i diversi componenti software di un sistema distribuito.</div></figure><p id="5c6f136e-4626-4eaf-8845-4d7d31307c92" class="">Tra le funzionalità del middleware troviamo:<div class="indented"><ul id="9868a285-ce7b-4348-b3e3-b8c9c3f37f44" class="bulleted-list"><li style="list-style-type:disc">I servizi di astrazione e cooperazione</li></ul><ul id="97f940df-e48a-4083-8107-18ec3ec03ee4" class="bulleted-list"><li style="list-style-type:disc">I servizi per le applicazioni</li></ul><ul id="342550cd-089f-43c9-a066-0c919a5ca999" class="bulleted-list"><li style="list-style-type:disc">Il servizio di comunicazione</li></ul></div></p><h1 id="3089d2f0-7e3c-4b24-b496-029427f61157" class="">La comunicazione nel Web con protocollo HTTP</h1><h2 id="17cea2ff-f606-4f27-8636-e7e2e5be06b7" class="">HTTP e il modello client - server</h2><p id="3ea406a1-623e-4b02-8808-7a7bde95aa75" class="">Il Web è basato sul modello <strong><mark class="highlight-teal">client - server</mark></strong>.</p><p id="0255ab00-e7a3-45a2-a67a-749a9ea122b4" class="">I <strong>client</strong> sono elementi <strong>attivi</strong> che richiedono pagine Web ai server e ne visualizzano il contenuto.</p><p id="1d7840b1-a7a7-45a6-bd21-10f99edf0569" class="">I <strong>server</strong> sono elementi <strong>passivi</strong> che rimangono in ascolto di eventuali connessioni di nuovi client su una determinata porta TCP, secondo un modello a server passivo e forniscono ai client le pagine Web o le risorse richieste.</p><p id="895bedea-6857-45d5-93ca-0aa44d875d88" class="">HTTP è un protocollo usato per trasmettere risorse, non solo file. <mark class="highlight-teal">Una risorsa è identificata da un URI o URL</mark>.</p><ul id="33920663-dd57-4bb4-9a40-9d1bfa8ae776" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>URI</strong></mark> (<em>Uniform Resource Identifier</em>): set generico di nomi o indirizzi che rappresentano stringhe assegnate alle risorse</li></ul><ul id="6e6ba1ee-beae-454b-995b-009e92981a04" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>URL</strong></mark> (<em>Uniform Resource Locator</em>): termine informale, utilizzato solo nelle specifiche tecniche, associato a popolari protocolli quali HTTP, FTP, ecc.. </li></ul><h2 id="90608f98-9c6d-431d-862b-aec439516f5f" class="">Il protocollo HTTP</h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="b440a9de-c268-4004-8b1b-5670b87d929e"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Http è un protocollo di testo che fornisce il livello di trasporto a tutti i protocolli applicativi basati su di esso.</div></figure><p id="41246256-9269-4472-9750-b9654d14bc56" class=""><mark class="highlight-teal"><strong>Http</strong></mark>, acronimo di <em>Hyper Text Transfer Protocol</em>, è un <mark class="highlight-teal"><strong>protocollo</strong></mark> che consente di <mark class="highlight-teal"><strong>inviare e ricevere le risorse Web</strong></mark> <mark class="highlight-teal">da un host chiamato </mark><strong><mark class="highlight-teal">server</mark></strong><mark class="highlight-teal"> a un altro chiamato </mark><strong><mark class="highlight-teal">client</mark></strong>.</p><p id="0a3b4933-50c5-4640-bcda-b41b4753b452" class=""><mark class="highlight-teal">Per comunicare utilizza le sessione</mark>, dove ciascuna inizia stabilendo per prima cosa una connessione TCP al server, utilizzando di default la porta TCP 80, effettuando poi una request contenente un URL. In risposta il server produce e restituisce il file richiesto e, nella situazione più semplice, chiude la connessione TCP immediatamente dopo.</p><p id="1ff17604-e289-4e0f-8bff-63f1644122cc" class=""><strong>Conversazione Client - Server</strong></p><p id="54115a2d-57a1-49bf-8574-bd485980c14f" class="">Ogni conversazione tra client e server sul Web inizia con una richiesta rappresentata da un messaggio di testo creato dal client in formato HTTP. Il client invia la richiesta al server, quindi attende la risposta.</p><figure id="b10e1e14-3913-4b2c-a305-1dab8e9afa22" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%208.png"><img style="width:347px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%208.png"/></a></figure><h2 id="f8344b4d-67b0-4799-a148-82567964d83b" class="">Tipi di connessioni</h2><p id="76988b55-25c7-429d-b72b-83a49aaf21c3" class="">Il protocollo HTTP utilizza TCP come protocollo di trasporto per effettuare le connessioni tra client e server.</p><p id="a8ff1c32-50a7-4f11-a95f-d2cee918526e" class=""><mark class="highlight-teal">Nella connessione di HTTP 1.1 di tipo permanente il </mark><strong><mark class="highlight-teal">server lascia aperta la connessione TCP</mark></strong><mark class="highlight-teal"> dopo aver spedito la risposta</mark>. Le successive richieste e risposte fra client e server utilizzano sempre la stessa connessione.</p><p id="af15b4f8-96c9-4abd-86b9-b98c46628797" class="">Esistono <mark class="highlight-teal">due tipi</mark> di connessioni permanenti:<div class="indented"><ul id="8519af95-8898-4576-8f06-48684900f7e6" class="bulleted-list"><li style="list-style-type:disc">connessione permanente <mark class="highlight-yellow"><strong>incanalata </strong></mark><strong>→ </strong> le richieste vengono via via aggiunte a una coda chiamata <mark class="highlight-orange_background">pipeline</mark>, mentre le <mark class="highlight-orange_background">risposte vengono processate e inviate nello stesso ordine delle richieste</mark>.</li></ul><ul id="6f7d5198-3c37-4f77-9e92-7e1ef3d5d771" class="bulleted-list"><li style="list-style-type:disc">connessione permanente <mark class="highlight-yellow"><strong>non incanalata </strong></mark><strong>→ </strong>il client passa una nuova richiesta solo quanto la risposta alla precedente è stata ricevuta.</li></ul></div></p><h2 id="f751747a-2d2b-4bf9-bb13-c8ea2e03abb2" class="">HTTP Request</h2><p id="c566fa31-b0f0-4cfa-9ac4-2991d387ed36" class="">La prima riga della request contiene la <mark class="highlight-teal">versione del protocollo HTTP</mark> utilizzato, mentre nelle righe successive <mark class="highlight-teal">vengono indicate gli header</mark>, rappresentate da diversi elementi, ciascuno dei quali <mark class="highlight-teal">composto da un nome, seguito dai due punti e da un valore</mark>.</p><p id="491af13d-d595-48b7-92bd-a3547716bd57" class="">Gli header più comuni sono: <div class="indented"><ul id="86ba3aa3-a750-4749-b88d-05f961186657" class="bulleted-list"><li style="list-style-type:disc">la versione del browser che prende il nome di User-Agent</li></ul><ul id="43f8872f-6a55-45f1-be14-2179fa508082" class="bulleted-list"><li style="list-style-type:disc">l’host presente nell’URL</li></ul></div></p><p id="c2002998-8fb8-4609-9a72-0f443866e98a" class="">Una http request è un messaggio testuale inviato dal client al server HTTP ed è formato da tre elementi:<div class="indented"><ul id="44cc207c-5ed3-4e50-b0e7-f77f2a460e6c" class="bulleted-list"><li style="list-style-type:disc">riga di richiesta,</li></ul><ul id="1e4c7470-5ecc-491f-9618-7eff2d2cfca6" class="bulleted-list"><li style="list-style-type:disc">intestazione HTTP (header)</li></ul><ul id="129237dd-8bb8-470d-84b4-719be94d9008" class="bulleted-list"><li style="list-style-type:disc">corpo del messaggio (message body)</li></ul></div></p><figure id="a0b31e62-e600-4430-a423-ed20af4f4ce2" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%209.png"><img style="width:720px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%209.png"/></a></figure><p id="f4e0ad14-3753-4d31-9636-debb5def828e" class=""><strong>Riga di richiesta</strong></p><p id="f0f07b30-ee47-4709-9191-74462b068b45" class="">La riga di richiesta contiene:<div class="indented"><ul id="f02fc25c-8eb7-4bef-8c69-aa62541939c4" class="bulleted-list"><li style="list-style-type:disc">Il metodo:<ul id="f7b77a88-241c-492c-ac26-4858c745d402" class="bulleted-list"><li style="list-style-type:circle"><code>GET</code></li></ul><ul id="20c620a1-4561-4176-a8ae-a30c187df1d6" class="bulleted-list"><li style="list-style-type:circle"><code>HEAD</code></li></ul><ul id="da0d3510-85a5-495b-8094-9ee552035337" class="bulleted-list"><li style="list-style-type:circle"><code>POST</code></li></ul><ul id="f1516c8e-8094-44e8-91f0-59f2789a2d4a" class="bulleted-list"><li style="list-style-type:circle"><code>PUT</code></li></ul><ul id="57b80e91-941e-4371-a98f-a06b8cf815d4" class="bulleted-list"><li style="list-style-type:circle"><code>DELETE</code></li></ul><ul id="e36970f5-6ebc-427d-978f-1119ed0b0788" class="bulleted-list"><li style="list-style-type:circle"><code>OPTIONS</code></li></ul></li></ul><ul id="c4f05f23-2669-4773-bfb9-a8dc7501939c" class="bulleted-list"><li style="list-style-type:disc">l’URI (o URL) è l’identificativo di risorsa richiesta</li></ul><ul id="9ce5b762-9fc9-4239-91f2-651ffd54415b" class="bulleted-list"><li style="list-style-type:disc">la versione</li></ul></div></p><p id="00047d68-248f-41d8-be0a-6dc8bb1cd488" class=""><strong>Intestazione HTTP</strong></p><p id="31210807-db18-4bf3-82ac-32b26a991a87" class="">L’intestazione HTTP contiene tutte le informazioni necessarie per l’identificazione del messaggio ovvero i vari header (<em>esempio: </em><code>content-type: text/html</code>).</p><p id="7551b327-c1c4-47fe-87f5-ccc5a57abbf8" class=""><strong>Corpo del messaggio</strong></p><p id="3edefbca-08be-4f00-b29f-31ac7294944f" class="">Il corpo del messaggio di richiesta contiene i dati trasportati.</p><h2 id="b88e9a22-7204-4a97-ac12-b83b75a7bde7" class="">Messaggio di risposta: HTTP Response</h2><ul id="bf762540-d5a7-4cff-93a2-16f79214e422" class="bulleted-list"><li style="list-style-type:disc">Una riga iniziale con versione protocollo e stato</li></ul><ul id="e428d4da-6f70-49f2-8579-a72df8bdd02a" class="bulleted-list"><li style="list-style-type:disc">un’intestazione facoltativa</li></ul><ul id="53ddc673-b083-4e19-952f-63bca7862a8e" class="bulleted-list"><li style="list-style-type:disc">un corpo facoltativo.</li></ul><h2 id="873d1f7e-751a-45f2-bc6b-f96a17c5d2ec" class="">Metodi HTTP</h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="3eb53514-939c-4c47-9d66-53b4e0ffb0a2"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">API → Application Programming Interface</div></figure><blockquote id="f159dec7-36a1-49bb-9f46-414cc01ffdc3" class="">Le applicazioni RESTful consentono di effettuare operazioni da remoto sui dati presenti nei server, che lo permettono, sfruttando i metodi del protocollo HTTP. Le <mark class="highlight-teal">operazioni di tipo CRUD</mark> (<em>Create, Retrieve, Update, Delete</em>) possono essere così descritte:</blockquote><ul id="3be39c03-8bd8-497d-8803-dfb0b634a8ad" class="bulleted-list"><li style="list-style-type:disc">chiedere dati al server (<code>GET</code>)</li></ul><ul id="0db99881-30db-46d5-8765-92d2613467c6" class="bulleted-list"><li style="list-style-type:disc">creare dati sul server (<code>POST</code>)</li></ul><ul id="df63a73d-32b6-4cbf-9433-57f5c2c50a71" class="bulleted-list"><li style="list-style-type:disc">modificare o sostituire i dati sul server (<code>PUT</code>)</li></ul><ul id="7e1fb98a-fbdc-4b72-a64c-98d778607857" class="bulleted-list"><li style="list-style-type:disc">cancellare dati sul server (<code>DELETE</code>)</li></ul><h2 id="aa58607c-0979-4833-a5f3-baac711829c2" class="">I codici di stato</h2><p id="a88230f9-4157-4d29-a676-d6ef01461873" class="">I codici di stato, o status code, sono dei codici restituiti dai server HTTP per <mark class="highlight-teal">indicare al client l’esito di una richiesta</mark>.<div class="indented"><ol type="1" id="6337eae0-7ad4-40de-bc6d-64a28aa6e51a" class="numbered-list" start="1"><li><code>100-199</code> (<em>Information</em>): questi codici di risposta forniscono informazioni temporanee alla richiesta, durante il suo svolgimento e a partire dalla versione 1.0 viene sconsigliato il loro utilizzo.</li></ol><ol type="1" id="71fe0314-4a6c-4c04-a29c-678ad78e9ecd" class="numbered-list" start="2"><li><code>200-299</code> (<em>Successful</em>): questo intervallo di codici di stato indica il completamento di una richiesta con successo.</li></ol><ol type="1" id="04c418d8-0150-4710-9d93-081f60f7cb01" class="numbered-list" start="3"><li><code>300-399</code> (<em>Redirection</em>): questi codici vengono utilizzati per comunicare una varietà di stati che non indicano un errore, ma che richiedono un trattamento particolare da parte del browser.</li></ol><ol type="1" id="4a7bfbf0-03eb-4ca6-947e-624b9f8f9b25" class="numbered-list" start="4"><li><code>400-499</code> (<em>Client error</em>): questo intervallo di valori viene utilizzato per indiCare le condizioni di errore provocate dal comportamento del client.</li></ol><ol type="1" id="53b488c2-dc25-467c-accc-b4d2aa0a47ed" class="numbered-list" start="5"><li><code>500-599</code> (<em>Server error</em>): è una classe di messaggi di errore, prodotti come risposta a problemi verificatisi sul server.</li></ol></div></p><h1 id="1f46e195-13d4-4545-96ef-1621404eb1bf" class="">Le applicazioni Web e il modello client - server</h1><p id="56a899c3-8a6f-46e9-8ce9-eefc22dd4f81" class="">Due concetti fondamentali stanno alla base delle applicazioni Web:<div class="indented"><ol type="1" id="1495ddda-56bd-4349-8137-97bc9f20cbd8" class="numbered-list" start="1"><li>Tecnologie <mark class="highlight-yellow">client - side e server - side</mark></li></ol><ol type="1" id="d2f80560-6096-41b4-b895-5abf9039c8fe" class="numbered-list" start="2"><li>linguaggi di <mark class="highlight-yellow">mark-up e linguaggi di programmazione</mark></li></ol></div></p><h2 id="3726f3a2-4ec6-4461-aa4e-b5a596c49e13" class="">Tecnologie del Web</h2><p id="ce3e937c-fa17-4463-aeb3-771fe8a70d97" class="">Possiamo distinguere le tecnologie del Web in due gruppi:<div class="indented"><ol type="1" id="adf32e2f-ae40-4c6d-b752-1d5884291b3c" class="numbered-list" start="1"><li>Tecnologie <strong><mark class="highlight-yellow">client - side</mark></strong>: sono le strutture tecnologiche in cui <mark class="highlight-orange_background">l’elaborazione avviene sul client</mark>, tipicamente nel browser:</li></ol><figure id="194577ee-9a7d-4d51-a81c-7f30eefc30b0" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2010.png"><img style="width:567px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2010.png"/></a></figure><ol type="1" id="f6711b0d-4c62-4ba7-9c05-b02587dba0ef" class="numbered-list" start="2"><li>Tecnologie <mark class="highlight-yellow"><strong>server - side</strong></mark>: sono le strutture tecnologiche in cui l’<mark class="highlight-orange_background">elaborazione avviene sul server</mark>, tipicamente nel Web server:</li></ol><figure id="613d2ecc-050f-4d5d-b332-144ec9eeda7e" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2011.png"><img style="width:580px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2011.png"/></a></figure><p id="d87675b5-ad23-4990-b08a-c93fb89389d3" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2faba026-8d32-40ed-a36c-48d08ed77f16"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Nella realizzazione di applicazioni Web le tecnologie client - side o server - side non vengono scelte arbitrariamente: ci sono elaborazioni che si possono fare solo client-side e altre che si possono fare solo server-side.</div></figure><p id="8ea38bcc-5b4e-4fae-ac3f-eb01d14c36f6" class=""><strong>Linguaggio del Web</strong></p><p id="0fb8c485-8a8c-4d9d-9245-e905e3bce06f" class="">Nel web vengono utilizzate <mark class="highlight-teal"><strong>due tipologie di linguaggi</strong></mark>: i linguaggi di <strong>mark-up</strong> <strong>e</strong> i linguaggi d <strong>programmazione</strong>.</p><ol type="1" id="acc870b0-7b22-48b4-840e-1f9f8488d929" class="numbered-list" start="1"><li>I linguaggi di <mark class="highlight-yellow">mark-up</mark> servono a scrivere <mark class="highlight-yellow">documenti strutturati</mark>, come <code>HTML</code>, <code>XML</code>, <code>JSON</code></li></ol><ol type="1" id="0c07f3eb-a8d0-48bf-9231-d468caedf482" class="numbered-list" start="2"><li>I linguaggi di <mark class="highlight-yellow">programmazione</mark> servono a scrivere <mark class="highlight-yellow">programmi</mark>, come <code>Java</code> e <code>PHP</code>.</li></ol><h2 id="f5ef20d5-9d77-4b94-9a79-f0a40ae93300" class="">Il modello client - server</h2><p id="cf45ddb9-03ea-4d7e-955b-bf3c5235bbab" class="">Il modello client-server è costituito da un insieme di host che gestiscono una (o più) risorse, i server, e da un insieme di client che richiedono l’accesso ad alcune risorse distribuite.</p><p id="5944b212-cd87-44eb-9bc1-9c6ffb74fdae" class="">Non sono gli host ad essere server o client ma i processi che sono in esecuzione su di essi, dove come processo si intende un programma in esecuzione.</p><p id="a3805e33-bf25-4783-a683-746dcce539b6" class="">Lo schema di funzionamento di un modello client - server: </p><figure id="61f71938-f109-47dd-bff2-fba7516a8c51" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2012.png"><img style="width:432px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2012.png"/></a></figure><ol type="1" id="af0f54bb-26fe-45a0-b016-5581381aeb90" class="numbered-list" start="1"><li>Il client manda una richiesta al server</li></ol><ol type="1" id="fc953213-2c32-49df-bb43-35db2bc7a745" class="numbered-list" start="2"><li>il server riceve la richiesta</li></ol><ol type="1" id="e8c51391-d062-4d95-8554-7026d76af4d0" class="numbered-list" start="3"><li>il server esegue il servizio richiesto</li></ol><ol type="1" id="5f023c37-25df-4afc-bcd4-e10d50e893e2" class="numbered-list" start="4"><li>il server manda una risposta ed eventualmente dei dati</li></ol><ol type="1" id="98ae06c5-0fad-4e2f-bc6c-ae17d3b58952" class="numbered-list" start="5"><li>il client riceve la risposta</li></ol><p id="56372ef7-d0eb-476d-b950-efffcdde8a0b" class="">Alcuni servizi tipici delle architetture Client - Server sono:<div class="indented"><ul id="bb0f82cf-e627-490a-ad20-3709df9d1832" class="bulleted-list"><li style="list-style-type:disc">Telnet</li></ul><ul id="56b0b51e-5b50-4483-bc17-681907b65c25" class="bulleted-list"><li style="list-style-type:disc">HTTP</li></ul><ul id="ad8b8fb3-65e1-455f-990c-97975fc66625" class="bulleted-list"><li style="list-style-type:disc">FTP</li></ul><ul id="1b9e02d1-81dd-46a4-9073-3c00608a6204" class="bulleted-list"><li style="list-style-type:disc">SMTP, IMAP4, e così via.</li></ul></div></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0fa75d44-688c-4f7e-868f-9881fb74353d"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Un client per comunicare con un server usando il protocollo TCP/IP deve per prima cosa connettersi al socket dell’host dove il server è in esecuzione specificando l’indirizzo IP della macchina e il numero di porta sulla quale il server è in ascolto.</div></figure><h2 id="85e5fd0b-38cd-42ee-a972-38b7da050ffe" class="">Comunicazione unicast e multicast</h2><ul id="ff01bf1a-dcb8-4b93-98d5-5e538076c09e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Unicast</strong></mark>: il <mark class="highlight-orange_background">server comunica con un solo client alla volta</mark> accettando una richiesta di connessione solo se nessun altro client è già connesso.</li></ul><ul id="f678bcda-b540-47a2-afd0-98f180fee653" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Multicast</strong></mark>: al server <mark class="highlight-orange_background">possono essere connessi più client</mark> contemporaneamente.</li></ul><figure id="85201ec5-404e-4e8b-be8a-c22c6cd8fb0f" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2013.png"><img style="width:582px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2013.png"/></a></figure></div></p><h2 id="7c4190fe-0e2a-4d9e-b428-98248e67af64" class="">Livelli e strati</h2><p id="ef06a04d-f19a-46cd-9236-faf4346cfc97" class="">Le architetture client - server sono n<mark class="highlight-teal">ormalmente </mark><strong><mark class="highlight-teal">organizzate</mark></strong><mark class="highlight-teal"> </mark><strong><mark class="highlight-teal">a </mark></strong><mark class="highlight-teal">“livelli” (</mark><strong><mark class="highlight-teal">tier</mark></strong><mark class="highlight-teal">)</mark> dove ogni livello corrisponde a un nodo o gruppo di nodi di calcolo su cui è distribuito il sistema.</p><p id="2f0891fe-a7e7-422c-8701-96898e09401f" class="">In genere nelle applicazioni possiamo individuare <mark class="highlight-teal">tre tipi principali di funzionalità</mark> che corrispondono a una struttura in tre strati:<div class="indented"><ul id="018938a5-4266-4625-aafa-4c37b87febfe" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-yellow">front-end</mark></strong> o presentation tier: interfaccia verso l’utente</li></ul><ul id="b5889ceb-5b76-43c3-ba4f-400b8ac2a7dd" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-yellow">logica applicativa</mark></strong> o middle tier (<em>business logic</em>)</li></ul><ul id="c15495d4-28d2-4efd-9ff8-fb1f04b3b50b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>back-end</strong></mark> con accesso alle risorse e ai dati, anche detto <em>data tier</em>.</li></ul></div></p><p id="e8b2a924-b67b-4645-97ac-d428bdc53642" class="">Solitamente viene utilizzata questa nomenclatura:</p><ul id="e5412339-7a3f-4201-a2a6-e8658aca8def" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Presentation Layer</strong></mark> (<em>PL</em>): composta dall’insieme delle procedure o moduli dedicate all’acquisizione e alla presentazione dei dati all’utente</li></ul><ul id="6a304f4a-6915-4f97-ae12-3b37489cfcd3" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-yellow">Resource Management Layer</mark></strong>: è composto dall’insieme delle procedure che gestiscono i dati</li></ul><ul id="4b8767de-adf0-4a9d-9273-3fa258074bc0" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-yellow">Business Logic Layer</mark></strong>: è il corpo centrale dell’applicazione che comprende la logica della elaborazione.</li></ul><h2 id="6dc8ae10-b202-4f2d-9e02-5f140bea3d78" class="">Architettura a un livello - 1 tier</h2><p id="0a2b129f-f311-4c01-b1be-0f0838c412ab" class="">Questa architettura <mark class="highlight-orange_background">non rientra nella tipologia client -server</mark> e può essere classificata come architettura a un solo livello.</p><p id="0952ab78-9886-463f-be93-eb61d8f0665a" class="">Tutta l’elaborazione è effettuata dall’elaboratore centrale e i terminali servono solo per I/O.</p><figure id="63d9cc39-d4d3-47df-bca1-76fb7c3f1182" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2014.png"><img style="width:192px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2014.png"/></a></figure><h2 id="cae2086d-c7c1-431d-895f-7d7c69cae479" class="">Architettura a due livelli - 2 tier</h2><ul id="d90c7630-fe85-4f17-83f8-a4d85c4f7df7" class="bulleted-list"><li style="list-style-type:disc">un <mark class="highlight-yellow">livello server</mark></li></ul><ul id="50dc15cd-109a-4819-b91a-9e37a3133eeb" class="bulleted-list"><li style="list-style-type:disc">un <mark class="highlight-yellow">livello client</mark></li></ul><p id="a4228542-495d-4efb-adc9-d4c980fa7f28" class="">Possiamo individuare due sottocategorie:</p><ol type="1" id="c9dff8d0-b957-4614-8eda-24478bf42853" class="numbered-list" start="1"><li>il modello <strong><mark class="highlight-yellow">Thin-client</mark></strong>, dove il server è responsabile della logica applicativa e gestione dei dati e il <mark class="highlight-orange_background">client è responsabile della visualizzazione</mark>:<figure id="8e213c3d-f3d0-46f7-8ef1-e804ac54b924" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2015.png"><img style="width:211px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2015.png"/></a></figure></li></ol><ol type="1" id="5bcfd668-2257-42fe-b538-b34df4968af9" class="numbered-list" start="2"><li>Il modello <strong><mark class="highlight-yellow">Thick-client</mark></strong> dove il server è responsabile della gestione dei dati mentre il <mark class="highlight-orange_background">client è responsabile della logica applicativa e della presentazione</mark>:<figure id="07fcb8a3-c59d-4afa-a11a-84a853b10b94" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2016.png"><img style="width:190px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2016.png"/></a></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="11c414ba-ac0d-4ad6-a100-ff6359949b47"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Il limite delle architetture client - server a due livelli è che sono poco scalabili dato che il server deve gestire la connessione e lo stato della sessione di ciascun client.</div></figure><h2 id="88a634e4-c963-4b29-8669-ed3df7d5fb39" class="">Architettura a tre livelli - 3 tier</h2><ul id="431bc597-898f-4e6b-a0ff-4e47f571f27c" class="bulleted-list"><li style="list-style-type:disc">front-end o presentation tier</li></ul><ul id="fa1d4982-20b1-402c-8626-49856a9afc20" class="bulleted-list"><li style="list-style-type:disc">logica applicativa o middle tier</li></ul><ul id="4d9cc63c-e0a4-4e7c-a888-27ad1df931ec" class="bulleted-list"><li style="list-style-type:disc">back-end con accesso alle risorse e ai dati, detto data tier.</li></ul><p id="3223ad3e-eb2a-4deb-9e3b-f1d13e05d5df" class="">I vantaggi dell’introduzione del middleware sono notevoli, soprattutto in termini di prestazioni, in quanto in questo modo si favorisce la distribuzione della quantità di elaborazione.</p><p id="a9418307-c885-4d4e-8ffa-1e57ef69e93d" class="">Nei sistemi 3-tier è però più difficile la progettazione, lo sviluppo e l’amministrazione.</p><figure id="2188ae23-ac95-44a3-9c78-29523fec2469" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2017.png"><img style="width:192px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2017.png"/></a></figure><h2 id="4750bd9b-239f-47bb-8c33-6b72e9d959ae" class="">Architetture multi-tier</h2><p id="b32faff1-dc5f-47df-91e2-a05e130862d2" class="">Le architetture client - server a N livelli sono una generalizzazione del modello client - server a tre livelli dove vengono scomposti e introdotti un numero qualunque di livelli e server intermedi.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="23c37d52-1a47-41d5-ab32-1a4dd4037427"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Questa scomposizione viene effettuata per suddividere ulteriormente i compiti dei vari strati: prende il nome di multi-tier</div></figure></li></ol><h1 id="93281789-3699-48f4-afe9-928535a510bb" class="">Le applicazioni di rete</h1><p id="bd363fb7-f702-4ae4-b315-5c3d1e6cf2e5" class="">Il livello applicazione implementa i vari protocolli, tra cui:<div class="indented"><ul id="88c8cebe-3723-4a93-9a21-af69f41fc410" class="bulleted-list"><li style="list-style-type:disc">SMTP</li></ul><ul id="5132d92a-83ed-4a04-8ab1-a5dfc9dc55c7" class="bulleted-list"><li style="list-style-type:disc">FTP</li></ul><ul id="e01312ec-63e7-4f08-b11a-eb6720d74d43" class="bulleted-list"><li style="list-style-type:disc">HTTP</li></ul><ul id="7d83fe75-6369-4ac0-93ce-717aaa56e983" class="bulleted-list"><li style="list-style-type:disc">DNS</li></ul></div></p><blockquote id="dd7de709-aed1-4939-aa01-10ae34edd132" class="">Non va quindi confusa l’applicazione con il livello di applicazione: <mark class="highlight-orange_background">il livello di applicazione è lo strato protocollare che mette a disposizione i protocolli mediante i quali le applicazioni possono comunicare tra host remoti</mark>.</blockquote><h2 id="0302ea38-78c8-49e0-a30e-9a5a2c7b5a41" class="">Applicazioni di rete</h2><p id="4d7e1e52-ec08-4146-b29b-fd90cb892f60" class="">In generale un’applicazione di rete è costituita da un insieme di programmi che vengono eseguiti su due o più computer contemporaneamente.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1260c006-32c3-4feb-97e9-78488d831055"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">L’applicazione di rete prende anche il nome di applicazione distribuita dato che non viene eseguita su di un solo elaboratore.</div></figure><h2 id="ed5267d4-bb9f-443a-9e3e-8008cabb1fd6" class="">Identificazione di un servizio mediante socket</h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="373c7489-7c1f-4424-834c-5cd5965096ca"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">L’identificazione non può avvenire soltanto mediante l’indirizzo IP del destinatario, in quanto quest’ultimo individua soltanto l’host ma non il processo specifico e su un host sono sicuramente in esecuzione più processi contemporaneamente.</div></figure><p id="f6cad371-ebce-4ac1-aedd-fc6785f737bd" class="">Per individuare il processo viene utilizzato un identificatore unico per l’host, chiamato numero di porta.</p><p id="f0dd63eb-924f-4cfd-b331-47f5110804df" class=""><mark class="highlight-teal">Il client contatta il server usando l’</mark><strong><mark class="highlight-teal">identificatore dell’host</mark></strong><mark class="highlight-teal"> (indirizzo IP) + l’</mark><strong><mark class="highlight-teal">identificatore del servizio</mark></strong><mark class="highlight-teal"> (numero di porta)</mark></p><blockquote id="53ff8626-b50f-4f6f-8966-5c9aa2a472f2" class="">Un numero di porta non può essere associato a più processi ma un server può offrire più servizi, ciascuno su un’apposita porta.</blockquote><p id="e37c8626-df83-4d77-bf3e-09ffd19b14e1" class="">Questo meccanismo prende il nome di <mark class="highlight-teal"><strong>socket </strong></mark>(<a href="https://www.notion.so/I-socket-e-la-comunicazione-con-i-protocolli-TCP-UDP-9e68b5567d024e148c6481d165b11053">I socket e la comunicazione con i protocolli TCP/UDP</a>).</p><blockquote id="0a1ec326-d3c9-4032-9978-3feb4b563a3e" class=""><em>Il server offre il servizio a più client e deve gestire la concorrenza: il socket di connessione è anche chiamato socket di benvenuto e alla richiesta accettata di un client il server crea dinamicamente un nuovo thread e gli assegna un socket di connessione.</em></blockquote><h2 id="bb601eb2-9343-4843-abf0-139a0d4a6203" class="">Architettura per l’applicazione di rete</h2><ul id="e0bf7768-4231-4401-8571-af3a342edca7" class="bulleted-list"><li style="list-style-type:disc">Client server</li></ul><ul id="8d8f61dc-d984-466d-86ea-9502c1325a52" class="bulleted-list"><li style="list-style-type:disc">Peer to peer</li></ul><ul id="cd738b06-9008-462c-9cde-7e05db882f98" class="bulleted-list"><li style="list-style-type:disc">Architetture ibride</li></ul><p id="9eac8cfe-563b-4dd0-b12c-538fbde4d6a5" class=""><strong>Architettura client server</strong></p><p id="bb1fcaa8-640d-4e2d-9f3b-bb5b4561b103" class="">La caratteristica principale è che deve sempre esserci un server attivo che offre un servizio restando in attesa che uno o più client si connettano a esso per poter rispondere alle richieste che gli vengono effettuate.</p><p id="4b297053-5c98-48fb-887e-92ac9edb4831" class="">Un client non è in grado di comunicare con gli altri client ma solo con il server: più client invece possono comunicare contemporaneamente con lo stesso server.</p><p id="ca3d92f7-ec9c-4128-ab36-1fe01586e4a0" class=""><strong>Architettura Peer to Peer</strong></p><p id="f2ac3d59-a25c-4df6-936f-8373ec795ac0" class="">In questo tipo di architettura abbiamo <mark class="highlight-teal">coppie di host chiamati peer che dialogano direttamente tra loro</mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d953f8f8-600c-47d3-8aa2-3f1c464902b4"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">E’ formato da un insieme di entità autonome capaci di auto organizzarsi, che condividono un insieme di risorse distribuite presenti all’interno di una rete. Il sistema utilizza tali risorse per fornire una determinata funzionalità in modo completamente o parzialmente decentralizzato.</div></figure><ul id="fd474132-9ead-4390-a9a0-1958bae396b6" class="bulleted-list"><li style="list-style-type:disc"><strong>P2P decentralizzato</strong><p id="05f60688-eed0-4a21-a3df-87b25f719834" class=""><mark class="highlight-orange_background">Un peer ha sia funzionalità di client che di server</mark> ed è impossibile localizzare una risorsa mediante un indirizzo IP statico.</p><p id="ad201cad-29c8-4bf1-a8d4-bb782d31462c" class="">Le risorse che i peer condividono sono dati, la memoria, la banda ecc..</p></li></ul><ul id="b3a0b116-7d87-44c0-bce7-8d54ae05257e" class="bulleted-list"><li style="list-style-type:disc"><strong>P2P centralizzato</strong><p id="fecfd19e-e09e-4459-8eda-b732afc17597" class="">è un compromesso tra il determinismo del modello client - server e la scalabilità del sistema puro: <mark class="highlight-orange_background">ha un server centrale che conserva informazioni sui peer</mark> e risponde alle richieste su quelle informazioni effettuando quindi la ricerca in modalità centralizzata.</p><p id="079ab4be-d2f5-4779-a5a6-46495a1f70f6" class="">I peer sono responsabili di conservare i dati e le informazioni.</p></li></ul><ul id="4b778653-b491-454b-85f2-38d0a8ba24a2" class="bulleted-list"><li style="list-style-type:disc"><strong>P2P ibrido</strong><p id="d6d8caf9-0adc-474d-a688-cd841795aef4" class="">è un P2P parzialmente centralizzato dove sono presenti a<mark class="highlight-orange_background">lcuni peer determinati dinamicamente che hanno anche la funzione di indicizzazione</mark>: gli altri nodi sono anche chiamati leaf peer.</p></li></ul><h2 id="a77afa53-e3cc-424b-abe7-a35b51488773" class="">Servizi offerti dallo strato di trasporto</h2><p id="f59f642d-076f-423b-82e8-7d9b41f458be" class="">Ogni applicazione deve scegliere tra i protocolli di trasporto quale deve adottare per realizzare un protocollo applicativo in base ai servizi che sono necessari alle specifiche esigenze della applicazione, che possono essere:<div class="indented"><ul id="9ec7d464-0f7c-46d8-968b-950a67a11e24" class="bulleted-list"><li style="list-style-type:disc">Trasferimento dati affidabile,</li></ul><ul id="b4c32605-86b3-46f0-89db-0852529577c9" class="bulleted-list"><li style="list-style-type:disc">ampiezza di banda</li></ul><ul id="fd697ce3-731f-41ce-92f3-5d1420e6c5d6" class="bulleted-list"><li style="list-style-type:disc">temporizzazione</li></ul><ul id="a15c7646-b936-4836-af79-e24419554f12" class="bulleted-list"><li style="list-style-type:disc">sicurezza</li></ul></div></p><p id="750f3532-1209-4599-bfbc-4922b25a3aac" class=""><strong>Trasferimento dati affidabile</strong></p><p id="ca5cd854-dec8-41ca-805f-496aba360386" class="">Intendiamo un servizio che garantisce la <strong><mark class="highlight-teal">consegna completa e corretta dei dati</mark></strong>.</p><p id="69df3705-1fa7-47ea-9606-5bb032ecc00f" class="">Ci sono due protocolli:<div class="indented"><ul id="a0682d36-99ae-46a0-85b2-64f8ba8cb226" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>UDP</strong></mark>: protocollo <mark class="highlight-orange_background">senza connessione</mark> da utilizzarsi quando <mark class="highlight-orange_background">la perdita di dati è un fatto accettabile</mark> in quanto non è affidabile.</li></ul><ul id="99ab0ca7-2786-4363-8f79-085dd7d7033f" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>TCP</strong></mark>: <mark class="highlight-orange_background">orientato alla connessione</mark> da utilizzarsi quando <mark class="highlight-orange_background">la perdita di dati è un evento inaccettabile</mark>.</li></ul></div></p><p id="564b16d5-c69f-4079-816f-80a59ec999f0" class=""><strong>Ampiezza di banda</strong></p><p id="77b6b15a-f118-4c84-be10-01fc63686f24" class="">Alcune applicazioni necessitano di una <mark class="highlight-orange_background">garanzia sulla larghezza di banda minima disponibile</mark>, come la trasmissione di un evento in diretta in una web - TV.</p><p id="41f1d1bc-9880-4c39-9bc1-a830dd44a728" class=""><strong>Temporizzazione</strong></p><p id="4f488f1e-2c63-4a6d-b8f6-bc4a8b3f0068" class="">Alcune applicazioni per essere “realistiche” ammettono solo piccoli ritardi per essere efficaci: lo strato di trasporto non è in grado di garantire i tempi di risposta perchè le temporizzazioni presenti assicurano un certo ritardo end-to-end tra le applicazioni.</p><p id="c18f6055-681d-4534-a0c2-dbb5cff19aba" class="">Il protocollo TCP garantisce la consegna del pacchetto ma non il tempo che ci impiega e neppure il protocollo UDP, nonostante sia più veloce del TCP, è temporalmente affidabile.</p><p id="49efc526-f934-4361-8307-d853724210ba" class=""><strong>Sicurezza</strong></p><p id="1fd991ca-45cc-4ae4-9837-f970c236dba0" class="">Un’applicazione può richiedere allo strato di trasporto la <mark class="highlight-orange_background">cifratura di tutti i dati trasmessi</mark> in modo tale che anche se questi venissero intercettati da malintenzionati non si perda la riservatezza.</p><p id="69849cc8-33d4-4cab-8d2c-1af64ca7b3b2" class="">È quindi possibile che <mark class="highlight-orange_background">vengano richiesti dei servizi di sicurezza da applicare per garantire l’integrità e la riservatezza dei dati</mark>.</p><h1 id="0de73071-612f-4861-96e4-5656c27c863d" class="">Applicazione di rete</h1><p id="e54ea697-9df5-47cc-b2b3-004217e4bb86" class="">I processi hanno la necessità di scambiare messaggi con gli altri processi della medesima applicazione, per comunicare tra loro questi processi <mark class="highlight-teal">devono mettersi in contatto tramite i loro indirizzi</mark> e utilizzare i servizi offerti dal livello di applicazione.</p><p id="08dea570-6481-4cf9-bc6a-133c357dcb5f" class="">La pila protocollare di Internet (TCP/IP) è costituita da cinque livelli:<div class="indented"><ul id="c10ae81c-805e-4041-841a-7822efc37be8" class="bulleted-list"><li style="list-style-type:disc">Applicazione (Messaggio)</li></ul><ul id="4655e9ed-bc77-431d-8781-4c20c46c2eaf" class="bulleted-list"><li style="list-style-type:disc">Trasporto (Segmento)</li></ul><ul id="366eeb34-2808-47d4-9aff-b7c08357f09b" class="bulleted-list"><li style="list-style-type:disc">Rete (Datagram)</li></ul><ul id="cf7f6d31-065c-427d-9a10-0acbf61ba78b" class="bulleted-list"><li style="list-style-type:disc">Collegamento (Frame)</li></ul><ul id="6f3f6186-2c42-4d0d-8db6-c74af16be4f8" class="bulleted-list"><li style="list-style-type:disc">Fisico (Segnale fisico)</li></ul></div></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="90aecef8-874c-4213-9033-3e2d1376be93"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Lo strato di trasporto della rete Internet mette a disposizione delle applicazioni attive in ciascun host due distinti protocolli di trasporto: <strong>TCP</strong> e <strong>UDP</strong>.</div></figure><p id="54834183-8a6b-4af9-9780-2c2f2b84d0dc" class="">TCP e UDP svolgono funzioni diverse, cioè offrono servizi diversi allo strato applicativo:<div class="indented"><ul id="d36d7c32-1c62-4a6b-a971-0ef9b78702de" class="bulleted-list"><li style="list-style-type:disc">il protocollo <strong>TCP</strong> è <mark class="highlight-yellow">orientato alla connessione </mark>(<em>connection - oriented</em>) ed è <mark class="highlight-yellow">affidabile</mark></li></ul><ul id="b0ef456e-5f5b-4d4f-b34e-c076d872fc91" class="bulleted-list"><li style="list-style-type:disc">il protocollo <strong>UDP</strong> è <mark class="highlight-yellow">senza connessione</mark> (<em>connectionless</em>) e quindi <mark class="highlight-yellow">non affidabile</mark>.</li></ul></div></p><h1 id="b729deb7-4100-45c5-9ec4-556dbf8b6385" class="">Le porte di comunicazione e i socket</h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8614c76d-3339-460f-b7d6-e37e5fdc041e"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Affinchè un processo, presente su un determinato host, invii un messaggio a un qualsiasi altro host, il processo mittente deve identificare il processo destinatario in modo univoco.</div></figure><p id="6e49e419-96ed-41f1-93f6-9d1ba6661120" class="">Ogni PC ha una sola porta fisica di connessione al network, perciò <mark class="highlight-teal">sono state introdotte le porte logiche che identificano il processo corretto</mark>.</p><p id="d10277b5-75ca-4e91-97ec-19b02ec96116" class="">Questo numero di porta viene definito port address oppure sinteticamente port, in questo modo è possibile instaurare simultaneamente più comunicazioni cosicchè due applicazioni possono comunicare l’una con l’altra indipendentemente dal fatto che sulla rete stiano avvenendo altre comunicazioni.</p><blockquote id="5a4e1dc8-b7a6-4a99-b3a8-0c2d6b1b48af" class="">Il numero di port è specificato su <mark class="highlight-teal">2 Byte</mark>, <strong>da </strong><mark class="highlight-teal"><strong>0</strong></mark><strong> a </strong><mark class="highlight-teal"><strong>65535</strong></mark>.</blockquote><ul id="2f800791-42ab-454b-874f-9f55591e1a5d" class="bulleted-list"><li style="list-style-type:disc">I port da <mark class="highlight-yellow"><strong>0 a 1023</strong></mark> sono <mark class="highlight-orange_background">riservati ad applicazioni particolari</mark>, costituiscono i cosiddetti <mark class="highlight-orange_background"><strong>well-know port numbers</strong></mark>.</li></ul><ul id="5fab9d1c-bb09-4c59-b2b7-e75a256820c7" class="bulleted-list"><li style="list-style-type:disc">I port da <mark class="highlight-yellow"><strong>1024 a 49151</strong></mark> sono riservati a <mark class="highlight-orange_background">porte registrate</mark> e sono usasti da alcuni servizi ma possono anche essere utilizzati dai client.</li></ul><ul id="7186ab1b-614f-4fc1-848f-1cc63c547f51" class="bulleted-list"><li style="list-style-type:disc">I numeri di porta da <mark class="highlight-yellow"><strong>49152 a 65535</strong></mark> sono <mark class="highlight-orange_background">liberi per essere assegnati dinamicamente</mark> dai processi applicativi.</li></ul><p id="85fde7a2-67d2-473e-b0a9-ee9751365c57" class=""><em>Alcuni esempi</em></p><figure id="0e56b921-497a-441f-9661-8cfa31349d55" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2018.png"><img style="width:747px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2018.png"/></a></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="469c21e1-5530-446f-9546-3d04284953f0"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">I numeri di porta logica sono relativi soltanto al protocollo considerato: una determinata porta per il protocollo TCP è diversa dallo stesso numero di porta per il protocollo UDP.</div></figure><p id="b22ea213-3e5f-43b6-899d-cc22b1beeb9f" class="">L’identificazione di un servizio avviene quindi <mark class="highlight-teal">combinando l’indirizzo IP dell’host e della porta logica</mark>, metodo che prende il nome di <mark class="highlight-teal"><strong>socket</strong></mark>.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="90ee334e-1b6a-4446-a6f5-110ec754fa9f"><div style="font-size:1.5em"><span class="icon">🔑</span></div><div style="width:100%">Un <strong>socket</strong> è formato dalla coppia <strong>&lt;indirizzo IP:numero della porta&gt;</strong> è un identificatore analogo a una porta, cioè a un punto di accesso/uscita, unico per ogni rete.</div></figure><p id="5598637d-ca30-4ec1-a25c-b865470c0312" class="">Esiste una struttura chiamata <mark class="highlight-teal"><strong>association</strong></mark> che consente d’<mark class="highlight-teal">identificare ogni singola connessione</mark> in modo univoco e che contiene le seguenti informazioni:</p><figure id="5ec9fb43-93ce-4b7f-a19d-60af916ddcf2" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2019.png"><img style="width:445px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2019.png"/></a></figure><h1 id="d9295ac1-6e7e-4544-a14a-e1da8c13269b" class="">Socket e i processi client - server</h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="7f32e067-ca7e-495b-a1c7-1191db15f4a5"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Il client deve conoscere l’indirizzo IP e il numero di porta usati dal server per potersi collegare al socket di destinazione.</div></figure><p id="b688e762-a95a-4c2f-b2a6-1ac714dfe12c" class=""><em>Quando un client apre un socket non dovrebbe utilizzare una porta nota, in quanto riservata per l’offerta di servizi.</em></p><h1 id="93aa0bd3-2f7f-4ea5-b558-83542479f990" class="">La connessione tramite socket</h1><p id="66d32b97-cac7-47e6-9b94-c0880181c392" class="">Il concetto di socket è stato sviluppato come <mark class="highlight-teal">estensione diretta del paradigma UNIXX di I/O su file</mark>, si basa sulla sequenza:<div class="indented"><ul id="a10a225c-b802-4360-81c9-6b6802a32b60" class="bulleted-list"><li style="list-style-type:disc"><strong>Open</strong>: permette di accedere al file</li></ul><ul id="90455182-cac3-4042-9855-fb996884916b" class="bulleted-list"><li style="list-style-type:disc"><strong>Read/Write</strong>: accedono ai contenuti del file</li></ul><ul id="f8d79eac-5d61-4deb-8897-0d6c2a5d2106" class="bulleted-list"><li style="list-style-type:disc"><strong>Close</strong>: terminazione dell’utilizzo del file.</li></ul></div></p><p id="97b6e2cc-a7e8-4cf7-a479-3943963e0b63" class="">
+</p><p id="d98c591d-3f7e-4cb3-b817-8a30b7ff1925" class="">Le funzioni utili per l’utilizzo dei socket in Java sono:<div class="indented"><ul id="d01abb19-729a-417d-b46a-3ecd4699e119" class="bulleted-list"><li style="list-style-type:disc"><code>ServerSocket()</code>: crea un nuovo socket</li></ul><ul id="e0f2b520-9878-424b-ad76-98790dc8cac5" class="bulleted-list"><li style="list-style-type:disc"><code>close()</code>: termina l’utilizzo di un socket</li></ul><ul id="7a71fd26-e287-4f70-a369-7b4ad7b965cd" class="bulleted-list"><li style="list-style-type:disc"><code>bind()</code>: collega un indirizzo di rete a un socket</li></ul><ul id="a44e74be-fc97-4581-a344-782d88ed725e" class="bulleted-list"><li style="list-style-type:disc"><code>listen()</code>: aspetta messaggi in ingresso</li></ul><ul id="f45af075-cce0-4f49-8c26-430b1c44641e" class="bulleted-list"><li style="list-style-type:disc"><code>accept()</code>: comincia a utilizzare una connessione in ingresso</li></ul><ul id="e4172aa0-b79a-41b4-9100-051ba9d76f77" class="bulleted-list"><li style="list-style-type:disc"><code>connect()</code>: crea una connessione con un host remoto</li></ul><ul id="53958126-daa7-48d4-ac2d-9124448ad95b" class="bulleted-list"><li style="list-style-type:disc"><code>write()</code> trasmette dati su una connessione attiva</li></ul><ul id="418a650c-a1f7-4517-9a27-26bfab43f852" class="bulleted-list"><li style="list-style-type:disc"><code>read()</code>: riceve dati da una connessione attiva</li></ul></div></p><h2 id="03de1835-9351-4b35-8868-7ebd8eb7108b" class="">Famiglie e tipi di socket</h2><p id="21b44130-2562-4e08-a0e8-eec0e515c1bf" class="">Esistono<mark class="highlight-teal"> varie famiglie di socket</mark>, dove ogni famiglia riunisce i socket che utilizzano gli stessi protocolli, in particolare ricordiamo:<div class="indented"><ul id="18405539-dbfa-4868-8076-75c8e0edb8f7" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Internet socket</strong></mark> (AF_INET): è quella che permette il trasferimento di dati tra processi posti su macchine remote connesse tramite LAN</li></ul><ul id="a72e5521-869f-4f69-9f7b-defc314c6bc1" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Unix Domain Socket</strong></mark> (AF_UNIX): permette il trasferimento di dati tra processi sulla stessa macchina Unix</li></ul></div></p><blockquote id="7e208830-52fe-476f-b928-5bb83d132c24" class="">La principale differenza tra queste due famiglie è l’indirizzo:<p id="25d57eab-400d-4d52-8fe7-fa2db60322bb" class="">AF_UNIX è praticamente il pathname valido nel file system della macchina.</p><p id="e3c5310c-b727-4ce3-b81c-ede5a2ae368b" class="">AF_INET è specificato in due valori:</p><ul id="32c28d38-c758-45bf-903c-481d2719450e" class="bulleted-list"><li style="list-style-type:disc">Indirizzo IP che individua un unico host internet</li></ul><ul id="132ad210-2a2a-4db7-bd16-27b8dac5bca2" class="bulleted-list"><li style="list-style-type:disc">Numero di porta che specifica una particolare porta dell’host</li></ul></blockquote><h2 id="b3f5f45f-202c-415c-bd60-40fe16b522ce" class="">Tipi di socket</h2><p id="3a0daaf1-bd92-4aa1-b262-1198edf25ead" class="">I socket sono di <mark class="highlight-teal"><strong>tre tipi</strong></mark>:<div class="indented"><ul id="71b2b1ed-f627-4fc7-885e-5b1901dae13c" class="bulleted-list"><li style="list-style-type:disc"><strong>Stream</strong> socket</li></ul><ul id="741b3c88-a35d-4972-b795-806ae8459519" class="bulleted-list"><li style="list-style-type:disc"><strong>Datagram</strong> socket</li></ul><ul id="8f78349b-ef97-4fd1-85d0-4b7a6147e6b4" class="bulleted-list"><li style="list-style-type:disc"><strong>Raw</strong> socket</li></ul></div></p><h2 id="32f79c18-ebe6-4e08-9320-8ab947de33b9" class="">Stream socket</h2><p id="aa25926f-2060-4720-a6c9-15420277fa8e" class="">Con gli stream socket si realizza una <mark class="highlight-teal">connessione sequenziale tipicamente asimmetrica, affidabile e full-duplex basata su stream di byte di lunghezza variabile</mark>.</p><p id="7664d241-7e6a-4ce4-b25a-a900fb50a162" class="">Ogni processo crea il proprio endpoint richiamando la primitiva <code>socket()</code> e successivamente:<div class="indented"><ul id="1fe296c7-1038-476f-913a-258f48a65ca0" class="bulleted-list"><li style="list-style-type:disc">Il <mark class="highlight-orange_background">server</mark> si mette in ascolto e <mark class="highlight-orange_background">quando gli arriva una richiesta la esaudisce mediante la primitiva </mark><code><mark class="highlight-orange_background">accept()</mark></code> che crea un nuovo socket dedicato alla connessione</li></ul><ul id="d8480340-04d3-4158-aad5-3a14c6feaa68" class="bulleted-list"><li style="list-style-type:disc">il <mark class="highlight-orange_background">client si pone in coda sul socket del server</mark> e quando viene accettato dal server crea implicitamente il binding con la porta locale.</li></ul></div></p><figure id="bb5be3fb-7411-4a26-b762-63241007a340" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2020.png"><img style="width:432px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2020.png"/></a></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e3b7da4f-edb0-4617-9bdf-a3858d949ada"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Il protocollo TCP è basato su questo tipo di socket.</div></figure><figure id="893ffe9f-eb95-4e59-99e4-c44bbf7da246" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2021.png"><img style="width:432px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2021.png"/></a></figure><h2 id="68c001ea-1140-43e6-af48-eb62a992bf4a" class="">Datagram socket</h2><p id="bc1cb737-acae-44ca-ac5e-650a12184660" class="">Con i datagram socket viene realizzata la comunicazione che permette di <mark class="highlight-teal">scambiare dati senza connessione</mark> mediante il trasferimento di datagrammi che inoltrano messaggi di dimensione variabile, <mark class="highlight-teal">senza garantire ordine o arrivo dei pacchetti</mark>.</p><p id="859bae0c-cc04-4b09-b833-ddc37298e1cd" class="">Ogni processo crea il proprio endpoint richiamando la primitiva che crea il socket e successivamente:<div class="indented"><ul id="c6de5561-a0b8-41e8-a256-69ed9de0202a" class="bulleted-list"><li style="list-style-type:disc">Il server si mette in attesa di ricevere i dati e alla loro ricezione può inviare una risposta </li></ul><ul id="29c35d95-28f3-4efe-a2f8-fdb17d3806ff" class="bulleted-list"><li style="list-style-type:disc">Il client invia il pacchetto di dati al server e può mettersi in attesa di una risposta con le stesse primitive che ha utilizzato il server.</li></ul></div></p><p id="9519005f-d67e-4bea-ad0f-9c1030b18e7b" class="">Al termine della comunicazione il socket viene chiuso.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8cf90da5-83fa-41a9-baaf-04187ae8631b"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Il loro vantaggio è quello di trasferire velocemente i dati, <em>decade</em> anche il concetto di client e server dato che utilizzano le stesse primitive e solo il loro ordine stabilisce nella applicazione quale processo fa la funzione di server e quale quella di client</div></figure><figure id="97b52673-d487-4edc-90a6-e7ff7b9f70fe" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2022.png"><img style="width:384px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2022.png"/></a></figure><h2 id="ae36e34d-4611-4191-b91e-0c35034e8293" class="">Trasmissione unicast e multicast</h2><p id="ca3aa61a-4ed1-4e07-a5d7-6e38288c7e70" class="">L’<strong><mark class="highlight-teal">unicast</mark></strong> è la normale situazione in cui un <mark class="highlight-teal">mittente invia e un destinatario riceve</mark> con eventualmente l’inversione dei ruoli, mentre il <mark class="highlight-teal"><strong>multicast</strong></mark> è utilizzato per <mark class="highlight-teal">trasmettere informazioni a più host contemporaneamente</mark>.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e104e880-01c2-41d5-9523-e60fc8b59d2c"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Il TCP è per la sua natura di protocollo orientato alla connessione, sempre unicast.<p id="ac61f779-979a-4017-bbe8-c92904b80f2d" class="">L’UDP è invece multicast.</p></div></figure><p id="93aaa616-d20a-4fa9-a0ab-25f1b6bef85c" class="">Nella comunicazione di tipo multicast un insieme di processi formano un gruppo di multicast e un messaggio spedito da un processo a quel gruppo viene recapitato a tutti gli altri partecipanti appartenenti al gruppo.</p><p id="54383e55-8cbb-4f7a-a881-f554074b4fdb" class="">Le API multicast devono contenere primitive per:<div class="indented"><ul id="706e296a-b5bc-4124-8aab-3d8f4eafc8d5" class="bulleted-list"><li style="list-style-type:disc">unirsi a un gruppo (join)</li></ul><ul id="3b45b47c-388b-45f9-adc5-f3c92c8bb358" class="bulleted-list"><li style="list-style-type:disc">lasciare un gruppo (leave)</li></ul><ul id="e208afc0-6d7a-4139-a02f-3b766a9418ef" class="bulleted-list"><li style="list-style-type:disc">spedire messaggi a un gruppo</li></ul><ul id="f775ee66-dcc4-493d-9c95-4d66a82ce9fb" class="bulleted-list"><li style="list-style-type:disc">ricevere messaggi indirizzati a un gruppo del quale l’host fa parte.</li></ul></div></p><p id="3f546999-5019-4703-aaac-e98629ca8beb" class="">La gestione dei gruppi è di tipo dinamico:<div class="indented"><ul id="9ca4084f-7b45-4d2c-8dcc-54c06908fff2" class="bulleted-list"><li style="list-style-type:disc">un host può unirsi o abbandonare un gruppo in qualsiasi momento e può appartenere a più gruppi </li></ul><ul id="b76f0224-9f35-4645-ac7f-4e73463648dd" class="bulleted-list"><li style="list-style-type:disc">non è necessario appartenere a un gruppo per poter inviare a esso dei messaggi</li></ul><ul id="9264010d-f93a-4fc6-ad60-db7c28d7fc83" class="bulleted-list"><li style="list-style-type:disc">i membri del gruppo possono appartenere alla medesima rete o a reti fisiche differenti</li></ul></div></p><p id="e1bd61bf-5e5d-4c52-92f2-8c8bd004e1d5" class="">
+</p><p id="d2f19f74-c8e6-4734-a093-3f3f424c7f58" class="">Come indirizzo di multicast viene utilizzato un indirizzo IP di classe D, gli indirizzi possono essere:<div class="indented"><ul id="54893e07-8f75-423b-ab70-55a85b76cfef" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>permanenti</strong></mark>, l’indirizzo di multicast viene assegnato dalla IANA e rimane assegnato a quel gruppo anche se in un certo momento non ci sono più partecipanti</li></ul><ul id="c3273d3c-544b-4bc2-9711-759aefc32336" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>temporanei</strong></mark>, richiedono la definizione di un opportuno protocollo per evitare conflitti nell’attribuzione degli indirizzi ai gruppi ed esistono solo fino al momento in cui esiste almeno un partecipante.</li></ul></div></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0cb10875-4aea-4518-9355-3e886ad22819"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Nei router viene mantenuta la corrispondenza tra l’indirizzo di multicast e gli indirizzi IP dei singoli host che partecipano al gruppo.</div></figure><blockquote id="f97620e4-1456-4013-8e49-ac06f72a8002" class="">La comunicazione multicast utilizza il paradigma <mark class="highlight-teal"><strong>connectionless</strong></mark> dato che devono essere gestite contemporaneamente un alto numero di connessioni.</blockquote><h2 id="1d2dcb50-11d9-41a6-97a2-44803c947a89" class="">Esempio socket in Java</h2><h3 id="2acc33ab-b0a5-4d76-a846-e22b32e2c6fd" class="">Stream socket</h3><pre id="590419b1-2b0f-4d0e-89af-ed61b335745f" class="code"><code>import java.io.IOException;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.net.ServerSocket;
+
+public class StreamClient {
+		public StreamClient() throws IOException {
+        // Creo il socket connesso al server socket tramite IP e porta
+        Socket cs = new Socket(InetAddress.getLocalHost(), 1025);
+
+        // Invio &quot;4&quot; al server
+        cs.getOutputStream().write(4);
+        // Aspetto la risposta
+        int square = cs.getInputStream().read();
+        // Visualizzo la risposta
+        System.out.println(square);
+
+        // Chiudo il socket
+        cs.close();
+		}
+}
+
+public class StreamServer {
+    public StreamServer() throws IOException {
+        // Creo il socket per il server
+        ServerSocket ss = new ServerSocket(1025);
+        // Abilito le richieste
+        Socket ds = ss.accept();
+
+        // Aspetto una richiesta
+        int n = ds.getInputStream().read();
+        System.out.println(&quot;Richiesto il quadrato di &quot; + n);
+        // Creo la risposta
+        int square = n*n;
+        // Invio la risposta
+        ds.getOutputStream().write(square);
+
+        // Chiudo il socket
+        ss.close();
+    }
+}</code></pre><h3 id="a0c3118f-ab92-4391-abbf-e9f776f15064" class="">Datagram socket</h3><pre id="88d2caea-01e0-4305-8fb7-ea11ba6e6ee9" class="code"><code>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.nio.charset.StandardCharsets;
+
+public class DatagramClient {
+    public DatagramClient() throws IOException {
+        // Creo il socket datagram
+        DatagramSocket ds = new DatagramSocket();
+
+        // Prendo in input da tastiera del testo
+        BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
+        String testo = tastiera.readLine();
+        // Creo il buffer con i byte del testo
+        byte[] buffer = testo.getBytes(StandardCharsets.UTF_8);
+
+        // Creo il pacchetto datagram
+        InetAddress indirizzoServer = InetAddress.getLocalHost();
+        DatagramPacket packet = new DatagramPacket(buffer, buffer.length, indirizzoServer, 1025);
+
+        // Invio il pacchetto
+        ds.send(packet);
+
+        // Preparo il pacchetto che dovrà contenere la risposta ricevuta dal server
+        byte[] bufferResponse = new byte[2048];
+        DatagramPacket response = new DatagramPacket(bufferResponse, bufferResponse.length);
+
+        // Aspetto la risposta
+        ds.receive(response);
+        // La visualizzo
+        System.out.println(new String(response.getData()).trim());
+
+        // Chiudo il socket
+        ds.close();
+    }
+}
+
+public class DatagramServer {
+    public DatagramServer() throws IOException {
+        // Creo il socket datagram
+        DatagramSocket ds = new DatagramSocket(1025);
+
+        // Creo il buffer ed il pacchetto datagram per la richiesta del client
+        byte[] buffer = new byte[2048];
+        DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
+
+        // Aspetto un pacchetto
+        ds.receive(packet);
+
+        // Estrapolo il messaggio
+        String messaggio = new String(packet.getData()).trim();
+
+        // Invio la risposta con il messaggio in UpperCase
+        String messaggioUppercase = messaggio.toUpperCase();
+        DatagramPacket response = new DatagramPacket(messaggioUppercase.getBytes(StandardCharsets.UTF_8), messaggio.length(), packet.getAddress(), packet.getPort());
+        ds.send(response);
+
+        // Chiudo il socket
+        ds.close();
+    }
+}</code></pre><h3 id="0a12022c-11b7-4f21-8f4c-50d6c9b302e7" class="">Esempio applicativo</h3><figure id="51d7c375-0ea8-4086-9725-bcab67217b18"><a href="https://github.com/5A-Informatica-IIS-Silva-Ricci/Socket/tree/main/src/main/java/socket/esercizi/giocodellabomba" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Socket/src/main/java/socket/esercizi/giocodellabomba at main · 5A-Informatica-IIS-Silva-Ricci/Socket</div><div class="bookmark-description">Realizzare un programma di rete (componente client + componente server) in grado di simulare il gioco della Bomba. Il server attiva la sessione innescando la bomba con un time-out a 100sec, passa poi il pacchetto al client. Il client attiva una funzione di riduzione rnd (da 1 a 20 sec) sul tempo residuo, sconta il tempo sulla bomba e la rispedisce al server.</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/5A-Informatica-IIS-Silva-Ricci/Socket/tree/main/src/main/java/socket/esercizi/giocodellabomba</div></div><img src="https://opengraph.githubassets.com/4dcf10a13f9e9b1a5856a62655c76cb200b6781d4a05273d4cc66fb311a995a2/5A-Informatica-IIS-Silva-Ricci/Socket" class="bookmark-image"/></a></figure><h1 id="ae9f25c5-3abc-4cc2-91fc-32fb54e6d6f5" class="">Le applicazioni lato server</h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="412347c1-d62e-4acb-ab06-7c60be6319ef"><div style="font-size:1.5em"><span class="icon">🔑</span></div><div style="width:100%">Con il termine <mark class="highlight-teal"><strong>programmazione server - side</strong></mark> viene indicato il meccanismo mediante il quale tutto o parte del documento richiesto dal client viene generato in seguito a un’elaborazione che viene eseguita dal server.</div></figure><p id="025fa2fa-6cec-4152-84cf-6fe866d51db6" class="">Oggi sono disponibili diverse tecniche di programmazione server-side.</p><p id="90127889-b13e-4aa6-bc9d-db567e99967b" class="">Una prima classificazione può essere fatta in base alla “relazione” che questi programmi hanno con l’HTML:<div class="indented"><ul id="1b03a594-f6fc-46b4-9fdf-5da27eb69e33" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Codice separato</strong></mark>, associato ad un URL:<ul id="37866c88-bd9e-4fba-92d1-651aa34cac4a" class="bulleted-list"><li style="list-style-type:circle">Common Gateway Interface (CGI)</li></ul><ul id="db80b1eb-d2db-43ce-a67b-10e0851ace1a" class="bulleted-list"><li style="list-style-type:circle">Java servlet</li></ul><ul id="3bdf307f-2c87-482d-a68f-f84481e607a8" class="bulleted-list"><li style="list-style-type:circle">NSAPI (o server API)</li></ul></li></ul><ul id="cb876ccc-e693-4968-9553-ae676c7afe8c" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Codice embedded in HTML</strong></mark>:<ul id="52059f03-cdcb-4359-8d46-920b4234e2cf" class="bulleted-list"><li style="list-style-type:circle">Server Side Includes - Apache</li></ul><ul id="0e5cde0d-e61a-47c1-bc04-05280e3818bf" class="bulleted-list"><li style="list-style-type:circle">PHP</li></ul><ul id="e039b6b5-b2db-4417-b582-e807ef187a09" class="bulleted-list"><li style="list-style-type:circle">Java Server Pages (JSP)</li></ul></li></ul></div></p><h2 id="f5c1c3f9-408c-4514-817b-592a45467b14" class="">Common Gateway Interface (CGI)</h2><p id="9814ac5c-2747-4816-ab69-84fe8006996e" class="">Viene invocata una procedura indicando l’indirizzo del programma CGI il quale viene eseguito sul server e al quale vengono inviati i parametri letti nel form html.</p><p id="660619a1-abee-43fa-9e52-2d20214dd988" class="">Le operazioni sono:<div class="indented"><ol type="1" id="ca02aaf3-1616-4b7d-b3c3-de4aedc72429" class="numbered-list" start="1"><li>Il client invia al server la richiesta di eseguire un programma CGI</li></ol><ol type="1" id="4bb932ae-5412-4227-9147-c6fe5fa8e825" class="numbered-list" start="2"><li>Il server chiama il programma indicato dal client passandogli i parametri letti nel form</li></ol><ol type="1" id="280ad366-b9c4-4dad-a67d-56191d1111a2" class="numbered-list" start="3"><li>Il programma CGI esegue le operazioni e comunica al server la pagina HTML di risposta</li></ol><ol type="1" id="4413f3b8-c2dd-44da-a56e-46f9ef119b40" class="numbered-list" start="4"><li>il server invia al client i dati elaborati</li></ol></div></p><p id="2f540977-6cbc-4c9d-bb02-66f75374a29a" class="">Per comunicare con l’utente il programma CGI produce una pagina HTML e la passa al Web server che la invia al client.</p><h2 id="0f0070fa-c6d5-4ef4-a523-6ccd27f2d400" class="">Servlet</h2><p id="ee7a66db-f99c-498a-ad04-896dc2346c44" class="">La principale differenza tra servlet e CGI è che gli script CGI sono eseguiti dal sistema operativo e sono potenzialmente meno portatili delle <strong><mark class="highlight-teal">servlet</mark></strong> che vengono <strong><mark class="highlight-teal">eseguite dalla JVM</mark></strong> integrata nel Web server.</p><p id="416f8609-c6cd-4fa9-8745-47826d72b5dd" class="">Gli <mark class="highlight-teal">script CGI </mark>inoltre<mark class="highlight-teal"> vengono cariati ed eseguiti una volta per ogni richiesta</mark>, mentre le <mark class="highlight-teal">servlet vengono caricato solo una volta e viene creato un thread per ogni richiesta</mark>.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="345e3925-bc7a-4777-801b-c3ac2e5928ac"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Una servlet è un componente software scritto in <strong>Java</strong>, gestito da un “container”, che produce contenuto Web dinamico.</div></figure><p id="4bc6a39b-1db4-4eee-9d81-c1574f5557ab" class="">Il Web server stesso svolge la funzione di container occupandosi della gestione del ciclo di vita delle servlet.</p><p id="716ef5eb-a54f-4b6b-a528-37d35cea3f2f" class="">Una servlet interagisce con un Web client attraverso il paradigma di comunicazione request/response.</p><p id="90bfb4d2-a8e1-47be-b632-40336e98e9ae" class="">Flusso di esecuzione:<div class="indented"><ol type="1" id="51ff1513-f5ba-43c0-930c-2e65406074d8" class="numbered-list" start="1"><li>Un <mark class="highlight-yellow">client</mark> invia una <mark class="highlight-yellow">richiesta</mark> per una servlet a una Web application server</li></ol><ol type="1" id="042de218-110e-446e-9d84-6fd1ffd20cba" class="numbered-list" start="2"><li>Se si tratta di una prima richiesta allora il <mark class="highlight-yellow">server carica la servlet</mark></li></ol><ol type="1" id="364a8de8-1a4b-428b-973e-d794aaa28c3a" class="numbered-list" start="3"><li>Si <mark class="highlight-yellow">attiva un thread</mark> che gestisce la comunicazione tra il client e la servlet</li></ol><ol type="1" id="d5f6dd07-2319-4838-bcba-3b53d2d6d60e" class="numbered-list" start="4"><li>Il server invia al thread-servlet la richiesta pervenutagli dal client</li></ol><ol type="1" id="f7c41476-64f7-4464-8783-ca10a7d33aab" class="numbered-list" start="5"><li>Il thread-servlet costruisce e imposta la risposta e la inoltra al server</li></ol><ol type="1" id="d38cbc2c-13f4-41e9-9cf4-635adf87925b" class="numbered-list" start="6"><li>Il <mark class="highlight-yellow">server invia la risposta</mark> al client</li></ol></div></p><p id="a9ee7a55-a09e-4d4f-9a9e-1fbe24106c80" class="">Il servlet container più diffuso e utilizzato è <strong>tomcat</strong>.</p><h2 id="ee474691-a460-4ce2-8e16-922bad427548" class="">Ciclo di vita di una servlet</h2><ul id="9844d356-bb36-4d09-b9e8-ffeb5dd0a24d" class="bulleted-list"><li style="list-style-type:disc"><code>init()</code>: al momento del caricamento in memoria il container invoca il metodo <code>init()</code> che inizializza la servlet e le variabili.</li></ul><ul id="4688cada-dee4-4a7d-b4e1-41a96c506bed" class="bulleted-list"><li style="list-style-type:disc"><code>service()</code>: questo metodo serve per ricevere e rispondere alle richieste dei client.</li></ul><ul id="84320e24-32cb-4d2b-8fe5-e9f7c104e760" class="bulleted-list"><li style="list-style-type:disc"><code>destroy()</code>: per terminare l’esecuzione di una servlet viene invocato questo metodo, solitamente solo quando termina l’esecuzione del Web server.</li></ul><p id="4e0d98bd-4ea4-4ccf-930d-571979153c66" class=""><strong>Strutturazione delle directory:</strong><div class="indented"><ul id="0d08bad3-c01a-4117-979f-3a6cd4095a3a" class="bulleted-list"><li style="list-style-type:disc">📂 webapps → 📂 nome_progetto:<ul id="a89d8424-868d-4500-a3fa-b3ec6962ed41" class="bulleted-list"><li style="list-style-type:circle">file *.html, *.jsp, ecc.</li></ul><ul id="a78fcb1a-4a61-4537-9524-3365d758d1c8" class="bulleted-list"><li style="list-style-type:circle">📂 WEB-INF<ul id="85edb5ef-d6a8-4c01-82b3-09643197a9b7" class="bulleted-list"><li style="list-style-type:square">📂 classes<ul id="a2e6544c-2ff2-40fd-b96f-03bad51a634e" class="bulleted-list"><li style="list-style-type:disc">classi java compilate in file *.class</li></ul></li></ul><ul id="5594e97d-bbd0-4b81-9bbc-8da901f7afcd" class="bulleted-list"><li style="list-style-type:square">📂 lib<ul id="c2773c72-6bdd-4a73-a7cb-a7d8fdb73838" class="bulleted-list"><li style="list-style-type:disc">eventuali file di libreria *.jar</li></ul></li></ul><ul id="e1791e98-d740-4837-9aab-ff374094dec3" class="bulleted-list"><li style="list-style-type:square">web.xml</li></ul></li></ul></li></ul></div></p><p id="5e5b2fef-0cd4-4f66-b9f6-98870284dfe2" class="">
+</p><p id="7488045c-b094-457b-a349-ef2d67255106" class="">Il file <mark class="highlight-teal"><strong>web.xml</strong></mark>, chiamato anche <em>Deployment descriptor</em>, serve per<mark class="highlight-teal"> configurare l’applicazione Web</mark> in modo che <mark class="highlight-teal">Tomcat possa gestire le richieste</mark> da parte dei client.</p><p id="a544da6e-7ba2-491a-a4eb-9eebc5fd67f2" class="">Vengono definiti: <div class="indented"><ul id="431b1265-07af-4df6-a622-0384ee98d42c" class="bulleted-list"><li style="list-style-type:disc">il <mark class="highlight-yellow">nome della classe</mark> che definisce la servlet</li></ul><ul id="d1f58b02-254a-445e-a60b-a7e96198ab7c" class="bulleted-list"><li style="list-style-type:disc">i <mark class="highlight-yellow">percorsi che causano l’invocazione</mark> della servlet</li></ul><ul id="a5258559-07c4-43d6-b699-dbc30e227e1a" class="bulleted-list"><li style="list-style-type:disc">una serie di <mark class="highlight-yellow">parametri di configurazione</mark></li></ul></div></p><p id="7030770c-959c-4d1d-85bb-fc7365ea1c53" class=""><strong>Esempio web.xml</strong></p><pre id="fb60ca3e-4500-4540-90d4-a118fea9391c" class="code"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app&gt;
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;NomeServlet&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;dev.giuliopime.NomeServlet&lt;/servlet-class&gt;
+    &lt;/servlet&gt;
+
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;NomeServlet&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/percorso&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;</code></pre><h2 id="221cd465-37b3-4841-867b-818425f10306" class="">Vantaggi delle servlet</h2><ul id="8410dec0-ae97-40d3-b692-2a88ea424ec0" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Efficienza</strong></mark>: vengono <mark class="highlight-orange_background">caricate una sola volta</mark>.</li></ul><ul id="6756c65e-c21d-4711-b6da-81690108756d" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Portabilità</strong></mark>: <mark class="highlight-orange_background">Java</mark> è facilmente portabile su ogni piattaforma</li></ul><ul id="1fd0aabf-7595-4591-9a63-f8e8791db6ec" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Persistenza</strong></mark>: quando una servlet viene caricata <mark class="highlight-orange_background">rimane in memoria</mark></li></ul><ul id="03adbf76-60f1-4b3c-9967-7ae5cff93bca" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Gestione delle sessioni</strong></mark>: con le servlet è possibile <mark class="highlight-orange_background">memorizzare i dati delle sessioni</mark></li></ul><h2 id="4d29f303-6345-4f54-a676-54a00fb5b4b4" class="">Svantaggi delle servlet</h2><ul id="4808225c-7780-4e27-a91d-34de21c925fe" class="bulleted-list"><li style="list-style-type:disc">Con le servlet si <mark class="highlight-yellow"><em>mescola</em></mark><mark class="highlight-yellow"> la logica dell’applicazione con la presentazione</mark></li></ul><ul id="e4c59c05-d6e6-4a3e-99b2-0e236c96ed26" class="bulleted-list"><li style="list-style-type:disc">A volte risulta difficoltoso dover <mark class="highlight-yellow">inglobare all’interno</mark> del codice <mark class="highlight-yellow">Java</mark> il codice <mark class="highlight-yellow">HTML</mark></li></ul><ul id="48dccae9-6466-4562-9910-1fcd83c99a27" class="bulleted-list"><li style="list-style-type:disc">Ogni modifica del codice richiede una <mark class="highlight-yellow">ricompilazione esplicita e il riavvio dell’applicazione</mark> o del server</li></ul><p id="01862ae2-7a93-4d06-9b53-6db970afe5b9" class="">
+</p><h1 id="6840dce6-024a-4a97-872c-f330d4de4276" class="">Connessione a database tramite JDBC</h1><p id="a85bd342-c170-4f69-a6da-168b7564bbf4" class=""><strong>JDBC</strong> racchiude una <mark class="highlight-teal">serie di classi per poter accedere alle basi di dati</mark> con metodi e schemi di funzionamento molto intuitivi.</p><p id="28acd371-4347-4bdb-bfff-0d9a0fd2905c" class="">JDBC è un’interfaccia, cioè uno “strato di programmazione” che si interpone tra il codice Java e i database.</p><p id="0f89f96e-ee72-4886-85c7-1a61d17b394f" class="">Per prima cosa <mark class="highlight-orange_background">è necessario caricare il driver idoneo per l’utilizzo del particolare database che si intende utilizzare</mark>.</p><p id="505dc369-4cd0-41e9-a929-3e00aba47172" class="">Come secondo passo si <mark class="highlight-orange_background">apre una connessione verso un database sfruttando il driver caricato</mark>:<div class="indented"><p id="decc61dc-3488-433c-bfde-302c7d266785" class=""><code>jdbc:mysql://[hostname][:port]/[dbname]</code></p></div></p><p id="2450dfaf-3035-4c89-b5b6-903cbe88a00b" class="">Per interagire con il DBMS attraverso delle query viene creato un oggetto <code>java.sql.Statement</code>.</p><p id="10ca985f-6c6e-42ac-8ff0-006662f87a52" class="">I risultati ottenuti vengono salvati in un oggetto di tipo <code>ResultSet</code>.</p><p id="509958b6-faef-4595-baf5-e6314339f2f5" class="">Oltre alla stringa di connessione dovremo <mark class="highlight-orange_background">fornire username e password per accedere al database</mark>.</p><h2 id="5cf482d0-aa37-4144-b8e5-d0d64023bca9" class=""><strong>JSP</strong></h2><p id="0c959da0-de56-4498-a6d9-77e14373d88a" class="">La tecnologia JSP (<em>Java Server Pages</em>) è basata su Java e permette lo sviluppo di applicazioni web con contenuti dinamici senza dover essere legati a un ambiente in particolare. <mark class="highlight-orange_background">Una pagina JSP è rappresentata da codice HTML con incapsulate al suo interno delle direttive JSP</mark>, racchiuse in un particolare tag <code>&lt;%...%&gt;</code>, rappresentanti codice Java.</p><p id="eeb1178b-08cd-4a63-a13f-39f0afe8a40f" class="">La programmazione di pagine JSP è una fusione tra la programmazione dinamica in linguaggio PHP e quella effettuata mediante la realizzazione delle servlet. Con la tecnologia JSP è possibile utilizzare strumenti come i JavaBean per spostare tutta la logica al loro interno in modo da ridurre al minimo l’utilizzo delle scriptlet &lt;%...%&gt;.</p><h1 id="afe334b8-e355-4b3b-bbf0-3de2f5f1961d" class="">Web Service</h1><h2 id="f235d964-7204-4516-9341-e95e06cbbb1a" class=""><strong>Definizione</strong></h2><p id="131864bc-b7e7-4f6e-90c9-34b0a12bfd28" class="">Un  <strong>Web service </strong>è un componente applicativo largamente utilizzato. Possiamo definirlo come un sistema software in grado di mettersi al servizio di una applicazione comunicando su di una medesima rete tramite il protocollo <strong>HTTP</strong>. <mark class="highlight-orange_background">Un Web service consente quindi alle applicazioni che vi si vogliono collegare di usufruire delle funzioni che mette a disposizione</mark>. Questa tecnologia si basa su due caratteristiche fondamentali:</p><ul id="4d88bf3f-0250-48da-8214-f71773867853" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>multipiattaforma</strong></mark>: client e server <mark class="highlight-orange_background">non devono avere le stesse configurazioni per comunicare fra di loro</mark>. Il servizio web fornisce quindi un terreno comune;</li></ul><ul id="5c19b97b-8fef-4b08-8950-712d304c0027" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>condivisione</strong></mark>: nella maggior parte dei casi, un servizio web non è disponibile solo per un unico client ma è <mark class="highlight-orange_background">progettato per avere l’accesso di più client contemporaneamente</mark>.</li></ul><p id="86fdb76e-55bc-4890-a56e-3dbfa24e481e" class="">Un Web service viene <strong><mark class="highlight-teal">indirizzato tramite un URI</mark></strong> (<em>Uniform Resource Identifier</em>).
+Un aspetto importante è rappresentato dal linguaggio <mark class="highlight-teal"><strong>WSDL</strong></mark> (<em>Web Service Description Language</em>). I servizi web dispongono di un file in WSDL che descrive il servizio in modo più dettagliato.</p><p id="1412a30b-b61e-466f-a86d-a0603450decc" class="">La comunicazione avviene attraverso diversi protocolli e architetture, come ad esempio SOAP o REST.</p><h2 id="a6511800-5498-42b5-8660-8351ef0196f2" class=""><strong>SOAP</strong></h2><p id="dfbc74ee-e373-4b12-b1f1-0062042327d2" class="">SOAP (<em>Simple Object Access Protocol</em>) <strong><mark class="highlight-teal">è un protocollo standard</mark></strong> ideato inizialmente per consentire la comunicazione tra applicazioni realizzate con linguaggi e piattaforme diverse. Trattandosi di un protocollo, richiede l’integrazione di regole che ne aumentano la complessità e il carico di gestione sul sistema, comportando tempi di caricamento delle pagine più lunghi. Una richiesta di dati inviata a un API SOAP può essere gestita tramite uno dei protocolli a livello applicativo (HTTP, SMTP, TCP, ecc.) Una volta ricevuta la richiesta, <mark class="highlight-teal">i </mark><strong><mark class="highlight-teal">messaggi</mark></strong><mark class="highlight-teal"> SOAP di ritorno devono essere restituiti come documenti in </mark><strong><mark class="highlight-teal">formato XML</mark></strong>.</p><h2 id="1b79089e-882d-4725-8f0f-46a8810f7a86" class=""><strong>REST</strong></h2><p id="7e5025c2-fd24-4535-8449-f01730652d55" class="">REST (<em>Representational State Transfer</em>) è un insieme di principi architettonici incentrati sulle esigenze di ottimizzazione di servizi web e applicazioni mobili. <mark class="highlight-orange_background">Trattandosi sostanzialmente di linee guida o raccomandazioni</mark>, la loro implementazione è lasciata agli sviluppatori. In genere, una <mark class="highlight-teal">richiesta di dati</mark> inviata ad una API REST <mark class="highlight-teal">avviene tramite il protocollo HTTP</mark>. Una volta ricevuta la richiesta, le API progettate per REST (chiamate API o servizi web RESTful) <mark class="highlight-teal">possono restituire i messaggi in numerosi formati</mark>: HTML, XML, testo semplice o JSON.</p></div></article></body></html>

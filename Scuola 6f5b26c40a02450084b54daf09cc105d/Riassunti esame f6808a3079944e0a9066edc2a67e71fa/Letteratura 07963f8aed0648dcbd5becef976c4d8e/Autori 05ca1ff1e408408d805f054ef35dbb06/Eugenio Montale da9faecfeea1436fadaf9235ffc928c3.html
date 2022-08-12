@@ -1,0 +1,672 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Eugenio Montale</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="da9faecf-eea1-436f-adaf-9235ffc928c3" class="page serif"><header><div class="page-header-icon undefined"><span class="icon">🕶️</span></div><h1 class="page-title">Eugenio Montale</h1><table class="properties"><tbody><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data nascita</th><td>1896</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Anni vita</th><td>85</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data morte</th><td>1981</td></tr></tbody></table></header><div class="page-body"><nav id="06175d3b-7314-4237-be1b-b3cdfc79d661" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#f0ddf61f-e2d9-4ec8-a1da-c47bfd1da67c">Biografia</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#5ee87ba8-2c9e-448a-8f85-0e06953c37af">La formazione e la poetica</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2cfb6293-c121-4f75-9395-bf764350ed08">La poetica del “Correlativo oggettivo”</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a9273ba7-f387-45b3-b9cc-94521ca42f63"><em>Ossi di Seppia</em></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#4e766efb-6041-4531-b336-bc8e16b95e42">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#940e4416-8248-40d5-bac3-440e0c267b11">Le occasioni</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#bd8c2121-8156-4d76-9280-460efc1bf3e8">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#f77fa094-87d2-421d-a5d4-e45ee3b2008b">Satura</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#19a548cc-1942-4fd5-88be-c2deac9ae71d">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#d968abf7-1770-4fe1-8c4a-d2ff38f14d13">Riassunto</a></div></nav><h1 id="f0ddf61f-e2d9-4ec8-a1da-c47bfd1da67c" class="">Biografia</h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a66267cb-9701-4d70-aae7-0c9c183ff3f1"><div style="font-size:1.5em"><span class="icon">🐣</span></div><div style="width:100%">Eugenio montale nasce a Genova nel <strong>1896.</strong></div></figure><p id="c3d3eeb4-e1b7-4d2e-a9b2-5849ee0e58d7" class="">Il <strong>paesaggio ligure si incide profondamente nella sua immaginazione</strong> e diviene parte integrante della sua identità poetica.</p><p id="bdac92c9-db6f-4126-8326-c3143cc269c0" class="">Il mare, la tessa ssolata e arida diventeranno punti di riferimento costanti della sua prima raccolta poetica.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d6398c41-2814-421f-baad-48ab0d11d437"><div style="font-size:1.5em"><span class="icon">🎓</span></div><div style="width:100%">Dopo le elementari, Montale frequenta le scuole tecniche in un istituto religioso, conseguendo non senza fatica il <strong>diploma di ragioniere.</strong></div></figure><p id="c7cd1286-a864-4351-a5bb-791daf9c6da2" class="">Non è però facile per il giovane trovare una strada che gli garantisca l’indipendenza economica: <strong>non continua gli studi</strong> all’università, né si trova un lavoro.</p><p id="8b799134-aa2d-4768-9e1e-8d51e1467f7c" class="">Di salute piuttosto cagionevole e di carattere introspettivo, il giovane Montale si sente <strong>poco adatto alla vita degli affari</strong>; egli stesso si definisce ironicamente “ricco di imprecisabili vocazioni extra-commerciali”.</p><p id="e85e6f3f-5dc2-4a30-a22c-dc68cf9d3629" class="">In un’epoca come gli anni Venti dell’ascesa del fascismo, in cui trionfava un modello di uomo ben diverso, virile, sicuro di sè e dedito all’azione, Montale considera la propria <strong>inettiduine alla vita attiva</strong> non come un privilegio, bensì come un segno di diversità e di <strong>fallimento esistenziale.</strong></p><hr id="f88fc98e-2537-4212-bffa-7048eff3eb85"/><p id="7147a7ce-4364-4b9d-baf9-94888ceb82ec" class="">Negli <strong>ultimi anni della guerra</strong> Montale frequenta a Parma un corso per allievi ufficiali, dove conosce Sergio Solmi, letterato torinese con cui stringe un’amicizia.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="b688eda7-ee55-4b01-81f9-4f68c0824f56"><div style="font-size:1.5em"><span class="icon">🪖</span></div><div style="width:100%">Combatte al fronte come <strong>volontario in Trentino</strong>, e intanto comincia a comporre <strong>poesie</strong> e a tenere un <strong>diario.</strong></div></figure><p id="9f943722-24c6-495f-89bf-393a0b8a251b" class="">Tornato a Genova nel 1920 conosce Camillo Sbarbaro.</p><p id="2e8e3a2f-d80a-42ca-82db-b3784b953bbb" class="">Il suo talento musicale avrebbe potuto aprirgli la carriera del cantante lirico, e per qualche anno egli effettivamente <strong>studia da baritono</strong>, ma nel 1923 Montale abbandona con un certo sollievo questa prospettiva, ritenendo di non avere il “sistema nervoso adatto” per affrontare il pubblico.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="b8a58198-708f-462e-a2fe-13f5e659c416"><div style="font-size:1.5em"><span class="icon">📕</span></div><div style="width:100%">Il <strong>1925</strong> è un anno decisivo anche per l’affermazione di Montale come poeta: nel mese di giugno pubblica la prima raccolta, <em>Ossi di Seppia.</em></div></figure><p id="f584b1b5-13e3-4100-b409-53fd696ac983" class="">Parallelamente, Montale si dedica a un’assidua <strong>attività di critico letterario</strong>, manifestando anche in questo campo una posizione personal,e non assimilata a quella della cultura dominante.</p><p id="ea546670-bc39-4f1e-b0bb-2bcc6d490fea" class="">Montale manifesta un vivo interesse per una letteratura aperta alle <strong>novità culturali europee</strong>, come la psicoanalisi e l’innovazione formale del romanzo d’avanguardia, e si sente invece estraneo all’altisonante modello dannunziano, a cui oppone le “semplici forme e talora dimesse” di Svevo.</p><hr id="1ad96e83-0e6f-4839-9d92-2bd601adc837"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="62733d36-54c4-4b51-98bc-b63efdd1881d"><div style="font-size:1.5em"><span class="icon">🇮🇹</span></div><div style="width:100%">Montale assume una posizione intellettualmente vicina ai primi antifascisti, pur non occupandosi mai di politica attiva.</div></figure><p id="29d110a6-4eb1-4685-9cd7-438a710f40df" class="">Nel 1927 lascia Genova per Firenze, dove la casa editrice <strong>Bemporad gli ha offerto un impiego</strong>; vi si adatta però con fatica perchè, obbligato a lavorare otto ore al giorno, lo considera un <strong>ostacolo all’attività intellettuale.</strong> </p><p id="9e68fa37-1ccc-4b1b-9255-b73e2262aa82" class="">Nel 1928 viene nominato <strong>direttore del Gabinetto Viesseux.</strong></p><p id="9222c6bd-eb8b-4600-b163-34e3874eaaa2" class="">A Firenze <strong>frequenta gli intellettuali di “Solaria”</strong>, rivista letteraria fondata nel 1926 e considerata con sospetto dal fascismo.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e4a4cc38-274b-4cf8-890a-89b01c2f6f10"><div style="font-size:1.5em"><span class="icon">♥️</span></div><div style="width:100%">Poco dopo l’arrivo a Firenze Montale conosce <strong>Drusilla Tanzi</strong>, che divene la sua compagna e più tardi moglie.</div></figure><p id="6b41918e-2cc7-4a06-882d-c14103041a10" class="">Sempre a Firenze si avvia l’altra relazione fondamentale della sua vita: nel 1933 incontra <strong>Irma Brandeis</strong>, con la quale stringe un legame sentimentale e spirituale che dura fino al 1938, anno in cui le leggi razziali la costringono a tornare negli Stati Uniti.</p><hr id="660ffb1d-2545-4b7f-b5ae-ccae2cd4df0b"/><p id="f023435e-05ac-49db-b3e6-b690595efee8" class="">Dopo il <strong>licenziamento dal Gabinetto Viesseux</strong>, Montale vive faticosamente di traduzioni e collaborazioni a diverse riviste.</p><p id="aea2340c-19e3-4e04-b6c2-12dcbbf0cb74" class="">Nel <strong>1939</strong> escono <em><strong>Le occasioni.</strong></em></p><hr id="0620cae2-8c79-44db-bd10-8b61a4c31b11"/><p id="3a776578-8d23-4e5b-8cb1-2f164283098f" class="">Durante la Seconda guerra mondiale, trascorsa a Firenze, Montale presta il proprio aiuto ad alcuni amici ebrei costretti alla clandestinità, come Umberto Saba e Carlo Levi.</p><p id="e688bf51-0044-4b3b-a4da-cb20d73398f2" class="">Alla fine del conflitto vive una brevissima stagione di <strong>impegno politico attivo</strong>: per pochi mesi si iscrive infatti al <strong>Partito d’Azione</strong> e fa parte del Comitato per la Cultura e per l’Arte del CLN.</p><p id="5386b59d-8747-4737-9730-ec9bbfb42287" class="">Già dal 1946 Montale aveva iniziato a collaborare da Firenze con il<strong> “Corriere della Sera”</strong>; nel 1948 è assunto dal quotidiano come redattore e si trasferisce a <strong>Milano</strong>, dove inizia un’intensissima <strong>attività giornalistica</strong>.</p><p id="e056fc5f-686d-456b-bcba-2c4c7639e165" class="">Il poeta può infine compiere come inviato speciale quei <strong>viaggi</strong> che avrebbe voluto intraprendere durante la giovinezza, per allargare i ristretti orizzonti della sua città natale.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="7e1b53f1-15db-4d40-82fe-d27fc26f1e8d"><div style="font-size:1.5em"><span class="icon">🏆</span></div><div style="width:100%">Nel <strong>1975</strong> riceve il <strong>premio Nobel per la letteratura</strong>.</div></figure><p id="32a1a71a-45a5-4a6e-9678-61ebb296c9ad" class="">Milano e Firenze lo nominano cittadino onorario. </p><p id="8363b208-c49c-4ca6-b020-e48ac9dfbab5" class=""><strong>La perdita della moglie</strong> Drusilla Tanzi è l’evento che induce Montale a <strong>ricominciare a comporre versi</strong>.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9d11ddb6-4cee-441e-83de-6364d55d000e"><div style="font-size:1.5em"><span class="icon">📕</span></div><div style="width:100%">Le poesie dedicate a lei, gli <em><strong>Xenia</strong></em>, appaiono nel <strong>1971</strong> come prima sezione di <em><strong>Satura</strong></em><em><em>, </em></em>la sua quarta raccolta poetica.</div></figure><p id="dbca470a-5fb0-41d0-995c-a51d95c62cde" class="">Con <em>Satura</em> inizia per Montale un nuovo periodo di intensa produzione poetica, che corrisponde a una <strong>svolta nella sua concezione della poesia</strong>: convinto che nella società di massa non sia più possibile una poesia alta, intellettualmente impegnata, egli compone <strong>versi di tipo diaristico</strong>, talvolta <strong>satirici</strong> e provocatoriamente <strong>prosastici</strong>.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="3a06654c-c102-4c71-be69-71bb49022ee8"><div style="font-size:1.5em"><span class="icon">🪦</span></div><div style="width:100%">A Milano Eugenio Montale <strong>muore il 12 settembre 1981.</strong></div></figure><p id="91617b00-a816-45a9-99da-5607dbc006e4" class="">Il funerale è celebrato a Milano nel duomo, alla presenza delle più alte cariche dello Stato.</p><hr id="265f4ebb-08f3-4166-82d4-c8fc709a0ec5"/><h1 id="5ee87ba8-2c9e-448a-8f85-0e06953c37af" class="">La formazione e la poetica</h1><p id="ac25f46b-64fb-4c61-9569-a984b002e263" class="">Montale non ha una formazione accademica: <strong>studia da solo.</strong></p><p id="671af895-47ae-469e-b10b-9f629b242e01" class="">I primi decenni del secolo sono dominati dalle Avanguardie letterarie, ma esse hanno sul giovane Montale un’influenza limitata: egli <strong>rifiuta</strong> gli eccessi<strong> futuristi</strong> e i ripigamenti sentimentali e malinconici dei <strong>crepuscolari</strong>.</p><p id="ca2ca902-39c5-4842-b6e2-b144e637d51a" class="">Alcune affinità si possono cogliere comunque con la poesia di <strong>Gozzano</strong>, soprattutto il gusto di accostare <strong>espressioni auliche a elementi quotidiani.</strong></p><p id="2070deec-d9e4-40d9-8020-739ed6b6ce9d" class="">Tra i contemporanei lascia certamente un segno anche il ligure <strong>Sbarbaro</strong>, di cui Montale legge le poesie di <em>Pianissimo.</em></p><p id="05f526ef-7326-4d02-bc35-84fd110eb43c" class="">Quanto ai poeti della generazinoe precedente, sono in particolare Pascoli e d’Annunzio a esercitare una palese <strong>influenza</strong> sulla poesia di Montale, e ciò avviene soprattutto sul <strong>piano lessicale e metrico</strong>. </p><p id="9ace1843-febd-49bb-b4ec-4534bbe75011" class="">Di Pascoli sono visibili i segni nel “gusto per la terminologia esatta e specifica, specie della flora e fauna”.</p><p id="7eb72801-095f-46a4-93bd-7b048856ccf9" class="">Della poesia di d’Annunzio egli apprezza soprattutto l’abile <strong>tecnica di versificazione</strong>, e la considera un modello imprescindibile per i moderni.</p><p id="f3763442-b7e1-483a-8761-d83d89b5eab3" class="">Altrettanto necessario però gli pare, per un moderno, “attraversare d’Annunzio per approdare a un territorio suo”, come ha saputo fare Gozzano.</p><p id="aeb39849-283d-4941-bf42-3afe845988ce" class="">Gli echi della <strong>creatività verbale</strong> dannunziana sono ben percepibili nelle tre prime raccolte montaliane, così come alcuni aspetti tematici: nei <strong>paesaggi marini</strong>, degli <em>Ossi di Seppia</em>, è possibile ad esempio riconoscere atmosfere affini a quelle di <em>Alcyone.</em></p><p id="609fb68b-082b-493e-a27e-7a94e46e3c5d" class=""><strong>Rifiuta</strong> le pretese di eccezzionalità della poesia dannunziana e <strong>la funzione profetica del poeta-vate</strong>, così come l’idea pascoliana della superiore chiaroveggenza del poeta-fanciullo.</p><p id="a1e749fe-55e8-48b4-aa87-cc02f693f14d" class="">Montale stesso ha preso apertamente le distanze dalla volontaria frattura tra poesia e significato attuata dall’Ermetismo e ha sempre manifestato una certa freddezza nei confronti di Ungaretti e della sua poetica dell’assoluto.</p><p id="e2b184f1-d8ab-44b6-a6fb-70a14c4b6d5c" class="">Non si può infine ignorare l’influsso di Dante e Leopardi nell’opera di Montale: più visibile il primo.</p><p id="a15c9cd5-da5c-43c5-b70c-0d2007e0f924" class="">Dante è presente nell’opera di Montaleinnanzitutto per il <strong>lessico</strong>, per tutti quei vocaboli che nella <em>Commedia</em> caratterizzano il mondo infernale.</p><p id="c399a082-a750-44a7-8ba0-3a8fda3c8529" class="">Montale sottolinea come una delle principali qualità del poeta fiorentino fosse la capacità “di rendere sensibile l’astratto”.</p><p id="cbb05d6f-5001-44a8-8151-cfdac54273c7" class="">L’impronta dantesca è visibile anche sul <strong>piano tematico</strong>, nella descrizione di una condizione umana di prigionia e dannazione, così come nella presenza di <strong>figure femminili</strong> sul modello di Beatrice, cui è assegnato il compito di annunciatrici di una <strong>possibile salvezza</strong>.</p><p id="8021d1fc-b20a-4637-9985-e7756bbe1d6c" class="">Montale ha in comune con Leopardi soprattutto l’<strong>atteggiamente disilluso</strong> nei confronti della vita, l’idea che l’età adulta smascheri gli <strong>inganni di una mitica giovinezza, la resistenza stoica</strong> e dignitosa dell’uomo che affronta senza viltà una precaria condizione esistenziale, lo stretto <strong>legame</strong> sempre conservato tra <strong>poesia e filosofia.</strong></p><hr id="1d3e6e16-f6db-4971-abc9-a97baa30dff4"/><p id="cc5f44cb-2889-4042-864e-db54e03992b2" class="">Montale è stato sempre un appartato, diffidente rispetto alla storia e all’impegno sociale, quasi un <strong>osservato esterno della vita.</strong></p><p id="f6b6b4da-f00e-44a1-a2e0-4fb32641ccbd" class="">La letteratura svolge per Montale un ruolo conoscitivo: è uno strumento per <strong>indagare le forme universali della condizione umana</strong>, più che le questioni temporanee della storia e della politica.</p><p id="91288b93-3ced-48d8-959d-e5dde8242c48" class="">Costretto a prendere coscienza della dolorosa <strong>insensatezza della vita</strong>, il poeta le oppone la propria fragile<strong> volontà di resistenza</strong>, che non si trasforma però in un nitervento diretto nella realtà.</p><p id="09d801ac-6147-45b7-8b96-4288e551de9d" class="">Oggetto della poesia è dunque l’uomo, la sua condizione di esiliato nel mondo, lo spaesamento che nasce dalla <strong>caduta di ogni sistema di certezze.</strong></p><p id="38faa6ce-e4b7-441f-a121-c5cef2fe6bdc" class="">Non soltanto il poeta è incapace di sentirsi personalmente inserito nella vita, ma avverte dolorosamente la sofferenza universale, il “male di vivere” che riguarda tutti.</p><p id="3538927e-edb2-4164-8141-2ff6970ddf3f" class="">Egli non può ignorare le assurde <strong>catene della vita</strong> che imprigionano l’uomo in una condizione di dolore.</p><p id="8a7da76b-8c3c-4935-b60e-bdc41a4caf54" class="">Talora è offerto all’angoscia qualche sollievo, per quanto effimero: è l’attimo in cui il pensiero si placa e cessa momentaneamente il suo tormento, oppure l’istante in cui si può sperare nell’apparizione di una donna, una sorta di salvatrice che potrebbe rivelare il senso della vita.</p><p id="1c417a3b-155b-4944-868e-fdb521c32d58" class="">Ma questo evento si compie eccezionalmente e non dura: è uno <strong>spiraglio improvviso e provvisorio </strong>nella rete opprimente dell’esistenza, da cui si intravede una verità che resta inafferrabile.</p><p id="52ede6f2-d701-4a3b-960e-ee413b0c4a2c" class="">E tuttavia il poeta <strong>non si rassegna</strong>, non rinuncia all’idea che la vita debba, in qualche modo, avere un significato: la sua poesia è un’incessante ricerca di quel significa, che a volte appare debolmente, ma resta irraggiungibile. </p><p id="6a8f171a-8257-4ab4-bb12-c4f1e56ad15b" class="">Il poeta non ha alcuna dote particolare che gli consenta di trovare una risposta agli interrogativi esistenziali.</p><p id="1cd48bd6-1775-4af0-b54c-95d5fce0ee3d" class="">Il poeta non è un individuo eccezionale, un poeta-vate con la sua enfase e il sou esibito slancio vitale; è un isolato, che si distingue dagli altri per una vocazione ineliminabile ma priva di utilità pratica: l’attitudine a <strong>guardare oltre l’apparenza delle cose.</strong></p><p id="bca69f83-ed5a-4eb1-9679-5a270c1a325c" class="">La dignità morale del poeta consiste nel guardare in faccia la realtà <strong>rifiutando le facili consolazioni </strong>e riconoscendo il destino umano di infelicità senza illusioni o compiaciuto vittimismo.</p><p id="0ea0ab04-4b31-427e-b199-1c3e99f48116" class="">Nelle ultime raccolte poetiche <strong>l’assenza di significato</strong> appare <strong>più radicale</strong>: la società di massa sembra avere travolto e consumato tutto, compresa la poesia.</p><p id="b9cf4c1e-2b6d-433a-ad1c-395dff695131" class="">Se fino agli anni Cinquanta Montale assegnava alla figura del poeta per lo meno la funzione di interpretare la solitudine esistenziale di ogni uomo, i versi della vecchiaia rivelano invece una maggiore disillusione sul possibile valore della poesia.</p><p id="420ada2b-1aad-465f-992b-cd2599227c96" class="">Eppure, benchè evidentemente priva di utilità per sè e per gli altri, <strong>la poesia appartiene all’uomo, </strong>è ineliminabile dal mondo ed <strong>esisterà sempre.</strong></p><p id="77888b3f-ed8c-427c-8a77-9da1c2370a98" class="">Nel momento stesso in cui afferma che la poesia non serve a nessuno, né agli altri né a chi la scrive, <strong>Montale le riconosce tuttavia una inevitabile presenza nel mondo.</strong></p><hr id="cbb65291-fa5b-4f9a-a479-0c39089fab02"/><h2 id="2cfb6293-c121-4f75-9395-bf764350ed08" class="">La poetica del “Correlativo oggettivo”</h2><p id="4def1788-a392-4635-a801-b55bc55c50e5" class="">Una poesia che mira a rappresentare il dolore dell’esistenza deve porsi il problema di come affrontare una materia facilmente soggetta alle incursioni dei sentimenti.</p><p id="333b832b-f3bb-4873-b5c6-dd912ff57931" class="">Emblematica a questo proposito è la poesia <em><strong>Spesso il male di vivere ho incontrato</strong></em>, in cui l’espressione del <strong>dolore universale</strong> viene affidata a elementi del<strong> mondo non umano</strong>.</p><p id="25682e3e-b87f-4e6f-a599-2dbe809caa74" class="">A tale intento di oggettivazione, ovvero di rappresentazione dello stato d’animo attraverso <strong>elementi concreti</strong>, Montale resta fedele in tutta la sua opera, pur nel variare dei modi espressivi delle successive raccolte.</p><p id="8da46065-4b21-4913-90da-3db7162663ac" class="">Tale procedimento, che è stato accostato alla poetica del “<strong>correlativo oggettivo”</strong>, consiste, come afferma Montale, nel “costruire oggetti che sprigionino il sentimento senza dichiararlo”.
+Si tratta cioè di scrivere poesie in cui lo stato d’animo non sia più rivelato in modo esplicito, come in <em>Spesso il male di vivere ho incontrato</em>, ma resti <strong>nascosto dietro oggetti concreti</strong> su cui si siano accumulati “sensi e soprasensi”, in modo sempre meno comprensibile per il lettore.</p><p id="685a1404-9252-4628-9f5d-d951803f326a" class="">La poetica del <strong>correlativo oggettivo</strong>, che affida a un oggetto la rappresentazione di un significato astratto, si collega apertamente con <strong>l’allegoria</strong> di Dante.</p><p id="3af04870-a004-491d-aa51-ab5c378cbc7e" class="">Ma se l’allegoria medievale, che si avvale di associazioni conosciuto dai lettori, era comprensibile da chi condivideva quella cultura, l’allegoria moderna appare <strong>priva di una chiara relazione tra l’oggetto e la realtà rappresentata</strong>, e ciò la rende difficilmente decifrabile dal lettore, che spesso non riesce ad attribuire un senso certo agli oggetti rappresentati.</p><p id="206c2152-53b4-4c6d-a57b-56be69036de0" class="">Questa <strong>oscurità irrisolta</strong> si traduce nello <strong>smarrimento del lettore.</strong></p><p id="32220050-0e3c-4b92-bdb1-e48664b72aac" class="">Nella loro<strong> apparente insignificanza</strong> essi amplificano la percezione della vanità, del <strong>non-senso universale.</strong></p><hr id="02d341ff-a78f-4f5c-97a7-164ccc868ff6"/><p id="765b4376-a4f0-468a-a3c3-b573e9de644d" class="">Montale elabora uno strumento linguistico deliberatamente lontano dal preziosismo dei simbolisti e di d’Annunzio, alla ricerca di un <strong>tono sobrio</strong>, antieloquente.</p><p id="3be6f9cc-6b37-43b6-aafc-f3f30b24a7fb" class="">Nel suo verso si può riconoscere una forte tendenza <strong>all’esattezza terminologica</strong> e all’ampliamento del vocabolario, anche di quello normalmente non ammesso in poesia: <strong>termini alti</strong> della tradizione letteraria si accompagnano a <strong>parole dimesse</strong> che designano oggetti quotidiani o che appartengono ai <strong>linguaggi tecnici e settoriali</strong>, e sono numerosi i <strong>neologismi</strong>.</p><p id="77c5f3b1-09d8-40a0-9ee1-7e890b1927b4" class="">Montale rifiuta dunque il vocabolario sublime e l’aspirazione alla solennità della tradizione poetica: sono frequenti nei suoi versi le contaminazioni tra un <strong>lessico letterario</strong>, scelto per la sua rarità, e <strong>parti narrative o discorsive.</strong></p><p id="05110f31-0b05-43b2-bd0b-25d51768b578" class="">La profonda innovazione realizzata da Montale sul piano lessicale è attenuata dalla ricorrente presenza di versi tradizionali e <strong>rime.</strong></p><p id="e6b76b6d-b542-4815-a905-30e53f19a3fc" class="">Il poeta, estraneo alla rivoluzione metrica dei futuristi e di Ungaretti, affida alla forma regolare il compito di erigere una sorta di <strong>difesa contro il disordine</strong> e l’incertezza della vita interiore.</p><hr id="bcf49e41-6b9c-49df-a860-f1716b1ee523"/><h1 id="a9273ba7-f387-45b3-b9cc-94521ca42f63" class=""><em>Ossi di Seppia</em></h1><p id="a3121830-aa6f-4a5e-8bef-3213e7023ea7" class=""><em>Ossi di seppia</em> comprende poesie scritte tra il 1920 e il 1924.</p><p id="99cc02b9-c063-40b0-9265-3709fa57829f" class="">Il titolo allude al <strong>paesaggio marino</strong>, ma è anche metafora di una <strong>condizione esistenziale:</strong> gli scheletri di seppia che si possono vedere sulle acque o sulle rive del mare sono da un lato emblema del desiderio da parte del poeta di dimenticare la condizione umana e di congiungersi con la natura, dall’altro metafora della degradazione dell’io, che si sente simile a uno scarto, a un relitto scarnificato e inutile.</p><p id="7c192a67-614c-4198-a449-ad374166e5a5" class="">Si respira nell’opera un’atmosfera particolare e nuova: non la magniloquenza dei versi dannunziani, le invenzioni verbali dei futuristi o gli accenti dimessi dei crepuscolari, bensì un tono dolente, che in modo sobrio dà voce alla disperazione esistenziale.</p><p id="17feb7fd-685f-4d5b-b292-952ce7b2ab72" class="">L’io lirico è sempre in primo piano ed esprime la soggettività del poeta, la sua interiorità, i suoi affetti; è un io concentrato nella <strong>tensione a decifrare il senso del reale</strong>, paralizzato e sospeso di fronte alla consapevolezza della vanità della vita.</p><p id="1a5bc973-66bc-4623-80b4-f0a259712d49" class="">In diverse occasioni Montale ha sottolineato l’importanza del <strong>paesaggio ligure</strong> presente in <em>Ossi di seppia</em>, e lo ha definito uno <strong>spazio “esistenziale”, </strong>in quanto riflesso dello stato d’animo dell’io.</p><p id="af603d27-473e-4f07-b626-7feece5a13b5" class="">Elementi ricorrenti agli <em>Ossi</em><strong><em><em> </em></em></strong>sono: in primo luogo il muro, che è un’immagine significativa e ripetuta, emblema del <strong>destino di esclusione</strong> cui l’uomo si sente condannato, e poi la <strong>sofferenza del vivere</strong> e la luce del sole estivo, abbagliante, nell’ora soffocante del meriggio.</p><p id="5c783bf8-7206-4629-b311-03631af521bb" class="">Sullo sfondo domina spesso il <strong>mare</strong>, nei cui confronti il poeta manifesta un sentimento ambivalente: da una parte è vitalità sognata e irraggiungibile, dall’altra è forza che travolge e lascia relitti, come gli ossi di seppia abbandonati sulla spiaggia.</p><p id="c32b769e-059e-405b-8d28-1059cd2a84c8" class="">Gli elementi liguri del paesaggio degli <em>Ossi</em> sono spesso descritti da Montale con un’<strong>aggettivazione</strong> che crea il particolare tono linguistico della raccolta.</p><p id="9897e03a-998c-4451-af39-fe654eb85974" class="">Tra le parole poetiche si trovano <strong>termini nobili e rari</strong> accanto ad altri più <strong>umili e usati</strong>, sempre però scelti con <strong>estrema precisione.</strong></p><p id="12590e5c-cbc9-4c19-8fcb-914653d98468" class="">D’altra parte egli recupera le <strong>misure metriche tradizionali</strong>, soprattutto l’endecasillabo.</p><p id="1dc42f4f-87be-47bb-917c-2c938380e871" class="">L’intenzione di evitare la musicalità più scontata fa sì che le parole e i suoni si urtino tra loro in <strong>soluzioni aspre e non cantabili</strong>, ma in cui rime, assonanze, allitterazioni suggeriscano l’esistenza di una profonda armonia.</p><p id="1c3eaa5d-fd5b-4a14-8a25-943c75d54598" class="">Lo sforzo del poeta è testo a fare aderire il linguaggio all’oggetto della poesia: egli mira cioè a trovare una forma capace di esprimere la tensione conoscitiva dei suoi versi, la sua ininterrotta ricerca di un senso dell’esistenza.</p><p id="269ec1ad-3f92-4d5f-bedb-99fb514664ca" class="">La scelta è allora quella di affidare agli <strong>oggetti</strong> il compito di rappresentare <strong>concetti e stati d’animo.</strong></p><p id="6d3a30dc-7c27-45ac-9762-6d288448f38a" class="">Il poeta non ha tuttavia alcuna pretesa di superiorità rispetto agli altri uomini, né attribuisce alla poesia una particolare chiaroveggenza: essa non è che uno <strong>strumento</strong> per mezzo del quale egli conduce coraggiosamente la propria indagine sulla condizione umana.</p><p id="fb10f4f8-0896-4aeb-9313-4442c76e067a" class="">Dallo stato di imprigionamento dell’uomo pare a volte possibile un’evasione, l’apertura di uno strappo nelle ferree leggi che determinano l’esistenza; il tema della possibilità di sfuggire anche soltanto per un attimo alla disarmonia e di <strong>intravedere il senso</strong> che sempre ci sfugge compare per la prima volta negli <em>Ossi</em> ma sarà costante nell’opera di Montale, che esprimerà di volta in volta questa intravista via d’uscita con <strong>immagini metaforiche di liberazione.</strong></p><p id="37bf4aed-6007-483d-840a-f9a224bdb69a" class="">Ma il prodigio annunciato è una <strong>speranza delusa</strong>, non si realizza mai compiutamente, anzi, se ci si spinge al di là delle apparenze può accadere di scoprire che il segreto del mondo coincida con l’abisso del nulla.</p><p id="fd39acfc-5e2a-464b-b5be-84d8bbbcdee0" class="">In questa ricerca ssumono un ruolo decisivo anche i numerosi interlocutori dell’io, personaggi con o senza nome, spesso <strong>figure femminili</strong> lontane o perdute, che rafforzano il poeta nella sua volontà di resistenza morale o fanno balenare una <strong>speranza di salvezza.</strong></p><h2 id="4e766efb-6041-4531-b336-bc8e16b95e42" class="">Brani</h2><p id="eba47130-4802-4a91-9a03-f18f71f3ed4d" class="">→ “Spesso il male di vivere ho incontrato” - 534</p><hr id="b60b6764-d2ce-4b06-928f-9b19fd4d275b"/><h1 id="940e4416-8248-40d5-bac3-440e0c267b11" class="">Le occasioni</h1><p id="6299d063-cddb-4013-a748-49c8158f43fc" class="">La seconda raccolta di Montale, <em>Le occasioni</em>, comprende poesie di <strong>ricerca esistenziale</strong>, in cui il poeta tenta di scorgere o di recuperare nel passato gli istanti in cui le cose sembrano promettere la possibilità di uscire dall’insensatezza della vita e di <strong>entrare in contatto con un significato.</strong></p><p id="8fbad01b-1884-4186-92a9-1458b7c91eeb" class="">Questa raccolta è costituita da <strong>quattro sezioni</strong>, di cui solo la seconda h aun titolo.</p><p id="90c13987-f24a-4973-b192-06077dea4d66" class="">Nelle <em>Occasioni</em><strong><em><em> </em></em></strong>cambia il paesaggio: quello ligure è sostituito da quello toscano.</p><p id="2380fc2d-64eb-442b-addd-cf4853b232fd" class="">E’ diverso anche il clima: in generale prevale una sensazione di <strong>angoscia </strong> e di <strong>inquietudine</strong>, conseguenza inevitabile del progressivo<strong> oscurarsi del tempo storico, </strong>con il consolidamento del fascismo, l’affermarsi del nazismo, l’emanazione delle leggi razziali.</p><p id="a664689a-d8ed-4737-9ab0-470345ad870a" class="">Tema dominante di tutta la raccolta è l’assenza della donna amata: il poeta cerca nel mondo che lo circonda <strong>tracce della sua donna ormai lontana</strong>, nel tentativo speso illusorio di ritrovare e trattenere un <strong>ricordo cui ancorare la propria esistenza.</strong></p><p id="00bf5acd-0a49-4176-96f8-2a0288b8e746" class="">Anche in queste poesie gli <strong>elementi concreti e sensibili</strong> sono al centro della rappresentazione.</p><p id="8a27ff4a-2125-4dce-bb43-92270a9f8664" class="">Un paesaggio, un oggetto, un animale non sono mai casuali ma <strong>alludono a situazioni vissute</strong>, benchè spesso imprecisate o sfuggenti.</p><p id="9624b6b0-a4d2-45b4-a879-fa79e5e983fa" class="">La rappresentazione delle situazioni interiori attraverso <strong>oggetti concreti</strong> si realizza nelle <em>Occasioni</em> in modo più oscuro rispetto a quanto accadeva negli <em>Ossi di seppia</em>.</p><p id="cc376f27-b2ae-4f28-bc05-cdac2b8d1e2c" class="">Montale infatti diffonde nei suoi versi oggetti che alludono a stati d’animo e a situazioni esistenziali <strong>senza però offrire indicazioni che ne chiariscano il significato</strong>.</p><p id="0a54a90b-6c6e-40b6-9689-b9588775cabd" class="">In questo senso egli si spinge o ltre la poetica di <em>Ossi di seppia</em>, in cui gli elementi materiali rappresentavano esplicitamente la situazione interiore.</p><p id="1d6e7aba-3cf8-4a90-829f-ec6d2309b7fe" class="">Il risultato è una <strong>poesia difficile</strong>, impegnativa<strong>, dai molti possibili significati.</strong></p><p id="ee8d8ede-34b6-4b85-bf66-55480e45584d" class="">La poesia delle <em>Occasioni</em> è certo di difficil einterpretazione, ma non è il frutto di una oscurità deliberata e programmatica, come quella cercata dai poeti ermetici.</p><p id="b276477a-af1b-40f5-b4f7-66bafee68aa1" class="">Montale si propone infatti di <strong>non smarrire il senso delle parole e la coerenza tra le frasi</strong>.</p><p id="cea7d017-195a-464f-80c0-f020fd8b9f86" class="">Montale non è interessato a una poesia volutamente indecifrabile, resta per lui un’esigenza irrinunciabile lo <strong>sforzo di capire il mondo</strong>, l’aspirazione alla chiaroveggenza.</p><hr id="3623f9eb-f7ee-4308-aeaa-872e232e006b"/><p id="8ccce4de-1b99-414f-8708-ca0ad2bcd704" class="">Di questa virtù illuminante e chiarificatrice sono portatrici le donne.</p><p id="30b7d6dd-b434-44fc-8dec-5e6af1bde522" class="">La donna si definisce progressivamente come colei che almeno per un istante può rischiarare il buio del presente, fino ad assumere <strong>caratteristiche quasi divine</strong>, soprannaturali.</p><p id="d4f14d77-3f3a-4d90-b95b-0258b13ab06d" class="">Le <em>Occasioni</em> sono la narrazione di un <strong>amore “in assenza”, </strong>un dialogo ininterrotto con una donna lontana, partita per sempre o smarrita nell’oscurità della memoria.</p><p id="02d137c6-ab87-4bc9-be1f-a96662ead71b" class="">Sono molte le donne delle <em>Occasioni</em>.</p><p id="d31e189e-0b4a-4dbf-be13-5c49d90864f7" class="">La vera protagonista delle <em>Occasioni</em><strong><em><em> </em></em></strong><strong>è Irma Brandesi</strong><strong><em><em><em><em>, </em></em></em></em></strong>la studiosa americana con cui Montale ebbe una relazione d’amore.</p><p id="b994d3fb-1f23-4b8a-926c-9511c33f71f9" class="">Il suo nome tuttavia non compare mai, le sarà attribuito lo pseudonimo di <strong>Clizia.</strong></p><p id="426db649-b0f9-4261-9433-2a336a21c374" class=""><strong>Creatura salvifica</strong> venuta dal cielo a offrire soccorso al poeta smarrito per la sua assenza.</p><p id="af2383da-52b4-47ff-944c-4cce9cf3b36a" class="">Le sue improvvise appirizioni ce la mostrano astratta e concentrata come un <strong>visiting angel</strong>, <strong>capace di salvare dal male</strong>, benchè ella stessa colpita dal male e dalla sofferenza.</p><hr id="f939408a-cc2f-4f22-a765-6b8c4182001e"/><p id="9885b561-0447-4ea7-a646-e3ffda83286c" class="">Nelle <em>Occasioni</em> convivono <strong>registri linguistici differenti</strong>: parole appartenenti al linguaggio quotidiano, proprie del parlato, si trovano mescolate con termini più rari, di derivazione letteraria.</p><p id="9db2f6c3-84bc-4eb8-b94e-8bcf74f995a9" class="">Sul piano della metrica nelle <em>Occasioni</em> c’è un recupero dei <strong>versi tradizionali</strong>, prevalentemente<strong> l’endecasillabo.</strong></p><p id="7b843ed3-829a-40d8-8743-f68b753aeaff" class="">
+</p><h2 id="bd8c2121-8156-4d76-9280-460efc1bf3e8" class="">Brani</h2><p id="d76e437b-219b-427e-ac19-3f9293872bad" class="">→ “Ti libero la fronte dai ghiaccioli” - 552</p><hr id="065fa49e-a79d-4751-b77d-df2c2439bf5f"/><h1 id="f77fa094-87d2-421d-a5d4-e45ee3b2008b" class="">Satura</h1><p id="dfb7ee03-9429-40b2-853f-f072fcfcdd69" class="">Montale trascorre <strong>dieci anni in un quasi totale silenzio poetico</strong>.</p><p id="58c9bc78-170a-4d77-8e02-d94f3c4e2bc7" class="">Tuttavia, componendo alcuni epigrammi in coda ai suoi articoli, afferma di avere iniziato a riconoscere in sé un’inclinazione verso una poesia più vicina alla <strong>lingua quotidiana</strong> e ai <strong>ritmi della prosa</strong>.</p><p id="b194e7f5-158f-4340-ad2a-8985e57e156c" class="">L’abbassamento discorsivo del linguaggio deriva da una fondamentale novità tematica: il poetea è immerso nella società massificata e meccanizzata degli anni Sessanta del Novecento.</p><p id="2be52c54-1271-45b3-8a1a-0a53e2916715" class="">E’ per lui un <strong>mondo dominato dall’apparenza</strong>, in cui non sembrano più trovare spazio i valori intellettuali e umanistici che erano stati l’essenza della sua formazione.</p><p id="4abd2d4f-2710-4ce0-8cc1-de74de918d5c" class="">Il titolo offre una <strong>chiave di lettura</strong> della raccolta: la parola latina <em>satura</em> indica infatti un piatto di varie primizie offerto agli dèi, e già nella letteratura latina si riferiva a <strong>testi di temi e linguaggi molto diversi</strong>, spesso ironici.</p><p id="a7d77559-96b0-45ff-ac6a-a5c7db33f710" class="">L’intenzione di Montale è di sotolineare la varietà tematica e la <strong>prevalenza del registro ironico</strong> nella raccolta.</p><p id="21c7629a-8501-4d6c-ba89-4ee40d2fcd25" class="">La raccolta è divisa in quattro sezioni: Xenia I, Xenia II, Satura I, Satura II.</p><p id="fe5f4e62-13a4-4ef4-b68d-099776eb4bbb" class="">Le poesie delle prime due sezioni si presentano perciò come <strong>offerte del poeta alla memoria della moglie morta</strong>, in un tono insieme addolorato e ironico.</p><p id="9463081e-b2aa-442b-98bf-f19a5e40c433" class="">Convinto della propria radicale estranietà a un mondo in cui <strong>i valori della letteratura vengono emarginati</strong> e prevalgono ideologie e fedi che non gli è possibile condividere, Montale accetta il proprio isolamento senza dissimulare né attenuare la propria amare consapevolezza della condizione umana.</p><p id="949222cc-02e9-4090-8616-bcb1cf8fcd70" class="">E’ evidente il gusto del poeta per le affermazioni illogiche e per i <strong>giochi di parole</strong>; si tratta di frasi che si sottraggono a un senso razionale e comunicano nella loro contraddittorietà un’<strong>immagine assurda del reale.</strong></p><p id="1e71fbcd-26e8-4192-98fe-5b5e6e23c0d8" class=""><strong>Il confine tra vita e morte è sempre più incerto</strong>, la vita appare misteriosa tanto quanto la morte, e il paradosso è che l’esistenza è tanto insignificante che si può credere di essere morti senza saperlo.</p><p id="d6fefa9f-d640-4b11-a641-c566cae8e36f" class="">Domina incontrastata la figura della moglie <strong>Mosca, rievocata dopo la morte </strong>attraverso i minimi <strong>atti della sua esistenza quotidiana</strong>.</p><p id="2d8b3aac-df10-4c49-b98a-b29f855bd8b9" class="">La donna <strong>perde il proprio ruolo di annunciatrice di senso</strong> semplicemente perchè non sembra più possibile trovare un senso nel mondo e nella storia: tutto sfugge.</p><p id="2fb05621-10d2-4797-a019-8979262b45f2" class="">Tuttavia, seppure in modo diverso, Mosca assolve alla stessa funzione rivestita dalle altre donne che hanno accompagnato il poeta e ispirato la tua poesia: <strong>gli dà soccoro nella sua inettitudine ad affrontare la vita.</strong></p><p id="aec5f29d-2948-4200-9407-bfb42cd46e90" class="">Eppure questa donna che Montale doveva sentire così radicalmente diversa da sé non era una donna ordinaria: capace di affrontare la sofferenza fisica, ella era <strong>ricca di istintiva vitalità, </strong>e amava tutto ciò che interrompeva il corso monotono dell’esistenza.</p><p id="0ec6102d-ae5f-4d0c-9bbe-1679ef4d8563" class="">Da quando Mosca non c’è più il <strong>poeta la cerca negli oggetti quotidiani</strong>, nel ricordo delle lunghe telefonate, ed è infine costretto a confessarle il proprio <strong>peregrinare sulle sue tracce.</strong></p><p id="ee3d7ea6-2882-4f48-b7be-5914efa90b26" class="">Tutti gli <em>Xenia</em> sono l’affettuosa rievocazione del rapporto con la moglie.</p><p id="d301ae09-9a7f-4acd-914e-ce6cf81440f3" class="">Tuttavia il tono delle poesie <strong>non risulta mai lamentoso</strong>.</p><p id="d55b77d9-a02c-443d-86df-789550b4e9b6" class="">E’ questa una costante dello stile di Montale, che reagisce alla commozione con deliberati abbassamenti di tono, scegliendo <strong>registri ironici, leggeri, disinvolti</strong> e rinunciando ai modi stilistici patetici e tragici con cui viene tradizionalmente trattato il tema della morte.</p><hr id="4b9343ba-ecaa-4bf3-8ac5-22b4cb08a2b9"/><p id="15f82a22-7506-468d-814b-312035b12462" class=""><strong>Il tono prosastico e narrativo</strong> dei testi li distingue da quelli delle raccolte precedenti.</p><p id="97f896a5-0d05-46d9-9033-316300a93019" class="">Il lettore percepisce che è mutata l’idea stessa della poesia: essa<strong> cessa di essere un mezzo di rivelazione</strong>, sia pur intermittente, di verità, e diventa uno “strumento quotidiano e quasi immediato, valido accanto a altri, di osservazione e riflessione”:</p><p id="3a905c3b-d52a-4104-8fb2-b0c1ec69f472" class="">La scrittura assume un carattere diaristico e occasionale.</p><p id="38123954-ed98-4cb2-841f-97b4621e74fd" class="">Accanto alle parole tratte dall’<strong>uso colloquiale</strong> se ne incontrano di più ricercate e letterarie.</p><p id="331cc189-abeb-450b-bf00-ece7855b6a27" class="">L’effetto generale di questa mescolanza non è lo scarto dal quotidiano, ma la sua riaffermazione, ottenuta attraverso l’<strong>abbassamento ironico della lingua letteraria</strong>.</p><p id="a3e31be7-d843-4bcb-9561-a0e4fdcbdecb" class="">Si moltiplicano inoltre le <strong>parole straniere</strong>, soprattutto anglosassoni, e i <strong>giochi di parole, </strong> come se il poeta volesse sperimentare ogni modo di esprimere il reale di fronte alla sua essenza incomprensibile e dunque ineffabile.</p><p id="add6d639-4f5a-4ff9-9034-1f97945b35f7" class="">
+</p><h2 id="19a548cc-1942-4fd5-88be-c2deac9ae71d" class="">Brani</h2><p id="dbab93e5-cc5a-4ac6-b776-8426ebe24424" class="">→ “Avevamo studiato per l’aldilà” - 570</p><p id="15215367-a262-4b1b-8f73-bd38b47f40e4" class="">→ “Ho sceso dandoti il braccio” - 572</p><hr id="7eb145de-80c0-4650-b775-f5d4914e7596"/><h1 id="d968abf7-1770-4fe1-8c4a-d2ff38f14d13" class="">Riassunto</h1><figure id="07e94cc4-84bf-40d9-a9fd-fd80341eb490" class="image"><a href="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Screenshot_2022-05-26_at_18.28.21.png"><img style="width:1903px" src="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Screenshot_2022-05-26_at_18.28.21.png"/></a></figure></div></article></body></html>

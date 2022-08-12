@@ -1,0 +1,671 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Giuseppe Ungaretti</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f1be81d7-1df0-4275-9f96-953c38033777" class="page serif"><header><div class="page-header-icon undefined"><span class="icon">🪖</span></div><h1 class="page-title">Giuseppe Ungaretti</h1><table class="properties"><tbody><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data nascita</th><td>1888</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Anni vita</th><td>82</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data morte</th><td>1970</td></tr></tbody></table></header><div class="page-body"><nav id="88fca5d7-4263-46c3-b216-5796bdea3dc8" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#444f6dd5-7429-405c-9ec0-8d4bd661f82b">Giuseppe Ungaretti</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e79fba4c-5784-4e01-b756-01deeb262124">La formazione e la poetica</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#807c6893-39f8-4149-a5d7-0d7c4d14656c">L’allegria</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#fa644b4c-a71f-4c29-8149-92a7b8c0944a">I temi dell<strong>’Allegria.</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#44ab2f83-d323-49b9-bd9e-5c8b852de8fc">Le novità metriche e stilistiche</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#5503543a-9896-49ee-b8a2-4f5ab7dacb88">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#9af0c78d-5183-4eff-89da-6c3454c83ad9">Sentimento del Tempo</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#676adc59-952c-4077-b13d-c24a56b9a215">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#27387ce0-8f3a-45a0-b3d1-2457d927ff3b">Riassunto</a></div></nav><h1 id="444f6dd5-7429-405c-9ec0-8d4bd661f82b" class="">Giuseppe Ungaretti</h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="dac73f4b-6791-4ecf-bf58-ce10e195d31d"><div style="font-size:1.5em"><span class="icon">🐣</span></div><div style="width:100%">Nasce nel 1888 ad <strong>Alessandria d’Egitto</strong> da genitori emigrati dalla provincia di Lucca.</div></figure><p id="ee7c6e55-fc56-4307-a69f-98ed54edff17" class="">A due anni perde il padre e viene allevato dalla madre in un’atmosfera familiare segnata dal lutto e dalla nostaliga: i racconti materni dell’Italia lo riempiono di meravigli ae alimentano i suoi sogni.</p><p id="870de754-cca5-4c24-8b67-15120a59c53c" class="">L’infanzia egiziana lascia un <strong>segno incancellabile</strong> nella sua immaginazione: la <strong>luce accecante</strong> del giorno e i <strong>rumori</strong> sinistri delle notti si imprimono nella sua memoria, mentre i paesaggi continuamente modificati dalla sabbia del <strong>deserto</strong> gli trasmettono un senso generale di <strong>precarietà</strong>, come se nulla potesse resistere all’azione corrosiva della natura e del tempo.</p><p id="2e3a8845-a6a3-4ab5-b7ef-70543cb73303" class="">Ad Alessandria il giovane compie <strong>studi rigorosi</strong> in una scuola di lingua francese e si avvicina ai gruppi di rivoluzionari.</p><p id="12e7a86a-d4a5-430a-93cc-8e48f75261e3" class="">Ben presto gli interessi di UNgaretti si orientano verso la letteratura e la poesia, sopratttutto italiana e francese: fin dagli anni di scuola legge la prestigiosa rivista francese “Mercure de France” e inizia a collaborare ad alcuni periodici egiziani con <strong>articoli di critica</strong> letteraria.</p><p id="b4da3e12-347a-469a-a35a-7719c3dfd85b" class="">Dopo avere fallito alcuni investimenti commerciali, decide di seguire la propria <strong>vocazione letteraria</strong> e lascia a ventiquattro anni Alessandria per recarsi a <strong>Parigi (1912)</strong>, che in quegli anni è la patria della cultura eropea d’avanguardia</p><hr id="a84ec8ed-36e5-4660-a268-ed3ea233a371"/><p id="dbb42424-1995-4d5b-a92d-1dfff6ec3cdc" class="">Durante il viaggio verso la capitale francese Ungaretti decide di fare una <strong>tappa in Italia</strong>, che si materializza infine in un paesaggio profondamente diverso da quello a cui erea abituati.</p><p id="6130bcae-cae9-4588-8805-245ff036041b" class="">La vista delle montagne gli lascia un’impressione indimenticabile: si trova infatti improvvisamente di fronte, nella <strong>terra dei suoi avi</strong> a uno sconosciuto <strong>orizzonte di stabilità</strong> e lo vive come una rivelazione improvvisa della <strong>profondità della storia</strong> e delle proprie radici.</p><p id="69854911-3d5f-46d8-af77-926b2e04ff8c" class="">Tuttavia decide di proseguire il viaggio e si stabilisce a <strong>Parigi</strong>.</p><p id="a63b3bfd-e97b-46f2-ba45-eee2ab64309f" class="">Risalgono a questi anni i suoi primi contatti con gli intellettuali parigini legati alle <strong>avanguardie artistiche e letterarie</strong>: i francesi Bergson, Apollinarie e i futuristi italiani.</p><p id="8df5208a-8446-435e-a659-e8f78f1a1eeb" class="">Ungaretti perfeziona <strong>l’apertura cosmopolita</strong> della propria educazione, già favorita dalla nascita in una città affollata di emigrati da ogni paese.</p><p id="2ae784e3-ab60-43bb-9f49-bee10e797c8d" class="">Parigi offre a Ungaretti la strada per giungere a una più profonda <strong>consapevolezza di sé </strong>e riconoscersi definitivamente come poeta.</p><p id="adc97b6b-ed55-48bc-b20f-69ee1943768a" class="">Il lungo periodo di apprendistato culturale si concretizza infine nel febbraio del 1915, quando Ungaretti, tornato in Italia, pubblica le sue <strong>prime poesie su “Lacerba”.</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5881ee1e-2d91-446f-913e-ae988abab17b"><div style="font-size:1.5em"><span class="icon">💭</span></div><div style="width:100%">Negli stessi mesi egli abbandona le idee anarchiche e sovversive per assumere <strong>posizioni nazionaliste e patriottiche </strong>e partecipa alla campagna per l’intervento dell’Italia nella Prima guerra mondiale.</div></figure><p id="d88ea9ff-827a-47b7-9409-09fd98333b60" class="">Arruolatosi come <strong>soldato semplice</strong>, è inviato a combattere sull’altopiano friulano nel <strong>Carso.</strong></p><p id="54b7712d-b3e6-4688-b0ec-5dd5b7504bea" class="">Alla disumanità della vita in trincea Ungaretti reagisce affidandosi alla <strong>poesia</strong>, vera e propria <strong>esperienza conoscitiva</strong> capace di rivelare all’uomo il senso misterioso delle cose e di restituirgli lo <strong>slancio vitale </strong>necessario a sopravvivere.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4170ca2d-3ae5-4cf8-96f1-6ac6e9c47a09"><div style="font-size:1.5em"><span class="icon">📕</span></div><div style="width:100%">Nel dicembre del <strong>1916 </strong>esce a Udine la prima raccolta di poesie di Ungaretti, <em><strong>Il porto sepolto</strong></em></div></figure><p id="d2aa535a-d7fc-41be-bcd3-28fb83b43d15" class="">Viene stampato diverse volte con un titolo diverso: <em>Allegria di naufragi, Il porto sepolto, </em>e, infine, <em>L’allegria.</em></p><p id="333e8bce-04c5-4722-ac0c-27a65e20a519" class="">Nelle <strong>diverse stampe</strong> la raccolta subisce revisioni e rimaneggiamenti.</p><hr id="c182c035-5182-4de2-9e09-0479ee4ca477"/><p id="16750269-c22c-4f48-bf73-f6e7b486627b" class="">Nel 1918 il reggimento di Ungaretti si trasferisce sul fronte francese e il poeta decide di <strong>rimanere in Francia</strong> anche alla fine della guerra.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="957b17ee-89fb-4beb-98fd-0f736ca4b61a"><div style="font-size:1.5em"><span class="icon">🪖</span></div><div style="width:100%">Nel 1919 Ungaretti <strong>aderisce al Fascismo</strong>, nel cui programma nazionalistico e sovversivo si riconoscono nel dopoguerra molti reduci delusi come lui.</div></figure><p id="711c7234-ebe4-4ff2-8d82-25c610c33aad" class="">Nel 1921 lascia la Francia per stabilirsi a Roma, dove ottiene un impiego all’ufficio stampa del Ministero degli Esteri.</p><p id="31525992-9de7-4d73-b46b-ea612cb058ef" class="">Sono questi gli anni in cui Ungaretti si pone il problema di conciliare la spinta rivoluzionaria e anarchica propria della sua formazione con un’<strong>esigenza di ordine e misura.</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="920117bd-c428-484d-9582-fe8e902c1045"><div style="font-size:1.5em"><span class="icon">📕</span></div><div style="width:100%">Sul piano letterario ciò comporta il <strong>recupero della tradizione</strong> e dei modelli classici della letteratura: il risultato di questa svolta di poetica è la seconda raccolta, <em><strong>Sentimenti del tempo</strong></em>, pubblicata nel <strong>1933.</strong></div></figure><p id="821064f3-b385-4116-91f6-0464ccb64a4d" class="">Ungaretti sottopone le proprie poesie, anche quelle già pubblicate, a un instancavile <strong>lavoro di risistemazione</strong>, spostandole talvolta da una raccolta all’altra.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="fd8ece24-55b1-4136-8b97-346760034ca4"><div style="font-size:1.5em"><span class="icon">📕</span></div><div style="width:100%">Una sezione di <em>Sentimenti del tempo</em>, chiamata <em><strong>Inni</strong></em>, rispecchia la ocnversione di Ungaretti al <strong>cattolicesimo.</strong></div></figure><p id="a1f25aa9-e1d5-4eb2-a30e-35c12529c384" class="">Accanto all’attività di letterato, Ungaretti esercita quella di <strong>critico letterario, traduttore e conferenziere.</strong></p><hr id="fd26fab6-7832-49e0-91ac-0c75a31e9416"/><p id="a8076e2d-9bf4-4b2a-99f3-fa17e87debab" class="">Nel <strong>1936</strong> Ungaretti acoglie l’invito a occupare la cattedra di <strong>Letteratura italiana</strong> dell’Università di <strong>San Paolo del Brasile</strong> e vi si stabilisce con la famiglia, fino al 1942.</p><p id="d879a666-c575-4d45-9366-c2ec1ccfd98c" class="">Sul piano degli affetti familiari sono però anni di profonda afflizione, per la <strong>morte dell’unico fratello </strong>e la drammatica <strong>perdita del figlio Antonietto</strong>.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0d14995f-040a-47f0-b719-769456c15e78"><div style="font-size:1.5em"><span class="icon">📕</span></div><div style="width:100%">Il bisogno di superare questi lutti determina una ripresa della scrittura poetica e ispira a Ungaretti le liriche della terza breve raccolta, <em><strong>Il dolore.</strong></em></div></figure><p id="77236fa3-aa54-4a4d-b339-a364058f2df4" class="">Nel 1942 Ungaretti torna in <strong>Italia</strong>, accolto dal regime fascista con la nomina onorifica a membro dell’Accademia d’Italia e l’assegnazione della cattedra di Letteratura italiana contemporanea all’Università di Roma.</p><p id="ce06fc7a-686b-4a1c-ba2b-30f4ac158711" class="">Nello stesso anno pubblica l’<strong>edizione definitiva delle due prime raccolte.</strong></p><p id="61b9afe7-1ec5-4520-ad4a-016694e22e29" class="">Con la caduta del fascismo Ungaretti attraversa un momento difficile: vengono infatti messi sotto accusa i suoi legami con il regime ed egli rischia di perdere la cattedra universitaria che ha ottenuto senza conoscorso.</p><p id="dc66fa03-8db7-49c7-9116-62481fe85199" class="">Tuttavia recupera presto la considerazione dei lettori e dei critici e la sua <strong>fama di poeta</strong> si diffonde sia in Italia sia all’estero.</p><hr id="aa3227ec-1530-4efd-a666-6ce43075a31a"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="092224c2-a347-4874-86f5-2473d12fd209"><div style="font-size:1.5em"><span class="icon">📕</span></div><div style="width:100%">Nel <strong>1969</strong> a compimento di un lavoro di rielaborazione durato una vita, l’opera poetica di Ungaretti viene raccolta in un <strong>unico volume</strong>, intitolato <em>Vita d’un uomo, Tutte le poesie.</em></div></figure><p id="c5e07339-079f-49cc-ab00-9404df589971" class="">Non si può tuttavia affermare che sia la vita del poeta a ispirare la sua poesia: piuttosto <strong>è la poesia a ricostruire e dare significato alla sua vita</strong>, rivelando il poeta a se stesso e facendogli scoprire, attraverso improvvise e parziali <strong>illuminazioni</strong>, il senso della propria esperienza.</p><p id="6d8df54b-9194-447d-bf7a-7d4e96f40d29" class="">Anche negli anni della <strong>vecchiaia</strong> Ungaretti continua la sua instancabile attività di letterato e conferenziere, ricevendo importanti riconoscimenti.</p><p id="c9976524-dc1f-4663-8bf8-2cfc9bde37ab" class="">La sua <strong>vitalità</strong> gli fa prediligere la compagnia dei giovani discepoli, con cui ama intrattenersi in <strong>conversazioni letterarie e in letture pubbliche.</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="255f0a1f-a0f5-4f93-aab0-b675a25579e8"><div style="font-size:1.5em"><span class="icon">🪦</span></div><div style="width:100%">Di ritorno da un viaggio dagli Stati Uniti per ricevere un premio, il poeta si ammala e muore improvvisamente a Milano, nel giugno del <strong>1970.</strong></div></figure><hr id="86223079-b9a4-458c-a758-7022706d2309"/><h1 id="e79fba4c-5784-4e01-b756-01deeb262124" class="">La formazione e la poetica</h1><p id="11464f58-8b81-4f20-89eb-e476b61f8877" class="">La nascita in Egitto, in un ambiente di emigranti caratterizzato dalla mescolanza di culture e lingue differenti, favorisce l’intenazionalità della formazione intellettuale di Ungaretti, il quale si trova presto a contatto con tendenze culturali molto diverse.</p><p id="253802d5-6274-4b85-8775-3be81cf20f40" class="">Lo studio in una scuola di lingua francee e la curiosità per tutti i fermenti innovativi del pensiero lo mettono precocemente in contatto con l’<strong>ambiente francese delle avanguardie</strong>.</p><p id="d3f2f633-d2f9-4bda-8d80-663e2fae6c12" class="">Con inesauribile energia egli assiste a lezioni e conferenze, cerca contatti con gli intellettuali, interviene nelle polemiche, partecipa attivamente all’atmosfera di <strong>fervore creativo</strong> che caratterizza Parigi negli anni Dieci del Novecento.</p><p id="37b9448b-1091-482d-a4c4-502b353f781d" class="">I poeti Apollinaire e Mallarmé sono considerati da Ungaretti maestri nell’arte di ricercare <strong>nuove sonorità poetiche</strong>: essi isolando la parola nel verso e nellap agina e privandola di punteggiatura, trasformano il testo poetico in una specie di partitura musicale.</p><p id="821fbb09-a572-4756-b146-79836e162c5f" class="">Con i futuristi Ungaretti condivide soprattutto il bisogno di <strong>rinnovare la parola letteraria</strong>, la denuncia di una tradizione logora e delle sue regole, il frequente ricorso all’<strong>analogia</strong> per generare nuove suggestioni di senso.</p><p id="b32ced83-24a8-4bc4-bf45-65149453dd4a" class="">FIn dal 1919 prende le distanze dagli eccessi avanguardistici e dalle “parole in libertà” di Filippo Tommaso Marinetti, riconoscendo la necessità di <strong>valorizzare la tradizione letteraria</strong> e individuando in Petrarca e Leopardi i suoi maestri illustri.</p><hr id="646c77bd-a4f9-4d60-88be-e2b1ec23a551"/><p id="b9527f49-212d-4c33-84ec-64bbab4bc591" class="">Negli anni Venti matura anche l’avversione di Ungaretti per la teoria di Freud, attraverso la polemica contro quelle avanguardie, come il Surrealismo, che applicano all’arte i principi della psicoanalisi, attribuendo al sogno e all’inconscio un ruolo centrale nell’ispirazione e nella scrittura.</p><p id="902a4b05-a4b4-416f-a5d8-072227a5184b" class="">La “scrittura automatica” di Breton è considerata da Ungaretti espressione di una cieca soggettività, che si limita a riprodurre sulla pagina impulsivamente il disordine dell’inconscio; la parole è invece per il poeta il risultato di un <strong>lavoro di scavo e ricerca</strong>, e tale sforzo non può prescindere dalla memoria della <strong>tradizione.</strong></p><p id="4d1184f2-3227-4432-ad1e-ec6cbd0beb9e" class="">Benché la parola trovata alla fine di questo percorso abbia il potere quasi magico di accendere una luce sulle profondità segrete dell’uomo e di aprire al poeta uno <strong>spiraglio sull’assoluto</strong>, essa non può tuttavia esaurire il mistero irriducibile che riguarda la vita.</p><p id="08bf97a1-e725-49a7-bbca-6d4b25483ba9" class="">Proprio la convinzione che sia <strong>impossibile fare luce sugli abissi interiori</strong> dell’io se non per momentanee folgorazioni separa decisamente Ungaretti dalla psicoanalisi freudiana che tale mistero si propone di svelare.</p><hr id="d6d4d02f-3951-4b2a-896f-0e5acd30b0f7"/><p id="9f2c2713-6696-4ef5-ab1b-7aa0449b6275" class="">Se il rapporto con le avanguardie nel periodo parigino è stato per Ungaretti la tappa necessaria per definirsi come poeta, negli anni successivi egli si colloca sempre più in una linea di continuità cn i classici della letteratura italiana, di cui studia il verso e il linguaggio nell’incessante sforzo di tornare, attraverso la<strong> “memoria” della tradizione letteraria</strong>, all’”incoscienza” originaria della lingua, al suo potere di “rivelazione” del mondo.</p><p id="3c28fa38-a1a8-4b19-bbea-5c726524ed7c" class="">Egli individua in <strong>Petrarca e Leopardi</strong> i due poeti che hanno saputo attribuire alla lingua letteraria la facoltà di trasmettere ai lettori un’emozione estetica e una vera e propria <strong>rivelazione di significato</strong>.</p><p id="4d443774-9c8f-4152-92e0-2bcf1bff0b8f" class="">Bisogna dunque mirare a <strong>restituire alla parola la sua nudità, la sua primitività</strong>, senza dimenticare la <strong>musica della tradizione</strong> da cui essa deriva.</p><p id="6d4df18f-bfa6-468c-aa6f-6d1463c872e4" class="">Una tale accurata attenzione al fare poetico, alla ricerca della parola e al rinnovamento del metro della tradizione induce Ungaretti in diverse occasioni a polemizzare con le concezioni estetiche del filosofo <strong>Benedetto Croce</strong>, secondo cui la poesia consiste esclusivamente nella fantastia e nell’intuizione, mentre è <strong>minimizzato l’aspetto formale.</strong></p><p id="2a6a5e7b-6fad-48ec-87f0-da09099665fc" class="">Ma <strong>la poesia non può essere ridotta a “pura anima”</strong>: essa è anche forma, metro, musica di secoli da cui non possiamo prescindere.</p><p id="cc1f2582-bd13-45f8-aa13-19b89dd40393" class="">La poesia non deve nemmeno spostare l’attenzione esclusivamente sulla forma, come avviene per la poesia pura dei simbolisti.</p><p id="8aba6d9d-3e79-4f8a-92f7-d86e35247af6" class="">La poesia deve essere dunque non soltanto esercizio formale, ma “atto di purificazione morale”, via al <strong>perfezionamento interiore</strong>, cammino verso la <strong>verità</strong>.</p><p id="159abe38-c682-4a59-a44f-0be5157cfb0e" class="">Ecco dunque individuato il compito del poeta, che da una parola scelta tra quelle della tradizione, ma rinnovata nella sua espressività, deve fare scaturire la <strong>rivelazione di un significato</strong> che sia anche una spinta al perfezionamento morale.</p><hr id="9526326d-5588-4d15-9cd2-55fafe15768e"/><h1 id="807c6893-39f8-4149-a5d7-0d7c4d14656c" class="">L’allegria</h1><p id="4f7b15b0-a5fc-4938-adea-148de769d397" class="">La vicenda compositiva ed editoriale della prima raccolta poetica di Ungaretti è lunga e articolata.</p><p id="5b979675-d166-4449-bedf-88bf0c02d710" class="">Dalla prima edizione del 1916 il poeta compie un continuo lavoro di revisione che produce molteplici varianti: si aggiungono poesie, se ne tolgono altre.</p><p id="78837d78-5da3-4239-b246-08a29d043f96" class="">Nella sua formazione definitiva la raccolta comprende cinque sezioni:<div class="indented"><ul id="a2d5d2d9-3167-417e-b8da-e80d214f65a5" class="bulleted-list"><li style="list-style-type:disc"><em>Ultime</em></li></ul><ul id="9c602c00-acb7-4c31-983b-3cf0407244f9" class="bulleted-list"><li style="list-style-type:disc"><em>Il porto sepolto</em></li></ul><ul id="a3375627-a250-40ce-928a-014cb920084f" class="bulleted-list"><li style="list-style-type:disc"><em>Naufragi</em></li></ul><ul id="d57b1561-4bc4-472f-bc6b-c3fdb1d5e7b3" class="bulleted-list"><li style="list-style-type:disc"><em>Girovago</em></li></ul><ul id="ace2b9e0-c8de-43f6-8442-2fc0b27294b3" class="bulleted-list"><li style="list-style-type:disc"><em>Prime</em></li></ul></div></p><p id="6f423564-feaa-4581-ad1d-a26f705a65d9" class="">La titolazione volutamente rovesciata allude forse alla mescolanza <strong>tra i diversi livelli temporali</strong> della composizione.</p><p id="6723fa43-692a-42b0-be02-94c88382a8d1" class="">La vicinanza con le avanguardie e il cosmopolitismo della formazione culturale consentono a Ungaretti di sentirsi libero dai condizionamenti della tradizione liricia italiana e di comporre, almeno all’inizio, una poesia <strong>indipendente dalle forme metriche regolari.</strong></p><p id="889de691-fcdc-4777-96da-423bd20d609b" class=""><strong>Unisce le parole in modo inedito, </strong>le isola inlunghi <strong>silenzi</strong>, dà loro concretezza dìimmagine incorniciandole in <strong>spazi bianchi</strong>: lo scopo è di restituire alle parole logorate dall’uso la capacità di esprimere nuovi significati.</p><p id="be5512d2-0a6e-47bc-a74d-cc7001d69b1f" class="">I versi dell’<em>Allegria</em> presuppongono anzi una versa e propria “religione dell’arte”, una valorizzazione della poesia come <strong>ricerca dell’assoluto”, </strong>cioè di un <strong>significato supremo e misterioso.</strong></p><p id="f5ccce54-fff2-45e5-8c6f-b0b2614b551a" class="">La prima raccolta si presenta come una specie di <strong>diario</strong> di una ben precisa esperienza storica: quella del <strong>soldato in trincea</strong> durante la Prima guerra mondiale.</p><p id="446f242f-eb91-43e6-a564-e31df687bdda" class="">Accanto al titolo della maggior parte delle poesie il poeta inserisce infatti <strong>indicazioni di tempo e di luogo</strong>, come se volesse tenere puntualmente traccia di impressioni ed eventi della guerra.</p><p id="d59a97e8-5aa5-48d9-accb-213c31ce6fdf" class="">Lo stesso Ungaretti ha voluto presentare la composizione dell’opera come il frutto di una <strong>ispirazione occasionale</strong>, dichiarando di avere scritto le poesie direttamente al fronte, su pezzi di carta di recupero.</p><p id="bce45e94-4e42-405a-878a-11b9a44eadb0" class="">Le poesie dell’<em>Allegria</em> <strong>non sono un diario di guerra: </strong>esse si presentano piuttosto come una riflessione sul senso della vita e della morte, sulla natura e sul tempo, sulla salvezza e sulla dannazione, e testimoniano la <strong>tensione dell’uomo verso una condizione di armonia con il mondo, </strong>di pace e di innocenza.</p><p id="ee424d37-a073-498c-8857-450415150eee" class="">L’esperienza quotidiana della sofferenza e della morte genera nel poeta un profondo desiderio di vita; questo stretto legame tra la minaccia di soccombere e la volontà di aggrapparsi all’esistenza è all’origine del secondo titolo scelto dal poeta per la raccolta, <em>Allegria di Naufragi</em>.</p><p id="cc315493-b6ba-4959-945d-a253f88d71e5" class="">La parola “allegria” potrebbe apparire poco adatta a poesie che trattano di distruzione e di morte, ma <strong>l’ossimoro</strong> che la unisce a “naufragi” evidenza proprio la volontà del poeta di reagire alla <strong>rovina</strong> della guerra con la forza dell’<strong>istinto vitale.</strong></p><p id="d41e9c6f-172d-465c-940d-7068b684de9b" class="">La poesia ha dunque il potere di offrire una via di salvezza: essa consente infatti al poeta <strong>l’evasione dalla sofferenza</strong> e dalla brutalità della guerra grazie alla capacità della parola di esprimere i <strong>valori segreti dell’esistenza</strong> con nuova e meravigliosa chiarezza.</p><p id="34f53c2a-3651-496e-838c-8f69d7d9bf81" class="">La poesia assume cos’ un valore universale: l’esperienza del dolore e il bisogno di liberarsene non appartengono soltanto all’individuo, ma sono comuni a tutti gli uomini, e il poeta è colui che attraverso la faticosa ricerca della parola riesce a <strong>esprimere la voce di tutti.</strong></p><hr id="607bb5b2-e076-4c89-8830-235c0ef9b175"/><h2 id="fa644b4c-a71f-4c29-8149-92a7b8c0944a" class="">I temi dell<strong>’Allegria.</strong></h2><p id="8a27a271-3a06-4b08-9732-29cd78c7af6d" class="">I temi del naufragio e dell’allegria, cioè del dolore e dell’istinto vitale, si manifestano in tutta la raccolta attraverso le immagini simboliche del buio e della luce.</p><p id="0553c9d8-26c5-41d5-b744-c10bd1589eaf" class="">La <strong>desolazione del poeta</strong> travolto dalla guerra, angosciato per la percezione della propria fragilità e impotente a dare un senso alla propria esperienza si traduce spesso nell’immagine del <strong>buio che lo chiude e lo minaccia.</strong></p><p id="70150179-89c5-4abf-a233-2c9f9ac42e36" class="">Allo stesso modo il buio costituisce lo <strong>sfondo delle esperienze più drammatiche</strong> del poeta-soldato, come il frastuono minaccioso delle armi durante una battaglia notturna.</p><p id="64df7811-5997-494f-a541-15fc17b8aef6" class="">La luce indica invece tutto ciò che si <strong>oppone al naufragio e all’assurdità della guerra</strong>: si tratta a volte della luce smorzata della luna, che riesce a farsi largo tra le tenevre e accompagna le momentanee pause delle battaglie.</p><p id="6a6914e1-131f-49ce-a14f-6441b672ea84" class="">Altre volte è la luce piena del mattino o del giorno che sembra <strong>cancellare temporaaneamente il dolore</strong> e disporre il poeta ad accogliere pienamente la vita con una improvvisa eccitazione o con la percezione dell’<strong>armonia dell’io con l’intero universo.</strong></p><p id="afe42e87-8b65-44ba-b928-3f0e1f44376b" class="">Il bisogno di <strong>evasione dalla sofferenza</strong> si manifesta spesso come <strong>metamorfosi dell’io</strong> che si disumanizza, si trasforma in cosa, aspria all<strong>’annullamento</strong>.</p><p id="efece16f-4c90-43b7-95d4-366c632bd403" class="">Il poeta si raffigura talvolta come un minerale disanimanto, o anche come un oggetto inerte.</p><p id="b0ab5a5b-714f-4d5a-9d6f-bfc54c2a9bc8" class="">L’io si riduce a oggetto insignificante, sperduto in un <strong>infinito universo</strong> che lo opprime e gli rivela la sua nullità, oppure lo <strong>accoglie</strong> nella quiete, o lo <strong>inebria</strong> di meraviglia.</p><hr id="32eb2e99-b5ce-4ef2-b4fa-6685d8f61ad9"/><p id="f8b32764-e26a-4e77-a047-c3e94fd5f918" class="">Nella ricerca di un senso da dare all’esperienza terribile della guerra, il poeta si confronta con Dio.</p><p id="03314918-ae21-49a8-977e-91779d19f047" class="">La constatazione dell’estrema <strong>fragilità umana</strong> e dell’universalità del dolore genera un <strong>desiderio di trascendenza</strong>, che si manifesta in domande piene di <strong>scetticismo.</strong></p><p id="e475d66d-907a-4892-957b-aeb67c8d6c0f" class="">La risposta oscilla nell’<strong>incertezza</strong>: da una parte il poeta sente di non ptersi affidare alla fede come i più semplici tra i suoi compagni, dall’altra si abbandona all’aperta preghiera a Dio, nella lirica che conclude la raccolta, perchè gli conceda una morte senza lunghe sofferenze.</p><p id="dd954b30-f38b-4d41-8d3a-3c044a57fb71" class="">L’esperienza del soldato in trincea non è fatta soltanto dell’affanno delle battaglie, ma anche di lunghe pause e interruzioni, in cui trova spazio il <strong>ricordo</strong>; è così per la memoria dell’amico arabo, morto suicida a Parigi prima della guerra, op er i fiumi delle città attraversate nell’infanzia e nella giovinezza.</p><p id="e6b1cf79-40eb-4fcf-8253-4e26d102cd6f" class="">Il sogno è anche il luogo in cui si manifesta il <strong>desiderio dei sensi</strong>, l’unica forma in cui è presente l’amore nell’<em>Allegria</em>: dolora <strong>nostalgia di corpi lontani </strong>e di abbracci perduti e sognati.</p><p id="10292532-3187-44a6-82bc-8fe5ffc02da4" class="">Parallelamente all’imagine dell’”uomo di pena” che si trascina nel fango della trincea, Ungaretti delinea per sè anche quella del <strong>nomade</strong>, del “girovago” alla ricerca di un approdo.</p><p id="8a0d0979-02f4-4844-bfdb-a61ccebe17d7" class="">Mutano i paesaggi e si alternano nella raccolta le tre terre di Ungaretti: <strong>l’Africa, l’Italia, Parigi.</strong></p><p id="3024049b-4bbc-417c-8356-11f7d98416ff" class="">Ma anche quando il poeta, cresciuto in un <strong>incrocio di varie culture</strong> sembra giungere infine a riconosceri in una patria, l’Italia per cui combatte come soldato, la sua condizione di sradicamento riemerge, impedendogli di sentirsi in pace.</p><p id="78dfc11b-a6ec-4eb4-9b49-b1f7a7830c4f" class=""><strong>La nostalgia della patria</strong> è in realtà un’ansia dell’anima, l’illusoria ricerca di una <strong>terra promessa dello spirito</strong> dove sentirsi autentico e purificato.</p><hr id="cc0772a9-1227-4639-b139-fa2215a3de75"/><h2 id="44ab2f83-d323-49b9-bd9e-5c8b852de8fc" class="">Le novità metriche e stilistiche</h2><p id="e8f32c20-df13-453b-a7f9-54b645905a56" class=""><em>Il porto sepolto</em> viene accolto dai lettori come un’opera di <strong>forte rottura</strong>.</p><p id="dcaa7755-60d6-463d-873f-6c5e5150aaf5" class="">L’innovazione radicale a cui ungaretti sottopone i modelli metrici e formali della tradizione lo identifica ben presto come il <strong>poeta della modernità.</strong></p><p id="4a311ffd-e2a1-4873-90f5-6761148a4a97" class="">L’aspetto caratteristico della poesia di Ungaretti è l’ampio territorio degli <strong>spazi bianchi</strong>, che appaiono come specie di luoghi fisici, spogli e silenziosi, in cui le parole risaltano con l’intensità di un grido.</p><p id="92c9c3f8-0c02-43f5-97e9-65925022b010" class="">In questo bianco si stagliano versi brevi, talvolta brevissimi (Versicoli), che mettono in rilievo alcune parole, a volte marginali, come articoli o preposizioni.</p><p id="8a14ba28-c62e-4f7d-ada5-2c661188e016" class="">Così la parola diventa la protagonista assoluta del discorso poetico e il suo potere di evocare immagini e significati viene amplificato, coerentemente con una poetica che la identifica com il tramite per giungere a una verità.</p><p id="fe9f666b-d716-4032-a578-a3455896030b" class="">Gli spazi bianchi, così come le lettere maiuscole distribuite tra i versi, si sostituiscono alla <strong>punteggiatura</strong>, che è completamente<strong> assente:</strong> scandiscono le pause e determinano il ritmo del discorso, che richiede una pronuncia molto rilevata e lenta.</p><p id="2eee6401-00ea-4e8c-b913-959ca51f78ce" class="">Ungaretti sceglie per le poesie dell’<em>Allegria</em> parole di <strong>registro medio</strong>, proprie del linguaggio comune e prive di preziosismi e ricercatezze: non è la rarità a intensificarne il significato, ma il loro <strong>emergere nude nel silenzio</strong>, come oggetti che affiorino da un abisso.</p><p id="d12e5245-cd8e-4370-acf9-8879e8a72e47" class="">Il loro effetto è potenziato dalle figure retoriche, in particolare dall’<strong>analogia, </strong>cioè dall’<strong>accostamento imprevisto</strong>, senza mediazioni logiche, di parole molto lontane per il significato: così il cuore del poeta è accostato a un villagio distrutto dalla guerra.</p><p id="422b703d-8333-458e-8255-5957c8311f77" class="">Frequentissime sono anche le <strong>similitudini</strong>, che fissano concretamente le parole nell’immaginazione del lettore coinvolgendo tutti i <strong>sensi</strong>: il pianto del poeta è inaridito come una pietra, l’aria è perforata dai colpi di fucile come un tessuto di pizzo.</p><p id="d19bc5b4-3f53-41c1-b302-54e96192c97b" class="">Per consentire alla singola parola di emergere e di liberarsi dalle pighe del discorso, la <strong>sintassi</strong> è <strong>semplice</strong> ed è costituita da <strong>periodi brevi</strong>, per lo più formati da un’unica proposizione.</p><p id="293354ca-23a4-497b-95fa-33adba839c6a" class="">Dominano i <strong>verbi alla prima persona</strong> dell’indicativo presente, segno dell’importanza dell’esperienza diretta dell’io nella poesia di Ungaretti.</p><p id="f5bb53fa-c826-44cd-aecc-337f83f17515" class="">L’aspetto forse più scandaloso è la <strong>brevità assoluta</strong> di alcune poesie, che con pochissime parole si imprimono nel bianco immenso della pagina.</p><p id="a9c4048a-4845-4c79-8fce-4d6a911641ef" class="">I due versi di <em>Mattina</em> appaiono ancora oggi una specie di provocazione che infrange le aspettative comuni sulla forma e la lunghezza della poesia, ma sono in realtà la coerente manifestazione di una poetica che attribuisce alla <strong>parola nuda e isolata</strong> la potenzialità di <strong>illuminare interi unviersi di senso.</strong></p><p id="6de0ca22-18a1-429e-ab3a-0aa643f37009" class="">
+</p><h2 id="5503543a-9896-49ee-b8a2-4f5ab7dacb88" class="">Brani</h2><p id="fa84e672-0aae-4169-a3b7-6a5507d3240d" class="">→ “Fratelli” </p><p id="fe2b0f5d-ae5c-4912-b687-2aade684ed14" class="">→ “Sono una creatura”</p><p id="bac314c1-e2b1-4d73-9243-11220999940c" class="">→ “I fiumi”</p><p id="b0fecf84-219a-433b-8eff-14106243cb9b" class="">→ “San Martino del Carso”</p><p id="637bcb91-e59b-4b1f-8bc9-9935c00b9bcb" class="">→ “Mattina</p><p id="ee236e8d-2c0e-4bd1-8a1c-6c0b10252b8c" class="">→ “Soldati”</p><p id="b1dbf6b7-4cd6-4ef6-a8d0-752d6ceacde2" class="">→ “Veglia”</p><hr id="49c0d99b-eb16-4e0e-987e-ea9431578906"/><h1 id="9af0c78d-5183-4eff-89da-6c3454c83ad9" class="">Sentimento del Tempo</h1><p id="6cba1aae-e10e-4c5c-8c36-f27e70852aee" class="">La seconda raccolta di Ungaretti, <em>Sentimento del Tempo</em>, esce nel 1933, ma le poesie che la compongono sono state scritte a partire dal 1919.</p><p id="660f5298-bfc5-4c2d-8043-8bc4b33cabac" class="">L’elaborazione di <em>Sentimento del Tempo</em><strong><em><em> </em></em></strong>va di pari passo con la revisione dell’<em>Allegria</em> e dal <strong>1942</strong> assumo anche il titolo <em>Vita d’un uomo</em>.</p><p id="7a0220f7-c22b-4b3a-ae47-0d4ec8b5d5b9" class="">Tuttavia le differenze di poetica tra le due raccolte sono manifeste e mostrano che a partire dagli anni Venti Ungaretti assume una nuova maniera di comporre versi, più regolare.</p><p id="bd366cfe-d7c8-43eb-aebd-a4341504fcb2" class="">Nelle poesie di <em>Sentimento del Tempo</em> il verso torna infatti a estendersi orizzontalmente e ai versicoli dell’<em>Allegria</em> si sostituiscono <strong>endecasillabili e settenari</strong>, con un chiaro abbandono degli aspetti più rivoluzionari della prima raccolta.</p><p id="4d2fb5f2-2c8e-4a6c-b0c3-76e41a64ee47" class="">Tale ritorno alla tradizione rimane però confinato in <em>Sentimento del Tempo</em>, senza estendersi altrove.</p><p id="8ff3218f-a820-4248-8d8a-cb76f80fd543" class="">Esistono dunque nell’opera di Ungaretti <strong>due maniere poetiche differenti</strong>, come se il poeta operasse su due tavoli di lavoro paralleli; esse confluiscono poi in un <strong>unico disegno compositivo</strong>, dalle forme diverse ma coesistenti.</p><hr id="659e3134-f3fb-4e41-9a07-fe1c1b932bfb"/><p id="b1b7f0c8-d0bc-45ae-ada8-471fb4d3da9c" class="">Dopo l’esperienza rivoluzionaria delle avanguardie, si assiste nel dopoguerra in Italia a un generale <strong>ritorno all’ordine</strong> nelle arti e in letteratura.</p><p id="17a65c28-3684-4509-bf6c-7327f88e89f4" class="">Anche Ungaretti condivide in quel tempo la volontà diffusa di “ritrovare ordine”.</p><p id="39d4f1a5-1d2d-4e1c-b26b-25c8d78ee9c2" class="">Egli però <strong>non vuole rinunciare al verso.</strong></p><p id="a81d571e-a79a-4247-a171-189e1dc8fe2a" class="">Il verso è secondo Ungaretti uno “strumento” che bisogna accordare con i tempi moderni e con la propria voce attuale, restituendogli in tal modo vita e risonanza.</p><p id="f4378b30-b4d2-4133-a2c1-f5a65575a372" class="">Tra i poeti italiani, egli presceglie <strong>Petrarca e Leopardi</strong> come <strong>modelli di armonia.</strong></p><p id="0d6f461a-0b5d-478b-b981-7af2ca9d9df6" class="">Il titolo della raccolta, <em>Sentimento del Tempo</em>, annuncia proprio questo proposito di recuperare la percezione della <strong>continuazione della poesia attraverso il tempo, </strong>riconoscendo nel passato alcuni altissimi modelli a cui cercare di intonare il proprio canto e il proprio cuore.</p><hr id="a544220b-fd9e-4141-9632-8c46978becc4"/><p id="57fdd05d-fe09-48f4-9059-0d83c60ff98c" class="">In <em>Sentimento del Tempo</em> <strong>scompare la guerra</strong>, che era stata il tema dominante dell’<em>Allegria</em>, e domina, come un vero e proprio personaggio, la <strong>natura,</strong> spesso attraverso vere e proprie <strong>personificazioni.</strong></p><p id="c12c051c-33ae-4698-8882-c2194b2fc318" class="">Spesso il poeta si rivolge agli elementi naturali come interlocutori di un <strong>dialogo diretto e segreto</strong>, nell’intento di scorgere al di là dell’apparenza sensibile il <strong>mistero</strong> che essi custodiscono; ma è ricorrente anche il dialogo con la <strong>morte</strong>, cui è dedicata un’intera sezione che la rappresenta in modo piuttosto convenzionale come <strong>approdo temuto e insieme sospirato.</strong></p><hr id="07d78b83-00be-43d5-be3d-82a967188257"/><p id="491998e0-a4d2-422e-ab45-dcd8a8ec2b77" class="">Con il proposito di accostare ciò che è più distante per ottenere effetti suggestivi e poetici, Ungaretti usa frequenti <strong>metonimie</strong>, ricorrendo a immagini concrete e materiali per descrivere l’astratto, l’immateriale.</p><p id="92bd6179-70e4-44e6-9b0c-fd1921516cde" class="">La natura descritta con immagini così corporee appare tutavia percorsa da un respiro <strong>divino</strong>: vi si aggirano creature evanescenti, ninfe e divinità del mito.</p><p id="0ddc7718-abb2-462c-a24d-79dbd86d0bac" class="">Gli elementi della <strong>mitologia classica</strong> pagana convivono con aperti riferimenti alla <strong>tradizione cristiana.</strong></p><p id="f29d5296-c160-45d8-8fe8-5eb6f099bd1d" class="">Accanto alla contemplazione della <strong>caduta dell’uomo</strong>, debole e tentato dal peccato, troviamo il <strong>sogno di una purezza paradisiaca</strong>, anteriore al male.</p><p id="eee2fcb3-78fb-4932-ae26-df59221fd5a1" class="">L’uomo riconosce la propria superbia nel credersi immortale e <strong>si rivolge a Dio</strong>, che si è incarnato e ha sofferto per tutti gli uomini, perchè si mostri infine e lo conforti.</p><hr id="2c3eeb96-8f7d-465d-bedb-119b3e06d0c0"/><p id="ec821b77-a050-4596-af63-0d6b4faa6739" class="">Il ritorno all’ordine nella poesia di Ungaretti si manifesta soprattutto sul piano metrico - stilistico: scompare la frantumazione metrica e vengono adottate misure più estese, torna a essere usata la <strong>punteggiatura</strong>, le poesie appaiono più lunghe e articolate.</p><p id="5db222c1-74e1-4535-ab1d-c8a9d3ef9ffd" class="">La maggiore estensione del verso e dei testi non contribuisce però alla chiarezza del discorso poetico, anzi l’oscurità risulta accresciuta e diffusa nella raccolta.</p><p id="2aec1ed9-3d94-44f9-8f6e-641917680d66" class="">Accanto a poesie in cui la lingua conserva una sua evidenza comunicativa e la sintassi si snoda in modo coerente, se ne trovano altre in cui sembra smarrirsi il rapporto tra significante e significato, e risluta molto difficile ricostruire i passaggi lodifici tra un’idea e l’altra.</p><p id="bdde57e3-116b-4e72-8b3b-469b1c05ed68" class="">Il potere evocativo delle parole è affidato agli <strong>accostamenti inusuali</strong>, alla <strong>sintassi tortuosa</strong> e soprattutto alle <strong>analogie estreme</strong>.</p><p id="f6225072-830f-4a92-9a4d-c3c1643dc26a" class="">Il ricorso all’ellissi sintattica, ovvero alla <strong>soppressione dei legami logici</strong> tra le idee, è consapevole e mira a essere <strong>specchio del mistero</strong> profondo di cui la poesia vuole essere espressione.</p><p id="2c23616c-0e89-44bd-bc60-e85b0f8b4a69" class="">L’esplorazione dell’ignoto richiede dunque che il poeta usi un codice diverso da quello della comunicazione, una lingua che rinunci a essere veicolo di significato e si proponga invece di accendere improvvise <strong>suggestioni.</strong></p><p id="ef6b33a3-3fda-4c17-ae7e-e15c4be56f59" class="">Tuttavia la raccolta di Ungaretti si distingue dalle opere dei poeti ermetici successivi per una maggiore presenza di contenuti capaci di comunicare un significato; resistono al suo interno poesie che conservano una certa <strong>comprensibilità</strong> e non pretendono di essere contemplate unicamente come oggetti decorativi.</p><p id="d5ebc273-d3d3-4375-8467-e7442f21c5de" class="">Ungaretti si può dunque considerare il padre dei poetici ermetici italiani, ma non compiutamente poeta ermetico egli stesso.</p><p id="d9d0bae8-987d-4606-98c7-4779c734f562" class="">
+</p><h2 id="676adc59-952c-4077-b13d-c24a56b9a215" class="">Brani</h2><p id="0ca31b68-204b-43bf-8d4b-0b82161cc56d" class="">→ “Di luglio” - 441</p><hr id="4e9bc8d8-cff0-4e82-a705-6d185268848e"/><h1 id="27387ce0-8f3a-45a0-b3d1-2457d927ff3b" class="">Riassunto</h1><figure id="4831968b-045d-419d-97f4-b05da4cb2f78" class="image"><a href="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Screenshot_2022-05-26_at_18.28.03.png"><img style="width:1906px" src="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Screenshot_2022-05-26_at_18.28.03.png"/></a></figure></div></article></body></html>

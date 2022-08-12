@@ -1,0 +1,672 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Giovanni Verga</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="4fcbdcd2-0faf-432e-8b99-6e8d263179e1" class="page serif"><header><div class="page-header-icon undefined"><span class="icon">🎣</span></div><h1 class="page-title">Giovanni Verga</h1><table class="properties"><tbody><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data nascita</th><td>1840</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Anni vita</th><td>82</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data morte</th><td>1922</td></tr></tbody></table></header><div class="page-body"><nav id="9a378e48-a914-4791-a7ef-1e6114df9566" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#8708ce3e-e1d0-46db-9301-dd0d96598250">Biografia</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b4afbcb-04e4-4873-a01d-dc8ce30ab165">La poetica del Verismo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#32b2f6a5-6319-4910-9c49-5424e433d1f9">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#64cbdcea-03b6-46f8-83ef-c7985cf6c902">I Malavoglia di Verga e L’Assommoir di Zola</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#43ab3586-26f5-4a2d-9295-2df70949de23">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e2780f0c-f4ae-4d4c-a820-aa95ed197f83">I Malavoglia</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#5ef833ff-d7b3-4141-826d-4c1ade246820">Novelle rusticane</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#8ab1174c-90da-4541-93b5-352b4b163fd3">Riassunto</a></div></nav><h1 id="8708ce3e-e1d0-46db-9301-dd0d96598250" class="">Biografia</h1><p id="7031b103-501f-493e-8be9-bf2fca506956" class="">La Sicilia è per Giovanni Verga una <strong>terra interiore</strong>, fondamento della sua formazione intellettuale e umana.</p><p id="5dc61825-fbb5-403c-bd92-7b989dd6d20c" class="">Egli vi trascorre l’infanzia e la giovanizze e ne riceve una <strong>forte impronta culturale</strong>, ma quando capisce che la sua strada è la letteratura desidera intensamente partire.</p><p id="fc10a49b-39f2-4439-b25e-63ff554848a7" class="">Nei suoi romanzi e nelel sue novelle la <strong>Sicilia è inizialmente assente</strong>.</p><p id="2fa3cfd0-ffb4-49de-bc74-461f43e572e4" class="">Ma a un certo punto, come da una sorgente nascosta, la Sicilia <strong>riemerge</strong>, con i suoi <strong>aspri paesaggi e la sua realtà umana</strong>, spesso la più misera.</p><p id="54f8b201-a58a-4b58-b001-9ecc66522047" class="">Egli tornerà in Sicialia dove vivrà per altri trent’anni ad amministrare le sue terre e a correggere i suoi scritti, deidcandosi a poche nuove opere, fino alla morte.</p><p id="2472aaf2-0cbc-4f15-a1b4-7fc81a156ddf" class="">Questo ritorno non è vissuto da Verga come una rinuncia nè come una sconfitta, ma come un naturale <strong>ricongiungimento alle fonti della sua formazione.</strong></p><p id="caad0194-d4bd-4d05-af66-57253a1aaa42" class="">La famiglia in cui nasce nel 1840 ha remote <strong>origini nobiliari</strong>, il padre vanta una discendenza baronale, mentre la madre è di provenienza borghese e ha ricevuto un’educazione intellettuale.</p><p id="8c9739e4-4fa5-4ca7-9c5d-744532bc64e3" class="">Le condizioni economiche della famiglia sono tuttavia assai instabili e Verga dovrà fare i conti per tutta la vita con la <strong>mancanza di denaro</strong> e il bisogno di procurarsene.</p><p id="3eed3858-e4f9-4978-b474-0e798045a6c0" class="">Da bambino riceve una sommaria formazione da maestri privati di appassionate idee romantiche e patriottiche.</p><p id="267c9388-5170-4773-a61d-447dfcad72b5" class="">Anche i suoi genitori hanno <strong>orientamenti antiborbonici </strong>e sostengono il processo risorgimentale.</p><p id="b1d0dd65-acd8-4448-80d8-62fd556ec4f9" class="">Quando avviene l’unificazione dell’Italia (1861) Verga ha ventuno anni e aderisci volontariamente alla <strong>Guardia Nazionale.</strong></p><p id="776dac1a-76b1-4ba8-92c9-227b7f3c3c52" class="">Sul piano ideologico il giovane accompagna il <strong>sostegno politico all’unità nazionale</strong> con la difesa dei privilegi dei proprietari terrieri meridionali e sostiene queste idee in una serie di <strong>articoli politici.</strong></p><p id="1bdbc4d6-d334-4195-b792-54382d758233" class="">A ventitrè anni, dopo la morte del padre, si convince che la sua carriera di scrittore ha bisogno di aira nuova. La destinazione ch elo attrae è Firenze, dove egli spera di trovare stimoli per la propria ispirazione.</p><p id="35e158aa-7e87-417c-b6df-22dfe48eba6d" class="">Dopo alcuni viaggi si trasferisce nellac ittà e inizia a frequentare gli <strong>ambienti intellettuali e i salotti letterari</strong> più in vista, in cui viene accolto con interesse.</p><p id="c44bf9fd-5c5f-4d2e-a06a-e220c7df4b32" class="">Conosce Luigi <strong>Capuana</strong>, scrittore siciliano che diventerà l’amico di tutta la vita, e stringe <strong>varie relazioni amorose</strong>, ottenendo tra le donne apprezzamenti lusinghieri.</p><p id="d8450983-3a02-4925-a628-763954191d8f" class="">Per tutta la vita Verga giurerà il proprio amore a numerose amanti, riffiutando però di impegnarsi stabilmetne e sollevando talvolta le aspre collere dei mariti offesi.</p><p id="17c6b728-7e13-4810-a5a0-10a162b44443" class=""><strong>L’assillo economico</strong> tormenterà lo scrittore per tutta la vita, assumendo la forma di una vera e propria ossessione: nelle sue lettere sono frequenti i riferimenti al denaro, i calcoli minuti dei diritti editoriali e l’esibizione di una estrema parsimonia.</p><p id="0775773e-68e1-446d-ae37-4adfd3f0b1d5" class="">Le prime opere di Verga non suscitano particolare interesse, mentre per quanto riguarda <em><strong>Nedda</strong></em>, una novella pubblicata da Verga sulla “Rivista italiana”, in cui per la prima volta <strong>l’ambiente è siciliano</strong>, i lettori e la critica si dimostrano interessati.</p><p id="7338b402-d4b2-4797-8212-7d1717882078" class=""><em>Nedda</em> rappresenta una <strong>innovazione tematica</strong>, ma i modi della narrazione sono ancora tradizionali, sul modello manzoniano, con un <strong>narratore onnisciente</strong> estraneo al mondo rappresentato che giudica e commenta i fatti dal proprio punto di vista.</p><p id="2f86c755-e7f3-4e0e-96af-1d90ec189fcf" class="">La vera e propria svolta avviene quattro anni dopo con <em><strong>Rosso Malpelo</strong></em>, la prima novella “verista” di Verga, in cui cambiano radicalmente i modi della narrazione e il racconto viene affidato alle <strong>voci dei personaggi del popolo</strong>, senza l’intervento giudicante di un narratore esterno.</p><p id="4165b505-5293-475a-9bbd-64bb4261fa33" class="">Il modello a cui Verga si ispira è quello del Naturalismo francese di Emile <strong>Zola.</strong></p><p id="cf976280-7140-45ff-9763-d76c93568b0a" class="">L’interesse del pubblico per le vicende ambientate nel Sud Italia è favorito in quel tempo anche all’<strong>inchiesta sulla “questione meridionale” </strong>di <strong>Sonnino.</strong></p><p id="eed674ca-7ea1-420a-8753-29141718a026" class="">Le grandi opere veriste di Verga occupano lo spazio di circa un decennio, da <em>Rosso Malpelo </em>a <em>Mastro-don Gesualdo</em>, ma questa svolta poetica non è da considerarsi stabile né definitiva: accanto ai titoli veristi di romanzi e novelle lo scrittore continua infatti nello stesso periodo a pubblicare <strong>opere di carattere più tradizionale</strong></p><p id="3a59d59e-6129-48c3-bfd7-cabeb10e7ee8" class="">Accanto ai romanzi, come abbiamo visto, Verga inizia con <em>Nedda</em> a pubblicare <strong>novelle su riviste</strong>, per le quali è più facile e rapido ottenere un <strong>compenso economico</strong>; le riunisce poi periodicamente in raccolte, tra le quali le più importanti e le più vicine alla poetica naturalista di Zola sono <em><strong>Vita dei campi </strong></em> e <em><strong>Novelle Rusticane</strong></em>.</p><p id="12a4daba-4c3f-43e3-a20b-7004ed2de552" class="">Subito dopo il successo di <em>Nedda</em>, Verga ha iniziato a lavorare a un “bozzetto marinaresco” intitolato <em>Padron ‘Ntoni</em>, richiesto dal suo editore per soddisfare la predilezione del pubblico per i temi popolari e siciliani.</p><p id="c35cd29c-3170-4e51-bd51-6f16c7dd89c2" class="">Tuttavia, dopo la lettura dei testi di Zola, lo scrittore decide di trasformare la novella in un romanzo e lo intitola <em>I Malavoglia.</em></p><p id="8284d65a-2ca3-4e67-873d-8ba0579e1308" class="">Nelle sue intenzioni l’opera dovrebbe essere la prima di una <strong>serie di cinque romanzi</strong>, che egli vorrebbe riunire sotto il titolo comunie <em><strong>I vinti </strong></em>per rapprsentare la medesima condizione di sconfitta esistenziale in tutte le classi sociali, da quelle più misere a quelle privilegiate.</p><p id="7ff95980-b51c-4d23-9558-2d29eb126c1c" class="">Il <strong>progetto si interrompe</strong> però dopo il secondo romanzo, <em>Mastro-don Gesualdo</em>.</p><p id="1b5e7100-87c1-41d6-94ef-65c8f4aa4b96" class=""><em>I Malavoglia</em> ottengono inizialmente uno <strong>scarso successo</strong>, dovuto alla lontananza dal gusto del pubblico della poetica verista, e ciò induce Verga a ritornare ai <strong>temi mondani</strong> con un romanzo tradizionale di ambiente borghese.</p><p id="c1789c41-245c-4b17-afea-ce8d26afa0d3" class="">Nello stesso 1882, Verga ha l’occasione di fare la <strong>conoscenza di Zola</strong>.</p><p id="a2ad32a7-f951-43f6-9f4a-4c3b0dd4debd" class="">L’incontro non dà seguito a un’amicizia perchè i due autori sono ideologicamente molto lontani.</p><p id="d709e6c4-ee64-4933-bcd8-7b1c45d86c14" class="">Mentre si dedica all’elaborazione della sere dei <em>Vinti</em>, Verga lavora anche in altre direzioni, ricavando dalle sue novelle <strong>adattamenti per il teatro.</strong></p><p id="5e1ecd6c-d166-4db7-8139-195c74be54ad" class="">Al Carignano di Torino ottiene un grande consenso la rappresentazione di <em><strong>cavalleria rusticana, </strong></em>interpreata dalla celebre Eleonora Duse.</p><p id="99c19e18-3e89-4e29-b058-e0ebbb85e9de" class="">Nel 1890 il musicista Pietro Mascagni ricava dalla stessa vicenda un melodramma di successo, avvalendosi di un libretto non autorizzato dall’autore; Verga ricorre al tribunale ottenendo nel 1893 un consistente riscarcimento in denaro.</p><p id="73559b1f-bf22-46cf-b4d2-255ad5752850" class="">Dopo le prime due raccolte di novelle, Verga ne pubblica diverse altre.</p><p id="b7af548d-43f7-4cc0-b396-9459a3a7effa" class="">Negli ultimi anni della sua vita lo scrittore si dedicherà soprattutto alle <strong>riduzioni teatrali e cinematografiche</strong> delle sue opere, senza però ripetere il successo di <em>Cavalleria rusticana.</em></p><p id="0d63dce0-4461-4bfd-8555-10e4c7e9f47a" class="">Con la vittoria processuale contro il musicista risolve finalmente i suoi problemi economici e decide di tornare in Sicialia.</p><p id="ee68cc6f-bab2-4ab6-9415-5fc488ca7ed4" class="">In quello stesso anno, 1893, la rivolta dei cosiddetti “<strong>fasci siciliani</strong>”, gruppi di contadini e minatori in lotta da due anni contro lo sfruttamento dei padroni, viene repressa dal governo con decine di morti.</p><p id="72ede023-6a03-42b6-a975-12930dea8679" class="">Anche di fronte a queste violenze Verga si schiera <strong>contro i manifestanti</strong> e plaude alla repressione, Egli non è disposti infatti ad attribuire al popolo alcuna motivazione ideale, considera <strong>naturale la gerarchia che divide la classi sociali </strong>ed è convinto che la <strong>legge dell’utile</strong> sia il motore di ogni rapporto umano.</p><p id="2cae979e-850d-4fc9-a570-61916f859e17" class="">Negli ultimi anni della sua vita si schiera con i <strong>nazionalisti </strong>a favore delle imprese coloniali italiane e per l’itnervento in guerra dell’Italia e guarda con simpatia all’ascesa del Fascismo, cui non fa in tempo ad aderire perchè muore all’improvviso di trombosi lo stesso anno della marcia su Roma (1922).</p><hr id="2d967caa-5627-4803-8bac-d42ed2d3e0a1"/><h1 id="2b4afbcb-04e4-4873-a01d-dc8ce30ab165" class="">La poetica del Verismo</h1><p id="c540e0a8-8478-4afb-8928-f4579e590c93" class="">Pur essendo vissuto per molti anni nelle grandi città del Centro - Nord, Verga resta fortemente legato ai <strong>luoghi e alle tradizioni culturali della Siciali</strong>.</p><p id="0cd1e996-03f7-49aa-a49a-e482fa57cf17" class="">In particolare si sente estraneo alla modernizzazione economica a cui il Nord Italia si è avvicinato dopo l’unificazione del paese.</p><p id="25ca276d-3b7d-4abe-b9e2-9d41f26f5787" class="">Egli appartiene infatti alla <strong>media proprietà terriera della provincia siciliana</strong>, avversa alla politica protezionistica della Sinistra storica che favorisce le attività imprenditoriali del NOrd e ostacola gli interessi dei latifondisti meridionali.</p><p id="e9d317d0-9434-4751-a805-21c900f05017" class="">Al conservatorismo economico si aggiunge in Verga la frustrazione derivata dal <strong>fallimento degli ideali risorgimentali</strong>, da ragazzo egli aveva sostenuto il processo di unificazione dell’Italia schierandosi con le truppe di Garibaldi, ma progressivamente si era accentuata la sua <strong>estranietà </strong>nei confronti dei <strong>partiti al governo</strong> del paese.</p><p id="a5c17869-c37d-4c3a-80d0-98a373823b4e" class="">Negli anni della maturità la sua visione del mondo si incupisce: tende ad <strong>evidenziare gli aspetti negativi </strong>delle relazioni sociali tra gli uomini, che considera condizionate in primo luogo dalla <strong>legge dell’utile economico.</strong></p><p id="85bed382-b7c4-422a-b472-7e2c38da1252" class="">Gli individui di ogni classe sociale gli appaiono inevitabilmente coinvolti in una <strong>lotta</strong> brutale <strong>per l’affermazione di sè</strong>: si tratta ai suoi occhi di una <strong>legge naturale</strong>, che non dipende dalle condizioni storiche ed è perciò immutabile.</p><p id="974145af-d50b-4180-828a-053c0374f910" class="">Verga appare un <strong>isolato</strong>, estraneo ai valori condivisi del suo tempo e sospettoso nei confronti di ogni progresso economico o sociale.</p><p id="60fbc855-a9e8-4a3e-93f0-b949f08c92f3" class="">Di fronte a lui non si apre alcuna prospettiva di riscatto, né storico né trascendente, e la sua visione del mondo appare assoggegata a un <strong>pessimismo materialista e assoluto.</strong></p><p id="72d108da-f4ce-438b-8edc-6bbc6df48471" class="">La consapevolezza della <strong>degradazione</strong> e della <strong>miseria delle popolazioni del Sud</strong> accresce il suo pessimismo, senza fare però vacillare in lui la convinzione che <strong>la legge del più forte valga a ogni livello sociale</strong> e che le vittime stesse siano sempre pronte a esercitare la loro prepotenza su chi sta al di sotto di loro.</p><p id="3383e1ad-b588-4e6f-9cd7-886a001d0edf" class="">Poichè considera la violenza e la sopraffazione dati naturali e immodificabili dell’animo umano, egli si limita a reistrarle con lo <strong>sguardo oggettivo dello scienziato</strong>.</p><p id="ef291bac-f260-416a-a0e5-72a47aba576a" class="">La tecnica narrativa di Verga ha adottato fino a questo momento è quella tradizionale (<strong>narratore esterno e onnisciente</strong>); il passaggio ai temi “siciliani” non costituisce una svolta di poetica perchè la tecnica narrativa è ancora quella proprioa della letteratura romantica.</p><p id="898fd776-d235-4cde-82a3-b2683299e5af" class="">Intorno al 1876 la lettura dei romanzi di Zola è per Verga una specie di rivelazione; egli ammira la sua capacità di rappresentare il modno in modo <strong>diretto </strong>e largamento <strong>documentato</strong>.</p><p id="a9e2438f-5905-4014-8c83-83525baf2174" class="">L’interesse per la recente letteratura francese è condiviso entustiasticamente anche da Capuana, il primo a usare nei suoi saggi critici la parola “Verismo” per descrivere l’intenzione degli scrittori italiani di <strong>imitare i romanzieri naturalisti francesi e documentare la realtà “dal vero” </strong>rinunciando all’espressione diretta di giudizi e interpretazioni da parte del narratore</p><p id="eb0b6e00-8dea-4d6e-bc35-a3979299c832" class="">Il termine “Verismo” sarà successivamente usato dai critici per designare le caratteristiche specifiche dell’<strong>arte di Capuana e di Verga</strong> e distinguerle da quelle del Naturalismo.</p><p id="5e89eb77-2999-4dd9-a230-975ee67ad88b" class="">
+</p><hr id="7c73ac03-194f-4aca-9979-52567e49bfc5"/><p id="9f16c88c-f384-45f6-80ef-800b9a115b74" class="">Le modalità narrative veriste sono:<div class="indented"><ul id="0a0b370f-c0e5-4c9c-81e1-7ea764590239" class="bulleted-list"><li style="list-style-type:disc"><strong>Prevalenza dei fatti minori e rinuncia al romanzesco</strong>: L’intreccio dei romanzi veristi è costituito da <strong>fatti ordinari</strong>, cioè dagli eventi minori ch eoccupano la vita di ogni giorno.</li></ul><ul id="615e1bf3-1adc-4238-83de-9e20e3b3ddf3" class="bulleted-list"><li style="list-style-type:disc"><strong>Arretramento del narratore onnisciente, focalizzazione variabile, straniamento:</strong> L’obiettivo fondamentale delle opere veriste di comuntare i fatti così come sono è ottenuto attraverso la cosiddetta “tecnica dell’impersonalità”, tende cioè a <strong>scomparire</strong> la figura del <strong>narratore tradizionale onniscente</strong> che offre al lettore una interpretazione sui fatti e sui personaggi.</li></ul><ul id="de26de3f-cfc5-4073-9255-bbcc65245a88" class="bulleted-list"><li style="list-style-type:disc"><strong>Minime descrizioni dell’ambiente</strong>: Per realizzare compiutamente l’obiettivo dell’impersonalità Verga <strong>riduce anche sensibilimente le descrizioni dell’ambiente</strong>, il narratore popolare dei <em>Malavoglia</em> ad esempio parla come se chi legge fosse presente sulla scena e conoscesse bene i luoghi dell’azione.</li></ul><ul id="86f6224f-29da-4131-a07c-a285d4dd73b6" class="bulleted-list"><li style="list-style-type:disc"><strong>Assenza di una descrizione introduttiva dei personaggi</strong>: Nelle opere veriste i personaggi <strong>entrano in scena direttamente</strong>, con pochissime parole di introduzione da parte del narratore.</li></ul><ul id="2f2f0641-d3ed-4ab9-be3b-5b19f5bd93e5" class="bulleted-list"><li style="list-style-type:disc"><strong>Uso di una forma adatta alla materia da rappresentare:</strong> La tecnica versita richiede una <strong>lingua adeguata all’ambiente e ai personaggi</strong> rappresentati. nel romanzo <em>I Malavoglia</em>, ad esempio, la narrazione è condotta in una lingua che ha i caratteri del <strong>parlato siciliano.</strong></li></ul></div></p><p id="a0c3df6f-0733-4a32-89cd-c083c05c4aaf" class="">Benchè sia ben consapevole del nuovo orientamento che intende seguire nell’arte della narrazione, Verga non scrive un saggio che contenga i principi ispiratori e le regole di composizione del romanzo moderno, ma affida le sue dichiarazioni di poetica a <strong>pochi scritti</strong> che si trovano <strong>a metà tra riflessione teorica e letteratura</strong>.</p><p id="62f22dd1-d543-4b85-9b3e-6e38a1cb0d43" class="">La sua stagione “verista” dura <strong>poco più di dieci anni</strong>.</p><p id="04f53716-5b46-462a-bc5e-36bcde617a86" class="">La sua evoluzione letteraria non segue pertanto un percorso lineare, ma è fatta di <strong>sperimentazioni e ritorni indietro</strong>, fino al silenzio degli ultimi anni.</p><h1 id="32b2f6a5-6319-4910-9c49-5424e433d1f9" class="">Brani</h1><p id="9e21dc35-6ac5-4a16-8f84-ce624eaa69f9" class="">→ La <em>Prefazione</em> ai <em>Malavoglia - </em>112/114</p><hr id="28134e6f-3502-441f-bd1d-4fde988c2386"/><h1 id="64cbdcea-03b6-46f8-83ef-c7985cf6c902" class="">I Malavoglia di Verga e L’Assommoir di Zola</h1><p id="eabd5f1c-03c4-4930-872d-428c657b11ff" class="">Verga diventa verista dopo la lettura di Zola, in particolare dopo avere conosciuto il romanzo L’Assommoir.</p><p id="f3b7b234-7734-4f7d-9016-00c15a61557e" class="">La sua ammirazione per l’autore francese non verrà mai meno e si tradurrà in un proposito di <strong>imitazione delle tecnihce narrative naturaliste</strong> che egli, soprattutto nei Malavoglia, realizzerà in modo ancora più rigoroso rispetto al modello.</p><p id="ea8f812a-1846-4c00-9def-471baf3a151e" class="">Verga accetta del Naturalismo francese <strong>l’attenzione per i dati reali</strong> e la ocncezione della <strong>vita come una lotta</strong> per l’esistenza, ma <strong>non ne condivide la visione fiduciosa.</strong></p><p id="d4cc4b51-496d-40c9-9983-292b84e3ba45" class="">Del positivo egli respinge l’idea che la scienza possa indirizzare l’umanità verso un progresso certo e inarrestabile, e ugualmente si sente <strong>estraneo alle idee democratiche e socialiste</strong> di Zola e al suo impegno a migliorare la condizione sociale delle classe popolari.</p><p id="43c74901-3a10-4109-9573-ffdff2d91ce5" class="">
+</p><p id="49e3b2f1-c523-4a07-809f-b8aedf345c36" class=""><strong>Zola</strong> racconta la storia di una <strong>famiglia nel corso delle successive generazioni</strong>: ogni romanzo segue uno o più personaggi della famiglia, in diversi ambienti sociali.</p><p id="f8257644-ae9b-4f5b-9a88-68469fe61115" class=""><strong>Verga</strong> si propone un progetto simile, ma con una scala ascensionale: i suoi personaggi appartengono a <strong>classi sociali via via più elevate</strong>.</p><p id="117ac724-6109-49e3-9bcc-8d6335129ad3" class="">Sia Zola che Verga realizzano romanzi il cui intreccio è costituito da fatti che appartengono alla <strong>vita di tutti i giorni e rinunciano ai toni enfatici</strong> anche quando descrivono eventi tragici.</p><p id="fdecc8df-31a5-4474-9ba7-546bdb896243" class="">Nell’<em>Assommoir</em> la reazione di Gervaise, ormai aloclizzata, alla morte del marito Coupeau, ucciso dall’alcol dopo quattro giorni di delirio e conflusioni, viene descritta attraverso uno sguardo crudele e irrisorio, senza accenti di commozione.</p><p id="46788e3d-a67f-40c0-8a0a-b05b02d725e3" class="">Nell’<em>Assommoir</em> la descrizione dell’ambiente è ricca di dettagli, tuttavia, per rispettare il principio dell’impersonalità, lo scrittore ricorre allo stratagemme di affidarla a un <strong>personaggio nuovo rispetto al luogo dell’azione</strong>, che da una finestra o da una vetrina ne osserva ogni particolare.</p><p id="16e94879-3951-4054-9ec5-7131866333b8" class="">Nei <em>Malavoglia</em> invece <strong>le descrizioni sono ridotte al minimo</strong>.</p><p id="f26c52ef-fc7e-4057-bf35-026340e8540a" class="">Mentre nell’<em>Assommoir</em> i personaggi vengono <strong>introdotti dalla voce narrante</strong>, nei <em>Malavoglia</em> <strong>compaiono in scena direttamente </strong>o con minimi cenni di presentazione.</p><p id="7056cecd-a448-4bc5-b975-3c934d3bc114" class="">Per raffigurare in modo realistico gli ambienti dei suoi romanzi, <strong>Zola</strong> si avvale del <strong>gergo quotidiano degli operai </strong>parigini; accanto a questa però usa anche un linguaggio di <strong>livello medio</strong> proprio della classe borghese.</p><p id="8d25092c-5b23-4958-a320-eb33a3377ca4" class=""><strong>Verga</strong> invece si avvale di una lingua omogenea, che mantiene caratteristiche proprie del <strong>parlato popolare</strong> a tutti i livelli della narrazione, tanto che il lettore ha l’impressione di immergersi integralmente nella realtà rappresentata, come se a narrare i fatti fossero gli stessi protagonisti.</p><p id="c2c675e8-300f-4d57-ae6d-f48ad00fdfc2" class="">
+</p><h2 id="43ab3586-26f5-4a2d-9295-2df70949de23" class="">Brani</h2><p id="214b2afc-d0c9-46a7-9db0-db4c78a98f9c" class="">→ “La partenza di ‘Ntoni e l’affare dei lupini” - 151/159</p><p id="97cbc368-41d5-4583-9c48-1dd68c4d77af" class="">→ “Il naufragio della Provvidenza” - 161/165</p><p id="a3ac30a1-fa7e-4491-b67f-49e61ad4e664" class="">→ “Padron ‘Ntoni e il giovane ‘Ntoni: due visioni del mondo a confronto” - 166/168</p><hr id="aad47835-8e3e-4c3f-a870-922f896c9f12"/><h1 id="e2780f0c-f4ae-4d4c-a820-aa95ed197f83" class="">I Malavoglia</h1><p id="426b49f9-f519-4e68-969a-ff80a7b643c5" class=""><em>I Malavoglia</em> è considerato il capolavoro di Verga, l’opera più alta del suo periodo verista.</p><p id="c3e62def-b559-41ce-a238-9c9822ea3a82" class="">La vicena riguarda una <strong>famiglia di pescatori</strong>, ambientati in un paese siciliano subito dopo l’Unità d’Italia, <strong>che va incontro alla rovina economica</strong> per aver cercato fortuna con il commercio e avere perso un carico di merci durante una tempesta.</p><p id="44504d52-50ee-4b3f-9f62-8e347cdb4cc7" class="">L’intenzione di Verga è quella di raffigurare in modo veritiero gli effetti che i <strong>mutamenti sociali </strong>e le <strong>ambizioni individuali</strong> generano in una civiltà arcaica, investiti e travolti dai cambiamenti della modernità.</p><p id="15d98c1d-77ff-45cd-9278-d6b868e86b0d" class="">Verga precisa che si tratta di <strong>effetti tragici</strong>, che il progresso sparge rovina, e che egli intende volgere il proprio sguardo sui “vinti”.</p><p id="260b3f2a-9a34-4cd1-a35d-47721d272808" class="">Il suo proposito è di compiere uno “studio” della realtà contemporanea sulla base dell’idea guida del <strong>conflitto tra vecchio e nuovo, fra tradizione e modernità.</strong></p><p id="1ca98f37-914b-4a48-a625-0650dfab6fd9" class="">Egli afferma di voler rinunciare alla funzinoe giudicante dell’autore, cioè <strong>al narratore onniscente.</strong></p><p id="c1ef5c97-a573-4b6b-b0f6-e3c84a6d230c" class="">Si deve allora concludere che <em>I Malavoglia</em> siano un romanzo - documento, sono un’opera <strong>complessa </strong>e sfuggente, <strong>ricca e contraddittoria</strong>, che va ben al di là delle intenzioni programmatiche dall’autore.</p><hr id="1d911763-c001-4d8f-ad98-71aaabbd419d"/><p id="c5e7bcff-678b-4b72-8755-49f0d0c2b80e" class=""><strong>Il nonno</strong> riassume in sé il modo di vivere e i valori che appartengono alla <strong>tradizione.</strong></p><p id="a9e1e8d1-e400-4dac-8b18-0d8ee176e367" class="">Il <strong>giovane</strong> è invece <strong>attratto dalla modernità</strong>, tuttavia <strong>l’irrequietezza del giovane</strong> apre nell’universo culturale del nonno una crepa irreversibile, è il segno della <strong>fine del mondo.</strong></p><hr id="640af6b3-2596-401b-8106-0181d748f4fd"/><p id="007b477a-f4f2-4a2c-bc46-f59e154113e5" class="">La prima idea dei <em>Malavoglia</em> nasce in Verga subito dopo il successo della novella <em>Nedda</em>, la prima ambientata in sicilia.</p><p id="17ff305c-8096-4647-a728-2bc8b9bcb9ea" class="">Dopo la lettura dell’<em>Assommoir</em> di Zola, Verga elabora la <strong>poetica verista</strong> e decide di trasformare la novella incompiuta in <strong>romanzo</strong>.</p><p id="9f5e156f-cd14-42fa-a6ac-5ef494f5986f" class="">Il romanzo esce nel febbraio <strong>1881</strong> ed è un <strong>insuccesso.</strong></p><p id="35f05423-c89b-4947-b12b-9cae3d46114a" class="">Ma Verga si dichiara convinto della <strong>validità della sua scelta verista</strong>, che presenta la realtà nella sua asciuttezza e senza gli effetti drammatici propri del romanzesco.</p><hr id="307bfbd9-846d-4316-af00-29fd28e745f2"/><p id="bab2b5c6-00a5-4003-9340-613a7c551513" class="">Il romanzo è dunque la storia di una famiglia, ma anche quella di una intera comunità.</p><p id="a28ed929-cd1a-4afc-9132-6cc247b028ab" class="">Intorno ai Malavoglia si muovono infatti <strong>moltissimi</strong> altri <strong>personaggi</strong>, che rappresentano <strong>i principali mestieri e ruoli sociali del paese.</strong></p><p id="b2c33cc7-3fd0-44ee-b7a4-979f90637c15" class="">Ciascuno è identificato da un <strong>nomignolo</strong> che ne fissa ironicamente una caratteristica principale, per somiglianza o per opposizione, come è d’uso nella tradizione popolare siciliana.</p><p id="facb09cc-922a-4924-86bc-25ab4a78534c" class="">L’ambiente del paese è <strong>ristretto</strong>: poichè tutti si conoscono, nessuno è al riparo da pettegolezzi e maldicenze e in quello spazoi chiuso il <strong>giudizio popolare</strong> è talmente importante da condizionare i destini individuali.</p><p id="ee8bd0e3-4f37-470f-a80e-e228d1206d9b" class="">Rispetto alla maggior parte dei compaesani, i Malavoglia sono portatori di un <strong>sistema di valori autentico e disinteressato</strong> e non vengono mai raffigurati in atti di maldicenza o meschinità.</p><p id="1f995cbd-b3fa-493c-bf63-fa2f0aed93cc" class="">Essi rappresentano nel romanzo il tenace attaccamento ai <strong>valori del lavoro e della tradizione</strong>, insidiati dai cambiamenti della modernità.</p><hr id="9e2a688e-fc35-43e1-8929-93fe780fd0bc"/><p id="2304bb01-793f-4fd2-a46c-13a26d9510f2" class="">Il <strong>desiderio di cambiamento e miglioramento</strong> appare nel romanzo come la <strong>causa principale della rovina</strong> dei protagonisti.</p><p id="261ca2e4-d48f-442d-9a90-a0dc71c9bf31" class="">Tuttavia Verga sa che il nuovo è destinato comunque a imporsi, al di là delle responsbilità dei singoli.</p><p id="1f614113-9eac-4ca8-8bc3-1e74a72ef6b9" class="">La raffigurazione dello spazio è sia <strong>realistica</strong>, sia <strong>affettiva,</strong> in quanto gli elementi del paesaggio sono spesso trasfigurati dai sentimenti provati dai protagonisti.</p><hr id="ae5c1ebe-ef6e-45cc-a078-a63de113994f"/><p id="80ba32cf-9594-4afc-a255-31d28a6eaf8e" class="">I fatti raccontati nel romanzo occupano circa <strong>quindici anni</strong>.</p><p id="2c3c5cca-a04c-4ccf-bdc3-574fc4993c35" class="">In questo arco di tempo accadono le vicende della famiglia Malavoglia e quelle della gente del paese, <strong>i grandi episodi e cambiamenti politici ed economici</strong> del tempo storico che si intrecciano con la vita locale e la condizionano: <strong>la leva militare obbligatoria</strong> del nuovo Stato unitario; la battaglia navale di Lissa; l’epida di <strong>colera; </strong>la <strong>costruzione della ferrovia</strong>.</p><p id="d2c99624-5c19-45af-ae26-c08013aec31b" class="">La storia e la modernità entrano tuttavia nel tempo del paese soltanto marginalmente, attraverso vaghi richiami, e sono percepiti come <strong>qualcosa di lontano, minaccioso ed estraneo</strong> alla successione monotona degli eventi paesani.</p><hr id="8b318022-cc9e-4cd4-a6af-36f07eb4cdf4"/><p id="3c8fcdc5-1bce-4a5e-ae2f-4bb4247c9611" class="">Contrariamente a quanto faceva Zola, che prima di scrivere un romanzo si immergeva per mesi nell’ambiente da rappresentare, studiandone dal vivo le caratteristiche, Verga <strong>scrive</strong> <em>I Malavoglia</em> <strong>a Milano.</strong></p><p id="1c24363a-f168-4e7d-8e1f-82227aa8159b" class="">Egli intende infatti compiere una ricostruzione intellettuale della realtà, osservandola da una certa distanza.</p><p id="7543a196-1a54-4d2c-9680-30c32b56a4ef" class=""><em>I Malavoglia</em> sono un romanzo verista non soltanto perchè raffigurano in modo realistico un piccolo paese del Sud Italia, ma soprattutto per i modi della narrazione: la <strong>modalità narrativa “dal basso” </strong>e la <strong>lingua mimetica</strong> che riproduce il parlato e le cadenze dialettali siciliane.</p><p id="e270d6ad-4208-4dac-9569-640453c7d38b" class="">La <strong>voce narrante</strong> dei <em>Malavoglia</em> è <strong>anonima</strong>, non corrsiponde a quella di un personaggio, e <strong>parla dall’interno</strong>.</p><p id="aa555303-ebfa-462f-a770-f9d9b12ca706" class="">Questa voce esprime spesso simpatia nei confronti dei malavoglia.</p><p id="18830b2c-143a-4de4-9101-d74122318659" class="">Ad essa si mescola però quella dei paesani, maligna e pettegola, ispirata a una <strong>logica utilitaristica e cinica.</strong></p><p id="c0a343d6-781a-45eb-b4c2-27f57757d694" class="">Questa <strong>mescolanza di voci</strong> e di prospettive genera l’effetto di un <strong>coro popolare</strong> il quale <strong>giudica la realtà invariabilmente dall’interno</strong> e in modo parziale.</p><p id="42e994c2-b0c6-4d08-99d0-1cdc0828bf22" class="">E’ il lettore a doversi districare tra la <strong>molteplicità </strong>e la <strong>contraddittorietà dei giudizi</strong> espressi, perchè le voci sono collocate tutte sullo stesso piano e nessuna risulta privilegiata.</p><hr id="75241436-32a2-42fa-921b-322d74d69939"/><p id="2f6a49c4-4809-4e45-942c-cae7485c7128" class="">Il realismo della rappresentazione è garantino inoltre dalle scelte linguistiche.</p><p id="3cec2262-3699-4574-9e17-e513403ab9ff" class="">Anche in questo caso Verga non sceglie di raffigurare in modo esatto e documentario la realtà, ma compie un consapevole lavoro di ricostruzione letteraria: rinuncia a usare il dialetto e <strong>inventa un italiano dialettale</strong> in cui la cadenza delle frasi e le improprietà grammaticali imitino il modo di parlare del popolo siciliano.</p><hr id="bb5c8eec-3314-47c8-8c76-7e7796216977"/><h1 id="5ef833ff-d7b3-4141-826d-4c1ade246820" class="">Novelle rusticane</h1><p id="911e72f7-0101-49ee-ad27-439e61f2a5b0" class="">All’inizio del 1883 vengono pubblice le <em>Novelle rusticane</em>, una raccolta di dodici novelle ispirate alla <strong>poetica verista</strong>.</p><p id="6bfb4465-5c3a-4719-a25c-92b184277c60" class="">Verga le compone in un momento di <strong>difficoltà economica</strong>.</p><p id="a408261d-e28d-4f5b-9991-84aa6fbdc53e" class="">Diversamente da <em>Vita dei campi</em>, le <em>Novelle rusticane</em> non mettono in scena eventi drammatici o personaggi che spiccano sugli altri, ma rappresentano la vita quotidiana più <strong>ordinaria e ripetitiva</strong>, in cui le vicende appaiono prive di coloriture sentimentali e in cui raramente si distinguono figure individuali; anche la morte viene ridotta a un fatto qualunque, di cui contano le conseguenze economiche più che quelle effettive.</p><p id="8c0ce640-e64b-4055-9e70-6d4956438e46" class="">Lo sguardo dello scrittore non si limita a rappresentare la vita arcaica ed elementare delle classi inferiori, ma scruta nelll’ambiente della <strong>piccola borghesia paesana</strong>, per farne emergere gli <strong>inganni</strong> e i <strong>soprusi, </strong>nascosti e dissimulati ma non meno violenti.</p><p id="1aa03688-8210-4b3a-81ed-eb3987ba0da1" class="">Nella visione di Verga tutti gli uomini sono impegnati in una lotta senza sosta per il predominio e vanno incontro al medesimo destino di sconfitta: in un mondo dominato dalla <strong>mancanza di ogni valore positivo</strong> e dalla fatale ripetitività delle sorti non sono posisbili prospettive di riscatto, per nessuno.</p><p id="2dcf5bba-d617-4833-84f6-5e58cd744b53" class="">Le <em>Novelle rusticane</em>, con <em>I vinti</em>, condivide la <strong>visione pessimistica</strong> e la <strong>sfiducia nel progresso</strong>.</p><p id="ebb8bfe0-d7f7-42b4-8ef1-38a2ffe0ba0b" class="">Per garantire l’obiettività della rappresentazione Verga si propone di applicare la <strong>tecnica dell’impersonalità</strong>, cioè di rinunciare allo sguardo esterno del narratore per adottare un punto di vista e un linguaggio interni all’ambiente raffigurato.</p><p id="cd3c4fca-d972-41af-b833-37fc1b04f0c5" class="">L’autore compie cioè un passo indietro e lascia che i personaggi si esprimano secondo i criteri di valore e le forme linguistiche loro propri, senza <strong>alcuna mediazione.</strong></p><p id="590810d9-7a90-4956-9bc8-12c7063f0ba9" class="">Tuttavia lo scrittore, che nella rappresentazione del mondo arcaico delle calssi più basse ha realizzato questo proposito attraverso la voce di un coro popolare indifferenziato, si trova ora a dovere individuare una modalità narrativa che restituisca la molteplicità delle sfumature di pensiero e i contrasti ideologici anche dell’ambiente borghese, più <strong>complesso, sfumato e ipocrita.</strong></p><p id="6cbf1bad-2abb-4e69-b7b6-87ba0856fc75" class="">Egli tenta di realizzare questo obiettivo attraverso il <strong>montaggio di voci e punti di vista multipli</strong> e spesso opposti.</p><p id="0cca8ef0-fac0-47e8-8c95-324f506816b3" class="">Vengono così smascherati i miti risorgimentali del Progresso, del Benessere, della Giustizia e della Libertà, che svelano il loro carattere di copertura dell’unico reale obiettivo di tutti: <strong>l’affermazione di sè </strong>e del proprio interesse materiale.</p><hr id="a7c34b20-e44e-422e-8b26-ef593b77b64d"/><h1 id="8ab1174c-90da-4541-93b5-352b4b163fd3" class="">Riassunto</h1><figure id="eeb11775-e003-4148-9503-23e9c8569e3a" class="image"><a href="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20118.png"><img style="width:1837px" src="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20118.png"/></a></figure></div></article></body></html>

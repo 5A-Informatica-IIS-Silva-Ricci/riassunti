@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Primo Levi</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="fd68a8c0-84ec-4176-b812-ca3dfd98f0af" class="page serif"><header><div class="page-header-icon undefined"><span class="icon">🧪</span></div><h1 class="page-title">Primo Levi</h1><table class="properties"><tbody><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data nascita</th><td>1919</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Anni vita</th><td>68</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data morte</th><td>1987</td></tr></tbody></table></header><div class="page-body"><nav id="f9dc5d51-3a87-46bc-8cb5-a897d8b07a0a" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#f05c956e-ea78-4746-ab8b-3acd60c55fb9">Biografia</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#8a0185b4-c8ff-48a7-8716-79e14d6fb4dc">La chiave a stella</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#e3ad60ef-0263-4133-9bb2-84c86b43e229">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c1d87ab0-0d1b-45da-aa4e-595b686cba61">Riassunto</a></div></nav><h1 id="f05c956e-ea78-4746-ab8b-3acd60c55fb9" class="">Biografia</h1><p id="72c4e9a2-f22b-4758-b996-bd1396df7b7b" class="">Da ragazzo Primo Levi mostra un carattere schivo e giudizioso: vive a Torino frequentando pochi amici, studia, legge, cammina in montagna.</p><p id="3b267750-2a1e-4f7a-9747-604a2336f1ad" class="">Questa vita iniziata per scorrere come tante altre viene travolta all’improvviso dal Lager: a ventiquattro anni Levi <strong>viene deportato ad Auschwitz</strong>, dove rimane per undici mesi. Al suo ritorno nulla è più come prima.</p><p id="d3e6b9dc-7092-4d1a-ac94-f8c2131529d7" class="">Il ragazzo appartato e tranquillo non essite più, e Levi inizia una <strong>lunga battaglia contro la disumanità</strong> di cui è stato testimone.</p><p id="fdc3dd83-03ce-4814-b2a1-cf379759d6dc" class="">É una lotta fatta di libri, di lezioni e di dibattiti che lo trasforma in un intellettuale dalla parola limpida e autorevole, sempre più ascoltato, riconosciuto, stimato.</p><p id="9889eb3b-66a1-4d6b-9656-fe648c335ec3" class="">Due sono dunque le vite di Levi: la prima, ordinata e tranquilla, chiusa nel piccolo ambiente dei giovani studenti torinesi; la seconda, dopo la frattura del Lager, sempre più pubblica e condivisa.</p><hr id="7d61939f-d65e-4899-b3b8-f26f70fb0e1b"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="fe813454-3618-4c69-8411-347afab3bd5e"><div style="font-size:1.5em"><span class="icon">🐣</span></div><div style="width:100%">Primo Levi nasce a Torino il <strong>31 Luglio 1919</strong> da un’antica famiglia ebraica piemontese.</div></figure><p id="93b73112-48e1-4603-83da-dfb2fd247516" class="">Il padre, Cesare, è un ingegnere elttrotecnica, la madre, Ester Luzzati, è una giovane di ventiquattro anni.</p><p id="fd4b8fec-e922-4231-ae10-769c7658e753" class="">Dopo avere frequentato il licelo classico di Torino si iscrive alla facoltà di <strong>Chimica</strong>, attratto da una disciplina che gli pare offrire un codice per capire l’universo.</p><p id="49beb722-9d65-49f8-9da1-f8a07b121180" class="">Già al liceo le discipline scientifiche sembrano a Levi più ricche di risposte di quelle umanistiche: talmente scarso è il suo interesse per la letteratura che all’esmae di maturità viene rimandato nel tema di italiano.</p><p id="827263f2-228d-4c93-89d0-ab198bd1d547" class="">All’Università si appassiona immediatamente alle lezioni dei suoi professori, ma l’anno successivo alla sua iscrizione vengono emanate le <strong>leggi raziali</strong> (1938).</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f23d18c5-16fc-4b87-905a-5276a283b6b2"><div style="font-size:1.5em"><span class="icon">🎓</span></div><div style="width:100%">Nel 1941 <strong>si laurea a pieni voti</strong>, con lode: in seguito esprimerà la convinzione che l’eccellenza di quel risultato fosse un modo, da parte dei professori, di manifestare indirettamente il proprio dissenso verso le leggi antisemite.</div></figure><p id="d5caa36d-263d-4532-a4fc-0821c3a9835a" class="">Subito dopo la laurea Levi deve cercarsi un lavoro: il padre infatti muore lo stesso anno di tumore e il giovane si preoccupare di provvedere economicamente alla famiglia.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="cce0fa55-2a97-41c7-89cb-5c1612906264"><div style="font-size:1.5em"><span class="icon">🪖</span></div><div style="width:100%">Levi intanto si avvicina al Partito d’azione clandestino e dopo l’armistizio dell’8 settembre 1943 compie una scelta politica: insiieme con alcuni dei suoi amici decide di <strong>aderire alle formazioni partigiane</strong> antifasciste che si stavano costituendo sulle montagne.</div></figure><p id="552ccaaf-7cf8-4461-9e95-9b510720390b" class="">Il 13 dicembre <strong>viene arrestato dai fascisti</strong>; dopo due mesi rrascorsi nel campo di concentramento di Fossoli, il 22 febbraio 1944 Levi è deportato ad Auschwitz.</p><hr id="d2b998ac-eac1-4c25-af4d-adfa978544f4"/><p id="dd245cb5-fe0b-4ace-ba05-ee6f7f47ffe8" class="">Levi trascorre nel Lager unidici mesi, da febbraio 1944 a gennaio 1945, quanto le truppe russe liberano il campo di Auschwitz; il viaggio di ritorno seguirà un <strong>lungo e tortuoso tragitto</strong> attraverso l’Europa centrale e durerà da giugno a ottobre del 1945.</p><p id="da36ab14-d23a-45cc-8321-b3ffefc6a732" class="">L’arrivo a casa, a Torino, non porta con sè la gioia sperata.</p><p id="52260723-e3f3-4ca3-8085-0dcc3ed34170" class="">Tormentato dal dolore per l’esperienza del Lager e dal <strong>senso di colpa</strong> per essere sopravvissuto a tanti compagni che gli parevano migliori di lui, Levi sta male.</p><p id="b78c4c76-4a07-42de-b5cb-af156711a109" class="">La fine della guerra è vissuta con sollievo dagli italiani: i partigiani raccontano le loro imprese e vengono trattati da eroi, mentre i reduci dai Lager sentono tutto il peso della prigionia e dell’umiliazione subita; nessuno vuole ascoltare i loro racconti.</p><p id="b7552eb2-3cea-463d-b7e1-69c2b7d639e9" class="">Ora tutti voglio guardare avanti, dimenticare.</p><p id="8384eef8-63f2-4e67-a0fd-eabd0daa575b" class="">Per Levi <strong>la memoria è un imperativo</strong> in primo luogo personale, per liberarsi da un peso insostenibile, poi morale e civile, per garantire il ricordo dovuto ai morti e proteggere i vivi dal ripetersi del male.</p><p id="92d025af-9786-4f9c-8364-5ca5a36874bb" class="">Già nel Lager egli era riuscito ad annotare poche righe con altissimo rischio; nel gennaio <strong>1946</strong> trova un impiego in una fabbrica di vernici vicino a Torino in cui per un po’ di tempo non gli viene assegnato un compito preciso, e <strong>scrive in pochi mesi </strong><em><strong><strong>Se questo è un uomo</strong></strong></em><em><em>.</em></em></p><p id="59a85b54-3aba-4f8a-a193-692d33ed4e8b" class="">Il libro è pronto nel 1947, ma l’editore Einaudi, a cui Levi lo propone, non vuole pubblicarlo: i tempi non sembrano adatti a vendere libri tanto dolorosi.</p><p id="4b5b61e8-1c6c-45b5-8827-6e0cdef569af" class="">Lo pubblica invece una piccola casa editrice torinese, ne venderà solamente poco più della metà.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="87e1e600-a87b-48b1-9112-6d12a85d80ce"><div style="font-size:1.5em"><span class="icon">💍</span></div><div style="width:100%">Nello stesso mese di gennaio 1946 Levi conosce per caso <strong>Lucia Morpurgo</strong>, di cui si innamora e che lo aiuta a ritrovare la voglia di vivere.<p id="e1999fad-7bc4-4913-a122-3eaada225f75" class="">Nel settembre 1947 Levi sposa Lucia, da cui avrà due figli.</p></div></figure><hr id="d7fb97b7-1b75-44b0-80b3-b8de9c9163d2"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5ec9f907-7be5-4de2-9b7e-e6e75615feb8"><div style="font-size:1.5em"><span class="icon">🔖</span></div><div style="width:100%">Dopo la nuova pubblicazione di <em>Se questo è un uomo</em> da parte della casa editrice Einaudi nel 1958, esce <em><strong>La tregua</strong></em>, il libro di memoria che racconta il lungo ritorno ad Auschwitz.</div></figure><p id="38e7674a-1880-4af3-981c-f35ee547e00d" class="">L’opera ottiene il premio letterario Campiello, ma i critici faticano ancora ad accettare l’idea che Levi sia uno scrittore e tendono a ridurne il ruolo a quello di testimone.</p><p id="2446641f-917c-4f45-bb62-bfe15fefe578" class="">In quegli stessi anni Sessanta Levi <strong>orienta la sua scrittura verso l’invenzione</strong>: con lo pseudonimo di Damiano Malabaila pubblica una raccolta di quindi racconti intitolata <em><strong>Storie naturali</strong></em>.</p><p id="3aadc940-72db-4557-902e-5b4fb01f8837" class="">Si tratta di testi in gran parte di tema fantascientifico, spesso brevi e con una forte impronta morale.</p><p id="f7d7a06e-f3da-4efd-82a7-dafa5c237671" class="">Una seconda raccolta di racconti, intitolata <em><strong>Vizio di forma</strong></em>, esce nel 1971, questa volta con il nome di Levi, ma ottiene dai lettori un tiepido interesse.</p><hr id="4fc125b3-0110-47fe-8d6c-bf416254d876"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="60912b0e-36d7-4a03-91f6-8d625f47faf4"><div style="font-size:1.5em"><span class="icon">🔖</span></div><div style="width:100%">Con la pubblicazione del <em><strong>Sistema periodico (1975), </strong></em>la raccolta di racconti “sulla chimica e sui chimici” concepita per parlare del suo mestiere, Levi diventa scrittore a tempo pieno.</div></figure><p id="53aa519e-affc-451e-ba88-7a19b577233e" class="">Nello stesso anno infatti dà le sue dimissioni dalla fabbrica di vernici.</p><p id="29c99f98-ef12-4f01-b53b-d7c228d94fb1" class="">Anche in questo libro la memoria è presente, sia quella autobiografica del giovane studioso sia quella del Lager, che ritorna di tanto in tanto come tetro orizzonte delle vicende narrate.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="754bc927-324b-4b2e-b620-6cf92521d1a3"><div style="font-size:1.5em"><span class="icon">🔖</span></div><div style="width:100%">Tre anni dopo, nel 1978, Levi pubblica il suo primo romanzo di piena invenzione, <em><strong>La chiave a stella.</strong></em></div></figure><p id="052db9d4-f14a-4d45-b0e2-5bf915a5b211" class="">Storia di un montatore di gru che gira il mondo per svolgere il suo mestiere, sostenuto dalla convinzione che la vera felicità a cui l’uomo può asprirare è quella del “lavoro ben fatto”.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="31c30b30-23d3-4217-ad9d-728abfeb9b8e"><div style="font-size:1.5em"><span class="icon">💭</span></div><div style="width:100%">In tutte le opere di Levi, sia di testimonianza sia d’invenzione, si può cogliere un tratto costante della sua personalità di scrittore: la curiostià per la natura umana, l’interesse per le sfumature dei caratteri e dei modi di vivere insieme, il grande valore attribuito alla dignità dell’uomo.</div></figure><p id="3e59fa69-15e8-4b32-bd84-68c2c343c087" class="">É come se anche nelle opere di fantasia Levi non potesse fare a meno di parlare della propria esperienza, del proprio bisogno di <strong>comprendere l’uomo e i fatti della storia</strong>.</p><hr id="bc7c4a33-8489-4f3b-b9a1-6bb6d25aac5e"/><p id="aaed9396-8fb5-4521-ac69-a22af1e997f9" class="">Intanto Levi è divenuto sempre più un personaggio pubblico: a partire dagli anni Sessanta le sue opere sono tradotte in moolti paesi stranieri.</p><p id="cd54ea81-3836-4f37-b35a-48db49d045e7" class="">Nelle scuole si diffonde la lettura dei suoi libri, proprio con i ragazzi delle scuole Levi si è assunto l’impegno della <strong>trasmissione della memoria</strong>.</p><p id="27715ce8-c7ad-4bf8-aeee-3ae9b3663f69" class="">Intanto, a partire dalla fine degli anni Settanta, si diffonde in Europa il fenomeno del <strong>revisionismo storico</strong>, ovvero l’esplicita negazione della verità storica dello sterminio nazista da parte di intellettuali di diversi paesi, compresi quelli tedeschi.</p><p id="6372db35-37f2-4dda-b16c-6e9055eee8f4" class="">La memoria del Lager, mai veramente accantonata nella scrittura di Levi, compresa quella d’invenzione, torna a essere il tema centrale della sua ultima opera.</p><p id="69174f89-1e9b-4fa5-92bc-213d08934753" class="">Lo scrittore sente il bisogno di una <strong>riflessione più ampia e documentata sul Lager</strong> che tocchi i principali problemi filosofici, morali, storici sollevati da quella esperienza.</p><p id="36d2c015-0ff7-491c-8863-6d1dde6010b3" class="">Il frutto di questa analisi critica è il saggio <em><strong>I sommersi e i salvati</strong></em> uscito nel <strong>1986, </strong>è l’opera più impegnata e alta di Levi, un vero e proprio <strong>testamento intellettuale.</strong></p><p id="0392a663-d046-4b1d-a489-76701b975e43" class="">Si aggrava intanto la <strong>crisi depressiva</strong> di cui Levi soffre periodicamente.</p><p id="dc5af81e-54be-4f21-a6ee-291c636234e7" class="">Il ricovero per un intervento chirurgico e la necessità di accudire nella propria casa l’anziana madre e la suocera gravemetne ammalate accrescono la prostrazione dello scrittore.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d83d4d26-bb47-4453-ac26-d589b85c01d3"><div style="font-size:1.5em"><span class="icon">☠️</span></div><div style="width:100%">L’11 aprile 1987 Levi muore a 67 anni nella sua casa di Torino, lasciandosi cadere nella tromba delle scale.</div></figure><hr id="df1e0e4b-8219-4c9c-b3b3-fcd1ccb04f26"/><h1 id="8a0185b4-c8ff-48a7-8716-79e14d6fb4dc" class="">La chiave a stella</h1><p id="86f9adc9-1080-42f3-92ea-e62de94207fa" class=""><em>La chiave a stella</em> è un’ “antologia di avventure di lavoro”, cioè la narrazione in quattordici episodi delle <strong>vicissitudini di un operario</strong> che gira il mondo per svolgere il mestiere di montatore di gru e tralicci industriali.</p><p id="f56ce082-123d-47c3-bcb6-a42ca8dc1b83" class="">La vicenda ha la forma di <strong>dialogo</strong> tra un narratore, chimico e scrittore, ovvero Levi, e l’operaio Libertino Faussone, che nella <strong>lingua semplice e diretta</strong> di un uomo illetterato gli racconta la sua esperienza.</p><p id="dfae41aa-f7ba-43eb-8305-589091ac4f17" class="">Il protagonista del libro riferisce dunque la sua vicenda da <strong>testimone diretto, </strong>proprio come ha fatto Levi in <em>Se questo è un uomo</em> e <em>La tregua, </em>ma in questo caso le vicende e il personaggio sono <strong>frutto di fantasia.</strong></p><p id="51a675a6-3eee-4273-bc9e-48ac8a1088b3" class="">L’idea del libro nasce da una <strong>lettura</strong> e da un <strong>viaggio.</strong></p><p id="6869f1b3-8243-45a9-8484-20cb4769d2bc" class="">Le quattordici storie raccontate nel libro derivano anche dai racconti degli amici e da letture di articoli su riviste specializzate o manuali tecnici.</p><p id="e4ddc03a-1793-448c-a2ae-d339075d9488" class="">A partire da questo vario materiale lo scrittore inventa le avventure di Faussone, sentendosi per la prima volta <strong>libero</strong>, come dichiara in un’intervista del 1979, <strong>dal dovere di verità</strong> che si era imposto per i libri sul Lager.</p><p id="84816a04-5cd8-44a1-9dd4-daf91e898879" class="">Il tema centrale dei racconti di <em>La chiave a stella</em> è quello del lavoro, inteso come un’opportunità di <strong>realizzazione di sé </strong>per chi ha la possibilità di svolgerlo con competenza e passione.</p><p id="631ed2ea-199e-436e-982a-0cb54fd7f17d" class="">Levi evidenzia <strong>il valore liberatorio e gratificante </strong>del lavoro compiuto <strong>a regola d’arte</strong>.</p><p id="d3bb86b1-faf5-4201-9fc1-ae7119d0464e" class="">Il perfezionismo tecnico, l’orgoglio professionale, la responsabilità per l’esito della propria opera costituiscono la base dell’appagamento che si può trarre da ogni mestiere.</p><p id="9ce9c9a5-c984-4ada-a39c-8a3543982657" class="">Nel libro viene infatti valorizzato il laboro come <strong>atto “creativo”, </strong>cioè svolto grazie a una specifica abilità tecnica, e respinta invece l’opinione secondo cui il lavoro è “un’espressione puramente servile dell’uomo”.</p><p id="e578a951-8f34-4537-b00d-4a580eaa4562" class="">Attraverso un mestiere liberamente scelto l’uomo infatti costruisce se stesso, e dagli errori compiuti apprende il modo per non ripeterli, perfezionando la propria capacità di affrontare i problemi e ricavando piacere dal miglioramento di sé.</p><p id="e07108fb-65ff-48f7-b68c-abca4d9e3041" class="">La principale novità è la lingua: Levi ha voluto infatti riprodurre nel libro la cadenza del <strong>dialetto piemontese</strong> popolare parlato dal protagonista.</p><p id="d84a697c-c15f-415c-afce-f5d11ec6af56" class="">Sono frequenti anche le irregolarità grammaticali proprie della <strong>lingua parlata da una persona poco colta.</strong></p><p id="940512b7-8d9a-4bd6-bc4b-b1ab427f0e1d" class="">Per sottolineare il carattere <strong>illitterato</strong> della lingua di Faussone, Levi si avvale anche della grafia “all’italiana” delle parole straniere.</p><p id="6cff6bc9-63f3-40a6-9922-1973334ad27e" class="">Lo scarto della lingua rispetto a quella curata ed elegante fino ad allora usata da Levi nei suoi libri è frutto di una sua scelta consapevole, nata dalla volontà di <strong>aderire con la scrittura alla vita vera.</strong></p><h2 id="e3ad60ef-0263-4133-9bb2-84c86b43e229" class="">Brani</h2><p id="9fcd8346-ba4c-40dc-be0b-4175f8948156" class="">→ Pensare con le mani, <mark class="highlight-red">pag. 755-758</mark></p><hr id="506b9106-0d7a-4444-9d63-40d4270af3e4"/><h1 id="c1d87ab0-0d1b-45da-aa4e-595b686cba61" class="">Riassunto</h1><figure id="cb080dcb-9829-4dcd-934f-fc50e441dc81" class="image"><a href="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20123.png"><img style="width:1092px" src="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20123.png"/></a></figure></div></article></body></html>

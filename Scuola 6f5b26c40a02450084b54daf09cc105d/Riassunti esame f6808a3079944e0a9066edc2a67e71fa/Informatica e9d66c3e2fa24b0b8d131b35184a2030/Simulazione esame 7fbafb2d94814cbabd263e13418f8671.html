@@ -1,0 +1,801 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Simulazione esame</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="7fbafb2d-9481-4cba-bd26-3e13418f8671" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">💯</span></div><h1 class="page-title">Simulazione esame</h1></header><div class="page-body"><nav id="8c64dfc2-bcd8-421d-81af-904591ae50fc" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1fcb31f4-f51e-4c38-aa8b-7eafd055f04e">Ipotesi</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a7d9016d-412f-4cc6-9983-e1a89d788b96">Diagramma ER</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#eda7b64e-40af-4be9-9aad-825be0b02ee8">Ristrutturazione IS-A</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#d71076ed-cb74-48cf-9efe-8eabec61a3c2">Diagramma completo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#d7a5cafb-e702-48b1-85c2-73a68488acf3">Documentazione</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#0af88090-b21e-4f14-97e1-e0fffcd9fe8c">Modello Logico</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1b6e295e-85ae-49da-a606-e4ff8d660910">Modello fisico</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#5c5666b4-3908-4602-831b-3854d9f9ca62">Query</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#bb211060-4341-4040-a1c9-064780ebb186">PHP</a></div></nav><hr id="6c45275d-3496-4ca6-88c1-dbedbde24f84"/><h1 id="1fcb31f4-f51e-4c38-aa8b-7eafd055f04e" class="">Ipotesi</h1><blockquote id="35ad20e4-49cb-482f-9908-a0be5157f857" class=""></blockquote><h1 id="a7d9016d-412f-4cc6-9983-e1a89d788b96" class="">Diagramma ER</h1><figure id="3e2c5405-6713-456c-9112-bb742c3c535d" class="image"><a href="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Simulazione%20esame%20fa91afca8c0c450a81c1d6442ed0c628/Screenshot_2022-06-22_at_22.44.06.png"><img style="width:528px" src="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Simulazione%20esame%20fa91afca8c0c450a81c1d6442ed0c628/Screenshot_2022-06-22_at_22.44.06.png"/></a></figure><h2 id="eda7b64e-40af-4be9-9aad-825be0b02ee8" class="">Ristrutturazione IS-A</h2><ul id="c94e120f-a056-425d-97e3-027307363d48" class="bulleted-list"><li style="list-style-type:disc"><strong>Superclasse</strong><figure id="6bfefcd4-39fd-458b-98e0-70d7ad562167" class="image"><a href="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Simulazione%20esame%20fa91afca8c0c450a81c1d6442ed0c628/Screenshot_2022-06-22_at_22.45.26.png"><img style="width:432px" src="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Simulazione%20esame%20fa91afca8c0c450a81c1d6442ed0c628/Screenshot_2022-06-22_at_22.45.26.png"/></a></figure></li></ul><ul id="7dc42aa5-8b81-4e0d-9dca-6b93f015d565" class="bulleted-list"><li style="list-style-type:disc">Sottoclasse<figure id="8374c507-ac54-425a-84de-e8e1d8968c82" class="image"><a href="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Simulazione%20esame%20fa91afca8c0c450a81c1d6442ed0c628/Screenshot_2022-06-22_at_22.47.22.png"><img style="width:480px" src="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Simulazione%20esame%20fa91afca8c0c450a81c1d6442ed0c628/Screenshot_2022-06-22_at_22.47.22.png"/></a></figure></li></ul><ul id="d2c08752-8a3f-441c-8405-44cf6115fd04" class="bulleted-list"><li style="list-style-type:disc">Entità debole<figure id="b28c5f53-c578-4eec-9588-fd4da452e331" class="image"><a href="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Simulazione%20esame%20fa91afca8c0c450a81c1d6442ed0c628/Screenshot_2022-06-22_at_22.51.22.png"><img style="width:480px" src="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Simulazione%20esame%20fa91afca8c0c450a81c1d6442ed0c628/Screenshot_2022-06-22_at_22.51.22.png"/></a></figure></li></ul><h3 id="d71076ed-cb74-48cf-9efe-8eabec61a3c2" class="">Diagramma completo</h3><p id="0072a343-3035-4bcc-ac6c-efa222e826c1" class="">
+</p><figure id="8df824f9-0997-42d8-ba31-c39241488292" class="image"><a href="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Simulazione%20esame%20fa91afca8c0c450a81c1d6442ed0c628/Screenshot_2022-06-22_at_23.01.46.png"><img style="width:1459px" src="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Simulazione%20esame%20fa91afca8c0c450a81c1d6442ed0c628/Screenshot_2022-06-22_at_23.01.46.png"/></a></figure><hr id="ef717a23-24d7-428a-9e9e-c5c921c0c555"/><h1 id="d7a5cafb-e702-48b1-85c2-73a68488acf3" class="">Documentazione</h1><blockquote id="fad7ee2a-eab6-4052-96fe-ca8e45c755ea" class=""></blockquote><hr id="74033bdf-ee62-4d99-ad21-d1dd0b14af40"/><h1 id="0af88090-b21e-4f14-97e1-e0fffcd9fe8c" class="">Modello Logico</h1><pre id="5096a03a-9326-437a-91ce-ed8134c295e4" class="code"><code>Utente(id, username, psw)
+con v.i.r. di id con Cliente(id)
+
+Cliente(id, nome, cognome, data_nascita, email)
+
+AddettoHD(id, nome, cognome)
+
+Tecnico(id, nome, cognome, data_nascita, email)
+
+Ticket(id, stato, locazione, cliente, addettoHD, tecnico)
+con v.i.r. di cliente con Cliente(id)
+con v.i.r. di addettoHD con AddettoHD(id)
+con v.i.r. di tecnico con Tecnico(id)
+
+Report(id, data, tempo, riassunto, commento, convalidato, ticket)
+con v.i.r. di ticket con Ticket(id)</code></pre><hr id="b4c13f56-9f8a-4fb6-9e79-3f08ceee1d7d"/><h1 id="1b6e295e-85ae-49da-a606-e4ff8d660910" class="">Modello fisico</h1><pre id="18bde915-d7de-4de7-8f11-f3f94e797b6b" class="code"><code>CREATE TABLE cliente (
+  id INT PRIMARY KEY auto_increment, 
+  nome VARCHAR(50) NOT NULL, 
+  cognome VARCHAR(50) NOT NULL, 
+  data_nascita DATE NOT NULL, 
+  email VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE utente (
+  id INT PRIMARY KEY REFERENCES cliente(id) ON UPDATE CASCADE ON DELETE no action, 
+  username VARCHAR(20) NOT NULL, 
+  psw CHAR(255) NOT NULL
+);
+
+CREATE TABLE ticket (
+  id INT PRIMARY KEY auto_increment, 
+  stato INT NOT NULL DEFAULT 0, 
+  locazione INT NOT NULL DEFAULT 0, 
+  cliente INT REFERENCES cliente(id) ON UPDATE CASCADE ON DELETE no action, 
+  addettohd INT REFERENCES addettohd(id) ON UPDATE CASCADE ON DELETE no action, 
+  tecnico INT REFERENCES tecnico(id) ON UPDATE CASCADE ON DELETE no action
+);</code></pre><hr id="b3581cf6-2956-4610-860f-cad8a9da3e58"/><h1 id="5c5666b4-3908-4602-831b-3854d9f9ca62" class="">Query</h1><ul id="a3e90b89-4379-4d48-bc28-5a562fe5f2a5" class="bulleted-list"><li style="list-style-type:disc">elenco dei ticket attualmente aperti riportando il nome del cliente che li ha aperti, la data di apertura, il tecnico che li sta seguendo;</li></ul><pre id="033c50b5-aa24-4089-ab18-d0ab147d7dd7" class="code"><code>SELECT tik.id id_ticket, c.nome AS nome_cliente, tec.nome nome_tecnico
+FROM Ticket tik, Cliente c, Tecnico tec
+WHERE tik.cliente = c.id AND tik.tecnico = tec.id</code></pre><ul id="9534e889-fe7a-4616-840d-7028984b5a7c" class="bulleted-list"><li style="list-style-type:disc">tempo medio di chiusura dei ticket completati in un certo intervallo temporale fornito in ingresso.</li></ul><pre id="ea7cec07-2673-41f6-aef5-6b99b7b661e1" class="code"><code>// Utile per ottimizzare i tempi di ricerca
+CREATE INDEX data_completamento_ticket ON Ticket(data_completamento);
+
+SELECT AVG(data_inizio - data_completamento) 
+FROM Ticket
+WHERE data_completamento BETWEEN data1 AND data2;;</code></pre><hr id="97953982-2e31-4bc7-b619-74c54264337d"/><h1 id="bb211060-4341-4040-a1c9-064780ebb186" class="">PHP</h1><p id="4c0215d6-fa8d-4551-800e-0a5d3c9c91f0" class="">Richiesta ticket </p><pre id="6c317612-7adf-49bb-9ea5-ca39ae268f77" class="code"><code>&lt;?php
+session_start();
+spl_autoload_register(function ($class_name) { include $class_name . &#x27;.php&#x27;;
+});</code></pre><pre id="22fdd95a-0687-4acb-8a94-4136f3a54747" class="code"><code>&lt;?php
+
+class ConnessioneDb {
+    CONST DB_HOST = &quot;localhost&quot;;
+    CONST DB_NAME = &quot;dipendenti&quot;;
+    CONST DB_USER = &quot;&quot;;
+    CONST DB_PASSWORD = &quot;&quot;;
+
+    private static $dbManager = null;
+
+    private $connection;
+
+    private function __construct() {
+        $this-&gt;connection = new mysqli( self::DB_HOST, self::DB_USER, self::DB_PASSWORD, self::DB_NAME);
+        if ($this-&gt;connection-&gt;connect_error)
+            die(&quot;Si è verificato un errore: &quot;. $this-&gt;connection-&gt;connect_error);
+    }
+
+    public static function getInstance() {
+        if (self::$dbManager == null)
+            self::$dbManager = new ConnessioneDb();
+        return self::$dbManager;
+    }
+
+    public function creaTicket($cliente) {
+        $query = &quot;INSERT INTO Ticket (cliente) VALUES (?)&quot;;
+        $prepared = $this-&gt;connection-&gt;prepare($query);
+        $prepared-&gt;bind_param(&quot;s&quot;, $cliente);
+        $prepared-&gt;execute();
+        $result = $prepared-&gt;get_result();
+        if ($result == false) return false;
+        else
+            return true;
+    }
+
+    public function tabella_ticket($cliente) {
+        $query = &quot;SELECT * FROM Ticket WHERE cliente=?&quot;;
+        $prepared = $this-&gt;connection-&gt;prepare($query);
+        $prepared-&gt;bind_param(&quot;s&quot;, $cliente);
+        $prepared-&gt;execute();
+        $result = $prepared-&gt;get_result();
+
+        $rows = $result-&gt;num_rows;
+
+        $tabella = &quot;&lt;table&gt;&quot;;
+        if ($rows &gt; 0) {
+            while ($row = $result-&gt;fetch_assoc())
+                $tabella = $tabella.&quot;&lt;tr&gt;&lt;td&gt;&quot;.$row[&quot;nome_ticket&quot;].&quot;&lt;tr&gt;&lt;td&gt;&quot;;
+        } else {
+            $tabella = &quot;&lt;h1&gt;Nessun ticket presente&lt;/h1&gt;&quot;;
+        }
+
+        return $tabella;
+    }
+ }</code></pre><pre id="efbfdd1f-73c9-47e3-9fe1-23a4481cbcd6" class="code"><code>&lt;?php
+include &quot;autoloader.php&quot;;
+$connessione = ConnessioneDb::getInstance();
+?&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Lista ticket&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Visualizza ticket aperti&lt;/h1&gt;
+    &lt;?= $connessione-&gt;tabella_ticket($_SESSION[&quot;cliente&quot;]) ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><pre id="da6031e1-1da6-4bb6-a4d3-951c19bc1854" class="code"><code>&lt;html lang=&quot;it&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;Richiesta ticket&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form method=&quot;get&quot; action=&quot;richiesta_ticket.php&quot;&gt;
+    &lt;input type=&quot;submit&quot; id=&quot;richiesta&quot; name=&quot;richiesta&quot; value=&quot;Richiedi ticket&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><pre id="453799a7-d27e-44af-b8cf-a2f14aace094" class="code"><code>&lt;?php
+include &quot;autoloader.php&quot;;
+
+if (isset($_GET[&quot;richiesta&quot;])) {
+    $connessione = ConnessioneDb::getInstance();
+    $connessione-&gt;creaTicket($_GET[&quot;cliente&quot;]);
+
+    header(&quot;location:ticket_creato.html&quot;);
+} else
+    header(&quot;location:richiesta_ticket.html&quot;);</code></pre></div></article></body></html>

@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Il romanzo</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8e0255e8-6395-46c5-8039-c70cbe55e0fd" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📒</span></div><h1 class="page-title">Il romanzo</h1><table class="properties"><tbody></tbody></table></header><div class="page-body"><h1 id="f659d68b-6791-47ac-9478-27f11cee0108" class="">La crisi del Romanzo</h1><h2 id="90485ee1-3d8e-4288-b5ab-87fea11a5ea3" class="">La rivoluzione romanzesca del primo Novecento</h2><p id="d27f3f2b-e2af-4d5a-a1c9-c00bc76bbd85" class="">Nei primi tre decenni del Novecento si compie in Europa una vera e propria <strong>rivoluzione estetica</strong> che, insieme con la poesia, la musica e la pittura, tocca anche l’arte del romanzo e il modo di rappresentare i personaggi.</p><p id="978658f0-0c7c-4547-b403-f0ae5a194f22" class="">La filosofia di Henri <strong>Bergson</strong>, la teoria psicoanalistica di Sigmund <strong>Freud</strong> e la nuova fisica di Albert <strong>Einstein</strong> corrodevano a poco a poco le solide strutture del pensiero sulle quali poggiava la <strong>società positivista, dissolvendo la nozione di tempo e quella di individuo: </strong><div class="indented"><blockquote id="4c2bb861-3b55-4bc3-9d50-90bf5bd9a524" class="">I romanzieri non possono più accontentarsi della struttura tradizionale del romanzo e cercano <strong>nuove forme</strong> per <strong>esprimere la coscienza incerta</strong> del soggetto in questo mondo frantumato.</blockquote></div></p><p id="442a2b51-3fe7-4843-908b-953c65045197" class="">Il romanzo europeo <strong>non</strong> cerca più allora di<strong> riprodurre la vita </strong>né di offrire un’immagine veritiera delle relazioni umane; dal piano oggettivo del narratore si passa al <strong>piano soggettivo del protagonista.</strong></p><h2 id="6bc7b2c4-3ec9-46e4-bf5c-f7e775320570" class="">La realtà filtrata dalla coscienza</h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="174b4e97-ddd7-4698-bb36-806b8bed2316"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Il sapere a “cosa serve” e “quando si usa” viene dissolto nel ‘900</div></figure><p id="24215477-6b0f-4672-841d-987201826f28" class="">Paul <strong>Valéry</strong> riassume efficacemente la comune insoddisfazione dell’epoca verso le forme romanzesche  tradizionali proclamando il suo fermo <strong>rifiuto di una scrittura narrativa che si limita a una piatta descrizione dei fatti.</strong></p><p id="19d5322c-25d8-479d-92d2-3fe8775103c8" class="">A interessare gli scrittori non è più la realtà esterna ma lo <strong>spazio vivente della coscienza</strong>, l’unico a cui il romanziere possa avere veramente accesso.</p><p id="ff52a80f-5888-472a-9b18-9800a72cf46c" class="">La realtà, filtrata attraverso la coscienza del protagonista, non si presenta più cristallizzata in una forma stabile e definitiva ma appare fluida, sfaccettata, instabile, intermittente.</p><p id="96f10309-c990-4bb0-9c5c-275cd412e49e" class="">Nascono così opere prive di una struttura “logica”, in cui l’ordine cronologico viene manomesso e il racconto lineare è sostituito dal <strong>disordinato flusso di impressioni, di immagini, di impulsi del personaggio.</strong></p><p id="30f2cda7-7dde-4381-b7a9-b65dd3fc541b" class="">Tra le opere più significative di questa rivoluzione troviamo: <div class="indented"><ul id="ac3c5731-38f3-4595-9812-d7b93f2b5a02" class="bulleted-list"><li style="list-style-type:circle"><em>Alla ricerca del tempo perduto </em>di Marcel <strong>Proust</strong></li></ul><ul id="96ca1370-22fa-4013-99d0-74726b53e43c" class="bulleted-list"><li style="list-style-type:disc"><em>Ulisse </em>di James <strong>Joyce</strong></li></ul><ul id="8a4f0473-4dda-4342-8669-33a65c3410dc" class="bulleted-list"><li style="list-style-type:disc"><em>Al Faro </em>di Virginia <strong>Woolf</strong></li></ul><ul id="96d36402-0a1a-4393-82aa-8aabe5563e08" class="bulleted-list"><li style="list-style-type:disc"><em>I romanzi </em>di Franz <strong>Kafka</strong></li></ul></div></p><h2 id="3355c043-d155-4858-a55e-0627e33c2245" class="">Personaggi divorati dall’interiorità</h2><p id="9e618b7a-da7b-4550-b42b-e795c2ab4891" class="">La disgregazione delle forme romanzesche tradizionali coincide con la <strong>dissoluzione</strong> stessa <strong>del personaggio.</strong></p><p id="fa0e532d-8e56-4857-a5a2-04b7e3ebf7ec" class="">Il romanzo ottocentesco di Alessandro Manzoni aveva creato grandi figure umane la cui apparenza fisica e profondità psicologica erano dotate di un forte rilievo individuale e offrivano l’illusione del reale.</p><p id="e2a354bb-c295-4df4-92b1-5db191c34637" class="">E’ proprio questa corrispondenza tra individuo e società a essere messa in crisi dai grandi innovatori del romanzo.</p><p id="3e7d5c56-a930-4524-877c-0cc328a22f9a" class="">Al centro delle loro narrazioni si trova un personaggio divorato dalla sua vita interiore, un “inetto” la cui volontà risulta indebolita al punto che egli <strong>non sembra più</strong> <strong>in grado di assumere un’identità persistente, </strong>né di conoscere i mezzi necessari a realizzare i suoi incerti fini.</p><p id="12e75922-d7b0-447f-8b68-20c9ee0a9de7" class="">Il suo rapporto con la società è ambiguo e problematico e la sua coscienza riflette il conflitto con <strong>un mondo a cui si sente radicalmente estranea.</strong></p><h2 id="fdd02871-cdb3-4d86-a160-71a3be4c63e2" class=""><strong>Una n</strong>arrativa analitica</h2><p id="f1f205f7-094e-408b-afb4-eb8a80ab5674" class="">La narrativa precedente era esplicativa, la nuova è <strong>interrogativa</strong>, analitica: alla ricerca delle cause sostituisce la <strong>ricerca del senso delle cose</strong>, un senso che, retto da un principio di instabilità, compare e sfugge continuamente.</p><h2 id="50dc39f5-e067-4610-b83c-9646d9f3e816" class="">Le modalità della focalizzazione</h2><p id="45f860f6-be94-4e08-b105-a9143dce87a6" class="">Mentre nel romanzo ottocentesco dominava la narrazione in terza persona, i romanzi di questo periodo sono spesso scritti in prima persona.</p><p id="3abaf6db-5fb5-4a26-b7e8-4a14e2b4af70" class="">La vera novità formale è legata alle modalità della focalizzazione, che seguono due tendenze concorrenti:</p><blockquote id="7a528223-df1d-4406-b0c5-2b52c9328e0d" class="">La prima consiste nell’<strong>interiorizzazione del mondo romanzesco da parte di una coscienza: </strong>la narrazione è cioè espressione di una soggettività nella quale la realtà del mondo viene per così dire assorbita; la focalizzazione è allora prevalentemente <strong>interna.</strong></blockquote><p id="10e93d99-1575-4ade-b2a5-d1ac5556c64a" class="">All’interno di questa tendenza troviamo:<div class="indented"><ul id="89d1448f-c2a5-4d51-aa4a-9121e53d8698" class="bulleted-list"><li style="list-style-type:circle">Proust</li></ul><ul id="7b661e67-6c2f-4988-9984-02b925f7ae43" class="bulleted-list"><li style="list-style-type:disc">Woolf</li></ul><ul id="8016fa93-75b2-44cc-ae0a-fc5e0f783c7a" class="bulleted-list"><li style="list-style-type:disc">Joyce</li></ul><ul id="bf43cf14-bc6c-46e6-8620-75d651531f7f" class="bulleted-list"><li style="list-style-type:disc">Svevo</li></ul></div></p><blockquote id="6f280741-08bf-49e4-be9e-426c4031bb8c" class="">La seconda consiste invece nell’<strong>abolizione del soggetto</strong>, in modo tale che il discorso narrativo non appaia più come la manifestazione di una coscienza, ma diventi anonimo, non assegnabile ad alcun soggetto; la focalizzazione è in questo caso <strong>esterna</strong>.</blockquote><p id="b1bd0556-0fb2-4abb-9f02-8d51a196ff97" class="">In questa troviamo:<div class="indented"><ul id="c3fd6c41-4f0a-4704-a0b2-fcc0512f68c9" class="bulleted-list"><li style="list-style-type:circle">Kafka</li></ul></div></p><hr id="b7e1e977-7ce6-49fb-9331-dc0ba3dffa20"/><h1 id="8353880a-75c0-4c86-b37a-ef09a72ff8b6" class="">Il romanzo in Italia</h1><p id="2a191653-1394-4d2f-8db0-165033f879ad" class="">Mentre nel resto d’Europa la critica segue con interesse l’evoluzione del romanzo discutendo sulle forme del suo rinnovamento, in Italia i critici assistono con indiffrenza a un tale dibattito.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9f258d5b-aba1-407d-b527-f724ee8bd969"><div style="font-size:1.5em"><span class="icon">💭</span></div><div style="width:100%">Lo scarso interesse per il rinnovamento delle forme nasce da un’impostazione critica condivisa, che associa <strong>il rifiuto teorico dei generi letterari</strong> a una <strong>concezione astorica del romanzo</strong> inteso come una sorta di essenza immutabile che, definita una volta per tutte secondo il modello classico (Manzoni), non può essere modificata nel tempo.</div></figure><p id="1a3198e3-a502-4a88-8165-7464f4e62531" class="">Così, mentre nel resto d’Europa il romanzo si avvia a uno sconvolgimento senza precedenti, in Italia i critici e i letterati discutono soprattutto di “stile”, di eleganza formale e non concepiscono che si rimetta in discussione la struttura tradizionale.</p><p id="3331584e-06ad-4e07-945c-429b6ca5bf54" class="">L’ostilità italiana prende origine da una concezione del romanzo <strong>ispirata al modello classico</strong>, in base al quale la forma romanzesca esprime un soggetto o rappresenta il mondo per un soggetto.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e8c3a7c6-1d5a-4699-978f-eefd9bf39f93"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Il timore diffuso è che <strong>la dissoluzione della forma possa mandare in frantumi anche l’unità del soggetto.</strong></div></figure><p id="a8d84541-1855-4e38-9978-b000af8bc41d" class="">Si ha la paura che si perda di vista ciò che dà unità e senso al mondo romanzesco: l’uomo.</p><hr id="bd2b71ae-6639-4c43-a69b-f65219757389"/><p id="5c6f28ee-a713-4521-95d3-650487343193" class="">Il cosiddetto “modernismo” avrà in Italia alcune caratteristiche particolari, come il <strong>mantenimento di una trama</strong> anche nei romanzi più destrutturati e il <strong>rifiuto del più radicale “flusso di coscienza”.</strong></p><p id="50340572-5a5d-41fd-9455-944bcefebb5a" class="">In questi anni, in Italia, a dettare la moda in fatto di gusto letterario sono alcune riviste fiorentine.</p><p id="febd5485-25d3-48b1-923b-b444616bbe26" class="">Il primo decennio del Novecento è caratterizzato dal diffondersi di numerose <strong>riviste politico-culturali</strong> che presentano alcuni tratti comuni: si pongono provocatoriamente <strong>contro il positivismo</strong> e le sue espressioni letterarie, il Naturalismo e il Verismo.</p><p id="1607f2a5-8139-4502-888f-285e9c4444d1" class="">Sul piano letterario tentano di aprire la cultura italiana alle influenze europee, ma rimangono <strong>fortemente vincolate a un estetismo di stampo dannunziano,</strong> che tende a non riprodurre, ma a “trasfigurare” la realtà.</p><p id="ef9c56eb-b37e-44c6-a8cb-5de7f4ebfa45" class="">Diversa dalle altre e decisiva per il discorso sul romanzo è la più importante tra le riviste fiorentine “<strong>La Voce</strong>”.</p><p id="f3abe912-b5c7-41e4-a1d3-263f002c5c42" class="">La rivista conosce due fasi molto diverse fra loro: <div class="indented"><ul id="731349cb-ba1d-43f8-8728-2dbf5889e5dc" class="bulleted-list"><li style="list-style-type:disc">Nella prima fase è caratterizzata dalla volontà di dare “voce” alla nuova generazione intellettuale, spingendola a uscire dal suo isolamento e a reagire alla retorica.</li></ul><ul id="1a4ca692-16d7-42cb-86db-b097e5641f87" class="bulleted-list"><li style="list-style-type:disc">Nella seconda fase si trasforma da rivista politico-culturale a rivisita <strong>puramente letteraria</strong>, teorizzando la poetica detta del “frammento” e difendendo la necessità di una prosa lirica, breve, intensa, che verrà poi denominata “<strong>prosa d’arte</strong>”.</li></ul></div></p><p id="f790f92d-3c80-45c1-a670-ff3536f99e2d" class="">I principi di questa poetica sono:<div class="indented"><p id="cd45a7ee-eace-47bd-b426-d3a0fd9c345c" class="">lo scrittore deve saper cogliere le vibrazioni segrete del sentimento, esprimendosi in una <strong>prosa “lirica”,</strong> cioè in un <strong>componimento intenso e breve</strong> stilisticamente puro, formalmente perfetto.</p></div></p><p id="1e3a7e2c-cc51-4588-a3a1-7d756f40e044" class="">Alla luce di questa poetica i “frammentisti” sviluppano un vero e proprio programma dell’<strong>antinarrativa</strong>: contrari a ogni forma di letteratura “costruita” e “oggettiva” essi <strong>guardano con diffidenza al romanzo</strong>, che considerano come un accumulo di materiali disordinati.</p><hr id="07464bf8-d319-40b6-9442-ef77b29a9ff8"/><p id="d4ea3b9f-7905-41bb-a7d9-21662af5d4ee" class="">In un tale clima ostile al rinnovamento del genere romanzesco, gli scrittori italiani che vogliono dedicarsi alla narrativa sperimentando nuove forme devono farlo quasi chiedendo il permesso, clandestinamente.</p><p id="4c1ec733-d6d2-4846-a12f-9381c19725cf" class="">I due autori italiani più vicini al rinnovamento europeo delle forme narrative sono <strong>Pirandello e Svevo</strong>, i quali sfuggono tanto al purismo dei “frammentisti” quanto al conservatorismo.</p><p id="c196f283-3368-4f04-83e8-ae7e2212fac5" class="">I due scrittori giungono da strade diverse a un <strong>romanzo di tipo nuovo, analitico e destrutturato.</strong></p><p id="e58358f5-04b6-41d1-9f1e-12860c68a453" class="">Sin dai suoi primi romanzi <strong>Svevo porta il dramma dentro il personaggio</strong> creando un campo narrativo mobile, instabile.</p><p id="c0a38889-c25a-407d-b301-973c52788cb5" class="">Pirandello racconta <strong>l’incertezza</strong> di ogni forma, di ogni verità, attraverso una <strong>forma frantumata</strong> che <strong>mima la progressiva dissoluzione del protagonista.</strong></p><p id="f4bcbf70-3b27-4596-a21c-0696b3ecd585" class="">Tuttavia <strong>l’Italia non è pronta ad accogliere il rinnovamento delle forme romanzesche</strong>: i primi romanzi di Svevo vengono ignorati dalla critica.</p><p id="43ed34fc-7206-487f-a513-2949e0b4e91f" class="">L’accoglienza delle opere di Pirandello, pur molto meno ostile di quella riservata a Svevo, traduce la stessa difficoltà italiana ad accogliere le novità in fatto di narrativa.</p><p id="594df532-967a-4cf3-8220-6d782b62dff1" class="">Non a caso lo scrittore siciliano riesce a imporsi in Italia non tanto con i suoi romanzi, ma attraverso lo “scandolo” del suo teatro.</p><hr id="77c627fc-99e6-4143-b353-afe0d19657e4"/><h1 id="1b6cb05b-60df-46dc-9e3c-bda61a802087" class="">Riassunto</h1><figure id="d3ea0c24-c40e-41ea-a875-d99bb2c3e475" class="image"><a href="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20130.png"><img style="width:1102px" src="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20130.png"/></a></figure><p id="6bf5ccea-d65a-42df-af97-afc6cd3bc54f" class="">
+</p></div></article></body></html>

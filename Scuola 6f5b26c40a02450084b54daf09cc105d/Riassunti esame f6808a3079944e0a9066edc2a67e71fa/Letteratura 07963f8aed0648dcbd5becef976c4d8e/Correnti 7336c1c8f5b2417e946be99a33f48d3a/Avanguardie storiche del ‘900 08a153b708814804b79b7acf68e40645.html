@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Avanguardie storiche del ‘900</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="08a153b7-0881-4804-b79b-7acf68e40645" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🚀</span></div><h1 class="page-title">Avanguardie storiche del ‘900</h1><table class="properties"><tbody></tbody></table></header><div class="page-body"><nav id="023747d6-06c1-42f3-917a-d8720dc0d032" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#4118907a-e08e-4635-b0b7-d16bfda810a4">Le arti figurative</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#0931816b-4f22-496c-bcde-d688c98228db">L’espressionismo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#cdeb585f-1a4e-4d87-b400-6c0b70fc657b">Il Dadaismo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#6e42bbfe-fc9f-48a9-a7b9-33b8c8aa5b72">Il Surrealismo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#76e124fb-16fd-470d-9d19-c659ee0217be">Il Futurismo</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#eb79c993-6c57-4309-914a-0b3fbe06f105">Filippo Tommaso Marinetti</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#682f1262-6610-4fee-a8cf-358312586903">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#31b2d4d5-45a6-4cbd-82af-20ade6975aaf">Riassunto</a></div></nav><h1 id="4118907a-e08e-4635-b0b7-d16bfda810a4" class="">Le arti figurative</h1><p id="29a68395-2dcb-4968-9ba1-b4019a4c2b08" class="">Con il termine di “Avanguardie storiche” si designano alcuni movimento artistici e letterari che si affermano in Europa nei primi decenni del Novecento, promuovendo un radicale <strong>rinnovamento dei linguaggi espressivi</strong> in polemica con la tradizione e la cultura ufficiali.</p><p id="36d8ff8c-0ec7-4fe7-9a79-3ad5bc88f3ab" class="">Si tratta di gruppi internazionali e interartistici perchè riuniscono autori di <strong>diversi paesi</strong> e coinvolgono <strong>tutte le arti.</strong></p><p id="ae5fbc6f-ec41-4234-9100-ae9e9d7a83d0" class="">Gli artisti delle avanguardie intendono affermarsi come <strong>audaci apripista</strong>: al culto del dato oggettivo e della razionalità teorizzato dal Positivirmo e dal Naturalismo, essi contrappongono un <strong>mondo percepito attraverso le sensazioni.</strong></p><p id="122c25b6-8182-4cf3-be6b-133702c8c287" class="">Nell’atteggiamento di questi gruppi si esprimono la sfida e la provocazione, lo sberleffo e la <strong>polemica contro la tradizione</strong> e contro il pubblico il cui gusto viene condannato come espressione antiquata di una borghesia mediocre e affarista.</p><hr id="9ff7f658-c26a-47d8-8ded-a9cc2159ffb1"/><p id="14af92f4-e988-44ef-a42c-234a44b23c88" class="">La contestazione nei confronti dei valori estetici tradizionali risale agli anni Ottanta dell’Ottocento, epoca in cui in Francia i <strong>poeti Simbolisti</strong> avevano preso le distanze dalla morale comune e dai gusti letterari borghesi approfondendo la ricerca di <strong>nuove vie espressive.</strong></p><p id="69a98cf3-c011-4057-a61d-5070ade15fd8" class="">Rispetto all’esperienza del simbolismo, le avanguardie dell’inizio del Novecento rifiutano qualsiasi concezione estetizzante ed elitaria: <strong>l’arte perde il suo carattere sacrale</strong> e il poeta non appare più come un uomo isolato ed eccezionale; egli si sente un precurose, ma sa di appartenere al suo tempo e su questo tempo vuole incidere.</p><hr id="3e0e879f-843f-4728-aa85-54672b463c13"/><p id="f1f93349-97b4-411b-aa0b-81ccefa2365a" class="">Il rifiuto dei codici culturali e dei mezzi espressivi correnti è legato alla <strong>massiccia affermazione del mercato culturale</strong>: in quegli anni il prodotto letterario e artistico si era progressivamente trasformato in merce, in oggetto riproducibile in serie che doveva soddisfare il gusto mediocre della maggioranza.</p><p id="dd281d8d-b275-49e2-b93a-4b92dd136fd2" class="">Gli artisti <strong>si oppongono a questa riduzione dell’arte a prodotto di consumo</strong> e respigono l’idea dell’arte come pacifica fruizione borghese riservata a luoghi preposti.</p><p id="a6a930ef-d995-4b81-9493-c31db3b0d007" class="">Vogliono invece <strong>portare l’arte nei luoghi più frequentati</strong>, per provocare il pubblico e sfidarlo.</p><hr id="9f90ea47-b6b4-4ab8-a1d0-69009b4a7ce8"/><p id="297ea96a-46bb-4997-ad06-6a875335551e" class="">Il rinnovamento più radicale riguarda le arti figurative, quando un gruppo di pittori, tra i quali <strong>Henri Matisse</strong>, espongono le loro opere e il pubblico scopre con stupore alberi viola e figura umane rosse e verdi, colori puri, violenti, buttati a caso sulla tesa per <strong>esprimere le emozioni attraverso effetti ottici</strong> immediati.</p><hr id="483b3c6a-d84f-41d2-8554-3a3f7d77ac93"/><p id="34f9a8ca-2d60-48b4-84a1-773a0a4f2938" class="">In letteratura il primo a raccogliere e a fare suoi i principi delle avanguardie artistiche è Guillaume <strong>Apollinaire</strong> che può essere considerato il precursore della rivoluzione letteraria di inizio secolo.</p><p id="3505c0ec-1d92-4f3b-944c-a160a30fce65" class="">SOgnando di formare un movimento poetico globale, il poeta francese ritiene che, per avvicinarsi il più possibile alla vita, l’<strong>atto creativo debba venire dall’immaginazione.</strong></p><p id="b5a8b3eb-af38-4212-a63c-b5d055ee7156" class="">Apollinaire attua un rinnovamento formale: spezza la linearità del discorso poetico e crea immagini figurate facendo ricorso al “<strong>testo simultaneo</strong>” nel quale fonde poesia e pittura.</p><p id="bd986eb7-e61e-4159-b5cd-217888f2e8f1" class=""> </p><hr id="603b442a-5c41-4f92-8d37-516b4f33488e"/><p id="0f0f1135-3405-4ef5-bb4c-e4788336604a" class="">Sulle tracce di Apollinaire i movimenti di avanguardia sperimentano <strong>forme nuove, ardite e sconcertanti.</strong></p><p id="6dafcc74-e121-4739-b72c-bde8136784a0" class="">A prevalere sono ora il <strong>verso libero e la paratassi</strong>, spesso accompagnati da una <strong>disposizione irregolare delle parole.</strong></p><p id="69d777eb-9b70-4a27-821d-cf82f589277b" class="">Il lessico si apre ad ambiti e <strong>temi nuovi</strong> e inediti.</p><p id="8947ae47-586f-4c00-845f-4e0cac5fb51f" class="">Un tale sperimentalismo è legato alla rottura del canale di comunicazione con il pubblico comune: i rappresentanti delle avanguardi non intendono fars icapire, ma <strong>vogliono provocare</strong> e scandalizzare.</p><p id="e537795d-ad4d-48e5-b466-b17e7584b5d3" class="">Lo scritto d’avanguardia mira a creare un’opera ileggibile nel presente e <strong>scrive per un lettore che non c’è ancora.</strong></p><p id="3630cc73-e9ea-4c6f-87be-c0c93d099066" class="">Questo futuro lettore deve essere preparato, creato, educato: per questo motivo l’opera degli scrittori d’avanguardia presenta un <strong>carattere spesso didattico</strong> e pedagogico.</p><hr id="abba0179-56fd-4cc8-acf9-e1b3426ab0d8"/><h1 id="0931816b-4f22-496c-bcde-d688c98228db" class="">L’espressionismo</h1><p id="549208a3-0f27-48ba-ad31-5592291cbfe7" class="">L’espressionismo è un movimento che sorge e si diffonde per lo più in Germania e in Austria nei primi decenni del Novecento, dando inizio per primo a quella <strong>crisi dei linguaggi artistici</strong>.</p><p id="16cacf56-cf29-4b58-bfdc-34f0d99c2c24" class="">Si tratta di un orientamento artistico che, opponendosi al Naturalismo e all’Impressionismo, coionvolge diverse forme espressive.</p><p id="7e0ec19d-b0db-4a90-9da1-121aced38736" class="">Ciò che caratterizza l’avanguardia espressionista è un <strong>impiego soggettivo del mezzo artistico</strong>: l’artista fa un uso esasperato, deformante dell’espressione per manifestare il suo <strong>stato d’animo travagliato ed estremo</strong>.</p><p id="76cce4a3-73d3-4969-b320-810fc240ad34" class="">I temi dominanti sono quelli della <strong>città minacciosa</strong> e soffocante, della convulsa <strong>civiltà delle macchine, </strong>dell’angoscia che si esprime in <strong>corpi disarticolati</strong> e in <strong>volti trasfigurati</strong> di forte violenza espressiva.</p><p id="6ffb3dde-60da-4cb4-889c-762ef6ab8706" class="">L’espressionismo trova le sue premesse nelle opere di pittoti come <strong>Munch, van Gogh, Gauguin.</strong></p><hr id="24d9bf2c-c93f-427e-986d-f047a4f1b5f3"/><p id="1adea9e2-b89b-4206-b6f1-ae2911e69c40" class="">In letteratura il termine “Espressionismo” viene usato per designare alcune opere letterarie che rappresentano il <strong>mondo come una proiezione del soggetto</strong>, delle sue ossessioni: la visione dell’artista subentra alla descrizione delle cose.</p><p id="b2fea062-df86-4e30-91b0-c873334c6ccf" class="">La <strong>brevità e concentrazione delle formule</strong>, non coordinate ma giustapposte attraverso la <strong>paratassi</strong>, la sistematica deformazione delle cose e dello spazio, il lessico basso, crudo, scelto per il suo valore provocatorio e demistificante, danno forma a <strong>opere visionarie, astratte</strong>, di forte violenza espressiva e polemica.</p><hr id="e1ad3052-3a3a-425f-aa61-e3544c009931"/><h1 id="cdeb585f-1a4e-4d87-b400-6c0b70fc657b" class="">Il Dadaismo</h1><p id="35dc3144-28fc-4438-a3cf-5fa58d8b5561" class="">Il Dadaismo è un movimento artistico e letterario fondanto a Zurigo nel 1916, dal poeta francese <strong>Tzara</strong>.</p><p id="c5999949-2898-47b8-a1c2-47fa38a5f3ee" class="">Il termine <em><strong>dada</strong></em> è una <strong>voce onomatopeica del linguaggio infantile</strong> che significa propriamente “cavallo”, ma anche “giocattolo”.</p><p id="e9cdbc6d-557c-4d6b-9894-bc64e55868ee" class="">I dadaisti dichiarano di averlo scelto per gioco, aprendo a caso un dizionario francese.</p><p id="13474ec9-0a6f-414c-be6e-03796ddd0ad2" class="">Un tale nome corrisponde allo spirito del movimento che, a differenza del più cupo <strong>Espressionismo</strong>, sceglie un <strong>modo giocoso </strong>di manifestarsi.</p><p id="ef557809-bb98-48de-ac7b-37e5a23115bd" class="">Il carattere dominante del movimento è, tanto nel campo delle arti figurative quanto in quello letterario, una forte <strong>carica anarchica e sovvertitrice</strong> che mira a roversciare gli schemi razionali e le rassicuranti certezze che sono alla base della mentalità benpensante.</p><p id="36740490-fb4b-4119-92c6-d2c0fc4fcafe" class="">Nella loro volontà di <strong>demolire ogni ordine</strong>, i dadaisti si ribellano in particolare contro il sistema dell’arte e della sua mercificazione.</p><p id="fa47b289-2f8c-42c2-a95f-7096846fcb7e" class="">Il suo intento provocatorio è quello di <strong>desacralizzare l’impronta creatrice dell’artista</strong> e la stessa esperienza artistica.</p><p id="bcf7c73a-4d7e-4c3a-aa56-9a6d06e20ec3" class="">Oltre al rifiuto della mercificazione dell’arte, i motivi principali del Dadaismo sono la riflessione sul <strong>legame tra arte e vita,</strong> l’interesse per la <strong>follia</strong> e per <strong>l’inconscio</strong>, l’esaltazione del caso e del <strong>gesto gratuito</strong>.</p><p id="22d8b249-fb21-4619-abc8-0363d1863577" class="">A differenza del Futurismo, il Dadaismo persegue al contrario l’<strong>alogicità</strong>, il <em>nosense</em>, l’assurdo, l’uso di <strong>parole prese a caso</strong> ed elevate a opere d’arte.</p><hr id="e9b4e9e4-bdd5-46e0-b059-4b9e36d8c2db"/><p id="184cadef-1f9c-464c-9217-18d49b777da9" class="">La principale accusa che venne mossa al movimento fu quella di non essere riuscito ad andare oltre la provocazione, la protesta, lo scandalo, cioè di <strong>non aver proposto una poetica positiva.</strong></p><p id="6fc3519c-f401-4090-96a8-769a5737024d" class="">Il merito maggiore del Dadaismo sta comunque nell’aver promosso la più ampia e radicale sperimentazione in tutti i campi della produzione estetica.</p><p id="a51d729a-1d52-4c8f-8195-45074cc2bfde" class="">La <strong>fusione di diversi linguaggi artistici</strong>, le tecniche del <em>collage </em>e dell’<em>assemblage</em>, il fotomontaggio.</p><hr id="1b2b85bf-a70c-4c03-ae4d-c15250108787"/><h1 id="6e42bbfe-fc9f-48a9-a7b9-33b8c8aa5b72" class="">Il Surrealismo</h1><p id="1b8810f9-06ac-4773-8555-a8ff991e83b5" class="">A differenza del Dadaismo, da cui pure viene condizionato, il movimento Surrealista va oltre la semplice provocazione e fa leva su un programma positivo, proponendo un vero e proprio progetto di liberazione da attuarsi tanto sul piano creativo quanto su quello sociale.</p><p id="1fa67fc9-052c-4563-9a5d-88f0ba7cb3ac" class="">I principali esponenti sono <strong>Breton, Soupault, Aragon, Eluard.</strong></p><p id="e49c53a6-c11d-4502-b1c5-8b74977f87b8" class="">Breton e i surrealisti vogliono <strong>superare il nichilismo</strong> e rinnovare radicalmente il rapporto tra l’individuo e il mondo moderno dominato dalla prospettiva razionale borghese.</p><p id="fca2297e-3aad-444f-b95f-c3d2d9ec9bd0" class="">L’arte deve rivalutare tutto ciò che il Positivismo aveva condannato ed escluso, come il <strong>meraviglioso</strong>, il <strong>sogno</strong>, le <strong>visioni</strong>, la <strong>follia</strong>, la <strong>sessualità</strong>, dando voce all’<strong>inconscio</strong>, inteso come forza in cui si manifestano le pulsioni più profonde e l’immaginazione.</p><p id="13782237-0054-4b02-ac62-1abcafefa78a" class="">Facendo appello alla teoria freudiana dell’inconscio, i surrealisti utilizzano la “<strong>scrittura automatica</strong>”, cioè una scrittura che, seguendo le libere e casuali associazioni della mente così come sono “dettate” dai movimenti profondi dell’io, si libera, da “qualsiasi controllo esercitato dalla ragione”.</p><p id="3084290c-37d8-42d7-9666-5890c9a74601" class="">La prima opera surrealista, <em>Campi magnetici,</em> incita a servirsi dei meccanismi dell’inconscio, proponendosi di liberare il inguaggio dalla sua funzione meramente utilitaristica.</p><p id="93a3fade-32d7-4026-b759-aaeb16b406d6" class="">La scrittura automatica, che prevede anche l’uso di <strong>tecniche collettive, </strong>porta alla <strong>svalutazione del talento artistico individuale</strong>.</p><p id="8c0f5e07-c948-4107-8e91-8ba2b632d329" class="">L’analisi marxista è considerata la prospettiva più coerente, in quanto capace di proporre la liberazione totale dell’uomo, per questo i surrealisti si appoggiano a tale pensiero.</p><hr id="8caf9d35-c35a-4235-85fe-b4b0ee09cb49"/><p id="37065c55-7d66-44c5-82fd-a99f4d3f1b97" class="">Il Surrealismo rivaluta l’arte primitiva, le creazioni degli alienati mentali e le forme artistiche popolari in cui domina il gusto per il <strong>macabro e il fantastico.</strong></p><p id="036f36b7-f4b4-4ca8-9e11-c619e74d0d50" class="">Al Surrealismo aderiscono pittori europei come <strong>Magritte </strong>e <strong>Dalì.</strong></p><p id="caa8fa41-933d-4c5d-9dc1-ab3b7634de82" class="">Il movimento surrealista si indebolisce negli anni Trenta a causa delle <strong>divergenze politiche</strong> tra i suoi esponenti, che nel 1927 avevano aderito al Partito comunista.</p><hr id="80346c68-31bc-4e93-a06c-915277a6120b"/><h1 id="76e124fb-16fd-470d-9d19-c659ee0217be" class="">Il Futurismo</h1><p id="3030c621-cde7-49cc-ad54-f799e64ea8d1" class="">Il Futurismo è un’<strong>avanguardia interartistica</strong> complessiva, capace di influire tanto sulle arti quanto sul costume e sui modelli di comportamento: i numerosi manifesti teorici e tecnici futuristi definiscono la linea del movimento in ogni campo, dalle arti al ruolo della donna, dalla politica alla cucina.</p><p id="feae4fb7-897d-4d3a-8049-66f9ca3aa06f" class="">Il movimento viene fondanto nel <strong>1909</strong> da <strong>Filippo Tommaso Marinetti</strong>, che pubblica il primo <em><strong>Manifesto del Futurismo</strong></em> sul quotidiano francese “Le figaro”.</p><p id="d67ea9dc-e98d-43fb-bb72-3d1527f12ca1" class="">Questo manifesto contiene già tutte le linee essenziali del movimento: ispirandosi al <strong>dinamismo della moderna civilità industriale</strong>, Marinetti esalta la bellezza della velocità e della macchina.</p><p id="309f1022-e4d7-41d1-8b78-0226ac0eb7c5" class="">Egli è convinto che le nuove forme di comunicazione, come il telefono, il grammofono, ecc, abbiano profondamente influenzato la sensibilità e la psiche umana, producendo fenomeni significativi come l’<strong>attrazione per il nuovo, l’imprevisto, il pericolo e la velocità</strong>: l’arte deve dunque adeguarsi a questa nuova percezione delle cose trovando gli strumenti espressivi più adatti e opponendosi con forza alla tradizione.</p><p id="ac631bf2-f8fc-4ec7-b3a2-31f8aef34fc0" class="">Marinetti scaglia la propria <strong>invettiva contro le città d’arte</strong> e propone di <strong>distruggere i musei, le accademie, le biblioteche</strong>, e tutte le istituzioni che celebrano l’arte nella sua separatezza e salvaguardano i valori della tradizione e del passato.</p><hr id="f9160dff-c5c9-4a7a-8313-152f3da8d4db"/><p id="3ad047f8-fba1-4e31-86ca-809f8b74f504" class="">A differenza delle altre avanguardie, il Futurismo <strong>non si oppone alla mercificazione dell’arte</strong>, ma provocatoriamente la accetta, proponendo anzi di sostituire il valore estetico dell’opera con quello commerciale.</p><p id="bed497c6-d1f4-46df-a08c-60b2ae3f49de" class="">L’artista perde così l’aura conferitagli dalla critica, ma mantiene una <strong>posizione di privilegio.</strong></p><p id="9b56c16d-5171-4ab7-a405-0ca27aa8c1be" class="">Perfettamente adeguati alla “modernità”, i futuristi colgono l’importanza della <strong>comunicazione di massa</strong> e se ne servono con abilità a scopo di propaganda: lo <strong>scandalo e la provocazione</strong> volutamente ricercati sono efficaci strumenti per spettacolarizzare il loro messaggio e per imporsi al pubblico.</p><p id="94f34b06-8d02-4060-a9bb-e66955a9cff8" class="">La rivolta Futurista non è priva di ambiguità: da un lato, rispetto alle altre avanguardie europee, la cui polemica antiborghese appare radicale e senza compromessi, l’adesione totale e acritica dei futuristi italiani alla modernità riflette la loro <strong>accettazione e celebrazione dello stato sociale dominante</strong>, quello dell’industrialismo capitalistico. Dall’altro altro, l’esaltazione del movimento aggressivo e del gesto violento spinge i futuristi a <strong>glorificare la virilità, il militarismo, la guerra</strong>, in definitiva, <strong>il fascismo.</strong></p><hr id="f814b8bf-7bde-479d-b92f-858221ad0e06"/><p id="8feca2c9-f7ad-4ad3-9f9b-696f8d90d502" class="">Sin dalla sua prima fase, dal 1909 al 1912, il Futurismo sente l’urgenza di <strong>trovare un linguaggio adeguato</strong> per tradurre in modo efficace la nuova sensibilità.</p><p id="d0298df2-36c4-47b2-af45-f3f62002d8c0" class="">Il Futurismo radicalizza il dannunzianesimo e ne diventa l’involontaria parodia.</p><p id="fb9747cd-17a1-451c-937a-f737f60dc9b5" class="">Sul piano formale, la parola d’ordine di questa prima fase è quella del <strong>verso libero</strong>, innovazione che incontra l’ostilità di Pascoli e il silenzio di d’Annunzio.</p><p id="0a3777a4-9ca9-4acf-889c-026435feb6c8" class="">Durante la seconda fase del movimento, dal 1912, al 1915, il rivoluzionamento delle forme espressive diventa più radicale: il <em>Manifesto tecnico della letteratura futurista</em>, a cui seguono altri due manifesti, segnano una svolta decisiva; per esprimere la velocità, la simultaneità edlle impressioni, la rapidità di diffusione di una notizia, il poeta non pul perdersi nei meandri della sintassi tradizionale, che prevede di subordinare tra loro le frasi.</p><p id="cb53012d-0c96-4369-8c74-a4d34966422e" class="">Marinetti passa così dal verso libero alle <strong>parole in libertà</strong>, gettate sulla pagina senza ordine logico e associate per analogia, seguendo una <strong>immaginazione senza fili.</strong></p><p id="11630621-d50d-4437-97de-5de39a678cea" class="">I poeti futuristi devono <strong>distruggere la sintassi</strong>, abolire la punteggiatura, sopprimere l’aggettivo e prediligere l’uso dei verbi all’infinito, dell’onomatopea e della <strong>poesia visiva</strong>.</p><p id="7f0424a3-c8c8-4d0f-a68e-82441310682f" class="">L’uso delle <strong>analogia</strong> permette di <strong>penetrare l’essenza della materia </strong>nelle sue diverse e opposte componenti.</p><hr id="aa060372-b5c4-4814-a66d-20fd1ecbc49b"/><p id="554dba25-fb3a-49a7-b769-7579bd6995a5" class="">Se nell’ambito letterario il Futurismo rimane piuttosto scarso di risultati, più significativi sono invece i risultati sul piano della pittura.</p><p id="bc041503-dc79-4def-b34b-c8ab1c8665bf" class="">Troviamo <strong>Boccioni, Carrà, Balla</strong> che sottoscrivono il <em>Manifesto dei pittori futuristi.</em></p><p id="f2b862f4-2333-4138-8e36-87b4ecd9c910" class="">Vengono così elaborati i concetti di <strong>dinamismo plastico, simultaneità, polimaterismo </strong>e di <strong>compenetrazione dei piani.</strong></p><hr id="7dd47902-247d-45bb-a242-f2630be947b6"/><p id="0d933890-435c-4094-a4e7-917ee1ce5a88" class="">Durante la fase che va dal 1915 al 1920 il Futurismo accentua la sua tendenza alla politicizzazione.</p><p id="6646fd08-e9e0-445a-9c86-70b3f4e2c8bc" class="">Se i membri del movimento avevano ripetuto sin dall’inizio che le loro idee non riguardavno soltanto le arti, ma anche la politica e un <strong>nuovo senso del vivere</strong>, con l’avvicinarsi della Prima guerra mondiale le loro posizioni si trasferiscono sempre più sul piano d’azione, sfociando prima nella <strong>partecipazione alle manifestazioni interventiste</strong>, poi a quelle fasciste e imperialiste.</p><p id="10b9c2b2-991e-4af3-9508-36877f2591c4" class="">Dopo la guerra i futuristi si organizzarono in un <strong>partito politico</strong>, passando progressivamente dalle iniziali posizioni genericamente nazionalistiche a antimonarchice a un <strong>sovversivismo di destra</strong> che esalta l’espansione imperialistica e l’azione violenta di gruppi organizzati.</p><p id="f84f9b08-808e-4c20-afc5-50e5c8577c55" class="">La maggior parte dei futuristi aderisce al <strong>fascismo</strong>, che considerano come la realizzazione minima del loro programma politico.</p><p id="616161ff-34e6-4980-a1f2-52a59427c846" class="">Nel 1920 si chiude la cosiddetta “<strong>fase eroica</strong>”, il movimento continua a sopravvivere anche negli anni Venti e Trena ma senza più reale incidenza nella vita culturale e politica.</p><h2 id="eb79c993-6c57-4309-914a-0b3fbe06f105" class="">Filippo Tommaso Marinetti</h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="64c46352-290e-47d8-955b-33e91f4f0ff5"><div style="font-size:1.5em"><span class="icon">🐣</span></div><div style="width:100%">Filippo Tommaso Marinetti nasce ad Alessandria d’Egitto nel <strong>1876.</strong></div></figure><p id="5e48d157-e723-47e7-bf12-20415a1c89a4" class="">La famiglia si trasferisce a <strong>Milano nel 1894</strong>.</p><p id="aa5def9a-372c-4da8-b530-3788742dde8f" class="">Dopo aver conseguito il baccalaureato a Parigi, si iscrive alla facoltà di Legge a Pavia.</p><p id="3fd3a419-1e11-453d-878b-7790aca90275" class="">Il <strong>Fratello Leone muore</strong> e Filippo matura in quegli anni profondi <strong>sensi di colpa</strong> e un cupo pessimismo, che si convertirà in seguito in un atteggiamento di <strong>ostentato ottimismo</strong> fondato sull’idea dell’uomo invincibile e immortale.</p><p id="2f2e1050-1e33-4597-b119-bf03f37387e8" class="">RIceve i primi riconoscimenti in Francia, dove collabora ad alcune riviste di Parigi ma <strong>elabora le sue idee a Milano.</strong></p><p id="920616f5-aeb1-41c4-a657-9d0c11d7e026" class="">Egli cerca una terza via tra l’estetismo decadente di d’Annunzio e la marginalità ostentata dei Crepuscolari.</p><p id="5837f5ae-b5ee-4093-af36-4618ad7277c7" class="">Nella società industriale, dominata da mezzi di comunicazione, il poeta non può più starsene in disparte, ma deve <strong>rivolgersi alle masse.</strong></p><p id="bedc62ff-9a4e-4190-9153-fff46f6f1ce7" class="">Marinetti mostra sin dall’inizio una perfetta padronanza dei mezzi di comunicazione e un’are sapiente della pubblicità che fanno di lui un <strong>abilissimo organizzatore di cultura</strong> capace di suscitare energie intellettuali e adesioni anche grazie agli scandali e alle azioni eclatanti.</p><p id="75d390bf-4b77-40f2-824f-a8bfd39127ce" class="">Nel 1909 pubblica il “<em>Manifesto del Futurismo</em>”, in questo e nei successivi manifesti Marinetti, dando prova di una <strong>retorica tagliente</strong> di grande efficacia, lancia la propria <strong>invettiva contro i miti romantici e di tutta l’arte passatista.</strong></p><p id="412ef270-ddb6-49b2-966c-0146c6922285" class="">L’azione riformatrice di Marinetti appare più decisiva in campo teatrale: l’idea di uno <strong>spettacolo sintetico</strong> in cui i personaggi, ridotti a individualità astratte, operano in uno spazio scenico polidimensionale diventerà un punto di <strong>riferimento decisivo per il successivo teatro di avanguardia.</strong></p><hr id="ea3bc752-ba56-455e-8a56-58760d71380b"/><p id="747e1eab-df04-4928-8efa-b781a51c6413" class="">In campo politico, Marinetti oscilla tra <strong>posizioni diverse</strong>: dal socialismo umanitario all’anarchia, dalla sinistra al fascismo.</p><p id="8e48b7c7-170f-4009-8fb1-7c4ee7c55a93" class="">Con l’avvicinarsi della Prima guerra mondiale, l’attivismo programmatico dei manifesti si trasforma in nazionalismo e <strong>acceso interventismo.</strong></p><p id="8925ae8f-d0f3-482d-af2d-28ef027d3815" class="">Nel 1918 egli elabora l’idea di fondare un “<strong>partito futurista</strong>” il cui programma comprende l’educazione patriottica e militare nelle scuole, ma anche un miglioramento delle condizioni dei lavoratori.</p><p id="f72ce51a-9cd1-45af-8f1c-15ce8251625b" class="">Gli intenti antisocialisti e antiborghesi del programma attirano l’attenzione di Benito Mussolini, da cui Marinetti rimane a sua volta affascinato.</p><p id="ff5865a6-7f32-4a39-9b7e-ebe4952c6a3a" class=""><strong>Nel fascismo Marinetti crede di vedere la realizzazione delle sue idee futuriste e rivoluzionarie.</strong></p><p id="fa64a16f-db2b-405f-95a4-5ae2d79ac5c0" class="">Marinetti muore nel 1944, sotto la Repubblica di Salò.</p><p id="b7c724f7-91b8-48df-9e02-7fb8e2a42eda" class="">
+</p><h2 id="682f1262-6610-4fee-a8cf-358312586903" class="">Brani</h2><p id="0cc1d020-d9d1-41bb-a372-f456a89aad1d" class="">→ “Manifesto del Futurismo” - 48</p><p id="1df31fc1-3967-4bba-bdc8-9ff16e26ddd8" class="">→ “Manifesto tecnico della letteratura futurista” - 51</p><hr id="d9311345-3cb9-41a2-8b93-822102a17104"/><h1 id="31b2d4d5-45a6-4cbd-82af-20ade6975aaf" class="">Riassunto</h1><figure id="0404e86f-1182-4a44-9639-daaf3d7ab883" class="image"><a href="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20129.png"><img style="width:1096px" src="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20129.png"/></a></figure></div></article></body></html>

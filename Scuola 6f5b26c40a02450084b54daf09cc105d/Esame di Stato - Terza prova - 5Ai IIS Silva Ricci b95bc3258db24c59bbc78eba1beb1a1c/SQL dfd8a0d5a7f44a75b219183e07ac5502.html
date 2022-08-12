@@ -1,0 +1,794 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>SQL</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="dfd8a0d5-a7f4-4a75-b219-183e07ac5502" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🗂️</span></div><h1 class="page-title"><strong>SQL</strong></h1></header><div class="page-body"><nav id="40115ee8-d5d5-437c-bf3b-9410e25b7130" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#7159e6dd-c46e-4d9b-a673-d09e61f928c4">Operatori</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a342d666-1bfa-4194-979f-db47162f5f27">Di relazione</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0ff4b88a-edf1-4ef1-8471-4d59a28f2f75">Logici</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7ef3c194-274a-4d8b-8d56-c16e33b3cac3">Di aggregazione</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#63964a1d-ca22-49df-a8c1-02c3e274f14a"><strong>DDL → Data Definition Language</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0d147369-8d9d-4ac4-9ad7-770fe1ba33f5">Prerequisito: <strong>Vincoli di integrità</strong></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#2aef9c2c-94d9-4343-9ef6-5ebe59055ddd">Database</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#f7e8c1c6-d0ca-4fba-b5b5-7f19fbe6e706"><strong>Table</strong></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#33786d41-1aa5-484d-bd51-e0e432181aa5"><strong>Index</strong></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#3cd01d82-631d-407a-b446-bf3087d123fb"><strong>View</strong></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#82d3ac35-c854-40c1-9568-185492b611fe"><strong>DML → Data Manipulation Language</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#06f89447-f1d0-4f7c-bda7-3431e56d1d21"><code><strong>INSERT INTO</strong></code></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#4e4e5680-9271-4f05-8efc-56b3b444df96"><code><strong>UPDATE</strong></code></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ee426eaf-1858-4d1f-888f-6a08ff01796c"><code><strong>DELETE</strong></code></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#d2f5f854-6793-4b3f-b50e-1eade9e27516">DQL → Data Query Language</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1b6b51ce-d863-4967-81ba-db65a5224b38"><code>SELECT</code></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#c6a95d22-a344-4a12-b70e-12b11882b4e5">→ <code><strong>WHERE</strong></code></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#740e9b0c-46be-44d9-8115-e0ca916af82b">→ <code><strong>DISTINCT</strong></code></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#8837e754-f054-4b1c-98e3-c1ac70ecbd1e">→ <code>GROUP BY</code></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#36f11078-61c5-4921-90d7-af4f320d331a">→ <strong><code>ORDER BY</code></strong></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#6aa69a9e-f1f7-4b1f-9882-84bd0db5f022">→ <code><strong>LIKE</strong></code></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#fbf7cad8-c88b-48d1-a823-8f59d9104120">→ <strong>Select annidate</strong></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#254592c2-b01d-448b-920c-7fc10756ee79">→ <strong>Select insiemistiche</strong></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#fa157da6-fa8e-4aac-a86d-81653abff5cf">Join tra tabelle</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#1692e57f-7281-4a84-85a2-eb16985c0940">Join avanzato</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e8291175-6363-4d11-8971-8bc8ec6b5cf2">DCL → Data Control Language</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#56afd06b-eb40-4f57-b919-c91f91362817">Privilegi</a></div></nav><hr id="8dfade13-7b43-4a17-af8e-a53e183c9bdf"/><p id="1dd50c79-392b-43be-9e35-a7196c0a90cc" class=""><strong>SQL </strong>(<em>Structured Query Language</em>) è un <strong>linguaggio </strong>creato per l’accesso a informazioni memorizzate nei database. Più nel dettaglio, <mark class="highlight-teal">SQL è un linguaggio standardizzato per database basati sul modello relazionale</mark> (<strong>RDBMS</strong>), progettato per le seguenti operazioni:</p><ul id="c1c0484a-2247-4609-96b6-de9c14c59224" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>DDL </strong></mark><strong>→</strong> creare e modificare schemi di database<strong> </strong>(<em>Data Definition Language</em>);</li></ul><ul id="78431c1e-2aeb-4cfb-a5a5-0c348f5ec480" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>DML </strong></mark><strong>→</strong> inserire, modificare e gestire dati memorizzati<strong> </strong>(<em>Data Manipulation Language</em>);</li></ul><ul id="8a4e1f13-6784-4cb5-978c-512df32d61d9" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>DQL </strong></mark><strong>→</strong> interrogare i dati memorizzati<strong> </strong>(<em>Data Query Language</em>)</li></ul><ul id="9c5a2ae9-a2bf-43c0-96af-dd3909f01431" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>DCL </strong></mark><strong>→</strong><mark class="highlight-yellow"><strong> </strong></mark>creare e gestire strumenti di controllo e accesso ai dati<strong> </strong>(<em>Data Control Language</em>).</li></ul><hr id="d5de8c8c-ff56-4b4a-b584-c03b7bd7ca12"/><h2 id="7159e6dd-c46e-4d9b-a673-d09e61f928c4" class="">Operatori</h2><h3 id="a342d666-1bfa-4194-979f-db47162f5f27" class="">Di relazione</h3><p id="0f191413-7ef3-463a-b45c-8cead33dd539" class="">In SQL esistono diversi <strong>operatori di relazione</strong> che risultano utili in molte query nei diversi ambiti del linguaggio (soprattutto <strong>DML</strong> e <strong>DQL</strong>):</p><table id="8f8f6328-8f5b-4ba1-b251-1107eb0bea64" class="simple-table"><tbody><tr id="bb154f83-aa55-46b6-b606-d3d107ff8694"><td id="`rsb" class="">=</td><td id="rIl@" class="" style="width:501.5px">Uguale</td></tr><tr id="29b988b6-1153-448d-873b-1b31732d2438"><td id="`rsb" class="">&gt;</td><td id="rIl@" class="" style="width:501.5px">Maggiore</td></tr><tr id="83afb813-85c1-4ca6-8668-6bb6dc5880cc"><td id="`rsb" class="">&lt;</td><td id="rIl@" class="" style="width:501.5px">Minore</td></tr><tr id="a2ee2828-5b7a-47cf-ac6e-d9b0202fc615"><td id="`rsb" class="">&gt;=</td><td id="rIl@" class="" style="width:501.5px">Maggiore uguale</td></tr><tr id="73159531-ed0b-45e7-8a4e-b4adf2b7d0ed"><td id="`rsb" class="">&lt;=</td><td id="rIl@" class="" style="width:501.5px">Minore uguale</td></tr><tr id="7e7dac9b-7bc9-4f0c-b834-73a71911236d"><td id="`rsb" class="">&lt;&gt;</td><td id="rIl@" class="" style="width:501.5px">Diverso. In alcune versioni di SQL è !=</td></tr><tr id="c415bc5a-23e3-4bd0-b89f-c9be251e9bae"><td id="`rsb" class="">BETWEEN</td><td id="rIl@" class="" style="width:501.5px">In un certo intervallo</td></tr><tr id="1e4e788f-fd90-4c19-b363-cf91a25016d4"><td id="`rsb" class="">LIKE</td><td id="rIl@" class="" style="width:501.5px">Ricerca un pattern</td></tr><tr id="3ac35126-1ebc-4023-8296-55eed6753dab"><td id="`rsb" class="">IN</td><td id="rIl@" class="" style="width:501.5px">Se è presente in una lista di valori</td></tr></tbody></table><h3 id="0ff4b88a-edf1-4ef1-8471-4d59a28f2f75" class="">Logici</h3><table id="9f8f0954-99a0-430d-a2f0-e8bf75cccf5c" class="simple-table"><thead class="simple-table-header"><tr id="57a30b5b-d4af-4fdf-ad82-d1cf7d7f7fcb"><th id="UkNN" class="simple-table-header-color simple-table-header">Operator</th><th id="uEQp" class="simple-table-header-color simple-table-header" style="width:396.99998474121094px">Description</th></tr></thead><tbody><tr id="057af3b0-0b1a-4eda-bee1-005a6899329b"><td id="UkNN" class=""><code>ALL</code></td><td id="uEQp" class="" style="width:396.99998474121094px">TRUE if all of the subquery values meet the condition</td></tr><tr id="20e58391-f7ea-41f6-9b37-130fbb923a0c"><td id="UkNN" class=""><code>AND</code></td><td id="uEQp" class="" style="width:396.99998474121094px">TRUE if all the conditions separated by AND is TRUE</td></tr><tr id="117e298b-f48a-4b64-a2b9-aec4c1d1adbe"><td id="UkNN" class=""><code>ANY</code></td><td id="uEQp" class="" style="width:396.99998474121094px">TRUE if any of the subquery values meet the condition</td></tr><tr id="f7e44cf4-a1a2-4d4c-94df-e67e68b7ba63"><td id="UkNN" class=""><code>BETWEEN</code></td><td id="uEQp" class="" style="width:396.99998474121094px">TRUE if the operand is within the range of comparisons</td></tr><tr id="3b4366c6-2c80-4361-b60b-bf3e7399895a"><td id="UkNN" class=""><code>EXISTS</code></td><td id="uEQp" class="" style="width:396.99998474121094px">TRUE if the subquery returns one or more records</td></tr><tr id="0f5e8a88-f165-41b2-b581-a99ac1a74d6e"><td id="UkNN" class=""><code>IN</code></td><td id="uEQp" class="" style="width:396.99998474121094px">TRUE if the operand is equal to one of a list of expressions</td></tr><tr id="e289e605-2ca2-431b-9dc9-b9d5e3c6e3a2"><td id="UkNN" class=""><code>LIKE</code></td><td id="uEQp" class="" style="width:396.99998474121094px">TRUE if the operand matches a pattern</td></tr><tr id="8619c2e4-7c05-4582-8199-92a56bac7939"><td id="UkNN" class=""><code>NOT</code></td><td id="uEQp" class="" style="width:396.99998474121094px">Displays a record if the condition(s) is NOT TRUE</td></tr><tr id="a11ac872-fdd1-4e01-ad6e-578f1b0f5eb7"><td id="UkNN" class=""><code>OR</code></td><td id="uEQp" class="" style="width:396.99998474121094px">TRUE if any of the conditions separated by OR is TRUE</td></tr><tr id="75a5af03-c4a2-4538-b4e4-0fe9f7ccce4f"><td id="UkNN" class=""><code>SOME</code></td><td id="uEQp" class="" style="width:396.99998474121094px">TRUE if any of the subquery values meet the condition</td></tr></tbody></table><h3 id="7ef3c194-274a-4d8b-8d56-c16e33b3cac3" class="">Di aggregazione</h3><ul id="2056e22a-b18f-46e3-9a96-138555e0b02c" class="bulleted-list"><li style="list-style-type:disc"><strong><code>MIN()</code></strong><strong> / </strong><strong><code>MAX()</code></strong><pre id="7fdebbfe-0cea-4839-995e-9645246009a8" class="code"><code>SELECT MAX(stipendio) AS stipendio_massimo FROM dipendenti;
+SELECT MIN(ore_lavorate) ore_lavorate_minime FROM dipendenti;</code></pre></li></ul><ul id="17b8e357-0896-47c4-b6c2-a1cdb9ec92c7" class="bulleted-list"><li style="list-style-type:disc"><strong><code>COUNT()</code></strong><pre id="dafe3b66-aac3-4dfe-98e5-c7cfc1bed2e4" class="code"><code>SELECT COUNT(*) FROM dipendenti;</code></pre></li></ul><ul id="efe0a978-3892-47b0-a2aa-478f827079df" class="bulleted-list"><li style="list-style-type:disc"><strong><code>AVG()</code></strong><pre id="e3e2b359-0f4a-495a-9d37-d2dc42bc6127" class="code"><code>SELECT AVG(stipendio) FROM dipendenti;</code></pre></li></ul><ul id="5e31eede-b878-490d-8a10-bed661d3a9db" class="bulleted-list"><li style="list-style-type:disc"><strong><code>SUM()</code></strong><pre id="05913cb0-832d-46f2-b293-d29d69906bb2" class="code"><code>SELECT SUM(stipendio) stipendi FROM dipendenti;</code></pre></li></ul><hr id="4ddd1c7d-b2bb-46f9-9556-49041f9d9906"/><h1 id="63964a1d-ca22-49df-a8c1-02c3e274f14a" class=""><strong>DDL → Data Definition Language</strong></h1><h2 id="0d147369-8d9d-4ac4-9ad7-770fe1ba33f5" class="">Prerequisito: <strong>Vincoli di integrità</strong></h2><p id="15349ca6-05e6-4ed2-86fa-adb5350fdede" class="">Un <mark class="highlight-teal"><strong>vincolo di integrità</strong></mark><mark class="highlight-teal"> è una caratteristica del modello relazionale</mark> per le basi di dati ed <mark class="highlight-teal">è necessario che sia soddisfatta tutta l’intera base di dati</mark>.</p><p id="2fbaeaa0-2b81-4a1d-a696-20033a03aca7" class="">Esistono <strong>diversi tipi</strong> di vincolo di integrità:</p><ul id="dff055eb-6a11-40d2-a28b-2f46c8eb5766" class="bulleted-list"><li style="list-style-type:disc">vincoli <mark class="highlight-yellow"><strong>intra-relazionali</strong></mark>: sono definiti sugli <mark class="highlight-orange_background">attributi di una sola relazione</mark>.
+Ritroviamo fra questi vincoli:<ul id="9380faaa-a2dd-4e40-af92-015ab3f9fe4c" class="bulleted-list"><li style="list-style-type:circle"><code>NOT NULL</code></li></ul><ul id="b8f5b6c0-d910-4f8b-bb29-2bc636b50f53" class="bulleted-list"><li style="list-style-type:circle"><code>UNIQUE</code></li></ul><ul id="520338e8-cb6f-46ae-9c5c-d203f0a76ffb" class="bulleted-list"><li style="list-style-type:circle"><code>PRIMARY KEY</code></li></ul></li></ul><ul id="07e59121-deec-4d34-ac3f-fafbea1e348c" class="bulleted-list"><li style="list-style-type:disc">vincoli <mark class="highlight-yellow"><strong>inter-relazionali</strong></mark>: sono definiti <mark class="highlight-orange_background">su più relazioni contemporaneamente</mark> mettendo in corrispondenza informazioni di diverse tabelle correlate attraverso valori comuni di uno o più attributi.
+Sono chiamati anche vincoli di integrità referenziale (v.i.r.).</li></ul><p id="080cb99e-416f-4db9-acac-6bf43700f007" class="">Per entrambi i vincoli <mark class="highlight-teal">il sistema blocca i tentativi di violazione segnalandoli</mark>.</p><p id="7ee05c50-33df-400e-b9dd-d389eaaf8715" class="">Per il <mark class="highlight-teal">vincolo di integrità referenziale</mark> permette anche di <mark class="highlight-teal">scegliere una reazione da seguire in caso di cancellazione e/o aggiornamento</mark>:</p><ul id="c0c78262-c6dd-432b-b865-760ec64cc4c5" class="bulleted-list"><li style="list-style-type:disc"><code><strong>CASCADE</strong></code>: la modifica si <mark class="highlight-yellow">ripercuote</mark> nella tabella interna</li></ul><ul id="1cfcae7d-358d-478f-9deb-14a768976345" class="bulleted-list"><li style="list-style-type:disc"><code><strong>SET NULL</strong></code>: <mark class="highlight-yellow">mette a null</mark> l’attributo di v.i.r. nella tabella interna</li></ul><ul id="580d90b1-c7f7-4e1d-8b47-e9165212ddbf" class="bulleted-list"><li style="list-style-type:disc"><code><strong>SET DEFAULT</strong></code>: <mark class="highlight-yellow">inserisce il valore di default</mark> nell’attributo di riferimento nella tabella interna</li></ul><ul id="d5633003-e670-4755-a06f-131a3d76b828" class="bulleted-list"><li style="list-style-type:disc"><code><strong>NO ACTION</strong></code>: la tabella interna viene <mark class="highlight-yellow">lasciata invariata</mark>.</li></ul><p id="9261ab71-8064-48e3-8fc9-8f1121149769" class="">
+</p><p id="42ee7aa3-b83e-4e9e-9909-dd4b25097207" class=""><mark class="highlight-teal"><strong>DDL </strong></mark><mark class="highlight-teal">serve a </mark><mark class="highlight-teal"><strong>creare</strong></mark><mark class="highlight-teal"> e </mark><mark class="highlight-teal"><strong>modificare</strong></mark><mark class="highlight-teal"> schemi di database</mark>. Sono i comandi DDL a definire la struttura del database e quindi dei dati contenuti, ma non fornisce gli strumenti per modificare i dati stessi. I comandi sono: <code>CREATE</code>, <code>ALTER</code>, <code>DROP</code></p><h3 id="2aef9c2c-94d9-4343-9ef6-5ebe59055ddd" class="">Database</h3><pre id="1772e17f-bb99-4e60-a573-d1491d14292c" class="code"><code># Crea un database
+CREATE DATABASE nome;
+
+# Elimina database
+DROP DATABASE nome;</code></pre><h3 id="f7e8c1c6-d0ca-4fba-b5b5-7f19fbe6e706" class=""><strong>Table</strong></h3><p id="ba03b590-4dd3-4ecf-be5d-5365fee7cebc" class="">La<strong> tabella SQL</strong> è il criterio di organizzazione dei dati in un database relazionale.</p><p id="35b8b05e-fc3d-4425-9633-917cc1f525c5" class="">La tabella è composta da un insieme di relazioni dette <em>colonne</em> e <em>righe</em>. Nelle righe sono definite le relazioni tra i dati di diverso tipo / proprietà.</p><p id="3b741610-081f-4eba-baae-a4bd53fe3142" class="">Una tabella può essere creata in un database relazionale mediante il comando <code>CREATE</code> del linguaggio SQL:</p><ul id="228abafc-68d4-4c7a-8f1e-2f46d61ea587" class="bulleted-list"><li style="list-style-type:disc"><strong><code>CREATE</code></strong><pre id="ad81fa16-f355-4544-bcd5-fbdae7536e31" class="code"><code># Crea tabella
+CREATE TABLE nome_tabella(
+	nome_var1 [DOMINIO] (DEFAULT) (VINCOLO),
+	nome_var2 [DOMINIO] (DEFAULT) (VINCOLO),
+	(VINCOLI)
+);</code></pre></li></ul><ul id="a2461294-1ce8-4fa6-b48d-103e23d0057d" class="bulleted-list"><li style="list-style-type:disc"><strong><code>DROP</code></strong><pre id="50aa23ba-6411-48d7-aa55-37525f7e7532" class="code"><code># Elimina tabella
+DROP TABLE nome_tabella;</code></pre></li></ul><ul id="7144f29f-1120-49a5-bd0d-541c05769b78" class="bulleted-list"><li style="list-style-type:disc"><strong><code>ALTER</code></strong><pre id="9de6943d-1256-49d6-a6e2-24deddb4d7b9" class="code"><code># Modifica tabella
+# Aggiungo una colonna
+ALTER TABLE nome_tabella
+ADD nome_colonna [DOMINIO];
+
+# Rimuovo colonna
+ALTER TABLE nome_tabella
+DROP COLUMN nome_colonna;
+
+# Modifico colonna
+ALTER TABLE nome_tabella
+ALTER COLUMN nome_colonna [DOMINIO];</code></pre></li></ul><h3 id="33786d41-1aa5-484d-bd51-e0e432181aa5" class=""><strong>Index</strong></h3><p id="b4b3496a-0cb2-479f-a142-2fa581302066" class=""><mark class="highlight-orange_background">Gli </mark><mark class="highlight-orange_background"><strong>indici </strong></mark><mark class="highlight-orange_background">sono una struttura di dati che contiene puntatori ai contenuti di una tabella disposti in un ordine ascendente, per aiutare il database a ottimizzare le query attraverso una</mark><mark class="highlight-orange_background"><strong> ricerca dicotomica</strong></mark>.</p><p id="d519ea28-43d0-4bce-94f1-f3f09330a75c" class="">Sono simili all’indice di un libro, dove le pagine (righe della tabella) sono indicizzate dal loro numero di pagina. Per creare un indice si utilizza il seguente codice:</p><ul id="61151534-6eee-45e5-8ac2-c2c48f09cebd" class="bulleted-list"><li style="list-style-type:disc"><strong><code>CREATE INDEX</code></strong><pre id="6085db66-68af-40d5-98db-f5f51711e2a4" class="code"><code>CREATE INDEX nome_indice ON nome_tabella (lista_colonne);</code></pre></li></ul><ul id="3a93448a-fb24-4c87-9f49-265de9de940b" class="bulleted-list"><li style="list-style-type:disc"><code><strong>CREATE UNIQUE INDEX</strong></code><p id="e1ce8da9-4a4e-4d8b-898e-4f1e07ff5543" class="">Se viene inserito anche l’attributo <code>UNIQUE</code><strong> </strong>renderà l’attributo della tabella preso in considerazione unico, non consentendo di inserire in input un valore già esistente.</p><pre id="0556514d-d048-4da5-84e5-faecfc8e4dfc" class="code"><code>CREATE UNIQUE INDEX nome_indice ON nome_tabella (lista_colonne)</code></pre></li></ul><ul id="ddbc6f53-8bf5-467f-8d40-f0f96eb02413" class="bulleted-list"><li style="list-style-type:disc"><code><strong>DROP INDEX</strong></code><strong> </strong><pre id="bce2707c-8215-45ee-94c7-90b63f1c8b59" class="code"><code>DROP INDEX nome_indice ON nome_tabella;</code></pre></li></ul><p id="8af15c6d-f60e-4f79-8c37-39d392fee440" class=""><strong>Vantaggi</strong></p><ul id="a72ba3f7-c9cf-4adb-bd0e-47449fa9bf98" class="bulleted-list"><li style="list-style-type:disc">Interrogazioni più <mark class="highlight-teal">veloci</mark>.</li></ul><p id="bcd39c28-4040-456c-949e-60fd2ec8bdfd" class=""><strong>Svantaggi</strong></p><ul id="2831a92d-8ada-4ecb-aacd-53e3e86f9864" class="bulleted-list"><li style="list-style-type:disc">Appesantiscono la <mark class="highlight-teal">memoria</mark> (circa <mark class="highlight-teal">20% in più</mark> della dimensione della tabella).</li></ul><ul id="074ed001-08e4-49a3-9652-562866bc202a" class="bulleted-list"><li style="list-style-type:disc">Rendono più <mark class="highlight-teal">lente le operazioni di modifica</mark>.</li></ul><h3 id="3cd01d82-631d-407a-b446-bf3087d123fb" class=""><strong>View</strong></h3><p id="11807c4a-9ac6-45fb-8834-d9a1a8abf2fe" class=""><mark class="highlight-orange_background">Le </mark><mark class="highlight-orange_background"><strong>viste </strong></mark><mark class="highlight-orange_background">sono delle </mark><mark class="highlight-orange_background"><strong>query memorizzate</strong></mark><mark class="highlight-orange_background"> con un proprio nome che possono essere considerate simili a tabelle virtuali</mark>. Sono una via efficace per mostrare informazioni che arrivano da una o più tabelle.</p><p id="bc82b721-87d7-454f-bcfa-5f724af0c851" class="">Le view vengono mantenute per tutta la durata della sessione, poi vengono rimosse. Per creare una vista si utilizza il seguente codice:</p><ul id="e5f0ee82-180e-4597-bcfe-39e52bd82d3f" class="bulleted-list"><li style="list-style-type:disc"><code><strong>CREATE VIEW</strong></code><pre id="e4ac5c12-02d3-40e3-abf2-ed9f12569b2c" class="code"><code>CREATE VIEW nome_vista AS [SELECT SQL];</code></pre></li></ul><ul id="d6b93c6f-7019-486c-85b6-3f0d1eb8292d" class="bulleted-list"><li style="list-style-type:disc"><code><strong>DROP VIEW</strong></code><pre id="84f0cd05-f386-4317-b821-a4c92a225143" class="code"><code>DROP VIEW nome_vista;</code></pre></li></ul><p id="c372b9cf-628f-4e8d-9d38-9b6951442058" class="">Il limite delle view è che non è possibile usare la clausola <code>ORDER BY</code> per specificare un ordinamento. Se proviamo a farlo ci verrà restituito un errore.</p><hr id="379a8a9d-43f3-47ca-969c-cf9861dbe6af"/><h1 id="82d3ac35-c854-40c1-9568-185492b611fe" class=""><strong>DML → Data Manipulation Language</strong></h1><p id="3a57518b-bf52-4c74-90e3-6a2cd4181c67" class=""><mark class="highlight-teal"><strong>DML </strong></mark><mark class="highlight-teal">fornisce i comandi per </mark><mark class="highlight-teal"><strong>inserire</strong></mark><mark class="highlight-teal">, </mark><mark class="highlight-teal"><strong>modificare</strong></mark><mark class="highlight-teal">, </mark><mark class="highlight-teal"><strong>eliminare </strong></mark><mark class="highlight-teal">o </mark><mark class="highlight-teal"><strong>leggere </strong></mark><mark class="highlight-teal">i </mark><mark class="highlight-teal"><strong>dati </strong></mark><mark class="highlight-teal">all’interno delle tabelle di un database</mark>. La struttura di questi dati deve già essere stata definita tramite il DDL.</p><p id="93ef043e-87b7-4c7a-bcc8-1ffea2721aaa" class="">Esempi di comando sono: <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code></p><h3 id="06f89447-f1d0-4f7c-bda7-3431e56d1d21" class=""><code><strong>INSERT INTO</strong></code></h3><p id="84415b9d-4405-4169-8e7e-f22180c83740" class="">L’istruzione<strong> </strong><code>INSERT INTO</code> dell’SQL DML serve ad inserire nuovi record in una tabella</p><pre id="f740a360-da52-4ba4-901d-414df2569f36" class="code"><code>INSERT INTO nome_tabella (lista_colonne) VALUES [lista_valori]
+# Oppure senza specificare le colonne
+INSERT INTO nome_tabella VALUES [lista_valori]</code></pre><p id="ae68accb-901c-4112-8920-4900742bce19" class="">I nomi dei campi si inseriscono tra parentesi rotonde e si utilizza la clausola <code>VALUES</code> per valorizzarli.</p><h3 id="4e4e5680-9271-4f05-8efc-56b3b444df96" class=""><code><strong>UPDATE</strong></code></h3><pre id="25444668-e86a-42c3-947f-b2273bff6399" class="code"><code>UPDATE nome_tabella
+SET colonna1 = valore1, colonna2 = valore2, ...
+WHERE (condizione);</code></pre><h3 id="ee426eaf-1858-4d1f-888f-6a08ff01796c" class=""><code><strong>DELETE</strong></code></h3><pre id="ecf497d3-6757-4c75-b6e2-dfcb68ececf7" class="code"><code>DELETE FROM nome_tabella WHERE (condizione);
+# Per svuotare una tabella
+DELETE FROM nome_tabella;</code></pre><hr id="7a30b455-99b2-40b0-91fe-e3b85be1e228"/><h1 id="d2f5f854-6793-4b3f-b50e-1eade9e27516" class="">DQL → Data Query Language</h1><p id="67780358-bad2-4e79-853c-2c2f63c3f696" class="">Il DQL serve a <mark class="highlight-teal">interrogare i dati memorizzati</mark>.</p><p id="1a473df2-525b-4d94-a407-8251815f0c63" class="">Per farlo si utilizza il comando <code>SELECT</code>.</p><h2 id="1b6b51ce-d863-4967-81ba-db65a5224b38" class=""><code>SELECT</code></h2><p id="79628b1b-d70f-4a38-9722-0fcfcf7c9475" class="">Una <strong>select </strong>è una <strong>query </strong>che permette di ottenere un insieme di tuple con i rispettivi attributi</p><pre id="9900bca1-fbd3-47e7-8aa8-15a60a447e82" class="code"><code>SELECT [lista_attributi | *] FROM lista_tabelle;
+
+# Prendo solo il cognome
+SELECT cognome FROM dipendente;
+
+# Prendo tutte le colonne
+SELECT * FROM dipendente;
+
+# Con un alias
+SELECT cognome AS cognomi_dipendenti FROM dipendente;
+# Senza AS funziona comunque
+SELECT cognome cognomi_dipendenti FROM dipendente;</code></pre><h3 id="c6a95d22-a344-4a12-b70e-12b11882b4e5" class="">→ <code><strong>WHERE</strong></code></h3><pre id="a3e30d3e-0787-4e04-9237-ae3998c67c6e" class="code"><code># Filtro con delle condizioni
+SELECT lista_attributi FROM lista_tabelle WHERE condizione;
+# Esempio 
+SELECT cognome FROM dipartimento WHERE dipartimento = &#x27;marketing&#x27; OR dipartimento = &#x27;Produzione&#x27;;
+# Controllo valori nulli
+SELECT cognome FROM dipartimento WHERE dipartimento IS NULL;</code></pre><h3 id="740e9b0c-46be-44d9-8115-e0ca916af82b" class="">→ <code><strong>DISTINCT</strong></code></h3><pre id="a9616705-5198-43c4-b875-e15b4af5cc74" class="code"><code>SELECT DISTINCT(attributo) FROM lista_tabelle;
+# Prendo tutti i cognomi senza ripetizioni
+SELECT DISTINCT(cognome) FROM dipendenti;</code></pre><h3 id="8837e754-f054-4b1c-98e3-c1ac70ecbd1e" class="">→ <code>GROUP BY</code></h3><pre id="fd2e0d51-72ae-4d94-89b3-aad2d01aa005" class="code"><code>SELECT *
+FROM nome_tabella
+WHERE condizione
+GROUP BY colonne
+ORDER BY colonne;
+
+SELECT COUNT(*) AS numero_dipendenti, età
+FROM dipendenti
+GROUP BY età;</code></pre><p id="3db996b9-7ab9-4c1d-9a3e-01b6ee70be76" class=""><code>GROUP BY</code> support la clausola <code>HAVING</code> che sostituisce <code>WHERE</code> nelle funzioni di aggregazione.
+</p><pre id="e33442c5-aecf-4710-b187-15e5ebebe2c8" class="code"><code>SELECT COUNT(*) AS numero_dipendenti, età
+FROM dipendenti
+GROUP BY età
+HAVING COUNT(*) &gt; 1;</code></pre><h3 id="36f11078-61c5-4921-90d7-af4f320d331a" class="">→ <strong><code>ORDER BY</code></strong></h3><pre id="1c01097f-7bd3-4f38-bce5-4bb124e83b30" class="code"><code>SELECT lista_attributi FROM lista_tabelle ORDER BY ordinamento (ASC|DESC);
+# Ordino per cognome (ASC di default)
+SELECT cognome FROM dipartimento ORDER BY cognome;
+# Ordino per cognome in ordine decrescente
+SELECT cognome FROM dipartimento ORDER BY cognome DESC;</code></pre><h3 id="6aa69a9e-f1f7-4b1f-9882-84bd0db5f022" class="">→ <code><strong>LIKE</strong></code></h3><pre id="f2d2bd00-6bc0-4abf-9807-69e6a4f49b7a" class="code"><code>SELECT *
+FROM Dipendente
+WHERE cognome LIKE &#x27;R%i&#x27;;</code></pre><p id="9b024c94-cb38-4241-9ed3-635dd9838f98" class=""><em>Prende tutti i dipendenti con cognome che inizia per </em><code><em>R</em></code><em> e finisce per </em><code><em>i</em></code><em> (case sensitive).</em></p><pre id="12327ff0-5bfe-449a-8562-0abb06961bc6" class="code"><code>SELECT *
+FROM Dipendente
+WHERE cognome LIKE &#x27;R___i&#x27;;</code></pre><p id="48ba3cbc-142a-48fe-922d-6dda4ca2e368" class=""><em>Prende tutti i dipendenti con cognome che inizia per </em><code><em>R</em></code><em> e finisce per </em><code><em>i</em></code><em> con 3 caratteri nel mezzo, indicati dal numero di underscore </em><code><em>_</em></code><em>.</em></p><h3 id="fbf7cad8-c88b-48d1-a823-8f59d9104120" class="">→ <strong>Select annidate</strong></h3><pre id="2205a843-9874-402e-a3e0-e6bfdf743aa7" class="code"><code>SELECT lista_attributi FROM lista_tabelle WHERE condizione [operatore relazione] SELECT SQL</code></pre><ul id="be492159-70e9-403e-8261-8e0c472fb353" class="bulleted-list"><li style="list-style-type:disc">Visualizzare gli impiegati con stipendio superiore allo stipendio medio<pre id="d2130e84-b5fc-4ca3-9b30-beb6a2a2efde" class="code"><code>SELECT *
+FROM Impiegato
+WHERE stipendio &gt; (SELECT AVG(stipendio) FROM Impiegato);</code></pre></li></ul><ul id="7d594fb6-236a-4005-8622-b6d8394aec16" class="bulleted-list"><li style="list-style-type:disc">Visualizzare gli impiegati con stipendio massimo<pre id="2fc8c2dc-d1de-4623-bd83-f934ac12b004" class="code"><code>SELECT nome, cognome
+FROM Impiegato
+WHERE stipendio = (SELECT MAX(stipendio) FROM Impiegato);</code></pre></li></ul><h3 id="254592c2-b01d-448b-920c-7fc10756ee79" class="">→ <strong>Select insiemistiche</strong></h3><ul id="1da73e12-1803-4f2e-8a19-d57f3f015540" class="bulleted-list"><li style="list-style-type:disc">riprendono i concetti dell’algebra relazionale</li></ul><ul id="9cf8e086-f7bd-4cc7-b8b2-6cd348ab1f0f" class="bulleted-list"><li style="list-style-type:disc">gli operatori utilizzati sono:<ul id="31650825-892c-4f2a-a7b6-f47ea8b1fe36" class="bulleted-list"><li style="list-style-type:circle"><code>UNION</code></li></ul><ul id="4b792cc2-b3c1-4d31-a7a3-1256e0cdad1b" class="bulleted-list"><li style="list-style-type:circle"><code>EXCEPT</code></li></ul><ul id="f681ba8f-069b-474e-8b74-ae0ac4b9ac83" class="bulleted-list"><li style="list-style-type:circle"><code>INTERSECT</code></li></ul></li></ul><pre id="1fc218f1-7006-42b9-a735-c67c58f860f1" class="code"><code>{Select SQL} [UNION | EXCEPT | INTERSECT]  (ALL) {Select SQL}</code></pre><ul id="2ddd3fee-ac0d-4f3e-9e1b-35844b788825" class="bulleted-list"><li style="list-style-type:disc"><code>UNION</code> <pre id="a5945c9f-9a95-4f2a-882f-371672c45d77" class="code"><code>SELECT cognome FROM Dipendente
+UNION
+SELECT nome FROM Dipendente;
+
+/*
+Rossi
+Franco
+Neri
+Verdi
+Mario
+Luigi
+Anna
+Anna
+*/</code></pre></li></ul><ul id="0cafeda1-7144-4ff5-9fc8-d9320127d38d" class="bulleted-list"><li style="list-style-type:disc"><code>UNION ALL</code><pre id="2bac6c98-df10-4fa1-ae03-02e9e19e105d" class="code"><code>SELECT cognome FROM Dipendente
+UNION ALL
+SELECT nome FROM Dipendente;
+
+/*
+Rossi
+Franco
+Neri
+Verdi
+Mario
+Luigi
+Franco
+*/</code></pre></li></ul><ul id="3e7fb868-acfc-4318-a9ed-7703a25c68a6" class="bulleted-list"><li style="list-style-type:disc"><code>INTERSECT</code><pre id="384dde46-b119-49ac-939f-f5d0e2c0b55b" class="code"><code>SELECT cognome FROM Dipendente
+INTERSECT
+SELECT nome FROM Dipendente;
+
+
+/*
+Franco
+*/</code></pre></li></ul><ul id="558b3182-e45f-49ff-8c6c-ee0c63cd8a1b" class="bulleted-list"><li style="list-style-type:disc"><code>EXCEPT</code><pre id="788c3ff0-aa29-4a4b-b126-8d1e2d52bd05" class="code"><code>SELECT cognome FROM Dipendente
+EXCEPT
+SELECT nome FROM Dipendente;
+
+/*
+Rossi
+Neri
+Verdi
+*/</code></pre></li></ul><p id="d560f5d4-ab6d-4a04-a6fa-a35a6c647ea8" class="">Ricapitolando:</p><ul id="a975b7fe-0278-4625-b630-e4f39dbeaf97" class="bulleted-list"><li style="list-style-type:disc"><code><strong>UNION</strong></code>: ottengo tutti i cognomi e i nomi</li></ul><ul id="48565012-62e2-4027-b189-4a53ab145896" class="bulleted-list"><li style="list-style-type:disc"><code><strong>UNION ALL</strong></code>: ottengo tutti i cognomi e i nomi con ripetizioni</li></ul><ul id="dd91d917-47ca-4aa7-b52f-24ce7fe63b68" class="bulleted-list"><li style="list-style-type:disc"><code><strong>INTERSECT</strong></code>: ottengo i cognomi che sono anche nomi</li></ul><ul id="2df08a16-3502-4de8-9717-2d973e08d31e" class="bulleted-list"><li style="list-style-type:disc"><code><strong>EXCEPT</strong></code>: ottengo tutti i cognomi che non sono anche nomi</li></ul><h3 id="fa157da6-fa8e-4aac-a86d-81653abff5cf" class="">Join tra tabelle</h3><pre id="5d53991b-f75c-4e34-b4c9-552e113cabdb" class="code"><code>SELECT *
+FROM Dipendente, Dipartimento
+WHERE Dipendente.dipartimento=Dipartimento.nome;</code></pre><p id="4f65749f-bbfe-4f98-9799-4e1599dc00c5" class=""><strong>→ Per un singolo valore</strong></p><pre id="4e1573c7-ca89-49c2-93d8-fdf858398c2e" class="code"><code>SELECT Dipartimento.sede
+FROM Dipendente, Dipartimento
+WHERE Dipendente.dipartimento=Dipartimento.nome;</code></pre><p id="1364ddde-a200-434b-bc4e-34f3f70285af" class=""><strong>→ Rinominando</strong></p><pre id="5514acca-b046-4b67-aab2-8df434d06ac9" class="code"><code>SELECT d2.sede
+FROM Dipendente d1, Dipartimento d2
+WHERE d1.dipartimento=d2.nome;</code></pre><p id="ae758502-28da-4b5b-84dc-a0e6150e9655" class=""><strong>→ Per tutti i valori di una tabella</strong></p><pre id="6797828f-060b-4bef-b905-1de8ab688bbf" class="code"><code>SELECT d2.*
+FROM Dipendente d1, Dipartimento d2
+WHERE d1.dipartimento=d2.nome;</code></pre><p id="f4e613f8-fc9d-488d-81b7-21e2b2d5b818" class=""><em>Il </em><code><em>.</em></code><em> non è necessario se l’attributo a cui bisogna fare riferimento compare in una sola tabella</em></p><h3 id="1692e57f-7281-4a84-85a2-eb16985c0940" class="">Join avanzato</h3><pre id="fa615482-74d6-47fe-905d-067c5802fce7" class="code"><code>SELECT attributi FROM tabella1 AS alias [tipo-join] join tabella2 AS alias ON [condizioni];</code></pre><p id="30788a00-04dc-4d0e-b58c-d37265e6256a" class="">Il <code>tipo-join</code> può essere:</p><ul id="8ab88080-e20c-4188-a991-5878b0dc6f42" class="bulleted-list"><li style="list-style-type:disc">Interno <ul id="4620f848-811c-4e53-ae4c-1e4adf9d721a" class="bulleted-list"><li style="list-style-type:circle"><code>INNER JOIN</code> (default) → mette insieme le righe che hanno dati comuni tra le due tabelle<figure id="fb9f6bd0-e0b7-47b9-9d7a-ca027bfe6ecd" class="image"><a href="SQL%20dfd8a0d5a7f44a75b219183e07ac5502/Untitled.png"><img style="width:192px" src="SQL%20dfd8a0d5a7f44a75b219183e07ac5502/Untitled.png"/></a></figure></li></ul></li></ul><ul id="f6afaf4c-8821-47c6-b156-570b39fce70e" class="bulleted-list"><li style="list-style-type:disc">Esterno<ul id="f2fb55f4-baa5-4fbf-8a53-c6f490db9e12" class="bulleted-list"><li style="list-style-type:circle"><code>RIGHT OUTER</code> → outer è opzionale, aggiunge le righe della tabella di destra non coinvolte nell’inner join<figure id="69627284-0f62-4c71-9a72-32d8b1bca4b0" class="image"><a href="SQL%20dfd8a0d5a7f44a75b219183e07ac5502/Untitled%201.png"><img style="width:192px" src="SQL%20dfd8a0d5a7f44a75b219183e07ac5502/Untitled%201.png"/></a></figure></li></ul><ul id="5dddff59-925f-4304-87ea-c12fd7c75fc4" class="bulleted-list"><li style="list-style-type:circle"><code>LEFT OUTER</code> → come right outer ma aggiunge la tabella di sinistra invece che quella di destra<figure id="e1b3bd3f-b1de-4e2b-8a70-509a3a8e2adc" class="image"><a href="SQL%20dfd8a0d5a7f44a75b219183e07ac5502/Untitled%202.png"><img style="width:192px" src="SQL%20dfd8a0d5a7f44a75b219183e07ac5502/Untitled%202.png"/></a></figure></li></ul><ul id="96659e5a-1894-4cf2-84ee-bae7a64046a5" class="bulleted-list"><li style="list-style-type:circle"><code>FULL OUTER</code> → come right outer ma aggiunge sia le righe della tabella di sinistra che quelle della tabella di destra<figure id="429203cd-397a-495c-9faa-cfb2bd2f71f3" class="image"><a href="SQL%20dfd8a0d5a7f44a75b219183e07ac5502/Untitled%203.png"><img style="width:192px" src="SQL%20dfd8a0d5a7f44a75b219183e07ac5502/Untitled%203.png"/></a></figure></li></ul></li></ul><pre id="4db14414-b794-420f-afa3-7770d23d35e8" class="code"><code>SELECT *
+FROM Dipartimento d INNER JOIN Dipendente di ON d.nome=d.dipartimento</code></pre><hr id="f855d8a8-5828-4bc7-a701-373fcc3821d2"/><h1 id="e8291175-6363-4d11-8971-8bc8ec6b5cf2" class="">DCL → Data Control Language</h1><h3 id="56afd06b-eb40-4f57-b919-c91f91362817" class="">Privilegi</h3><p id="5b278f88-5f80-42ef-974a-749c993c7e24" class=""><mark class="highlight-teal">Ogni componente dello schema può essere </mark><strong><mark class="highlight-teal">protetto</mark></strong><mark class="highlight-teal">.</mark></p><p id="dd5434c8-5f0b-4697-a465-a54e2b06aada" class="">Il possessore della risorsa assegna dei privilegi agli altri utenti.</p><p id="21a1ec70-4600-48c2-80f1-099ab54d18ce" class=""><strong>Tipi di privilegi:</strong><div class="indented"><ul id="f0f7d7d3-8778-4a87-8b35-d564e95b7860" class="bulleted-list"><li style="list-style-type:disc"><code>INSERT</code></li></ul><ul id="e495a8ef-85b7-40fc-8386-d0d292aebbd5" class="bulleted-list"><li style="list-style-type:disc"><code>UPDATE</code></li></ul><ul id="51ab84f1-6fec-4219-9695-12bcf5c2ac9c" class="bulleted-list"><li style="list-style-type:disc"><code>DELETE</code></li></ul><ul id="6c1b9177-f25a-478d-be5d-a609b9d78104" class="bulleted-list"><li style="list-style-type:disc"><code>SELECT</code></li></ul><ul id="03ef8bde-c0eb-4ff3-9dce-da7dccdd0225" class="bulleted-list"><li style="list-style-type:disc"><code>USAGE</code></li></ul><ul id="b74cff12-f65b-4e7f-aad1-fb852611e7eb" class="bulleted-list"><li style="list-style-type:disc">…</li></ul></div></p><p id="79815b24-28e8-4c2c-8d4e-838f38c71792" class="">→ Per <strong>concedere</strong> un privilegio:<div class="indented"><pre id="a4e3d3d4-016c-432f-9d35-e14ec3ad2702" class="code"><code>GRANT privilegio ON risorse TO utenti (WITH GRANT OPTION)
+# WITH GRANT OPTION permette agli utenti di concedere a loro volta privilegi su quella risorsa</code></pre></div></p><p id="7cca4ee7-516b-45ef-86b8-eda43ec0b56d" class="">→ Per <strong>revocare</strong> un privilegio:<div class="indented"><pre id="2b87a6fc-74a0-47d8-abfa-42ef83ee6218" class="code"><code>REVOKE privilegio ON risorse TO utenti
+# per revocare la possibilità di assegnare privilegi
+REVOKE GRANT OPTION ON risorse to utenti</code></pre></div></p></div></article></body></html>

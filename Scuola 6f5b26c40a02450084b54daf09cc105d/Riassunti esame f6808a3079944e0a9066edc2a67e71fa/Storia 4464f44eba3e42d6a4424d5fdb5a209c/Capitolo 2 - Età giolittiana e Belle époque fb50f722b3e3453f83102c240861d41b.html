@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Capitolo 2 - Età giolittiana e Belle époque</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="fb50f722-b3e3-453f-8310-2c240861d41b" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📕</span></div><h1 class="page-title">Capitolo 2 - Età giolittiana e <em>Belle époque</em></h1></header><div class="page-body"><p id="5dea971e-c423-42b3-a3ac-59c93158e5f5" class="">Il nuovo secolo sembrò dare l’avvio a un’epoca di pace e benessere.</p><p id="6c0c4f64-77f9-40c0-9d90-826809c6696b" class="">Le scoperte e le invenzioni si susseguivano senza sosta.</p><p id="847ebb00-f1ca-42c7-b333-31b005461dcd" class="">Malattie un tempo terribili diventarono curabili.</p><p id="8260a978-ae46-4d2f-8ada-dd8c8ae531eb" class="">Il periodo che va dalla fine dell’Ottocento al 1914 è stato chiamato <em>Belle époque</em><strong><em><em>, </em></em></strong>l’epoca bella per eccellenza.</p><p id="702dbb25-6ff5-4cf2-a077-9ecaf7043d7c" class="">Una definizione curiosa se si pensa che si trattò di un’epoca in cui si diffusero pericolosamente il <strong>nazionalismo </strong>e il <strong>razzismo </strong>ed esplosero nelle relazioni internazionali contraddizioni tali che portarono alla strage del 1914-18.</p><p id="afd74449-5d67-4cbc-9d42-7b74d8254b09" class=""><em>Belle époque</em> per ricordare la sperimentazione artistica e la vita brillante nelle grandi capitali europee simboleggiata dal locale più alla moda di Parigi, <strong>Moulin rouge.</strong></p><p id="8b65a8f3-ed31-4137-a716-7e3524b83831" class="">E’ quindi fuorviante leggere il periodo a cavallo fra i due secoli in modo esclusivamente ottimista o drammatico.</p><p id="8379bd8a-daaf-4695-9a3c-ec8926535a57" class="">Esistevano Stati che puntavano tutto sulla <strong>potenza militare.</strong></p><p id="d01d9c8b-ce69-4b98-b157-96437a9c3627" class="">Anche l’aumento delle <strong>spese militari</strong> venne considerato come l’inevitabile premessa di un conflitto o come uno strumento deterrente nei confronti di una guerra.</p><p id="5db4d508-7e70-4e34-b210-7ce16d818034" class="">Il nazionalismo e il razzismo avrebbero presto manifestato tutta la loro pericolosità.</p><hr id="3534d619-8ff9-45f0-aed7-1587abd13c4b"/><p id="9b631abb-078a-4c31-849b-a0a50ace7899" class="">Durante quest’epoca numerosi intellettuali rifletterono sulla grande novità politica rappresentata dalla massa.</p><p id="25e50959-ee5a-4ae1-9b57-41d2119c9efc" class="">Nel 1895 venne pubblicato il saggio <em>Psicologia delle folle</em> dello psicologo <strong>Gustave Le Bon.</strong></p><p id="ce46c426-750c-4f65-8141-29ddbf4c240b" class="">L’originalità dell’opera consisteva in una acuta e preveggente capacità di analisi delle motivazioni, spesso irrazionali, del <strong>comportamento delle folle.</strong></p><p id="2edd278f-f31c-44e3-b081-565cb74d818c" class="">La seconda rivoluzione industriale aveva indotto grandi utamenti, per Le Bon la dinamica storica non era mossa dai rapporti economici di produzione, ma dalle <strong>opinioni</strong> e dalle <strong>credenze.</strong></p><hr id="24c8feb0-d807-4971-8a0e-5108a58a8faf"/><p id="1e77848b-8b98-46dc-be6f-925f7d77d479" class="">Le Bon afferma che la <strong>politica</strong> del suo tempo aveva assunto caratteri decisamenti diversi rispetto al passato: era la nuova <strong>religione delle masse.</strong></p><hr id="5904ea27-8709-4207-be6d-261abfc77839"/><h2 id="eaaafa6b-04a1-4581-a3ab-af40632d2475" class="">📍2. I caratteri generali dell’età giolittiana</h2><p id="85a0a097-4568-4878-803b-2260fc9b1385" class="">Nel 1901 il re Vittorio Emanuele III nominò presidente del conglio <em>Giuseppe Zanardelli.</em></p><p id="4b3e770c-a2fd-4bbc-932b-656fd9f01ceb" class="">Lo affiancava come ministro degli Interni, <strong>Giovanni Giolitti.</strong></p><p id="dbd20615-8bdc-4d37-8810-bdba7f7faf63" class="">Giolitti era un uomo pratico, moderato, esperto conoscitore della macchina burocratica statale.</p><p id="868e2d83-59f0-48ce-87fd-7e3eb8a7a352" class="">Zanardelli lasciò che fosse Giolitti a prendere le decisioni più importanti e quando rassegnò le dimissioni fece sì che Giolitti stesso gli subentrasse come Primo ministro.</p><p id="57186354-6d0a-4828-afed-706014e30390" class="">Dal 1901 al 1914 si parla di <strong>età giolittiana.</strong></p><p id="f6548878-18ca-4955-8e68-0223eec83ce4" class="">In realtà Giolitti non resse il governo per tutti questi anni: faceva parte del suo modo di far politica l’abbandonare nei momenti di crisi il potere nelle mani di uomini di fiducia. In questo modo continuava la propria opera. Una volta dimostrata l’incapacità di amici e avversari, tornava al governo.</p><hr id="b81635f7-c2f5-4a0c-9495-7e91b0e3cb79"/><p id="c05fb5d4-0540-4c54-ad68-93a466696e38" class="">L’età giolittiana coincide con il decollo della rivoluzione industriale.</p><p id="6eaae320-a02f-432b-8a11-84f76d4c3dae" class="">I progressi più evidenti si registrarono nell’industria <strong>siderurgica </strong>e nell’industria <strong>elettrica</strong> e <strong>meccanica</strong>.</p><p id="ec02ee6e-0b6b-4983-adf8-01cd73163a85" class="">Queste industrie aveveano sede soprattutto nel cosidetto <strong>triangolo industriale</strong>, formato da Torino, Milano e Genova.</p><hr id="cf1c44b0-8c98-401a-b1cc-b4edd279329f"/><p id="7e2353ca-1fbc-4d91-bb3d-3f003b9621d0" class="">L’industria italiana fu fortemente aiutata nel suo nascere dall’intervento statale.</p><p id="c3a8f1c2-3bc2-4537-8e21-5607e2f10dd3" class="">Particolare rilievo ebbero le varie <strong>commesse statali</strong> nel campo dei trasporti ferroviari.</p><p id="4d4bddc2-29ed-4b89-84ee-d344ce2d67cb" class="">La <strong>politica protezionistica</strong> attuata con l’imposizione di alte tasse sui prodotti esteri, favorì notevolmente lo sviluppo delle industrie del Nord Italia mentre danneggiò il Mezzogiorno.</p><hr id="aa9b38bb-6542-4525-af1e-6921dda7b4fd"/><p id="8f11213c-0d71-4406-a093-45390c50440a" class="">Lo sviluppo industriale portò <strong>notevoli miglioramenti nel livello medio di vita</strong> degli italiani.</p><p id="2623c9f6-ce4d-4af0-86e0-303750e93392" class="">I segni più evidenti di questo straordinario sviluppo si videro nelle <strong>città</strong>.</p><p id="3955bb13-b9cb-4060-bd98-32e68b9f8d9c" class="">La popolazione però si spostò in grande misura dalle compagna alle città, di conseguenza la vita delle cità comportò <strong>nuovi disagi</strong> per gli abitanti e soprattutto per quelli delle classi operaie costretti a vivere in quartieri generalmente sovraffollatti.</p><hr id="15398e0c-a0b3-453d-af0c-d2ff2ce1ae5e"/><p id="1d49a286-deda-4d76-92c5-f5adc40288b0" class="">In questo contesto economico e sociale si svolse l’azione politica di Giolitti.</p><p id="9658dbc1-ff84-4b6a-9ee4-f1c7aaf3b29a" class="">Egli elaborò un suo piano di riforme, allo scopo di allargare la partcipazione alla vita dello Stato italiano, coinvolgendo in particolare il <strong>Partito socialista italiano</strong>.</p><p id="fabffe7a-ee59-43b4-99d1-ece1944dc03c" class="">All’interno del Partito socialista italiano si erano formate due correnti: quella <strong>riformista</strong> e quella <strong>massimalista.</strong></p><p id="d4f40262-1dac-4835-ae87-9381854f83e8" class=""><strong>I riformisti</strong> ritenevano che si dovesse cambiare la società gradualmente, attraverso le riforme.</p><p id="62191c10-c628-4b90-9faa-718357275345" class="">I <strong>massimalisti</strong>, guidati da Benito Mussolini, ritenevano che per cambiare la società fosse necessario ricorrere alla rivoluzione, senza scendere a patti con i governi borghesi.</p><hr id="f90efca2-7b77-43e0-b74d-e1058a902fd7"/><h2 id="f61dedf9-b4db-44a2-b206-79628717e2fe" class="">📍3. Il doppio volto di Giolitti</h2><p id="4de938aa-7bcd-4cd3-b377-b09643465e49" class="">L’azione di governo di Giolitti fu caratterizzata da una profonda contraddizione.</p><p id="2a1b226d-794c-4706-8ac7-460803a341ed" class="">Il suo modo di far politica venne definito del “doppio volto”:<div class="indented"><ul id="e7948ac5-56a5-4d34-89fc-d3e66eb6b187" class="bulleted-list"><li style="list-style-type:disc">Un <strong>volto aperto</strong> e <strong>democratico</strong> nell’affrontare i problemi del Nord;</li></ul><ul id="baa6cb30-90a4-4df5-a884-fa6a73fb782c" class="bulleted-list"><li style="list-style-type:disc">Un <strong>volto conservatore </strong>e<strong> corrotto</strong> nello sfruttare i problemi del Sud.</li></ul></div></p><hr id="6df56518-b04c-4033-8886-ca142d1fe285"/><p id="c55404ee-41b4-400d-af6c-47400e23f4c3" class="">Per quanto riguarda il Nord, Giolitti assunse un atteggiament olungimirante verso le nuove forze sociali; egli infatti <strong>consentì gli scioperi</strong> e fece assumere al governo una posizione di neutralità di fronte ai conflitti sindacali.</p><p id="8aca7776-f6f1-4b0e-9675-c1069e53d2e2" class="">Ma Giolitti non si limitò a consentire gli scioperi, varò nel contempo alcune <strong>riforme</strong> che migliorarono le condizioni di lavoro degli operai:<div class="indented"><ul id="96fbf381-0973-441b-9305-77ebbc498e25" class="bulleted-list"><li style="list-style-type:disc">Orario di lavoro diminuito, massimo di 10 ore.</li></ul><ul id="be9d98ea-06f6-4670-b758-6e3f9c284623" class="bulleted-list"><li style="list-style-type:disc">Cassa nazionale per l’invalidità e la vecchiaia dei lavoratori.</li></ul><ul id="ac0c963d-fa61-4e12-9401-a5d76f553a3c" class="bulleted-list"><li style="list-style-type:disc">Maternità delle lavoratrici e il lavoro dei fanciulli.</li></ul></div></p><p id="e7135414-2e31-4d80-bd7e-aec97afcafb8" class="">La lotta sindacale portò all’<strong>aumento dei salari</strong> dei lavoratori che poterono così cominciare ad acquistare non solo prodotti alimentari, ma anche prodotti industriali.</p><p id="beb88c73-7224-4ee2-94ef-71b72dc5709e" class="">Nel Nordo si andò diffondendo quel benessere economico tipico della società di massa.</p><hr id="26ff0d1f-dfb6-49a2-b0b5-a91e60bd6a14"/><p id="22050fcb-ebc7-46d8-9d54-1f610a84b550" class="">Altri interventi si ebbero nel campo ferroviario, con la statalizzazione delle <strong>ferrovie</strong>.</p><p id="cc6ffc2b-2ee2-4200-8d07-437e88c247bb" class="">Nell’età giolittiana però non venne affrontata la <strong>questione meridionale</strong>, ovvero il drammatico ritardo del Sud rispetto al Nord.</p><p id="24dc0f05-410b-4600-918b-addf639f13e6" class="">Anzi, nell’età giolittiana il divario del Paese crebbe.</p><p id="493d65f2-0185-4040-932a-bf4f3caf288f" class="">Gran parte del flusso di denaro che arrivò al Sud alimentò <strong>clientele</strong> e <strong>corruzione.</strong></p><p id="1c197482-0202-4376-9458-a6a0af1996ea" class="">Il Sud per Giolitti era un semplice serbatorio di voti da controllare in modo spregiudicato.</p><hr id="2cdc16b2-9f0c-4ab0-b6ee-e60d77efdcbb"/><p id="7ce07264-2b6c-490a-bfd7-508e7f5c88b3" class="">I salari dei lavoratori del Sud, a causa della scarsa offerta di lavoro e della sovrabbondanza di manodopera, scesero enormemente, portando in tutto il Meridione povertà e disoccupazione.</p><p id="3b783ade-9e76-463e-a4c8-5ebeb3e531e3" class="">L’<strong>emigrazione</strong> fu un fenomeno doloroso, che tuttavia portò un po’ di ricchezza nelle terre più povere.</p><p id="1f9313d6-4f6a-45d0-9336-12fa2dfc3d70" class="">Chi lavorava all’esterno mandava parte della propria paga (<strong>rimesse</strong>) in italia.</p><hr id="a3160572-6804-4d88-bc8d-9ac8aff94118"/><h2 id="974a7554-87d4-4a1d-8fc1-9f10417a1539" class="">📍4. Tra successi e sconfitte.</h2><p id="bb934450-2020-40be-98cf-9a5e5491c5c8" class="">Giolitti ritenne opportuno riprendere la politica coloniale per due principali motivi:<div class="indented"><ul id="b4cab548-8c7e-42fd-bb3e-fc7df01f5fe8" class="bulleted-list"><li style="list-style-type:disc">Voleva dimostrare ai nazionalisti che il suo era un governo in grado di aumentare il <strong>prestigio internazionale</strong> dell’Italia.</li></ul><ul id="30ba144b-d0df-456e-9688-a9bcb5bfb9eb" class="bulleted-list"><li style="list-style-type:disc">Voleva accontentare l’<strong>opinione pubblica</strong> che riteneva fosse necessario conquistare nuove terre.</li></ul></div></p><p id="db845d3e-3bde-4fbc-8b65-4d47dfd8aa79" class="">Giolitti cambiò obiettivo: non più l’Etiopia ma la Libia.</p><p id="3a42da0b-2d51-45d5-a271-4ac0242a136c" class="">Nel <strong>1911</strong> l’Italia dichiarò guerra alla <strong>Turchia</strong> che dominava la <strong>Libia.</strong></p><p id="56132bad-29b6-47e8-8344-ce39ba2edd66" class="">L’esercito occupò subito le principali città, ma dopo i primi successi iniziarono le difficoltà.</p><p id="851a8282-ebc9-4f59-8220-9f9169030b2d" class="">Non riuscendo a piegare la resistenza libica, l’Italia attaccò direttamente la Turchia, occupando alcune isole delle Sporadi che andarono a formare il dominio italiano nel <strong>Dodecaneso.</strong></p><p id="6894cfaf-6911-4a1e-8670-fee3f8361132" class="">I Turchi firmarono nel <strong>1912</strong> il <strong>Trattato di Losanna</strong> con il quale cedevano all’Italia il dominio sulla Libia.</p><hr id="a028bb6a-40d3-4c9c-b448-3108e49141da"/><p id="6824a227-1076-498e-804b-59e39b030f3b" class="">L’avventura coloniale comportò notevoli spese a cui non corrispose affatto la creazione di grandi opportunità per gli emigranti italiani.</p><p id="1ae71485-3726-4451-ac82-63ea1f93e7d4" class="">La Libia infatti non era quella terra fertile e rigogliosa come veniva descritta.</p><hr id="c7614d05-bfc6-4f00-a850-2df54116e9d1"/><p id="a67d0a8a-99c6-41f8-a06d-adde777ccf5e" class="">La principale riforma democratica dell’età giolittiana fu l’approvazione, nel <strong>maggio 1912</strong>, di una nuova legge elettorale, che introduceva il <strong>suffragio universale maschile.</strong></p><p id="5e9d92cb-decf-441d-bdd6-2dc293916a2b" class="">Con questa legge furono ammessi al voto i cittadini maschi che avessero compiuto il trentesimo anno d’età.</p><p id="15924ec4-3076-4313-b89f-eff0b8a7d5ee" class="">Per accedere al voto all’età di ventuno anni era invece necessario aver adempiuto gli obblighi del servizio militare o saper leggere e scrivere.</p><hr id="0fb6865c-3c73-42b9-aceb-d5b0068d0ba2"/><p id="5d4ed1fa-c513-4b61-aa88-25ae2b9c3e1f" class="">Il <em>Non expedit</em> venne in parte ammorbidito da Pio X.</p><p id="0e649a49-ac53-4bc4-b5d3-cb44de8c4f1e" class="">Non era ancora permesso costituire un partito cattolico, ma in tutto il mondo cattolico vi era un grande fermento.</p><p id="e9fc173d-1b7b-4e24-b2e7-c69baecb6d0b" class="">Nel 1913 Giolitti stipulò con l’Unione elettorale cattolica, presieduta dal conte Filippo Gentiloni, un accordo: il <strong>Patto Gentiloni. </strong>I cattolici promettevano di votare quei candidati liberali che avessero sottoscritto l’impegno di difendere la Chiesa.</p><p id="9c579845-4b83-45d0-b681-bad7dd234988" class="">Grazie a questo patto Giolitti riuscì a ottenere nuovamente la maggioranza.</p><hr id="fe4dd532-cf92-4767-9b02-6af59d5a733b"/><p id="c2bd06e0-371e-4dc5-946f-02963a26f485" class="">La guerra in Libia aveva indebolito il governo di Giolitti. Molti erano coloro che criticavano il capo dell’esecutivo.</p><p id="50406d10-0e25-413f-a8c3-1ef907f92a0f" class="">Giolitti preferì dare le dimissioni, pensava probabilmente che sarebbe stato richiamato al potere come era sempre successo.</p><p id="55d71241-60ab-461a-bbad-5ddcb35eb2a6" class="">Come suo successore indicò <strong>Antonio Salandra</strong>, un uomo politico conservatore.</p><p id="17954c67-0f72-4be4-b84d-20619cd4b339" class="">Salandra però non seguì l’esempio di Giolitti nei confronti delle manifestazioni popolari.</p><p id="625c0b5e-0f2e-427a-b1f8-1937420e0a7f" class="">Scoppiarono dei disordini che per la presenza dei socialisti presero il nome di <strong>settimana rossa</strong>. Salandra inviò l’esercito a reprimerli.</p><p id="301626cb-99f6-43dc-a252-1fe7a6ea6b4d" class="">L’Italia tornava così a quel clima di tensione che aveva caratterizzato la crisi di fine secolo.</p><p id="cfa82fbe-3d98-42d6-a2ce-333b725de816" class="">La situazione internazionale stava precipitando verso la <strong>prima guerra mondiale</strong>, Giolitti si opporrà, ma inutilmente.</p><p id="6a2776da-a47e-48c9-b200-fe0f32d8b191" class="">L’età giolittiana era veramente finita.</p></div></article></body></html>

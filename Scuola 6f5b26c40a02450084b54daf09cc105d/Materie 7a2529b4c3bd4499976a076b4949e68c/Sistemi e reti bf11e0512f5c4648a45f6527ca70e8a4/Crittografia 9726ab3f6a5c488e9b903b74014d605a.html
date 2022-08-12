@@ -1,0 +1,674 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Crittografia</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="9726ab3f-6a5c-488e-9b90-3b74014d605a" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🔑</span></div><h1 class="page-title">Crittografia</h1></header><div class="page-body"><p id="afc6c780-0c60-4b76-a5ab-187b25861aed" class="">Consiste nella <strong>codifica</strong> e <strong>decodifica</strong> di messaggi e si basa su <strong>algoritmi crittografici</strong> che utilizzano:</p><ul id="588516fb-2a6b-4cce-a5e3-c47a05dd9edb" class="bulleted-list"><li style="list-style-type:disc">una o più funzioni matematiche</li></ul><ul id="704f7d87-7723-4f5c-8cb5-ebc8a16d69de" class="bulleted-list"><li style="list-style-type:disc">una o più chiavi per operazioni di cifratura e relativa decifratura</li></ul><h3 id="fa450186-5955-4f82-bdd2-0f1a379cbb95" class="">Elementi della crittografia</h3><ul id="22c5bb2b-30f9-448d-8cf5-3d9b5f893240" class="bulleted-list"><li style="list-style-type:disc"><strong>Crittografia</strong>: procedimento di cifratura e decifratura dei messaggi basta su funzioni parametriche</li></ul><ul id="933e55bc-98a0-4734-a94e-405b1a5028bf" class="bulleted-list"><li style="list-style-type:disc"><strong>Testo in chiaro</strong>: messaggio originario</li></ul><ul id="da62c29f-b6ac-4673-b9e8-ec08bef295a4" class="bulleted-list"><li style="list-style-type:disc"><strong>Algoritmo di cifratura</strong>: effettua sostituzioni e trasformazioni sul testo in chiaro</li></ul><ul id="db8c5356-98d6-4c76-a4bd-c29b9b506251" class="bulleted-list"><li style="list-style-type:disc"><strong>Testo cifrato</strong>: output dell&#x27;algoritmo di cifratura da trasmettere sul canale</li></ul><ul id="9b263b95-d481-42d7-a3f7-dd75d90673c6" class="bulleted-list"><li style="list-style-type:disc"><strong>Algoritmo di decifratura</strong>: effettua il lavoro inverso dell&#x27;algoritmo di cifratura</li></ul><ul id="990f9f7c-afc9-47f2-b709-3ac0006ba1e8" class="bulleted-list"><li style="list-style-type:disc"><strong>Chiave</strong>: parametro dell&#x27;algoritmo di cifratura o decifratura</li></ul><h1 id="024d2e98-2090-4603-975c-879aabf46d0b" class="">Classificazione dei sistemi crittografici</h1><p id="8f08301c-795a-4452-86c8-3dd78fd2ea8b" class="">Essi si possono classificare in:</p><ul id="a4396b3c-4105-43a8-98dd-ed6f3a2b6d63" class="toggle"><li><details open=""><summary><strong>Tipo di operazioni</strong></summary><ul id="e74db458-8de0-49fd-878c-6b2a2d3ad8b8" class="bulleted-list"><li style="list-style-type:disc"><strong>Sostituzione</strong>: ogni elemento del testo in chiaro è trasformato in un altro elemento.
+Una delle più famose è la <a href="Crittografia%209726ab3f6a5c488e9b903b74014d605a.html"><span style="border-bottom:0.05em solid">cifratura di Cesare</span></a></li></ul><ul id="c3aacb88-5827-430d-b45d-5611e11b167a" class="bulleted-list"><li style="list-style-type:disc"><strong>Trasposizione</strong>: gli elementi del testo in chiaro sono riorganizzati</li></ul></details></li></ul><ul id="a78516c5-5161-42b4-8589-a60ef4f0844b" class="toggle"><li><details open=""><summary><strong>Numero di chiavi</strong></summary><ul id="c30900bb-5f8a-4cc1-89a8-96d7fc2500e9" class="bulleted-list"><li style="list-style-type:disc"><strong>Chiave singola</strong>: crittografia a <span style="border-bottom:0.05em solid">chiave simmetrica o chiave segreta</span></li></ul><ul id="e224977f-2537-4a5d-9d31-ab98e6cce6ea" class="bulleted-list"><li style="list-style-type:disc"><strong>Due chiavi</strong>: crittografia a <span style="border-bottom:0.05em solid">chiave asimmetrica o chiave pubblica</span></li></ul></details></li></ul><ul id="ea0ba430-be90-4f30-a6ee-7be43fbb2be2" class="toggle"><li><details open=""><summary><strong>Modo in cui il testo in chiaro è elaborato</strong></summary><ul id="60b941aa-3d09-4986-a73c-fe44c10161b3" class="bulleted-list"><li style="list-style-type:disc"><strong>Cifrario a blocchi</strong>: elabora in blocchi di dimensione fissa</li></ul><ul id="94b45f9d-ae57-4f28-a4ad-3415f8a4e290" class="bulleted-list"><li style="list-style-type:disc"><strong>Cifrario a flusso</strong>: elabora senza una lunghezza predefinita</li></ul></details></li></ul><hr id="9431854f-49c4-4631-ad24-0eb013142c17"/><h1 id="eade9780-d663-47e2-8c91-72ed234a05af" class="">Crittoanalisi</h1><p id="e464d839-3843-4776-89c2-c1d22a1dcacf" class="">Opposte alla crittografia si sono sviluppate tecniche di crittoanalisi con lo <strong>scopo di analizzare e cercare di violare</strong> le comunicazioni cifrate, ossia decifrare il contenuto di un messaggio senza conoscere la chiave.</p><ul id="274be00e-2ea2-4204-9e42-da80aad46f2b" class="bulleted-list"><li style="list-style-type:disc"><strong>Attacchi a forza bruta</strong> → si prova ogni chiave possibile fino a trovare quella corretta</li></ul><ul id="ec485ebc-b25f-4ee2-a595-6a6dbd97589e" class="bulleted-list"><li style="list-style-type:disc"><strong>Analisi crittografica</strong> → si sfruttano informazioni sull&#x27;algoritmo, le caratteristiche dei testi in chiaro, o l&#x27;analisi di coppie note di teso in chiaro / testo cifrato</li></ul><h3 id="88fd85bf-4794-4de8-bd1e-9705b99f40bc" class="">Sicurezza dei cifrari</h3><ul id="984fee47-dbba-45a7-9e36-27dafef3466b" class="bulleted-list"><li style="list-style-type:disc"><strong>Sicurezza incondizionata</strong>: è impossibile decifrare il testo senza sapere la chiave</li></ul><ul id="8caed63b-5c70-427d-af83-b1024d017269" class="bulleted-list"><li style="list-style-type:disc"><strong>Sicurezza computazionale</strong>:<p id="47a7d4cd-bb81-4cd3-b171-360c5c50d207" class="">Un sistema di cifratura è <strong>computazionalmente sicuro</strong> se il testo cifrato soddisfa uno dei seguenti criteri:</p><ul id="65967d82-db33-4830-8f56-1ea6edc7f5c1" class="bulleted-list"><li style="list-style-type:circle">Il costo per rendere inefficace il cifrario supera il valore dell&#x27;informazione cifrata</li></ul><ul id="321e38eb-0e68-451b-b037-5c347908e6cc" class="bulleted-list"><li style="list-style-type:circle">Il tempo richiesto per rendere inefficace il cifrario supera l&#x27;arco temporale in cui l&#x27;informazione è utile</li></ul><figure id="8f8ced51-a8f6-479f-8904-1d6e611fdc26" class="image"><a href="Crittografia%209726ab3f6a5c488e9b903b74014d605a/Screenshot_2021-11-19_at_15.57.51.png"><img style="width:515px" src="Crittografia%209726ab3f6a5c488e9b903b74014d605a/Screenshot_2021-11-19_at_15.57.51.png"/></a></figure></li></ul><hr id="596dfa58-6de7-4ae7-bc1b-c08974ec8438"/><h1 id="527b874b-3b32-46c9-a33f-40f56fd19509" class="">Crittografia simmetrica ed asimmetrica</h1><h2 id="3dee1130-21bf-4639-91c8-d8970aae70a5" class="">Simmetrica</h2><p id="b1b80aeb-39c4-4535-be01-008a25e229d8" class="">Viene usata una sola chiave per cifrare e decifrare il messaggio e deve quindi essere conosciuta sia da mittente che da destinatario.
+Il problema sta quindi nel condividere la chiave tra mittente e destinatario, procedimento che deve avvenire in modo sicuro.</p><figure id="a09e7272-61b2-4bf4-9c55-6a7e2cf90a01" class="image"><a href="Crittografia%209726ab3f6a5c488e9b903b74014d605a/Screenshot_2021-11-19_at_16.02.53.png"><img style="width:940px" src="Crittografia%209726ab3f6a5c488e9b903b74014d605a/Screenshot_2021-11-19_at_16.02.53.png"/></a></figure><p id="cf020f80-500b-45e9-836c-46a893fd0881" class="">Gli <strong>svantaggi principali</strong> risultano:</p><ul id="5bfc80d0-27c8-47cb-8027-915e05608fd2" class="bulleted-list"><li style="list-style-type:disc">Difficoltà nel mantenere la chiave segreta</li></ul><ul id="1d675b58-3b00-4244-9f85-356a1f019f85" class="bulleted-list"><li style="list-style-type:disc">La segretezza dipende dai possessori della chiave</li></ul><ul id="0f88114a-b2d0-4578-ac1e-10e0dc27431a" class="bulleted-list"><li style="list-style-type:disc">Per N utenti bisognerebbe avere N chiavi distinte</li></ul><ul id="e367dae6-f80d-46ab-8943-d3680364f01d" class="bulleted-list"><li style="list-style-type:disc">Difficoltà per la distribuzione sicura della chiave, cioè dello scambio</li></ul><h2 id="d22dedbd-7afd-4e95-b9a5-93f9cfd5affe" class="">Asimmetrica</h2><p id="daf28e83-a8fc-432e-9956-93e0749bea9e" class="">Nasce nel 1975 ed è anche chiamata <em>crittografia a chiave pubblica</em>.
+Risolve il problema della distribuzione sicura della chiave utilizzando una coppia di chiavi, una pubblica ed una privata.</p><figure id="3572fbce-b33a-48bf-b29d-fb4f590995a6" class="image"><a href="Crittografia%209726ab3f6a5c488e9b903b74014d605a/Screenshot_2021-11-19_at_16.05.56.png"><img style="width:932px" src="Crittografia%209726ab3f6a5c488e9b903b74014d605a/Screenshot_2021-11-19_at_16.05.56.png"/></a></figure><p id="49a91e2b-b83d-4081-af31-30f3c2ac73b7" class="">Le due chiavi sono <strong>matematicamente correlate</strong>, i messaggi quindi codificati con la chiave privata possono essere decodificati solo con la chiave pubblica e viceversa.
+Anche conoscendo la chiave pubblica non è possibile risalire alla corrispondente chiave private se non con calcoli che richiedono tempi elevatissimi.</p><p id="fb48b6d1-81d5-4462-b3a8-7d595df5158c" class="">La coppia di chiavi viene generata con software opportuno.</p><hr id="75042fd6-b8ef-4a0f-95ed-16165682fe13"/><h2 id="16db3543-9e9f-4ab2-93dc-ea3e4a65b139" class=""><strong>Programmi utili</strong></h2><p id="46c20986-a449-41c2-97bb-3b6f805e207f" class="">Esistono numerosi programmi di utilità che consentono di criptare file, dischi o dati in generale</p><h3 id="444c0ae4-2080-4ee5-b8da-626923154892" class="">Gestione file</h3><ul id="f90baca1-5862-4684-b690-6bc704d5b411" class="bulleted-list"><li style="list-style-type:disc">FileDecoder → crea file cifrati con password</li></ul><ul id="6d847609-5b23-47bd-a274-f230ad9a3bf9" class="bulleted-list"><li style="list-style-type:disc">FileVault → crea file auto-estraenti e auto-decifranti</li></ul><ul id="9e4385d7-760e-426f-b36b-4274e51973b9" class="bulleted-list"><li style="list-style-type:disc">Kleopatra → unisce alla crittografia la gestione dei certificati</li></ul><ul id="b533f7fb-0013-4e31-8579-3f95d925523e" class="bulleted-list"><li style="list-style-type:disc">AxCrypt → permette di cifrare, comprimere, decifrare i file </li></ul><ul id="b39cc990-e9bb-44a8-b94d-ab71b278a6a0" class="bulleted-list"><li style="list-style-type:disc">Kruptos → permette di cifrare file sia su PC che dispositivi mobili e generare file auto-decifranti</li></ul><h3 id="1945409f-6ca3-4a9b-9852-0c760bd96731" class="">Disco Fisso</h3><ul id="ed39ec92-2f65-47aa-81b3-20810fa8a159" class="bulleted-list"><li style="list-style-type:disc">CryptoExpert → crea dischi fissi virtuali cifrati</li></ul><ul id="b9d281da-80b3-4600-9475-e8d083c8eba1" class="bulleted-list"><li style="list-style-type:disc">VeraCrypt → crea dischi fissi cifrati</li></ul><h3 id="b3e677b0-0936-4da1-9930-aeacaaeb4d4a" class="">Dati</h3><ul id="fa12e26f-98f5-40c4-8812-3b3e59b026ef" class="bulleted-list"><li style="list-style-type:disc">Data Scrambler → trasforma i dati in un&#x27;immagine bitmap attraverso MD5</li></ul><ul id="e16f39a9-e302-4066-9263-5e3c72d0900e" class="bulleted-list"><li style="list-style-type:disc">PixelCryptor → software per cifrare dati attraverso immagini</li></ul><hr id="da404b33-3bab-41ac-9a4d-0a09f75cbbee"/><h1 id="1393a8b9-42fa-4ffb-90a7-21c0bd325608" class="">Note</h1><h3 id="bbe693ec-f2a1-484f-b520-3939556e7e0d" class="">Cifratura di Cesare</h3><ul id="bfa84c84-3707-4f53-aa62-34653e9f2b4f" class="bulleted-list"><li style="list-style-type:disc">Tipo di operaio → sostituzione</li></ul><ul id="732f05a6-6474-4504-9768-a1fca796f3f3" class="bulleted-list"><li style="list-style-type:disc">Numero di chiavi utilizzate → chiave singola</li></ul><ul id="36740c13-c81a-464a-89c8-bebec6e6c4d5" class="bulleted-list"><li style="list-style-type:disc">Modo in cui il testo in chiaro è elaborato → cifrario a flusso<figure id="74f40a48-bb30-4013-97f4-d053bc7457f5" class="image"><a href="Crittografia%209726ab3f6a5c488e9b903b74014d605a/Screenshot_2021-11-19_at_15.53.23.png"><img style="width:926px" src="Crittografia%209726ab3f6a5c488e9b903b74014d605a/Screenshot_2021-11-19_at_15.53.23.png"/></a></figure></li></ul><p id="ab62d4a6-14ae-4b6b-a1b4-5e28b3881ca2" class="">
+</p></div></article></body></html>

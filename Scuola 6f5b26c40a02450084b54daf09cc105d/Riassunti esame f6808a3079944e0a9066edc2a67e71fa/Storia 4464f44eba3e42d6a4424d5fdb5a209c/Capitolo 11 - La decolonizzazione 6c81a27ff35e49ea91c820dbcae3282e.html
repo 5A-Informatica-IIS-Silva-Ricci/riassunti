@@ -1,0 +1,695 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Capitolo 11 - La decolonizzazione</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6c81a27f-f35e-49ea-91c8-20dbcae3282e" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📙</span></div><h1 class="page-title">Capitolo 11 - La decolonizzazione</h1></header><div class="page-body"><p id="434cd9e3-b9b8-4322-9254-173ce496e8b4" class="">
+</p><h1 id="db116680-3873-4b72-8053-17803953f12c" class="">📍1. Il processo di decolonizzazione</h1><p id="4d755e4d-23bf-4d83-9cff-c01580f7725c" class="">Dopo la seconda guerra mondiale le potenze europee che avevano costruito i loro imperi coloniali in Africa e in Asia non furono più in grado di mantenerne il controllo.</p><p id="77911838-700e-4b17-b21f-ed61516fc2b4" class="">Il conflitto mondiale aveva dato la spinta decisiva alla fine degli imperi coloniali.</p><p id="7e10c486-2bff-4bb3-ac43-05c7dc589085" class="">Tra le due guerre erano sorti i primi <strong>movimenti </strong> o <strong>partiti indipendentisti: </strong>il conflitto generalizzò questa situazione suscitando nelle colonie il sentimento nazionale e il desiderio di indipendenza.</p><p id="2511312c-3698-4cf0-a1d7-d685578e713f" class="">Così già nel 1941 la Francia fu costretta a riconoscere, almeno formalmente, l’indipendenza di Libano e Siria. Nel 1942 Gandhi incitò gli Indiani a cacciare gli Inglesi e nel 1943 il leader nazionalista algerino Ferhat Abbas lanciò il <em>Manifesto del popolo algerino </em> con la richiesta dell’abolizione della colonizzazione. </p><p id="25e3d5ce-5059-4351-8893-1a889b370ec4" class="">Infine, nel 1944, al Congresso panafricano di Manchester i delegati rivendicarono l’indipendenza dei Paesi africani, da ottenere anche con la forza.</p><p id="c2f0ae85-926f-4ed5-8cb6-fab7b18663bb" class="">
+</p><p id="6326c4be-e3c5-47a7-ac18-089bfa32edf4" class="">La decolonizzazione è il processo storico che ha portato alla fine degli imperi coloniali e all’indipendenza dei popoli afroasiatici.</p><p id="d8b5d01e-d734-4150-80f5-2abde069d4dc" class="">Il processo di decolonizzazione durò circa quarant’anni (dagli anni <strong>Quaranta</strong> agli anni <strong>Ottanta</strong>).</p><p id="e960b71f-d01f-46fe-b8b2-0c43a8f5cbc2" class="">In alcuni casi l’indipendenza fu raggiunta per <strong>via pacifica, </strong>con trattative tra la madrepatria e i gruppi dirigenti locali; in altri casi avvenne per <strong>via violenta, </strong> con una guerra di liberazione.</p><p id="4b47929b-0def-4e68-b3cc-fb25099b2e49" class="">La <em>Gran Bretagna</em><strong><em><em> </em></em></strong>per esempio, avviò gradualmente all’indipendenza le colonie, trasformando l’impero nel <em>Commonwealth </em>(libera associazione di popoli uniti nella ricerca del “bene comune” sotto l’egida di Sua Maestà britannica).</p><p id="78b8a847-0690-4dda-b14c-7f02dd077b68" class="">La<strong> </strong><em>Francia </em>invece oppose una dura resistenza ai movimenti di liberazione<em>.</em></p><p id="f95bcafc-1700-487d-ab5f-7976b8284958" class="">
+</p><p id="4329035d-72b5-4fba-a122-f7c699ad65f4" class="">Fattore decisivo per lo smantellamento degli imperi coloniali fu la pressione degli Stati Uniti e dell’Unione Sovietica.</p><p id="eefd87ec-ee42-4aca-abe3-7cfacd36f6dc" class="">I due vincitori del secondo conflitto mondiale erano contrati al colonialismo: gli USA in nome della <strong>libertà dei popoli, </strong> l’URSS in nome del <strong>comunismo.</strong></p><p id="b3fa5b12-fab1-4bb1-baa6-c2d317828f86" class="">Fin dal 1919 il presidente americano Wilson aveva dichiarato la necessità di una libera sistemazione di tutte le rivendicazioni coloniali, con attenzione alle esigenze delle popolazioni interessate.</p><p id="f5d94822-f706-4405-ac00-ca053970d38b" class="">La <strong>Carta Atlantica </strong>del 1941 aveva proclamato il “diritto di tutti i popoli a scegliere la forma di governo da cui intendevano essere retti”.</p><p id="3e21ef20-4101-4fa9-8675-a693f08a3ae9" class="">Da parte sua l’URSS tendeva a mostrarsi come il nemico numero uno del colonialismo.</p><p id="f145fd4b-aa30-4d75-b62f-6101284e07f1" class="">Entrambe le superpotenze in realtà avevano l’obiettivo di allargare le loro zone d’influenza e fecero pesare in seguito la loro egemonia economica e politica nei Paesi dell’Africa e dell’Asia.</p><p id="a9eb49e8-8455-45ad-b0ef-8c1f8008e945" class="">Il principio di <strong>autodeterminazione dei popoli </strong>ispirò poi le attività dell’Organizzazione delle Nazioni Unite.</p><p id="a58ce2f4-812e-42bc-a042-b0aa94f03af4" class="">Di fatto l’ONU non riuscì a imporre ovunque il rispetto dei princìpi di uguaglianza dei diritti, ma ricoprì comunque un ruolo importante nella lotta al colonialismo.</p><p id="f461e9d2-563c-4228-b1f4-2affa84b67d5" class="">Critiche al colonialismo vennero infine anche dall’opinione pubblica e in particolare dalle Chiese.</p><p id="13e3db4b-1724-428e-9526-e80a964a8c4c" class="">
+</p><p id="7722bdcc-ca65-40c5-a4d1-d2cbdeabbb3b" class="">Da parte dei paesi colonizzatori non mancarono anche motivi di semplice interesse.</p><p id="d06d3ba4-91da-4420-9e46-32a2ea5f60d3" class="">Mantenere un controllo politico sulle colonie comportava costi assai consistenti. Decisamente più conveniente era infatti abbandonare il controllo politico diretto della colonia e mantenere quello economico: il colonialismo si trasformava così in <strong>neocolonialismo.</strong></p><p id="931a6d04-dd4a-40d1-9855-bc584eee2983" class="">Dal punto di vista politico la democrazia di tipo europeo si affermò solo raramente. Spesso prevalsero regimi autoritari di destra o di sinistra: vere e proprie <strong>dittature militari.</strong></p><p id="97d30382-23ab-4435-afb8-036ed476d417" class="">
+</p><h1 id="2316b6ee-3f09-4405-a17c-2f725227c314" class="">📍2. La decolonizzazione nel Medio Oriente </h1><p id="eca7c235-bc13-4479-96ae-686adadd6a1a" class="">Nei primi decenni del Novecento si sviluppò nel Medio Oriente un <strong>movimento nazionale arabo </strong>che si rivolse prima contro la dominazione ottomana e in seguito contro le potenze colonialiste.</p><p id="ccbaea10-5f28-4bb2-9845-256ef4ca29b3" class="">Alla fine della prima guerra mondiale, Francia e Gran Bretagna si erano accordate per spartirsi i territori mediorientali: la Francia aveva ottenuto il mandato in Siria e Libano, la Gran Bretagna in Iraq e Palestina. </p><p id="edd555b8-1c64-4885-bbec-91ebac2e40fe" class="">I mandanti dovevano avviare all’indipendenza i popoli sottomessi, ma solo l’Iraq raggiunse presto l’indipendenza (1931), gli altri Paesi dovettero attendere la seconda guerra mondiale.</p><p id="29242eed-6f31-4afd-b3c6-67fcbaea2275" class="">Durante il conflitto il premier inglese Churchill appoggiò decisamente le rivendicazioni nazionalistiche arabe, con l’obiettivo di estendere l’influenza britannica in Medio Oriente.</p><p id="3d897c79-d7b4-4e0f-ad71-71b3cfb8234e" class="">La pressione inglese indusse la Francia a riconoscere formalmente l’indipendenza di <strong>Libano e Siria; </strong>Il processo si completò nel 1946 quando i Francesi furono costretti a ritirare definitivamente le truppe. </p><p id="f3d19347-f35c-416a-a18e-3ac472b7ca5b" class="">Nel frattempo, il 22 marzo 1945 era nata la <strong>Lega Araba,</strong> che raggruppava Libano, Siria, Iraq, Egitto e Arabia Saudita. Unita da scopi di cooperazione economica e politica, la Lega Araba sul piano politico si pose come obiettivo la nascita di un nuovo Stato arabo in Palestina, contro la volontà di creare uno Stato ebraico.</p><p id="f8f768dd-732f-4367-abe9-362a88a85b80" class="">
+</p><p id="c81212fd-eb9c-41c8-a2c7-15959c7f9e75" class="">La scoperta degli orrori dei campi di sterminio nazisti aveva creato a livello internazionale un movimento di opinione pubblica favorevole alla nascita di uno Stato ebraico, che fosse anche un rifugio per sopravvissuti.</p><p id="34b6920b-5ce5-418f-ba5a-5f842cd0f156" class="">La causa <strong>sionista</strong>, ovvero della dottrina politica che afferma il diritto degli Ebrei ad avere uno Stato in Palestina, aveva forti alleati negli Stati Uniti, dove la comunità ebraica godeva di grande prestigio, ma fu ostacolata dall’Inghilterra e soprattutto dalla Lega Araba.</p><p id="3cd53d91-6068-406c-87a6-e07761ae1386" class="">Incitate anche dal leader ebreo <strong>David Ben Gurion </strong>le organizzazioni militari ebraiche passarono allo scontro armato anche contro gli inglesi.</p><p id="ba96cc60-16ab-4dc8-9c59-c52580501b35" class="">Il 22 novembre 1947 l’ONU propose di dividere la Palestina in due Stati, uno ebraico e uno arabo, con Gerusalemme come zona internazionale.</p><p id="9904faca-ef68-4a8e-90c8-c6bd1b1b46ff" class="">Gli Ebrei accettarono la spartizione, ma la Lega Araba rifiutò e si dichiarò pronta a combattere.</p><p id="e843db00-042c-4fa4-9606-adcdfce8e83b" class="">Il 14 maggio del <strong>1948, </strong>alla partenza degli inglesi, Ben Gurion proclamò la nascita dello <strong>Stato di Israele.</strong></p><p id="72437654-4ddc-4a26-9289-702aef057395" class="">La Lega Araba il giorno successivo attaccò.</p><p id="939aa488-238a-4541-ab4c-fa752b480c34" class="">La <strong>prima guerra arabo-israeliana </strong>si risolse con la sconfitta delle truppe arabe e l’affermazione definitiva dello Stato d’Israele.</p><p id="9bd7584d-f582-492b-b8e8-33023a60af7c" class="">
+</p><p id="e63c02aa-19af-47cb-a949-253a231d7b35" class="">Al termine del conflitto i confini israeliani si espansero del 40% e lo Stato arabo non potè vedere la luce e la <strong>questione palestinese </strong>emerse in tutta la sua gravità.</p><p id="d6bff6be-2d63-4da4-9ed7-1b4657a4f27c" class="">Un milione di profughi arabi fuggirono dai territori conquistati dagli Israeliani per rifugiarsi nei Paesi vicini.</p><p id="f9b9b1c9-52ac-4cda-bd68-d327072054be" class="">Le conseguenze del conflitto trasformarono l’area in un teatro di guerra che dura fino ai nostri giorni.</p><p id="9e0935dd-5092-446a-bece-1911f905364a" class="">Nel <strong>1964 </strong>nacque l’Organizzazione per Liberazione della Palestina (<strong>OLP</strong>), con lo scopo di addestrare i Palestinesi a combattere Israele per la nascita di uno Stato palestinese.</p><p id="68f2c96f-8128-4ff7-b339-8184aa1b5814" class="">
+</p><h1 id="427c2f93-c055-4293-a6c4-69546e23041a" class="">📍3. La decolonizzazione in Asia</h1><p id="7fec8f62-3636-44f0-b6e4-33913717d5f1" class="">L’India era da più di un secolo il fulcro dell’Impero britannico.</p><p id="9bdeb547-bab2-4a02-b2fc-c3b34f871229" class="">Tra la prima e la seconda guerra mondiale la richiesta di indipendenza da parte indiana divenne sempre più pressante. La lotta era sostenuta dal Partito del Congresso, espressione della borghesia indù, ma coinvolse ben presto l’intera popolazione, grazie all’influenza del <strong>Mahatma Gandhi.</strong></p><p id="0d2a671f-a7a8-4538-b208-61020d7c85f3" class="">Nel 1915 divenne una delle figure centrali del Partito del Congresso e impostò la lotta per l’indipendenza sulla <strong>non-violenza.</strong></p><p id="a0e90456-e7df-4608-b77a-ffe20f289f1d" class="">Tra il <strong>1941 e il 1942 </strong>promosse un movimento di resistenza non violenta alla guerra e agli Inglesi.</p><p id="f9eabebe-fcb9-4957-8d8e-5a7e1545633a" class="">Così, anche per timore che l’India potesse schierarsi col nemico giapponese, il governo britannico promise la concessione dell’indipendenza.</p><p id="21f96da7-a63d-4290-bf3a-e5d802a56794" class="">
+</p><p id="a809ab06-f65f-46f9-ba59-7b34ea9c1025" class="">Alla fine della guerra, la Gran Bretagna aprì i negoziati per trattare il trasferimento del potere.</p><p id="0c6f3d8f-539b-4cee-b58a-f2f0e7c4f5f5" class="">Il problema più grave indiano era rappresentato dalla difficile coesistenza delle comunità religiose induista e musulmana.</p><p id="d9785143-6dbe-4181-a9cf-1559cde474dc" class="">Mentre Gandhi sosteneva la necessità di creare un unico Stato laico, dove potessero convivere le due comunità, la lega musulmana reclamava la separazione del Paesi in due Stati.</p><p id="9bc2c06b-d123-4fad-9b53-3b8ca80ed64c" class="">il 15 agosto <strong>1947</strong> nacquero l’<strong>Unione indiana, </strong>a maggioranza indù, e il <strong>Pakistan, </strong>musulmano.</p><p id="e1aef542-116a-48c1-99fb-4168d043c607" class="">
+</p><p id="3a63a760-9535-450b-acf1-6fd2f21e7d5d" class="">Con la nascita dei due Stati i conflitti non cessarono, lo stesso Gandhi fu vittima di quel clima di odio, venne infatti assassinato da un fanatico che gli rimproverava di credere ancora nella riconciliazione.</p><p id="48261b4f-58e8-4861-8a40-e4e65d7d3496" class="">
+</p><p id="21313aa5-e458-4456-b7b8-f5052f9837ec" class="">Durante la seconda guerra mondiale il Giappone aveva occupato le colonie inglesi, francesi e olandesi del Sud-Est asiatico.</p><p id="b11d6629-8bb6-4704-b27d-cf6e826cbc41" class="">L’arrivo dei Giapponesi rappresentò un duro colpo per il colonialismo europeo: molte popolazioni locali vissero il fatto come una liberazione. </p><p id="7eaa9ba0-5f5d-46c4-9a8e-e5d13957b0a4" class="">Il 17 agosto <strong>1945 </strong>i nazionalisti indonesiani giunsero a un’intesa con l’Olanda e proclamarono la Repubblica indipendente con presidente Sukarno.</p><p id="d6845073-6303-47b4-ad1a-9b18f7f43e5e" class="">L’anno successivo gli Olandesi tentarono di riprendere il controllo ma, per volontà di USA, URSS e India, il Consiglio di Sicurezza dell’ONU impose all’Olanda il cessate il fuoco e la riapertura dei negoziati: la <strong>Repubblica degli Stati Uniti d’Indonesia </strong>fu riconosciuta ufficialmente nel <strong>1949.</strong></p><p id="edc04be4-bac1-4ffe-b62e-8f17e09ca2de" class="">
+</p><p id="858724f0-d48b-43ad-9060-a4ab8207d687" class="">Nell’ex Indocina francese era sorta la Lega per l’indipendenza guidata dal leader comunista HO Chi Minh.</p><p id="f31c6e5c-23e8-4c02-8610-72f6d0aaecde" class="">Ho Chi Minh proclamò ad Hanoi la Repubblica Democratica del <strong>Vietnam</strong>.</p><p id="d2bde2c0-8867-4661-bf73-6cc7eedb8a28" class="">I Francesi non riconobbero il nuovo Stato e l’anno seguente rioccuparono la parte meridionale del Paese.</p><p id="0dcc7d8f-49b3-4f6b-9109-cc79c64948ec" class="">La guerra divampò in tutto il Paese.</p><p id="c61bf243-9735-42ba-87f8-c41c7ff3dfb4" class="">Nel luglio del <strong>1954 </strong>gli Accordi di Ginevra stabilirono il ritiro dei Francesi da tutta la penisola indocinese e decretarono la nascita dello Stato vietnamita.</p><p id="72750a4e-52e0-446f-926d-05f4119128bc" class="">Il Vietnam fu diviso in <strong>Vietnam del Sud </strong> a regime filoccidentale, e <strong>Vietnam del Nord </strong>a regime comunista. Questa separazione determinerà una guerra cruenta che coinvolgerà anche gli Stati Uniti.</p><p id="8cb60add-fc4d-4f32-9f63-c61786a1d24a" class="">
+</p><h1 id="7f1985e1-8d49-471f-a974-255afa6ecb2d" class="">📍4. La decolonizzazione nel Maghreb</h1><p id="0db7be19-af28-4dbf-920b-a6a79a01ec37" class="">Con il termine <em>Maghreb </em>si intende l’occidente della nazione araba.</p><p id="752e3b84-d7dd-4f03-9ef5-2a43972ea88e" class="">Il primo stato del Maghreb a ottenere l’indipendenza fu la colonia italiana della <strong>Libia.</strong></p><p id="3438d42e-da37-4ef3-839e-16a6e5b1c813" class="">Fin dal <strong>1947</strong> con la firma del Trattato di pace di Parigi, l’Italia aveva dovuto rinunciare a tutti i suoi possedimenti in Africa.</p><p id="866259e2-72ae-451b-8778-ed186fd6fce5" class="">Nel dicembre <strong>1951 </strong>la Libia ottenne l’indipendenza e venne istituita la monarchia.</p><p id="544e5c82-0c80-435d-b95c-ab5c1258d71c" class="">Nel <strong>1969</strong> un colpo di Stato di militari guidati dal colonnello <strong>Gheddafi </strong>depose la monarchia per instaurare la repubblica.</p><p id="a1802676-c657-402f-9215-3aef822e84c9" class="">Il regime di Gheddafi si schierò con l’URSS, chiudendo le basi militari inglesi e americane.</p><p id="5d35d1cb-502e-4c83-94e2-a270e70e4d36" class="">In <strong>Marocco e Tunisia </strong>la Francia cercò di domare il movimento nazionalista arabo, alternando repressione militare e proposte di parziale autogoverno.</p><p id="93ebb173-bd7d-4646-bcc0-49ba4ed6cc1b" class="">Infine nel <strong>1956 </strong>la Francia concesse ufficialmente la piena indipendenza a tutti i Paesi.</p><p id="4a66c53f-ca22-40ad-a845-a4f2e7172ec6" class="">
+</p><p id="14ebbd4b-682d-48d2-af8e-1d97682a96be" class="">L’indipendenza dell’<strong>Algeria </strong>fu al ungo ostacolata da circa un milione di coloni francesi insediati nel Paese. Il movimento nazionalista algerino si era sviluppato negli anni Trenta e dopo la seconda guerra mondiale.</p><p id="98e536de-53e3-4821-a770-91a33461e97a" class="">A partire dagli anni Cinquanta il movimento nazionalista algerino si riogranizzò costituendo il <strong>Fronte di Liberazione Nazionale (FLN).</strong></p><p id="0c076991-4965-4f5c-ae7a-527134a56645" class="">La lotta contro i francesi si fece più cruenta, ne derivò una guerra aspra e violenta destinata a durare per otto anni.</p><p id="71def6e6-eab9-4177-9c67-63f65c686179" class="">Nel <strong>1957 </strong>la <strong>battaglia di Algeri </strong>segnò il culmine dello scontro: per nove mesi l’intera città fu coinvolta nella guerriglia urbana.</p><p id="f54e720c-3240-42f1-9e3b-032985cc821e" class="">Nella stessa Francia la guerra d’Algeria aveva creato una gravissima frattura politica, destinata a generare la cristi della Repubblica.</p><p id="3ac8277e-1970-40db-a6fc-631de03f93cd" class="">La crisi si concluse nel 1958 con il ritorno al potere di <strong>Charles de Gaulle.</strong></p><p id="a36650fd-5568-4e1e-9461-5ae487e310e1" class="">Fu proprio de Gaulle a porre fine al conflitto. Le trattative con l’FNL portarono nel <strong>1959</strong> al riconoscimento del diritto dell’Algeria all’autodeterminazione.</p><p id="2fa8ba42-d198-40e9-8db6-50406ea8fe0a" class="">
+</p><h1 id="909606eb-9052-4d32-ae32-585349827a32" class="">📍5. La decolonizzazione nell’Africa Nera</h1><p id="e410e482-9243-4be9-9fcc-6820763e18b3" class="">Nel dopoguerra la sorte dell’ex colonia italiana dell’<strong>Eritrea </strong>fu affidata all’ONU, ma decidere del suo futuro non fu facile, a causa delle rivendicazione dell’Etiopia.</p><p id="30921121-b0ef-40cf-bb1a-3fab5ef37648" class="">Nel <strong>1991</strong> la lotta si concluse con la vittoria dell’Eritrea che ottenne la piena indipendenza.</p><p id="1e98c66d-2769-4c18-9d4a-08aa255ca851" class="">Meno drammatico fu invece il processo di decolonizzazione della <strong>Somalia.</strong></p><p id="69a6957f-f43b-483d-a678-a77b9e8fe497" class="">Nel <strong>1949 </strong>l’Italia ricevette dall’ONU l’incarico di amministrare l’ex colonia per avviarla alla completa autonomia.</p><p id="04f3a3f0-52ee-47af-ba96-f5ffb4ecf3c4" class="">Nel <strong>1960 </strong>la Somalia italiana e la Somalia inglese divennero indipendenti e si unificarono per formare un unico stato.</p><p id="f1f45b37-1117-4e35-9396-ecef87a35473" class="">Nel <strong>1977 </strong>anche la Somalia francese ottenne l’indipendenza con il nome di <strong>Repubblica di Gibuti.</strong></p><p id="083c62ee-6fb0-4f7e-a5b6-1e3e3354b57d" class="">
+</p><p id="95bda40e-735e-40fd-96de-3c86750f2004" class="">Il processo di emancipazione dei Paesi a sud del Sahara cominciò più tardi rispetto a quelli dell’Africa mediterranea, ma fu più rapido e meno violento.</p><p id="8d83c813-9dff-4f75-87b6-cd2b406f0aad" class="">Cominciò nell’Africa occidentale nel <strong>1957 </strong>con l’indipendenza del <strong>Ghana.</strong></p><p id="580c8588-3ba7-4b1b-818e-79824eef853e" class="">Per quanto riguarda l’Africa nero francofona, nel <strong>1958 </strong>tutte le colonie francesi accettarono con referendum locali di entrare a far parte della <strong>Comunità franco-africana </strong>proposta dal generale de Gaulle.</p><p id="d7a0a818-e1cb-471b-9b80-99ad56df330e" class="">La prima colonia francese ad affrancarsi fu la <strong>Guinea.</strong></p><p id="160bf67b-cff3-4f0f-9871-2cc6805e6711" class="">
+</p><p id="8e3da69c-7502-4488-94b4-4610d700aa4f" class="">Il <strong>1960</strong> vide la nascita di diciassette Stati africani indipendenti, tra cui <strong>Nigeria e Congo belga, </strong>per questo venne definito “Anno dell’Africa”.</p><p id="6b89c48b-cf82-4e5b-855c-74fdd52788f2" class="">IL processo di decolonizzazione fu pacifico ma spesso pilotato dalle potenze europee, in modo da trasmettere il potere ai gruppi politici più disposti a mantenere legami economici con loro, senza intaccare le vecchie strutture coloniali.</p><p id="e8653ab0-cc1b-4f5f-be4e-5abf233ecf45" class="">
+</p><p id="a05ba368-0b5e-45b4-b460-dd6a9746a7d2" class="">Nel 1960 ottenne l’indipendenza il <strong>Congo belga</strong>, ma il processo fu particolarmente drammatico.</p><p id="6ed4d916-e5f4-43b4-8c60-80cec2c4fa92" class="">I moti d’indipendenza guidati dal leader nazionalista convinsero il re del Belgio a concedere l’indipendenza, ma subito dopo scoppiò una sanguinosa guerra civile e vi fu un tentativo di secessione della regione mineraria del Katanga.</p><p id="a459f9bf-5abb-473c-a72f-95a2d8ca3b8d" class="">La guerra civile caratterizzò anche i primi anni della decolonizzazione in <strong>Nigeria</strong> divenuta indipendente alla fine del 1960.</p><p id="f2e13fee-4fc6-4c95-b012-04ce8ac42b00" class="">
+</p><p id="0796cb14-2417-452b-b638-c85752c9656f" class="">Il Sudafrica rimase l’unico Stato del continente in cui i bianchi riuscirono a mantenere il pieno potere.</p><p id="d3fa8662-aadd-40a9-9046-4fdc12f747e8" class="">Il regime di <strong>apartheid,</strong> cioè di separazione razziale tra cinque milioni di bianchi e oltre venti milioni di neri, si inasprì tra gli anni Cinquanta e Sessanta.</p><p id="30bbb134-4804-4dc2-a663-d9a624e8fbbb" class="">A nulla valsero le proteste dell’opinione pubblica internazionale, né le rivolte della comunità nera.</p><p id="9dd36f42-c075-4547-962c-6a078e647af0" class="">Il partito guidato da <strong>Nelson Mandela</strong> si batté con forza per i diritti civili dei neri, ma ogni rivendicazione fu puntualmente repressa dal regime.</p><p id="790a2e9e-f26c-4e38-8b0f-b3323be5d43f" class="">Mandela fu arrestato e rinchiuso fino al <strong>1990, </strong>anno in cui vennero abolite le leggi di segregazione razziale.</p><p id="90c4f5a2-daae-4694-bab6-fbc0932ab853" class="">
+</p><h1 id="4e0a2ccf-af05-4643-9d35-a86c2179eada" class="">📍6. I problemi dell’America Latina</h1><p id="c89e7677-75f2-4c8f-8dea-9980619462ff" class="">I Paesi dell’America Latina, già indipendenti da lunga data, non dovettero affrontare i problemi legati alla decolonizzazione e, negli anni del dopoguerra, poterono godere di un favorevole contesto politico.</p><p id="efd6e839-9a9d-4658-bedf-b2dc76c806a7" class="">Tuttavia, la condizione generale del continente era di <strong>arretratezza </strong>e soprattutto di <strong>dipendenza </strong>dagli Stati Uniti.</p><p id="c76123d8-789a-44cf-a776-8b378f7b5249" class="">Nel 1948 venne creata, dietro iniziativa degli USA, l’<strong>Organizzazione degli Stati Americani</strong> che aveva lo scopo di rafforzare la cooperazione economica fra gli Stati del continente.</p><p id="54cbf684-ba30-4709-8695-7d7a94ac5492" class="">
+</p><p id="32359f05-4c21-41d9-ab4d-edccb4058e05" class="">Nel periodo della seconda guerra mondiale i Paesi dell’America Latina avevano tratto importanti vantaggi economici dall’accresciuta richiesta di materie prime e di prodotti agricoli.</p><p id="5b5aba2d-686f-43d1-8ca9-c2a63daef635" class="">Fu soprattutto il <strong>ceto medio urbano</strong> a rafforzarsi.</p><p id="e084ecd0-0b6e-4560-8a02-21097450be9e" class="">Sensibili alle istanze del <strong>nazionalismo</strong> gli appartenenti ai ceti medi si opponevano al predominio delle oligarchie tradizionali ma anche ai tentativi di riscossa delle classi più povere.</p><p id="f1d227b5-a88a-42a5-b313-f880ef170211" class="">Per questo in America Latina si verificarono soluzioni politiche di stampo sia <strong>liberale,</strong> sia <strong>populista</strong>, sia apertamente <strong>dittatoriale.</strong></p><p id="61153ce9-a3e8-4a4c-8245-83429e1dff60" class="">
+</p><p id="d6d75e15-17db-4b7c-bf04-e8ecdb8f93ff" class="">La costante presenza americana nell’ambito economico, le opposte volontà di cambiamento e di conservazione dei ceti più poveri e delle oligarchie dominanti, il crescente ruolo dell’esercito sono alla base dei frequenti e spesso violenti cambiamenti politici nei Paesi dell’America Latina.</p><p id="0c6159bd-1ec0-4faa-b050-fb7b0664cc7a" class="">Anche un grande Paese come il <strong>Brasile</strong> fu sconvolto da lotte civili.</p><p id="e4a88a3b-de7a-452f-b3f9-f3f4400ae5f6" class="">Nel 1945 l’esercito rovesciò il governo.</p><p id="7188fe40-0116-428d-9789-fff7b0531eec" class="">Negli anni successivi i governi brasiliani avviarono una politica di <strong>industrializzazione e modernizzazione </strong>che ebbe il simbolo più significativo nella nuova capitale <strong>Brasilia.</strong></p><p id="b2da6a83-395c-42de-8bc6-32b1ef34fe86" class="">Il Paese però non riuscì a liberarsi dalla dipendenza economica, né dalle evidenti disparità sociali e dagli squilibri interni.</p><p id="7d8c455a-6a55-42f5-8916-31e405edffad" class="">L’economia brasiliana conobbe un notevole miglioramento ma gli squilibri sociali divennero ancora più drammatici.</p><p id="6c711768-7f15-4eca-b588-deb72732f59f" class="">Anche in <strong>Venezuela e Colombia</strong> si instaurarono regimi militari.</p><p id="428c4e55-c41e-4333-bd24-13038b724531" class="">
+</p><p id="7e73fc3b-af53-4d5a-9ce0-6d0f441c49c3" class="">Sull’isola di Cuba si verificò un evento destinato a segnare profondamente la politica non soltanto latinoamericana.</p><p id="5283f941-a46a-4591-8675-8fcb182055f9" class="">Nel <strong>gennaio 1959</strong> la dittatura reazionaria venne abbattuta da un movimento rivoluzionario guidato da <strong>Fidel Castro</strong>, dopo tre anni di guerriglia iniziata sulla Sierra Maestra.</p><p id="fb6ccb6e-538e-4ce1-b46f-ba909f275e3b" class="">Subito Castro, che si ispirava a ideali democratici e riformisti, iniziò una riforma agraria.</p><p id="ef5a8b6c-b994-4c38-9086-69b1d658062d" class="">IL che spinse gli Stati Uniti, dopo l’iniziale riconoscimento della rivoluzione, ad assumere una posizione sempre più rigida, anche nel timore che l’esempio cubano potesse essere seguito altrove in Sudamerica.</p><p id="57c23f44-6a29-4df9-be82-364e4884b705" class="">Il presidente Eisenhower impose il <strong>boicottaggio economico</strong> impedendo a Cuba qualsiasi forma di commercio con i Paesi capitalisti.</p><p id="a680e299-3e46-42d4-9e30-372dc7c4a910" class="">Castro perciò ruppe le relazioni diplomatiche con gli Stati Uniti e chiese il sostengo dell’<strong>Unione Sovietica</strong>, che si impegnò ad acquistare lo zucchero cubano a prezzi superiori a quelli del mercato.</p><p id="3b4aaa54-ae58-49ec-bfee-a4e88e77ba42" class="">Il regime cubano così si radicalizzò, adottando il <strong>comunismo.</strong></p><p id="3c9e758d-defe-4bd4-95af-f472ba625943" class="">Castro e i suoi collaboratori, tra cui <strong>Ernesto “Che” Guevara, </strong>dichiararono apertamente la loro intenzione di esportare il modello rivoluzionario cubano nel resto dell’America latina e nel Terzo Mondo: un’aperta sfida agli Stati Uniti e al loro concetto di ordine mondiale. </p><p id="8945373b-5d15-4aac-805e-7bafa06ccc68" class="">
+</p><p id="273798e8-3e48-49e5-968d-065fbdbab079" class="">
+</p><p id="8644f8cf-de82-4050-8083-4ad925022124" class="">
+</p></div></article></body></html>

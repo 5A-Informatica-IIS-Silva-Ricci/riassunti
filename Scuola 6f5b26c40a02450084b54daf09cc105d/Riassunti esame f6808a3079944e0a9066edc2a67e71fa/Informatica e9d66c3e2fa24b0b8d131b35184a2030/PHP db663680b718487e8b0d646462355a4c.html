@@ -1,0 +1,965 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>PHP</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="db663680-b718-487e-8b0d-646462355a4c" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">💻</span></div><h1 class="page-title">PHP</h1></header><div class="page-body"><nav id="e256a378-d46b-4873-9588-8756f97fd606" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#fbbec397-ac4e-4972-b375-244d8e91dc0b">File PHP</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#74ae038d-e1ab-45db-9684-15073992b71b">Variabili</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ded7bece-faf0-4308-a929-b34b12667340">Output</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#b6121850-76f3-4e6c-8b08-4aa49cd09554">Array</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#4b06acc9-708b-4151-9b33-cfc49629d4fb">Funzioni</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#dc39bc72-3b15-4848-8438-07830da08f68">Input</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#001ed183-c8f4-40be-8683-b7eb6392b458">Session</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#574b32f6-c768-406c-adba-a33afb78f48d">Classi</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#443a7904-4cfa-40f2-89d1-9d8e52c86e69">Serializzazione</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c823e9d0-d4a6-4dd6-8b14-5deeb668815e">Password</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#bfe71a1c-71f3-48cf-b0d6-bdc15820d5d2">Database</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#471b5e2d-b34f-4ea9-8ea1-2e8f758dc48c">Autoloader</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#71060b28-1f80-42cd-9f27-814ce15f5eb9">Altri esempi</a></div></nav><h1 id="fbbec397-ac4e-4972-b375-244d8e91dc0b" class="">File PHP</h1><p id="d29a5e3b-e682-437b-9144-e894601fe670" class="">Un file PHP termina con l’estensione <code>.php</code> ed il codice all’interno è di default <code>HTML</code>.
+Per <mark class="highlight-teal">inserire uno script PHP</mark> bisogna utilizzare delle particolari keyword che possono essere: </p><pre id="a41d4300-fe43-4af3-924b-ef19b3719ec3" class="code"><code>&lt;?php
+// Codice php
+?&gt;
+&lt;div&gt;
+	Ritorno all&#x27;html
+&lt;/div&gt;
+
+&lt;!-- Se ho bisogno di mostrare solamente una variabile posso usare una shorthand --&gt;
+&lt;div&gt;
+	Contenuto html con variabile php di valore &lt;?= $variabile ?&gt;
+	È uguale a &lt;?php echo $variabile; ?&gt;
+&lt;/div&gt;</code></pre><p id="7bc41dd1-67e3-4f40-bb59-ffe130609d44" class="">È possibile inserire dei commenti in tre modi diversi</p><pre id="0aff46eb-9160-4cd9-9e20-7774fe0032c1" class="code"><code>&lt;?php
+# Commento a singola linea
+
+// Commento a singola linea
+
+/*
+	Commento 
+	multilinea
+*/
+?&gt;</code></pre><h1 id="74ae038d-e1ab-45db-9684-15073992b71b" class="">Variabili</h1><pre id="97f83e9c-352a-4fbb-877e-780becd2262e" class="code"><code>$a = 5;
+$b = 3;
+$testo = &quot;Ciao testo&quot;;
+// Il tipo è gestito dal linguaggio in automatico, tipo js
+$c= $a / $b;</code></pre><h1 id="ded7bece-faf0-4308-a929-b34b12667340" class="">Output</h1><pre id="636e9055-af00-47fc-bfa5-238e583a0096" class="code"><code>echo $c;
+
+echo &quot;stampa con variabile $c&quot;;
+echo &#x27;stampa senza variabile $c (singoli apici)&#x27;;
+
+// Concatenazione stringhe
+echo &quot;ciao &quot;.($c+1).&quot; mondo&quot;;
+
+// Visualizza tipo + valore variabile
+var_dump($c);
+// Più leggibile
+print_r($c);
+
+// Forzo la variabile come intero
+var_dump((int)$c);</code></pre><h1 id="b6121850-76f3-4e6c-8b08-4aa49cd09554" class="">Array</h1><pre id="a6f096e7-d90f-49b5-bce1-38bc388574e7" class="code"><code>$array = array(1, 2, 3, 4, 5, 6);
+$array = [1, 2, 3, 4, 5 ,6];
+
+// Array con indice custom
+$array_indice_custom = [&quot;indice&quot; =&gt; 1, &quot;ciao&quot; =&gt; 2, 3, 4, 5];
+echo $array_indice_custom[&quot;indice&quot;]
+
+// Iterare un array
+for ($i=0; $i &lt; count($array); $i++) {
+	// ...
+}
+
+foreach ($array as $key =&gt; $val) {
+    echo &quot;Chiave $key - valore: $val&quot;;
+}
+
+// Controllare contenuto array
+// Se è vuoto
+echo empty($array)
+echo count($array) == 0
+// Se un elemento con una certa chiave esiste
+echo isset($array[&quot;chiave&quot;])</code></pre><h1 id="4b06acc9-708b-4151-9b33-cfc49629d4fb" class="">Funzioni</h1><pre id="c06a9a45-b56a-495d-a4b2-c2bcbb0a538c" class="code"><code>function ciao() {
+    echo &quot;Ciao&quot;;
+}
+ciao();
+
+function scambia_non_funziona($v1, $v2) {
+    // Se si modificano le variabili all&#x27;interno delle funzioni i cambiamenti non sono applicati al di fuori della funzione
+    // Le variabili ora sono copie di quelle ricevute non referenze
+    $tmp = $v1;
+    $v1 = $v2;
+    $v2 = $tmp;
+}
+function scambia(&amp;$v1, &amp;$v2) {
+    // I cambiamenti alle variabili hanno effetto anche all&#x27;esterno della funzione
+    // Con la &amp; si ricevono referenze alle variabili
+    $tmp = $v1;
+    $v1 = $v2;
+    $v2 = $tmp;
+}
+
+$v1 = 1;
+$v2 = 2;
+
+echo &quot;v1 $v1 - v2 $v2&quot;;
+scambia_non_funziona($v1, $v2);
+echo &quot;v1 $v1 - v2 $v2&quot;;
+scambia($v1, $v2);
+echo &quot;v1 $v1 - v2 $v2&quot;;</code></pre><h1 id="dc39bc72-3b15-4848-8438-07830da08f68" class="">Input</h1><pre id="3b86fb15-4719-4fbc-87fb-a526e51e2c5f" class="code"><code>&lt;!-- $_SERVER è una variabile globale utilizzabile ovunque --&gt;
+&lt;form method=&quot;post&quot; action=&quot;&lt;?= $_SERVER[&#x27;PHP_SELF&#x27;] ?&gt;&quot;&gt;
+    &lt;label for=&quot;fname&quot;&gt;Nome&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot; value=&quot;Giulio&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Invia&quot;&gt;
+&lt;/form&gt;
+
+&lt;?php
+/*
+	$_GET e $_POST sono delle variabili globali presenti di default.
+	Sono sotto forma di array e come chiave per ogni elemento hanno il `name` dell&#x27;elemento del form html
+*/
+if(!empty($_POST))
+    echo $_POST[&quot;fname&quot;];</code></pre><h1 id="001ed183-c8f4-40be-8683-b7eb6392b458" class="">Session</h1><p id="83dd620f-ed37-4227-aa41-fad2d02e1a1b" class="">La <code>$_SESSION</code> è una variabile temporanea che contiene informazioni diverse per ogni utente.
+Le informazioni sono temporanee perché una volta che l’utente termina la sessione, ossia chiude il browser, esse non saranno più disponibili.</p><pre id="8d455e05-00cd-49b8-9158-9ece00b2d62c" class="code"><code>// Starto la sessione
+session_start();
+
+// Imposto delle variabili alla sessione
+$_SESSION[&quot;tema&quot;] = 1;
+
+// Prendo una variabile dalla sessione
+$tema = $_SESSION[&quot;tema&quot;];
+
+// Rimuovo tutte le variabili dalla sessione
+session_unset();
+
+// Distruggo la sessione
+session_destroy();</code></pre><h1 id="574b32f6-c768-406c-adba-a33afb78f48d" class="">Classi</h1><pre id="049a80df-d7b3-41de-99e3-596e02b07d4d" class="code"><code>/*
+	All&#x27;interno della classe si può usare la variabile $this come istanza della classe
+	e le frecce per le funzioni -&gt; per accedere alle variabilie.
+	Per le costanti invece c&#x27;è la keyword self che va seguita dai doppi due punti ::
+*/
+class Articolo {
+	// Costanti
+	CONST PREZZO_MINIMO = 1;
+	CONST TIPI_PRODOTTO = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;];
+
+	// Variabili statiche
+	public static $info = &quot;Informazioni su articoli&quot;;
+	
+
+	// Variabili della classe
+	private $nome;
+	public $prezzo;
+
+	// Costruttore della classe
+	function __construct($nome, $prezzo) {
+    $this-&gt;nome = $nome;
+		$this-&gt;prezzo = $prezzo;
+  }
+
+	public function get_nome($nome) {
+		return $this-&gt;nome;
+	}
+
+	private function set_nome($nome) {
+		$this-&gt;nome = $nome;
+	}
+
+	// Utilizzo delle costanti e funzioni statiche
+	public static function lista_tipi_prodotto() {
+		return &quot;Lista tipi prodotto&quot;.self::TIPI_PRODOTTO;
+	}
+
+	public function controllo_prezzo_minimo() {
+		return $this-&gt;prezzo &gt;= self::PREZZO_MINIMO;
+	}
+}
+
+// Utilizzo di costanti e funzioni statiche
+echo &quot;Prezzo minimo articoli:&quot;.Articolo::PREZZO_MINIMO;
+echo Articolo::lista_tipi_prodotto();
+// Utilizzo di variabili statiche
+echo Articolo::$info;
+
+$articolo1 = new Articolo(&quot;maionese&quot;, 200);
+$articolo2 = new Articolo(&quot;fiorentina&quot;, 4);</code></pre><h1 id="443a7904-4cfa-40f2-89d1-9d8e52c86e69" class="">Serializzazione</h1><pre id="1b14669a-07ee-4066-8958-6f253862fa1b" class="code"><code>class Data {
+	public $dato;
+}
+
+$data = new Data();
+// Serializzo
+$_SESSION[&quot;ds&quot;] = serialize($data);
+// Deserializzo
+$data_deserializzata = unserialize($_SESSION[&quot;ds&quot;]);</code></pre><p id="bac4b64a-1c85-4de8-9d2b-8ab4bacd5b4b" class="">
+</p><h1 id="c823e9d0-d4a6-4dd6-8b14-5deeb668815e" class="">Password</h1><p id="c865b9c6-1e31-4a3b-8e0a-870fa388eb32" class="">È importante criptare le password per <mark class="highlight-teal">evitare che se un malintenzionato accede al database egli possa vedere tutte le password in chiaro</mark>.</p><pre id="83596f20-8b47-45be-b7d6-6b22d0e5c548" class="code"><code>$testo_password = &quot;1234&quot;;
+// Cripto la password in chiaro
+/*
+	Per criptarla uso una funzione di php default che &quot;hasha&quot; la password.
+	Una funzione di hash darà sempre lo stesso output se l&#x27;input è lo stesso
+	l&#x27;output sarà diverso se l&#x27;input è diverso.
+	Esempio:
+	hash(cane) = aaa1
+	hash(gatto) = 22a1
+	hash(cane) = aaa1
+	hash(gato) = 56aa
+*/
+$password_criptata = password_hash($testo_password, PASSWORD_DEFAULT);
+
+/*
+	Per verificare che una password coincida con quella criptata
+	la devo passare attraverso lo stesso algoritmo di hash.
+	PHP ha una funzione di default che controlla se un testo corrisponde alla password corretta
+	e restituisce un booleano
+*/
+$corretto = password_verify($input, $password_criptata)
+// Sostanzialmente fa
+function password_verify($input, $hash) {
+	return password_hash($input, PASSWORD_DEFAULT) == $hash;
+}
+</code></pre><h1 id="bfe71a1c-71f3-48cf-b0d6-bdc15820d5d2" class="">Database</h1><p id="fd48f8cc-fc16-4055-b706-7af6e3222b0e" class="">Per connettersi ad un database usiamo la classe <code>mysqli</code> presente di default in php.</p><pre id="29964bf4-bf1c-4687-97ea-8384629a5367" class="code"><code>class DbManager {
+	// Host del database
+	CONST DB_HOST = &quot;localhost&quot;;
+	// Utente con cui autenticarsi, in genere &#x27;root&#x27;
+	CONST DB_USER = &quot;root&quot;;
+	// Password dell&#x27;utente, in genere vuota &#x27;&#x27;
+	CONST DB_PASSWORD = &quot;password&quot;;
+	// Nome del database a cui connettersi
+	CONST DB_NAME = &quot;dipendenti&quot;;
+
+/*
+	Utilizzo del pattern singleton per creare una classe
+	che può avere una sola istanza di se stessa.
+	In questo modo useremo sempre la stessa istanza della classe
+	per interfacciarci al database senza doverci ricollegare ad esso
+	ogni volta.
+*/
+	// Istanza della classe
+	private static $dbManager = null;
+	
+	// Connessione al database
+	private $connection;
+	
+	// Costruttore private per non rendere possibile l&#x27;istanziamento della classe all&#x27;esterno di essa
+	private function __construct() {
+		$this-&gt;connection = new mysqli(
+			self::DB_HOST,
+			self::DB_USER,
+			self::DB_PASSWORD,
+			self::DB_NAME
+		);
+		if ($this-&gt;connection-&gt;connect_error)
+			die(&quot;Si è verificato un errore: &quot;. $this-&gt;connection-&gt;connect_error);
+	}
+
+	// Metodo statico che permette di prendere l&#x27;istanza della classe
+	public static function getInstance() {
+		if (self::$dbManager == null)
+			self::$dbManager = new DbManager();
+		
+		return self::$dbManager;
+	}
+
+	// Esempio di metodo che prende dati dal db
+	public function get_utente($id) {
+		$query = &quot;SELECT * FROM utenti WHERE id=?&quot;;
+		$prepared = $this-&gt;connection-&gt;prepare($query);
+		// &quot;s&quot; sta per stringa come tipo di valore del parametro
+		$prepared-&gt;bind_param(&quot;s&quot;, $id);
+		$prepared-&gt;execute();
+
+		$result = $prepared-&gt;get_result();
+		$assoc = $result-&gt;fetch_assoc();
+
+		if ($result == false || $assoc == null)
+			return null;
+		else
+			return new Utente($id, $assoc[&#x27;nome&#x27;], $assoc[&#x27;cognome&#x27;]);
+	}
+
+	// Esempio d&#x27;uso di multiple righe
+	public function stampa_utenti() {
+		$result = $this-&gt;connection-&gt;query(&quot;SELECT * FROM utenti&quot;);
+		$rows = $result-&gt;num_rows;
+	
+		if ($rows &gt; 0) {
+			while ($row = $result-&gt;fetch_assoc()) {
+				echo &quot;ID: $row[id], nome: $row[nome] &lt;br&gt;&quot;;
+			}
+		}
+	}
+
+	// Esempio di metodo che inserisce dati nel db
+	public function registra_utente($id, $nome, $cognome) {
+		$query = &quot;INSERT INTO utenti (id, nome, cognome) VALUES (?, ?, ?)&quot;;
+		$prepared = $this-&gt;connection-&gt;prepare($query);
+		$prepared-&gt;bind_param(&quot;s&quot;, $id, $nome, $cognome);
+		$prepared-&gt;execute();
+		$result = $prepared-&gt;get_result();
+
+		if ($result == false)
+			return false;
+		else
+			return true;
+	}
+}</code></pre><h1 id="471b5e2d-b34f-4ea9-8ea1-2e8f758dc48c" class="">Autoloader</h1><p id="006a2eeb-1373-4273-b40e-00df84a04447" class="">Un autoloader serve a <mark class="highlight-teal">caricare e rendere disponibili tutte le classi di un progetto in un file </mark><mark class="highlight-teal"><code>php</code></mark> di esso.</p><pre id="551abdbc-48b1-4186-80c8-a6763d2bb1bc" class="code"><code>&lt;!-- File: autoloader.php --&gt;
+&lt;?php
+session_start();
+
+spl_autoload_register(function ($class_name) {
+    include $class_name . &#x27;.php&#x27;;
+});
+?&gt;
+
+&lt;!-- File: index.php --&gt;
+&lt;?php
+include &quot;autoloader.php&quot;;
+// tuttecosse
+?&gt;</code></pre><h1 id="71060b28-1f80-42cd-9f27-814ce15f5eb9" class="">Altri esempi</h1><figure id="fcc591b9-2bee-4e60-aa5c-62b82c78d536"><div class="source">https://github.com/5A-Informatica-IIS-Silva-Ricci/PHP</div></figure><p id="0ca41605-814c-4a9e-95ce-323fc0a1132a" class="">
+</p></div></article></body></html>

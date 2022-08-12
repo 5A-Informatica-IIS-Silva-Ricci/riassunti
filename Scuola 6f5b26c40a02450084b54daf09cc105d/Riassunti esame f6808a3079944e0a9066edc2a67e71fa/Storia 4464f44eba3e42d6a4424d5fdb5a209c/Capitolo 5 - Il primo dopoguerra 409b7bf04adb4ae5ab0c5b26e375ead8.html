@@ -1,0 +1,779 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Capitolo 5 - Il primo dopoguerra</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="409b7bf0-4adb-4ae5-ab0c-5b26e375ead8" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📗</span></div><h1 class="page-title">Capitolo 5 - Il primo dopoguerra</h1></header><div class="page-body"><h2 id="e895f147-cae7-4e70-bc23-edee56b8d655" class="">📍1. I problemi del dopoguerra</h2><p id="cc5ff6cc-a74c-48ad-ab6a-762841be84f0" class="">Il nuovo assetto geopolitico creò in molti paesi europei una diffusa insoddisfazione.
+La Germania si sentiva umiliata da una pace che aveva ridotto notevolmente il suo territorio.
+Anche l’Italia riteneva di non essere stata ripagata a sufficienza poiché non le erano state riconosciute Fiume e la Dalmazia.
+Questo bastò ai nazionalisti per parlare di vittoria mutilata.</p><p id="b732babe-6dfe-4887-abc9-5cc1e3560559" class="">
+</p><p id="903b19fa-ab66-49a2-96fd-42cf8c595248" class="">La società delle nazioni fu fondata a Ginevra nel 1920 e l’obiettivo era quello di costituire un’organizzazione in grado di risolvere attraverso la diplomazia i contrarsi tra gli Stati.</p><p id="1af77724-3ce8-40eb-a36f-381a98327bcc" class="">Chi non avesse rispettato le decisioni prese avrebbe subito sanzioni economiche o militari.</p><p id="146a07b1-f15e-4c9f-b3df-c9967a45d977" class="">La Società delle Nazioni però non riuscì a garantire una pace duratura, per due cause:</p><ul id="c468649b-379f-43cd-be3f-88802e6c2992" class="bulleted-list"><li style="list-style-type:disc">Gli Stati Uniti rifiutarono di prenderne parte</li></ul><ul id="62c84690-b5c5-4257-ba64-a7577a464fab" class="bulleted-list"><li style="list-style-type:disc">Mancanza di una propria forza militare</li></ul><p id="4bb67810-5427-4756-b4f2-9bfad7469107" class="">
+</p><p id="ef4b085f-e7ca-4973-b830-40d356e215c5" class="">La guerra aveva causato oltre 8 milioni di morti, ai quali vanno aggiunte le vittime di una terribile epidemia di influenza: la Spagnola.
+Tutto ciò determino un grave calo demografico.</p><p id="de73e4ab-04e1-43e6-8bc7-c00f6d06a115" class="">
+</p><p id="4903ca83-566c-4e79-8e77-ec9eccd14c59" class="">Da un punto di vista economico l’Europa dovette affrontare una gravissima crisi.
+Un primo importante problema riguardava le strutture produttive, infatti la guerra aveva mobilitato l’intero sistema industriale dei Paesi coinvolti: la produzione di armi, navi, aerei e cannoni aveva richiesto uno sforzo senza precedenti negli investimenti economici e tecnologici.
+A guerra finita si trattava di realizzare la riconversione industriale, cioè di ritornare al normale tipo di produzione del tempo di pace.
+Non tutte le imprese però potevano permettersi questa riconversione e, per questo motivo, iniziarono a licenziare o a mantenere i salari bassi: si diffusero così povertà e disoccupazione.
+I debiti per le spese di guerra indussero i governi del conflitto a stampare nuova carta moneta, con la quale si innescò rapidamente l’inflazione.
+I prezzi aumentavano erodendo i risparmi e i salari di tutti i lavoratori dipendenti e di chi viveva con un reddito fisso.
+Fu in particolare il ceto medio a soffrire di questa situazione. L’economia europea era in ginocchio.</p><p id="b0536811-7a45-47a0-9eb0-dd4a826bc579" class="">
+</p><h2 id="468832b2-9afb-44fc-8e17-3695b4117198" class="">📍2. Il disagio sociale</h2><p id="7a267818-9271-43cf-8b9a-d7d842dd2b0e" class="">La guerra aveva trasformato radicalmente anche la società. La generazione che aveva combattuto aveva vissuto un’esperienza senza eguali nella storia.</p><p id="5e2d48f8-f388-49f4-a4c4-a48542ae0130" class="">In Italia, per la prima volta, i ragazzi del sud si sono incontrati con quelli del nord, ritrovandosi a combattere nelle trincee. La guerra aveva causato la mobilitazione di milioni di uomini.</p><p id="753b9786-9cf2-4917-b68a-c242a5a21f4c" class="">In questo senso aveva contribuito a creare una coscienza collettiva e aveva segnato il vero ingresso delle masse nella storia.</p><p id="56aa9f5c-d2e1-4f96-b2d0-53d5a13ac49f" class="">Il ritorno alla vita civile portò nuovi e aspri conflitti sociali: i sindacati e i partiti, consapevoli della propria forza, si organizzarono; i reduci di guerra chiesero un riconoscimento al loro impegno e un reinserimento nella società.</p><p id="7e7c01b6-735f-4ae6-99e4-6bb806d5d0dd" class="">Inoltre:</p><ul id="454663bb-e0ff-4abf-a6f9-5ac9fe378192" class="bulleted-list"><li style="list-style-type:disc">Gli operai volevano aumenti di salario e più potere nelle fabbriche.</li></ul><ul id="7155afc4-f416-4beb-9887-18dbba32fefc" class="bulleted-list"><li style="list-style-type:disc">I contadini chiedevano la proprietà della terra che lavoravano</li></ul><ul id="49829670-c257-4772-93c6-a2fba88e4400" class="bulleted-list"><li style="list-style-type:disc">Il ceto medio manifestava il proprio disagio economico avvicinandosi ai movimenti più autoritari.</li></ul><p id="d39c3320-3a27-40f3-97d6-d7c8929ecb84" class="">
+</p><p id="95db321a-4916-4946-895a-cb0566bffaa6" class="">La prima guerra mondiale influì anche sulla condizione sociale ed economica delle donne.
+Lo spostamento degli uomini al fronte portarono grandi cambiamenti nella struttura sociale offrendo nuove possibilità alle donne.
+Esse infatti entrarono nel mondo del lavoro in modo non paragonabile ai decenni precedenti: sostituirono gli uomini nelle fabbriche, negli uffici, alla guida dei trasporti e nei campi spesso con ruoli rilevanti e di responsabilità
+Oltre a svolgere lavori tradizionalmente destinati agli uomini, le donne poterono godere di migliori condizioni economiche: durante il periodo bellico, ad esempio, le fabbriche di armi corrispondevano alle donne un salario pari anche al doppio di quello che le lavoratrici ricevevano in tempo di pace.
+Il grande mutamento della figura femminile nella società influenzò anche la politica.
+Questo generale processo di emancipazione dal passato e dal ruolo passivo imposto dai maschi si concretizzò ad esempio nella conquista del diritto di voto alle donne. In molti Paesi il voto alle donne non venne concesso.</p><p id="9e43dcb3-fab2-4a31-848b-a4c13b05dbdf" class="">
+</p><p id="5d104053-f7e3-4eb1-a71e-2c4ae42f4da6" class="">Il ritorno alla vita civile per coloro che avevano combattuto nell&#x27;inferno delle trincee non fu facile: i reduci passarono dalle immani privazioni e sofferenze subite nel corso del conflitto a uno stato di disoccupazione ed emarginazione sociale, giacché i sistemi produttivi nazionali erano in crisi e non più in grado di offrire lavoro a tutti.
+Molti giovani combattenti avevano trovato nel contesto della guerra un senso per la loro vita, forse anche qualche soddisfazione militare e un po&#x27; di prestigio.
+Il rientro a casa fu traumatico: trovarono una società cambiata, molti non ebbero più il lavoro e mal si adattarono alla piatta quotidianità civile. L&#x27;idea di aver rischiato la vita per la patria senza ottenere nulla in cambio creava insoddisfazione e risentimento in quei giovani che avevano passato anni in trincea.
+Il reinserimento dei reduci nella vita ordinaria fu così un problema di tutti i Paesi, e in genere le difficoltà finanziarie impedirono una soluzione soddisfacente.</p><p id="6632c535-bb7a-48b7-890b-6bbc62313d58" class="">I reduci erano uomini che avevano conservato la mentalità combattentistica, la fierezza del soldato, il cameratismo militare.
+Ovunque si riunirono in associazioni che assunsero un importante ruolo sociale e politico nel dopoguerra.</p><p id="3e95f575-85dd-4774-bc23-3bd202c9e129" class="">
+</p><p id="4fceb5cb-16d4-46d5-9514-736a5c5c5f4a" class="">Nella società l&#x27;insoddisfazione era diffusa e molti aspiravano a un nuovo sistema politico che ponesse termine alla situazione di crisi.
+Tra il 1919 e il 1920, il disagio della popolazione si tradusse in tutta Europa in una lunga serie di scontri sociali.
+Gli operai nelle industrie, i contadini nelle campagne, i ceti medi nelle città avviarono una stagione di lotte e manifestazioni. I borghesi moderati erano preoccupati di una rottura rivoluzionaria del sistema vigente.
+La democrazia liberale vacillò, attaccata contemporaneamente dall&#x27;estrema sinistra e dall&#x27;estrema destra.
+Il disprezzo per le istituzioni parlamentari, giudicate troppo deboli, raggiunse un livello allarmante. Solo nei Paesi di antica tradizione liberale, come la Francia e l&#x27;Inghilterra, il sistema politico resse.
+Negli altri Stati dell&#x27;Europa, la crisi del dopoguerra aprì la strada a governi di tipo autoritario e alle dittature.</p><p id="71e140bf-6f18-4ecc-8cf5-6ee279ae6ab3" class="">
+</p><h2 id="a809fb17-b67f-472b-8895-a45b2f692ca6" class="">📍3. Il biennio rosso</h2><p id="3872cf10-e2b9-4259-bb5e-750d5e99af2c" class="">Dopo la rivoluzione bolscevica del 1917, una nuova preoccupazione rese ancora più pesante il clima delle democrazie europee.
+Il mito della rivoluzione, infatti, si diffuse e il modello del nuovo Stato comunista diventò per gli operai e i contadini europei un sogno realizzabile. Molti volevano «fare come in Russia»: abolire la proprietà privata e istituire la dittatura del proletariato.
+I conservatori di tutta Europa temevano il contagio rivoluzionario, considerando anche che il nuovo governo della Russia era attivamente impegnato nella diffusione del comunismo.
+Lenin e i bolscevichi, infatti, promuovevano la formazione di partiti comunisti in tutto il mondo.
+Questi partiti dovevano prendere le distanze dai socialisti democratici, rifiutare il sistema parlamentare-democratico e impegnarsi a realizzare una rivoluzione come quella russa.
+Lenin riteneva necessario riunire in un&#x27;unica organizzazione internazionale i «veri» socialisti rivoluzionari.
+Nel marzo 1919, quindi, sorse a Mosca la Terza Internazionale detta anche Comintern, cioè Internazionale Comunista.
+Lenin era convinto che in Europa ci fossero le condizioni per avviare una rivoluzione da estendere al mondo intero. Il Comintern avrebbe avuto il compito di coordinare e controllare il movimento comunista internazionale.
+Nel luglio 1920, si tenne a Mosca il Il Congresso dell&#x27;Internazionale Comunista.
+Lenin elaborò un documento in cui fissava in ventuno punti le condizioni per poter aderire al Comintern.
+L&#x27;adesione ai ventuno punti implicava una totale subordinazione dei comunisti europei al partito sovietico. Iniziò così una forte contrapposizione fra socialisti riformisti e comunisti che produsse la scissione all&#x27;interno di molti partiti socialisti. Tra il 1920 e il 1921, infatti, i socialisti rivoluzionari fondarono dei partiti comunisti in molti Paesi europei.</p><p id="a4719f12-c82d-49e8-9950-99efffdfab3e" class="">
+</p><p id="3195fac6-c2b8-4e3e-a4b4-052c31a51e3d" class="">L&#x27;esperienza di massa della guerra, la crisi economica, il mito della rivoluzione, il desiderio di una società più giusta furono gli aspetti che contribuirono al rafforzamento delle organizzazioni del movimento operaio di tutta Europa.
+L&#x27;impegno nella vita politica, prima limitato a ristrette élites di notabili borghesi, si allargò alle masse di lavoratori, sempre più consapevoli della loro forza.
+I lavoratori europei si aspettavano un cambiamento radicale e soluzioni nuove. La partecipazione diretta acquistava maggior peso con le frequenti manifestazioni pubbliche, i comizi, le adunate, i cortei.
+Il movimento operaio chiedeva una società più giusta è più equa, rivendicava salari più alti, case a prezzi accettabili.
+I contadini volevano terre da coltivare.
+I partiti socialisti ottennero importanti successi elettorali mentre i sindacati raccoglievano il consenso dei lavoratori.</p><p id="c3fb6b77-2ca3-49d6-9ba5-99f156defd93" class="">
+</p><p id="da743fee-e46a-4a81-91af-bb761643225d" class="">Tra il 1919 e il 1920 l&#x27;Europa fu toccata da un&#x27;ondata di scioperi e agitazioni operaie per l&#x27;aumento del salario e la giornata lavorativa di otto ore; quest&#x27;ultimo obiettivo venne raggiunto quasi ovunque.
+Questo periodo di lotte, chiamato biennio rosso, non si limitò a semplici rivendicazioni sindacali.
+Si voleva andare oltre: era in gioco il potere nello Stato e nelle fabbriche. Sorsero spontaneamente i consigli operai che, sul modello dei soviet russi, si presentavano come i rappresentanti del proletariato nella futura società comunista.
+L&#x27;intensità e le conseguenze delle lotte operaie di questi anni furono diverse nei singoli Paesi europei.
+In Germania, ancora prima della fine della guerra, i consigli degli operai e dei soldati avevano occupato le fabbriche e le sedi dei giornali.
+L&#x27;estrema sinistra della Lega di Spartaco, guidata da Karl Liebknecht e Rosa Luxemburg, non accettava la linea moderata del Partito socialdemocratico. Anche dopo la proclamazione della repubblica, le proteste continuarono in modo violento e giunsero ad autentici tentativi rivoluzionari.
+La disgregazione dell&#x27;Impero asburgico aveva ridotto l&#x27;Austria a un piccolo Stato dove nel 1919 venne proclamata la repubblica retta da un governo socialdemocratico.
+I comunisti, anche qui, tentarono di spingere il popolo alla rivoluzione, ma senza successo.
+In Ungheria, nel marzo 1919, socialisti e comunisti diedero vita a una Repubblica dei Consigli sul modello sovietico guidata dal comunista Bela Kun. Il progetto era di allargare quell&#x27;esperienza all&#x27;Austria, ma i comunisti ungheresi si trovarono isolati e il disegno fallì.
+Anche in Italia il biennio rosso mise in crisi il vecchio sistema politico; ma portò anche alla divisione del movimento operaio con la scissione del Partito socialista.</p><p id="6bb1d655-2523-4849-a967-1f77608803a1" class="">
+</p><p id="c0a01e19-e594-4abb-9d17-0887ec362c8c" class="">In Germania intervenne l&#x27;esercito, che arrestò e uccise i principali responsabili delle insurrezioni.
+In Italia l&#x27;iniziativa rivoluzionaria rifluì per lasciare progressivamente spazio all&#x27;affermazione del fascismo.
+In Austria la vittoria elettorale andò a conservatori e clericali, forti del sostegno delle masse contadine più reazionarie.
+In Ungheria, il fallimento della repubblica sovietica lasciò il potere alla controrivoluzione guidata da Miklós Horthy. Horthy eliminò fisicamente l&#x27;opposizione comunista e instaurò il primo regime autoritario dell&#x27;Europa del dopoguerra (agosto 1919).</p><p id="b3427bf9-af77-47d9-9653-f9ec04ecf485" class="">
+</p><h2 id="0e81f7d0-c587-401f-a26e-b03c0b670643" class="">📍4. Dittature, democrazie e nazionalismo</h2><p id="3ea713fa-56bd-4b35-8361-f4347f3358bf" class="">La crisi politica ed economica degli anni Venti e Trenta apri la strada a cambiamenti politici radicali in gran parte del mondo.
+In Europa la crisi del dopoguerra contribuì alla nascita e alla diffusione di dittature e di regimi totalitari. Tra gli Stati più importanti, solo Francia e Gran Bretagna ressero alla crisi: in questi Paesi le classi dirigenti riuscirono a controllare il pericolo rappresentato dalle frange massimaliste dei partiti socialisti, che prospettavano rivoluzioni imminenti, e a garantire la stabilità politica entro il sistema parlamentare e democratico.
+Anche in questi Stati, tuttavia, vi fu una forte affermazione delle forze moderate e conservatrici.
+Nel resto d&#x27;Europa, invece, la fragilità del sistema parlamentare non resse alla spinta delle forze che premevano per una svolta autoritaria. Come abbiamo visto, l&#x27;Ungheria fu il primo Paese in cui si sperimentò l&#x27;autoritarismo di destra.
+Nel 1922, Mussolini andò al governo in Italia e in pochi anni organizzò un regime dittatoriale che fu assunto come modello da molti altri Paesi.</p><p id="324f2e74-3dc5-40e0-b87b-18e88a2670b7" class="">
+</p><p id="ea700ff4-86c1-4ac2-8b23-f99fac5ef547" class="">Nel primo dopoguerra, la Francia fu guidata da governi di centro-destra. Solo nel 1924 la vittoria del «cartello delle sinistre» portò al governo, per un breve periodo, i radicalsocialisti.
+Dal 1926 al 1929 il Paese fu guidato da Raymond Poincaré, capo dei moderati.
+Alla fine della guerra, anche la Gran Bretagna attraversò una crisi economica e sociale molto grave. Il tradizionale primato economico inglese era passato agli Stati Uniti.
+Inoltre, le nuove tecnologie e l&#x27;uso del petrolio avevano ridotto il consumo di carbone di cui la Gran Bretagna aveva il monopolio produttivo in Europa. Le conseguenze di questa situazione furono circa 2 milioni di disoccupati e un impero coloniale che cominciava a vacillare.
+Negli anni Venti, i lavoratori dell&#x27;industria e del settore minerario avviarono una lunga fase di agitazioni sindacali e politiche.
+Nel 1924 ci fu anche una prima esperienza di governo laburista (guidato cioè dal partito inglese di ispirazione socialista).
+I conservatori, tuttavia, conquistarono il potere e attuarono una politica di rigore finanziario e di contenimento dei salari che scatenò la protesta dei lavoratori.
+Nel 1926 ci fu infatti una grande ondata di scioperi. In particolare furono i minatori a condurre una lotta sindacale che si protrasse per molti mesi senza ottenere risultati a causa dell&#x27;irrigidimento del governo.</p><p id="beada525-9cf9-4770-a95d-c9a82cf54488" class="">
+</p><p id="6e470dcc-b34e-493e-a5e8-4271a51519be" class="">Il 29 ottobre 1923 in Turchia venne proclamata la repubblica. Kemal ne divenne il presidente e la capitale fu trasferita ad Ankara.
+Il prestigio di Kemal era immenso, per questo venne soprannominato Atatürk, il «padre dei Turchi».
+Secondo Atatürk, uno Stato civilizzato era innanzitutto uno Stato laico: per questo voleva liberare la Turchia dall&#x27;islam, che considerava in parte responsabile del ritardo nella modernizzazione del Paese. Atatürk chiuse le scuole religiose e le comunità monastiche a cui confiscò i beni.
+A queste iniziative si accompagnò uno sforzo per laicizzare la società e la cultura. Soppresse la poligamia e assicurò alle donne l&#x27;uguaglianza completa in materia ereditaria. Nel 1934 le donne ottennero il diritto di voto e molte entrarono in Parlamento.
+L&#x27;insegnamento religioso scomparve a poco a poco dal sistema scolastico controllato dallo Stato. Infine Atatürk sostituì i caratteri arabi con l&#x27;alfabeto latino, il calendario dell&#x27;egira con quello gregoriano; il giorno di riposo settimanale divenne la domenica al posto del venerdì musulmano.</p><p id="70ff7950-639d-4424-875f-7fcd6b1c85b4" class="">
+</p><h2 id="6d0171a7-e985-4798-80b6-b196b0b0bdfb" class="">📍5. Le colonie e i movimenti indipendentisti</h2><p id="09149550-bcfc-435d-85fa-8d8981f16055" class="">Francia e Inghilterra dovettero fronteggiare anche la crescita dei movimenti indipendentisti e nazionalisti nelle colonie, in Africa e in Asia. Le popolazioni coloniali rivendicarono una maggiore autonomia e una partecipazione nell&#x27;amministrazione dei rispettivi Paesi.
+L&#x27;estensione dei movimenti anticolonialisti fu determinata essenzialmente da questi motivi:
+-reparti militari coloniali avevano partecipato alla guerra a fianco dell&#x27;Intesa, dando prova di lealtà: a guerra finita si aspettavano come ricompensa una maggiore autonomia;</p><ul id="e0ced5b9-0e6c-48dd-aa66-5b4f5a71066e" class="bulleted-list"><li style="list-style-type:disc">durante la guerra in Occidente, i combattenti avevano conosciuto le idee democratiche e quando ritornarono nelle loro terre si impegnarono a lottare per l&#x27;emancipazione della loro patria;</li></ul><ul id="39e833ab-15b6-4974-907a-6f193283ee72" class="bulleted-list"><li style="list-style-type:disc">la pubblicazione nel 1919 dei Quattordici punti di Wilson, due dei quali facevano riferimento alle questioni coloniali riconoscendo i diritti delle popolazioni indigene, aveva creato qualche illusione;</li></ul><ul id="fc8d4871-0f4b-44e5-b5bd-3ef559c0c57f" class="bulleted-list"><li style="list-style-type:disc">l&#x27;Unione Sovietica e il Comintern svolsero un&#x27;azione a favore dei movimenti anticolonialisti, nell&#x27;ottica di liberare gli «schiavi d&#x27;Africa e d&#x27;Asia».
+Nel primo dopoguerra, dunque, il nazionalismo si diffuse nelle colonie. Tuttavia, la decolonizzazione vera e propria si sarebbe realizzata solo dopo la seconda guerra mondiale.</li></ul><p id="e12db0c9-da26-41ed-a1b7-a1881dddf605" class="">
+</p><p id="00e98f90-eaa9-4b8d-96a1-a76e463d6b42" class="">La crisi del dopoguerra provocò una ristrutturazione dell&#x27;immenso impero coloniale inglese: nella sostanza, la Gran Bretagna rinunciò a parte del controllo politico per garantirsi invece un dominio economico.
+Le colonie britanniche vennero organizzate in forme diverse. I dominions, le colonie con una forte componente di popolazione bianca - cioè Canada, Australia, Nuova Zelanda e Sudafrica - ottennero nel dopoguerra una crescente autonomia politica.
+Nel 1931, con lo Statuto di Westminster, il Parlamento inglese li riconobbe come Stati sovrani.
+I dominions entrarono quindi a far parte del Commonwealth, cioè di una libera associazione di comunità autonome senza alcun rapporto di subordinazione, unite dalla comune fedeltà alla corona britannica e legate all&#x27;ex madrepatria da forti vincoli di carattere economico.
+Oltre al Commonwealth, la Gran Bretagna deteneva altri possedimenti in Africa, in Asia e nel Pacifico: si trattava di colonie vere e proprie, di protettorati o di mandati. Su questi territori vi fu soprattutto un controllo economico finalizzato essenzialmente a creare un&#x27;area commerciale privilegiata all&#x27;interno dell&#x27;impero coloniale.
+In Egitto, ad esempio, nacque un regno autonomo, ma la Gran Bretagna controllava il Canale di Suez e si riservò il diritto di mantenere delle truppe. In Iraq (su cui aveva il mandato della Società delle
+Nazioni) e in Arabia Saudita, gli Inglesi mantennero il controllo dei pozzi petroliferi. Il punto critico era rappresentato dall&#x27;India, dove nel dopoguerra si sviluppò un consistente movimento nazionalista guidato da un uomo di grande prestigio, Mohandas Karamchand Gandhi, che iniziò una lunga lotta, all&#x27;insegna della «non violenza», per l&#x27;indipendenza indiana.
+Fra i territori che la Gran Bretagna ottenne in mandato rientrava anche la Palestina. In quest&#x27;area s&#x27;andavano ponendo le basi dei drammatici conflitti arabo-israeliani che sono giunti sino ai giorni nostri. Cresceva infatti il numero dei coloni ebrei che emigravano in Palestina con l&#x27;obiettivo di fondarvi uno Stato ebraico (sionismo).</p><p id="2b220cb7-c0d9-4729-94da-d84addc62c5a" class="">
+</p><p id="0923255e-c78c-4809-9ec1-337b67fcf51e" class="">La politica attuata dai governi francesi verso le colonie fu molto diversa da quella britannica. L&#x27;atteggiamento del governo mirava infatti ad assimilare le colonie in una «grande Francia».
+Questa politica centralistica generò numerose opposizioni sia in Medio Oriente, dove la Francia aveva ottenuto il mandato dalla Società delle Nazioni sulla Siria e il Libano, sia in Africa settentrionale.
+In Marocco, in Tunisia e soprattutto in Algeria si diffusero movimenti anticolonialisti di vario orientamento: sia democratico-socialista, sia religioso (di matrice islamica), sia nazionalista. Alle richieste di autonomia il governo francese reagì sempre con una dura repressione.
+Anche in Indocina, negli anni Venti, si formò un movimento che rivendicava maggiore partecipazione alla vita politica.</p><p id="f89501fc-a541-4ef9-be12-95351c7f4f44" class="">
+</p><p id="ccbeea57-19f3-40f8-9926-79c78837e440" class="">Negli anni della prima guerra mondiale l&#x27;America Latina passò sotto l&#x27;influenza degli Stati Uniti.
+Durante la guerra, infatti, i Paesi europei ridussero i loro investimenti, lasciando spazio a quelli statunitensi. Si trattava di finanziamenti ai governi e alle banche o di investimenti diretti in imprese industriali nel settore ferroviario, minerario, petrolifero.
+Anche negli scambi commerciali gli Stati Uniti soppiantarono l&#x27;Europa; in alcuni settori operarono addirittura in regime di monopolio.
+Tra i Paesi latinoamericani e gli Stati Uniti si instaurò un rapporto di forte dipendenza economica che condizionò anche i sistemi politici.
+In alcuni casi, nell&#x27;area centramericana, gli Stati Uniti ricorsero anche all&#x27;intervento militare per proteggere i loro interessi.
+Di maggiore autonomia godevano invece gli Stati più ricchi del Sud America - come il Brasile, l&#x27;Argentina e il Cile - che nel corso della guerra avevano avviato un processo di industrializzazione e di sviluppo economico. Era però uno sviluppo fragile perché poggiava essenzialmente su investimenti stranieri.
+La grande crisi economica del 1929 evidenziò la fragilità dell&#x27;area latinoamericana. Il protezionismo degli Stati Uniti e dell&#x27;Europa rallentò notevolmente le importazioni di prodotti dall&#x27;America del Sud. Le difficoltà economiche crearono tensioni sociali e condizioni di instabilità politica che nel corso degli anni Trenta favorirono, anche in quest&#x27;area, l&#x27;affermazione di regimi autoritari.
+Si trattava di governi dittatoriali e populisti, simili ai fascismi europei, che si insediarono in Argentina, Brasile, Cile.</p><p id="47b4fde1-8862-4bec-8520-df20e43f7f51" class="">
+</p><p id="6297657f-4350-429e-9aa1-36480995b706" class="">Un caso particolare di populismo è rappresentato dal Messico dove nel 1910 scoppiò una rivoluzione che pose termine alla quarantennale dittatura del generale Porfirio Díaz. Nel novembre del 1910, infatti, un proprietario liberale del Nord, Francisco Madero, si mise alla testa di un movimento insurrezionale a cui si unirono gruppi di contadini guidati da Pancho Villa ed Emiliano Zapata.
+Fu l&#x27;inizio della rivoluzione messicana che, un anno dopo, costrinse all&#x27;esilio il dittatore Díaz e portò alla presidenza della Repubblica Madero.
+Gli anni successivi furono segnati così dalla guerra civile tra conservatori e radicali; questi ultimi erano sostenuti dai contadini. Uccisioni, colpi di Stato e rivalità fra i diversi leader politici caratterizzarono questa fase della rivoluzione fino alla sconfitta di Villa e di Zapata.
+Alla presidenza fu allora eletto Venustiano Carranza, un militare, già seguace di Madero, che nel 1917 promulgò la Costituzione. Si trattava di una Costituzione molto avanzata, democratica, fondata sulla laicità dello Stato e sul riformismo sociale, destinata però a essere completamente disattesa: nel 1920, infatti, Carranza fu deposto e ucciso da uno dei suoi generali.
+Fino al 1934 così il Messico fu retto da governi militari e autoritari.
+In questo modo si consolidò nel Paese il modello populista, caratterizzato dal partito unico al potere e dalla tendenza a manipolare dall&#x27;alto la partecipazione popolare.</p></div></article></body></html>

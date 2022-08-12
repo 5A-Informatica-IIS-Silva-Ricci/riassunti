@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Capitolo 1 - Le radici del ‘900</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8009ed84-0057-4cfb-8fa0-59305a7aa443" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📗</span></div><h1 class="page-title">Capitolo 1 - Le radici del ‘900</h1></header><div class="page-body"><h2 id="b1750f14-da21-46ac-b022-018d7763f1b1" class="">📍1. Che cos’è la società di massa?</h2><p id="630ceaeb-5bdf-4d17-a24e-33f36a1d25c8" class="">Che cosa intendiamo quando parliamo di <strong>società di massa</strong>?</p><p id="813c786f-54a0-4719-8dc5-ea3020412776" class="">Parliamo della <strong>nostra</strong> società. Infatti nella società attuale si è realizzata una diffusione <em>di massa</em> dei prodotti di consumo.</p><p id="1b3265fd-143e-4c0f-8332-d52748a86a65" class="">In altri termini, nella societò di massa si verifica il fenomeno del “pieno”, le città sono “piene di gente”, le strade anche, le case anche.</p><p id="36e9cfe0-e5ca-4de8-a6f3-db488b497ee4" class="">La <strong>massa</strong> è dunque un insieme omogeneo in cui i singoli individui scompaiono rispetto al <em>gruppo</em>, nuovo e più importante soggetto politico e civile.</p><blockquote id="15de6bbb-de26-4dc2-8dfe-1fdb4292c93c" class="">Nella <strong>società di massa</strong> i cittadini vivono nei grandi agglomerati urbani, a stretto contatto tra di loro.</blockquote><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d57a0d1c-0cfa-4213-8542-ad88641e3e05"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Sono state le trasformazioni politiche, economiche e culturali della <strong>seconda rivoluzione industriale</strong> a produrre una società co uniformata e omogenea.</div></figure><p id="757e5c1b-54cc-4c01-a2f3-3f1d3758335e" class="">Alcuni hanno visto in questa trasformazione un momento positivo di affermazione della democrazia; altri un processo di appiattimento delle personalità.</p><blockquote id="dc374f22-1ee8-41e9-9951-2ae8ac4e9238" class="">Con la <strong>terza rivoluzione industriale</strong> la società di massa si diffonderà in tutto il pianeta dando luogo a un fenome che non è solo economico, ma anche politico e culturale: la <strong><em>globalizzazione.</em></strong></blockquote><hr id="34da5254-cdba-4dbc-bae0-fd52bcdcb4a5"/><p id="02dc4f71-8cc7-4ae0-b54f-a622805bac8b" class="">Alla fine dell’Ottocento solo Francia, Germania e Svizzera prevedevano nei loro ordinamenti il suffragio universale maschile.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1cf113a5-0253-456c-8f65-9744ccae2b75"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">In <strong>Italia </strong>l’introduzione del suffragio universale maschile avvenne nel <strong>1912.</strong></div></figure><p id="868411db-1ba9-4a21-aaae-d150940e51e5" class="">Si andò dunque ad affermare il modello del <strong>partito politico di massa</strong>, come forma di partecipazione popolare all’organizzazione politca dello Stato.</p><p id="bc28193a-abdf-40c9-b5cc-f1b3ecbeaf89" class="">Contemporaneamente ai partiti di massa, sorsero <strong>organizzazione sindacali</strong> a livello nazionale.</p><p id="8e1537cf-bf50-428c-8d3d-28993134aba7" class="">Lo <strong>sciopero</strong> era lo strumento di lotta che utilizzavano per dare più forza alle rivendicazioni operaie.</p><hr id="e3ba508a-dfee-4775-b258-9ca8feb58125"/><p id="4f29e888-3c84-4f30-8efd-086e0165c729" class="">La diffusione su larga scala dei beni di consumo rese più comoda la vita di molte famiglie.</p><p id="2a14fa28-74a9-4dcc-ad72-827d3beeb7ab" class="">Si diffusero anche i <strong>mass media</strong>, come i quotidiani, la radio e la televisione.</p><p id="7acba9b1-2789-4c1d-8cfb-5a3d3ff93548" class="">Fu proprio la <strong>stampa quotidiana e periodica</strong> a incrementare maggiormente la produzione e la vendita.</p><p id="8706b5c7-969c-40f8-9a9e-153951d1a920" class="">Nell’economia assunse un ruolo importantissimo il <strong>terziario</strong>, cioè la produzione di <em>servizi</em>: commercio, banche, ospedali ecc.</p><p id="0e96306a-371f-45f2-86d3-4d943a3163da" class="">Anche il mondo della scuola subì un mutamento sostanziale: l<strong>’istruzione</strong> non venne più considerata un bene elitario, ma un’opportunità da offrire a tutti i cittadini.</p><p id="1d3d9651-aafa-4764-953a-0963967367aa" class="">La scuola venne organizzata e finanziata dallo stato.</p><hr id="e6436f34-cfb2-4c45-998a-408e2bfdeb21"/><h2 id="379c86d7-8314-4f56-8e6d-09be36c999c1" class="">📍2. Il dibattito politico e sociale.</h2><p id="c65bfa28-d375-4759-863d-2c3d40d7f524" class="">il dibattito ideologico che si era sviluppato per tutto il corso dell’Ottocento aveva fatto propri i temi della riflessione politica settecentesca: i limiti del potere dello Stato e i diritti dei cittadini.</p><ul id="fbda94cc-798a-4323-b41f-e728a12ba15f" class="bulleted-list"><li style="list-style-type:disc">I <strong>conservatori</strong> guardavano con preoccupazione alle rivendicazioni di operai e contadini: sostenevano che gli scioperi avrebbero sprofondato la società nel disordine e chiedevano allo Stato di reprimere tutte le agitazioni popolari.</li></ul><ul id="4c8eafda-467e-4195-ba4d-de46c3bdbe2c" class="bulleted-list"><li style="list-style-type:disc">I <strong>liberali</strong> esaltavano il valore della libertà e dell’iniziativa individuali, chiedendo alllo stato di astenersi da ogni intervento nel campo dell’economia.</li></ul><ul id="12783e36-f0bf-419c-980b-48d03725107b" class="bulleted-list"><li style="list-style-type:disc">I <strong>socialisti</strong> sostenevano invece che una società più giusta non potesse nascere se non dalle lotte dei ceti più oppressi: agricoltori e operai.</li></ul><ul id="7b9f1c78-b347-422e-b7ee-71ccda990569" class="bulleted-list"><li style="list-style-type:disc">La <strong>chiesa</strong> condannava sia il socialismo che il libero mercato, invitando imprenditori e lavoratori ad abbandonare lo scontro e a realizzare una collaborazione pacifica.</li></ul><hr id="c76b2265-4380-4866-aedd-2acd949e853f"/><p id="187c1ec9-0eb3-41ae-95b0-55c0a1a18036" class="">Nel corso dell’Ottocento all’interno del movimento socialista si impose la tendenza marxista, che individuava nella rivoluzione lo strumento del riscatto del proletariato.</p><p id="1a4ef280-034f-41eb-b29b-ecd955f4df90" class="">In tutti i Paesi sorsero i partiti socialisti.</p><blockquote id="c6a0ce3e-b87e-455c-92b1-eb12d73e1196" class="">Il primo a formarsi e il più importante fu l’<strong>SPD</strong>, il <em>Partito Socialdemocratico Tedesco.</em></blockquote><p id="ce440b6b-7a03-4608-bff0-4b473998f2c0" class="">I partiti socialisti europei, nonostante le diverse caratteristiche, erano uniti da alcuni obiettivi comuni: tutti auspicavano il superamento del sistema capitalistico e la gestione sociale dell’economia.</p><p id="1f83b5c1-150a-4b4b-9f54-5506b81b1e45" class="">Tutti facevano capo a un’organizzazione erede di quella <strong>Prima Internazionale Socialista.</strong></p><hr id="c85df5f2-14a5-4701-808d-62779d9e975e"/><p id="12eabe36-ef02-4c7d-855a-c4b2e83f6a4e" class="">La nascita della <strong>Seconda Internazionale Socialista</strong> sorse nel <strong>1889, </strong>quando i principali partiti socialisti si riunirono a Parigi per approvare alcune importanti deliberazioni: la limitazione della <em>giornata lavorativa di otto ore</em><strong><em><em> </em></em></strong>e la proclamazione di una giornata mondiale di lotta per il<strong><em><em> </em></em></strong><em><em><em>primo maggio</em></em></em> di ogni anno.</p><p id="e12c2fe5-6d15-4e2c-9d78-d7356927ac91" class="">A dominare ideologicamente la Seconda Internazionale fu il marxismo.</p><p id="0b6c3020-3a2d-4979-9bbd-0865a81e0785" class="">Progressivamente però si delinearono due tendenze all’interno dei partiti:<div class="indented"><ul id="3731e0a9-2a23-4243-a457-0538c9173728" class="bulleted-list"><li style="list-style-type:disc">Quella <strong>socialdemocratica</strong> che rifiutava la rivoluzione ponendo in luce la necessità di un’azione democratica e riformista da parte delle classe operaria.</li></ul><ul id="2f31af79-55af-4752-8cb1-24421bed6e98" class="bulleted-list"><li style="list-style-type:disc">Quella <strong>rivoluzionaria</strong> che non rinunciava all’obiettico individuato da Marx: una società senza classi da raggiungere attraverso una rivoluzione violenta.</li></ul></div></p><p id="a92f6541-e2ed-49d1-9fd8-f9e321b7a622" class="">L’interprete principle della tendenza socialdemocratica fu <strong>Eduard Bernstein.</strong></p><p id="14a1d87e-a69f-4e0a-9ab5-9b2c0439dae6" class="">L’interprete principle della tendenza rivoluzionaria fu <strong>Karl Kautsky.</strong></p><hr id="7741aeca-144e-4d49-877b-3516c5c6fc60"/><p id="6735e4fb-b03a-45e5-966c-0bb6e592b82f" class="">In Francia ebbe origine un’altra tendenza al’interno del movimento operaio, ch eprese il nome di <em>sindacalismo rivoluzionario</em><strong><em><em>.</em></em></strong></p><p id="7ac159ec-c87b-461f-9cd1-99081203a6e6" class="">I sindacalisti francesi insistevano sulla necessità di addestrare le masse operarie alla lotta, più che sulle conquiste economiche dei lavoratori.</p><p id="e298933b-6e03-47e2-bab8-bdf4edd7f0fd" class=""><strong>Georges Sorel</strong> fu l’interprete più autorevole ed esaltò la violenza proletaria.</p><hr id="f478630e-0cd8-4f48-ae4f-a1f7d0856f2a"/><p id="719a4f77-3d4d-46c9-b724-9c6cae7f324c" class=""><strong>Leone XIII</strong> fu caratterizzato dalla ricerca di una proposta sociale coerente con il messaggio evangelico.</p><p id="7acc5229-8b58-4bb8-92a6-842192c3c24b" class="">Questa ricerca si concretizzò nel <strong>1891</strong> con la <strong>Rerum Novarum</strong>, contenente:<div class="indented"><ul id="5405d2c8-5287-472a-8249-67138175bf42" class="bulleted-list"><li style="list-style-type:disc"><strong>denuncia degli eccessi del capitalismo</strong>: viene ribadita la condanna al liberalismo.</li></ul><ul id="7c6a5ee6-5c42-4c55-803f-7fc7a018de23" class="bulleted-list"><li style="list-style-type:disc"><strong>condanna delle teorie socialiste e colletivistiche</strong> che sostengono l’abolizione della proprietà privata.</li></ul><ul id="deb59d66-e144-4c2c-bb33-864b2d804756" class="bulleted-list"><li style="list-style-type:disc"><strong>invito allo Stato a intervenire</strong> per rimuovere le cause che possono esasperare il conflitto tra operai e padroni.</li></ul><ul id="f8c52300-ad80-45fc-86b9-d2bde7379d6a" class="bulleted-list"><li style="list-style-type:disc"><strong>condanna della lotta di classe </strong>ed esortazione alla collaborazione tra padroni e operai.</li></ul></div></p><hr id="338928c3-5b5d-4b79-9864-a96bc48374c5"/><p id="6473a335-dcf5-4ba1-8e7f-0fe3e98999e8" class="">Solo nel <strong>1919</strong> il <em>non expedit</em><em><strong><em> </em></strong></em>sarà completamente abrogato e i cattoliti potranno dar vita a un loro partito: il <em>Partito Popolare Italiano</em><strong><em><em> </em></em></strong>fondato dal sacerdote <strong>Luigi Sturzo.</strong></p><hr id="45b524e3-0de7-46ac-9790-3f5c0cce6c46"/><p id="07560784-4b2a-4197-8dc2-b4fe5e8078c7" class="">La rivoluzione industriale portò le donne nelle fabbriche.</p><p id="66a0d079-ae86-42af-a60e-f535a4524f37" class="">Nell’industria la donna era doppiamente discrimanta, sia perchè a parità di lavoro percepiva un salario minore, sia perchè era esclusa dalle funzioni dirigenziali e di responsabilità.</p><p id="50d5d6b8-0aed-4ff8-b841-55c060d226f7" class="">Nacquero in Inghilterra e negli Stati Uniti i primi movimenti delle <strong>suffragette</strong>, così chiamate perchè rivendicavano l’<em>estensione del suffragio alle donne.</em></p><p id="c18d4e4b-4d99-4046-a5d3-53d946456123" class="">Si può sintetizzare la protesta di quei tempi con le parole de <em>Il pane e le rose</em>, la canzone di lotta delle donne americane.</p><hr id="bdb392bd-3bcc-459c-a2c3-42364af76fdd"/><h2 id="15e9cdb4-1ae1-4fe9-83ef-43c420c66e3a" class="">📍3. Nazionalismo, razzismo, irrazionalismo</h2><p id="49b0adc8-5703-4b68-8658-044db88d65f6" class="">L’idea di nazione si affermò in Europa nella prima metà dell’Ottocento.</p><p id="53959e93-72b8-4596-9945-0723a05a464d" class="">A partire dal 1850 essa assunse sempre più un carattere reazionario e militaresco, fino a diventare ideologia di guerra durante il primo conflitto mondiale.</p><p id="56bb0f81-ca6c-44b9-a5cb-939cce2cfcd3" class="">Il nazionalismo si diffuse in tutta Europa assumendo caratteristiche a seconda dei contesti:<div class="indented"><ul id="6a817976-4509-439b-9043-b43757ebe8af" class="bulleted-list"><li style="list-style-type:disc">Il <strong>nazionalismo tedesco</strong> ebbe come programma il <em>pangermanesimo;</em></li></ul><ul id="ccc730e3-e8f0-4d0c-adf6-76ff11cb182b" class="bulleted-list"><li style="list-style-type:disc">Il <strong>nazionalismo italiano</strong> rivendicò per l’Italia le terre ancora irredente, come il Trentino.</li></ul></div></p><hr id="2a9df9cd-2b3e-4220-bdb6-27e44d783c84"/><p id="cceb6e1a-1723-4713-9ea8-5331a3dddab3" class="">Il razzismo consiste nel ritenere che esistano razze superiore e inferiori, e che la razza superiore abbia il diritto - dovere di sottomettere quella inferiore.</p><p id="626f05a9-2d02-4423-a0d0-b8bfd0268cb2" class="">Questa terioa ebbe il suo precursore nel francese <strong>Joseph Arthur de Gobineau.</strong></p><hr id="ed363479-271b-411a-ac89-3420f47fa011"/><p id="c978baf2-c2d9-404d-bb04-51bcedc5d806" class="">Tra Ottocento e Novecento anche il contestò culturale mutò: al positivismo subentrò l’<strong>irrazionalismo</strong>, caratterizzato dalla volontà di andare al di là della scienza. (Freud, Nietzsche, …)</p><p id="1400d051-556b-4fc8-807e-d7bc08af7400" class="">In generale si affermò un’atmosfera di crisi in contrasto con l’ottimismo positivistico, un nuovo clima culturale che si è soliti definire <strong>decadentismo.</strong></p><hr id="a2c381a5-60a7-42fd-b921-5332cfae0daf"/><h2 id="d043959c-1535-4633-8dc6-14c2d0ce5cc2" class="">📍4. L’invenzione del complotto ebraico.</h2><p id="15e70df0-7b07-45f6-a90a-72a923bf88b7" class="">Un caso particolare di razzismo è quello che attribuisce agli Ebrei caratteristiche morali negative e in particolare la pervicace volontà di comandare sulle razze superiori: poichè gli Ebrei non avrebbero le qualità morali e fisiche per diventare una razza dominante, gli ambienti antisemiti hanno ritenuto che questo potese accadere soltanto con l’inganno e con attività segrete.</p><p id="8e5a3eee-db61-4dfa-a663-02bc597cc6ff" class="">A questo scopo comparvero i <em>Protocolli dei Savi di SIon</em><em><strong><em>, </em></strong></em>un libretto che presenta un piano ebraico per il dominio del mondo.</p><p id="b587a38a-21d8-4ccc-85ab-c257c493886c" class=""><em>I Protocolli</em> sarebbero nati per volontà del capo della <strong>polizia segreta russa</strong> come propaganda destinata a giustificare la politica antiebraica del suo Paese.</p><hr id="e4af05cd-e91a-4175-baeb-b08d43857f22"/><h2 id="3de5cc1b-0101-4b13-833b-b0be5a5a196d" class="">📍5. Il sogno sionista.</h2><p id="b9de3606-ccf2-43ed-bce9-1f85d78f72a3" class="">Il sentimento di diversità e l’antisemitismo giocarono un ruolo determinante per la nascita del movimento sionista.</p><p id="20382bd0-4382-46ce-a0e6-e104618f4b34" class="">Fu la Russia la vera culla delle prime forme di <strong>sionismo</strong>.</p><p id="84402064-dd27-448b-8b5f-8d745d230631" class="">Nel 1896, <strong>Theodor Herzl</strong> espresse il suo progetto di riunificazione degli Ebrei della <strong>diaspora</strong> in una nazione ispirata agli ideali democratici dei movimenti patriottici europei del primo Ottocento.</p><p id="8d951bf5-83ed-4b8d-9c86-a19b9d7a2af6" class="">Per alcuni anni l’Organizzazione Sionista Mondiale fu impegnata nel lavoro diplomatico per ottenere ufficialmente dalla Turchia la possibilità per gli Ebrei di stanziarsi in Palestina.</p><p id="ffcf6a0f-09dd-45f3-9721-e9547979034d" class="">Ma la Turchia rifiutò.</p><p id="a5235e72-c3ae-4c13-a60b-e0d524f60005" class="">In realtà, mentre si discuteva su quale dovesse essere la terra per gli Ebrei, la <strong>colonizzazione</strong> della Palestina era già in atto.</p><p id="899049b9-dced-4b8c-a168-f8c30b9ea877" class="">Tuttavia solo una minoranza di Ebrei scelte la <strong>Palestina</strong>; infatti la maggior parte di coloro che lasciarono l’Europa si diresse verso l’<strong>America.</strong></p><p id="7e36b87f-29a7-4238-b21d-3fb52116aa40" class="">
+</p></div></article></body></html>

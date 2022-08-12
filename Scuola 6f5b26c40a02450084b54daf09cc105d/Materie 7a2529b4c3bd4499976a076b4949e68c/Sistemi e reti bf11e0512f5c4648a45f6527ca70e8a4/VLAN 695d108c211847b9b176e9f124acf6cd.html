@@ -1,0 +1,672 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>VLAN</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="695d108c-2118-47b9-b176-e9f124acf6cd" class="page sans"><header><h1 class="page-title">VLAN</h1></header><div class="page-body"><h2 id="26d298c7-4cf5-45be-bbcc-85bcc0690238" class="">Generalità</h2><p id="1e07acd0-50e4-4ebf-9c0f-00fe709f57ad" class="">Una VLAN è una rete virtuale che si comporta come se fosse una rete locale separata dalle altre e sono definite nello <strong>standard 802.1Q</strong>.
+La cominicazione a livello 2 è confinata all&#x27;interno della VLAN, la connettività tra diverse VLAN può essere realizzata solo a livello 3 (attraverso routing).</p><h2 id="d983c9d6-f5bb-4cac-a765-af86b0140d20" class="">Scopo</h2><ul id="3f4cfdb1-7be0-4a50-9793-a540e7287953" class="toggle"><li><details open=""><summary>Risparmio</summary><p id="bfd688e5-a89b-4fa2-a3b1-53bed67403ae" class="">Non è necessario realizzare una nuova infrastruttura di rete locale per creare una nuova LAN parallela</p></details></li></ul><ul id="8a56fc88-7b0e-489d-bcf9-1a370774b550" class="toggle"><li><details open=""><summary>Aumento di prestazioni</summary><p id="c1e4aada-3cab-4993-99ce-a981614adb17" class="">Il confinamento del traffico di broadcast permette di evitare la propagazione di frame verso destinazioni che non hanno necessità di riceverlo</p></details></li></ul><ul id="7d9eddcc-4a40-4212-af0b-5589dc2f9942" class="toggle"><li><details open=""><summary>Aumento della sicurezza</summary><p id="dd5b6168-6372-47f5-8b79-04c8b9ad3610" class="">Un&#x27;utenza connessa ad una VLAN non ha modo di vedere il traffico interno alle altre VLAN</p></details></li></ul><ul id="4ed1f6cc-9bab-46f8-81c0-bc7f34d96387" class="toggle"><li><details open=""><summary>Flessibilità</summary><p id="c063ac3d-693c-48a2-a879-a6b3b879aa8d" class="">Lo spostamento fisico di un&#x27;utenza all&#x27;interno dei locali raggiunti dall&#x27;infrastruttura di rete può essere realizzato senza modifiche della topologia fisica, ma logicamente attraverso la opportuna riconfigurazione degli apparati di rete</p></details></li></ul><h2 id="3edbbe83-1eaa-4666-9d19-0a5cf4df64ea" class="">Requisiti degli switch per supporto VLAN</h2><ul id="8658a7c1-9982-4c9c-a656-1f21ea84a63f" class="bulleted-list"><li style="list-style-type:disc">Capacità di distinguere le diverse VLAN</li></ul><ul id="99f8d144-4cf4-4e41-806d-c402b29f35b7" class="bulleted-list"><li style="list-style-type:disc">Supporto dello standard 802.1Q</li></ul><ul id="3012a85b-8033-4cc6-81ae-83266f1e519a" class="bulleted-list"><li style="list-style-type:disc">Ogni VLAN deve essere definita con <strong>nome</strong> e <strong>numero identificativo</strong></li></ul><hr id="c3746acf-6705-45ee-b241-234e5fa93fdb"/><h1 id="94a41cb6-c0f3-4376-a10d-277dd2cc4ef1" class="">Tipologie VLAN</h1><h2 id="d2d73fdf-4b4f-4c26-b36d-077f614b4b0b" class="">Port based / Untagged</h2><p id="b1204e04-6ac8-4ef9-b4fd-9519ae6ecad2" class="">Prevede l&#x27;<strong>assegnazione statica di ciascuna porta</strong> dello switch <strong>ad</strong> <strong>una</strong> <strong>VLAN</strong>, si realizza quindi un partizionamento logico dello switch.
+Lo switch deve supportare lo standard 802.1Q ma non richiede il suo utilizzo.</p><p id="7596a894-6aca-494d-a087-b11ac53c4c61" class="">Esempio di VLAN port based:</p><figure id="f38cfa63-a47e-4f7c-b32b-89218177b13a" class="image"><a href="VLAN%20695d108c211847b9b176e9f124acf6cd/Screenshot_2021-11-19_at_15.08.07.png"><img style="width:918px" src="VLAN%20695d108c211847b9b176e9f124acf6cd/Screenshot_2021-11-19_at_15.08.07.png"/></a></figure><h2 id="1dc976d3-af24-4e6c-9e45-5977a45c837f" class="">Tagged</h2><p id="1e7e983d-c3a2-42d3-a18e-1460c1f1a4c2" class="">Questa modalità <strong>richiede</strong> l&#x27;utilizzo dello standard <strong>802.1Q</strong> e può essere usata per poter condividere lo stesso link fisico tra VLAN differenti.
+Lo standard definisce una <strong>modifica</strong> del formato del <strong>frame</strong> <strong>ethernet</strong> <strong>aggiungendo</strong> <strong>4 byte</strong> che trasporteranno le informazioni sulla VLAN.</p><h3 id="af3e52fc-6443-42c7-af8b-43225ff3a05f" class="">La frame ethernet</h3><p id="7e3bd36f-6c18-4950-8cf5-14ca840557c5" class="">Vengono aggiunti i seguenti campi:</p><ul id="7436feca-aa30-4673-956e-6a9f07cc7ad2" class="bulleted-list"><li style="list-style-type:disc"><strong>TPI</strong> (Tag Protocol Identifier): 2 bytes di valore <code>81 00</code> che identificano il frame come 802.1Q</li></ul><ul id="f891eaf0-89bf-4134-9d94-0773bdbf9e0e" class="bulleted-list"><li style="list-style-type:disc"><strong>TCI </strong>(Tag Control Information): 2 bytes che trasportano le informazioni sulla tag:<ul id="aa140069-fa59-48ef-ba1f-d50546c152ab" class="bulleted-list"><li style="list-style-type:circle">3 bit: <strong>user priority</strong> → eventuale livello di priorità del frame</li></ul><ul id="a03784df-8bb6-44f5-9bbf-37e0a484f150" class="bulleted-list"><li style="list-style-type:circle">1 bit: <strong>CFI →</strong> vale 1 se il frame proviene da una LAN token ring</li></ul><ul id="a1450df1-df4c-4c3d-9584-ec76fa2b9baf" class="bulleted-list"><li style="list-style-type:circle">12 bit: <strong>VID →</strong> contiene la VLAN tag (da 0 a 4095, non compresi)</li></ul></li></ul><p id="21d2c32c-4bc5-4c33-b448-5066044620db" class="">Risulta quindi:</p><figure id="77fb4736-7c08-408a-b543-ccac406f2aed" class="image"><a href="VLAN%20695d108c211847b9b176e9f124acf6cd/Screenshot_2021-11-19_at_15.13.58.png"><img style="width:720px" src="VLAN%20695d108c211847b9b176e9f124acf6cd/Screenshot_2021-11-19_at_15.13.58.png"/></a></figure><p id="623cdebd-bb85-4977-a262-87d5c37366c9" class="">Il frame eccederà quindi le dimensioni massime di 1518 quindi se un dispositivo non supporta lo standard 802.1Q scarterà il frame.</p><p id="a17202ad-4240-4fd0-86ee-21f8a3525d57" class="">Esempio topologia tagged:</p><figure id="167d87d4-84f9-4834-9ecc-c294167aad28" class="image"><a href="VLAN%20695d108c211847b9b176e9f124acf6cd/Screenshot_2021-11-19_at_15.24.16.png"><img style="width:449px" src="VLAN%20695d108c211847b9b176e9f124acf6cd/Screenshot_2021-11-19_at_15.24.16.png"/></a></figure><hr id="16c64634-3362-49fd-b696-ea22ca43814c"/><h1 id="9e653d92-1289-45e5-9529-b5c4fe04de13" class="">Tipologie di link</h1><p id="5c0ea153-0761-4c41-9c4c-746d933bcc28" class="">Sono 3:</p><ol type="1" id="0aa451dc-470f-4c6c-9eed-876b5ab0d7b9" class="numbered-list" start="1"><li><strong>Access link → </strong>riferiti a collegamenti a porte untagged → la VLAN di appartenenza viene identificata attraverso la <span style="border-bottom:0.05em solid">porta</span></li></ol><ol type="1" id="faf90720-9814-42bb-827c-7b60d2ffc425" class="numbered-list" start="2"><li><strong>Trunk link → </strong>riferiti a collegamenti a porte tagged → la VLAN di appartenenza viene identificata attraverso il <span style="border-bottom:0.05em solid">tag</span> del frame Ethernet</li></ol><ol type="1" id="d741fbcc-33a4-4109-ad7b-f725e1bf45b4" class="numbered-list" start="3"><li><strong>Hybrid link</strong> → riferiti a collegamenti che possono essere sia tagged che untagged → la VLAN di appartenenza viene identificata attraverso il <span style="border-bottom:0.05em solid">tag</span> del frame Ethernet <span style="border-bottom:0.05em solid">se presente</span>, altrimenti attraverso la porta</li></ol><hr id="756bc85a-c18d-4214-86e9-0a64ff1b2d3d"/><h1 id="e444379c-6626-498f-a325-6a629174293b" class="">Funzioni dello switch</h1><ul id="aef14aea-bacf-4f44-a840-fb14b61cf5d6" class="toggle"><li><details open=""><summary>Ingress</summary><p id="2fbdd696-f074-42b2-8698-7e72525b1ea0" class="">Riceve il frame in ingresso da una porta, se il frame è untagged rileva la VLAN di appartenenza attraverso la porta associata altrimenti attraverso la TAG</p></details></li></ul><ul id="62832697-1b06-46b0-b697-6429081b40c7" class="toggle"><li><details open=""><summary>Forwarding</summary><p id="0e396f76-cdb0-46e4-b103-10d84409eadc" class="">Una volta identificata la VLAN applica le regole di forwarding e identifica tutte le porte di uscita</p></details></li></ul><ul id="87b8627c-1423-4bc2-8fe8-d23e37f86243" class="toggle"><li><details open=""><summary>Egress</summary><p id="3ca7c706-eca8-46b0-9e48-b2d2d8bed179" class="">Se il collegamento è di tipo trunk link allora sarà necessario aggiungere la tag al frame (se non già presente) altrimenti se il collegamento è di tipo access link si assicurerà di rimuovere la tag in caso fosse presente. Quando viene modificato il frame ethernet viene anche ricalcolato il CRC (Cyclic Redundancy Check, controllo degli errori)</p></details></li></ul><hr id="e99af59c-273b-4d44-92bf-681fdc897f5b"/><h1 id="0420a22a-a47a-402b-8790-966253376def" class="">Note</h1><ul id="cfd99d43-6b18-4f54-9009-c88341d77567" class="bulleted-list"><li style="list-style-type:disc">Gli switch di default vengono venduti con una VLAN predefinita, detta <strong>default VLAN</strong>, con tag 1. Tutte le porte appartengono alla default VLAN in modalità untagged</li></ul></div></article></body></html>

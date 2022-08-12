@@ -1,0 +1,712 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Giacomo Leopardi</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ff93109f-7675-41b6-bf01-ca1635d65fc8" class="page serif"><header><h1 class="page-title">Giacomo Leopardi</h1></header><div class="page-body"><h1 id="1fc11c68-d896-4edc-a0c5-a5a76b73e0bb" class="">Biografia (1798 - 1837 → 39 anni)</h1><h3 id="41bf6c2d-e66a-401b-9bbe-2f486e51e4e4" class="">Luogo di nascita</h3><p id="37e992de-475d-424a-87bf-51e0871dd8b6" class="">📍 <strong>Recanati, Marche</strong><div class="indented"><p id="4064eb83-cc51-49e9-937d-849d00a8a79e" class="">→ piccolo borgo appartenente allo Stato della Chiesa 
+→ società chiusa e fondata sul privilegio ecclesiastico e nobiliare = arretrata 
+→ Leopardi vuole uscire da essa per confrontarsi con altri letterati</p></div></p><h3 id="d60f5941-c95f-4c57-9a7c-f9bff8b9ef17" class="">Situazione famigliare</h3><p id="88a51675-3154-4887-bc09-c07275f749c0" class=""><strong>Padre: Monaldo</strong><div class="indented"><p id="2110def4-ae60-4230-ad04-f96d201fde68" class="">→ erudito
+→ obbliga i figli a passare il tempo nella ricca biblioteca di famiglia
+→ vieta di uscire con le compagnie di giovani del paese</p></div></p><p id="47f2935a-dcf5-4d8b-bac1-4b1f64a49719" class=""><strong>Madre: Adelaide</strong><div class="indented"><p id="10444f83-fd4f-45bc-b4ef-6c1f937fc249" class="">→ ricevette una rigida educazione religiosa 🙏🏼
+→ molto severa e dura, dedica solo a<div class="indented"><ul id="50f26c09-c53e-4a15-b7c8-55dc2eee80b3" class="bulleted-list"><li style="list-style-type:disc">gestire la situazione economica della famiglia</li></ul><ul id="31d8b39e-f0fe-44d5-aad7-051f2909749f" class="bulleted-list"><li style="list-style-type:disc">religione</li></ul></div></p></div></p><p id="6cb1178f-9f06-4173-9639-c215c6ef1546" class="">Due fratelli più vicini: <strong>Carlo &amp; Paolina </strong><div class="indented"><p id="f293601b-c4c8-4c44-b735-cdfca8276a00" class="">→ primi ed unici amici e confidenti della sua giovinezza
+→considerano lo studio l&#x27;unica occupazione radicata dell&#x27;uomo, 🚫  vacanze se non nei giorni festivi, 🚫  svaghi esterni </p></div></p><h3 id="c0f31556-e1bb-4e74-8199-115e48cc865e" class="">Caratteristiche infanzia</h3><ul id="b8093169-06a2-4337-8e3b-c7a1ca4678b7" class="bulleted-list"><li style="list-style-type:disc">Passione smodata per lo studio</li></ul><ul id="2a5b5045-55b0-40f0-9b48-a25bd1e27dba" class="bulleted-list"><li style="list-style-type:disc">Talento straordinario</li></ul><ul id="a0b1955c-74ee-4a4e-a6c1-3934a3cccf22" class="bulleted-list"><li style="list-style-type:disc">Disposto alla fantasia e curioso → coglie gli aspetti più profondi delle cose</li></ul><ul id="cdaced4f-f09e-4d4e-af19-86a180d1d1d6" class="bulleted-list"><li style="list-style-type:disc">Desiderio di primeggiare tra i fratelli</li></ul><ul id="6b661bd5-b0a8-4569-91f0-8c00923db45f" class="bulleted-list"><li style="list-style-type:disc">Odio per la tirannide</li></ul><ul id="6e45ef00-58f9-4f77-ae8d-25c1fd83629f" class="bulleted-list"><li style="list-style-type:disc">Apprensione per chiunque soffra</li></ul><ul id="41c5287d-8ee0-402f-b89e-fd4dd52cda8f" class="bulleted-list"><li style="list-style-type:disc">Desiderio di vedere il mondo</li></ul><p id="5de20405-bba7-40ae-b03e-1f1597732aa4" class="">Infanzia = alternarsi eccessi di disperazione &amp; allegrie senza misura</p><h3 id="242c8d19-f84c-415f-a5c8-d532620da4e0" class="">Eventi</h3><p id="748e28e0-ab93-46f1-b69a-a9df63420119" class=""><strong>11a</strong>: sintesi, commenti e traduzione di testi antichi + <strong>impara greco, francese &amp; ebraico</strong>.</p><p id="9308aff0-ca9c-4885-9a61-1869aae13e91" class=""><strong>18a</strong>: traduzione del primo libro dell&#x27;<em>Odissea</em> + <em>Le rimembranze</em> (primo componimento poetico)</p><p id="562c36d4-47d4-4b43-a5b0-1d0e35157e15" class=""><strong>19a</strong>: conosce <strong>Pietro Giordano</strong>, scrittore e critico di idee liberali, 24 anni più di Leopardi<div class="indented"><p id="9f69d072-845f-4ccf-99c6-59bfdd07d2dd" class="">→ riferimento intellettuale e affettivo, trasmette speranza e desiderio di gloria 
+→ la visita di Giordano a Recanati = scrittura 2 canzoni (<em>All&#x27;Italia</em> + <em>Sopra il monumento di Dante</em>) che invierà ai principali letterati italiani per farsi conoscere
+→ inizia ad annotare sentimenti + riflessioni in quaderni = <em>Zibaldone dei pensieri</em></p></div></p><p id="185e13c0-b862-47ac-ae2c-9f9389331423" class=""><strong>20a</strong>: vede i primi <strong>sintomi della sua malattia</strong> (colonna vertebrale curva, spalle piegate, gobbe sul dorso e torace, statura si fa piccola, occhi doloranti ed incapaci di tollerare la luce, etc...)<div class="indented"><p id="71cf7324-902d-4cfa-bb81-0a2d14a0ee81" class="">→ attribuisce la malattia al troppo studio = se ne <strong>colpevolizza</strong>, pentito di essersi guastato la saluta + l&#x27;aspetto esteriore
+→ causa afflizioni dell&#x27;anima: gravi e ricorrenti <strong>malinconie</strong>
+→ studiosi suppongono tubercolosi ossea (distrugge ossa e cartilagini con gravi conseguenze su tutto il corpo)</p></div></p><p id="440edecc-db24-45ac-97dc-4e1c86388e5d" class=""><strong>21a</strong> (maggiorenne): pianifica e tenta la <strong>fuga</strong>, ma viene <strong>scoperto</strong><div class="indented"><p id="2b72245f-8e41-43b9-b5f2-3eb035e7ec1d" class="">→ fallimento accresce: <strong>infelicità</strong> + <strong>contraddittorio rapporto con il padre</strong> (Monaldo non vuole separarsi da lui, gli offre cura ed affetto negandogli l&#x27;indipendenza = il denaro)
+→ nonostante l&#x27;avversione alla possessività padre non riuscirà mai a scindere il legame → rappresentava certezza, ci poteva sempre contare</p></div></p><p id="abbd709f-89f4-4494-af5b-92eaa854b529" class=""><strong>Autunno stesso anno</strong>: scrive <em>L&#x27;infinito</em><div class="indented"><p id="36184633-f11c-44b1-b7de-f5d622bdd6b7" class="">→angoscia legato alla sua libertà
+→ riflette sempre più profondamente sulle cose e si incupisce progressivamente ma ha comunque <strong>&quot;illusioni&quot; = speranze di amore, gloria, eroismo e piacere (felicità)</strong></p></div></p><p id="2dca045c-64be-49e1-9b8b-ae22d23dd7db" class=""><strong>3 anni successivi</strong>: cerca impieghi e sistemazioni esterne con aiuto di parenti e amici</p><p id="ecdddcc9-be5e-4bac-8255-ffb7fb9a8e91" class="">Padre lo manda a📍 <strong>Roma</strong> dagli zii materni (sperando che accetti di diventare prete mettendo gli studi al servizio della fede)<div class="indented"><p id="27e53a37-ee11-435e-8f0d-855e2c3018fd" class="">→ <strong>deluso</strong> da Roma, descritta come frivola e intellettualmente arretrata, e l&#x27;ipocrisia della corte papale lo ripugna.
+→ inadeguato nei salotti mondani e sarà così in tutte le città, non troverà mai il piacere desiderato e si sentirà solo</p></div></p><p id="5eb2d6f3-d4f9-42d6-8ec5-bf4c43cb7e6e" class="">Torna a📍 <strong>Recanati</strong>: approda a conclusioni pessimistiche<div class="indented"><p id="b030e01f-c04d-481a-a2b0-0b1755da633c" class="">→scrive prose satiriche e filosofiche <em>Operette morali</em></p></div></p><p id="566f4cbc-e59b-44af-b9c1-7a113f6938b2" class="">Giordani lo mette in corrispondenza con letterati fiorentini, tra cui <strong>Vieusseux</strong>, fondatore rivista letteraria &quot;Antologia&quot; + &quot;Gabinetto Vieusseux&quot; (circolo culturale fiorentino)
+Conosce editore milanese Stella → reca a Milano a curare la pubblicazione di alcuni studi filologici.
+<strong>Inizia</strong> il lungo <strong>peregrinare</strong> di Leopardi tra📍 Milano, 📍 Bologna, 📍 Firenze e 📍 Pisa (in alloggi inadeguati + pessime condizioni di salute).</p><p id="797095b3-0686-45df-ac35-3abfef62adb2" class="">📍 <strong>Bologna</strong> conosce <strong>Teresa Carniani Malvezzi</strong><div class="indented"><p id="0d7e9ec7-2663-40e8-933a-bb439afc7e2a" class="">→inizia assidua frequentazione = s&#x27;innamora
+→ Teresa interromperà bruscamente gli incontri malvisti dal marito</p></div></p><p id="983531a4-6ddf-4786-bd27-8e7d5ac41fdf" class="">📍 <strong>Firenze</strong> soffre: si distanzia dai letterati fiorentini fiduciosi nelle riforme e nel progresso + partecipa festeggiamento in onore di Manzoni ma non nasconde le riserve sulla sua prosa.</p><p id="cf6ff121-681a-4b3f-be95-6376982a655a" class="">📍 <strong>Pisa</strong> periodo di <strong>sollievo</strong>: salute migliora + alloggia famiglia che gli prepara i pasti + letterati e studenti lo accolgono con cortesia.<div class="indented"><p id="c7d8ab68-2adc-43aa-a578-d4bd5e149a14" class="">→ compone <em>A Silvia
+→ </em>tornato a <strong>Recanati</strong> = patimento fisico e morale ma scrive poesie che <strong>formeranno i </strong><strong><em>Canti pisano-recanatesi</em></strong><strong> </strong>(<em>Le ricordanze</em>, <em>La quiete dopo la tempesta</em>...)</p></div></p><p id="79e4884c-4ea0-40c5-b152-1e0e867e9394" class="">
+</p><p id="9d7b615e-7953-4416-997c-aa9a12551555" class=""><strong>Sostegno economico</strong>💰 da parte di <strong>amici fiorentini</strong> per 1 anno<div class="indented"><p id="11026c10-f711-4860-a8f7-8ec8fabf5913" class="">→ Colletta (generale napoletano esule a Firenze): propone sussidio mensile anonimo = prestito in anticipo sui ricavi delle future pubblicazioni</p></div></p><p id="234338cf-a938-496d-81d2-3362cd6af915" class=""><strong>1830</strong>: parte da Recanati e non vi farà più ritorno</p><p id="c643610d-5ab0-44b7-a3e6-9a9d9d950c41" class="">
+</p><p id="689ad195-aef5-493b-bcec-1d698889b444" class="">Vita meno solitaria a📍 <strong>Firenze</strong><div class="indented"><p id="0a1521bc-1609-4926-a333-481ad9be80b8" class="">→ <strong>Ranieri</strong> = <strong>stretto legame</strong> di amicizia, insieme a lui fino alla morte dividendosi il denaro
+→ <strong>Fanny Targioni Tozzetti</strong> (moglie di un medico ed animatrice di un salotto letterario) = bizzarra trama amorosa → Leopardi ama Fanny, Fanny - Ranieri, Ranieri - donna di teatro</p></div></p><p id="d160fd5c-5d02-48fa-8861-f2c09f834e90" class="">Ranieri → Napoli dalla famiglia per ragioni economiche → Firenze: partono insieme per <strong>Napoli</strong> = <strong>clima favorevole</strong> + parenti Ranieri offrono sostegno economico<div class="indented"><p id="be1dca4f-7608-45cc-a6fc-a32d20ff745f" class="">→ vita aperta e socievole
+→ pubblica una seconda edizione dei <em>Canti</em> + edizione ampliata <em>Operette morali</em>, ma i testi vengono sequestrati dalla censura del governo borbonico</p></div></p><p id="b56034b4-8358-4fe8-87e9-3d180873fe06" class=""><strong>Torre del Greco</strong>, campagna vicino Napoli: evita colera + scrive al padre ultime lettere della sua vita<div class="indented"><p id="de39184f-de44-4fb4-b806-84c562179455" class="">→ <strong>muore</strong> (<strong>1837</strong>) </p></div></p><hr id="1d442b07-2bf3-447c-b133-81d8d22794de"/><h1 id="e9a49664-9b7e-4c12-956f-a307d39cee98" class="">Le tre fasi di pessimismo</h1><h2 id="6170d2c1-0589-49c5-a12a-a6ad4257f2a7" class="">Pessimismo storico</h2><p id="a84313c9-390e-4fa8-92fe-df151ed9373a" class="">Uomini felici soltanto nell&#x27;età primitiva → stretto contatto con la natura.
+Ricerca del vero attraversi la ragione = scoperte catastrofiche: vanità delle illusioni, che la natura (madre benigna e pia) aveva ispirato agli uomini, scoprirono le leggi meccaniche che regolano la vita dell&#x27;universo, il male, il dolore, l&#x27;infelicità e l&#x27;angoscia esistenziale.</p><p id="beec2af2-e11f-4386-b171-62ee2f79c506" class="">La storia degli uomini è decadenza: stato di inconscia felicità → stato di consapevole dolore.
+Si ripete nella vita di ogni individuo: età infanzia e giovinezza → età della ragione.</p><p id="ac1034fa-861e-40de-9055-cf4572896f12" class="">Compito della poesia &amp; arte = ricreare illusione di felicità.</p><h2 id="0f87d565-d2ba-4a0f-8474-e36f60d245e6" class="">Pessimismo individuale</h2><p id="7a4f5b90-8025-4473-acdc-e3fd00b45fb2" class="">Seri problemi di salute &amp; familiari = lui soggetto dell&#x27;infelicità.</p><h2 id="ba6c6290-addb-4448-a3fe-c02ca5a610b0" class="">Pessimismo cosmico</h2><p id="cdb97310-1c31-4e54-a7af-4d1114118cf8" class="">L&#x27;infelicità è connaturata alla stessa vita dell&#x27;uomo, destinato a soffrire per tutta la durata della sua esistenza.
+La natura (&quot;natura matrigna&quot;) → sola colpevole dei mali dell&#x27;uomo = meccanismo indifferente e crudele, fa nascere desiderio di piacere infinito senza dare mezzi per raggiungerlo.
+La felicità è una proiezione = visibile nel futuro, mai nel presente.</p><hr id="15d69cb9-dcd7-42dc-8bdb-63c0e4dd8800"/><h1 id="11485f78-bcaa-4351-974c-161d131ad74a" class="">Le opere</h1><h2 id="32d2954a-b040-4a4b-8513-751ffa26d555" class="">Lo <em>Zibaldone</em> (prosa / diario)</h2><p id="24b9a7c0-e6ed-44e1-ab59-aa3b00055b33" class=""><em>Zibaldone di pensieri</em> = raccolta di dimensioni monumentali, 4526 pagine manoscritte, <strong>pensieri</strong> relativi a questioni filologiche, erudite, linguistiche, letterarie, filosofiche + <strong>abbozzi</strong> poetici, pagine saggistiche, note psicologiche e autobiografiche.
+Diario intellettuale, temi principali:</p><ol type="1" id="4ccee065-a5ea-474f-92f2-9044dadeb835" class="numbered-list" start="1"><li>rapporto uomo - natura</li></ol><ol type="1" id="3307f2f8-4638-43aa-894d-7df93a3d0338" class="numbered-list" start="2"><li>riflessione sul piacere</li></ol><ol type="1" id="221173da-4537-4acc-a9d4-3afc92bad93f" class="numbered-list" start="3"><li>teoria della poesia</li></ol><h2 id="e204ced2-e708-48b1-bf7d-3b6b7064064f" class="">Le <em>Operette Morali </em>(prosa 1824 - 1832)</h2><p id="d53efcf4-a207-4fba-9a4f-e0c7f2cc923b" class="">Fase più matura del pensiero del poeta, prodotte nel periodo del silenzio poetico (non compose poesie).
+Raccoglie <strong>24 prose di breve dimensione</strong>, molto varie per stile e struttura.
+Mancanza di omogeneità legata alla varietà di stili ≠ coerenza nei contenuti → temi più cari dei quali offre un&#x27;immagine chiara tramite: linguaggio vivace e colloquiale + stile satirico, incisivo, ironico e lucido.</p><p id="d6e4cf38-a2d3-4397-b667-33c26031653a" class="">Il fulcro = l&#x27;<strong>infelicità umana ed il suo rapporto con la natura matrigna</strong>.
+Concetto di felicità come proiezione al passato o al futuro → irraggiungibile = mai presente. Totale assenza di felicità umana = condizione tutt&#x27;altro che centrale dell&#x27;uomo nell&#x27;Universo.</p><h2 id="8e61f460-6efb-4ba6-a070-dae65c0c51c5" class="">I <em>Canti </em>(poesia 1818 - morte)</h2><p id="58624305-a08d-4e34-9baf-4fa12d97b3de" class="">I <em>Canti</em> riuniscono testi pubblicati in precedenza in edizioni separate.
+Titolo <em>Canti</em> volutamente generico = poesia lirica in generale → espressione soggettiva in versi propria di tutti i popoli fin dalle origini, genere lirico = espressione libera dell&#x27;animo dell&#x27;uomo, capace di consolare attraverso la bellezza della parola.</p><p id="f637e5c1-cbb3-4b92-9fe2-fe819b98c2a4" class="">Prima pubblicazione (1831) a📍 Firenze → seconda edizione (1835) a📍 Napoli prima della sua morte → edizione definitiva (1845) a cura di Ranieri.</p><p id="61ddbc0e-aee1-43bb-9f82-24ab1eee3986" class="">Tre fasi di composizione dei <em>Canti</em>:</p><ol type="1" id="73456c54-bb26-4e65-bfef-581aa157c750" class="numbered-list" start="1"><li>1818-1822 → primi idilli e canzoni civili</li></ol><ol type="1" id="7eae1b4e-aa02-4cfc-bbc5-554d984a58dc" class="numbered-list" start="2"><li>1828-1830 → grandi canti pisano-recanatesi</li></ol><ol type="1" id="20353b4c-637d-4b80-9365-49d8a2965a89" class="numbered-list" start="3"><li>1831-1837 → nuova fase poetica, da <em>Ciclio di Aspasia</em> a componimenti impegnati come <em>La ginestra</em></li></ol><h3 id="bd9e29ff-692f-48bc-aba0-a62144842642" class="">Prima fase</h3><p id="858120d3-21a9-491d-b8f5-0364a4d55a49" class="">Ricerca incessante stile personale.
+Leopardi fedele alla <strong>tradizione classica &amp; tradizione italiana</strong> poichè utilizza la lingua petrarchesca.</p><p id="3faa6fb1-cdc0-46e9-b47c-d6d3624422bf" class="">Nelle <strong>canzoni civili</strong>: <strong>temi patriottici</strong>, deplora la decandenza dell&#x27;Italia e la diffusa viltà dei popoli + atteggiamento di ribellione energica ed eroica, invitando gli italiani a imitare le virtù degli articoli.</p><p id="46ee623a-060f-47ff-b5aa-f469e7d185b2" class="">Gli <strong>idilli</strong>: <strong>interiorità del poeta con espressività più moderna</strong>, più visibile la poetica del &quot;vago e dell&#x27;indefinito&quot; = utilizzo di parole che evochino concetti perlopiù sfumati e indeterminati.
+Mette in rapporto se stesso con elementi del paesaggio naturale + vita degli altri, scavando in profondità nella propria anima.
+Composti tra 1819-1821 con lingua più semplice &amp; sintassi meno elaborata.</p><h3 id="3be686af-32e5-4fe5-aa74-1c593784dbbc" class="">Seconda fase</h3><p id="143c5993-8f3b-4cb3-8506-5c3b94241ddd" class="">Maturato in Leopardi il <strong>pessimismo cosmico.
+</strong>Testi parlano dell&#x27;uomo in generale, non più solo di se stesso. 
+Maggiore riflessione filosofica con l&#x27;intento di distruggere tutte le illusioni.</p><p id="91f842f1-9d71-457b-b62c-85b8b73f6b54" class="">Nei canti pisano-recanatesi il risveglio del sentimento, sensibilità del cuore e desiderio di vita convive con il pessimismo cosmico del poeta. 
+Presentano un registro molto vario, vicini allo stile degli idilli. 
+<strong>A partire da </strong><strong><em>A Silvia</em></strong><strong> elabora la cosiddetta canzone libera =</strong>  teso mobile, variabile, endecasillabi e settenari si succedono liberamente in base alle esigenze della rappresentazione e senza vincoli di rima.</p><h3 id="d96513f3-70c6-4a89-a510-2cf32116cdaf" class="">Terza fase</h3><p id="321e8288-e9ef-4438-bfa2-f4178e2a9573" class=""><strong>Lessico innovativo</strong>, con <strong>sensibilità moderna</strong> ed una <strong>metrica rinnovata</strong>, inoltre vi è la ricerca di maggiore concentrazione espressiva.</p><p id="966af8b2-143f-41b8-bc47-94d88dfc5263" class="">Vicinanza morte = riflessione su di essa in 2 canzoni di argomento sepolcrale.
+Le poesie degli <em>Ultimi canti</em> caratterizzate da: <strong>ampia sintassi</strong>, articolata e complessa, soprattutto nella <em>Ginestra</em> + toni <strong>sarcastici</strong>, amari o pietosi. Il metro della <em>Ginestra</em> è la canzone libera.</p><hr id="587f0065-3440-4144-a16e-5cf20967635b"/><h1 id="e6686101-3d43-4fde-ac04-627842199459" class="">Analisi di alcune opere</h1><h2 id="5ee834e9-838f-4490-bab4-0a35d766c64b" class="">Il giardino sofferente (<em>Zibaldone</em>)</h2><blockquote id="bcff0308-91e5-4e5e-86b4-df30651a8331" class="">La prova che la sofferenza è legge universale di tutto ciò che esiste si può trovare in un giardino di primavera. Volgendo intorno lo sguardo non si può scorgere alcuna pianta che non subisca in qualche modo un patimento, pur restando in vita; il giardino assomiglia perciò a un ospedale, luogo assai più doloroso di un cimitero.</blockquote><p id="56e416a9-7809-443d-8448-9e50d08dfc45" class="">Tema principale = <strong>sofferenza universale</strong>, per dimostrarla utilizza le piante (a cui gli uomini non attribuiscono in genere alcuna capacità di sentire).
+Sostiene quindi una sensibilità del mondo vegetale.</p><p id="56117df2-3527-43ae-b93f-001d1d01d21b" class="">Dopo un&#x27;enunciazione teorica vi è una dimostrazione empirica della tesi, con un&#x27;<strong>attenzione minuziosa al particolare</strong>: di fronte all&#x27;apparente bellezza di un giardino la sfida è di non accontentarsi dell&#x27;impressione d&#x27;insieme, ma di concentrarsi sul dettaglio.
+Si sofferma sulla pena particolare di ciascuna pianta ed usa verbi che esprimono azioni violente. Si oppone al campo semantico della violenza e dell&#x27;offesa quello della delicatezza, della dolcezza e della sensibilità, caratteristiche di alcune piante.</p><p id="a79a48ab-6bf5-4dd0-aaef-da8f132b1d5a" class="">Leopardi sottolinea che <strong>nessuno degli agenti della sofferenza è veramente colpevole</strong>, perchè <strong>l&#x27;offesa</strong> che essi compiono <strong>è</strong> sempre <strong>involontaria</strong>, la <strong>sofferenza fa</strong> quindi <strong>parte del sistema della natura</strong> e la <strong>colpevole</strong> di conseguenza <strong>è la natura stessa</strong>.</p><h2 id="ef436ba2-c751-4b18-84c6-95b9c8a105ce" class="">Dialogo di un venditore di almanacchi e un passeggere (<em>Operette morali</em>)</h2><blockquote id="0cd84c4e-bf56-46dd-97cc-1fe90e36b4fc" class="">Un passante domanda a un venditore di almanacchi se l&#x27;anno nuovo sarà migliore dei precedenti e il venditore dichiara di sì. Quando il passante osserva che nessuno sarebbe disposto a rivivere nello stesso modo gli anni già vissuti, il venditore riconosce che non lo vorrebbe neanche lui. I due concordano infine che l&#x27;unica vita che può apparire migliore è quella futura, di cui non si sa ancora nulla.</blockquote><p id="3419b423-d896-4016-8232-e8ba33c9bc16" class="">Segue nel brano un rigoroso procedimento argomentativo, attraverso il ritmo serrato delle domande e delle risposte e i modi garbati del colloquio Leopardi dimostra che l&#x27;<strong>ottimismo generico non ha alcun fondamento ma sostiene anche il reciproco soccorso tra uomini</strong>.
+La sua intenzione è però quella di di <strong>dimostrare che la vita è permeata di infelicità</strong> e che l&#x27;<strong>unico piacere consiste nell&#x27;attesa del futuro</strong>.</p><p id="16359ba6-2e80-448b-8c2f-21c3cd114d35" class="">Il passante fa domande sempre più stringenti ed in alcuni casi retoriche per portare il venditore verso la conclusione desiderata, il <strong>passante</strong> rappresenta l&#x27;<strong>uomo pensatore</strong>, filosofo che ragiona a fondo sulle questioni mentre il <strong>venditore</strong> l&#x27;<strong>uomo comune</strong> parte della massa.</p><p id="79279050-7c99-4206-bd85-36374234f3d6" class="">Viene però dimostrato alla fine del brano l&#x27;<strong>importanza della speranza infondata</strong> che risulta essere la <strong>forza fondamental</strong>e necessaria ad ogni uomo <strong>per sopravvivere</strong>, questo è espressione dell&#x27;orientamento pietoso e solidale nei confronti degli uomini che caratterizza le ultime opere di Leopardi.</p><h2 id="c973f54b-face-4861-8f4f-460d49372e65" class="">A Silvia (<em>Canti</em>, canti pisani-recanatesi, 1828<em>)</em></h2><p id="535af3cc-fae1-4632-818d-b0ea4e54ea9f" class=""><strong>Fu il primo esempio nei </strong><strong><em>Canti </em></strong><strong> di canzone libera.</strong></p><p id="c0c77346-2af5-49cc-a024-041d4ffe0f26" class="">Il tema della fine ricorre nella poesia, rappresentato dalla fine della vita di una ragazza che muore prima di poter fare le esperienze importanti della sua vita.
+Vi è una disillusione che viene collocata sulla soglia tra l&#x27;adolescenza piena di sogni e la giovinezza vera e proprio, superata quella soglia il giovane scopre la verità della vita, che diventa un precipitare verso la morte.
+La poesia è quindi un&#x27;<strong>energica protesta contro quest&#x27;ingiustizia della natura ed un&#x27;aperta accusa ad essa</strong>.</p><p id="2fe07cde-a8db-4413-a3a1-e924aa5b35e8" class="">Vi è un <strong>affinità tra i destini dei due protagonisti del canto</strong>, sia Leopardi che Silvia erano in attesa di qualche inaspettata felicità e condividevano lo stesso malinconico destino. Le strofe alternano quindi i protagonisti ed alla fine della terza viene dichiarata l&#x27;ineffabilità ossia l&#x27;impossibilità di descrivere i sentimenti che provava il poeta all&#x27;ora.</p><p id="c160f538-be80-4548-85bd-1e59e97472a8" class="">Dalla quarta strofa iniziano una serie di esclamazioni cariche di rimpianto ed il racconto della disillusione che prosegue nella quinta strofa dedicata interamente a Silva paragonabile ad un deserto di negazioni per poi scivolare verso la fine con un innalzamento della lingua.</p><p id="d7ff846d-cf01-4f2c-8f1d-f65c3b85669d" class="">Si parla molto di <strong>speranza</strong> all&#x27;interno della poesia e molti &quot;tu&quot; sono riferiti ad essa, non a Silvia, vi è quindi una <strong>personificazione della speranza</strong>, che <strong>abbandona il poeta come lo fa Silvia</strong>.</p><p id="fb471926-4470-40e6-8d15-f9533217e903" class="">Le scelte lessicali evidenziano l&#x27;opposizione fondamentale tra le due parti del testo: le prime tre strofe sono descritte attraverso il campo semantico della bellezza, della calma e della lieta attesa mentre nella parte successiva si apre il baratro delle parole dell&#x27;infelicità e della morte. La rimembranza della dolcezza delle prime strofe però non offre conforto al poeta ma riapre invece ferite.</p><hr id="2fca3aa7-2825-4da4-9ca5-5757f84fd720"/><h1 id="2306d23f-c063-4000-abb8-b817730cc693" class="">Note</h1><ul id="0d93ae32-7e7c-4fc9-81a9-cbed9ca8f7e7" class="bulleted-list"><li style="list-style-type:disc"><strong>Erudito</strong>: Uomo dalle molte conoscenze in diversi ambiti</li></ul><ul id="4dcdee3c-53e6-42c1-a582-30ff1ded8996" class="bulleted-list"><li style="list-style-type:disc"><strong>Filologia</strong>: La disciplina relativa alla ricostruzione e alla corretta interpretazione dei documenti letterari di una determinata cultura.</li></ul><ul id="bc0e31d8-ece2-40ad-aa4e-9746d853ad01" class="bulleted-list"><li style="list-style-type:disc"><strong>Canzone libera</strong>: Forma di canzone in cui endecasillavi e settenari si distribuiscono senza uno schema prestabilito e senza una collocazione regolare delle rime. La forma della canzone libera, che verrà definita &quot;leopardiana&quot;, si istituisce con <em>A Silvia</em> e dominerà da questo momento in poi nella poesia di Leopardi.</li></ul></div></article></body></html>

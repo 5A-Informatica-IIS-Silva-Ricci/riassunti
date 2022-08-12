@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Capitolo 12 - La distensione</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ecf26518-1e1f-4a7d-b04c-aded2148170e" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📘</span></div><h1 class="page-title">Capitolo 12 - La distensione</h1></header><div class="page-body"><p id="c3bbdef7-b0e6-41a0-a672-753eea15f59a" class="">Il <strong>5 marzo 1953</strong> morì Stalin e ciò favorì una nuova fase: il cosiddetto <strong>disgelo.</strong></p><p id="bc93c83b-c1ff-48ff-8b18-90b7cfdeb268" class="">Al Cremlino si insediò <strong>Nikita Kruscev.</strong></p><p id="c707b2bd-04a7-4030-b1dc-6da46986738f" class="">Diventato segretario del Partito Comunista dell’Unione Sovietica, Kruscev dimostrò subito di voler chiudere l’epoca oscura dello stalinismo.</p><p id="01cee651-efb6-4bac-873b-d0c7e60e5a93" class="">Nel frattempo negli Stati Uniti era diventato presidente <strong>Eisenhower</strong>, il generale dello sbarco in Normandia.</p><p id="99060c98-0a4c-4e48-ab0f-7debe6b9ff10" class="">Eisenhower sostenne la necessità di irrigidire ancor di più la condotta americana nei confronti dell’Unione Sovietica, passando da una politica di contenimento del comunismo a una che mirava a farlo arretrare.</p><p id="14ae5f5d-c237-40b1-aa7e-4b6ffcad6a3a" class="">Ma di fatto l’amministrazione mostrò attenzione ai segnali di apertura che provenivano dall’Unione Sovietica.</p><p id="b191adf8-b686-44ba-9239-bcd4fa359851" class="">Queste posizioni resero possibile la <strong>Conferenza di Ginevra nel 1955..</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1fa851aa-9d27-468a-9c9b-ccf7683ca838"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Iniziò così la fase della <strong>distensione: </strong>il contrasto e la competizione tra USA e URSS restarono ma senza le tensioni e gli eccessi degli anni precedenti.</div></figure><hr id="a5136132-27b6-4a59-84c8-db29e39cae89"/><p id="939bbfd0-9e01-4bce-8500-16a3090d2b54" class="">Nel <strong>1956</strong> Kruscev denunciò i crimini di Stalin.</p><p id="16532dfd-873c-44ee-a2f9-21ec235a2fee" class="">Tra i comunisti occidentali, che consideravano Stalin un eroe, il disorientamento fu grande.</p><p id="7dd96d21-d136-4c7d-9d76-2754bec93e1c" class="">Nei <em>Paesi del blocco comunista</em>, invece si sviluppò la speranza di una vera svolta verso un regime meno oppressivo.</p><p id="d4d33350-c892-435b-a61c-dbf342cdbbb1" class="">In <strong>Ungheria</strong> si fece il tentativo più ambizioso: il capo del governo voleva concedere la libertà di stampa e portare l’Ungheria fuori dal Patto di Varsavia.</p><p id="bf0561fa-4dfc-439a-9098-aaa2bd3b6d12" class="">Ma l’Unione Sovietica fece intervenire l’Armata Rossa e soffocò nel sangue il tentativo riformatore (<strong>1956</strong>).</p><p id="9a7c572c-02f1-4a79-b5fb-4f4dba0727ba" class="">La repressione ungherese destò grande scalpore in Occidente. Alcuni comunisti presero le distanze dall’Unione Sovietica.</p><p id="d34a5817-e222-4bac-8914-1847159c4ae9" class="">La repressione aveva dimostrato anche che gli Stati comunisti dell’Europa orientale erano degli <strong>Stati satelliti:</strong> non contavano nulla perchè dipendevano completamente dalla volontà di Mosca.</p><p id="77317525-01aa-4398-b996-b574a855588e" class="">Altre brutali repressioni confermarono la totale sottomissione all’URSS degli Stati del blocco comunista.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4549459a-bcea-4dc3-97af-9b493ff44b2a"><div style="font-size:1.5em"><span class="icon">🪖</span></div><div style="width:100%">Il caso più grave si verificò in <strong>Cecoslovacchia: </strong>il partito comuinsta tentò di dar vita a un processo riformatore ma l’Unione Sovietica, preoccupata che questa iniziativa si estendesse a tutti gli altri Paesi del blocco sovietico, decise di intervenire.<p id="e8594d3a-e14f-4295-9ab9-cb4091e9e18f" class="">Nell’agosto del <strong>1968</strong> carri armati dell’Armata Rossa entrarono in Praga, ponendo fine alla “Primavera di Praga”.</p></div></figure><p id="604c5877-6d72-4d0e-a564-eb89b57e8ff2" class="">La giustificazione di questo intervento è passata alla storia come la teoria della <strong>sovranità limitata.</strong></p><p id="795c09e7-a5ff-46f1-829e-f2bdf1b44bf0" class="">
+</p><hr id="60e2f76b-c131-4754-8392-8de9d66edbbd"/><p id="ff040283-f3af-40a6-8167-ee120d45dc71" class="">I cambiamenti avvenuti in Unione Sovietica negli anni Cinquanta ebbero importanti ripercussioni anche nei rapporti con la Cina.</p><p id="e641a703-e871-402f-a5d3-350e0c8944de" class="">Dopo alcuni anni di collaborazione con la Cina del tutto allineata all’URSS, alla fine del decennio fra i due Stati emersero contrasti sulle questioni di <strong>politica internazionale</strong> ma anche riguardo alle scelte di <strong>politica interna</strong> dei rispettivi governi.</p><p id="34856670-1ce6-4e34-b5d5-77df63a9f535" class="">L’URSS intendeva assumere la <strong>guida esclusiva</strong> del mondo comunista, mentre la Cina intendeva contestare questo bipolarismo, mettendosi alla guida dei movimenti rivoluzionari del Terzo Mondo in vista di una più decisa lotta contro l’imperialismo capitalista.</p><p id="00ab70ad-6e30-4cb3-9a0d-4f5d753b6425" class="">Dopo la proclamazione della Repubblica popolare nel 1949, la Cina aveva iniziato un grande sforzo di industrializzazione, soprattutto nell’ambito dell’<strong>industria pesante, </strong>grazie anche all’aiuto di tecnici sovietici: i risultati furono soddisfacenti.</p><p id="e90508fe-4aba-4007-9330-a37644a03413" class="">Per rilanciare la produzione agricola, Mao Zedong e i vertici del partito lanciarono la campagna utpistica del “<strong>grande balzo in avanti</strong>”.</p><p id="e2cc6ada-9915-4eb8-bddd-e4b6639d4c35" class="">Le comuni popolari, che riunirono forzatamente le piccole cooperative, divennero l’unità di base amministrativa ed conomica della Cina: avrebbero dovuto diventare autosufficienti in tutti i settori e per questo la popolazione subì controlli sempre più rigidi e una propaganda martellante.</p><p id="a370c258-ea55-490a-b1ba-d7018bb2eeb2" class="">Un altro fronte di contrasto fu la scelta russa di non fornire assistenza alla Cina in ambito nucleare, per mantenere la supremazia in quel settore nel mondo comunista: la Cina riuscì a dotarsi comunque della <strong>bomba atomica</strong> nel 1964, ma i rapporti fra le due nazioni erano ormai incrinati.</p><p id="99c34663-cc8c-42d0-8f54-b278dd97542f" class="">Il fallimento del “grande balzo in avanti” diede forza ai settori più moderati del gruppo dirigente comunista.</p><p id="4d9865c5-e08f-4bef-bd7f-c4fc7032635e" class="">La reazione di Mao fu durissima e inedita nei regimi comunisti: grazie all’appoggio dell’esercito e del ministro della Difesa, vennero mobilitati i Cinesi più giovani in una ribellinoe contro i fautori della “via capitalistica”.</p><p id="6fb255a2-009c-457e-92b8-02bcb2546a26" class="">Questa mobilitazione culminò nella “<strong>rivoluzione culturale</strong>”: negli ambienti di laboro, nelle scuole, le giovani <strong>Guardie rosse</strong> contestavano e rovesciavano ogni autorità.</p><p id="5e3ebfc2-eb61-4aec-867f-50ebd0e25f9e" class="">La rivoluzione culturale avrebbe dovuto portare a un rovesciamento radicale nella cultura e nella mentalità del popolo cinese per una rapida realizzazione del comunismo, ma fu anche un vero e proprio <strong>Colpo di Stato.</strong></p><p id="971f6bd5-125f-4565-894a-2f98aa91f013" class="">In molte parti del mondo, e in particolare in Europa occidentale, la rivoluzione culturale divenne fonte di ispirazione per molti gruppi e movimenti giovanili: il loro riferimento era il<strong> “libretto rosso”</strong>, un’antologia di scritti di Mao Zedong.</p><p id="7c0ee865-cdde-4aef-ab4c-d68684d198a7" class="">La rivoluzione culturale aveva causato profonde fratture all’interno del movimento comunista cinese e portato l’economia nazionale sull’orlo del caos,</p><p id="d335f635-451e-4e12-9ebf-fc08a2b73016" class="">Le Guardie rosse furono allontanate dalle città e nel partito gli elementi più radicali furono posti ai margini, sostituiti da tecnici ed esperti.</p><p id="a3675463-a65f-4c40-bd48-a5c2c0d004b6" class="">Fu preziosa in questo momento l’opera di <strong>Zhou Enali</strong>, che segnò una sostanziale continuità durante un periodo di grandi cambiamenti.</p><p id="e55db9b9-c21a-456e-8438-dd520defa1a5" class="">A lui si deve anche una nuova linea in <strong>politica estera</strong>: per sfuggire all’isolamente in cui l’ostilità dell’URSS l’aveva lasciata, la Cine aprì clamorosamente agli Stati Uniti.</p><p id="f8306186-fd03-4b74-8000-384569d41c0b" class="">Nel 1972 la Cina comunista venne ammessa all’ONU.</p><p id="f01243d5-5470-4b9b-bebb-b61086802ed7" class="">Mao Zedong e Zhou Enali morirono entrambi nel 1976: la Cina comunista si avviava verso un <strong>radicale cambiamento.</strong></p><hr id="591b3b3a-94b0-4626-8622-4aedd8bdbe63"/><p id="bddedcac-c7e3-45da-afdb-4e465c213bb4" class="">Nel <strong>gennaio 1961</strong> divenne presidente degli Stati Uniti <strong>John Fitzgerald Kennedy</strong>.</p><p id="505bd764-e0e1-46fa-a900-909af086f9d5" class="">Ebbe subito grande popolarità per il suo stile personale e si impegnò in una battaglia per rinnvoare la società americana e per favorire la distensione internazionale.</p><p id="e4f78b32-7895-4864-abbf-cf32df54b7c9" class="">Dopo la conquista dell’Ovest compiuta nell’Ottocento ora bisognava oltrepassare una “nuova frontiera”, non più materiale, ma culturale e scientifica.</p><p id="fff64af4-2d2b-45d4-a71d-475826be095b" class="">Nel <strong>1961 </strong>Kennedy incontrò per la prima volta Kruscev: il problema da risolvere era quello di Berlino Ovest che i Sovietici avrebbero voluto trasformare in “città libera”, mentre per gli Americani faceva parte a tutti gli effetti della Germania federale.</p><p id="8b45a091-d634-4f2b-b87c-ed64290e11de" class="">La risposta sovietica non si fece attendere: due mesi dopo, venne costruito un <strong>muro</strong> che attraversava la città di Berlino così da dividere il settore orientale da quello occidentale.</p><p id="956b19d4-8027-42a8-a906-851662b07904" class="">Da allora il Muro di Berlino divenne il <strong>simbolo della guerra fredda.</strong></p><p id="1f1e0044-b189-4d81-9fdf-56ed5392b43a" class="">Intanto a Cuba una rivoluzione aveva portato al potere un governo di tendenze marxiste guidato da <strong>Fidel Castro</strong>; numerose pressione furono esercitate su Kennedy affinché fosse eliminato un pericolo comunista così vicino.</p><p id="754c00b4-3cb5-486b-bf8c-6ec4621a2cc4" class="">Il presidente diede il suo avallo a una spedizione di esuli cubani appoggiati dai servizi segreti americani; riuscirono a sbarcare sull’isola ma ebbero la peggio nello scontro con l’esercito cubano.</p><p id="65bc91c1-39f6-4730-93ca-43d2e8d5457a" class="">Questa sconfitta gravò pesantemente sulla popolarità di Kennedy.</p><p id="bcc6888d-e3b2-4e91-a51d-c2f78a1b3a81" class="">Invece Castro, sempre più osteggiato dagli USA, che bloccarono le importazioni di zucchero da Cuba, proseguì l’avvicinamento al blocco sovietico, il quale ne approfittò per impiantare <strong>basi missilistiche </strong>in grado di colpire qualunque parte degli Stati Uniti.</p><p id="0df13dbc-b8c3-42e9-b44e-dd1b95b090b6" class="">Kennedy ordinò un <strong>blocco navale</strong> dell’isola; l’Unione Sovietica fece marcia indietro e smantellò i missili da Cuba.</p><p id="9af81684-ae48-4010-8ebe-027f8c069e00" class="">Nel <strong>1963</strong> Kennedy firmò con kruscev un importante trattato che per la prima volta limitava gli esperimenti atomici.</p><p id="6a697e9f-b5de-4ab4-912c-7c8a34ace773" class="">In politica interna Kennedy si impegnò soprattutto per superare le gravi discriminazioni che ancora colpivano i neri.</p><p id="8cda51ff-9315-4509-b9d6-745dff0fc165" class="">Ma il 22 novembre <strong>1963</strong> fu assassinato in circostanze che non sono state ancora completamente chiarite.</p><p id="07c3eb17-a0c6-425f-bd1c-d043b60ea98b" class="">Un altro importante protagonista della distensione fu <strong>papa Giovanni XXIII</strong>.</p><p id="956ff824-c29b-4d17-87bc-f78a07476aaa" class="">Nel <strong>1963</strong> il papa pubblicò l’enciclica <em>Pacem in terris</em> con cui raccomandava al mondo e alle superpotenze la scelta della pace.</p><hr id="1ea85fed-69cd-44e1-be0e-19846531381c"/><p id="7fcc5fb4-e0c6-4838-9658-1bead24ecd7f" class="">La lotta per l’indipendenza del Vietnam aveva allontanato i Francesi dalla penisola indocinese.</p><p id="edaec3fa-4c6a-48d1-9eeb-446b97efb14c" class="">Si era conclusa nel 1954 con gli Accordi di Ginevra, che avevano diviso il Paese in due: la Repubblica comunista del <strong>nord</strong> e quella del <strong>Sud.</strong></p><p id="712cbf80-2910-47bb-af2d-9156c7e88006" class="">Contro il governo del Sud, la protesta si organizzò in un movimento cmounista di guerriglia, chiamato <strong>Vietcong</strong>, appoggiato dal Vietnam del Nord.</p><p id="efcdf5bd-7b79-421a-b6bd-7f332cd3360d" class="">Per paura che l’intero paese divenisse comunista, gli Stati Uniti decisero di intervenire con un contingente di “consiglieri militari”.</p><p id="3fb16766-9a8d-4963-a70c-1117c5af591e" class="">Dal 1956 in poi gli Stati Uniti sfruttarono ogni pretesto per accrescere la loro presenza in Vietnam al fine di impedire al comunismo di espandersi in quell’area.</p><p id="bcf3d958-dbdc-40b8-bc2f-2fff4a2f7e33" class="">Nel <strong>1956</strong> il nuovo presidente, <strong>Johnson</strong>, decise di intervenire massicciamente, dando il via a una serie di bombardamenti su tutto il territorio del Vietnam del Nord, senza che vi fosse stata alcuna dichiarazione di guerra.</p><p id="76c4d239-135e-418a-b626-ad9f91531415" class="">Nel <strong>1968</strong> i Vietcong lanciarono nel Vientam del Sud una grande offensiva, questa, anche se non ottenne significativi risultati militari, fece comprendere agli Americani l’impossiblità di giungere a una rapida vittoria.</p><p id="625c878f-68e3-453a-88f1-f1b3465f00ba" class="">Nel marzo del 1968 Johnson ordinò la sospensione dei bombardamenti e annunciò contemporaneamente che non si sarebbe presentato alle elezioni di quell’anno.</p><p id="c8883219-aada-4b7e-bb0f-765caeef725f" class="">Il suo successore, <strong>Nixon</strong>, avviò le trattative di pace e ridusse l’impegno militare americano in Vietnam.</p><p id="5c598257-18f4-4bb2-baab-09633e17bfdf" class="">La guerra si concluse nel <strong>1973</strong> con un armistizio firmato a <strong>Parigi</strong> che prevedeva il graduale ritiro del contingente americano.</p><p id="2c103d8b-f1b6-4531-b8e8-156ee8957dac" class="">La riunificazione del paese avvenne il 30 aprile del <strong>1975.</strong></p><p id="cf01281b-f0e1-402e-8c7f-a471bfdabc31" class="">L’opinione pubblica americana manifestò progressivamente la propria ostilità alla guerra, anche a causa del crescente numero di morti e feriti.</p><p id="0f6415c6-04cb-4a1b-b512-9342ae1512c2" class="">La sconfitta americana portò come contraccolpo alla costituzione di regimi comunisti anche in Laos e in Cmabogia: in quest’ultimo andarono al potere i cosiddetti <strong>Khmer Rossi</strong>, un gruppo di guerriglieri comunisti.</p><p id="20f11b2e-d644-46d2-8827-c04f04dc8f30" class="">Dopo la fine della guerra il Vietnam si era legato strettamente all’Unione Sovietica.</p><p id="079ad66d-a38d-4d6d-9d1a-e71e82fe99ff" class="">I Khmer Rossi diedero il via a durissime misure di repressione: un vero e proprio sterminio.</p><hr id="b8c0a8a4-8d75-43d0-8056-11f531d4abdc"/><p id="f035d379-b52c-4c61-85a3-0e1b58a8959c" class="">Contrò la guerra del Vietnam polemizzò duramente il <strong>Sessantotto</strong>: il movimento internazionale che esplose nel 1968 con una serie di grandi agitazioni nelle università, nelle scuole secondarie, nelle fabbriche e nelle piazze.</p><p id="6794258e-70d4-42a7-8081-98b18ddc7ef4" class="">Ne furono protagonisti i <strong>giovani</strong>: uno scontro generazionale senza precedenti nella storia.</p><p id="1afb075c-3e04-446f-a783-b83971f412b6" class="">Per la prima volta dunque i giovani avevano una loro indipendenza economica e formavano una <strong>nuova categoria di consumatori</strong>.</p><p id="dfb6cb9f-6a1b-4639-92ba-2e267c3db28a" class="">Ai giovani statunitensi si affiancarono quelli europei nel manifestare un’<strong>insofferenza generale</strong> per il modno degli adulti ritenuto nevrotico e falso.</p><p id="b386eedd-334a-4a8c-83e7-661648dd89c2" class="">Si respirava un’atmosfera di rottura con il passato che si esprimeva anche visivamente: la moda propose la <strong>minigonna; </strong>i ragazzi incominciarono a farsi cresere i capelli e la barda, la “pillola” rivoluzionò i comportamenti sessuali.</p><p id="06a46e82-4b46-4bb2-82c0-3a744a51c5b0" class="">Fu allora che milioni di giovani scesero in piazza per “contestare il sistema” e sottoporre a critica radicale le istituzione e i fondamenti stessi della società in cui vivevano.</p><p id="a2b1155d-45d1-4831-8207-62a5a21373a0" class="">Tutti i grandi centri universitari europei vennero toccati, ma anche l’altra parte del mondo, quella comunista, venne attraversata in molti punti dalla volontà di cambiamento: la Primavera di Praga e la rivoluzione culturale cinese furono eventi che fecero sentire ai giovani un senso di solidarietà cosmopolita.</p><p id="d3ea6eec-43f0-4969-8b9b-07c97903a1ff" class="">Se in America la contestazione ebbe come obiettivi il modello di vita occidentale e la partecipazione degli Stati Uniti alla guerra del <strong>Vietnam</strong>, in Europa la presenza di forti partiti di sinistra spinse il movimento giovanile a sostenere le lotte sindacali.</p><hr id="39dfd5c7-f641-4d06-8d4f-5643c12989d6"/><p id="b1a7bc89-5fa9-443f-9c87-03585f4e9125" class="">Il confronto tra USA e URSS, pur senza mai sfociare in guerra aperta, si sviluppò prospettando comunque questa eventualità.</p><p id="d45d73a3-af44-4068-b054-1082ffe48091" class="">Fino a quando solo gli Stati Uniti erano in possesso di bombe atomiche, pareva non ci fossero da temere iniziative d’aggressione da parte sovietica.</p><p id="c146f1bc-7276-410c-a260-663186cb2718" class="">Ma questa riuscì ben presto a dotarsi di bombe atomiche.</p><p id="c3d83f00-ca2a-43ff-a55b-dca58d01ffb5" class="">La superiorità americana nel settore nucleare portò gli esperti della Difesa del Paese a elaborare la dottrina detta della “<strong>rappresaglia totale</strong>”: gli Stati Uniti avrebbero risposto con massicci attacchi atomici, in qualunque zona del blocco comunista, a ogni aggressione, manovrata dai Sovietici.</p><p id="408a9c64-869a-4288-98ef-c77a0d64f439" class="">L’Unione Sovietica lentamente riuscì a diminuire il distacco dal potenziale nucleare americano.</p><p id="e63618fb-4e15-4de1-a10a-9837d69b6654" class="">Una nuova strategia fu allora escogitata, la <strong>MAD: </strong>entrambe le parti dovevano mantenere una forza nuclerare sufficiente e invulnerabile per infliggere un danno inevitabile e insopportabile all’avversario che avrebbe dato il via a una guerra nucleare.</p><p id="42a8f74b-146b-4530-99f8-1b1579fad229" class="">Si instaurò così “<strong>l’equilibrio del terrore</strong>”.</p><p id="6c24d836-3073-4a4d-b8aa-96996f4984e2" class="">Gli Americani, pertanto, elaborarono una strategia alternativa: la “<strong>risposta flessibile</strong>”, secondo la quale ogni attacco sovietico si sarebbe scontrato con una risposta armata dello stesso livello.</p><p id="ccd8102e-c0ab-43d7-9b3a-5e11dec3882c" class="">La consapevolezza della “<strong>paralisi nucleare</strong>” indusse USA e URSS a impegnarsi, sia pure lentamente, in vista di una diminuzione o di una più remota scomparsa delle armi nucleari.</p><p id="07475d12-8614-40c9-b3df-b30f45997da7" class="">Nel <strong>1969</strong> Breznev e Nixon diedero il via a incontri che culminarono nei colloqui <strong>SALT</strong>, che avevano come obiettivo la <strong>limitazione</strong> reciproca delle testate nucleari.</p><p id="2bec9163-e3fa-401a-9ecb-430f5a88dbbd" class="">In questo contesto grande eco suscitò nel <strong>1975</strong> la <strong>conferenza di Helsinki</strong> sulla sicurezza e la cooperazione in Europa.</p><p id="af78cc14-a955-4363-9aff-ef2eb4fb4854" class="">Nella prima metà degli anni Ottanta il filo del dialogo sembrò interrompersi: sotto la presidenza del repubblicano <strong>Reagan, </strong>gli USA intrapresero un grande sforzo per potenziare il loro apparato difensivo progettando un sistema di difesa chiamato “<strong>scudo spaziale</strong>”.</p><p id="6ba6f9f9-e72c-450d-a2f0-1767d1cf927e" class="">Per qualche anno sembrò di essere tornati al clima degli anni Cinquanta.</p><p id="7b5361b9-df73-41b0-952d-011c48391f8b" class="">In seguito la svolta politica in URSS favorì il riavvicinamento tra le due superpotenze.</p><p id="88a7b4db-5555-4880-8211-b488b72e2ab9" class="">Dopo una serie di colloqui nel <strong>1986</strong> <strong>Reagan e Gorbacev</strong> firmarono un accordo che prevedeva il ritiro delle testate nucleari presenti in Europa.</p><p id="dd799900-2d86-4268-8740-fac591818238" class="">Nel <strong>1988</strong> Gorbacev annunciò di fronte all’ONU la riduzione delle truppe russe nell’Est Europeo.</p><p id="5183969e-b279-4fc0-b863-f308c62d094d" class="">L’anno dopo crollava il muro di Berlino (<strong>1989</strong>): il simbolo della Guerra Fredda.</p><p id="083c154a-7fd2-4441-979b-1fa0941dbaa0" class="">Nel <strong>1991</strong> cessava di esistere la stessa Unione Sovietica.</p><p id="602ffbf1-6b24-40d1-8a4a-cdfcbf531014" class="">Il mondo era entrato in una nuova epoca: quella del <strong>terzo dopoguerra.</strong></p></div></article></body></html>

@@ -1,0 +1,674 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Luigi Pirandello</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="fdc078a7-ac4b-446b-8eb8-9e19b4455df1" class="page serif"><header><div class="page-header-icon undefined"><span class="icon">🎭</span></div><h1 class="page-title">Luigi Pirandello</h1><table class="properties"><tbody><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data nascita</th><td>1867</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Anni vita</th><td>69</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data morte</th><td>1936</td></tr></tbody></table></header><div class="page-body"><h1 id="53b65127-5237-48b9-8a46-291ccca75f9a" class="">Biografia</h1><p id="2fb6aa00-1a68-41ba-b00b-9e6eff1ced05" class="">La nascita di Luigi Pirandello avviene in un luogo imprevisto e in un tempo inatteso: la madre si è infatti allontanata dalla casa per sfuggire al colera che devasta la Sicilia, e si è rifugiata in un podere di campagna, chiamato <strong>Caos; </strong>è l’ che Luigi Pirandello viene al mondo nel <strong>1867.</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a8d27835-faf6-4b06-82d9-853d8f5eddcc"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Pirandello afferma che la sua esistenza porta impressi sin dall’inizio i segni del caso: l’imprevedibilità degli eventi e l’assenza di un ordine comprensibile del mondo.</div></figure><p id="7664b21c-862c-4a8d-a947-d400c49bafc9" class="">Se nella madre Luigi trova confidenza e affetto, <strong>con il padre </strong>Stefano ha un <strong>rapporto difficile</strong>, segnato dall’incopmrensione e dalla reciproca diffidenza.</p><p id="17f278df-1ebb-460a-b36e-2a4d28a817e0" class="">Padre e figlio sembrano appartenere a mondi opposti: il primo è un abile commerciante di zolfo non disposto all’ascolto nè incline a interessi di tipo intellettuale; Luigi è invece riflessivo, misurato, inadatto ai lavori pesanti e alle attività pratiche.</p><blockquote id="d9356d31-9865-45f4-af7c-4d85bc607cc5" class="">Da bambino si appassiona alla letteratura, ma in casa non trova libri e fatica a procurarsi altri testi; pertanto ascolta rapito le fiabe e le leggende del folklore siciliano narrate dalla serva di casa, molte delle quali costituiranno le basi per le future novelle.</blockquote><p id="7b32c68c-5a8a-4a5a-bed1-981c926d8111" class="">Il padre gli impone studi tecnico - commerciali, perchè spera di inserirlo un giorno nell’attività di produzione e vendita dello zolfo.</p><p id="6423b28d-4fcb-42ef-80b2-e2a159a8fdf1" class="">Alla fine del secondo anno però Luigi escogita uno stratagemma per passare al Liceo: finge di essere stato rimandato e, con i soldi che il padre gli dava per le ripetizioni estive prende lezioni di latino in modo da sostenere gli esami del ginnaio.</p><p id="2d8717a9-0313-4761-8b4c-a0c1321e89b9" class="">Quando ormai Luigi frequenta da mesi la nuova scuola il padre scopre l’inganno e lascia che il figlio continui gli <strong>studi liceali a Palermo</strong>, dove la famiglia si è trasferita per motivi lavorativi.</p><p id="5ae9f6a7-32b8-4cf8-b7f8-c957ccbaa82c" class="">Dentro di sè va intanto maturando il proposito di diventare poeta.</p><p id="c4a625da-cab6-425b-9fcf-8012dd90b7ba" class="">La distanza con il padre si fa ancora più profonda quando Luigi scopre che Stefano Piranedlo tradisce la moglie con una cugina.</p><p id="d6ce8d5b-9e89-409b-a355-e0477b4b3c13" class="">Molti elementi di questa <strong>drammatica vicenda familiare</strong> saranno raccontati tempo dopo in una novella, <em><strong>Ritorno,</strong></em> che costituisce una sorta di “vendetta” del figlio nei confronti del tradimento paterno.</p><p id="3c55964a-3186-4fbb-832d-f24febc25e08" class="">A diciannove anni Luigi si innamora di una cugina, riesce a conquistarla ma la famiglia di lei acconsente al fidanzamento soltanto a patto che Luigi si associ al padre nel commercio dello zolfo.</p><p id="4ed8aaf3-6d7f-4cb4-8de1-5a23faec8d4a" class="">Il giovane Pirandello sperimenta un lavoro faticosissimo sotto il sole e ciò lo segna: gli conferma in modo definitivo la sua assolutà <strong>estranietà alle attività pratiche del mondo, </strong>lo motiva ulteriormente a volgersi alla scrittura.</p><blockquote id="b495f087-04e4-49a6-add9-b9a70c03a497" class="">Il padre spinge Luigi a iscriversi all’Università imponendogli la facoltà di <strong>Legge</strong>; obbedisce, ma parallelamente si iscrive anche a <strong>Lettere.</strong></blockquote><p id="1f98c1ae-b714-467e-ae06-2d5ecb5d3daa" class="">I sentimenti per la cugina vanno svanendo e perciò si trasferisce a <strong>Roma</strong>.</p><p id="320a0d6b-fddf-4951-95bc-7492e02630df" class="">All’Università La Sapienza di Roma, nel 1887, Pirandello non rinnova l’iscrizione a Legge ma si dedica soltanto a Lettere.</p><p id="1dc70b7d-c101-406d-a394-54d62e9a340c" class="">Successivamente si trasferirà all’<strong>Università di Bonn</strong>.</p><p id="b8c39bcc-192b-4dff-8613-dd0f04b60107" class="">Resterà in Germania un’anno e mezzo, lamentandosi con gli amici per la dipendenza economica dal padre.</p><p id="fd847323-308b-4e4b-a408-e4e8180b35d6" class="">Ormai libero da promesse matrimoniali, Pirandello si stabilisce a Roma, determinato a fare della scrittura la sua professione.</p><p id="b95dbd03-2cf0-4aa6-8178-412fd14196e2" class="">Non vuole insegnare perché gli pare una scelta riduttiva rispetto all’impegno letterario.</p><p id="5f01ab39-fb87-4f15-a68f-3936c6b51adf" class="">La situazione di precarietà economica finisce però con l’esasperazione di Pirandello che arriva così a combinare un <strong>matrimonio di surfaro</strong> per interessi economici.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="c673f978-e2b2-4d8b-bd7d-dd6c03a3c038"><div style="font-size:1.5em"><span class="icon">💍</span></div><div style="width:100%">Luigi Pirandello sposa dunque nel 1894 <strong>Antonietta Portolano</strong>, figlia di un uomo in rapporti di amicizia e affari con il padre.</div></figure><p id="45c7b98d-3644-476d-822d-6e59c50b6331" class="">Nello stesso anno esce la prima raccolta di novelle di Pirandello, <em>Amori senza amore.</em></p><p id="3c74e2be-d788-485b-8c2b-6d35ae1669b3" class="">Durante il fidanzamento Pirandello aveva sperato di fare di Antonietta una compagna nel suo percorso artistico, ben presto però appare chiaro che Antonietta, donna graziosa e buona padrona di casa, è ingenua e incolta, non in grado di seguire Pirandello nella sua tortuosa ricerca letteraria.</p><p id="22a87302-2b19-4e63-965b-bb18414608bd" class="">Nel giro di pochi anni nascono tre figli.</p><p id="f88867d2-57d9-4d3a-b5ea-caa12eb7c06e" class="">Antonietta comincia a manifestare i primi segni di <strong>fragilità psichica</strong> che vengono però attribuiti alla debilitazione del fisico per i frequenti parti.</p><p id="cbcbb34c-7383-414a-89f6-0844dedbd863" class="">Le necessità economiche si moltiplicano: le rendite della dote non sono sufficienti e Pirandello deve dedicarsi all’<strong>insegnamento</strong>, ottenendo una cattedra all’<strong>Istituto superiore di Magistero di Roma.</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="63306380-95d0-44f0-a8b5-f568731678db"><div style="font-size:1.5em"><span class="icon">📉</span></div><div style="width:100%">Stefano Pirandello aveva investito molto denaro, tra cui l’intera dote della nuora, nella gestione di una <strong>miniera di zolfo.</strong><p id="a8c89b08-f233-4af2-b3b0-f56e0690e8e7" class="">Nel 1903 si allaga e il danno è irreparabile, la perdita economica è immensa.</p></div></figure><p id="92e34d25-f224-4196-b070-344ee7905a26" class="">Quando Antonietta apprende la notizia viene colta da una <strong>paralisi</strong> e smarrisce il controllo di sé.</p><p id="47a76bde-7dcc-4a54-aaef-ae43390f6091" class="">Anche Pirandello è disperato per la notizia e arriva ad ipotizzare il suicidio.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="eddcd8cc-bf91-42b8-bdde-d6c5c21aa055"><div style="font-size:1.5em"><span class="icon">🔖</span></div><div style="width:100%">Per ottenere compensi, oltre a insegnare, inizia a dare <strong>lezioni private</strong> di italiano e di tedesco, si occupa di <strong>traduzioni, </strong>senza smettere di scrivere <strong>opere nuove</strong>: gli viene infatti richiesto un romanzo da pubblicare a puntate e nel giro di pochi mesi vede la luce <em><strong>Il fu Mattia Pascal.</strong></em></div></figure><p id="166ba343-c896-49f5-8dba-0dc41476c9d8" class="">E’ finalmente un successo.</p><p id="4ac98eef-742a-41f7-a1cd-dac45e071e15" class="">Le condizioni mentali della moglie peggiorano e la sua malattia si manifesta come gelosia ossessiva verso il marito.</p><p id="c2e09c7e-545b-4b5e-bcab-4b61a7511e75" class="">In una lettera del 1914 si sfoga e si giustifica verso l’amico Ugo Ojetti.</p><p id="66bfcad5-624d-43a8-b897-fcdb57ae7325" class="">Prosegue poi lamentando le <strong>difficoltà economiche.</strong></p><p id="4a9be5c9-94bb-45ad-967b-3600452fdd55" class="">Pirandello è ormai un autore riconosciuto e riesce a scrivere con ritmo ininterrotto, <strong>porta a termine moltissime opere,</strong> tra cui il saggio <em>L’umorismo</em>, i romanzi <em>Suo marito </em>e <em>I vecchi e i giovani </em>e numerose novelle.</p><p id="d20878aa-6ab7-4077-8ae3-47986b03c8bc" class="">Nel 1915 il primogenito, partito volontario per il fronte, viene ferito e catturato dagli austriaci. </p><p id="1770f5db-f2f5-425a-9823-a4ecc6586cf4" class="">Pirandello, che si era schierato tra gli interventisti nel primo conflitto mondiale, si mobilita per ottenere uno scambio di ostaggi ma il governo di Vienna, vista la notorietà dello scrittore, avanza pretese che il primo ministro italiano reputa inaccettabili.</p><p id="ed38e290-6ac6-406d-8185-85990eb949fb" class="">La figlia, <strong>Lietta,</strong> è invece costretta a trasferirsi da una parente perchè la madre la accusa di volerla avvelenare e la aggredisce.</p><p id="137adcc5-59ad-4ebb-ac9b-8e81372c61f0" class="">Il primogenito torna a casa nel 1919 e nello stesso anno convince il padre a far ricoverare Antonietta in una clinica psichiatrica.</p><p id="8151dc11-ad5c-4c3d-908c-62a3db4d949c" class="">Pirandello sembra voler dimostrare in tutti i modi il suo affetto verso i figli, con il risutlato però di <strong>intervenire </strong>spesso <strong>pesantemente nella loro vita.</strong></p><p id="7255a37b-e488-4bfd-9dcb-ab8a0a6d2e3e" class="">Alle difficoltà con i figli si accompagna tuttavia il recupero di un <strong>rapporto più tollerante </strong>con il proprio padre.</p><p id="70577d26-f93e-4417-b377-3b3b93c9c102" class="">A partire dal 1915 Pirandello si dedica prevalentemente alla stesura di opere teatrali.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="60969467-8a03-4d56-a5aa-aa78536ad36c"><div style="font-size:1.5em"><span class="icon">🎭</span></div><div style="width:100%">L’<strong>editore Treves</strong> procede nella pubblicazione in volumi di tutte le novelle apparse su rivista e raccoglie le opere teatrali in una serie di libri dal titolo <em><strong>Maschere nude.</strong></em></div></figure><p id="bc785a17-9d65-4f4d-a6de-8e20b3c3ade8" class="">
+</p><p id="f4f773e9-0038-4503-a4c8-67d182a5918a" class="">Con una lettera pubblicata sul quotidiano “L’Impero” nel 1924, Pirandello chiede pubblicamente a Mussolini la tessera del partito fascista.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="78570aac-d1c7-4780-ac8c-3d4a66f7a86b"><div style="font-size:1.5em"><span class="icon">🇮🇹</span></div><div style="width:100%">L’adesione al <strong>fascismo</strong> da parte di un intellettuale in vista come Pirandello pochi mesi dopo l’uccisione del deputato socialista Giacomo Matteotti a opera degli ssquadristi suscita un’ondata di polemiche.</div></figure><p id="18561902-4dfd-456d-b62b-19e6a3dec7d9" class="">Secondo i critici l’adesione al fascismo sono da ricercarsi in un genere di <strong>delusione:</strong> quella di chi, proveniente da una famiglia garibaldina a ntiborbonica, ha assistito al <strong>fallimento degli ideali risorgimentali.</strong></p><p id="043c9f6c-67bc-43e9-aaa0-86cc22a392f6" class="">Pirandello non rinnegherà mai aperatamente la sua scelta, ma nel tempo il suo atteggiamento diviene sempre più <strong>critico nei confronti del regime.</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0e780ce2-bd52-42e8-81a2-33d6313bc0cf"><div style="font-size:1.5em"><span class="icon">🏆</span></div><div style="width:100%">Nel <strong>1934 </strong>viene insignito del <strong>premio Nobel </strong>ma di fronte all’Accademia di Svezia non pronuncia il tradizionale discorso di ringraziamento; questa omissione è dettata dal fatto che, ormai contrario a Mussolini, non voleva trovarsi costretto a menzionare il governo italiano e il partito fascista</div></figure><p id="e373e803-19af-4f2a-a1dd-3731e44145fb" class="">Nel 1925 assume la direzione artistica del Teatro d’Arte di Roma.</p><p id="c1cca7a0-5918-451e-aaae-85686c85f81f" class="">Pirandello interviene tenendo vere e proprie lezioni nelle quali impone agli attori di trasformarsi nei personaggi: se i personaggi sono come “statue” create dall’autore, l’attore deve limitarsi a metterle in movimento, senza alterarle con la propria soggettività.</p><p id="a7ba7546-bfb7-4bc9-b4f1-9fdaba0bfcfb" class="">Pirandello apprezza particolarmente una giovane attrice, <strong>Marta Abba.</strong></p><p id="ff1fcc1a-8c12-4871-a485-9f0ccdaaf651" class="">Tra i due nasce un legame profondo e intenso e la donna diventerà per lui compagna, ispiratrice e interprete prediletta.</p><p id="111e31c0-71dc-48df-9b36-05b8fe514d16" class="">Il Teatro d’Arte chiude però nel 1928 per mancanza di fondi.</p><p id="0f7c3c13-30ed-493e-84ae-50e9c0fdef8f" class="">Tra il 1928 e il 1934 compone una serie di testi dedicati al <strong>mito</strong>.</p><p id="8642ac30-52ff-4616-9eac-f93728901f62" class="">L’ultimo, <em>I giganti della montagna</em>, sarà portato a termine dal figlio sulla base di indicazioni e appunti ricevuti dal padre.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="aaf80c86-1c2c-41a2-9185-01efcb82bb2a"><div style="font-size:1.5em"><span class="icon">☠️</span></div><div style="width:100%">Nel dicembre del <strong>1936</strong> si ammala di polmonite e muore a 69 anni nella sua casa romana, mentre terminano le riprese per la versione cinematografica del <em>Fu Mattia Pascal.</em></div></figure><p id="961ada47-2946-48b9-8121-f7591a95bd32" class="">
+</p><hr id="d43a02ba-1ea6-48af-b420-a67e955cf51a"/><h2 id="dcc9cd52-8eaf-43d0-b6b0-e54bccc4e7ad" class="">Il saggio su <em>L’umorismo </em>e la poetica di Pirandello</h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d8046bf1-738d-484a-b161-594d30c22d64"><div style="font-size:1.5em"><span class="icon">✍️</span></div><div style="width:100%">Pirandello scrive nel 1908 un saggio in cui espone le sue considerazioni sull’argomento “Umorismo e Comicità”.<p id="f3566362-126a-4f98-9e81-b17a20d750ad" class="">Il testo, intitolato <em>L’umorismo, </em>è dedicato al protagonista del romanzo che nel 1904 aveva finalmente attirato su Pirandello l’interesse della critica e del pubblico.</p></div></figure><p id="7926eb9a-d9f3-4187-9335-8ed4baea0cbc" class="">L’opera è strutturata in due parti: <div class="indented"><p id="5e4af085-9bc9-4aa3-a1c2-ae78229bdb8d" class="">Nella prima lo scrittore analizza il <strong>significato del termine</strong> “umorismo” nelle varie lingue europee.</p><p id="7d14ace1-fd9b-45ef-abaa-3940e390b813" class="">Nella seconda definisce le <strong>caratteristiche proprie dell’umorismo</strong>, con abbondanza di riferimento filosofici e letterari, ma servendosi anche di esempi concreti per illustrare il suo pensiero.</p></div></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="dd23d345-1703-47be-b19c-0db081c46b40"><div style="font-size:1.5em"><span class="icon">💭</span></div><div style="width:100%">Per Pirandello nell’arte umoristica la <strong>riflessione</strong> assume un ruolo determinante e attivo nel processo creativo, perchè <strong>analizza e scompone la realtà</strong>, la presenta al lettore in un modo nuovo, suscitando in lui una particolare reazione che lo scrittore chiama “<strong>sentimento del contrario</strong>”.</div></figure><p id="15612867-3229-4cf2-9b07-6e37e965a595" class="">Secondo Pirandello, comico è ciò che suscita il riso immediato: quando un personaggio o una situazione sono il contrario di ciò che ci aspetteremmo, non possiao che metterci a ridere.</p><blockquote id="1421a958-caad-4828-b2b9-d193d3702635" class="">Vecchia signora “imbellettata”</blockquote><p id="57daebc6-7400-44f8-9df7-7409208a3059" class="">Se tuttavia subentra la riflessione, se qualche elemento del testo suggerisce che quella sproporzione è determinata da una causa serie, amara, e che quel comportamento apparentemente comico risulta drammatico e doloroso per chi lo sta vivendo, al riso si unisce un <strong>sentimento di pietà.</strong></p><p id="76fa8761-f113-4049-a7dc-5d979c88e6bf" class="">L’umorismo scaturisce dunque dall’unione tra percezione e riflessione .</p><p id="50fcbda6-7a1e-422b-ba2f-f242112e8cdd" class="">Altri personaggi che per Pirandello esemplificano la <strong>concezione umoristica dell’arte</strong> sono <strong>don Chisciotte</strong>, protagonista del romanzo di Miguel de Cervantes, e <strong>don Abbondio</strong>, nei <em>Promessi Sposi </em>di Alessandro Manzoni.</p><p id="83c68df6-fbfa-44c9-99fe-7adbc326712d" class="">Davanti a tali personaggi il lettore prova uno <strong>stato d’animo di perplessità</strong>, poichè si sente come diviso tra sensazione opposte: vorrebbe ridere, e lo fa, ma il riso “è turbato”.</p><p id="354f6e10-8330-473e-87ca-b9dd7780e8e8" class="">Pirandello poi introduce i concetti di “vita” e “forma”.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5fa3d5d4-320a-4e5a-b76b-10b954086970"><div style="font-size:1.5em"><span class="icon">💭</span></div><div style="width:100%">La “<strong>vita</strong>” è il <strong>perpetuo divenire</strong>, inafferrabile e irriducibile; la “<strong>forma</strong>” è invece la <strong>struttura esteriore</strong>, il proprio ruolo nel mondo.</div></figure><p id="cfab8a14-229f-45dd-8cb7-7da7a9071fce" class="">Gli uomini sono convinti di avere un’identità stabile, riconoscibile dagli altri, univoca.</p><p id="60379316-0918-4945-ac31-32a574d13c69" class="">In realtà la loro è una forma vuota, una <strong>maschera</strong> che indossano consapevolmente o incosapevolmente, che ciascuno attribuisce a sè e dagli altri riceve.</p><p id="ba5fc7c1-35c6-4f91-aaba-cd326f3db582" class="">L’uomo per Pirandello è dunque un insieme di contraddizioni, di elementi contrastanti e incoerenti.</p><p id="d5c35386-aab3-4a9e-8e9b-fa83b330d525" class="">Caratteristica specifica dell’umorismo è proprio la “scomposizione”, ossia la <strong>tendenza a mostrare contemporaneamente più aspetti della realta</strong> e della natura di un personaggio.</p><p id="9f109d69-0c08-4cbe-bca0-f720e88b5b4f" class="">Nell’arte umoristica le cause delle azioni umane non sono mai facilmente individuabili e separabili le une dalle altre: la <strong>personalità</strong> non è qualcosa di definito, stabile, coerente, ma un <strong>magma fluido</strong> inafferrabile, che agisce sulla base di istinti e tensioni contrastanti.</p><p id="8250b211-e7e7-401b-be13-efb2a38a7672" class="">Per Pirandello l’umorismo non è soltanto oggetto di riflessione saggistica ma diviene elemento fondamentale della poetica.</p><p id="3588bc74-d471-4482-98b0-c05c8b0e7e8e" class="">In tutte le sue opere si assiste infatti alla commistione inscindibile tra elementi comici e riflessione tragica: dietro ogni fatto drammatico è in agguato l’<strong>ombra del ridicolo, </strong>così come in situazioni divertenti traspare un lato serio.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="20884cd6-4680-406f-a6f5-bf128518345c"><div style="font-size:1.5em"><span class="icon">💭</span></div><div style="width:100%">La <strong>realtà</strong> non è mai presentata come un tutto organico ma apparte <strong>frammentata, </strong>contradittoria, inafferrabile; secondo lo scrittore umorista non è infatti possibile arrivare a una conoscenza oggettiva e univoca del mondo e dell’uomo poichè ogni conoscenza dipende dalla percezione del soggetto. Tale approccio è definito dai critici “<strong>relativismo conoscitivo</strong>”</div></figure><p id="f536749b-ebba-4a9a-b66a-3daa7e07dfcf" class="">L’uomo tuttavia cerca un modo per vivere con gli altri: come abbiamo visto, ciascuno indossa inconsapevolmente una “<strong>maschera</strong>”, si costruisce una “forma” che lo renda riconoscibile a chi gli sta intorno e in tal modo si illude di vivere in modo autentico e di essere libero.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="33f6177a-2084-436c-8660-7c7b824a1e4b"><div style="font-size:1.5em"><span class="icon">🎭</span></div><div style="width:100%">La sensazione che l’uomo prova quando scopre di indossare una maschera che non coincide con la vita autentica è di vertigine, come di chi si trovi improvvisamente sospeso sul vuoto: <strong>tutto</strong> ciò che fino a quel momento appariva ordinato, razionale, si rivela improvvisamente <strong>fittizzio, casuale, insensato</strong>.</div></figure><p id="bee15c34-f9af-46c7-9637-3df7e716c05d" class="">La prima reazione è il tentativo di cancellare questa scoperta, fare finta di nulla e riprendere la vita come prima.</p><p id="f31fe9a7-b872-4937-95bb-5f10968ea5ad" class="">Un’altra frequente reazione nei personaggi pirandelliani è quella di <strong>fuggire dalla forma </strong>stessa: ad esempio Mattia Pascal, ben presto però egli scopre che anche la sua <strong>nuova identità</strong> non è che un<strong>’altra maschera.</strong></p><p id="2039c5d8-b0b8-45b3-86d7-39a82c575a29" class="">Vi sono poi alcuni personaggi che cercano un compromesso: nell’impossibilità di rifiutare del tutto la forma, tentano di ritagliarsi piccoli <strong>momenti di libertà</strong> attraverso l’immaginazione, per poi riprendere il proprio ruolo ordinario.</p><p id="d5640a37-d38d-45fa-b7ba-fae8da81fd5e" class="">Un’altra soluzione parziale è quella di permettersi <strong>azioni bizzarre e incoerenti</strong>, purchè all’insaputa di tutti: se infatti gli altri vedessero il personaggio agire in quel modo lo riterrebbero pazzo; dunque, se egli non vuole compromettere la sua relazione con il mondo, è obbligato ad <strong>agire in segreto.</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1b918e48-f970-453c-8b85-a52c8a04f99a"><div style="font-size:1.5em"><span class="icon">💭</span></div><div style="width:100%">Il pessimismo di Pirandello nei confronti dell’uomo sconfina talvolta con il <strong>nichilismo.</strong><p id="610185f9-4f94-4ef2-aa73-78b8119b1d1b" class="">Tuttavia il suo modo di avvicinarsi al mondo non è cinico ma umoristico.</p></div></figure><p id="58c11ea9-fabb-4394-8b82-91c990ee9a52" class="">Pirandello non cessa di <strong>soffrire con i suoi personaggi</strong> e di provare <strong>compassione</strong> per la loro pena di vivere, nella quale si specchia l’assurdità della condizione umana.</p><p id="d1dcfae5-8f27-43c9-bb81-8a0d76addae4" class="">Lo scrittore umorista infatti non si considera superiore ai personaggi e ai lettori, a differenza del poeta decadente.</p><hr id="02f14733-eb8e-4ee7-bf3a-7d2c41cfd829"/><h1 id="abdf7b98-aca4-44a6-8429-98c3056c9ec0" class="">Il fu Mattia Pascal</h1><p id="47d8df51-ab7e-45f3-887b-aaddaa88343d" class="">Uscito a puntate nel 1904 il <em>fu Mattia Pascal</em> è raccolto in volume nello stesso anno e ripubblicato altre tre volte.</p><p id="72b6606f-e987-43f2-8bdb-f32b31ba7da7" class="">Il romanzo inoltre viene tradotto quasi subito in svariate lingue e viene conosciuto in tutta Europa.</p><p id="44173d94-fef4-4923-89a4-e6cb7bbf9583" class="">A tale successo di pubblico non corrisponde però un’accoglienza iniziale altrettanto calorosa da parte della critica: molti intellettuali dell’epoca vedono nell’opera soltanto un prodotto di facile intrattenimento e, Benedetto Croce, esprime un <strong>giudizio negativo</strong> su Pirandello, determinando così una generale diffidenza nei confronti del suo romanzo.</p><p id="2410821d-192a-4650-87fc-1af017f3dcdb" class="">Ma è negli anni Sessanta che avviene una vera e propria rivalutazione da parte della critica, con la collocazione del <em>Fu Mattia Pascal </em>in quella “rivoluzione” europea di primo Novecento che interessa la forma stessa del romanzo.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="7086a888-838e-4073-8b58-33911053a690"><div style="font-size:1.5em"><span class="icon">💭</span></div><div style="width:100%">In questo libro infatti Pirandello introduce una serie di <strong>novità </strong>che riguardano la <strong>struttura narrativa</strong>, la definizione del protagonista, i temi affrontati e <strong>sperimenta le idee fondamentali</strong> della sua poetica, che saranno poi esposte in forma teorica nel saggio <em>L’umorismo.</em></div></figure><p id="1b5ce630-27ae-4db2-b3d5-e0de3cc9ee8d" class="">La vicenda è narrata in prima persona da Mattia Pascal, nella forma di un lungo <em>flashback</em>, ed è composta di <strong>diciotto capitoli</strong>, che possono essere suddivisi in quattro parti:<div class="indented"><ul id="c0b95414-826c-4562-9b81-5423b9f4a50b" class="bulleted-list"><li style="list-style-type:disc"><strong>prima parte, </strong>che potremo definire “<strong>cornice</strong>”, protagonista è “il fu” Mattia Pascal, che si accinge a narrare la propria vicenda.</li></ul><ul id="f0caebfb-de79-4158-98d4-0d2061adcf71" class="bulleted-list"><li style="list-style-type:disc"><strong>seconda parte</strong> che chiameremo “<strong>antefatto</strong>”, copre circa tre anni di tempo, dall’inizio vero e proprio dell’azione sino alla decisione di non tornare più a casa.</li></ul><ul id="73fdcdfa-d652-4a7d-bba4-24edf69577b4" class="bulleted-list"><li style="list-style-type:disc"><strong>terza parte</strong>, che possiamo definire “il <strong>tentativo di una nuova vita</strong>”, il protagonista è Adriano Meis.</li></ul><ul id="1066dce9-9441-4716-8773-719cf0e5003c" class="bulleted-list"><li style="list-style-type:disc"><strong>quarta parte</strong>, che definiamo “<strong>ritorno impossibile e ripresa della cornice</strong>”, protagonista è “il fu” Mattia Pascal che tenta di rientrare nella sua precedente esistenza senza riuscirci.</li></ul></div></p><p id="9b8c570e-a89d-4642-8aef-02127d3019fb" class="">
+</p><p id="01862a38-bbd3-4e08-85aa-1abc6a2863df" class="">Il <em>fu Mattia Pascal </em>è un romanzo che usa molti elementi narrativi classici, ma li ripropone in modo completamente nuovo.</p><p id="6d761fa0-1e01-4c6c-a13c-faecbb107773" class="">Pirandello però non si limita a riutilizzare questi materiali narrativi, ma ne prende le distanze, accompagnandoli con una continua riflessione.</p><p id="26b9e150-69e3-4c13-9ceb-c4379962f1e8" class="">Alcune tra le novità pirandelliane sono:<div class="indented"><ul id="acee1050-5942-44ab-b3bc-f1edb0c89dbe" class="bulleted-list"><li style="list-style-type:disc">la <strong>vicenda</strong> scelta è estremamente <strong>insolita</strong>, tanto che venne accusata di inverosimiglianza.</li></ul><ul id="a23a0717-c742-478c-ad42-ab066748d295" class="bulleted-list"><li style="list-style-type:disc">il <strong>protagonista</strong> non è un eroe in senso classico ma un <strong>antieroe</strong>, un inetto che tenta di trasgredire ma non ha mai il coraggio di ribellarsi veramente a ciò che gli appare ingiusto o detestabile.</li></ul><ul id="f35c6545-e850-4541-95d0-68b9c553bb5d" class="bulleted-list"><li style="list-style-type:disc">è presente una <strong>focalizzazione sull’io narrato</strong>: i fatti, sebbene siano già accaduti, sono raccontati dal punto di vista del personaggio che li sta vivendo.</li></ul><ul id="b745b950-9c5b-45f1-aadc-f306cf2f5f24" class="bulleted-list"><li style="list-style-type:disc">il <strong>narratore-personaggio</strong> riflette costantemente ma è <strong>inattendibile: </strong>mente a se stesso, adducendo per i propri atti troppe motivazioni, spesso contradittori, eccessivamente dettagliate oppure vaghe e imprecise.</li></ul><ul id="97becfa4-dbe6-43df-8978-4be851ec2e56" class="bulleted-list"><li style="list-style-type:disc">le <strong>parole</strong> non sono scelte per il loro valore evocativo e musicale, per la loro natura rara e preziosa, come nela narrativa dannunziana, ma sono <strong>concrete e adeguate al carattere del personaggio.</strong></li></ul><p id="9e6c2528-572b-4af7-9a5c-9efa48ec2806" class="">
+</p></div></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9930d82d-44a1-4a50-b128-f4dd9ed578e8"><div style="font-size:1.5em"><span class="icon">🏡</span></div><div style="width:100%">L’ambiente, nell’orizzonte di Mattia Pascal, non offre nessuna consolazione alla solitudine dell’uomo.<p id="2470fbd6-e9c3-42db-8a59-3ffb19fb25b9" class="">Il paese natale ligure ma con caratteristiche siciliane non è inifatti un “<strong>nido</strong>” accogliente e familiare.</p></div></figure><p id="451dc7fa-f238-4f10-a7bb-2cd6eb4be794" class="">Nel romanzo compaiono alcuni temi ricorrenti nella produzione pirandelliana, tra i quali spiccano il problema dell’identità individuale, la famiglia come trappola, il relativismo filosofico.</p><p id="55d130ad-eecf-41fd-9541-74fb13dbe7c3" class="">La vicenda di Mattia Pascal lo porta a scoprire che l’<strong>identità</strong> non è oggettiva e stabile, ma condizionata da mille elementi e dunque <strong>inafferrabile e inconsistente.</strong></p><p id="9ec09f8e-f9dc-484c-8b1e-303aff796042" class="">Al suo ritorno il protagonista comprende che, una volta spezzata la convenzione sociale, <strong>nulla è più come prima.</strong></p><p id="666b94a5-fee3-482e-bc70-549a3bdbea5e" class="">Il <strong>senso di soffocamento e costrizione</strong> si incarna nella vicenda di Mattia Pascal come mostrano i litigi con la insopportabile suocera.</p><p id="db318173-a367-4e8c-93f2-754295892ba4" class="">Al tempo stesso, però, le <strong>istituzioni sociali </strong>mantengono per il protagonista un’irresistibile <strong>forza di attrazione: </strong>Adriano Meis infatti si duole di non poter sposare Adriana, Mattia Pascal alla fine è combattuto tra la volontà di rientrare a casa propria e quella di liberarsi per sempre dal giogo della suocera e dalle vecchie responsabilità.</p><p id="f5ec9d08-4fbf-487f-bab0-70189c71b208" class="">A differenza di quanto avviene nei romanzi più tradizionali, a chi legge non viene chiesto di identificarsi nel personaggio ma di osservarlo e di riflettere, con un atteggiamento umoristico.</p><p id="a26756a7-0650-45ea-b209-16ff6d09c70f" class="">Lo stile della narrazione adotta dunque alcuni espedienti utili a generare un effetto di straniamento per obbligare il lettore a mantenere una distanza critica.</p><p id="da4bfa26-2e3b-4937-80c0-484e41de152a" class="">A ciò contribuiscono scelte lessicali inattese, parole che ostacolano la fluidità del racconto  perchè sono inconsuete, quasi dei veri e propri neologismi; anche le descrizioni inducono il lettore a osservare con distacco i <strong>personaggi</strong> quando questi risultano <strong>eccessivi e caricaturali.</strong></p><p id="b7a9bd04-e62b-40e1-9ed7-295c090b4ab6" class="">I procedimenti linguistici che spingono il lettore a riflettere e ad osservare dall’esterno le molteplici sfaccettature della realtà sono gli <strong>espedienti di tipo recitativo-teatrale: </strong>appelli al lettore, interiezioni, esclamazioni, domande retoriche.</p><h2 id="ef52a277-e841-44d5-b23a-d4697b6e4682" class="">Brani</h2><p id="210aaed7-6f03-4982-a8df-9d96b6810aac" class="">→ La conclusione, <mark class="highlight-red">pag. 190-192</mark></p><hr id="b383b744-1a06-4184-a5a7-873cf6291785"/><h1 id="4b59a86e-06b7-41da-ae19-198de661232f" class="">Uno, nessuno e centomila</h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="25682318-4391-4faa-98aa-b7a3a43b1fc7"><div style="font-size:1.5em"><span class="icon">🗓️</span></div><div style="width:100%">Il romanzo <em>Uno, nessuno e centomila</em> è frutto di una lunghissima elaborazione: Pirandello lo inizia nel 1909 e lo porterà a compimento soltanto quindi anni dopo, nel 1925.</div></figure><p id="3fcd8e2d-af03-4ff6-839a-52f42dc64e1d" class="">Nella produzione letteraria di Pirandello questo romanzo riveste un <strong>duplice ruolo</strong>: da un lato chiude la stagione dei romanzi, portando alle estreme conseguenze il percorso di critica al concetto di identità iniziato con il <em>Fu Mattia Pascal; </em>dall’altro riflette il passaggio a una nuova fase di poetica.</p><p id="1fe0b2f6-05e4-43df-beef-6bcdc3ab21ea" class="">In questa fase assume un ruolo centrale la <strong>natura, </strong>intesa quale energia istintiva e slancio vitale, come appunto suggerisce la conclusione di questo stesso romanzo.</p><p id="345b4d9a-7afc-4b1d-94e1-5bf8a419803a" class="">L’idea principale del romanzo è sintetizzata nel titolo: il protagonista, che si è sempre creduto “uno”, ossia dotato di una personalità fissa e coerente, scopre che gli altri lo vedono in modo diverso da come egli pensa; alla sua rappresentazione di sè non si contrappone però una sola immagine alternativa, ma “centomila” diverse.</p><p id="8ea99e47-8f16-4017-89b9-e8ceb7b11090" class="">Inoltre l’idea che il protagonista ha di sè non può imporsi come la più forte o veritiera: le atlre centomila appaiono tutte parimenti legittime, per quanto limitate e inconsistenti; egli si rende così conto di essere “nessuno” e sceglie coscientemente di <strong>rifiutare qualsiasi identità.</strong></p><p id="63395df3-30ca-4ce3-a6db-467535354bdb" class="">La definitiva scomparsa dell’io non è percepita dal protagonista come una morte bensì come una <strong>liberazione.</strong></p><hr id="4582b31d-6547-489a-a119-18e861d773c5"/><p id="086242bd-4730-483d-9c3d-3fa3a370be77" class="">Il romanzo è diviso in 8 libri.</p><p id="6bc6c9a0-50ee-4f54-9975-e74a97015f4c" class="">Alla <strong>distruzione dell’io</strong> corrisponde la dissoluzione della struttura logica del racconto: la trama procede per sbalzi, soste riflessive, ritorni all’indietro, in una sorta di diario eterogeno in cui l’atto di dire e riflettere diventa più importante dei fatti stessi.</p><p id="f4ca775a-493c-4b81-b350-bd57b13eab3a" class="">Il narratore parla in prima persona, in forma retrospettiva ma senza abbandonare la <strong>focalizzazione sul personaggio, </strong>come Mattia Pascal.</p><p id="0db64d8b-a226-4231-87dd-4bb556f28922" class="">La forma predominante è quelal del monologo interiore, a cui subentra spesso una sorta di dialogo con il lettore, che viene chiamaato in causa e incalzato attraverso allocuzioni.</p><hr id="214f8e37-e4c0-4e0d-a4d3-760b49c071d3"/><p id="3ca79358-4fee-4dce-bfd3-e252addeaf07" class="">In <em>Uno, nessuno e centomila</em> compaiono molti temi propriamente pirandelliani:<div class="indented"><ul id="4d2bea04-da30-460f-a283-ff9531aa72a5" class="bulleted-list"><li style="list-style-type:circle">il <strong>relativisimo assoluto</strong>: per Pirandello non esiste un’identità nè una verità univoca, in grado di imporsi su tutte le altre.</li></ul><ul id="a596d19a-11e4-4590-835e-31fa85f73198" class="bulleted-list"><li style="list-style-type:disc">l’<strong>incomunicabilità</strong> e la <strong>solitudine</strong>: poichè la percezione di sé e degli altri è sempre soggettiva, si crea il paradosso per cui gli uomini non parlano davvero tra loro, ma ciascuno si rivolge all’immagine che ha dell’altro.</li></ul><ul id="dcd4c811-8852-4ce5-8913-ae8bee2bf189" class="bulleted-list"><li style="list-style-type:disc">la <strong>follia</strong>: poiché Vitangelo parla e si comporta in modo inatteso, incoerente, inspiegabile, viene considerato pazzo.</li></ul></div></p><hr id="6859a87a-5616-478d-8c7f-47c8218ccbe8"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="fec10dd4-04ff-477e-a1d9-e92842de9967"><div style="font-size:1.5em"><span class="icon">🔖</span></div><div style="width:100%">Il romanzo potrebbe dunque essere letto come un esempio di autoanalisi, un modo per <strong>liberarsi dalle angosce della vita</strong>, proiettando sui personaggi la propria voglia di abbandonarsi all’irresponsabilità della follia.</div></figure><hr id="72ed9482-ef5c-445e-bb96-987c9c240e59"/><p id="73879ebe-cf05-4203-8120-32113c2542da" class="">
+</p><h2 id="897af585-1ef8-4c50-b068-af5371d83b19" class="">Brani</h2><p id="1aa4cc1f-98ad-40a1-8500-2eee92164cd9" class="">→ Il naso e la rinuncia al proprio nome, <mark class="highlight-red">pag. 205-208</mark></p><hr id="96ce774e-88d7-4c9d-9cd5-92f8297331a7"/><h1 id="b26f53d7-74b0-4548-98ba-14c974fd5c8e" class="">Riassunto</h1><figure id="c34b3992-3cfb-4ff4-80ae-c243ca016a7e" class="image"><a href="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20121.png"><img style="width:1905px" src="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20121.png"/></a></figure></div></article></body></html>

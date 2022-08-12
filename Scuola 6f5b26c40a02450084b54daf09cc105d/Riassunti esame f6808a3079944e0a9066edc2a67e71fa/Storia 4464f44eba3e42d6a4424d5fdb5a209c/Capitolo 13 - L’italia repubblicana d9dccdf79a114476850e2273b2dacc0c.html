@@ -1,0 +1,673 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Capitolo 13 - L’italia repubblicana</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="d9dccdf7-9a11-4476-850e-2273b2dacc0c" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📗</span></div><h1 class="page-title">Capitolo 13 - L’italia repubblicana</h1></header><div class="page-body"><p id="c6238f0a-04f9-42b0-87dc-78f76a650193" class=""><em>Ricostruire: </em>è il titolo che compare a caratteri cubitali sulle prime pagine dei giornali italiani all’indomani della fine della guerra.</p><p id="45c30c15-1bd3-4eb3-86ee-eea5b7c5cf3c" class="">Ora bisognava affrontare enormi sacrifici per la ricostruzione morale e materiale del Paese. Si trattava anzitutto di rifare ciò che era stato distrutto dalle vicende belliche.</p><p id="400197c2-06cf-4655-b1c4-432dc15e116c" class="">Ricostruire significava anche rimetter ein moto la vita economica e restituire alla popolazione un’esistenza dignitosa.</p><p id="19914b60-fa4e-443a-8af9-e6b9f4bf5316" class="">I primi governi dell’Italia liberata vararono specifici programmi che prevedevano interventi di soccorso alla popolazione e l’avvio di lavori pubblici.</p><p id="4c8bb7f9-f6c3-445a-8586-cbc56e468174" class="">Nel <strong>1946</strong> l’<strong>UNRRA </strong>(Amministrazione delle Nazioni Unite per il Soccorso e la Ricostruzione) s’impegnò a fornire all’Italia aiuti per combattere il pericolo della fame, oltre a materie prime e macchinari per la ripresa delle attività industriali.</p><p id="a3dbf198-0e92-44df-bf6a-f70609b60ae3" class="">Gli aiuti non furono comunque sufficienti a sanare la situazione e, negli anni seguenti, fu il <strong>piano Marshall</strong> a far confluire in Italia centinaia e centiaia di milioni di dollari.</p><p id="a9ad5b86-4d88-4b13-a399-9823ccbf4ba0" class="">Oltre che dagli aiuti americani un apporto tutt’altro che trascurabile alla ricostruzione venne dato dalle <strong>rimesse degli emigrati</strong>, ovvero il denaro che gli Italiano all’estero mandavano ai propri cari.</p><p id="1907633b-598c-4bdb-af4a-05576a13139b" class="">Fino al <strong>maggio 1947</strong> i governi italiani si ispirarono all’unità antifascista e compresero, oltre alla DC e alle forze minori di centro - sinistra, anche i socialisti e i comunisti.</p><p id="9e7cc22c-0520-4712-ba79-39c83fc69af5" class="">Solo su un punto le forze di governo erano unanimi: l’abbandono del modello autarchico fascista e la conseguente liberalizzazione degli scambi commerciali con l’estero.</p><p id="509dc6a3-f843-42ab-950a-6ebe938ba419" class="">Si affermò la linea politica economica di <strong>Luigi Einaudi</strong>.</p><p id="c83f2008-1fb8-4a46-9042-70b11eea8ce8" class="">Einaudi puntò tutte le sue carte sulla stabilità monetaria e sul contenimento dell’inflazione, anche a costo di sacrificare l’occupazione.</p><p id="7ff19cb0-2627-4295-b56d-73ccf33f9ff9" class="">Inoltre svalutò la lira in modo da favorire un forte aumento delle esportazioni.</p><p id="069f07d2-94bc-4e91-b4ce-81639179d972" class="">In questo momento Einaudi gettò le basi di quel “miracolo economico” che si sarebbe prodotto negli anni Cinquanta.</p><hr id="3e8d3733-d2bd-45e3-8365-3acd2759b122"/><p id="056e5d7d-d3c8-476f-9acf-a726cef11ff2" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5a6881e8-a039-4936-b891-761cb26b14e1"><div style="font-size:1.5em"><span class="icon">🇮🇹</span></div><div style="width:100%">Nel giugno del <strong>1945</strong> nacque il primo governo del dopoguerra, presieduto da <strong>Ferruccio Parri</strong>, uno dei capi della Resistenza.</div></figure><p id="6e547cfc-37d5-4538-9fb3-5b3133babcc4" class="">Sembrava un governo destinato ad avviare importanti riforme economiche e sociali sotto la spinta del movimento partigiano e invece cadde dopo soli cinque mesi.</p><p id="ef69cbed-8e55-4028-96ea-83654cafaa14" class="">Si stavano delineando <strong>due schieramenti opposti</strong>: da una parte la DC, i ceti medi, la borghesia, il mondo imprenditoriali e gli Stati Uniti; dall’altra il Partito comunista, la classe operaia, il proletariato, la CGIL, l’Unione Sovietica.</p><p id="f0619141-864e-407c-9ace-dba1167e25df" class="">La tensione era alta, c’era il timore che lo scontro sociale potesse trasformarsi in una guerra civile.</p><p id="78a0e6d2-1e5d-4d5c-a53a-b15bcafb8e44" class="">Nell’estate del 1945 l’Italia sembrava quindi sull’orlo di una guerra civile fra comunisti e anticomunisti.</p><p id="bea78ae9-d6e8-4713-84d1-7cf60f63ac32" class="">In realtà la tensione si stemperò rapidamente nei mesi successivi.</p><p id="5d993f26-8326-4aab-95af-bf0dd0cdfce2" class="">Lo stesso PCI, benchè strettamente legato all’URSS, non operò concretamente per la rivoluzione socialista.</p><p id="8b22b123-33ac-459e-9c24-622bed073458" class="">Anche il suo segretario, <strong>Palmiro Togliatti</strong>, temeva il rischio di una drammatica guerra civile.</p><p id="0b34f5bd-b1b1-474d-9889-f5130fc1a9ee" class="">Per questo motivo, sia Togliatti che Pietro Nenni, leader dei socialisti, richiedevano con forza le elezioni a breve termine per l’<strong>Assemblea Costituente</strong> che avrebbe dovuto disegnare la nuova forma dello Stato italiano.</p><p id="c7f56fda-c243-4528-ae19-68cec8c4e002" class="">Ma su questo punto ebbe la meglio il leader della DC, <strong>Alcide De Gasperi</strong>, che convinse le Sinistre a rimandare le elezioni alla primavera del 1946.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="113f8586-e7d8-412f-8770-6c62be198455"><div style="font-size:1.5em"><span class="icon">🇮🇹</span></div><div style="width:100%">Dopo la caduta del governo Parri, il <strong>10 dicembre 1945 De Gasperi</strong> divenne presidente del Consiglio.</div></figure><p id="96702485-587b-4b42-8128-cfaa633b77d7" class="">De Gasperi fu il primo esponente di un partito dei cattolici a guidare un esecutivo nella storia d’italia.</p><p id="ee58be34-6e7b-4760-be7d-bbe5606184d9" class="">Avrebbe governato sino al <strong>1953.</strong></p><p id="3028c604-cf44-498d-abab-5f72c7a0ffb1" class="">Il dibattito tra i partiti antifascisti fu molto aspro.</p><p id="20ecf059-db49-4aa5-926f-96f8644a3b96" class="">Lo scontro verteva in particolare sui poteri da conferire all’Assemblea Costituente: De Gasperi temeva che una Costituente “sovrana”, cioè con ampi poteri, avrebbe finito per assomiglaire alla Convenzione Nazionale della Rivoluzione Francese.</p><p id="7e6150eb-05c2-4156-b731-1bc201bf73e2" class="">Si oppose con tutte le sue forze e ottenne che la scelta istituzionale fosse affidata a un <strong>referendum</strong> popolare e che la costituente si limitasse a elaborare e approvare la nuova Costituzione.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ddda001a-4120-4e58-be31-5d546c991d05"><div style="font-size:1.5em"><span class="icon">🗳️</span></div><div style="width:100%">Il <strong>2 giugno 1946</strong> gli Italiani si recarono in massa alle urne per scegliere tra monarchia e repubblica e, contemporaneamente, eleggere i deputati della Costituente.</div></figure><p id="b29537a4-c5be-42e0-93a8-db32070eef6f" class="">Si trattò delle prime elezioni a <strong>suffragio universale</strong> della storia d’Italia.</p><p id="18106b5e-1a80-4d98-b9d7-47580cfcc2fe" class="">Nel referendum istituzionale prevalse, seppur di poco, la <strong>repubblica.</strong></p><p id="29f3ea05-6884-4ed1-a41e-2ecaaf5d3349" class="">La costituente designò come suo presidente il socialista <strong>Giuseppe Saragat.</strong></p><p id="e0b882e0-5e3b-4204-865c-c838f4d19310" class="">Come capo provvisorio dello Stato l’assemblea elesse <strong>Enrico de Nicola.</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1100e5fe-0a6e-4c9e-848e-f64492191ca6"><div style="font-size:1.5em"><span class="icon">🇮🇹</span></div><div style="width:100%">La Costituente nei diciotto mesi successivi si dedicò con fervore alla stesura della Costituzione della Repubblica Italiana, che venne approvata nel 1947 ed entrò in vigore <strong>1 gennaio 1948</strong></div></figure><p id="4ff822e5-2c18-448a-ba01-4fd1368579b4" class="">Gli <strong>organi dello Stato </strong>sono:<div class="indented"><ul id="27bb1ba0-f2b2-4f7f-9321-bd5dc43b4036" class="bulleted-list"><li style="list-style-type:disc">il <strong>Parlamento</strong>, che esercita il potere legislativo, si compone di due camere, dei deputati e il senato.</li></ul><ul id="94666fbb-dbcd-4cba-84d2-a6d6dcc6c94f" class="bulleted-list"><li style="list-style-type:disc">il <strong>Governo</strong>, formato dal presidente del Consiglio dei ministri, con il potere esecutivo</li></ul><ul id="ef1ee5fc-7815-499a-ac8c-802f68f94ef1" class="bulleted-list"><li style="list-style-type:disc">la <strong>Magistratura</strong> ha il potere giudiziario.</li></ul></div></p><p id="85626d5e-5aa1-4ab6-94e8-87c6aa54473d" class="">A capo dello stato c’è il <strong>presidente della Repubblica.</strong></p><p id="5f2f0fc9-0012-49c0-b8ff-64d736f2d2a6" class="">La <strong>forma di governo</strong> è dunque rappresentativa e parlamentare:<div class="indented"><ul id="57d488cd-0846-401f-bb78-e5e9593657ed" class="bulleted-list"><li style="list-style-type:disc"><em>rappresentativa</em><strong><em><em> </em></em></strong>perchè i cittadini non esercitano direttamente il potere decisionale ma delegano il compito ai propri rappresentanti</li></ul><ul id="e6d2869e-12f2-44af-a854-6106a09d82a1" class="bulleted-list"><li style="list-style-type:disc"><em>parlamentare</em> perchè il Governo risponde del suo operato alle Camere.</li></ul></div></p><p id="2ac0cea3-2d31-41c8-af6a-a6e570ed48bc" class="">Nel <strong>1955</strong> venne istituita la <strong>Corte Costituzionale</strong>, organo che soprattutto deve verificare se e leggi varate dai governi siano o meno <em>costituzionali.</em></p><p id="2ac55389-ed19-4aa9-be47-74bf76e39050" class="">Tra le questioni più delicate che il governo De Gasperi dovette affrontare nell’autunno del 1946 vi fu quella del <strong>trattato di pace</strong>.</p><p id="9cb4d4c6-c956-41f2-9ec2-c89611b21a57" class="">L’atteggiamento delle potenze vincitrici non fu tenero verso l’Italia, perchè questa era comunque considerata responsabile dei misfatti del fascismo.</p><p id="c5820f1b-3948-43bb-86ce-bd2829bf0eb9" class="">Il trattao di pace venne firmato nel <strong>1947</strong> e le condizioni per l’Italia furono molto dure.</p><p id="60d6b41a-2ca0-42cc-9891-8308fd381335" class="">Sempre nei primi mesi del 1947 De Gasperi si recò negli Stati Uniti e tornò con un prestito all’Italia  del valore di 100 milioni di dollari, ma con la certezza di aver consolidato l’amicizia con l’America.</p><p id="ee161e5a-3ebf-47fa-89fa-928411d650ba" class="">Quando il presidente Truman tenne al Congresso il famoso discorso nel quale espirmeva la preoccupazione per la crescente influenza sovietica sui Paesi dell’Europa orientale, divenne per tutti chiaro che la collaborazione tra DC e Sinistre era ormai impossibile.</p><p id="b41333e1-5a1a-4c9c-a70e-12d8d494350f" class="">Nel <strong>maggio 1947</strong> De Gasperi varò un nuovo governo del quale non facevano più parte le Sinistre. Iniziò così una nuova fase politica, detta del <strong>centrismo</strong> perchè caratterizzata da governi impreniati sulla DC con la partecipazione di partiti minori di centro.</p><p id="a5dc40a2-7332-4c76-a07b-b5aa9dda25d1" class="">Nel <strong>1949</strong> l’Italia entrò nella <strong>NATO</strong>, l’alleanza militare di cui facevano parte gli Stati Uniti.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="effe5e86-7666-40a3-a8c8-6a2ffeb91843"><div style="font-size:1.5em"><span class="icon">🇮🇹</span></div><div style="width:100%">In un clima di grande passione e di dura contrapposizione ideologica il <strong>18 aprile 1948</strong> si svolsero le elezioni politiche.<p id="239ccf04-9227-4faf-a134-57ea0c7776b2" class="">Le votazioni assegnaro alla <strong>DC</strong> una vittoria clamorosa.</p></div></figure><p id="992b4c0d-30a3-499f-a2aa-911c46f835ab" class="">La guerra tra antifascismo e fascismo era ormai del tutto conclusa, ma cedeva il passo alla “guerra di religione” tra comunismo e anticomunismo.</p><p id="2b387a9e-e788-4714-9d71-4f150aa12ef4" class="">La tensione di questi mesi trova conferma nell’<strong>attentato</strong> del <strong>14 luglio 1948: </strong>un fanatico, Antonio Pallante, sparò a Palmiro Togliatti mentre usciva dal Parlamento.</p><p id="0ac5834b-65c7-4f48-a679-d0b5c28bfc04" class="">A Torino gli operai occuparo la FIAT e presero in ostaggio l’amministratore delegato.</p><p id="2c059353-320a-44b1-aea1-f4a894556b05" class="">Ma Togliatti e il gruppo dirigente comunista scoraggiarono l’insurrezione armata ritenendola unt ragico errore che avrebbe condotto il Paese alla guerra civile.</p><hr id="cfed55aa-7979-41b1-915a-e9f46f610fc4"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e10d6813-d0d1-46a0-a9c0-5b7771a90c7e"><div style="font-size:1.5em"><span class="icon">🇮🇹</span></div><div style="width:100%">A metà degli anni Cinquanta l’Italia era ancora un Paese arretrato.<p id="2c1c4d79-b05d-4289-ad9a-41cdb96029cb" class="">Ma nel periodo <strong>1958 - 1963 </strong>si verificò un eccezionale <em>boom</em><strong><em><em> </em></em></strong>economico: è il cosiddetto <em>miracolo italiano</em>, grazie al quale il nostro paese diventò in tempo record uno dei più industrializzati del mondo.</p><p id="491b00f9-ad5e-4ec4-b13b-1ee7b54eed40" class="">La data iniziale del “miracolo” corrisponde all’<strong>ingresso dell’Italia nella CEE</strong></p></div></figure><p id="9e0e5893-2306-487e-ac89-20a22035667f" class="">Il cambiamento venne prodotto dall’inventiva di tanti imprenditori, piccoli e grandi, così come dal sacrificio degli immigrati e dal lavoro degli operai.</p><blockquote id="12e8a38d-0b5b-48ab-9fb8-90e7da376b57" class="">Enrico Mattei → AGIP</blockquote><p id="8e1c14a7-b813-4510-a336-e31c631e9738" class="">L’italia trasse beneficio dalla più <strong>generale espansione dell’economia mondiale.</strong></p><p id="183a637e-63ed-44ba-9666-f614cd1ba458" class="">Inoltre i suoi settori industriali più avanzati poterono competere sul mercato europeo grazie al <strong>basso costo della manodopera.</strong></p><p id="41bf5c2c-060a-4a87-975a-48ccc2c2cd8c" class="">In tale contesto, i governi centristi favorirono la nascita delle <strong>infrastrutture </strong>necessarie allo sviluppo attraverso le industrie pubbliche.</p><p id="529f3d0a-1113-4c68-8340-d2fae31be1ea" class="">L’Italia si dotò di linee ferroviarie e soprattutto di autostrade, la cui costruzione spinse ancor più le famiglie all’acquisto di automobili.</p><p id="c581a3d0-adec-4834-bdd5-c0b8663987ac" class="">Proprio i <strong>veicoli a motore</strong> furono i segni più evidenti del nuovo benessere prodotto dal <em>boom: </em>prima gli <em>scooter</em>, poi la mitica <strong>seicento.</strong></p><p id="796b7863-fb58-4267-bd74-1fbef9b4a428" class="">Nelle case degli italiani l’ambiente che cambiò di più fu la cucina. Vi entrarono i nuovi <strong>elettrodomestici.</strong></p><p id="da44fd3b-c2c6-4e5b-b722-6b41766808e2" class="">Anche fare la spesa divenne più semplice: nel <strong>1957, </strong>a Roma, aprì il primo supermercato.</p><p id="b368bead-430e-44bf-a38e-e60bc246837c" class="">Gli italiani stavano meglio e volevano divertirsi, scoprirono così il grande <strong>cinema</strong> americano, proibito durante gli anni del fascismo.</p><p id="c09dbbd7-eb7e-4eca-8ce0-a2a55fbd8a64" class="">Un altro fondamentale cambiamento nella vita degli Italiani fu rappresentato dalla <strong>televisione</strong>, la quale ha contribuito alla diffusione della lingua italiana e perciò all’unificazione culturale del Paese.</p><p id="aa89bb93-5b5b-4623-ae85-8476fbaa8942" class="">Ma non tutta l’Italia conobbe in quegli anni i benefici del <em>boom</em>.</p><p id="7b2e5b15-2f02-4c7e-91dc-1c6646a0e261" class="">Anzi si acrebbe in misura drammatica lo <strong>squilibrio</strong> già esistente tra il <strong>Nord</strong> e il <strong>Sud </strong>abbandonato alla sua condizione di secolare arretratezza.</p><p id="91168798-9efa-4823-ba09-958ee185036f" class="">Molte famiglie del Sud si videro costrette a <strong>emigrare</strong>, questa volta non all’estero, ma soprattutto verso le grandi città industriali del Nord.</p><p id="f180a7e2-2e57-4181-9ddd-3c385c34c3d6" class="">Si sentiva l’esigenza di governare gli effetti di una trasformazione così tumultuosa, regolando i processi di sviluppo e correggendo gli squilibri economici e sociali.</p><p id="3b49b986-b5fc-4ae1-9998-6c8c910c04c9" class="">Fu questa la sfida affrontata dai <strong>governi di centro - sinistra</strong>, basati cioè sulla collaborazione tra DC e PSI.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="687e1260-487a-42d8-b68a-e2e8ea6a1d32"><div style="font-size:1.5em"><span class="icon">👤</span></div><div style="width:100%">Nella DC si affermò la figura di <strong>Aldo Moro</strong>, segretario del partito che fu il principale interlocutore dei socialisti e il più deciso artefice del centro - sinistra.</div></figure><hr id="6ad024e4-d9d6-47d3-add1-ec3ee8eb3c3f"/><p id="6a1633e3-7a29-466c-8d96-6500dcf519fa" class="">Il congresso DC che si svolse a <em>Napoli</em> nel <strong>1962</strong> vide affermarsi definitivamente la linea di Aldo Moro favorevole alla collaborazione con i socialisti nel governo del Paese.</p><p id="38a3eabe-d814-4a78-899a-f7f0e0a90898" class=""><strong>Amintore Fanfani</strong> potè così costituire il suo IV governo.</p><p id="5e0f347d-646a-4cf3-938c-8cfa3740889b" class="">Pur nella sua breve vita, il governo Fanfani riuscì a varare la <strong>riforma della scuola</strong> che istituì l’istruzione unificata ed elevò l’obbligo scolastico a 14 anni.</p><p id="fdd74962-00c2-4076-a164-ddf97fb9937a" class="">Nel <strong>1963, Aldo Moro</strong> formò il primo governo di cui facevano parte organicamente anche i socialisti.</p><p id="7ce76fb8-57d7-47db-8a16-2e1ae7f2895f" class="">Col passare degli anni lo slancio riformatore del centro - sinistra si venne sempre più attenuando, anche perchè crescevano i contrasti tra ip artiti di centro e il PSI sul modo di affrontare le difficoltà economiche.</p><p id="da1ae87e-996f-4caa-8a0f-f7e6fd96121c" class="">In Italia la contestazione studentesca del 1968 passò dalle scuoole alle fabbriche, dando vita alle lotte operarie del cosiddetto “autunno caldo” che prese il via nel <strong>settembre</strong> del <strong>1969</strong> con lo sciopero nazionale dei metalmeccanici.</p><p id="d5307f29-6e6e-48ca-88c9-e790d0c71afc" class="">Si concluse in <strong>dicembre</strong> con la firma del nuovo contratto dei metlmeccanici, che rappresentava un’obiettiva vittoria per gli operai.</p><p id="9dc60431-eb2a-4f71-8de4-f9096ffa121c" class="">Praticamente tutte le richieste dei sindacati furono accolte.</p><p id="9ad51a5a-1842-41b4-a3b6-56bc4150b3b5" class="">Nel complesso le maggiori <strong>organizzazione sindacali</strong> riuscirono a dirigere le lotte e uscirono rafforzate da questa stagione.</p><p id="d4c2af21-838c-44e9-8010-1d97aa1808d2" class="">La richiesta espressa dagli operai di una profonda trasformazione dei rapporti di lavoro nelle fabbriche venne accolta anche dal Parlamento.</p><p id="f8c2fed2-61a2-4801-93f2-cad37e864131" class="">Nel <strong>maggio 1970</strong> venne approvato lo <strong>Statuto dei lavoratori: </strong>una serie di articoli che riconsocevano i diritti fondamentali dei lavoratori.</p><hr id="75f89ec3-e75a-43a6-b760-7f0ce18e1dd7"/><p id="0c48ee44-00d5-4a25-bd40-b20230068249" class="">il <strong>12 dicembre 1969 </strong>a <strong>Milano</strong>, in <strong>Piazza Fontana</strong> scoppiò una bomba.</p><p id="39a80f81-5a6a-4fd7-9cb4-a63a8b33a8b2" class="">Iniziò con questo attentato il cupo periodo del <strong>terrorismo politico</strong> che insaguinò il Paese per tutti gli anni <strong>Settanta.</strong></p><p id="c18c8423-9136-4bbe-b1dc-2a3128f69acb" class="">In quest’epoca la DC subì l’attacco contemporaneo dell’estremismo di destra e di quello di sinistra:<div class="indented"><ul id="29f617ab-e3c6-40d9-88e4-e24827a8df4d" class="bulleted-list"><li style="list-style-type:disc"><strong>i terroristi di destra</strong> si sentivano gli eredi della Repubblica di Salò: volevano riscattare la nazione che consideravano tradita da un falso parlamentarismo.</li></ul><ul id="6340e70d-24ae-4969-9f2b-7295b091683c" class="bulleted-list"><li style="list-style-type:disc"><strong>i terroristi di sinistra </strong>invece si proclamavano eredi dei partigiani.</li></ul></div></p><p id="706a1d33-064a-48f9-9361-395e25ca6664" class="">I <strong>primi anni Settanta</strong> furono dominati dalla violenza nera.</p><p id="87d9540c-d231-4c08-9190-92b6f71c7524" class="">Senza dubbio le iniziative del terrorismo nero che hanno avuto maggiore impatto sull’opinione pubblica sono state le <strong>stragi. </strong>D’altronde proprio questo era l’obiettivo: seminare il terrore tra la gente.</p><p id="6c78bd64-4917-48d3-a7b2-440bbf8052ba" class="">Ricordiamo in particolare:<div class="indented"><ul id="6008cf7e-585d-4cc2-8f07-977dc3a35e06" class="bulleted-list"><li style="list-style-type:disc">Brescia, una bomba esplode durante un comizio</li></ul><ul id="6b51ee64-aed9-4918-85da-819fb1d30a97" class="bulleted-list"><li style="list-style-type:disc">Stazione di Bologna.</li></ul></div></p><p id="f95a7de8-9012-43c8-8e16-c30ae42ea893" class="">
+</p><p id="91411272-44e7-40d4-b613-ae87a875ce13" class="">Gli attacchi terroristici si sommarono a violenti conflitti sociali.</p><p id="d4ff36cf-b1ce-4818-81a2-0f0c13a7a6cc" class="">I terroristi non hanno raggiunto il loro obiettivo finale: quello di spostare su posizioni autoritarie e antidemocratiche gli Italiani.</p><p id="d1da29bf-ea46-4c52-ae5c-a507b04bdd7a" class="">M anon si può dimenticare che m olte di queste stragi restano tuttora impunite.</p><p id="862020e1-41b5-446c-9550-8369b006b199" class="">Tra la fine degli anni Sessanta e i primi anni Settanta, nacquero in Italia vari gruppi di estrema sinistra che accusavano il PCI di aver runinciato alla prospettiva di una rivoluzione comunista.</p><p id="eb0164f5-0756-4a1c-92fb-3bc847174046" class="">Ritenevano che la rivoluzione fosse di fatto impedita dalle organizzazioni tradizionali della sinistra, tutte chiuse in una logica riformistica, burocratica.</p><p id="e6c24017-db16-4a5c-a40b-399b84b4f124" class="">Sono queste le idee di cui si nutrì il <strong>terrorismo rosso; </strong>coloro che scelsero la lotta armata provenivano del resto proprio dai gruppi politici più radicali.</p><p id="909ddabd-2143-4fda-a495-56332c01610e" class="">Il gruppo più importante e tristemente famoso del terrorismo di sinistra furono le <strong>Brigate Rosse.</strong></p><p id="c53f39f3-9dc6-4538-8e09-7e4de30036b3" class="">Nell’autunno del <strong>1973</strong> il segretario del PCI, Enrico Berlinguer pubblicò tre articoli che muovevano una riflessione articolata sul golpe cileno.</p><p id="43a20143-e6b7-43de-a0ae-a40b60b42bfa" class="">Le situazioni del Cile e dell’italia erano evidentemente molto diverse.</p><p id="3160a1dd-565d-4127-a412-d5b8f9e2278e" class="">Tuttavia, secondo Berlinguer, anche in Italia esistevano forze che puntavano a risolvere la crisi del Paese attraverso una soluzione autoritaria.</p><p id="7b246c23-ea83-4b50-b17b-cae9aa77a749" class="">Berlinguer conclude sostenendo che per affrontare i gravi problemi del Paese era urgente un “<strong>compromesso storico”</strong> tra i partiti che rappresentavano la grande maggioranza del popolo italiano.</p><p id="284c1dc7-39d3-4dda-926b-93b5cea679df" class="">La nuova strategia del “compromesso storico” mirava alla collaborazione di governo tra DC e PCI per superare la crisi della democrazia italiana.</p><p id="4839fddb-ceef-4a5c-b330-e07f744eaec8" class="">Non si trattava solo di contrastare la violenza del <strong>terrorismo</strong> e il pericolo di una possibile <strong>svolta autoritaria;</strong> era anche necessario far fronte alla <strong>crisi economica</strong> che nel frattempo era maturata.</p><p id="a7e5418d-8e53-409b-8f57-947e3cee450a" class="">La proposta di Berlinguer trovò disponibilità in quella parte della DC che faceva capo ad <strong>Aldo Moro</strong>.</p><p id="653e7014-8d50-48cc-a531-4f305f06693f" class="">La politica moderata di Berlinguer portò nuovi consensi al PCI.</p><p id="260f6a77-1a20-4823-99a7-734e3f8aad40" class="">Nel <strong>1975</strong> le Sinistre ottennero un notevole successo e conquistarono il governo delle pricnipali città italiane.</p><p id="c4a2cea2-8a86-4d89-a71a-ada8b57ef5e9" class="">Nel <strong>1976</strong> il PCI conseguì il risultato elettroale più significativo della sua storia.</p><p id="3985b32d-127d-48b9-a927-3c54f7051b86" class="">La DC restò comuqnue il partito più forte con il 38,9% dei voti.</p><p id="96776e21-a77f-44b0-8835-9fdab2f60ab6" class="">Nel <strong>marzo 1978 </strong>Andreotti costituì un governo di <strong>solidarietà nazionale</strong> che godeva del voto favorevole del PCI e degli altri partiti di centro - sinistra.</p><p id="91087d94-19e7-4099-89a8-64f723f38e03" class="">Ma proprio nel giorno in cui il nuovo governo doveva ottenere la fiducia delle Camere, <strong>16 marzo 1978</strong>, le BR rapirono <strong>Aldo Moro</strong>.</p><p id="3c245b39-84b0-472f-99f0-e506c866792d" class="">Il cadavere venne ritrovato il <strong>9 maggio</strong>, 55 giorni dopo di prigionioa.</p><p id="7e07251e-458a-4b72-98da-15805bd4b44f" class="">L’assassinio di Aldo Moro rappresentò il punto più alto dell’attacco terroristico alla democrazia.</p><p id="91dab913-e1e4-474b-9176-e26b63e5bc14" class="">Ma di fatto il terrorismo entrò in una fase di declino.
+Meriti speciali ebbe in queste operazioni il generale <em>Carlo Alberto Dalla Chiesa.
+</em>Ma il merito più grande fu del popolo italiano che non concesse il suo appoggio al terrorismo.</p><p id="05e55eb2-30c9-4b35-8165-b689edbbd427" class="">I terroristi così restarono isolati dalla popolazione.</p><p id="d7dde14f-9b6b-4285-8f58-5ca798762177" class="">La collaborazione tra DC e PCI declino rapidamente.</p><p id="a767c7cc-8418-403f-b407-3444d3c16378" class="">Il governo Andreotti infatti cadde nel <strong>gennaio 1979</strong>. </p><p id="34c84c96-feca-4a99-80aa-1d278f3fffb0" class="">Il PCI chiedeva di partecipare pienamente al governo con suoi ministri, ma la DC non accolse la richiesta comunista.</p><p id="7e562888-6153-410d-bdd2-9d97502bcf1c" class="">I governi ottennero importanti successi nella lotta contro il terrorismo e riuscirono anche a migliorare la situazione economica.</p><p id="9f389159-23a8-49af-853e-74f7ad5ef7d3" class="">Altri provvedimenti non diedero invece i risultati sperati.</p><p id="6caea954-af77-4592-9b7b-415472d63c8a" class="">Tra questi la <strong>riforma sanitaria del 1978</strong> che garantì a tutti gli Italiani l’assistenza medica gratuita ma si rivelò costosa e poco efficiente.</p><p id="abfa9260-ca16-4a4e-b6b4-d5dbfe05fe0e" class="">La “solidarietà nazionale” terminò senza raggiungere l’obiettivo indicato con chiarezza da Moro: trasformare l’Italia in una democrazia pienamente occidentale, nella quale due schieramenti potessero liberamente alternarsi al governo.</p><p id="7aead8d0-4b11-4a02-ba02-4aa357e33f7f" class="">La solidarietà nazionale terminò senza sbloccare la democrazione italiana e ciò condizionerà la vita politica del nostro Paese negli anni Ottanta.</p></div></article></body></html>

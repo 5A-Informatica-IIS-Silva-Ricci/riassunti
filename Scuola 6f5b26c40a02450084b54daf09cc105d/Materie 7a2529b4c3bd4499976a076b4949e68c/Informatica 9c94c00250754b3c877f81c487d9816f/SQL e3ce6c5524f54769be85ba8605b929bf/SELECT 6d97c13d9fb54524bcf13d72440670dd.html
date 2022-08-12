@@ -1,0 +1,698 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>SELECT</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6d97c13d-9fb5-4524-bcf1-3d72440670dd" class="page sans"><header><h1 class="page-title">SELECT</h1></header><div class="page-body"><nav id="1667e6dc-ecfb-4ae5-afd0-07b1489480c8" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1de96bba-5581-428b-9b5d-92d2bb8a9532">Struttura comando</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#f81e0736-94c8-45fd-9ef8-89f7a992c664">Singolo attributo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#efb52d15-d64b-4fa1-adc6-ee91fde68bbb">Attributi multipli</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#b7341dcb-4eff-4528-b4c8-063ded2beb91">Clausola <code>WHERE</code></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#606cf79e-597a-4c5c-bb53-3c3908ed667b">Clausola <code>ORDER BY</code></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#f9976199-3348-4359-842f-44954ccc3622">Clausola <code>DISTINCT</code></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e15e75b5-09c0-4442-a71e-40be24751a18">Clausola <code>LIKE</code></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#5c4968f0-c94f-4a8f-958c-851b2103d64b">Operatori di aggregazione</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c3b7241e-8d7c-4a1c-9bfc-50cf0b0fb9d7">Tabelle multiple</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#9fe9b028-3f4d-4a74-b020-f8f0e22b9ded">Join tra tabelle</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#46f8006e-21af-43a8-b3ae-6fd9172602f5">Join avanzato</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#fab2d078-fd1e-4fdd-9450-246b4a55ed70">All &amp; Any</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#21d00b39-79c8-4755-a765-bef0533a51d0">Interrogazioni insiemistiche</a></div></nav><hr id="9cc8ab56-616c-4e50-ba3c-8880b7185de2"/><h3 id="1de96bba-5581-428b-9b5d-92d2bb8a9532" class="">Struttura comando</h3><pre id="f8357748-b2fd-4fb8-b75b-6662abc11b3f" class="code"><code>SELECT [DINSTINCT] lista_attributi
+FROM lista_tabelle
+WHERE condizioni
+ORDER BY condizioni_ordinamento;</code></pre><hr id="ea89404a-79c0-4fcf-8e46-6310142e2ea8"/><p id="5c204fbb-8619-4746-890c-c68cc2a3187c" class="">Tabella <code>Dipendente</code></p><table id="21484355-0bde-4f4c-baf4-f24b401fb1b8" class="simple-table"><thead class="simple-table-header"><tr id="8b2ea478-30b1-455f-9333-d11b82461099"><th id="&lt;|_p" class="simple-table-header-color simple-table-header">codD</th><th id="a:|^" class="simple-table-header-color simple-table-header">cognome</th><th id="{AL_" class="simple-table-header-color simple-table-header">dipartimento</th><th id="tOgZ" class="simple-table-header-color simple-table-header">stipendio</th></tr></thead><tbody><tr id="963b78b6-ea48-4cdf-9ba6-a42a11fef108"><td id="&lt;|_p" class="">d1</td><td id="a:|^" class="">Rossi</td><td id="{AL_" class="">Marketing</td><td id="tOgZ" class="">100</td></tr><tr id="e839da70-f6d3-472c-a950-6a54e28bd7fa"><td id="&lt;|_p" class="">d2</td><td id="a:|^" class="">Rossi</td><td id="{AL_" class="">Amministrazione</td><td id="tOgZ" class="">60</td></tr><tr id="7f41e709-02f4-4bda-9a09-1cdbc30ee980"><td id="&lt;|_p" class="">d3</td><td id="a:|^" class="">Neri</td><td id="{AL_" class="">Produzione</td><td id="tOgZ" class="">80</td></tr><tr id="7b2c9458-46f0-40dd-a004-1f4d486d80bc"><td id="&lt;|_p" class="">d4</td><td id="a:|^" class="">Verdi</td><td id="{AL_" class="">Produzione</td><td id="tOgZ" class="">120</td></tr><tr id="283f5bed-4ef4-4e0c-9880-4b87ba436341"><td id="&lt;|_p" class="">d5</td><td id="a:|^" class="">Gialli</td><td id="{AL_" class="">Marketing</td><td id="tOgZ" class="">90</td></tr></tbody></table><h2 id="f81e0736-94c8-45fd-9ef8-89f7a992c664" class="">Singolo attributo</h2><pre id="bb09bef9-01c5-4b61-a667-c0df30cc9a9c" class="code"><code>SELECT cognome FROM Dipendente;</code></pre><table id="23606faf-c777-4777-8f8c-6cb83ccf5d0f" class="simple-table"><thead class="simple-table-header"><tr id="910abe32-0031-405c-a475-db8ca72d68de"><th id="cgp=" class="simple-table-header-color simple-table-header">cognome</th></tr></thead><tbody><tr id="1c14bc9b-3fef-4d23-a0ba-5bfa47022492"><td id="cgp=" class="">Rossi</td></tr><tr id="40731ba5-2366-458f-a9d3-64771400a463"><td id="cgp=" class="">Rossi</td></tr><tr id="089a906d-b585-42b2-a6e1-d91cb879fd06"><td id="cgp=" class="">Neri</td></tr><tr id="17881b5c-23ea-43da-9751-3d0a9a4516a3"><td id="cgp=" class="">Verdi</td></tr><tr id="9d1ac1b4-52ae-429b-8dc4-faf5f0c8a934"><td id="cgp=" class="">Gialli</td></tr></tbody></table><hr id="c3341aca-ecf2-439e-aedb-8f4b24615229"/><h2 id="efb52d15-d64b-4fa1-adc6-ee91fde68bbb" class="">Attributi multipli</h2><pre id="1180ea60-d3d0-4075-a7f8-607d46efd7c6" class="code"><code>SELECT cognome, codD codice FROM Dipendente</code></pre><table id="b1819261-4751-4a9d-9d94-b70d5572890a" class="simple-table"><thead class="simple-table-header"><tr id="84a871c9-a0e6-4837-a05d-0b5af51ae2b9"><th id="i?\N" class="simple-table-header-color simple-table-header">cognome</th><th id="KqpW" class="simple-table-header-color simple-table-header">codice</th></tr></thead><tbody><tr id="5c7f1beb-f458-4c7f-a9a1-00a444f680be"><td id="i?\N" class="">Rossi</td><td id="KqpW" class="">d1</td></tr><tr id="fa90900f-41ce-4146-a057-a872308a4692"><td id="i?\N" class="">Rossi</td><td id="KqpW" class="">d2</td></tr><tr id="e763b0cf-f634-4f28-9de0-c6001fd7cf98"><td id="i?\N" class="">Neri</td><td id="KqpW" class="">d3</td></tr><tr id="7a3a0369-40b6-41ad-9205-3a507bbd7a98"><td id="i?\N" class="">Verdi</td><td id="KqpW" class="">d4</td></tr><tr id="276cb511-d75b-477b-809d-dcb673c34b09"><td id="i?\N" class="">Gialli</td><td id="KqpW" class="">d5</td></tr></tbody></table><hr id="1c91d9f6-9aae-423c-b333-5e82d2b16b28"/><h2 id="b7341dcb-4eff-4528-b4c8-063ded2beb91" class="">Clausola <code>WHERE</code></h2><pre id="652b1092-ddf1-4daa-8a69-3ed90ef29ea5" class="code"><code>SELECT cognome, dipartimento
+FROM Dipendente
+WHERE dipartimento=&#x27;Marketing&#x27; OR dipartimento=&#x27;Produzione&#x27;</code></pre><hr id="8a3860c7-5d41-4afc-92dd-ed59257703d3"/><pre id="ca4d02d7-2be4-4163-ad3a-1b5db7c63574" class="code"><code>SELECT stipendio/12
+FROM Dipendente
+WHERE codD=&#x27;d3&#x27;;</code></pre><table id="8fd028d8-0cfa-4721-9234-4651c15bbd7f" class="simple-table"><thead class="simple-table-header"><tr id="e2f9c514-7acf-439c-835a-760343be1f46"><th id="P`Pq" class="simple-table-header-color simple-table-header">stipendio/12</th></tr></thead><tbody><tr id="38852825-825a-4772-9bf1-b08d09eaa20f"><td id="P`Pq" class="">6,67</td></tr></tbody></table><p id="874cfc7d-288e-4a7f-9a99-3221cba4db43" class="">Possiamo rinominarlo</p><pre id="a876295b-66cf-4444-a17c-02d73e9a84a4" class="code"><code>SELECT stipendio/12 stipendio_mensile
+FROM Dipendente
+WHERE codD=&#x27;d3&#x27;;</code></pre><table id="52ec8043-3cee-426f-9efe-01564ab8cabc" class="simple-table"><thead class="simple-table-header"><tr id="ce87b122-88fd-4631-bff6-3aa8a1fc3dc1"><th id="P`Pq" class="simple-table-header-color simple-table-header">stipendio_mensile</th></tr></thead><tbody><tr id="acd7548c-aeab-4e0c-9d0f-7ee640721856"><td id="P`Pq" class="">6,67</td></tr></tbody></table><hr id="bdea12ed-54f0-410c-a42c-31f08ca8f45f"/><h2 id="606cf79e-597a-4c5c-bb53-3c3908ed667b" class="">Clausola <code>ORDER BY</code></h2><pre id="e7002b8d-7bb7-49eb-ac90-dc7404c9d50c" class="code"><code>SELECT cognome, dipartimento
+FROM Dipendente
+ORDER BY cognome;</code></pre><table id="faa26a96-c500-450c-bbfe-9a00424c6673" class="simple-table"><thead class="simple-table-header"><tr id="3cef4860-8d44-4a9b-9721-85ecf84dd98e"><th id="LVfF" class="simple-table-header-color simple-table-header">cognome</th><th id="ADBC" class="simple-table-header-color simple-table-header">dipartimento</th></tr></thead><tbody><tr id="9c401315-4859-49ae-8858-646c63f47e8b"><td id="LVfF" class="">Gialli</td><td id="ADBC" class="">Marketing</td></tr><tr id="755ca363-5759-42b4-80ce-eaa560c8ec9b"><td id="LVfF" class="">Neri</td><td id="ADBC" class="">Produzione</td></tr><tr id="ed3118b2-2935-45fe-b49c-beaf176cf868"><td id="LVfF" class="">Rossi</td><td id="ADBC" class="">Marketing</td></tr><tr id="a7eb75c9-f4ab-4b1c-a499-acff736d4a63"><td id="LVfF" class="">Rossi</td><td id="ADBC" class="">Amministrazione</td></tr><tr id="66f9e39d-c6a4-4113-b276-076d4eb55f82"><td id="LVfF" class="">Verdi</td><td id="ADBC" class="">Produzione</td></tr></tbody></table><p id="1116c4c9-9ec6-4c0f-a8c1-a2c35d576d84" class="">Posso usare <code>ASC</code> e <code>DESC</code> per scegliere il tipo di ordinamento: <code>ORDER BY cognome DESC
+</code></p><hr id="740f4911-1c7f-4756-9b94-517d3836f448"/><h2 id="f9976199-3348-4359-842f-44954ccc3622" class="">Clausola <code>DISTINCT</code></h2><pre id="03bd3033-2084-428f-b45f-9e3d5b7a2dd2" class="code"><code>SELECT DISTINCT cognome
+FROM Dipendente;</code></pre><p id="ff75ef93-a8a2-4dd6-b6d2-7da71cc64d1f" class=""><em>Prenderà tutti i cognomi in modo univoco</em></p><hr id="4df0af4a-ee31-457a-af90-2ab61e7a240f"/><h2 id="e15e75b5-09c0-4442-a71e-40be24751a18" class="">Clausola <code>LIKE</code></h2><pre id="2395858f-bf02-4930-b71b-96f0635a1134" class="code"><code>SELECT *
+FROM Dipendente
+WHERE cognome LIKE &#x27;R%i&#x27;;</code></pre><p id="cbcd5874-36bd-41c8-8137-5c970dc4b8e7" class=""><em>Prende tutti i dipendenti con cognome che inizia per </em><code><em>R</em></code><em> e finisce per </em><code><em>i</em></code><em> (case sensitive).</em></p><pre id="6e23942b-9710-4bf2-9bf4-dc32740ce58b" class="code"><code>SELECT *
+FROM Dipendente
+WHERE cognome LIKE &#x27;R___i&#x27;;</code></pre><p id="ac5dc2a7-e243-467e-b418-6b615c00e95a" class=""><em>Prende tutti i dipendenti con cognome che inizia per </em><code><em>R</em></code><em> e finisce per </em><code><em>i</em></code><em> con 3 caratteri nel mezzo, indicati dal numero di underscore </em><code><em>_</em></code><em>.</em></p><hr id="42d62b99-0cae-4f88-9239-ec79da6bb883"/><h2 id="5c4968f0-c94f-4a8f-958c-851b2103d64b" class="">Operatori di aggregazione</h2><ol type="1" id="a69a44f4-2c54-4739-8df3-9a61bfe2850e" class="numbered-list" start="1"><li><code>SUM</code></li></ol><ol type="1" id="f1c74c1c-3323-49ed-b095-58d389994c74" class="numbered-list" start="2"><li><code>AVG</code></li></ol><ol type="1" id="ea638b4e-dd9e-4014-b8ca-59bbb94de6d2" class="numbered-list" start="3"><li><code>MAX</code></li></ol><ol type="1" id="43283247-c8f3-4668-8795-1b029f6e64e8" class="numbered-list" start="4"><li><code>MIN</code></li></ol><ol type="1" id="c752d008-db35-4529-ae7d-847663707f50" class="numbered-list" start="5"><li><code>COUNT</code></li></ol><hr id="4d67493c-f19d-40a5-8018-914a04cce228"/><h2 id="c3b7241e-8d7c-4a1c-9bfc-50cf0b0fb9d7" class="">Tabelle multiple</h2><p id="8006d8f3-5ea7-487c-b5cb-9d07f8627faf" class="">Tabella <code>Dipartimento</code></p><table id="f7b11ff4-f4d8-4057-bd32-587d29e568e1" class="simple-table"><thead class="simple-table-header"><tr id="28b46067-7b1d-4ab6-95e9-c7dafaae6e39"><th id="HLZl" class="simple-table-header-color simple-table-header">nome</th><th id="pRm}" class="simple-table-header-color simple-table-header">sede</th><th id="aBA~" class="simple-table-header-color simple-table-header">budget</th></tr></thead><tbody><tr id="801ea916-f6aa-41a7-86dd-38a62bc1e178"><td id="HLZl" class="">Marketing</td><td id="pRm}" class="">Milano</td><td id="aBA~" class="">1000</td></tr><tr id="faaea667-b4b8-4a5d-8eac-4db7e76685e8"><td id="HLZl" class="">Amministrazione</td><td id="pRm}" class="">Padova</td><td id="aBA~" class="">800</td></tr><tr id="26a95d93-c466-43ef-82f9-0e5afc8402d6"><td id="HLZl" class="">Produzione</td><td id="pRm}" class="">Legnago</td><td id="aBA~" class="">600</td></tr></tbody></table><hr id="b1fa5fad-271d-4011-b503-d177d69bfb61"/><h3 id="9fe9b028-3f4d-4a74-b020-f8f0e22b9ded" class="">Join tra tabelle</h3><pre id="b6a1a6db-b744-4685-8c83-7e0e3eb4bc66" class="code"><code>SELECT *
+FROM Dipendente, Dipartimento
+WHERE Dipendente.dipartimento=Dipartimento.nome;</code></pre><table id="fb43ec84-36a1-49dd-9786-0f327c04becc" class="simple-table"><tbody><tr id="69adccbf-2882-420b-8fc3-431b02f43c20"><td id="e^m:" class="">d1</td><td id="O`s^" class="">Rossi</td><td id="EDZX" class="">Marketing</td><td id="sX\X" class="">100</td><td id="PaFa" class="">Marketing</td><td id="ajgl" class="">Milano</td><td id="&gt;l\i" class="">1000</td></tr><tr id="668971c7-0e53-42da-b127-b9c8cef2a750"><td id="e^m:" class="">d2</td><td id="O`s^" class="">Rossi</td><td id="EDZX" class="">Amministrazione</td><td id="sX\X" class="">60</td><td id="PaFa" class="">Amministrazione</td><td id="ajgl" class="">Padova</td><td id="&gt;l\i" class="">800</td></tr><tr id="ce425d8d-5ff2-44c6-beee-ec03132f65a5"><td id="e^m:" class="">etc...</td><td id="O`s^" class=""></td><td id="EDZX" class=""></td><td id="sX\X" class=""></td><td id="PaFa" class=""></td><td id="ajgl" class=""></td><td id="&gt;l\i" class=""></td></tr></tbody></table><p id="fc9f0a0d-24a1-4db3-b757-ab86e694c189" class=""><strong>Per un singolo valore</strong></p><pre id="33dd4004-ec3a-4324-b316-9a1b5be7823a" class="code"><code>SELECT Dipartimento.sede
+FROM Dipendente, Dipartimento
+WHERE Dipendente.dipartimento=Dipartimento.nome;</code></pre><p id="b660f6d3-1d9f-48f6-9e99-3538d31e12bf" class=""><strong>Rinominando</strong></p><pre id="17185dd7-d9c6-422a-8292-e9202955450e" class="code"><code>SELECT d2.sede
+FROM Dipendente d1, Dipartimento d2
+WHERE d1.dipartimento=d2.nome;</code></pre><p id="6f92d901-745a-4af3-80e7-79156a1f425e" class=""><strong>Per tutti i valori di una tabella</strong></p><pre id="9c7e9ce6-5d53-47e4-a746-a024d747e7e0" class="code"><code>SELECT d2.*
+FROM Dipendente d1, Dipartimento d2
+WHERE d1.dipartimento=d2.nome;</code></pre><p id="d10ae3f0-dca3-453d-80d5-bd3301f999ac" class=""><em>Il </em><code><em>.</em></code><em> non è necessario se l’attributo a cui bisogna fare riferimento compare in una sola tabella</em></p><h3 id="46f8006e-21af-43a8-b3ae-6fd9172602f5" class="">Join avanzato</h3><pre id="290d4e7e-2734-488a-8365-dda694332c3b" class="code"><code>SELECT attributi FROM tabella1 as alias tipo-join join tabella2 as alias on condizioni</code></pre><p id="9f25ea7d-c56e-4133-a7b1-e242e8184e26" class="">Il tipo-join può essere:</p><ul id="c19d8f40-a65d-4493-8771-41378d3e8689" class="bulleted-list"><li style="list-style-type:disc">Interno <ul id="cbd6e8e1-3d75-470f-8645-57ef465ca638" class="bulleted-list"><li style="list-style-type:circle">inner join (default) → mette insieme le righe che hanno dati comuni tra le due tabelle</li></ul></li></ul><ul id="8952cb25-03b8-4e58-b435-79b6bfbefcc6" class="bulleted-list"><li style="list-style-type:disc">Esterno<ul id="455fc8df-863b-491d-b2e1-df71aa8a6235" class="bulleted-list"><li style="list-style-type:circle">right outer → outer è opzionale, aggiunge le righe della tabella di destra non coinvolte nell’inner join</li></ul><ul id="efcde1f6-9a32-47d8-b4a9-a0340ee07d35" class="bulleted-list"><li style="list-style-type:circle">left outer → come right outer ma aggiunge la tabella di sinistra invece che quella di destra</li></ul><ul id="aed461ec-f6ee-4e22-9db7-0882e7953d78" class="bulleted-list"><li style="list-style-type:circle">full outer → come right outer ma aggiunge sia le righe della tabella di sinistra che quelle della tabella di destra</li></ul></li></ul><p id="bc4a250c-4398-4a69-b9bc-b06a37811ea1" class="">Esempio:</p><pre id="e4b26941-5c0f-4702-a2d4-111310a75e42" class="code"><code>SELECT *
+FROM Dipartimento d INNER JOIN Dipendente di ON d.nome=d.dipartimento</code></pre><hr id="9bb5f35a-f45c-4c03-8892-4d5fa89b252f"/><h3 id="fab2d078-fd1e-4fdd-9450-246b4a55ed70" class="">All &amp; Any</h3><pre id="d46df9c3-5764-4d01-a849-1691d4480774" class="code"><code>SELECT *
+FROM [tabella]
+WHERE attributo = [ANY or IN] [SELECT SQL]</code></pre><hr id="0862cc06-a0a9-4a6a-9ab1-b72e55c86fdf"/><h3 id="21d00b39-79c8-4755-a765-bef0533a51d0" class="">Interrogazioni insiemistiche</h3><p id="67303da0-eb90-4961-baec-01c3eb1887b2" class="">Riprendono i concette dell’algebra relazionale.
+Gli operatori utilizzati sono:</p><ul id="ec58534b-60e6-422f-b178-73b04e70c306" class="bulleted-list"><li style="list-style-type:disc">Union → tutti gli elementi (quelli in comune presi solo una volta a meno che non sia incluso <code>ALL</code>)</li></ul><ul id="436067a3-dec9-4f06-a88d-ae6f690d340a" class="bulleted-list"><li style="list-style-type:disc">Except → Tutti elementi prima select tranne quelli in comune con la seconda</li></ul><ul id="f21b2658-9fa0-4f73-a9f1-65de2f98f5e8" class="bulleted-list"><li style="list-style-type:disc">Intersect → solo elementi in comune presi una sola volta</li></ul><pre id="b7ca6a5a-e067-4fda-93f7-57afe2c30a11" class="code"><code>[SELECT SQL] UNION | EXCEPT | INTERSECT (ALL) [SELECT SQL]</code></pre><p id="b571905e-0b55-4c53-b7b2-4d901829401d" class=""><code>ALL</code> è opzionale ed include i ripetuti degli elementi in comune</p></div></article></body></html>

@@ -1,0 +1,672 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Gabriele D’Annunzio</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e81077b6-bc1e-4bed-a046-638a61b92176" class="page serif"><header><div class="page-header-icon undefined"><span class="icon">🦋</span></div><h1 class="page-title">Gabriele D’Annunzio</h1><table class="properties"><tbody><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data nascita</th><td>1863</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Anni vita</th><td>75</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data morte</th><td>1938</td></tr></tbody></table></header><div class="page-body"><nav id="9b414ca4-7218-47fc-9f95-46237c62fc45" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#b84013b4-5eac-4eba-9d68-1332434136a2">Biografia</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#f5473117-2351-4313-bd09-bf1e23d9def3">La poetica tra “passato augusto” e la modernità</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#fa456f63-6cb2-49a0-aea0-be6b064994f2">Il piacere</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2d7f0170-8f03-4a84-84d4-22142d56f25f">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#6e8fe0dd-942a-4592-a424-1344d94a7179">Alcyone</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#bbd4766f-5009-43be-b930-618f795c5277">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#79275dee-76e5-4d86-ad12-453ce84f7db4">Riassunto</a></div></nav><h1 id="b84013b4-5eac-4eba-9d68-1332434136a2" class="">Biografia</h1><p id="dcfede0b-c0d5-44cb-a696-14d495dac6bd" class="">Nella storia della letteratura italiana Gabriele D’Annunzio è stato uno degli autore più dibattuti e contrastati.</p><p id="68f217e4-788d-4f37-a74b-fd64b05763fa" class="">La ragione di tanto <strong>fervore polemico</strong> è legata alla particolare natura di <strong>un’attività letteraria</strong> che appare <strong>indissociabile dalla vita dell’autore: </strong>personalità eccentrica, disinbolta, eclettica, d’Annunzio viene da molti ricordato più per le sue azioni clamorose che per le sue opere.</p><p id="f3b509af-00e8-469e-9cf9-7441b1b639db" class="">Al di là delle immagini che lo stesso scrittore ha diffuso con calcolata abilità - da quella del <em>dandy</em> a quella dell’indomito poeta - soldato - si deve riconoscere a d’ANnunzio un’inesauribile e acuta capacità di assimilare le tendenze letterarie e filosofiche della sua epoca e introdurle in un paese ancora provinciale e chiuso alle novità europee.</p><p id="8a853528-9a3f-4fb6-b9e6-dcd6c2075433" class="">Questo ruolo di <strong>mediatore</strong> capace di imporre i nuovi orientamenti del gusto della borghesia italiana, vale a d’Annunzio l’ammirazione della “moltitudine”.</p><p id="72f65398-0ca3-4abe-b6d0-75351d2e46c3" class="">Mentre infatti ottiene largo successo presso i lettori contemporanei, l’autore ha <strong>pochi estimatori tra i letterati italiani</strong> della sua epoca.</p><hr id="6676d462-da72-4959-9a54-5161a40ff4ee"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="35ed6ac1-de15-49bf-900a-9ffc25ad829e"><div style="font-size:1.5em"><span class="icon">🐣</span></div><div style="width:100%">Gabriele D’Annunzio nasce a Pescara nel 1863 come terzogenito di cinque figli.</div></figure><p id="13b6c6bf-2aee-4571-a320-e2241622f508" class="">Il padre proviene da una famiglia modesta ma è stato adottatoa da uno zio benestante, da cui ha ereditato i beni e il cognome.</p><p id="d5c405a6-383c-4ca6-a913-450506d4f84e" class="">La madre, dolce e premurosa a cui il giovane è molto legato.</p><p id="875e9727-a9b0-4644-8d17-c372097d0841" class="">Al primo figlio maschio viene risercata una <strong>formazione d’eccellenza</strong>: il padre lo iscrive al collegio “<strong>Cicognini</strong>”.</p><p id="3c407d68-5736-4cb8-a863-caee485de125" class="">Allievo studioso e brillante, il ragazzo eccelle in tutte le materie e consegue la “licenza d’onore”.</p><p id="9b6f5a15-102a-44db-8254-2eee46d79207" class="">D’Annunzio tende ad attribuirsi una sorte di exxezionalità da <em><strong>enfant prodige </strong></em><strong>irrequieto e ribelle</strong>.</p><p id="ca21420c-b564-4c40-8bcf-dbce757e2600" class="">Nella volontà di ricreare a posteriori un’<strong>immagine mitizzata di sè</strong> emerge uno dei tratti fondamentali del personaggio: di ingegno versatile, capace di assorbire e affinare competenze precise in diversi ambiti.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="b04ddf6f-7315-4918-a357-2239898cbb8c"><div style="font-size:1.5em"><span class="icon">👤</span></div><div style="width:100%">D’Annunzio si imporrà come un <strong>protagonista della vita culturale e politica italiana</strong></div></figure><hr id="e811915e-724d-41a0-a921-72fea10ddb7d"/><p id="59fef4bf-b0b6-43d2-8418-138d84d74610" class="">Negli anni del collegio d’Annunzio legge voracemente i classici (Virgilio, Catullo, Manzoni, Darwin, …) e soprattutto le <em>Odi barbae</em> di Carducci, poeta che risvegli anel giovane un’improvvisa <strong>vocazione lirica</strong>.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="3081043c-04da-4ab0-9dae-8941b0f6117b"><div style="font-size:1.5em"><span class="icon">📕</span></div><div style="width:100%">Nel 1879, a soli sedici anni, pubblica a spese del padre <em><strong>Primo vere</strong></em>, un libretto di versi “carducciani”, che viene sequestrato dai docenti del collegio in quanto troppo licenzioso e sensuale.</div></figure><p id="29517627-dc8a-4495-b084-c15a808f885c" class="">Per promuovere se stesso e i propri libri d’Annunzio non esita a mettersi in scena, e lo stesso Marinetti lo accusa di piegarsi al culto di <em>Notre-Dame la Réclame</em> (nostra signora pubblicità).</p><p id="046812b8-4eeb-448f-a191-52ad336726b0" class="">Per scuotere il pubblico D’Annunzio fa precedere la seconda edizione di <em>Primo vere</em> dal finto annuncio della propri amorte, accompagnata da commoventi necrologi scritti di suo pungo.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d19acc1f-aff8-40fe-bc98-73783c813537"><div style="font-size:1.5em"><span class="icon">🎓</span></div><div style="width:100%">Si iscrive alla facoltà di Lettere dell’Università “La Sapienza”, ma non porterà mai a termine gli studi, preferendo intrecciare <strong>rapporti con gli intellettuali più influenti</strong> del mondo editoriale romano.</div></figure><hr id="fe226d0f-3024-4015-ba30-15eca9379af0"/><p id="f47927b6-a175-421a-9ebc-cd4b7109a96e" class="">Nel 1882 d’Annunzio pubblica una nuova raccolta poetica, <em><strong>Canto novo</strong></em>, e il volume <em><strong>Terra vergine.</strong></em></p><p id="4f5415cd-9d96-4fd9-a9d7-29caa345eb5a" class="">Il grande successo di queste opere lo eleva al rango di divo e lo incoraggia a coltivare il proprio mito anche al di là dei confini letterari: partecipando attivamente alla vita dei salotti e rendendo pubbliche le sue numerose avventure amorose, il giovane scrittore estende la propria <strong>fama mondana.</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ab738997-7ca2-4bce-b830-5b15c2b440bf"><div style="font-size:1.5em"><span class="icon">💒</span></div><div style="width:100%">Il suo <strong>matrimonio</strong> con la duchessa <strong>Maria di Gallese</strong>, nel 1883, segue un copione romanzato, con tanto di rapimento della sposa.</div></figure><p id="e6c79e5e-6b5c-4159-b3e6-2cdafc45ad66" class="">Grazie a questa unione d’Annunzio pensa di garantirsi il <strong>tenore di vita lussuoso</strong> che le sue abitudine dispendiose stanno mettendo in pericolo.</p><p id="68b66eb1-0d56-430f-b935-a8ce5afe9c64" class="">Dopo la nascita del primo figlio, nel 1884 l’autore si trova in <strong>difficoltà economiche</strong>: ha sperperato il patrimonio del padre e non potendo contare su quello del suocero a lui ostile, <strong>si rifugia in Abruzzo.</strong></p><hr id="87aa02b3-f598-4c87-94fc-54e8e1629432"/><p id="008fa0bd-edb5-4c6e-82cc-84098fd92292" class="">L’attività giornalistica fli permette di fare fronte ai problemi economici e diventa l’occasione di un apprendistato culturale che sarà determinante: nelle sue <strong>recensioni</strong> di autori italiani ed europei affina le sue qualità di osservatore dei costumi.</p><p id="b5c39d0f-f2aa-4002-86e8-40bd35f876fe" class="">Intanto una nuova relazione amorosa lo lega all’esuberante <strong>Barbara Leoni</strong>, consolidandone la fama di <strong>irresistibile seduttore</strong>.</p><p id="7e98afad-1aad-4440-9113-35c23a700dca" class="">Nel 1888, nonostante le persistenti difficoltà economiche, d’Annunzio decide di licenziarsi e <strong>isolarsi </strong>per concentrarsi sulla stesura di un romanzo, <em><strong>Il piacere.</strong></em></p><p id="23b433e4-58fc-41f1-8a50-c6c2c28b9252" class=""><strong>Il successo del romanzo</strong> presso il pubblico indica che esso ha saputo soddisfare una precisa esigenza sociale.</p><hr id="4a111f16-0b1e-4b59-8907-36d55aab7ada"/><p id="177e6fc4-912f-493f-811d-cda94fe85b39" class="">Tra il 1889 e il 1890 deve prestare <strong>servizio militare</strong> a Roma e interrompere la produzione letteraria.</p><p id="50eea3ad-fb24-4951-9e64-8b0330b23112" class="">Nel 1892 vengono date alle stampe anche le <em><strong>Elegie romane</strong></em><em><em>, </em></em>una sorta di diario sentimentale che si ispira alla passione del poeta per Barbara Leoni.</p><p id="9bf8cd9d-8f95-4058-b5f2-a10cecf4fe65" class="">Nel frattempo d’Annunzio rimane attento ai nuovi fermenti culturali, la sua <strong>adesione al Simbolismo</strong> europeo appare ora più consapevole e matura.</p><hr id="59bee137-3758-414a-9f79-b737583c831c"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="7894d61d-866a-425a-8c64-5ceaebb64f7a"><div style="font-size:1.5em"><span class="icon">💭</span></div><div style="width:100%">Intorno al 1892 d’Annunzio si interessa alla <strong>filosofia di Nietzsche</strong> attraverso la versoine francese di <em>Così parlo Zarathustra.</em></div></figure><p id="bb70ee7f-a3b1-4c28-b092-4b1a2502ad54" class="">Nel 1894 pubblica il romanzo <em><strong>Trionfo della morte</strong></em>, che non propone ancora compiutamente la nuova figura mitica del superuomo, ma ne delinea l’avvento.</p><p id="c329df19-3c0c-4c51-9a12-54b39edf4897" class="">In definitiva comunque <strong>è la morte a prevalere</strong> sull’aspirazione alla vita.</p><p id="9789f07a-3b12-4265-b550-ba4f58221b65" class=""><em>Il trionfo della morte, il piacere </em>e <em>l’innocente</em><em><strong><em> </em></strong></em>confluiranno nel cosiddetto <strong>ciclo “della rosa”.</strong></p><p id="f38f7c31-4b37-47f1-a0b2-b18173a2e992" class="">Nel 1895 D’Annunzio pubblica <em><strong>Le vergini delle rocce, </strong></em>che segna una <strong>svolta ideologica</strong>, diventando una sorta di manifesto del superomismo.</p><hr id="fd4129bb-b6cf-4328-888e-8f7f4d4f3eec"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="c17aa340-2720-4e6e-9608-c7a649c5fc00"><div style="font-size:1.5em"><span class="icon">♥️</span></div><div style="width:100%">Durante un soggiorno a Venezia incontra la celebre attrice <strong>Eleonora Duse</strong>, tra i due inizia un’appassionata relazione in cui l’amore si intreccia indissolubilmente con un interesse pratico e artistico.</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="010ce558-e7b1-4785-899b-3b606ed81e31"><div style="font-size:1.5em"><span class="icon">🗳️</span></div><div style="width:100%">Nel luglio 1897 lo scrittore si presenta alle elezioni politiche come <strong>candidato alla Camera</strong> e viene eletto <strong>nelle file della Destra.</strong></div></figure><p id="f2ca5583-4960-42a4-b4ba-0cbdb499ddee" class="">Il 1900 segna un radicale cambio di orientamento politico, d’Annunzio <strong>passa ai banchi della Sinistra</strong> e si candida con il gruppo socialista ma non viene eletto.</p><hr id="2b02216b-9df3-4fda-ad3e-746cd52ff08f"/><p id="050a0c6e-d4a2-4b11-a2ce-63ac20b85c4c" class="">Nel 1898 d’Annunzio va a vivere con la Duse in una villa detta “la Capponcina”: si mette in scena con <strong>sfarzo e stravaganza</strong>, circondandosi di lussuosi arredi, cavalli e levrieri di razza.</p><p id="b1aabe78-6430-4dc0-94ed-f463a43680cd" class="">Qui lavora alle prime <em>Laudi del cielo del mare della terra e degli eroi </em>e a un nuovo romanzo, <strong><em>Il fuoco</em></strong> che prolunga la fase del superuomo.</p><p id="08d84ff1-7ddf-41d2-ba1b-9a9976014b2d" class="">Nel 1904 vengono pubblicati il secondo e il terzo libro delle <em>Laudi</em>, che segnano una sorta di “tregua”, un ripiegamento interno: il poeta si allontana dall’autobiografismo strumentale e idealizzato del “superuomo” puntando su argomenti privati e sulle suggestioni di una lingua più pacata.</p><p id="c5fec862-7c1b-492f-af0d-9648d2c42aa8" class="">Il rapporto con la <strong>Duse</strong> volge al termine.</p><p id="c9a100bc-9a77-4528-be32-19390981950e" class="">Alla Capponcina si installa la nuova amante, ma le spese sostenute per garantirle una vita di lusso portano l’autore all’inevitabile <strong>tracollo economico</strong>.</p><hr id="b2b65dd1-4b2f-4a88-bafc-ef995e879ef1"/><p id="53ea0446-b58a-433d-8e5a-2596ed681a49" class="">Per sfuggire ai creditori, nel 1910, si rifugia in Francia dove rimane per cinque anni.</p><p id="6cebf363-fdf3-426d-80d6-bc1de069ef00" class="">A partire dall’anno successivo, per far fronte ai problemi economici, l’autore collabora con il “Corriere della Sera” su cui pubblica una serie di scritti autobiografici.</p><p id="3d9f359a-a0c5-43fd-82ce-4b43475d3088" class="">Nello stesso anno d’Annunzio <strong>rifiuta la cattedra</strong> universitaria di <strong>Bologna</strong> rimasta vacante dopo la morte di Pascoli.</p><p id="f1a5ea33-c026-4aea-9a1b-9be8bc387537" class="">Tra il 1912 e il 1914 d’Annunzio si dedica a un’intensa <strong>attività</strong> teatrale ma anche <strong>cinematografica.</strong></p><p id="156fbc9d-b1d2-48de-88e6-83814a078371" class="">Allo scoppio della guerra d’Annunzio si reca sul fronte francese come inviato del “Corriere della Sera”.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="beab7ff7-0bc7-473b-9c56-8a9b6b7a40a0"><div style="font-size:1.5em"><span class="icon">🪖</span></div><div style="width:100%">Dalle colonne del quotidiano l’autore svolge un’intensa <strong>azione di propaganda</strong> per l’entrata in campo dell’Italia a fianco dell’<strong>Intesa.</strong></div></figure><p id="d30fa677-d72c-4214-8237-5c63d65e7ff3" class="">Quando il regno d’Italia decide di scendere in guerra d’Annunzio sceglie di arruolarsi.</p><p id="27c49ec9-f13b-4308-8adf-8f604cbbc186" class="">Divenuto <strong>poeta-soldato</strong> il vate narra la sua esperienza e le sue imprese nei <em>Canti della guerra latina.</em></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="383ce5aa-12f3-4e35-bd35-83f931508317"><div style="font-size:1.5em"><span class="icon">🪖</span></div><div style="width:100%"><strong>Il volo su Vienna</strong> del 1918, effettuato per lanciare volantini propagandistici di invito alla resa è l’evento più eclatante.</div></figure><p id="4824fa64-ac1d-4f53-bab6-153175a21fd5" class="">Nel 1916 viene ferito e perde un occhio.</p><p id="040bc92d-2223-433c-821c-c2ee54540d02" class="">Durante il periodo di convalescenza inizia a redigere alcune note che convergeranno poi nel <em>Notturno.</em></p><hr id="43e36dc6-26e3-41f0-be18-19e82a9b28ea"/><p id="be2d385f-b5ff-4ac0-ac44-43a231ea0628" class="">Un anno dopo la fine del conflitto, d’Annunzio si lancia nell’<strong>impresa di Fiume</strong>.</p><p id="57b12860-d9ea-466a-9bf9-466ac8f5d84e" class="">Al comando di uomini indignati per la “<strong>Vittoria mutilata</strong>”, d’Annunzio entra a Fiume senza incontrare resistenze.</p><hr id="dcbcb39a-5f23-4d29-8ef5-1b7e70b24777"/><p id="21d2984f-ab24-421d-8efc-b955a22c197a" class="">Agli inizi del 1922 d’Annunzio cerca di ritagliarsi uno spazio politico autonomo in opposizione al programma del Partito fascista.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d74b739e-5bd3-4273-b6b7-345e8ab88abd"><div style="font-size:1.5em"><span class="icon">🪖</span></div><div style="width:100%">I suoi rapporti con il fascismo sono <strong>complicati</strong>: l’autore si dimostra ideologicamente prossimo al regime, ma si sente perlopiù usurpato dalle autorità fasciste di cui spesso <strong>non condivide le azioni.</strong></div></figure><p id="74e52d38-9862-40eb-a7ae-c38cbd3f8152" class="">Le autorità fasciste, che hanno interesse ad associare alla propria causa il celebre poeta, lo relegano a un <strong>ruolo</strong> più <strong>decorativo che attivo</strong>, sacralizzando la sua immagine e mantenendolo in tal modo sotto controllo.</p><hr id="b7f7fc2f-6f2d-492b-b208-6c4ea985eea0"/><p id="5104fd91-778a-4936-829e-0555160d1db1" class="">Lo scrittore trascorre i suoi ultimi anni nella sontuosa villa sul Garda. La sua esistenza è ormai più “notturna” che mondana.</p><p id="928eb529-a474-40f5-8c50-b25ce87781c9" class="">Le sue <strong>ultime opere</strong> sono anch’esse notturne, sia perchè scritte di notte, sia perchè gravate da un <strong>senso di stancehzza</strong> e di morte.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="09b05c5d-019c-4aaa-8696-d94db46f4efe"><div style="font-size:1.5em"><span class="icon">🪦</span></div><div style="width:100%">Il poeta ormai esausto <strong>muore</strong> improvvisamente nel marzo del <strong>1938.</strong></div></figure><hr id="4602c419-5364-471b-bb35-38cc58601dfb"/><h1 id="f5473117-2351-4313-bd09-bf1e23d9def3" class="">La poetica tra “passato augusto” e la modernità</h1><p id="d73d7e49-75c9-4daa-b682-85225b064caf" class="">In qunato erede consapevole del patrimonio estetico italiano, d’Annunzio si attribuisce il compito di coniugare tra loro la tradizione nota e la modernità ignota che è destinata ad accrescere il passato illustre di <strong>nuova Bellezza</strong>.</p><p id="9c506235-07fb-491d-9d5d-32c9ddfced4c" class="">A differenza di molti letterati suoi contemporanei che si levano contro gli effetti nefasti dell’industrializzazione, d’Annunzio <strong>accoglie la modernità</strong> e le sue potenziali bellezze.</p><p id="627961fb-1071-4768-baae-15cd35bf2ba8" class="">Il vate lamenta lo <strong>scarso interesse per il passato nazionale</strong> della <strong>classe dirigente</strong> borghese.</p><p id="5b64beb3-d2a1-4bb9-9966-a628f02c50b7" class="">Il ricongiungimento ideale tra la classicità e la modernità prende forma compiuta in <em>Maia</em>, il primo libro delle <strong><em>Laudi</em></strong>, in cui d’Annunzio trasfigura in chiave mitica un <strong>viaggio in Grecia</strong> realmente compiuto, facendosi iniziatore di una nuova arte moderna che trovi nell’arte antica il suo punto di origine.</p><hr id="c7e946ea-cf89-4a61-acf0-9cc29e8ee842"/><p id="a63d9d7b-c524-4e9f-9ff0-aff927f86468" class="">A differenza dei futuristi, i quali esaltano una modernità che nasce sulle ceneri di un passato da distruggere, per d’Annunzio la <strong>modernità</strong> è dunque <strong>debitrice dell’eredità antica e classica</strong>, da cui non può prescindere.</p><p id="6c11d977-8960-4283-86bc-5c58e9cc0e34" class="">D’Annunzio rivendica la sua <strong>libertà di non essere soltanto poeta</strong>, ma di poter attingere a ogni campo.</p><p id="c7c29077-ba34-4eb9-9fa5-b3f73a33dc02" class="">Questo interesse avido e a tutto campo conduce d’Annunzio a esplorare precocemente l’universo dell’immagine, dal <strong>film</strong> alla <strong>fotografia: </strong>spinto da una sconfinata fiducia nei confronti del <strong>progresso tecnico</strong>, d’Annunzio giugne perfino ad auspicare l’invenzione di un oggetto che conservi per la posterità la recitazione degli attori di teatro altrimenti irrimediabilmente dispersa.</p><p id="8ee94423-78a0-45ae-a122-1f434964c90b" class="">Uno degli aspetti puù vistosi di questo allargamento degli orizzonti estetici è l’interesse che d’Annunzio rivolge a quelli che in seguito si definiranno i “beni culturali”: <strong>contro il degrado artistico e ambientale, </strong>egli milita attivamente per la salvaguardi dele bellezze artistiche e naturali italiane.</p><p id="e582b541-69cd-42ba-a5f7-5f28a98527b6" class="">Lìapprofondita conoscenza dei beni culturali incide anche sull’elaborazione delle opere; d’Annunzio è infatti solito servirsi di <strong>guide specializzate</strong> per introdurre nei suoi scritti descrizioni dettagliate e notizie storiche delle grandi città d’Italia e dei loro scorci.</p><hr id="5de811f6-c5fa-4d73-9be7-917153d456e3"/><p id="a9d4562b-a912-4657-a665-8bec035d91c9" class="">La poetica di d’Annunzio segue diverse fasi, che corrispondono alle tappe di una ricerca del ruolo dell’intellettuale nella civiltà borghese moderna.</p><p id="81eb5a75-efaf-4dfb-84d6-6fef4618bb61" class=""><div class="indented"><h2 id="406a1266-476c-48db-a1d5-4669d7860fee" class="">La prima fase</h2><p id="9ae7a9e4-76e6-46ae-b9e4-2670167b7225" class="">La prima fase è quella del cosiddetto “<strong>estetismo</strong>”, inteso come il <strong>culto dell’arte e della bellezza</strong> a cui vengono subordinati tutti gli altri valori, compresi quelli morali.</p><p id="fc655932-60ce-408e-9cc5-01e773b2ceb4" class="">A incarnare l’estetismo dannunziano è Andrea Sperelli, protagonista del <em><strong>Piacere.</strong></em></p><h2 id="ecd1ce94-68a4-4024-80f6-fe1868fca019" class="">La seconda fase</h2><p id="1ff6f0a4-ea31-4c16-ae5a-0e724bf655b5" class="">Stanco degli artifici dell’estetismo, d’Annunzio si lancia in un periodo di incerte <strong>sperimentazioni</strong>.</p><p id="d32ab70a-096d-4f0e-94ad-3ac3892bb26e" class="">Sorgono in questo periodo alcune opere che risentono del contatto con altri ambienti sociali stabilito dall’autore durante il servizio militare, ma anche della sua appassionata lettura dei <strong>narratori russi dell’Ottocento:</strong> è la fase solitamente definita della “<strong>bontà</strong>”, caratterizzata da un’esigenza di <strong>rigenerazione</strong> e di <strong>purezza</strong>, ma anche da uno studio delle <strong>passioni più buie</strong> dell’animo umano.</p><h2 id="72394aca-f9d1-42fc-b9f9-43eb3d3482d0" class="">La terza fase</h2><p id="fbf18668-fece-447a-93b1-658a0c889a8b" class="">Tuttavia la fase della “bontà” è una soluzione provvisoria e di breve durata.</p><p id="944aa77f-6298-4e31-99b7-c0a0fa466beb" class="">Attraverso il mito del “superuomo” ricavata dalla lettura di <strong>Nietzsche</strong> d’Annunzio investe di un <strong>nuovo compito</strong> la figura dell’esteta, non si accontenta più di vagheggiare la bellezza rimanendo isolato dalla societa, ma si incarica di <strong>agire sulla realtà.</strong></p><p id="b75b2a14-9675-46a4-8b34-7eafc05c1320" class="">Nel filosofo tedesco d’Annunzio privilegia i principi a lui più affini, come il <strong>vitalismo “dionisiaco”</strong>, la teoria del “superuomo”, la <strong>libertà d’azione dell’individuo superiore</strong>.</p><p id="48c78c9c-10b3-4b45-b520-c0d377c44760" class="">Il “superuomo” incarna una nuova filosofia che implica il superamento dell’umano ma non la supremazia dell’uomo sull’uomo, in d’Annunzio questa filosofia diventa <strong>azione pratica e politica</strong>, e si traduce in violenza, rifiuto della democrazia, bellicismo e disprezzo delle masse.</p><p id="4d2d092f-60a5-4058-a462-2ec283b1026c" class="">L’artista superuomo si attribuisce la missione di <strong>profeta </strong>di questo nuovo ordine rivestendo un ruolo più attivo, più politico.</p></div></p><p id="5ffc9184-1a1e-4af9-b11c-5efdd3e966c8" class="">
+</p><p id="fb52cf9c-fc33-400f-a235-ecab52b3610e" class="">Mentre durante la fase dell’estetismo e quella del superuomo d’Annunzio aveva opposto alla volgarità moderna il culto della bellezza e dell’eroismo del passato, intorno agli inizi del secolo il mito superomistico entra a sua volta in crisi: l’intervento attivo dell’intellettuale-superuomo nella realtà implica un’opposizione violenta contro la modernità.</p><p id="8f4e4d43-58fe-4d35-86f4-1bfc344488b3" class="">La pubblicazione delle prime <em>Laudi</em> segna una svolta radicale: il poeta non si contrappone più al mondo moderno, ma ne canta la <strong>segreta bellezza, inneggiando </strong>agli aspetti tipici della <strong>modernità</strong>.</p><p id="08d1e7f7-e15f-4c13-a1ee-b2c1e6e2d9f3" class="">La dirompente energia moderna rivela ai suoi occhi il fascino di un <strong>nuovo mito.</strong></p><p id="c5c7a417-df4c-43a8-ab47-8eac0ef3e82f" class="">Con <em>Alcyone</em>, l’ultlima delle <em>Laudi</em>, d’Annunzio abbandona i toni celebrativi e politici dei primi due libri: l’atmosfera che domina il libro è contemplativa e il tema lirico centrale è quello della <strong>metamorfosi panica</strong>, cioò la fusione dell’io lirico con la natura.</p><p id="152aa427-12dc-4fe6-8d5b-223a298a92eb" class="">Proteso a conseguire l’immortalità attraverso la perdita della propria identità umana nel ritmo della natura, il poeta si identifica con le diverse presenze animali, vegetali e minerali e, trasfigurandosi, attinge a una <strong>condizione divina</strong></p><hr id="99b255bb-c3b8-41c5-983c-62016bf50ddc"/><p id="0406a514-4f50-414e-8227-97524d0ba677" class="">In seguito alla lettura di Nietzsche e ai suoi contatti con le <strong>avanguardie storiche</strong>, d’Annunzio esplora <strong>nuove dimensioni estetiche</strong> che prevedono un rapporto più diretto tra lo scrittore e il suo pubblico.</p><p id="0f58a04c-f86c-4e00-b6df-10195b9a6314" class="">D’Annunzio viene considerato da molti come un <strong>precursore della comunicazione di massa.</strong></p><p id="15dda1cc-34c7-41ce-8fc4-1f385d7feea4" class="">Tra le sue doti di mediatore culturale della società dei consumi vi è quella di <strong>inventore</strong> di nuovi nomi, motti, slogan e messaggi pubblicitari di <strong>grande successo. </strong>(Vittoria mutilata, tramezzino, …)</p><p id="0a46c967-79bb-436f-acf1-6f7eb4b96db4" class="">Più che di vere e proprie invenzioni si tratta il più delle volte di <strong>calchi</strong> tratti <strong>dal latino</strong>.</p><p id="e5e69add-aa37-451b-a531-f68191c9d434" class="">D’Annunzio considera <strong>l’arte</strong> come una “continuazione” e un’<strong>elevazione dell’esistenza</strong> che, liberata dalla propria imperfezione, assume un valore assoluto e sacrale.</p><p id="5c971b0f-76a1-45c1-a80a-2b3e4d1bea27" class="">La forma d’arte più adatta a esprimere questa “continuità vitale” è il <strong>romanzo.</strong></p><hr id="6f1ae42c-9875-4c10-add9-c5d23f01ea65"/><p id="f99d136e-7f36-48a2-8c44-595df6e564c7" class="">Il vate rivendica a sè il ruolo di “artefice” della lingua, il quale ha il compito di operare il fecondo <strong>ricongiungimento tra il passato </strong>augusto e <strong>la modernità</strong>.</p><p id="100d7a6e-7ed0-44c0-84c8-4bfcbc0ead66" class="">Le parole per d’Annunzio sono sace e vanno preservate nella loro incomparabile <strong>unicità</strong>: esse sono “simboli senza possibile sinonimia” che rivelano il loro splendore soltanto “all’artefice il quale sappia scrutarne le origini”.</p><p id="5024aa58-54ca-4b36-9b12-e02bb40b336a" class="">La lingua italiana non deve dunque essere inventata <em>ex novo</em>, ma <strong>riscoperta in tutta la sua infinita ricchezza</strong>, riportando alla luce i suoi tesori accumulati nei secoli.</p><p id="a85b033f-6a7b-4bdd-b2d7-d43814e9b3e4" class="">La modernità non coincide pertanto con l’invenzione di nuove parole, ma con l’armonizzazione e la <strong>combinazione nuova di elementi</strong> che sono <strong>caduti in disuso</strong> e che l’artefice deve riattivare, rimettere in circolazione.</p><p id="1b8f2096-8053-461d-8190-42e965e2b2b2" class="">Compito del poeta è anche quello di recuperare il <strong>potere arcaico</strong> della parole creatrice, riportando alla luce un patrimonio originario di espressioni della sfera prelinguistica che, sepolte nella coscienza universale, accomunano il poeta a tutti gli esseri viventi.</p><hr id="47e186e0-877d-412e-b86a-736f90c868e4"/><p id="15ce562f-f88c-4535-8897-4c71cdf67943" class="">D’Annunzio trae la sua grande perizia linguistica non da un paziente lavoro di filologo, ma dal contatto con alcuni eruditi di fama che gli forniscono interi repertori di <strong>parole rare e preziose</strong>.</p><p id="1800d004-ada3-4d4a-92f1-df3cb5d13a62" class="">In questo senso la sua è una vera e propria officina che usa, rielabora e <strong>contamina</strong> tra di loro termini tratti dai <strong>lessici speciali</strong>.</p><p id="c0ff098c-3910-4d8a-a150-bceb3de16bf8" class="">D’Annunzio lamenta l’<strong>assenza di un registro medio nella lingua italiana</strong>, la quale ha il difetto di essere o dialettale oppure artificiosa.=</p><hr id="80568239-d750-46d4-a08b-83d1fa878c9c"/><h1 id="fa456f63-6cb2-49a0-aea0-be6b064994f2" class="">Il piacere</h1><p id="ade815cf-dbad-4d70-8526-c40be69323a6" class=""><em>Il piacere</em> è il primo romanzo scritto da d’Annunzio.</p><p id="e29913aa-d717-4f85-846e-b9744312a97e" class="">Il protagonista <strong>Andrea Sperelli</strong> è un giovane aristocratico raffinato e coltissimo che discende da una famiglia di artisti.</p><p id="269c3411-d99e-47d4-bae9-259b0ebda7eb" class="">Andrea si isola sdegnosamente nel <strong>culto di una bellezza raffinata e artificiosa</strong> adottando uno stile di vita eccezionale e stravagante, distante dal vivere e dalla morale comuni.</p><p id="9ad0fe52-9936-410a-bf8d-b799f06f9882" class="">E’ <strong>diviso tra due figure femminili antitetiche</strong>: la fatale Elena muti, la passione erotica, e Maria Ferres, donna pura.</p><p id="12855ee8-c9d8-4271-b9bd-eed7ef986947" class="">Andrea Sperelli rappresenta almeno in parte <em>l’alter ego</em> di d’Annunzio, il quale nutre nei confronti del suo personaggio un <strong>sentimento duplice,</strong> fatto al tempo stesso di <strong>ammirazione</strong> e di <strong>coscienza critica.</strong></p><hr id="b517ced4-ee50-41ba-9b6e-09931dc6ed7f"/><p id="7cf55d3c-947f-4512-a601-9226f30af18c" class="">Sul piano formale, il romanzo è riconducibile a modelli diversi.</p><p id="3dcefc4b-0500-4117-9344-82eda856e5cd" class="">Da un lato, l’evidente ambizione di <strong>ricostruire un preciso ambiente sociale</strong> indica che il superamento del Verismo non è ancora del tutto avvenuto.</p><p id="1943d09f-45ab-45b4-b6b8-7fe33844492e" class="">Dall’altro lato, il romanzo appare dominato dall’introspezione psicologica dei personaggi e dai loro tortuosi <strong>processi interiori.</strong></p><p id="3f031e35-f0c4-4af8-9c5f-9aa0f85b2f7e" class="">Per d’Annunzio la narrativa postnaturalista deve <strong>mettere in contatto l’analisi psicologica</strong> dei personaggi <strong>e la descrizione dei luoghi e degli avvenimenti.</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="60495878-fb70-4d0d-994c-fa79a338d61b"><div style="font-size:1.5em"><span class="icon">🗣️</span></div><div style="width:100%">La lingua del romanzo è <strong>aulica</strong>, preziosa e la sua avvolgente sensualità risente dell’<strong>influsso di Baudelaire</strong> e delle suggestioni sintetiche dei simbolisti.</div></figure><p id="e600e97d-eca9-4867-857f-62ca623e704f" class="">
+</p><h2 id="2d7f0170-8f03-4a84-84d4-22142d56f25f" class="">Brani</h2><p id="36223705-59a1-46dc-be56-60ca23c75ccf" class="">→ “Un destino eccezionale intaccato dallo squilibrio” - 395/397</p><p id="4e4b93b6-01fe-4c49-93af-14fb5b667915" class="">→ “Un ambiguo culto della purezza” - 399/402</p><hr id="9c171c5d-e6cf-40bc-9215-052f2c588a38"/><h1 id="6e8fe0dd-942a-4592-a424-1344d94a7179" class="">Alcyone</h1><p id="107e7997-3b9a-4c0c-a887-195f1e39d5ce" class=""><em>Alcyone</em><strong><em> </em></strong>appare lontano dai toni celebrativi e politici dei primi due libri delle <em>Laudi</em> ed è percorso da una vena poetica perplessa e malinconica.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ad31b15a-e3a3-436a-950c-34a8e871990e"><div style="font-size:1.5em"><span class="icon">🗣️</span></div><div style="width:100%"><strong>L’atmosfera</strong> che vi domina è <strong>contemplativa</strong> e il tema lirico centrale è quello della metamorfosi panica, cioè della fusione dell’io lirico con la natura, con il flusso della vita universale.</div></figure><p id="2470025a-1a80-4235-be43-3aa147496e17" class="">Proteso a <strong>conseguire l’immortalità</strong> attraverso la perdita della propria identità umana nel ritmo della natura, il poeta si identifica con le diverse presenze animali, vegetali e minerali e, trasfigurandosi, attinge a una <strong>condizione divina.</strong></p><p id="0c0aa7d6-686e-4e98-8f25-2b3fdb9d3d70" class="">Il tema mitologico e la parabola stagionale appaiono uniti dal <strong>motivo comune della “fine”</strong>: la tristezza per l’inevitabile declino dell’estate viene associata all’angoscia nata dalla perdita della dimensione mitica dopo la caduta di Icaro.</p><hr id="801c8db2-059e-4caa-84c9-eb2516b34f26"/><p id="79df4b2b-3d56-4481-9c6d-99e84b7b5c6b" class=""><strong>L’alternarsi delle fonti e dei registri</strong>, le forme espressive sperimentali, l’organizzazione metrica, il raffinato tessuto analogico, fonico e melodico fanno del terzo libri delle <em>Laudi</em><strong><em><em> </em></em></strong>un <strong>testo capitale del primo NOvecento</strong> a cui attingeranno molti poeti successivi.</p><p id="674da430-4906-413d-8375-7360625e85f8" class="">
+</p><h2 id="bbd4766f-5009-43be-b930-618f795c5277" class="">Brani</h2><p id="a57b4970-89c9-4588-b470-fd476272d249" class="">→ “Pioggia nel pineto” - 417/424</p><hr id="4cad6be4-62f7-41ab-99e4-43630ad7e834"/><h1 id="79275dee-76e5-4d86-ad12-453ce84f7db4" class="">Riassunto</h1><figure id="1acba28f-5ff9-4ed0-a6b1-ace5ef6475c0" class="image"><a href="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20120.png"><img style="width:1857px" src="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20120.png"/></a></figure></div></article></body></html>

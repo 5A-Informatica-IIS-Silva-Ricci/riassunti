@@ -1,0 +1,696 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Informatica</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e9d66c3e-2fa2-4b0b-8d13-1b35184a2030" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">⌨️</span></div><h1 class="page-title">Informatica</h1><table class="properties"><tbody></tbody></table></header><div class="page-body"><nav id="cb11d2c2-852d-4778-92d5-4d4f1bb180e2" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#24c63a56-6da9-4566-bb77-fa61b538e365"><strong>Database (base di dati) </strong>🗂️</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c4381082-f4e9-4e27-a911-bca1b9f93871"><strong>Ciclo di vita di un sistema informativo</strong></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#b24a8521-229b-4541-9bd6-ba36b098014b"><strong>Progettazione concettuale → Modello E-R </strong>(Entità - Relazione)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#084bdbaf-2786-408d-bb0d-e8e251af80f1">Costrutti principali:</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d9525e40-69e5-4d51-9801-1eb655fb4366">Componenti</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#faff7220-1607-4f4f-b6db-62ce5b1e3051"><strong>Tipi di relazione</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0900d455-bf71-44f9-a3af-56138d184f4d"><strong>Cardinalità</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#c9b6decf-bf5b-40c7-8a38-3876ebbaeca3"><strong>Generalizzazioni</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#af504a6b-c9c1-4109-b5e6-4ac63f8bc2a9"><strong>Relazione IS-A: </strong> Come può essere?</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ede10a9d-481d-462e-a0ce-1e7fa1ec5bed">Anomalie ⚠️</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#db5ae062-48df-4db4-8452-c8df6b0f06a2"><strong>Analisi delle ridondanze</strong></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#46fb4e24-5fd7-40af-a2a5-8c38a9155d35"><strong>Normalizzazione</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f87bbc0e-882e-4215-b2a5-b40dd6e498e0"><strong>Normalizzazione classica</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b650b59-b660-4892-96b8-588060c5bd4b">Livelli di Forma normale</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0689d4c2-d7e6-49a9-a2bd-3fe4c1f230ef"><strong>Normalizzazione di Boyce-Codd</strong></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a9d57016-fa83-4271-8013-6942820d548d"><strong>Progettazione logica → Modello logico</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ccdfbf10-c4e9-4b5f-a942-948fafc7ba87"><mark class="highlight-teal"><strong>ENTITÀ</strong></mark></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#826bff96-a4df-456c-a9af-967426d6f71f"><mark class="highlight-teal"><strong>RELAZIONE M-N</strong></mark></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#6d92dbc2-f743-45cb-b6e5-1e3e9b811579"><mark class="highlight-teal"><strong>RELAZIONE 1-N</strong></mark></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7168bf9a-0b9a-439b-9249-a58522e9222e"><mark class="highlight-teal"><strong>RELAZIONE 1-1</strong></mark></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#69e62531-ac40-42d2-8118-3abd2b364350"><mark class="highlight-teal"><strong>ENTITÀ DEBOLI</strong></mark><strong> (con chiave esterna)</strong>:</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#4226c1cf-8dff-4443-b4b5-3625182eed4f"><mark class="highlight-teal"><strong>RELAZIONE IS-A</strong></mark></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#aa9db2ae-5773-4aa7-b94f-1499ffe20994"><strong>Progettazione fisica → Modello fisico</strong></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#5713b35c-1f40-4a71-b0a9-632d56c6ccc0">Programmazione delle pagine web principali</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#3c4316f3-0eb5-4e8e-924c-2b44ed0dbe36">Transazioni</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d7378ca1-5fb9-4044-ab36-2ae5a3ee0182">ACID</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d8e58779-67ea-4312-a760-d8bb2d863b4d">Esiti di una transazione</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#adf12d71-fc32-455e-a79e-024940c52e82">Esecuzione seriale di transazioni</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#5b446256-fae6-4ab0-af42-e1dcba237552">Possibili errori</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#bb61b767-6c9a-4ccc-9373-740e0e009a2d">Lost update</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#c8308723-df4a-43f4-b6e1-f83d1bc98f79">Dirty Read</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#7a01584f-df66-4245-a353-76e324bfe68b">Unrepeatable read</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#def4d53c-a0cf-4aee-82e9-171d8e4083f1">Riassumendo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#73adfaff-cf1a-4151-9ca6-6738dfde7724">Fonti</a></div></nav><h1 id="24c63a56-6da9-4566-bb77-fa61b538e365" class=""><strong>Database (base di dati) </strong>🗂️</h1><p id="5c9907e3-6a8e-4b39-88a1-da59efd7d026" class=""><em>Di che cosa ci occupiamo?</em>
+Di <strong>raccogliere</strong>, <strong>organizzare</strong> e <strong>conservare </strong>dei <strong>dati </strong>(milioni di dati).</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="acc6e185-cd8f-4107-9e4a-18f4b81e1ae9"><div style="font-size:1.5em"><span class="icon">🔑</span></div><div style="width:100%">Un <mark class="highlight-pink"><strong>sistema informativo</strong></mark><mark class="highlight-pink"> è un sistema che si occupa di raccogliere, organizzare e conservare dati</mark>.
+ES: Sistema informatico di un comune, di una biblioteca, di una banca…</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9adebfd0-4463-4091-88ca-52c4aefb7d05"><div style="font-size:1.5em"><span class="icon">🔑</span></div><div style="width:100%">Un <mark class="highlight-teal"><strong>sistema informatico</strong></mark><mark class="highlight-teal"> è un sistema informativo automatico</mark>.</div></figure><p id="89d2e67e-c205-4327-9def-cc4a0d6454de" class="">La gestione di grandi e persistenti quantità di dati può avvenire attraverso l’utilizzo di file 📁 (file system) o attraverso DBMS (Data Base Management System).</p><p id="55a99073-ef13-406a-9936-ca222703f2ed" class="">Il<strong> DBMS</strong> gestisce quantità di dati che sono:</p><ul id="534b4893-aae0-4a12-af59-b84c425f4904" class="bulleted-list"><li style="list-style-type:disc">grandi (milioni di dati)</li></ul><ul id="77304c79-56f6-4595-af03-492b8b0905d6" class="bulleted-list"><li style="list-style-type:disc">persistenti (reperibili successivamente)</li></ul><ul id="415a1cec-ca34-44d8-bb82-3e2b0f2eb685" class="bulleted-list"><li style="list-style-type:disc">condivise</li></ul><ul id="48fff55f-6c73-43e9-933d-66579faf73bd" class="bulleted-list"><li style="list-style-type:disc">garanti di riservatezza</li></ul><ul id="9bd69515-2f30-4263-ba4d-798f7617f843" class="bulleted-list"><li style="list-style-type:disc">efficienti</li></ul><ul id="042fbf88-a789-4f2b-9223-38978a6e483e" class="bulleted-list"><li style="list-style-type:disc">efficaci</li></ul><hr id="2146a789-47f8-4ed1-a835-c52d86e3a943"/><h1 id="c4381082-f4e9-4e27-a911-bca1b9f93871" class=""><strong>Ciclo di vita di un sistema informativo</strong></h1><ol type="1" id="4018ac93-b7d0-4136-ba3c-eea108232e66" class="numbered-list" start="1"><li><mark class="highlight-teal">Studio di fattibilità</mark> → analisi dei costi e delle alternative possibili</li></ol><ol type="1" id="d788d1a9-f175-4f84-a81f-89221f15db48" class="numbered-list" start="2"><li><mark class="highlight-teal">Analisi dei requisiti </mark>→ analisi dei requisiti hardware e software</li></ol><ol type="1" id="cfe0039f-ac1c-4ae9-99c6-2c8283e95752" class="numbered-list" start="3"><li><mark class="highlight-teal">Progettazione</mark><ul id="9b7a6c76-cf11-41e6-833c-ee21cd812f6b" class="bulleted-list"><li style="list-style-type:disc"><strong>progettazione </strong><mark class="highlight-yellow"><strong>concettuale</strong></mark></li></ul><ul id="f92803f4-ddde-45e7-8a16-37f1642f96ef" class="bulleted-list"><li style="list-style-type:disc"><strong>progettazione </strong><mark class="highlight-yellow"><strong>logica</strong></mark></li></ul><ul id="1c02a297-07c5-4d75-a788-4b2ae6332fcf" class="bulleted-list"><li style="list-style-type:disc"><strong>progettazione </strong><mark class="highlight-yellow"><strong>fisica</strong></mark></li></ul></li></ol><ol type="1" id="3ef73ebf-5a41-493d-bd74-df8d5b283e0e" class="numbered-list" start="4"><li><mark class="highlight-teal">Attuazione</mark> con eventuali revisioni e correzioni</li></ol><ol type="1" id="79a9fda8-dcfc-49c7-b49e-a4b9535066cd" class="numbered-list" start="5"><li><mark class="highlight-teal">Funzionamento</mark></li></ol><hr id="06393bd2-8da8-4f60-9979-396d4fa14bfe"/><h1 id="b24a8521-229b-4541-9bd6-ba36b098014b" class=""><strong>Progettazione concettuale → Modello E-R </strong>(Entità - Relazione)</h1><h2 id="084bdbaf-2786-408d-bb0d-e8e251af80f1" class="">Costrutti principali:</h2><ol type="1" id="b1c8c6da-164f-4e80-b031-0d02d35aad6b" class="numbered-list" start="1"><li><strong>Entità </strong>→ attraverso l’entità si rappresenta una categoria di soggetti che hanno vita propria.<figure id="6c005107-cf17-453d-87cc-51fa54e7d33c" class="image"><a href="https://lh3.googleusercontent.com/dw1uqUwoOA8B4gGYpXSyZoThUC00uCr67ExUFLXGTkNfX5GdA5LAxGFObWmI6kda1WjkDz3KGg1WrRPurx7pa3fLLQjll05GLt5KFuFilQtMXnc0sO9bV7k6u92u9wI2gbZ-KODxs3VrCroFlQ"><img style="width:576px" src="https://lh3.googleusercontent.com/dw1uqUwoOA8B4gGYpXSyZoThUC00uCr67ExUFLXGTkNfX5GdA5LAxGFObWmI6kda1WjkDz3KGg1WrRPurx7pa3fLLQjll05GLt5KFuFilQtMXnc0sO9bV7k6u92u9wI2gbZ-KODxs3VrCroFlQ"/></a></figure></li></ol><ol type="1" id="544ba4ae-a46a-47a7-aeb1-add7cdaa4210" class="numbered-list" start="2"><li><strong>Relazione o Associazione</strong> → una relazione associa due o più entità e si rappresenta attraverso il rombo.<figure id="ed68e5a9-d191-4a11-8fdb-7f975c75dbe3" class="image"><a href="https://lh5.googleusercontent.com/uazdTU2InXaVpCYYFyXHvr4M199ZSzg3V1eaNSsiSqr9W5_DrKEkoyPYUnpOnKQqGxc3ibnLBd51w16ZB-zSPrLAT4WtAaZTKxlRkKcmMcmTM9aq7yEnpyn6l6msgJUQf5KS8GeB5aJ4E4R7mA"><img style="width:576px" src="https://lh5.googleusercontent.com/uazdTU2InXaVpCYYFyXHvr4M199ZSzg3V1eaNSsiSqr9W5_DrKEkoyPYUnpOnKQqGxc3ibnLBd51w16ZB-zSPrLAT4WtAaZTKxlRkKcmMcmTM9aq7yEnpyn6l6msgJUQf5KS8GeB5aJ4E4R7mA"/></a></figure></li></ol><ol type="1" id="527ddd96-d635-47be-9b3d-69eb9a29464a" class="numbered-list" start="3"><li><strong>Attributi di entità e relazioni</strong> → descrivono le caratteristiche di un&#x27;entità o di una relazione<figure id="0da35a7c-ddb6-4974-8cae-20bc9ebd3415" class="image"><a href="https://lh4.googleusercontent.com/ll-BKWDEr16E8poQctdyhqU3bxldzLu5zwK_vsCCE6TpY6OLuNb2zxnTTHaY0VN9lvZ9p3FSs_IWTQiI2DQ46qC0yFtApgWpL9uWZPmGpx8oTC08WM4P4hfEc-iN5hkUkFrtd6TORL1KAdOrrg"><img style="width:336px" src="https://lh4.googleusercontent.com/ll-BKWDEr16E8poQctdyhqU3bxldzLu5zwK_vsCCE6TpY6OLuNb2zxnTTHaY0VN9lvZ9p3FSs_IWTQiI2DQ46qC0yFtApgWpL9uWZPmGpx8oTC08WM4P4hfEc-iN5hkUkFrtd6TORL1KAdOrrg"/></a></figure></li></ol><p id="fff9c432-b7f5-4072-a9ac-cc68872d133f" class="">
+</p><p id="fc801ef2-ba66-4222-afec-3b072613ce1f" class=""><em>Esempio modello E-R</em></p><figure id="01797fec-535c-4037-8df9-1c10946e09c5" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled.png"><img style="width:528px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled.png"/></a></figure><hr id="0d73851a-1334-4784-8319-48f4014725b1"/><h2 id="d9525e40-69e5-4d51-9801-1eb655fb4366" class="">Componenti</h2><figure id="bc787d9b-7807-4751-8f9b-21a2ce55b5fd" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%201.png"><img style="width:624px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%201.png"/></a></figure><hr id="36d688bb-bab9-40e7-9df5-c3a14661dd43"/><h2 id="faff7220-1607-4f4f-b6db-62ce5b1e3051" class=""><strong>Tipi di relazione</strong></h2><p id="85c27ee3-9d7e-4806-be40-316cb7e96666" class="">La <strong>relazione </strong>è il legame fra due o più entità e ne esistono di <strong>3 tipi</strong>:</p><ol type="1" id="0c654df1-f45a-47ca-ad1c-aa374bdfbf34" class="numbered-list" start="1"><li><mark class="highlight-teal"><strong>Relazione 1-1</strong></mark>: definisce un legame tra le occorrenze di due entità di tipo uno ad uno<figure id="6cd3ca1a-24cb-46ab-95f8-986b5390cd1e" class="image"><a href="https://lh3.googleusercontent.com/wh0ao7D69-CzR3N6P_blbQTdequMBVR8N_hxFyaf71r4AUWSbfoIKCZ8FuGy2MI9i1G8VqUxadQ_2OIRA7siBbZpMtrgiTEj5wjFePv6riXbRUYT7aq4bKenSfBTEVjv4Phr33ZJ2lG5HItbjw"><img style="width:576px" src="https://lh3.googleusercontent.com/wh0ao7D69-CzR3N6P_blbQTdequMBVR8N_hxFyaf71r4AUWSbfoIKCZ8FuGy2MI9i1G8VqUxadQ_2OIRA7siBbZpMtrgiTEj5wjFePv6riXbRUYT7aq4bKenSfBTEVjv4Phr33ZJ2lG5HItbjw"/></a></figure></li></ol><ol type="1" id="e0f56aeb-427c-4a60-b06f-7b419d4d5422" class="numbered-list" start="2"><li><mark class="highlight-teal"><strong>Relazione 1:n</strong></mark>: lega ciascuna occorrenza di un’entità con più occorrenze di un’altra entità<figure id="7a7c3117-898e-473a-a20e-10ebfd3fd3a1" class="image"><a href="https://lh3.googleusercontent.com/JmZTUJmOBgCMEaao9qD0z3evXHZA17NBBfA3_fj7rYMTPy2tBpx-AJOcoTjh0ZGtsNnJ6drlRJmvBOvB9IPhT5jfgAqWFwQG18GIHbRHyNcQRGZ_1WJktNi6vsYCXT8v6QsjrY5ZKMLigGwxHw"><img style="width:576px" src="https://lh3.googleusercontent.com/JmZTUJmOBgCMEaao9qD0z3evXHZA17NBBfA3_fj7rYMTPy2tBpx-AJOcoTjh0ZGtsNnJ6drlRJmvBOvB9IPhT5jfgAqWFwQG18GIHbRHyNcQRGZ_1WJktNi6vsYCXT8v6QsjrY5ZKMLigGwxHw"/></a></figure></li></ol><ol type="1" id="3697c18d-baf5-4447-a0ef-653ccd53c928" class="numbered-list" start="3"><li><mark class="highlight-teal"><strong>Relazione n:m</strong></mark>; lega più occorrenze di un’entità a più occorrenze di un’altra entità<figure id="1cc64387-a23f-46dc-afc6-106225e40a3a" class="image"><a href="https://lh3.googleusercontent.com/h_J58v1S7XJuEqkYJVNoP25RY1opalGJ00p5jLdgrFo54-DAagmZ9-KpfQNY98L4a4kc83Ar74Z3sRtXhamkzwe4cYmM4iS0ga2cs0zJYhaeRtpub3xpL8AnGNnK7JtF8bJ4zxH1ORPtMU6NNQ"><img style="width:576px" src="https://lh3.googleusercontent.com/h_J58v1S7XJuEqkYJVNoP25RY1opalGJ00p5jLdgrFo54-DAagmZ9-KpfQNY98L4a4kc83Ar74Z3sRtXhamkzwe4cYmM4iS0ga2cs0zJYhaeRtpub3xpL8AnGNnK7JtF8bJ4zxH1ORPtMU6NNQ"/></a></figure></li></ol><hr id="22f03f80-682c-45b7-94bd-a62e16cde70c"/><h2 id="0900d455-bf71-44f9-a3af-56138d184f4d" class=""><strong>Cardinalità</strong></h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="923d14b9-1cb7-4402-8cbf-e327819ea8df"><div style="font-size:1.5em"><span class="icon">🔑</span></div><div style="width:100%">E’ una <strong>coppia di numeri naturali</strong> che specifica il numero minimo e massimo di <strong>occorrenze </strong>che possono essere in relazione con una specifica occorrenza.</div></figure><p id="9f2ec170-3a5f-4bda-8c7f-fa89808abfc5" class=""><strong>CARDINALITA’ </strong><mark class="highlight-teal"><strong>MINIMA</strong></mark>:</p><ul id="4b39eb67-1eb7-4b5d-8714-f0b0e50b84c2" class="bulleted-list"><li style="list-style-type:disc">0 → partecipazione opzionale</li></ul><ul id="9bfd2503-8a5d-49d1-b91f-b761dba7f024" class="bulleted-list"><li style="list-style-type:disc">1 → partecipazione obbligatoria</li></ul><p id="1e1a96f9-9e6d-4006-8743-c07dfd0414f8" class=""><strong>CARDINALITA’ </strong><mark class="highlight-teal"><strong>MASSIMA</strong></mark>:</p><ul id="1176c5d5-9fcc-438c-8d76-7c940e871d1a" class="bulleted-list"><li style="list-style-type:disc">1 → massimo 1 partecipante</li></ul><ul id="0307996e-24d1-4ba1-a78e-76066bc9c603" class="bulleted-list"><li style="list-style-type:disc">n → più partecipanti<figure id="f736a2a3-9448-49e4-8254-074e846779ab" class="image"><a href="https://lh5.googleusercontent.com/d2KpoBRIo3GvegpD3YPBTkUQxc8wWvXX8GgYBldU0Sm0ZlHhOzKsbglqmLt-UaqcbzDhDQd3baa-m75Yp0-bBaSffhXpkeSjvSBoIXm1TQItGrGgeZkitsFfNkYKcrV6ZpvRBrugeXLRNsbY1Q"><img style="width:528px" src="https://lh5.googleusercontent.com/d2KpoBRIo3GvegpD3YPBTkUQxc8wWvXX8GgYBldU0Sm0ZlHhOzKsbglqmLt-UaqcbzDhDQd3baa-m75Yp0-bBaSffhXpkeSjvSBoIXm1TQItGrGgeZkitsFfNkYKcrV6ZpvRBrugeXLRNsbY1Q"/></a></figure></li></ul><hr id="d8e24908-3f0a-4d08-8ee8-70de0c62e54e"/><h2 id="c9b6decf-bf5b-40c7-8a38-3876ebbaeca3" class=""><strong>Generalizzazioni</strong></h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="fbf15294-5a26-4a33-b1c7-22128d82b804"><div style="font-size:1.5em"><span class="icon">🔑</span></div><div style="width:100%">Sono <strong>legami logici</strong> tra un’entità padre (che contiene caratteristiche generiche) e una o più entità figlie (specializzazioni del padre).</div></figure><p id="4684693f-cf49-43cb-97cf-6ddd648691d5" class="">Rappresentazione:</p><figure id="2cfcaacd-694c-4ffa-94f3-601cf4fe0727" class="image"><a href="https://lh5.googleusercontent.com/5XFBYVsdv_v4C8mbSSeYPTx5nfktMSVtlPAx0owCZV-GdTB-Ttr9GDzlxeszC8ZSZOi-j_37sD9vsu35V2wel53NpAGZPWFqHTxMl_ggHBsNaX-8esF-uDFLWwsI4JimpjbhRodnLJIaX9qXJg"><img style="width:480px" src="https://lh5.googleusercontent.com/5XFBYVsdv_v4C8mbSSeYPTx5nfktMSVtlPAx0owCZV-GdTB-Ttr9GDzlxeszC8ZSZOi-j_37sD9vsu35V2wel53NpAGZPWFqHTxMl_ggHBsNaX-8esF-uDFLWwsI4JimpjbhRodnLJIaX9qXJg"/></a></figure><h2 id="af504a6b-c9c1-4109-b5e6-4ac63f8bc2a9" class=""><strong>Relazione IS-A: </strong> Come può essere?</h2><ul id="e326122a-3e37-46a7-9614-a3455cc098da" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-teal">TOTALE O PARZIALE</mark></strong><ul id="6ff5e22a-85c8-4a37-ba16-94960805c797" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-yellow"><strong>TOTALE</strong></mark>: si verifica quando nella relazione <mark class="highlight-orange_background">i figli rappresentano completamente l’entità padre</mark> (<em>Es: persona → uomo e donna</em>).</li></ul><ul id="28a44fe4-2553-4a93-9caa-b54c4c8d49bd" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-yellow"><strong>PARZIALE</strong></mark>: si verifica quando nella mia relazione <mark class="highlight-orange_background">i figli rappresentano solo parzialmente l’entità padre</mark> (<em>Es: persona → studente e lavoratore</em>). In questo esempio una persona può essere né uno studente né un lavoratore.</li></ul></li></ul><ul id="687d999e-1001-4fe4-b552-51cc3a366796" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-teal">ESCLUSIVA O SOVRAPPOSTA</mark></strong><ul id="e7908abe-85d8-4920-b8b9-ec90fa2b7879" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-yellow"><strong>ESCLUSIVA</strong></mark>: si verifica quando <mark class="highlight-orange_background">un elemento del padre può essere attribuito solamente ad un’entità figlia</mark> (<em>Es: persona → uomo e donna</em>). Una persona può essere solo uomo o donna.</li></ul><ul id="df1aa431-8dde-4ea5-8563-07d966fab324" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-yellow"><strong>SOVRAPPOSTA</strong></mark>: si verifica quando <mark class="highlight-orange_background">un elemento del padre può essere attribuito a due o più entità figlie</mark> (<em>Es: persona → studente e lavoratore</em>). In questo esempio uno studente può essere anche un lavoratore.</li></ul></li></ul><hr id="824c9684-aa17-4c5f-a198-f609a9bab302"/><h1 id="ede10a9d-481d-462e-a0ce-1e7fa1ec5bed" class="">Anomalie ⚠️</h1><table id="a7cb49b9-2998-423c-ab86-68a321de20ed" class="simple-table"><thead class="simple-table-header"><tr id="897fb6c2-5b09-4d7b-a72d-0f159dfe3637"><th id="ycS=" class="simple-table-header-color simple-table-header">nome_dip</th><th id="vgLU" class="simple-table-header-color simple-table-header">nome_prog</th><th id="jN:i" class="simple-table-header-color simple-table-header">stipendio</th><th id="eo^e" class="simple-table-header-color simple-table-header">budget</th><th id="&lt;;Kf" class="simple-table-header-color simple-table-header">ruolo</th></tr></thead><tbody><tr id="e905c983-49b7-4e74-af12-ed8357622b72"><td id="ycS=" class="">Rossi</td><td id="vgLU" class="">Marte</td><td id="jN:i" class="">2200</td><td id="eo^e" class="">50000</td><td id="&lt;;Kf" class="">responsabile</td></tr><tr id="dc9474ad-8d00-4e80-a21f-efbc8fe353d3"><td id="ycS=" class="">Rossi</td><td id="vgLU" class="">Mercurio</td><td id="jN:i" class="">2200</td><td id="eo^e" class="">70000</td><td id="&lt;;Kf" class="">collaboratore</td></tr><tr id="37cc190c-8aaa-4a4b-a846-9eed52adf281"><td id="ycS=" class="">Verdi</td><td id="vgLU" class="">Marte</td><td id="jN:i" class="">2300</td><td id="eo^e" class="">50000</td><td id="&lt;;Kf" class="">collaboratore</td></tr><tr id="24fa6a83-0325-48c8-b0cf-63b2efd0b0da"><td id="ycS=" class="">Neri</td><td id="vgLU" class="">Marte</td><td id="jN:i" class="">2400</td><td id="eo^e" class="">50000</td><td id="&lt;;Kf" class="">collaboratore</td></tr></tbody></table><p id="09d45826-c11a-4edb-8ce9-51c0a08dbceb" class=""><strong>ANOMALIE</strong>:</p><ul id="5fc3063a-7e1f-49c0-ad23-320bd4dcbb35" class="bulleted-list"><li style="list-style-type:disc"><strong>di </strong><mark class="highlight-yellow"><strong>inserimento</strong></mark>: posso inserire i dati del dipendente solo se partecipa ad un progetto perché la chiave è composta da nome_dip + nome_prog.</li></ul><ul id="47dc5fff-d232-4c22-b62a-7b30b99f1609" class="bulleted-list"><li style="list-style-type:disc"><strong>di </strong><mark class="highlight-yellow"><strong>cancellazione</strong></mark>: se un dipendente termina la sua collaborazione con un progetto devo cancellare tutta la tupla (riga).</li></ul><ul id="09014c5b-49c6-4e81-9d0d-1e77af454a08" class="bulleted-list"><li style="list-style-type:disc"><strong>di </strong><mark class="highlight-yellow"><strong>aggiornamento</strong></mark>: se varia un campo (ES: stipendio) devo aggiornare tutte le tuple nelle quali è presente.</li></ul><hr id="afe480f8-8c14-4ac1-8df8-8058990d351b"/><h1 id="db5ae062-48df-4db4-8452-c8df6b0f06a2" class=""><strong>Analisi delle ridondanze</strong></h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="7b9e3bbe-6e23-4db0-9f63-b8c957908805"><div style="font-size:1.5em"><span class="icon">🔑</span></div><div style="width:100%">Per <strong>ridondanza </strong>si intende la presenza di <strong>dati uguali</strong> nella stessa tabella o nella relazione che potrebbero essere derivati in diversi modi.</div></figure><p id="f2f41b70-666e-4945-9f6b-268c85dd71fd" class="">Ci sono vari tipi di ridondanze:</p><ul id="03b2243e-4a2f-478b-a3b8-12f5dfc33f25" class="bulleted-list"><li style="list-style-type:disc"><strong>derivabili da </strong><mark class="highlight-teal"><strong>operazioni tra attributi della stessa entità/relazione</strong></mark><figure id="6e38cfb0-01cf-4eb3-889c-0d1e302061e3" class="image"><a href="https://lh4.googleusercontent.com/lZoJ0r2EdBto9CL6nhZgdbTnoEd5rJ3ouJyrhq6Es5fKTFTdZ5bYkbzBXz7BGJsejSj2Z3lOiCw28sDKD3s73YFfTthDw2_IxYBAuYIOkq1YGIV2XHGIXUejigv8LgWcHHL8AN5Vxv6qUGN0OA"><img style="width:384px" src="https://lh4.googleusercontent.com/lZoJ0r2EdBto9CL6nhZgdbTnoEd5rJ3ouJyrhq6Es5fKTFTdZ5bYkbzBXz7BGJsejSj2Z3lOiCw28sDKD3s73YFfTthDw2_IxYBAuYIOkq1YGIV2XHGIXUejigv8LgWcHHL8AN5Vxv6qUGN0OA"/></a></figure></li></ul><ul id="913bf39c-1e1d-4f74-8ce9-577ec624eeff" class="bulleted-list"><li style="list-style-type:disc"><strong>derivabili da </strong><mark class="highlight-teal"><strong>operazioni tra attributi di entità/relazioni diverse</strong></mark><figure id="103e56c2-bdb5-495e-a4fb-dcaaeec9fd77" class="image"><a href="https://lh3.googleusercontent.com/stBJwTFhFt4wLCKKJTf5WpIDAT4i9w3DvIphuKbklKw0-5sg3i8-E6CKKDP18c79SOlSHy5kQSWvhH3-QaKuGiUS3OT7RFcHCZrgSlvYCi9ZmS6YZZlAxJ3kzA5WuAnxZm4h-2g3dlszpMHDYQ"><img style="width:576px" src="https://lh3.googleusercontent.com/stBJwTFhFt4wLCKKJTf5WpIDAT4i9w3DvIphuKbklKw0-5sg3i8-E6CKKDP18c79SOlSHy5kQSWvhH3-QaKuGiUS3OT7RFcHCZrgSlvYCi9ZmS6YZZlAxJ3kzA5WuAnxZm4h-2g3dlszpMHDYQ"/></a></figure></li></ul><ul id="21857247-bdb9-4abc-bb0c-e4a138c17556" class="bulleted-list"><li style="list-style-type:disc"><strong>derivabili da </strong><mark class="highlight-teal"><strong>operazioni di conteggio</strong></mark><figure id="5a9ae3da-e99a-4e5f-8846-6b576d595bee" class="image"><a href="https://lh4.googleusercontent.com/BDaomXxfzuZ0nXP4fm2Xu0i_NoWXKFEuA1tVUowABp2Kki5nqMnxshAQ5GyU8UXAX2nUELrIadaD-4q_NBV48vWJ5npeS0hr6WR_SD3SK02xyRMiqx6T2I-NSvm_sB4QP8tAMw3VmhxGX3f_DA"><img style="width:576px" src="https://lh4.googleusercontent.com/BDaomXxfzuZ0nXP4fm2Xu0i_NoWXKFEuA1tVUowABp2Kki5nqMnxshAQ5GyU8UXAX2nUELrIadaD-4q_NBV48vWJ5npeS0hr6WR_SD3SK02xyRMiqx6T2I-NSvm_sB4QP8tAMw3VmhxGX3f_DA"/></a></figure></li></ul><p id="64a8f717-b923-4262-b952-1b036b5f00c5" class="">La presenza di ridondanze porta a vantaggi e svantaggi</p><p id="3e600f42-bf7f-4623-a09c-99ad6648fdef" class="">👍🏼 <strong>Vantaggi</strong></p><ul id="0c1817cb-81e7-488d-a21d-808a27ed5e94" class="bulleted-list"><li style="list-style-type:disc">riduce al minimo gli accessi necessari per calcolare la variabile ridondante</li></ul><p id="df6c660e-d0fa-43ad-b7d2-83507b35c530" class="">👎🏼 <strong>Svantaggi</strong></p><ul id="2e108bb0-cf91-49e2-bdde-81278ee68793" class="bulleted-list"><li style="list-style-type:disc">occupazione di memoria</li></ul><ul id="ab8984c7-16b2-493b-90b5-beec775cb058" class="bulleted-list"><li style="list-style-type:disc">aumenta gli accessi per aggiornare il dato ridondante</li></ul><hr id="7aea7653-6844-4374-815a-d695e5c38e4b"/><h1 id="46fb4e24-5fd7-40af-a2a5-8c38a9155d35" class=""><strong>Normalizzazione</strong></h1><h2 id="f87bbc0e-882e-4215-b2a5-b40dd6e498e0" class=""><strong>Normalizzazione classica</strong></h2><p id="1ca5743b-5093-4043-bc9e-89e0223506c8" class="">La <mark class="highlight-teal"><strong>normalizzazione</strong></mark><strong> </strong>è un procedimento che ha come obiettivo l’<mark class="highlight-teal"><strong>eliminazione di ridondanze e inconsistenze</strong></mark> (<em>anomalie</em>).</p><p id="a61a4515-1897-48a7-8e00-8aad91187bc9" class=""><strong>Ridondanza</strong> = presenza di dati ripetuti</p><p id="7e2fbce8-bd84-4043-9d32-047d5680d218" class=""><strong>Anomalia:</strong></p><ul id="7775ddd8-fdb2-487d-96db-6d9a4a641ae7" class="bulleted-list"><li style="list-style-type:disc">di<strong> </strong><mark class="highlight-yellow"><strong>aggiornamento</strong></mark>: se viene modificato il budget del progetto p1 si devono aggiornare più dati;</li></ul><ul id="c8795363-e812-486d-8dce-35b2e8bdc720" class="bulleted-list"><li style="list-style-type:disc">di<strong> </strong><mark class="highlight-yellow"><strong>inserimento</strong></mark>: se un nuovo impiegato non partecipa ad un progetto non lo posso inserire;</li></ul><ul id="6e97a722-e497-483b-a577-e00c82f09e53" class="bulleted-list"><li style="list-style-type:disc">di<strong> </strong><mark class="highlight-yellow"><strong>cancellazione</strong></mark>: se un dipendente termina la partecipazione a tutti i progetti perde l’informazione relativa al suo stipendio.</li></ul><table id="95497c21-0304-44d8-a367-22b71d891e4d" class="simple-table"><thead class="simple-table-header"><tr id="10165347-dac8-4694-8ba1-196b54378fed"><th id="`&gt;Ks" class="simple-table-header-color simple-table-header" style="width:122px">codice imp.</th><th id="^@ZN" class="simple-table-header-color simple-table-header" style="width:105px">stipendio</th><th id="vv`?" class="simple-table-header-color simple-table-header" style="width:100px">progetto</th><th id="yDzn" class="simple-table-header-color simple-table-header" style="width:100px">budget</th><th id="R`hj" class="simple-table-header-color simple-table-header" style="width:134px">ruolo</th></tr></thead><tbody><tr id="a2cfa9c7-0776-4c55-88d8-9acab91615cf"><td id="`&gt;Ks" class="" style="width:122px">i1</td><td id="^@ZN" class="" style="width:105px">1000</td><td id="vv`?" class="" style="width:100px">p1</td><td id="yDzn" class="" style="width:100px">10000</td><td id="R`hj" class="" style="width:134px">impiegato</td></tr><tr id="c67f8d72-3dc9-4475-b48e-6f44c56d8306"><td id="`&gt;Ks" class="" style="width:122px">i1</td><td id="^@ZN" class="" style="width:105px">1000</td><td id="vv`?" class="" style="width:100px">p2</td><td id="yDzn" class="" style="width:100px">20000</td><td id="R`hj" class="" style="width:134px">impiegato</td></tr><tr id="70615a21-1f76-4d84-8e7b-aec8f9ac267b"><td id="`&gt;Ks" class="" style="width:122px">i2</td><td id="^@ZN" class="" style="width:105px">3000</td><td id="vv`?" class="" style="width:100px">p1</td><td id="yDzn" class="" style="width:100px">10000</td><td id="R`hj" class="" style="width:134px">amministratore</td></tr><tr id="20c26863-1ea7-4f9a-8783-4f066083cb4b"><td id="`&gt;Ks" class="" style="width:122px">i3</td><td id="^@ZN" class="" style="width:105px">2500</td><td id="vv`?" class="" style="width:100px">p1</td><td id="yDzn" class="" style="width:100px">10000</td><td id="R`hj" class="" style="width:134px">analista</td></tr></tbody></table><h2 id="2b650b59-b660-4892-96b8-588060c5bd4b" class="">Livelli di Forma normale</h2><p id="29d91ebe-2cc9-49c7-947f-15b7fdce702b" class=""><strong>1 Forma normale (1NF)</strong></p><p id="dc8c9102-cf7d-429d-8268-5def3b25a56a" class=""><mark class="highlight-orange_background">Uno schema è in 1NF solo se ogni attributo è espresso in forma atomica (non ulteriormente scomponibile</mark>.</p><p id="b37e9266-f4b7-4f6d-ac24-53f0ed3fdca7" class=""><strong>2 Forma Normale (2NF)</strong></p><p id="b9f029fb-caad-4401-b367-5173437e3606" class="">Uno schema è in 2NF solo se:</p><ul id="9342f562-fae7-4aca-9086-6ca489af0c23" class="bulleted-list"><li style="list-style-type:disc">è in 1NF;</li></ul><ul id="e05c92d7-3c00-4a00-906f-1e2b73d1e332" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-orange_background">tutti i campi non chiave dipendono funzionalmente dalla chiave intera e non da una parte di essa</mark>.</li></ul><p id="3022467e-0fde-4382-88ce-1462cbc75ebe" class=""><strong>3 Forma Normale (3NF)</strong></p><p id="faa6df68-276e-48ec-9040-978ded9481ef" class="">Uno schema è in 3NF solo se:</p><ul id="f546806b-4deb-4355-b290-663d4030da16" class="bulleted-list"><li style="list-style-type:disc">è in 2NF;</li></ul><ul id="c85f4dfe-48ce-418b-aa81-e77478bfabf6" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-orange_background">ogni attributo non chiave dipende dalla chiave in forma diretta e non transitiva</mark>.</li></ul><h2 id="0689d4c2-d7e6-49a9-a2bd-3fe4c1f230ef" class=""><strong>Normalizzazione di Boyce-Codd</strong></h2><p id="274e5b9f-4006-436a-9d62-41a2351f3361" class=""><strong>Dipendenza funzionale</strong>: vincolo di integrità che esprime una dipendenza di tipo funzionale tra attributi di una relazione (<em>tabella</em>).</p><table id="e956c51c-20d3-4b4f-abbf-f3f57f038f8b" class="simple-table"><thead class="simple-table-header"><tr id="d65a2712-9f2a-4968-ac53-9b5f12d1ea4f"><th id="GEUc" class="simple-table-header-color simple-table-header">matricola</th><th id="A&gt;&lt;p" class="simple-table-header-color simple-table-header">nome</th><th id="Rf@n" class="simple-table-header-color simple-table-header">cognome</th><th id="OZW~" class="simple-table-header-color simple-table-header">materia</th><th id="YSc?" class="simple-table-header-color simple-table-header">docente</th><th id="vsXC" class="simple-table-header-color simple-table-header">voto</th></tr></thead><tbody><tr id="7785c59e-2eec-4201-8645-a205930b58a4"><td id="GEUc" class="">m1</td><td id="A&gt;&lt;p" class="">Aldo</td><td id="Rf@n" class="">Paoli</td><td id="OZW~" class="">matematica</td><td id="YSc?" class="">Rinaldi</td><td id="vsXC" class="">25</td></tr><tr id="ba0e2dbb-73c2-43b2-bf96-24794ae69e04"><td id="GEUc" class="">m2</td><td id="A&gt;&lt;p" class="">Luigi</td><td id="Rf@n" class="">Neri</td><td id="OZW~" class="">matematica</td><td id="YSc?" class="">Rinaldi</td><td id="vsXC" class="">26</td></tr><tr id="094ce5ea-954a-4c9e-bb93-7706b7ef10b5"><td id="GEUc" class="">m3</td><td id="A&gt;&lt;p" class="">Anna</td><td id="Rf@n" class="">Neri</td><td id="OZW~" class="">chimica</td><td id="YSc?" class="">Rossi</td><td id="vsXC" class="">25</td></tr><tr id="1f78fb47-4b4a-4f26-9704-f008abefecd1"><td id="GEUc" class="">m4</td><td id="A&gt;&lt;p" class="">Ada</td><td id="Rf@n" class="">Rinaldi</td><td id="OZW~" class="">chimica</td><td id="YSc?" class="">Rossi</td><td id="vsXC" class="">27</td></tr><tr id="5e6d48c8-f3fe-4152-ba74-524924823186"><td id="GEUc" class="">m1</td><td id="A&gt;&lt;p" class="">Aldo</td><td id="Rf@n" class="">Paoli</td><td id="OZW~" class="">economia</td><td id="YSc?" class="">Baldi</td><td id="vsXC" class="">30 lode</td></tr></tbody></table><p id="2d0c921d-bc85-4650-aa96-850f743b11a3" class="">Dipendenze funzionali:<div class="indented"><p id="2a5f2fcd-ba8d-445a-b640-212d93517a21" class="">→ matricola → (nome, cognome)</p><p id="d4a91b3c-8528-4bfa-9a39-72a390533aed" class="">matricola → nome</p><p id="cfb1b9b0-74db-402f-ab31-14755f285cb9" class="">matricola → cognome</p><p id="99672d9d-1647-41cc-bd8c-b862a9cdd402" class="">→ materia → docente</p><p id="1a6741d1-a3c1-4795-9786-a8e4d4357a97" class="">→ matricola, materia → voto</p></div></p><p id="dd839667-c7cf-4dfa-a5f0-59eed72b66a2" class=""><mark class="highlight-orange_background">Una relazione R è nella forma normale di Boyce-Codd se per ogni dipendenza funzionale X→Y,  X è chiave di R</mark>.</p><p id="4bfa9498-b698-4a1a-acf1-ce17447e1c58" class=""><em>Possiamo notare che questa tabella non è normalizzata secondo Boyce-Codd.</em></p><hr id="d18f8ed0-6d99-4a37-8680-fb21d16a20d7"/><h1 id="a9d57016-fa83-4271-8013-6942820d548d" class=""><strong>Progettazione logica → Modello logico</strong></h1><p id="8fc9c031-a2fd-451b-b695-0c359ad9c0e9" class="">Per passare dal modello concettuale al modello logico bisogna effettuare alcune operazioni:</p><h3 id="ccdfbf10-c4e9-4b5f-a942-948fafc7ba87" class=""><details open=""><summary><mark class="highlight-teal"><strong>ENTITÀ</strong></mark></summary></details></h3><div class="indented"><p id="6eadcf9d-486d-4f43-94c7-5d591a747605" class="">Bisogna <strong>eliminare tutti gli attributi composti</strong></p><figure id="e20dbf2b-5a07-41a4-8048-16af7a3d67f7" class="image"><a href="https://lh5.googleusercontent.com/FrD5aZKdW3MMPuzfapSeGb9YpxQfmW9m2T6Ey9YdpZKXXr6GPFBlqhM2ETmiMLa9tHCXCbCSG0h1GUp1snGiwXVGVTWWbR9nc7dKqUHw-Qv8qO8CwqXWc8g30txPwGTry2RNx1nDIktGbJlBFA"><img style="width:624px" src="https://lh5.googleusercontent.com/FrD5aZKdW3MMPuzfapSeGb9YpxQfmW9m2T6Ey9YdpZKXXr6GPFBlqhM2ETmiMLa9tHCXCbCSG0h1GUp1snGiwXVGVTWWbR9nc7dKqUHw-Qv8qO8CwqXWc8g30txPwGTry2RNx1nDIktGbJlBFA"/></a></figure><pre id="023b7f1a-470f-4aa5-abe6-a40a3826aa49" class="code"><code>Dipendente (matricola, nome, cognome, cap, via, civico)</code></pre></div><h3 id="826bff96-a4df-456c-a9af-967426d6f71f" class=""><details open=""><summary><mark class="highlight-teal"><strong>RELAZIONE M-N</strong></mark></summary></details></h3><div class="indented"><p id="71264abb-42bb-4266-8c43-a73b13fae838" class="">Bisogna <strong>specificare i legami con il vincolo di integrità referenziale</strong></p><figure id="ff43a4d8-d5c9-436e-b460-b093beace030" class="image"><a href="https://lh6.googleusercontent.com/CuK0BmJ3v_ztZDjM1tp_EAMhllUSS7MjwLioCD-JzI5IushjhccEvsuW3OP3fjXahHFEASuSj4hi6Rm7DqvHhs-rWqpoZbD_E4MArpy7u02eEsHP-jmUYg5NaXRgrqAZYy3ILQ5_eIxwnTFJww"><img style="width:624px" src="https://lh6.googleusercontent.com/CuK0BmJ3v_ztZDjM1tp_EAMhllUSS7MjwLioCD-JzI5IushjhccEvsuW3OP3fjXahHFEASuSj4hi6Rm7DqvHhs-rWqpoZbD_E4MArpy7u02eEsHP-jmUYg5NaXRgrqAZYy3ILQ5_eIxwnTFJww"/></a></figure><pre id="d99c648e-284b-473e-8f25-b10b86f4e0cc" class="code"><code>Studente (matricola, nome, cognome)
+Materia (nome, descrizione)
+Esame (matricola, materia, data, voto)
+con v.i.r. di matricola con matricola di Studente
+con v.i.r. di materia con nome di Materia</code></pre></div><h3 id="6d92dbc2-f743-45cb-b6e5-1e3e9b811579" class=""><details open=""><summary><mark class="highlight-teal"><strong>RELAZIONE 1-N</strong></mark></summary></details></h3><div class="indented"><p id="048cc4fe-7981-4e71-9c2c-7c2f9995e441" class="">Bisogna <strong>specificare i legami con il vincolo di integrità referenziale</strong></p><figure id="5afa5e9c-6b9a-4558-9893-91dd632e636c" class="image"><a href="https://lh4.googleusercontent.com/R5EGisAVv32HzNONaAbBWX36k_M3V31WBFVs-Aena1jHmTEYR5voKf77vLeg_Z1o9RzmcT0TJ2NZiHVPkGR-RMzeZiuRFDPYIva9ULCdlEFQ_m-yihMzaoVfbux4Ww4KoYUTCQjbscPy8fKfMA"><img style="width:576px" src="https://lh4.googleusercontent.com/R5EGisAVv32HzNONaAbBWX36k_M3V31WBFVs-Aena1jHmTEYR5voKf77vLeg_Z1o9RzmcT0TJ2NZiHVPkGR-RMzeZiuRFDPYIva9ULCdlEFQ_m-yihMzaoVfbux4Ww4KoYUTCQjbscPy8fKfMA"/></a></figure><pre id="c9699504-0102-4c3c-913e-35e478c2c856" class="code"><code>Preside (c.f., cognome, nome)
+Studente (matricola, nome, cognome, preside)
+con v.i.r. di preside con c.f. di Preside</code></pre></div><h3 id="7168bf9a-0b9a-439b-9249-a58522e9222e" class=""><details open=""><summary><mark class="highlight-teal"><strong>RELAZIONE 1-1</strong></mark></summary></details></h3><div class="indented"><ol type="a" id="e09428f3-4953-416c-82b0-ade27134cf8b" class="numbered-list" start="1"><li><strong>con </strong><mark class="highlight-yellow"><strong>cardinalità minima = 1</strong></mark><figure id="15c92109-5f65-4ef2-879b-bff0284ac5e5" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%202.png"><img style="width:576px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%202.png"/></a></figure><pre id="7801db91-61dc-4e16-b54f-c7d46e2620af" class="code"><code>Presidente (codP, nome, cognome)
+Stato (sigla, nome, popolazione, presidente)
+con v.i.r. di presidente con codP di Presidente</code></pre></li></ol><ol type="a" id="10b85ae8-749e-444a-875c-9310b607e87b" class="numbered-list" start="2"><li><strong>con </strong><mark class="highlight-yellow"><strong>cardinalità minima = 0</strong></mark><figure id="d35ac1ba-0b51-4f59-a7eb-1c03a07d8b2e" class="image"><a href="https://lh4.googleusercontent.com/QauqViyj_xXaQB4KVbUE5Z2fwoqvhpdS_RJ8mi3hXT_GvfITOql-yiBzQCrwiHmW4lByoH7pIyfqu-DJpdBKKQ4hxCJfKzCf9n_eUAdJONsozZNva5tJ7TnbMSwJ8ziOJ__Vw6bV7bDaSjb-xg"><img style="width:576px" src="https://lh4.googleusercontent.com/QauqViyj_xXaQB4KVbUE5Z2fwoqvhpdS_RJ8mi3hXT_GvfITOql-yiBzQCrwiHmW4lByoH7pIyfqu-DJpdBKKQ4hxCJfKzCf9n_eUAdJONsozZNva5tJ7TnbMSwJ8ziOJ__Vw6bV7bDaSjb-xg"/></a></figure><pre id="524882fd-65b4-4923-b0bd-ec95de840317" class="code"><code>Persona (c.f., nome, cognome)
+Auto (targa, modello, colore, proprietario)
+con v.i.r. di proprietario con c.f. di Persona</code></pre><p id="74f95777-6252-4e27-bda9-cae4e42b0051" class=""><strong>– </strong>In questo caso abbiamo messo il codice fiscale di Persona all’interno di Auto poiché un’auto ha sempre un proprietario. Se avessimo fatto il contrario il campo targa messo dentro a Persona <mark class="highlight-orange_background">sarebbe potuto essere risultato vuoto per alcune tuple</mark>.</p></li></ol><ol type="a" id="fe851f7c-e9af-43b2-a0ef-035aa00652c2" class="numbered-list" start="3"><li><strong>con </strong><mark class="highlight-yellow"><strong>entrambe le cardinalità minime = 0</strong></mark><figure id="13c7cd1b-6cdb-4d64-a209-8cf41d695139" class="image"><a href="https://lh6.googleusercontent.com/HY870c4T_J4cONwnuYQQS2E59sgupWOLSj_5_MDfUx1zg81zAuDC4AnM2j7_YKOG7EqX611l7M2QdqImrX4fBA0w-zuUQRrHgDv0Frtk1yhZAEAXpMd342_GUMFowcjzVHxIm_ytHxqx_vgHsw"><img style="width:624px" src="https://lh6.googleusercontent.com/HY870c4T_J4cONwnuYQQS2E59sgupWOLSj_5_MDfUx1zg81zAuDC4AnM2j7_YKOG7EqX611l7M2QdqImrX4fBA0w-zuUQRrHgDv0Frtk1yhZAEAXpMd342_GUMFowcjzVHxIm_ytHxqx_vgHsw"/></a></figure><pre id="1a9a1d5b-43eb-4860-83f2-59ad03fc5d33" class="code"><code>Impiegato (c.f., cognome, nome)
+Dipartimento (codD, nome, descrizione, impiegato)
+con v.i.r. di impiegato con c.f. di Impiegato</code></pre><p id="ecbeb566-6eff-49e4-8ca6-91a4cfb63519" class=""><strong>– </strong>In questo caso abbiamo inserito la chiave di Impiegato dentro Dipartimento poiché <mark class="highlight-orange_background">ipotizziamo abbia meno tuple</mark>.</p></li></ol></div><h3 id="69e62531-ac40-42d2-8118-3abd2b364350" class=""><details open=""><summary><mark class="highlight-teal"><strong>ENTITÀ DEBOLI</strong></mark><strong> (con chiave esterna)</strong>:</summary></details></h3><div class="indented"><figure id="52ccd2c3-4456-4206-b1b4-787fd83c98ed" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%203.png"><img style="width:528px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%203.png"/></a></figure><pre id="21102dca-970a-4ef8-93f1-77e01564f18b" class="code"><code>Università (nome, città, anno)
+Studente (matricola, uni, nome, cognome)
+con v.i.r. di uni con nome di Università</code></pre></div><h3 id="4226c1cf-8dff-4443-b4b5-3625182eed4f" class=""><details open=""><summary><mark class="highlight-teal"><strong>RELAZIONE IS-A</strong></mark></summary></details></h3><div class="indented"><p id="c548853c-505a-4d66-ba04-f48017c63e0a" class="">Devo prima <strong>ristrutturare</strong> la relazione IS-A</p><figure id="3dbca452-550b-45cb-a224-cbe6411b95e9" class="image"><a href="https://lh5.googleusercontent.com/5IGjEl7Xa3EseKtJq-moxEGUMCU39lhx4d5F-CIlAngLZvNAtvg9QLeOXJl8DRPz34VG1jR0dbG_RpJmKnpXFjxHgoOjbHMjxa84baIBZiyJQFRMJVQY4gckbc0nfX0S-CjtRF91k54YMG3Dfg"><img style="width:432px" src="https://lh5.googleusercontent.com/5IGjEl7Xa3EseKtJq-moxEGUMCU39lhx4d5F-CIlAngLZvNAtvg9QLeOXJl8DRPz34VG1jR0dbG_RpJmKnpXFjxHgoOjbHMjxa84baIBZiyJQFRMJVQY4gckbc0nfX0S-CjtRF91k54YMG3Dfg"/></a></figure><ol type="a" id="2bfc9f9e-0a7e-4d41-9f19-baa1e5ecce8f" class="numbered-list" start="1"><li><strong>Ristrutturazione alla </strong><mark class="highlight-yellow"><strong>Superclasse</strong></mark> (all’entità padre)<p id="8b81218e-ce57-4485-8e37-a09310b10557" class="">In questo caso rimane solo l’<mark class="highlight-orange_background">entità padre che assorbe gli attributi e le relazioni delle entità figlie e aggiunge un campo per distinguerle</mark>.</p><figure id="cd1aa60a-4b32-4ebf-aa8b-fd34582b7aa2" class="image"><a href="https://lh6.googleusercontent.com/t3vOvLVHe9lCJIm9XEKJKPxAv4RH2Zwe9AEFNXfl4grKS_bslNlWRO5uTUyUal_bdjhoT-7yVJ3V77BB9azXTGrUo1x4yuxyC1t6wE7oSdxy74B-E23EMbknDET5qcbzOoxRmXAbbnhVW3GWgw"><img style="width:672px" src="https://lh6.googleusercontent.com/t3vOvLVHe9lCJIm9XEKJKPxAv4RH2Zwe9AEFNXfl4grKS_bslNlWRO5uTUyUal_bdjhoT-7yVJ3V77BB9azXTGrUo1x4yuxyC1t6wE7oSdxy74B-E23EMbknDET5qcbzOoxRmXAbbnhVW3GWgw"/></a></figure></li></ol><ol type="a" id="59684888-9325-400f-b623-8d36979f6cae" class="numbered-list" start="2"><li><strong>Ristrutturazione alle </strong><mark class="highlight-yellow"><strong>Sottoclassi</strong></mark> (alle entità figlie)
+In questa ristrutturazione <mark class="highlight-orange_background">rimangono solo le entità figlie che assorbono chiave e attributi dell’entità padre</mark>.<figure id="2d4af64c-9e73-47c4-93d4-95d72c8cd4d2" class="image"><a href="https://lh5.googleusercontent.com/13nlXPrVgt1b1fReVH1y-teyF-A1D_99f9Ub4OYmdEB5QLCcezjW8oQo8fyVfpAG1eAedABMqxNp9PxRIiacGRNXxVqJr4Mj4kTR59dcxr0X9oXLA8kDeSAKdeKRSuTj11C6EIYeLVr9SV07Dw"><img style="width:720px" src="https://lh5.googleusercontent.com/13nlXPrVgt1b1fReVH1y-teyF-A1D_99f9Ub4OYmdEB5QLCcezjW8oQo8fyVfpAG1eAedABMqxNp9PxRIiacGRNXxVqJr4Mj4kTR59dcxr0X9oXLA8kDeSAKdeKRSuTj11C6EIYeLVr9SV07Dw"/></a></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="b81fad1c-ffa3-449a-a2c7-59c3e538a7a5"><div style="font-size:1.5em"><span class="icon">⚠️</span></div><div style="width:100%">In questo caso non posso usare la ristrutturazione alle sottoclassi poiché la mia relazione è di tipo parziale e questa  					ristrutturazione me la trasforma a totale. <mark class="highlight-teal">Posso applicarla solo a relazioni IS-A totali</mark> (<em>Es: persona → uomo e donna</em>).</div></figure></li></ol><ol type="a" id="9ac08092-e9e2-4a67-bdf5-8ebbf3a8afd7" class="numbered-list" start="3"><li><strong>Ristrutturazione ad </strong><mark class="highlight-yellow"><strong>Entità deboli</strong></mark><p id="f4e0c159-b161-47a9-baa5-599103f13363" class="">In questa ristrutturazione rimangono tutte le entità ma le <mark class="highlight-orange_background">figlie prendono dal padre chiave e attributi</mark>.
+<em>La ristrutturazione ad entità deboli è sempre possibile ed è consigliabile utilizzarla quando le entità figlie sono fortemente specializzate.</em></p><figure id="88ecaed9-390b-47f0-a764-7748f596816a" class="image"><a href="https://lh3.googleusercontent.com/K6cLsud27i0Zh05lpPmRvjPyHIuk-B-FsL3mX5vtH6lOMs0608EAlTmCMyZB7X3koF9p9lPb5y_3KhYOpR5uvpQomgSmIpzPf_byiLPAVCgW52qME5HhnG-laa864ek54zMQFqV9K7PNqFh8tw"><img style="width:528px" src="https://lh3.googleusercontent.com/K6cLsud27i0Zh05lpPmRvjPyHIuk-B-FsL3mX5vtH6lOMs0608EAlTmCMyZB7X3koF9p9lPb5y_3KhYOpR5uvpQomgSmIpzPf_byiLPAVCgW52qME5HhnG-laa864ek54zMQFqV9K7PNqFh8tw"/></a></figure></li></ol></div><hr id="882ca77c-00c0-4634-a815-3d3297ba4769"/><h1 id="aa9db2ae-5773-4aa7-b94f-1499ffe20994" class=""><strong>Progettazione fisica → Modello fisico</strong></h1><p id="204373de-f55d-4958-8c3e-727419ef4a0a" class="">Il modello fisico si attua attraverso il linguaggio <a href="Informatica%20e9d66c3e2fa24b0b8d131b35184a2030/SQL%201289ba5b6a7349a4bd3d148127a292b5.html"><span class="icon">🗂️</span>SQL</a> </p><hr id="4c0e452b-f981-49a9-b200-1083644bef2b"/><h1 id="5713b35c-1f40-4a71-b0a9-632d56c6ccc0" class="">Programmazione delle pagine web principali</h1><p id="7446bbe6-ed73-4f59-9ec5-35c949716e46" class="">La programmazione delle pagine web principali di un applicativo può essere effettuata attraverso diversi linguaggi.
+Noi abbiamo utilizzato <a href="Informatica%20e9d66c3e2fa24b0b8d131b35184a2030/PHP%20db663680b718487e8b0d646462355a4c.html"><span class="icon">💻</span>PHP</a>.</p><p id="b6a9b991-1ba6-4fa7-8e06-ba1d415db25b" class=""><mark class="highlight-teal"><a href="Informatica%20e9d66c3e2fa24b0b8d131b35184a2030/PHP%20db663680b718487e8b0d646462355a4c.html"><span class="icon">💻</span>PHP</a></mark><mark class="highlight-teal">  è un linguaggio utilizzato per la programmazione di pagine web dinamiche.</mark></p><hr id="7fa720ce-65b1-4bd4-9e52-d2eb48a707bb"/><h1 id="3c4316f3-0eb5-4e8e-924c-2b44ed0dbe36" class="">Transazioni</h1><p id="14c46853-6bb9-495c-baa4-1ef6dce1dbae" class=""><mark class="highlight-orange_background">Una transazione è un’unità logica di elaborazione che corrisponde a una serie di operazioni fisiche elementari (letture/scritture) sul DB</mark>.</p><p id="a5f2a6f1-f010-4d07-999b-bc6e3fc99361" class="">Esempi:</p><p id="876e165e-5535-42c4-8d01-c922a0ac3ab3" class=""><em>In entrambi i casi tutte le operazioni elementari devono essere eseguite.</em></p><h2 id="d7378ca1-5fb9-4044-ab36-2ae5a3ee0182" class="">ACID</h2><p id="04b08bae-c776-4362-b3db-44c927c94696" class="">L’acronimo <strong>ACID</strong> indica le <mark class="highlight-orange_background">4 proprietà che il DBMS deve garantire</mark> che valgano per ogni transazione</p><ul id="e623b963-047f-4a09-b0dd-60071d6d3fb8" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Atomicity</strong></mark> = una transazione è un’unità di elaborazione
+Il DBMS garantisce che la transazione venga eseguita come un tutt’uno</li></ul><ul id="eb1ae422-027b-4876-ad7e-b3bfebafbc6b" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-yellow">Consistency</mark></strong> = una transazione lascia il DB in uno stato consistente
+Il DBMS garantisce che nessuno dei vincoli di integrità del DB venga violato</li></ul><ul id="c37b0743-9aca-4abd-9876-0ecd0681dd32" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-yellow">Isolation</mark></strong> = una transazione esegue indipendentemente dalle altre
+Se più transazioni eseguono in concorrenza, il DBMS garantisce che l’effetto netto è equivalente a quello di una qualche esecuzione sequenziale delle stesse.</li></ul><ul id="8057034f-9ba8-4842-988d-839fb5f290eb" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-yellow">Durability</mark></strong> = gli effetti di una transazione che ha terminato correttamente la sua esecuzione devono essere persistenti nel tempo
+Il DBMS deve proteggere il DB a fronte di guasti</li></ul><h2 id="d8e58779-67ea-4312-a760-d8bb2d863b4d" class="">Esiti di una transazione</h2><p id="51f7b981-4698-45ee-8f94-156e1b257fdf" class="">Nel modello considerato <strong><mark class="highlight-teal">una transazione</mark></strong> (il cui inizio viene indicato nel seguito dalla parola chiave <code>BEGIN</code>, anche se in SQL è implicito)
+<strong><mark class="highlight-teal">può avere solo 2 esiti</mark></strong>:</p><ol type="1" id="40f2374d-8daf-4f4a-8c78-7cc09f2b0e3e" class="numbered-list" start="1"><li><mark class="highlight-yellow"><strong>Terminare correttamente</strong></mark>:
+Questo avviene solo quando l’applicazione, dopo aver eseguito tutte le proprie operazioni, esegue una particolare istruzione SQL, detta <code>COMMIT</code> (o <code>COMMIT WORK</code>), che comunica “ufficialmente” al Transaction Manager il termine delle operazioni.</li></ol><ol type="1" id="a346a7a7-871f-43b5-a058-ef10a8145396" class="numbered-list" start="2"><li><mark class="highlight-yellow"><strong>Terminare non correttamente</strong></mark> (anticipatamente)<ol type="a" id="20b72150-0a53-4ab8-a856-920d3edbc38c" class="numbered-list" start="1"><li>È la transazione che, per qualche motivo, decide che non ha senso continuare e quindi “abortisce” eseguendo l’istruzione SQL <code>ROLLBACK</code> (o <code>ROLLBACK WORK</code>).</li></ol><ol type="a" id="474f653e-cb8d-4fc7-94c3-fd6bdc9c4e84" class="numbered-list" start="2"><li>È il sistema che non è in grado (ad es. per un guasto o per la violazione di un vincolo) di garantire la corretta prosecuzione della transazione, che viene quindi abortita.</li></ol></li></ol><p id="70cf2a46-fe61-4ead-a645-81ea07d532d7" class=""><em>Se per qualche motivo la transazione non può terminare correttamente la sua esecuzione il DBMS deve “disfare” (</em><em><code>UNDO</code></em><em>) le eventuali modifiche da essa apportate al DB.</em></p><h2 id="adf12d71-fc32-455e-a79e-024940c52e82" class="">Esecuzione seriale di transazioni</h2><p id="55f13ef7-b789-4096-b358-9daad51a8157" class="">Un DBMS, dovendo supportare l’esecuzione di diverse transazioni che accedono a dati condivisi, potrebbe eseguire tali transazioni in sequenza (“serial execution”).
+Ad esempio, due transazioni T1 e T2 potrebbero essere eseguite in questo modo, in cui si evidenzia la successione temporale (“schedule”) delle operazioni elementari sul DB:</p><figure id="bd9ff6f0-5dbe-4448-9c68-1f746d9fd847" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%204.png"><img style="width:144px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%204.png"/></a></figure><h2 id="5b446256-fae6-4ab0-af42-e1dcba237552" class="">Possibili errori</h2><h3 id="bb61b767-6c9a-4ccc-9373-740e0e009a2d" class="">Lost update</h3><p id="67104d48-79fb-4c94-9430-22dab3ce4a1b" class="">Il seguente schedule mostra un caso tipico di lost update, in cui per comodità si evidenziano anche le operazioni che modificano il valore del dato X e si mostra come varia il valore di X nel DB.</p><figure id="4c7de891-fe0f-45cf-bddb-18c7dfe092f1" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%205.png"><img style="width:336px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%205.png"/></a></figure><p id="6bea6c4d-cd66-4939-ad94-b2f30bf5faae" class="">Il problema nasce perché T2 legge il valore di X prima che T1 (che lo ha già letto) lo modifichi (“entrambe  vedono l’ultimo biglietto”).</p><h3 id="c8308723-df4a-43f4-b6e1-f83d1bc98f79" class="">Dirty Read</h3><p id="c34e1b5d-9e43-40cf-af6a-bccfe864bb5c" class="">In questo caso il problema è che una transazione legge un dato “che non c’è”:</p><figure id="35edc9f9-eff2-43d4-928a-1404379cb6ec" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%206.png"><img style="width:336px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%206.png"/></a></figure><h3 id="7a01584f-df66-4245-a353-76e324bfe68b" class="">Unrepeatable read</h3><p id="1b987196-fe9e-4330-9c07-1f3ae33e5fa0" class="">Ora il problema è che una transazione legge due volte un dato e trova valori diversi (“il prezzo nel frattempo è aumentato”):</p><figure id="75e92e1c-7450-4e2f-8565-993c6ff98dd8" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%207.png"><img style="width:384px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%207.png"/></a></figure><h2 id="def4d53c-a0cf-4aee-82e9-171d8e4083f1" class="">Riassumendo</h2><p id="29a11d37-f4bf-4688-beb7-52edcebef3a6" class=""><mark class="highlight-orange_background">Una transazione è un’unità logica di elaborazione che, nel caso generale, si compone di molte operazioni fisiche elementari che agiscono sul DB</mark>.</p><p id="4e7e5e1d-b406-45e9-a6e1-f2fe32b2a9d7" class=""><mark class="highlight-orange_background">Le proprietà di cui deve godere una transazione si riassumono nell’acronimo ACID</mark> (Atomicity, Consistency, Isolation, Durability)</p><p id="673c3ffa-1ba9-4d2b-bac6-124ecaba09ac" class="">Isolation richiede che venga correttamente gestita l’esecuzione concorrente delle transazioni.</p><p id="84051dae-7e2b-4763-8d38-30eeca38962f" class="">Consistency è garantita dal DBMS verificando che le transazioni rispettino i vincoli definiti a livello di schema del DB.</p><hr id="32debcf5-38d1-46a1-987d-c50d4e687470"/><h1 id="73adfaff-cf1a-4151-9ca6-6738dfde7724" class="">Fonti</h1><ul id="5acd13e1-df51-4b99-a612-1c358af32904" class="bulleted-list"><li style="list-style-type:disc">Riassunto Fragonas<figure id="1b9d7d8b-f450-4fad-b522-16f7ccb58411"><a href="https://docs.google.com/document/d/19ffw2w-5GIc7dBU0Q_iI9jeHIWeIOsVxFIlb4ju65gs/edit?usp=drivesdk" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href"><img src="https://accounts.google.com/favicon.ico" class="icon bookmark-icon"/>https://docs.google.com/document/d/19ffw2w-5GIc7dBU0Q_iI9jeHIWeIOsVxFIlb4ju65gs/edit?usp=drivesdk</div></div></a></figure></li></ul><ul id="a2aa6e39-4e79-46fb-be0c-5b9f386ac4d5" class="bulleted-list"><li style="list-style-type:disc">Transazioni<figure id="8f774b33-1224-4276-adc2-ff6f5387ffad"><a href="http://www-db.deis.unibo.it/courses/SI-T/PDF/04.8.SQL.transazioni-2p.pdf" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">http://www-db.deis.unibo.it/courses/SI-T/PDF/04.8.SQL.transazioni-2p.pdf</div></div></a></figure></li></ul><ul id="5cf9fff8-06de-46ae-8e83-ecb7ff649b4e" class="bulleted-list"><li style="list-style-type:disc">Altre pagine<figure id="1289ba5b-6a73-49a4-bd3d-148127a292b5" class="link-to-page"><a href="Informatica%20e9d66c3e2fa24b0b8d131b35184a2030/SQL%201289ba5b6a7349a4bd3d148127a292b5.html"><span class="icon">🗂️</span>SQL</a></figure><figure id="db663680-b718-487e-8b0d-646462355a4c" class="link-to-page"><a href="Informatica%20e9d66c3e2fa24b0b8d131b35184a2030/PHP%20db663680b718487e8b0d646462355a4c.html"><span class="icon">💻</span>PHP</a></figure><figure id="7fbafb2d-9481-4cba-bd26-3e13418f8671" class="link-to-page"><a href="Informatica%20e9d66c3e2fa24b0b8d131b35184a2030/Simulazione%20esame%207fbafb2d94814cbabd263e13418f8671.html"><span class="icon">💯</span>Simulazione esame</a></figure></li></ul></div></article></body></html>

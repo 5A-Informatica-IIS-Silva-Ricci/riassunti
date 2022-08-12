@@ -1,0 +1,27 @@
+# Capitolo 7 - La crisi del 1929
+
+## 📍1.
+
+Tra il 1922 e il 1929 gli Stati Uniti conobbero una forte crescita economica dovuta all'aumento della produzione industriale e dei consumi di massa. Grazie alla pubblicità, ai pagamenti rateali e alla nascita di nuove forme di distribuzione come i grandi magazzini, si diffusero nuovi prodotti destinati a rivoluzionare la vita quotidiana.
+
+Il desiderio di difendere il benessere raggiunto e impedire la diffusione di idee sovversive portò all'isolazionismo, alla xenofobia contro gli immigrati e i neri e al proibizionismo che però, invece di eliminare il consumo di alcol, ne favorì il commercio illegale. L'orientamento isolazionista fu sostenuto dal Partito Repubblicano, che governò gli USA per tutti gli anni Venti: si decise di non intervenire nelle questioni di politica internazionale e di non aderire alla Società delle Nazioni che era stata promossa dall'ex presidente democratico Woodrow Wilson.
+
+I repubblicani adottarono una politica liberista: ridussero le imposte dirette e la spesa pubblica e cercarono di favorire gli investimenti tenendo basso il tasso di interesse. La scelta di rinunciare a qualsiasi forma di intervento nell'economia permise la formazione di monopoli e oligopoli,
+
+Nel corso degli anni Venti l'investimento in Borsa divenne un fenomeno di massa e il valore delle azioni raddoppiò con facili guadagni per gli investitori.
+
+Malgrado il boom della Borsa, la situazione dell'economia reale era differente: il potere di acquisto dei consumatori era molto diminuito e, quando il mercato dei beni di consumo durevoli raggiunse la saturazione, l'economia americana andò incontro a una crisi di sovrapproduzione. La bolla speculativa si gonfiò improvvisamente e, quando gli investitori cercarono di vendere i loro titoli, il valore delle azioni crollò.
+
+La crisi borsistica produsse una serie di effetti a catena. I risparmiatori che avevano acquistato a credito i pacchetti azionari, confidando nelle opportunità offerte dal gioco speculativo, non poterono più far fronte agli impegni. Gli agenti di Borsa, a loro volta, si erano indebitati con le banche, e dovettero denunciare la propria insolvibilità.
+Gli effetti del crollo di Wall Street, dunque, si trasmisero al sistema creditizio. Molte banche dovettero chiudere, scatenando il panico tra i risparmiatori. I correntisti, temendo l'azzeramento dei propri depositi, si affrettarono a ritirarli, riducendo così ancor più la liquidità a disposizione degli istituti di credito. Questi d'altronde, in previsione di tempi difficili, tentavano di trattenere le proprie riserve e concedevano prestiti solo in casi eccezionali. Il risultato fu una gigantesca diminuzione della liquidità, con una serie di gravi conseguenze sul piano dell'economia reale. Le aziende, non potendo più accedere al credito per gli investimenti, riducevano la produzione, tagliavano i salari e licenziavano.
+Nel 1932 la produzione industriale scese di 10 punti percentuali rispetto a tre anni prima, mentre il numero dei disoccupati giunse alla cifra esorbitante di quasi 14 milioni. La disponibilità finanziaria delle famiglie americane subì dunque una caduta verticale, aggravata dall'impossibilità di accedere ai mutui edilizi e di realizzare acquisti a rate.
+Il crollo della domanda complessiva che ne conseguì determinò un'ulteriore contrazione della produzione industriale.
+
+Ben presto la crisi coinvolse anche le banche; non riuscendo più ad accedere ai prestiti, le aziende cominciarono a tagliare i salari e a licenziare i dipendenti. La disoccupazione toccò livelli altissimi e i consumi crollarono, di conseguenza anche la produzione. La crisi economica americana (detta Big Crash) coinvolse anche l'Europa. In particolare, ebbe conseguenze pesantissime sull'economia tedesca, gravata dai debiti contratti per sostenere le spese di riparazione della prima guerra mondiale.
+
+Nelle elezioni del 1932 il democratico Franklin Delano Roosevelt sconfisse il presidente repubblicano Hoover, considerato troppo legato agli interessi della finanza. Roosevelt abbandonò il dogma liberista secondo cui il mercato ha la capacità di riequilibrarsi spontaneamente e inaugurò un nuovo corso, detto appunto «New Deal», basato sull'intervento dello Stato per contrastare la crisi economica.
+
+Lo Stato intervenne sul sistema finanziario per svalutare il dollaro e favorire le esportazioni; intervenne sul sistema fiscale per ridurre le sperequazioni; limitò la sovrapproduzione per contrastare la caduta dei prezzi; finanziò grandi opere pubbliche per creare nuovi posti di lavoro; garantì sussidi ai disoccupati.
+
+Il New Deal incontrò le resistenze delle lobby conservatrici (in particolare di imprenditori e finanzieri), che si appellarono alla Corte suprema per mettere in discussione la costituzionalità delle leggi proposte da Roosevelt. Il presidente si appellò al popolo americano e riuscì a far sostituire alcuni giudici della Corte.
+Il New Deal gettò le basi del Welfare State, che assicura assistenza sociale ai cittadini; inoltre, l'espansione dell'amministrazione pubblica e della burocrazia creò nuovi posti di lavoro. La ripresa fu lenta e non toccò tutti i lavoratori, ma la politica di Roosevelt ebbe un grande successo perché seppe infondere speranza e ottimismo.

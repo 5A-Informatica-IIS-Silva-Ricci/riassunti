@@ -1,0 +1,671 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Giacomo Leopardi</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="504fce2a-426e-4f0d-bd5e-8cc0e3d7bbd1" class="page serif"><header><div class="page-header-icon undefined"><span class="icon">😔</span></div><h1 class="page-title">Giacomo Leopardi</h1><table class="properties"><tbody><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data nascita</th><td>1798</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Anni vita</th><td>39</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data morte</th><td>1837</td></tr></tbody></table></header><div class="page-body"><nav id="9726bcae-0ace-490f-9e94-e654f10a864c" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#52f337d1-c2ad-4027-9945-c18c6024e8eb">Biografia</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1dd8dee4-3dec-41df-888b-1bd5b9ec0708">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#eb07f828-9c7b-4b25-96ab-92df38fa2c95">Lo Zibaldone</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ad24b401-5d3c-4fba-83c8-3e85e8809a4d">I <em>Canti</em> </a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ae906d21-6bf9-45f7-aadd-7f7c279d943a">Canzoni</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#4c51247a-f313-461d-b318-bee12c17f259">Idilli</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b46bc9e6-ea2c-4eac-a551-8200780e3ae5">Canti pisano - recanatesi</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#980825bf-d658-48bf-802c-ae88f977a1d6">Ciclo di Aspasia</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#61f16727-86f6-40f0-8a9f-5a231a2d95db">Le Operette Morali </a></div></nav><h1 id="52f337d1-c2ad-4027-9945-c18c6024e8eb" class="">Biografia</h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="fabf270d-d564-4c0d-b7a4-6a46e5e12f91"><div style="font-size:1.5em"><span class="icon">🐣</span></div><div style="width:100%">A <strong>Recanati, </strong>nel 1798 nasce Giacomo Leopardi, primo genito di una stirpe nobile.</div></figure><p id="af7788b2-57aa-4c0c-9e24-8e36e570136b" class="">Il padre, il conte Monaldo Leopardi, è un <strong>erudito</strong> che attribuisce allo studio un valore sommo ed educa i propri figli a trascorrere nella <strong>ricca biblioteca di famiglia</strong> gran parte del tempo fin dalla primissima infanzia.</p><p id="78366d1b-3163-4be1-aed2-dcf891690cf9" class="">La madre, la marchesa Adelaide Antici, è una donna <strong>dura e severa</strong> con i suoi figli e si occupa con rigore dell’amministrazione economica della famiglia.</p><p id="b2b43b95-efd3-4c4b-9622-50f255fcf571" class="">Per questa ragione e per la <strong>rigida educazione religiosa</strong> ricevuta, Adelaide rinuncia poco più che ventenne alla propria giovinezza e si consacra a due occupazioni esclusive: appianare i debiti familiari e dedicarsi a pratiche devote.</p><p id="74becb20-81dc-46c3-aad7-a4654b7f0fd4" class=""><strong>Giacomo</strong> si distingue molto presto dai fratelli, impiegando negli studi una <strong>passione smodata</strong> e dimostrando un <strong>talento straordinario</strong>; quando il ragazzo compie quattordici anni il prete precettore che era stato suo maestro smette le sue lezioni perchè non aveva più niente da insegnarli.</p><p id="087849e6-49ca-4078-8fed-3aedbcaa6a4a" class="">Dagli appunti trovati nelle sue carte, probabilmente annotati intorno ai vent’anni, emerge la figura di un fanciullo <strong>disposto alla fantasia, curiosissimo</strong> di tutto.</p><p id="37bc9ce0-567a-4a3c-9334-d86f42aacb9d" class="">Giacomo ricorda il suo <strong>desiderio di primeggiare</strong> tra i fratelli e il suo <strong>odio per la tirannide.</strong></p><p id="1cf0ea04-5ab7-4a89-bbdc-7b81b2c3d1fe" class="">Trova spazio l<strong>’apprensione per chiunque soffra</strong>, che lo fa fuggire quando sente rimproverare a voe alta qualche servitore di casa o gli fa sperare che un ragazzetto guardato dalla finestra di casa risparmi la lucciola che gli si è posata addosso.</p><p id="88efcc68-b6c9-4e77-9333-2f724558004a" class="">La reclusione genera nel giovane Giacomo <strong>desideri di vedere il mondo.</strong></p><p id="25bed060-d452-419d-9213-e365464e15d6" class="">Questa intensa vita interiore si esprime non soltanto nella scrittura di <strong>opere erudite e filologiche</strong>, ma anche in <strong>poesia: </strong>ha soltanto diciotto anni quando pubblica <em>Le rimembranze.</em></p><p id="ff3b8062-5b59-4491-aaef-53f60c546ab6" class="">Il giovane prova una sofferenza sempre più forte per i limiti di <strong>Recanati, </strong>è infatti una <strong>società chiusa </strong>e del tutto arretrata sul piano culturale.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8a04a671-7c2c-4795-81bd-5c30f7b028c5"><div style="font-size:1.5em"><span class="icon">💭</span></div><div style="width:100%">Leopardi assume una posizione molto personale <strong>a favore del Classicismo</strong></div></figure><hr id="f3556ab0-3d40-4ece-a8b7-a950cbc8181b"/><p id="57db62ea-762c-427a-9aaf-c50834607d07" class="">A diciannove anni Leopardi entra in corrispondenza con il letterato Pietro <strong>Giordani.</strong></p><p id="5ea2ee28-3cd6-4680-94c0-fbf7a76c5adf" class="">Diventa subito per Leopardi un <strong>riferimento intellettuale e affettivo </strong>fondamentale.</p><p id="37d1d3de-1934-49f8-9058-ac9d269a3c9e" class="">Le lettere che Leopardi invia a Giordani testimoniano un’ansiosa esigenza di riconoscimento e la <strong>ricerca di quel calore umano</strong> di cui l’arida educazione familiare lo aveva privato.</p><p id="04aeeb9b-969f-4085-b698-ee38e4999728" class="">In quello stesso 1817 Leopardi inizia ad annotare sentimenti e riflessioni in quaderni che denominerà “<strong>Zibaldone dei pensieri</strong>” e sarà pubblicato soltanto dopo la morte dell’autore.</p><p id="36818cbf-fd8d-4243-b286-d43b849abe21" class="">Intanto però, intorno ai vent’anni, Leopardi comincia a subire nel corpo i <strong>segni della malattia.</strong></p><p id="3b4d0be1-af53-496f-924b-4c5176c51678" class="">Leopardi attribuisce questa deformazione fisica ai propri studi eccessivi, e <strong>se ne colpevolizza; </strong>egli mostra la propria amarezza per essersi guastato la salute e soprattutto <strong>l’aspetto esteriore</strong>, quello a cui gli uomini attribuiscono maggiore importanza.</p><p id="246d0bc2-48c6-492e-980e-61e0c7a33209" class="">In verità gli studiosi hanno ipotizzato che Leopardi sia stato colpito da una malattia batterica, la <strong>tubercolosi ossea.</strong></p><p id="2433e80a-1deb-4f59-a935-4095bfa1fd8c" class="">Contemporaneamente ai sintomi fisici si manifestano nel giovane anche <strong>afflizioni dell’anima</strong>: gravi e ricorrenti malinconie che lo gettano in uno stato di profonda prostrazione.</p><p id="f840d638-a315-43df-9d3d-8e034dfd55c8" class="">A questa infelicità Leopardi tuttavia non si rassegna ma resiste, lotta, chiede aiuto alle persone che ama.</p><p id="76085b54-6b87-48b4-8538-19741c52e0b7" class="">Nel luglio 1819, appena raggiunta la maggiore età, Leopardi <strong>medita la fuga </strong>e si prepara a partire da casa in piena notta, ma viene scoperto.</p><p id="dbb45486-77fb-4452-adc5-2a53e07419ec" class="">il <strong>fallimento</strong> da un lato accresce la sua infelicità, dall’altro rende sempre più difficile e contraddittorio il rapporto con il padre.</p><p id="ad065b9f-1849-4c76-a7f8-ec138aee0119" class="">Leopardi mostra una profonda <strong>avversione per</strong> questa <strong>possessività paterna</strong>, ma al contempo <strong>non riesce a scindere</strong> definitivamente <strong>il suo legame con lui</strong>, e continuerà a scrivergli per tutta la vita.</p><p id="48dfc2b2-5ab0-4d67-b71a-8bf91db8cef2" class="">L’autunno del 1819 è certamente per Leopardi il tempo dell’angoscia per la fine delle sue spernza di libertà, ma è anche la stagione in cui egli compone una delle sue liriche più intenste, <em>L’infinito.</em></p><p id="13b9db2c-b007-4362-a4f5-aa2feeb1d67b" class="">Nei tre anni successivi egli non smette di cercare <strong>impieghi e sistemazioni esterne</strong> con l’aiuto dei parenti e degli amici; quando sta un po’ meglio legge, scrive, fa progetti, preso da un crescente desiderio di vita e azione.</p><p id="35fe0313-23d4-4c4c-96ec-1b2f4997732b" class="">Nel novembre <strong>1822</strong> il padre acconsente finalmente a mandarlo a Roma, nel palazzo degli zii materni; la sua speranza è che egli accetti di diventare prete.</p><p id="f02a9c3d-5abb-4974-8c0f-ecf44b156588" class="">Roma però gli appare <strong>frivola e intellettualmente arretrata</strong>, la sua vastità lo respinge, l’<strong>ipocrisia</strong> della corte papale gli ripugna.</p><p id="d2ba453e-3c6f-4f52-952c-4a1e889ac308" class="">Nell’estate del <strong>1823</strong> egli ritorna a Recanati dove si ferma due anni.</p><p id="adfea78b-4175-4c81-a15d-c163c551beb8" class="">Si approfondisce in quel tempo la sua <strong>riflessione filosofica</strong>, che approda a <strong>conclusioni</strong> universalmente <strong>pessimistiche.</strong></p><p id="3f3855da-a7ed-4196-8965-1ada081e1899" class="">Questa riflessione lo conduce alla scrittura di alcune prose satiriche e filosofiche, le <em>Operette morali.</em></p><p id="9e9e8ffb-ec25-411e-94da-b009fb71ee71" class="">Intanto Leopardi è entrato in corrispondenza con alcuni letterati fiorentini, tra cui <strong>Viesseux.</strong></p><p id="699305b7-8fb6-4f55-b98c-0f2ef8383a1d" class="">Conosce anche l’editore milanese Fortunato Stella, che gli dà infine l’occasione di lasciare Recanati per recarsi a <strong>Milano</strong>.</p><p id="c4952abc-8a79-478e-9fb6-f31fd853fa0b" class="">Inizia così il suo <strong>lungo peregrinare</strong> tra Milano, Bologna, Firenze e Pisa, sempre alla ricerca di una sistemazione.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="47b61e89-8364-4071-89a1-f907ef7b3b2d"><div style="font-size:1.5em"><span class="icon">♥️</span></div><div style="width:100%">Nella primavera del 1826 Leopardi conosce a Bologna la <strong>contessa Teresa Carniani Malvezzi,</strong> con la quale inizia una <strong>assidua frequentazione.</strong></div></figure><p id="dae7cb93-4889-4c30-9550-7180c17f4719" class="">Alla fine dell’estate però la contessa tronca bruscamente gli incontri, malvisti dal proprio marito, scrivendo a Leopardi che la conversazione da sola con lui la annoia.</p><p id="9abf3d21-ae0b-4558-a373-ec928074cf37" class="">A Firenze, dove trascorre l’estate del 1827, Leopardi sente crescere la propria sofferenza, misurando la propria <strong>distanza dai letterati fiorentini</strong>, fiduciosi nelle riforme e nel progresso.</p><p id="f9f719d4-08b7-4544-a79a-e07a70007203" class="">in settembre partecipa a un fessteggiamento in onore di <strong>Manzoni</strong>, che ha appena pubblicato <em>I promessi sposi.</em></p><p id="dc966e16-433a-46a2-806f-ed9f597b8780" class="">In autunno si trasferisce a <strong>Pisa</strong> dove trascorre un periodo di <strong>temporaneo sollievo: </strong>la sua salute migliora.</p><p id="03dda2c3-52cb-4dbc-9bc3-9a4ecd89bc0d" class="">Nel maggio di quella stessa primaverea muore di tisi a ventiquattro anni il fratello Luigi.</p><p id="e91a6c3a-5bae-4f8e-b00c-d3a78116b89f" class="">Le condizioni di salute di Leopardi gli consentono di tornare a Recanati soltanto a novembre.</p><p id="40aecb70-1ea1-4466-8309-bda2500a98d2" class="">Il rientro a casa è per Leopardi un <strong>patimento fisico e morale. </strong>In quella triste solitudine dell’estate - autunno 1829 egli scrive alcune tra le sue poesie più importanti che costituiscono i <em><strong>Canti pisano - recanatesi.</strong></em></p><p id="48769568-0d9d-4806-b8a2-6102def12820" class="">Le drammatiche lettere che Leopardi invia ai suoi corrispondenti da Recanati danno luogo a una specie di <strong>generale mobilitazione</strong>: inizilamente gli amici fiorentini sperano che egli possa ottenere con le sue <em>Operette morali</em> un cospicuo premio in denaro. Alla fine i letterati fiorentini gli offrono il proprio <strong>sostegno economico per un anno</strong>, così da consentirgli di lasciare Recanati e trovare una stabile sistemazione a Firenze.</p><p id="c73e0fef-f0bd-465f-ba65-5f4804290fc3" class="">Nel 1830 Leopardi parte da Recanati e non vi farà mai più ritorno.</p><p id="39fdd1f8-0d44-43ea-9183-05366cced8af" class="">A <strong>Firenze</strong> conduce una <strong>vita meno solitaria</strong>, e frequenta le case degli amici; tra cui anche <strong>Antonio Ranieri.</strong></p><p id="efeebf93-f156-4ce5-af74-ade5ba9892df" class="">Inizia quindi nell’estate del 1830 lo <strong>stretto legame di amicizia </strong>tra Leopardi e Ranieri.</p><p id="ae2350eb-d2be-468c-834d-a84495a51b71" class="">A Firenze Leopardi incontra una nobildonna, la bella trentenne <strong>Fanny Targioni Tozzetti.</strong></p><p id="1cb126aa-4657-4838-9443-f1dbe9fbd29a" class="">La donna ha la passione di collezionare manoscritti autografi di grandi scrittori e Leopardi gliene procura di rari, facendole spessi visita, e nutrendo per lei un segreto sentimento.</p><p id="56915291-2229-4cc7-ac1b-a314e0d92569" class="">SI crea così una <strong>bizzarra trama amorosa</strong>: Leopardi ama Fanny, la quale ama Ranieri, che ama Pelzet.</p><p id="86edecc9-99d7-4b32-bcc3-c5cc23942fb2" class="">Ispirate a questa esperienza sono le poesie del “<strong>Ciclo di Aspasia</strong>”.</p><p id="56156604-88ac-4382-a84c-1c101b0a9582" class="">A novembre del 1832 Leopardi <strong>scrive alla madre</strong> per ottenere un aiuto economico.</p><p id="0e70083b-14b2-48e9-b355-01434d302feb" class="">Il sussidio richiesto, che è minimo, viene accordato.</p><p id="be096433-b2f4-488c-982e-cb9b684adc15" class="">Ranieri rimane privo di denaro e torna in famiglia a Napoli.</p><p id="7b3eadf1-cd3d-4566-bd8e-2fd34a32b977" class="">Il 2 settembre 1833 i due amici <strong>partono per Napoli</strong>.</p><p id="a42c14ee-3733-40ee-a31c-b3cb76d0800a" class="">La vita di Leopardi qui è inizialmente più <strong>aperta e socievole.</strong></p><p id="787cc022-6253-4870-912b-31f28b1eaa83" class="">Per fare fronte alle incessanti <strong>difficoltà economiche</strong> Leopardi tenta di pubblicare una seconda edizione dei <em>Canti </em>e una edizione ampliata delle <em>Operette morali</em>, ma entrambi i testi venogno sequestrati dalla <strong>censura </strong>del governo borbonico.</p><p id="5ba6d9ae-3116-4b54-9620-57ec56ffc9a2" class="">Sempre più ammalato, Leopardi si trasferisce nel 1836 con Ranieri e Paolina, a causa di un’epidemia di <strong>colera</strong> che rende del tutto sconsigliabile un ritorno in città, i due amici si trattengono nella villa fino al 1837.</p><p id="d0f7cfbf-f116-436e-9ac2-1a40d2f93a6b" class="">Anche <strong>l’ultima lettera</strong> di Leopardi è rivolta al padre.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9d3e9056-5fc2-41ea-b913-91f9e50a2212"><div style="font-size:1.5em"><span class="icon">🪦</span></div><div style="width:100%">La sua morte avviene poco più di due settimane dopo, il 14 giugno 1837 e viene descritta da Ranieri nel suo <em>Supplemento alla notizia intorno alla vita ed agli scritti di Giacomo Leopardi.</em></div></figure><h1 id="1dd8dee4-3dec-41df-888b-1bd5b9ec0708" class="">Brani</h1><p id="44088524-7d4c-48fd-8089-ad9e9353f178" class="">→ “Il giardino sofferente” - 32/34</p><p id="9714cf11-a22d-49e7-8a26-6f6eabfe2376" class="">→ “L’infinito” - 53/57</p><p id="0dfb073f-7720-4c95-8fcd-720f6afafdb1" class="">→ “A Silvia” - 63/68</p><p id="d04fc79c-09a9-48ea-8246-249316fb59ae" class="">→ “Dialogo di un venditore di almanacchi e di un passeggere” - 157/160</p><hr id="8f90cff6-a2b4-4c85-bb89-6b721aac3323"/><h1 id="eb07f828-9c7b-4b25-96ab-92df38fa2c95" class="">Lo Zibaldone</h1><p id="5f2d02c2-b6ee-4943-8be9-2c45588ced21" class="">Leopardi inizia a scrivere opere erudite quando è ancora un bambino.</p><p id="a4c053bb-bba0-41d5-9b75-7834e697d0b0" class="">Una prima svolta nella sua vita intellettuale si ha nel 1815 - 1816, quando abbandona i testi eruditi e scopre le <strong>opere poetiche</strong> degli antichi; affascinato dalla loro bellezza, Leopardi le <strong>traduce.</strong></p><p id="f271a450-387c-4b0d-85dc-a738ac8a6fd0" class="">Più tardi egli descriverà questa sua giovanile scoperta della poesia come un graduale passaggio “dall’erudizione al bello”, ma non abbandonerà mai la <strong>filologia</strong>: dotato della virtù tipica dei filologi, <strong>l’intuzione</strong>, egli interverrà più volte sui testi antichi per sanare i passi illeggibili o mancanti, proponendo congetture che troveranno conferma dalla scoperta di papiri.</p><p id="e1db1bba-cc23-45cd-bca9-cd25053c68ef" class="">Nel pensiero di Leopardi si affermerà stabilmente la <strong>forza positiva dell’immaginazione.</strong></p><p id="25f1acec-3280-4e50-be47-edf901b328c3" class="">Leopardi ha diciannove anni quando decide di tenere memoria delle riflessioni e dei commenti che sente nascere in sé con il procedere degli studi: egli comincia dunque nel 1817 ad <strong>annotarli su fogli sparsi</strong> e senza un ordine prestabilito, ma in bella e nitida grafia.</p><p id="f022e1f4-0f34-4542-b8b2-e2a2f0632629" class="">La raccolta degli appunti e dei pensieri diventa a poco a poco un informe e <strong>smisurato scartafaccio, </strong>senza un titolo o un ordinamento, e le sue stesse crescenti dimensioni rendono sempre più difficile il recupero delle annotazioni sparse.</p><p id="20797ecf-a041-49c1-b8b1-ec492df51f12" class="">I temi su cui Leopardi scrive sono molteplici: note di <strong>lingua e filologia, riflessioni filosofiche e letterarie</strong>, accostate una all’altra secondo la <strong>successione spontanea</strong> in cui si presentano alla sua mente.</p><p id="aa0a1e4f-0054-4bd8-a9e6-0c4e91314428" class="">Questo diario del pensiero proseguirà per circa quindici anni.</p><p id="6b9cf151-d952-4589-8619-9bb179aa3752" class="">Leopardi <strong>cerca</strong> ripetutamente <strong> di catalogare i pezzi sparsi</strong> ma soltanto nel <strong>1845</strong> uscirà postuma una raccolta di centoundici <em><strong>Pensieri.</strong></em></p><p id="ed8c4586-5881-44bc-ba73-f637e8eee1b9" class="">La voluminosa cartella di fogli è per Leopardi tanto preziosa che egli la porta <strong>sempre con sé</strong> negli spostamenti città in città; priva di titolo e intestazione rimarrà così, inedita e non organizzata, fino alla morte dell’autore.</p><p id="0641d0f0-61f3-4a73-8bbe-a9b9e107450d" class="">Il manoscritto resta nelle mani dell’amico Ranieri, che a sua volta lo lascia in eredità alla <strong>Biblioteca Nazionale di Napoli.</strong></p><p id="17bd278b-5671-49b7-bb0e-dee5c340cd9a" class="">La parola “Zibaldone” significava ai tempi “insieme confuso di cose”, e in particolare indicava i <strong>quaderni di appunti</strong> in cui gli studiosi erano soliti annotare i passi degli autori letti.</p><p id="3deccfeb-a5d2-476c-ac75-491b09afb0e2" class="">L’opera di Leopardi non si riduce tuttavia alla semplice annotazione di passialtrui, ma si costituisce come una <strong>raccolta di pensieri originali, riflessioni, intuizioni.</strong></p><p id="96b36448-5537-4bfb-9d65-1d90d648e3bb" class="">La natura provvisoria dello <em>Zibaldone</em> è testimoniata dalla <strong>scrittura, rapida e immadiata</strong>, come per seguire il ritmo veloce del pensiero: talvolta le parole sono abbreviate.</p><p id="4a8b1fd9-ebf3-4669-9a10-ed428990c4c8" class="">La struttura frammentaria e asistematica dello Zibaldone si deve anche al particolare <strong>metodo di indagine intellettuale</strong> di Leopardi: egli è convinto che l’esame a cui la ragione sottopone lar ealtà non sia sufficiente a cogliere il cuore delle cose, la loro vita essenziale e autentica; essa può essere intesa soltanto attraverso uno sguardo nutrito di <strong>immaginazione e di sentimento.</strong></p><p id="d1458a1b-0b37-4e5d-b283-895923ca3ec2" class="">Pur nella varietà dei temi dello <em>Zibaldone</em> si può dire che l’interesse centrale del pensiero di Leopardi sia la questione della felicità.</p><p id="cac970c1-c510-44ca-a5b8-6c084ea1917b" class="">Il problema si pone a partire dal suo contrario, cioè dalla bruciante <strong>esperienza dell’infelicità</strong>.
+Egli ha vissuto da ragazzo slanci e passioni smisurati, lasciandosi trascinare dalla forza poetica delle sue letture, e ha coltivato imprecisati <strong>sogni di grandezza e di gloria</strong>, ma presto deve scontrarsi con una <strong>realtà ostile</strong> che lo ostacola e lo spegne.</p><p id="3e3cfeeb-f202-4a4e-818b-1c7f8bc5c1a4" class="">Il pensiero leopardiano passa <strong>dal particolare</strong> al <strong>generale.</strong></p><p id="d397033a-f44a-41b6-8693-5f3ebc111c96" class="">La conclusione è radicalmente negativa: <strong>l’infelicità è la legge universale, </strong>a cui nessun essere vivente può sottrarsi.</p><p id="7074c691-e156-4473-b5c5-6c701e21a7a0" class="">Strettamente connesso al problema della felicità è il <strong>rapporto tra natura e ragione</strong>.</p><p id="49227551-6a0d-4914-a18d-ef586e06a9ce" class="">Alla natura in generale Leopardi attribuisce spesso una volontà, una specie di <strong>divinità laica e onnipotente.</strong></p><p id="63277c13-2174-4a92-9155-8ff6210a6292" class="">Egli considera la natura un <strong>principio buono e scorrevole</strong> e fa invece ricadere sulla ragione la colpa dell’infelicità umana.</p><p id="1f031c1a-1567-4fe7-98e7-f3644e7fe459" class="">Per questo gli uomini antichi erano più felici, perchè più immersi nella <strong>fantasia e nelle illusioni</strong>.</p><p id="e0027054-f532-4908-8566-6cff0d451685" class="">Secondo Leopardi inoltre l’abitudine spegne il piacere.</p><p id="a9f81e2b-1ba2-46a9-9717-73531263656b" class="">Nel <strong>1824</strong> compare all’improvviso un <strong>ragionamento radicalmente negativo</strong>, in cui la benignità della natura viene definitivamente abbandonata.</p><hr id="3e60af77-83b4-420f-a2fd-76012c2996c4"/><h1 id="ad24b401-5d3c-4fba-83c8-3e85e8809a4d" class="">I <em>Canti</em> </h1><p id="2fd1ecfb-fdcb-41ae-8734-6c966a4dc5fc" class="">Le poesie di Leopardi escono per la prima volta a <strong>Firenze</strong> nel <strong>1831</strong> in una raccolta intitolata <em>Canti.</em></p><p id="b0d95466-ee54-45c9-9a8f-a88cd5fb67ad" class="">Una seconda edizione dei <em>Canti</em> corretta e ampliata esce a <strong>Napoli nel 1835.</strong></p><p id="fc84039e-0362-44c5-a036-ee7662f09ae6" class="">Il titolo è volutamente generico, infatti indica per Leopardi <strong>la poesia lirica in generale.</strong></p><p id="26cc2dec-4e50-4ae6-9a0d-0bd3f4f10fdd" class="">Il genere lirico è infatti <strong>l’espressione libera dell’animo</strong> dell’uomo, proprio anche di chi non ha cultura, ed è capace di <strong>consolare</strong> attraverso la <strong>bellezza della parola.</strong></p><p id="829e997e-2054-42cc-a220-f8c454422918" class="">Con il titolo vuole dunque alludere sia all’autonomia dei suoi testi rispetto alle distinzioni metriche tradizionali e alle loro regole, sia alla sua idea della poesia come espressione primaria e autentica dell’uomo.</p><p id="55fe99b3-2235-4f4a-a567-e03b7f521391" class="">Si possono individuare nel libro cinque gruppi di testi successivi:<div class="indented"><ul id="2b39adbd-069e-427d-9a5a-473a26ca6673" class="bulleted-list"><li style="list-style-type:disc">Canzoni</li></ul><ul id="53c3831a-00b4-4543-a163-bf88b9cceef5" class="bulleted-list"><li style="list-style-type:disc">Idilli</li></ul><ul id="8a3c54b8-dd95-4eb5-8257-44cbc9619a9e" class="bulleted-list"><li style="list-style-type:disc">Canti pisano - recanatesi</li></ul><ul id="0a0ea626-6875-4434-b6a0-bc46049406b4" class="bulleted-list"><li style="list-style-type:disc">ciclo di Aspasia</li></ul><ul id="8dd3db6e-2ced-4563-8b58-0d6defe7d7a6" class="bulleted-list"><li style="list-style-type:disc">Ultimi canti</li></ul></div></p><h2 id="ae906d21-6bf9-45f7-aadd-7f7c279d943a" class="">Canzoni</h2><p id="1c3d4778-95dc-4540-9bab-cb2b71299a74" class="">I <strong>temi</strong> sono <strong>patriottici: </strong>il poeta deplora la decadenza dell’Italia e la diffusa viltà dei popoli nell’età della Restaurazione.</p><p id="1567394a-a087-4640-8e88-c67932378931" class="">Sono gli anni in cui considera la natura come entità benevola.</p><p id="c2f300a5-c022-42fb-8a0c-8458337b07cc" class="">Le canzoni sono scritte in una <strong>lingua difficile, alta, densa di figure retoriche.</strong></p><p id="29d5af87-56ba-4786-ac70-3cf2a89e1104" class="">Il ritmo è rapido ed energico.</p><h2 id="4c51247a-f313-461d-b318-bee12c17f259" class="">Idilli</h2><p id="3bea2a5e-af0c-44fe-bd09-c6a9434c2d29" class="">Gli idilli sono <strong>poesie più private e soggettive</strong>, in cui l’infelicità dell’io lirico appare strettamente unita alle vicende esistenziali che lo riguardano.</p><p id="4f86273a-b748-4020-807f-6b081a9aa2bf" class="">L’unico conforto al presente freddo e ostile è il <strong>ricordo</strong> del passato, anche se triste, o la forza creatrice dell’<strong>immaginazione</strong>.</p><p id="896a9da2-4645-4ddc-a2a8-15fc6b4e6443" class="">Gli idilli sono poesie più brevi delle canzoni, scritte in <strong>endecasillabi sciolti,</strong> con una lingua più semplice e una sintassi meno elaborata.</p><h2 id="b46bc9e6-ea2c-4eac-a551-8200780e3ae5" class="">Canti pisano - recanatesi</h2><p id="dc12e1d8-563c-4bf7-ac97-10a8e5a8e8c5" class="">In questi canti è continuo lo scambio tra <strong>parti descrittive e sentimentali e parti riflessive</strong>.</p><p id="44e5d41e-f30e-4952-bcf7-11dca146c157" class="">il lettore non ha però mai l’impressione di trovarsi di fronte al freddo ragionamento di un filosof, ma di assistere piuttosto all’<strong>autentica sofferenza</strong> di un uomo che ama disperatamente la pienezza vitale e ne conosce l’illusorietà.</p><p id="1477bc3e-c802-410a-912d-1953b5f720de" class="">La lingua di questi canti si avvicina a quella degli idilli per <strong>l’indeterminatezza lessicale e la musicalità</strong>, per la compresenza di <strong>parole semplici </strong>e <strong>letterarie</strong>.</p><p id="6a255c0d-d260-4eb8-939e-85889e8aa2e1" class="">A parte da <em>A Silvia</em><strong><em><em> </em></em></strong>Leopardi elabora la cosidetta “<strong>Canzone libera</strong>”, in cui <strong>endecasillabi e settenari si succedono liberamente </strong>in base alle esigenze.</p><h2 id="980825bf-d658-48bf-802c-ae88f977a1d6" class="">Ciclo di Aspasia</h2><p id="a8c2b71b-dd0c-46bb-ae52-60ccceebac85" class="">Il tema unico di questi testi è il <strong>sentimento amoroso</strong> che viene esaminato come una <strong>forza potentissima</strong>.</p><p id="383cd691-e9eb-4a1f-ad68-663df865365d" class="">In questo periodo infatti Leopardi è innamorato della nobildonna <strong>Fanny Targioni Tozzetti.</strong></p><p id="f6525df1-b525-411e-a761-720c6aed6683" class="">Il <strong>sentimento</strong> rivela la sua natura <strong>ingannevole.</strong></p><hr id="620e50a7-7ff1-4d47-9d2c-d10c41777aac"/><h1 id="61f16727-86f6-40f0-8a9f-5a231a2d95db" class="">Le Operette Morali </h1><p id="13fc1701-b037-4a19-babe-a9fe72240d44" class="">Leopardi ha ventun anni quando comincia a pensare alla scrittura di un’operea letteraria in prosa.</p><p id="a3249877-b34b-4fb2-b31b-4f64ee56c8ad" class="">Egli abbraccia infatti il proposito di scrivere un testo che contenga la sua <strong>riflessione filosofica</strong> e la diffonda tra i lettori contemporanei: non però un trattato teorico, bensì un’<strong>opera d’invenzione.</strong></p><p id="6f22a372-1e0e-42b0-985d-3b7aeeba016a" class="">In questo stesso anno, come testimoniano gli appunto dello <em>Zibaldone</em>, matura il <strong>pensiero negativo</strong> riguardo alla condizione umana e al tempo presente.</p><p id="43bb7551-2b77-445b-be6a-2e29f6d86c4a" class="">Il diminutivo “<strong>operette</strong>” allude sia alla dimensione dei testi che compongono l’opera, sia al carattere apparentemente <strong>lieve</strong> e talvolta <strong>scherzoso</strong> della scrittura, mentre l’aggettivo “<strong>morali</strong>” si riferisce al loro <strong>contenuto di pensiero</strong>.</p><p id="a3ed673a-1d44-4cd0-9dcf-531d35e67ca8" class="">Le <em>Operette Morali</em> di Leopardi si presentano come un libro fuori moda, respingente per la sua <strong>filosofia negativa</strong> e scritto in una lingua tanto elevata da potere essere apprezzata da pochi.</p><p id="cf342e9d-44f5-4299-aff3-b04166287e55" class="">Leopardi non resta indifferente all’incomprensione dei lettori, che anzi <strong>patisce</strong> come un vero e proprio <strong>rifiuto personale</strong>; egli infatti ha concentrato in quel libro l’essenza del suo pensiero e della sua vita.</p><p id="6056afd2-f044-4648-8bec-adf0ed0a7724" class="">Le incomprensioni e le critiche non scoraggiano tuttavia Leopardi, che continua a investire nel progetto le proprie energie intellettuali e a scrivere <strong>nuovi testi</strong> da inserire nelle edizioni successive.</p><p id="946540d4-f41b-41d6-9544-5f60ce9b106e" class="">L’edizione finale delle <em>Operette morali</em> costituita da ventiquattro testi, esce <strong>postuma a Firenze</strong>.</p><p id="08ca6ee8-33f2-4c02-9960-43c6106d20c2" class="">Le <em>Operette Morali</em> si presentano quindi come un insieme di <strong>testi di lunghezza e forma diverse</strong>, distribuiti nel libro secondo un disegno che esisteva nella intenzioni dell’autore, ma che risulta dififcile ricostruire.</p><p id="5b254515-f963-45f8-bf7b-edbe664778c0" class="">Leopardi insiste sull’<strong>unità filosofica</strong> dell’opera, aggiungendo che la leggerezza della forma è soltanto esteriore, il “ridicolo” non è infatti al servizio di una vana evasione ma è un potente strumento per scardinare i luoghi comuni del pensiero.</p><p id="85ea4f54-5dcf-4391-bd75-60f9553d8e4b" class="">Le operette hanno forme molteplici: novelle, racconti mitologici, monologhi, biografie fantasiose.</p><p id="071da241-d1d0-41e0-a041-19d78cedcc0a" class="">Molte hanno la struttura del <strong>dialogo</strong>, che consente di mettere a <strong>confronto punti di vista opposti </strong>sulla stessa questione.</p><p id="09d53f73-68c3-450f-a68d-52e2a4d6bc23" class="">I principali temi sono:<div class="indented"><ul id="0a2e3c68-f283-4424-8d1c-d2516bf5a418" class="bulleted-list"><li style="list-style-type:disc"><strong>La teorica del piacere,</strong> desiderato e mai sperimentabile;</li></ul><ul id="d7985e33-bac9-416f-a762-f081eae55768" class="bulleted-list"><li style="list-style-type:disc"><strong>L’indifferenza della natura;</strong></li></ul><ul id="173a8e4e-d16d-414c-8659-a32cfdfc2575" class="bulleted-list"><li style="list-style-type:disc"><strong>L’importanza dell’immaginazione.</strong></li></ul><p id="c79ebaac-468e-4d4f-a9c0-01a46b29df04" class="">
+</p></div></p><p id="fb7b95e8-44e1-4976-b5f4-cec66ee144ef" class="">L’elemento unificante delle operette è lo <strong>stile ironico</strong>, l’attitudine al sorriso che si applica su tutto, anche sui contenuti più tragici.</p><p id="aecc2968-7184-4fff-a8d9-fc91a8d2b0f8" class="">La scrittura delle operette è curatissima ed elegante, senza nessuna concessione alla facile comunicabilità.</p><p id="afbb8cb9-6a13-4d9b-bdff-d3d4ec69a9a8" class="">Leopardi si propone di creare una <strong>nuova lingua italiana</strong>, libera, ricca e varia.</p><p id="5e63a18e-6209-4122-a00f-417ab9a4ec73" class="">Nella sua scrittura egli cerca la <strong>varietà dei registri</strong>, compreso quello popolare, accosta liberatmente parole che appartengono al passato e al presente.</p><p id="d1504bf2-5889-44d0-9d9b-0e7dd11e9d73" class="">L’obiettivo dichiarato è di offrire agli italiani un <strong>modello di lingua illustre, </strong>adatta alla scrittura di contenuti alti, che si avvalga delle molteplici potenzialità dell’italiano.</p></div></article></body></html>

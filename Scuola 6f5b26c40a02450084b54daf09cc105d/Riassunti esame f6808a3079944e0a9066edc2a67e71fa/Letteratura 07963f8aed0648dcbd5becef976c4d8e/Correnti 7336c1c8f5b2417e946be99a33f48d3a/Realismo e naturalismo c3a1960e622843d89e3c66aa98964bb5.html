@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Realismo e naturalismo</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c3a1960e-6228-43d8-9e3c-66aa98964bb5" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">⚗️</span></div><h1 class="page-title">Realismo e naturalismo</h1><table class="properties"><tbody></tbody></table></header><div class="page-body"><nav id="2fae65df-8ed0-4961-b7ea-9b7173ec35d2" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#521541d0-d6aa-4481-bc25-f8005fadf17e">Realismo e Naturalismo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#283f26c9-ac8f-4a6e-8967-f27728a5d927">Emile Zola</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#557162d2-ee35-4092-a8da-82d12ea0b682">La poetica naturalista</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#adf91e08-4275-4e28-b83c-81c72bebeafc">L’Assommoir</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#69dcb2a5-af54-4986-87ee-b25ad9379c7f">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#b1f9bc5f-e1e1-4c11-b036-b4ab9a54e8e1">Riassunto</a></div></nav><hr id="c041eab6-18e7-44fa-9dd0-f37757d60176"/><h1 id="521541d0-d6aa-4481-bc25-f8005fadf17e" class="">Realismo e Naturalismo</h1><p id="07cfd7ce-f15b-4b58-a8c9-fd30a33b1189" class="">In Francia, già a partire dagli anni Trenta dell’Ottocento, si afferma in letteratura una tendezza all’abbandono dell’irrazionalismo romantico e al recupero dell’<strong>oggettività</strong> e del realismo.</p><p id="883b35bb-1d95-438b-985d-e5304cdc06c8" class="">I precursorsi sono:<div class="indented"><ul id="8e94ec9a-af78-462e-b45f-39c8de273b31" class="bulleted-list"><li style="list-style-type:disc"><strong>De Balzac;</strong></li></ul><ul id="f5e138ed-cc12-43cd-9e4d-7a70421eceeb" class="bulleted-list"><li style="list-style-type:disc">“<strong>Stendhal</strong>”.</li></ul></div></p><p id="cf9ba38a-0efc-4467-8e53-f00669c4b51f" class="">Stendhal indaga nei suoi romanzi le psicologie di personaggi inseriti in <strong>vicende negative e torbide</strong>.</p><p id="cf27d3a9-1a4d-46b7-a5f5-c0d22a23f88b" class="">Balzac invece è autore di una serie imponente di <strong>romanzi di impianto relista</strong> in cui compaiono più di duemila personaggi di ogni classe sociale.</p><p id="3490a393-98d5-4357-848c-15a683331177" class="">Intorno al 1850 una tendenza al realismo la troviamo nell’opera di <strong>Gustave Flaubert</strong>, il quale raffigura personaggi ordinari fortemente condizionati dal <strong>carattere</strong> e dall’<strong>ambiente sociale.</strong></p><p id="e34d3247-c027-4caf-a3b4-38345fdaaa5d" class="">In <em><strong>Madame Bovary</strong></em> Flaubert descrive il carattere e i desideri irealizzabili di una donna della borghesia di campagna.</p><hr id="a14bc9c4-aa43-4fb0-a657-8c48e5111afd"/><p id="e45269f9-9983-45ee-96b1-462a8d508606" class="">Il Naturalismo è una particolare corrente del realismo letterario compresa tra gli anni Sessanta e gli anni Novanta dell’Ottocento, caratterizzata da uno stretto legame tra scienza e letteratura.</p><p id="78d5e027-f7ea-4d78-83da-2c85f755cd38" class="">La storia di questo movimento è inserparabile dal pensiero e dall’opera di Emile <strong>Zola.</strong></p><p id="d715c303-ef54-435f-84cc-9ab57777c33d" class="">Il presupposto nuovo su cui si fonda l’opera dei naturalisti è che il <strong>metodo sperimentale</strong> delle scienze esatte possa essere <strong>applicato alla scrittura letteraria</strong>, e che la conoscenza certa dei fatti e dei comportamenti umani conduca al <strong>progresso sociale.</strong></p><p id="69f5c415-cc9f-41cc-acb0-28d53b20691b" class="">Il proposito dei naturalisti di applicare il metodo scientifico in letteratura è espressione dello spirito razionalista e scintista che domina in Francia nella seconda metà del secolo.</p><p id="442fa799-0793-4323-aad4-df24d7151d14" class="">Il paese sta infatti vivendo un periodo di <strong>grande prosperità.</strong></p><p id="5e007abd-d7ed-47ae-a54f-5cc85c2b479b" class="">In questo clima di <strong>espansione economica</strong> la borghesia si arricchisce rapidamente e gli operai cominciano a organizzatsi in partiti e sindacati per affermare i propri diritti.</p><p id="4915d064-f2d6-4d95-b33f-db457606742b" class="">Così il romanzo contrasta la propria reputazione di leggerezza assumendo un <strong>ruolo sociale</strong> serio ed educativo: quello di divulgare la <strong>conoscenza del reale</strong> e di contribuire <strong>al miglioramento della società</strong></p><hr id="4c0041a8-a374-4b2d-96df-9103dbe18096"/><h1 id="283f26c9-ac8f-4a6e-8967-f27728a5d927" class="">Emile Zola</h1><p id="5d28e6ff-2892-4650-91e0-02819e4fcba0" class="">Nasce a <strong>Parigi nel 1840, </strong>ma vive l’infanzia e l’adolescenza in Provenza.</p><p id="ae18c861-1828-4c11-97d8-49314981ac26" class="">Quando ha solo sette anni il padre muore di una polmonite contratta in cantiere.</p><p id="96a4d97b-127d-4ee9-a479-cc013661309a" class="">Ben presto la famiglia si trova costretta a liquidare all’asta la società e ad affronatre gravi difficoltà economiche.</p><p id="f92d3669-d973-4ade-a3f1-8b88cd0255bd" class="">Emile abbandona gli studi e conduce una <strong>vita disordinata</strong> passando da un mestiere all’altro fino a quando viene assunto alla <strong>libreria Hachette</strong>.</p><p id="2781c441-6706-4328-beae-f62ebd372b32" class="">Si schiera con decisione <strong>a favore</strong> della pittura di <strong>Manet </strong> che egli apprezza per il suo spirito di verità.</p><p id="80ac0bd5-4641-49ee-9ce9-e6f783a730cb" class="">Intensifica inoltre l’attività di giornalismo letterario e politico, opponendosi in modo energico alla politica di Luigi Napoleone Bonaparte, il monarca del Secondo impero.</p><p id="058fdfd6-6801-46ab-8274-d8a695fe7f67" class="">E’ con il romanzo <em><strong>Thérèse Raquin</strong></em> che Zola imprime una svolta naturalista alla sua scrittura, suscitando le critiche indignate di chi accusa l’opera di essere troppo cruda, ai limiti della pornografia.</p><p id="de1e116e-f9b2-4432-8707-35b33fb23522" class="">Negli stessi mesi inizia a concepire il progetto monumentale di <strong>una serie di romanzi</strong> intorno alle <strong>vicende di una famiglia</strong> (Rougon - Macquart) durante il Secondo Impero, costituita da venti romanzi.</p><p id="ed7e5071-ea76-4c17-a465-fe50d9abcd7d" class="">La pubblicazione procede con regolarità e assicura a Zola un reddito mensile e una posizione sempre più rilevante.</p><p id="09f6b884-9f97-4abd-92f2-8aa46a746765" class="">Le accese critiche sollevate da alcuni romanzi - come “<em>L’Assommoir”</em> - contribuiscono a consolidare la <strong>celebrità</strong> dell’autore e a <strong>diffondere le sue teorie estetiche</strong> rivoluzionarie.</p><p id="d61bebaa-0a95-4582-89a9-8185d005a78c" class="">I proventi derivati dalle vendite dell’Assommoir consentono a Zola di acquistare nel 1878 una casa di campagna.</p><p id="3cf54a09-730a-4bc9-94a2-aabdf7adbe5f" class="">Le sue opere suscitano scandalo e vendono migliaia di copie: il nono romanzo dei <strong>Rougon - Macquart</strong>, che narra la vicenda di una <strong>prostituta</strong> nell’ambiente lussuoso dell’alta borghesia parigina, vende cinquantacinquemila copie.</p><p id="b73b8ae9-667c-4841-82ea-4cbf3070649a" class="">A sessantadue anni muore improvvisamente di asfissia per le esalazioni di una stufa.</p><hr id="fedd573c-e874-4d35-81d3-9bc4afa03e10"/><h2 id="557162d2-ee35-4092-a8da-82d12ea0b682" class="">La poetica naturalista</h2><p id="2de655d6-ae2f-4b43-8467-8dc4e670b1c4" class="">Il <strong>fondamento filosofico</strong> del Naturalismo si trova nelle teorie positiviste diffuse nel XIX secolo, secondo cui, grazie alla scienza, la <strong>realtà</strong> può essere <strong>conosciuta razionalmente </strong>in tutti i suoi aspetti.</p><p id="b79f77dc-9f51-414f-8235-dda6279dafaf" class="">Il saggio di Charles Darwin <em>L’origine delle specie</em> in cui lo scienziato espone la sua <strong>teoria della selezione naturale</strong> ispira il filosofo <strong>Taine</strong>, il quale identifica nella <em>race</em>, nel <em>milieu</em>, e nel <em>moment historique</em> i tre principali fattori che influenza il carattere dell’uomo.</p><p id="7683e5b6-3752-4807-a3cd-4b719f3b9b21" class="">Zola si avvicina all’idea del <strong>determinismo sociale</strong> che sarà fondamento della sua poetica.</p><p id="3a36bad7-ae4b-4f72-9df4-6b2cda91f1c4" class="">L’enunciazione teorica dei principi naturalisti è esposta da Zola in tre principali riflessioni di poetica:<div class="indented"><ul id="309f87d2-6998-4686-aef1-5665afed5b35" class="bulleted-list"><li style="list-style-type:disc">La prefazione di <em>Thérèse Raquin</em></li></ul><ul id="3f261f39-bb08-4646-b8d0-22ea392dd9d6" class="bulleted-list"><li style="list-style-type:disc">L’introduzione alla <em>Fortuna dei Rougon</em></li></ul><ul id="c14d04db-62ca-4054-be72-599752e7d82a" class="bulleted-list"><li style="list-style-type:disc">Il saggio <em>Il romanzo sperimentale</em></li></ul></div></p><p id="9af3e64f-53c2-427a-8adf-c930416824bd" class="">La prima qualità del romanziere naturalista è quella che Zola definisce “<strong>il senso del reale</strong>” cioè la capacità di osservare con scrupolo la realtà del mondo contemporaneo.</p><p id="7fd8a0bb-9f15-4874-a434-93466bf42728" class="">Il metodo di lavoro richiede la <strong>meticolosa raccolta di dati</strong>.</p><p id="16deca80-bc67-45f9-a110-18fdc26bddea" class="">Oltre a osservare conc ura, il romanziere deve anche saper <strong>riprodurre ciò che ha visto.</strong></p><p id="9f25b7bf-50e9-4066-871d-e69d061d259f" class="">Zola sottolinea dunque l’importanza dell’<strong>individualità dello scrittore </strong>e del suo talento non soltanto nella selezione dei fatti ma anche nella loro esposizione.</p><p id="0c4b3bb8-47c6-4524-aed6-ac8df65b7c1b" class="">Il lavoro dello scrittore naturalista si presenta quindi come l’equivalente letterario dell’opera di un pittore impressionista, che <strong>coglie un’impressione particolare della realtà</strong> e la restituisce alla scrittura.</p><p id="da3cca6b-a97f-4d2b-9346-44378023a3cf" class="">I venti romanzi dei <em>Rougon - Macquart</em><strong><em><em> </em></em></strong>sono uniti tra loro dai personaggi, tutti appartenenti alla <strong>stessa famiglia</strong>, studiata nel corso di <strong>cinque generazioni.</strong></p><p id="fca636e1-d737-473a-a494-e728ca781518" class="">L’intenzione dell’autore è di seguire lo <strong>sviluppo dei condizionamenti fisiologici e ambientali</strong> a cui sono sottoposti i membri della famiglia.</p><p id="895603e4-181e-470b-b0d4-17ca1b438c1d" class="">La capostipite è Adèlaide Foque, che ha avuto figli da due uomini di classe sociale differente: quella borghese del marito Rougon, e quella popolare dall’amante Macquart.</p><p id="5958cb73-1d98-4705-ae89-faf6a09b5910" class="">Su tutti pesano le <strong>leggi dell’ereditarietà e</strong> quelle <strong>dell’ambiente</strong>; così la patologia originaria della madre, la follia, si dissemina tra i suoi discendenti manifestandosi in modi diversi.</p><p id="316fadb9-ebaf-4dba-86da-57adb29850d2" class="">Nel piano dell’opera Zola dichiara l’intenzione di passare in rassegna ogni ambiente sociale, compreso quello delle prostitute, degli assassini, dei marginali; il Naturalismo ha infatti l’ambizione di <strong>vedere tutto, di rappresentare tutto</strong>, con una particolare attenzione alla miseria economica e morale del popolo.</p><p id="3cc7a181-8d93-4260-a221-9ac2b19a7ffd" class="">Il desiderio di verità che sta alla base della poetica naturalista ha un suo corrispettivo nelle scelte formali.</p><p id="73f1c4ae-d7b6-4012-9453-59e5f9a16636" class="">Per rappresentare fedelmente un ambiente sociale, Zola non esita ad adottare il linguaggio che lo caratterizza, anche quello più basso e volgare, ritenuto fino ad all’ora inacettabile in un’opera letteraria.</p><p id="45625253-ce69-427e-8d56-9baec49392de" class="">Nell’Assommoir ad esempio egli ricorre all’<strong>Argot</strong>, il gergo parlato dagli operai parigini.</p><p id="d5d94f93-0211-431f-850f-eda9f5ebeabb" class="">Questa <strong>contaminazione</strong> <strong>della lingua letteraria con la parlata popolare</strong> è apparsa subito ai lettori un sovvertimento inaccettabile dei codici letterari, sollevando un coro di accuse.</p><p id="d31fa329-75f2-4f32-9949-bc6faa684ca2" class="">Il secondo espediente a cui Zola ricorre per trasmettere un’impressione di realtà è l’uso generalizzato del <strong>discorso indiretto libero</strong>, attraverso cui egli realizza la fusione tra la voce del narratore e quella dei personaggi.</p><p id="e1a3b810-cfc7-48ae-83f2-dba6a06ad487" class="">L’incertezza su chi stia parlando genera una situazione di <strong>disorientamento</strong> per il lettore, che non sa a chi attribuire i pensieri espressi e rimane privo di un sistema di valori di riferimento.</p><h2 id="adf91e08-4275-4e28-b83c-81c72bebeafc" class="">L’Assommoir</h2><p id="1262c3f7-2400-41a6-9218-aa0473d17146" class="">Il termine deriva da una betola in cui Zola si reca.</p><p id="780b8026-19e1-4b60-8ed5-4c95ce24f025" class="">Il romanzo viene pubblicato inzialmente <strong>a puntate</strong> nel 1876, poi <strong>in volume</strong> nel 1877.</p><p id="cd5f1be0-890f-4b4a-949b-6b6bef6d008f" class="">Per preparare il romanzo, Zola <strong>visita la periferia nord di Parigi</strong>, disegnango gli schemi delle strade e delle botteghe, poi scrive un <strong>riassunto</strong> della trama, legge libri e articoli sull’alcolismo e sugli operai e consulta <strong>dizionari</strong> sull’<em>argot.</em></p><p id="27adab91-8b3c-4b71-8486-8b9edb9eff77" class="">Nella prefazione al romanzo Zola <strong>si difende dalle critiche del pubblico</strong>, che in parte lo accusa di dare degli operai un’immagine troppo negativa, in parte gli rinfaccia la volgarità della forma.</p><p id="ab9ee3fc-30fe-46b5-934b-bcc2efca81ee" class="">Egli dichiara che la lingua che è tanto dispiaciuta ai suoi accusatori è quella autenticamente parlata nei sobborghi, e rivendica di avere voluto scrivere “<strong>un’opera di verità</strong>”, il primo romanzo sul popolo che non menta.</p><h2 id="69dcb2a5-af54-4986-87ee-b25ad9379c7f" class="">Brani</h2><p id="4e947e64-fb24-4713-8acc-1196e30f5937" class="">→ “La fame di Gervaise” - 84/89</p><hr id="9a72a54a-ef62-4d12-ae36-5ba6435b1003"/><h1 id="b1f9bc5f-e1e1-4c11-b036-b4ab9a54e8e1" class="">Riassunto</h1><figure id="189fb14e-d6da-48eb-8229-946b056f2a37" class="image"><a href="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20127.png"><img style="width:922px" src="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20127.png"/></a></figure></div></article></body></html>

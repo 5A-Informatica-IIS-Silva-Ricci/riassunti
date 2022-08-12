@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>L&#x27;azienda e le sue attività</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3855cc54-8732-4a8d-924a-1dc0429a4ae0" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🏢</span></div><h1 class="page-title">L&#x27;azienda e le sue attività</h1></header><div class="page-body"><h1 id="0646f661-7182-4e54-beef-427e4ca428d3" class="">L&#x27;azienda e l&#x27;attività economica</h1><blockquote id="6505e2b5-e802-479f-8b98-9ce19309da96" class="">Un&#x27;azienda è un organizzazione economica all&#x27;interno della quale, in modo coordinato, si procaccia, si produce e si consuma ricchezza al fine di soddisfare bisogni umani.</blockquote><p id="8231a2d8-e1bd-43b6-a7bc-9136513d058c" class="">Alcune aziende <strong>no-profit</strong> non hanno scopo di lucro, e si caratterizzano per il fatto che l&#x27;attività svolta non ha come fine il guadagno, tra di esse vi sono ad esempio le <strong>ONLUS</strong>.</p><h3 id="89f132d8-02f3-489a-a549-341702f72379" class="">I bisogni</h3><p id="89624067-f976-4365-b660-c8fed6cf7e5f" class="">I bisogni umani possono essere distinti in due categorie:</p><ol type="1" id="2ddab0ce-5165-4ccb-afb8-33dad66883f6" class="numbered-list" start="1"><li><strong>Bisogni economici</strong>: disponibili in quantità limitata e che costituiscono beni economici (vestirsi, mangiare, viaggiare)</li></ol><ol type="1" id="ee706b2e-2871-4c47-8ebe-673775747d3d" class="numbered-list" start="2"><li><strong>Bisogni non economici</strong>: disponibili in quantità illimitata (dormire, respirare)</li></ol><h3 id="233e1766-bbcf-4728-ae0e-9b6d221e080e" class="">L&#x27;attività economica</h3><p id="f343147c-0be4-4d53-abea-d926ea46d380" class="">Si compone di 4 fasi:</p><ul id="ff5572f6-d219-475b-a9d1-98a3763963e9" class="toggle"><li><details open=""><summary><strong>Produzione</strong></summary><p id="84a2dca3-0c39-4698-a8ba-163913bf8816" class="">Combinare fra loro diversi fattori produttivi per ottenere nuovi beni/servizi o per accrescere l&#x27;utilità di beni già esistenti</p></details></li></ul><ul id="3e67fac9-e26a-4801-b0b8-56a51c2742a0" class="toggle"><li><details open=""><summary><strong>Consumo</strong></summary><p id="fea45aa5-d9d2-40e9-8331-c563fc1c0a3a" class="">È la principale attività economica e consiste nell&#x27;utilizzare risorse per soddisfare i propri bisogni</p></details></li></ul><ul id="0720fa84-3e16-4158-85a2-fa7f82a2caf0" class="toggle"><li><details open=""><summary><strong>Risparmio</strong></summary><p id="9e815946-3a7e-4557-9f68-6c2094f4a442" class="">Rinunciare a un consumo immediato in vista di un consumo futuro.</p></details></li></ul><ul id="46c2fbd4-2fc1-4474-957e-1cbbeb0f8103" class="toggle"><li><details open=""><summary><strong>Investimento</strong></summary><p id="659afac6-4caa-4d33-8e07-b7610282fb65" class="">Impiego a scopi produttivi di quanto risparmiato in precedenza</p></details></li></ul><p id="fd7ec369-a96c-4a5a-ae02-0de2a8a92e7e" class="">Quindi:</p><ul id="f8388f72-8555-4132-9dda-5fdb77da52d4" class="bulleted-list"><li style="list-style-type:disc">P<strong>roduce e vende</strong> → <strong>azienda</strong></li></ul><ul id="7d2ba707-4756-48de-93f4-c0bf07a0cba7" class="bulleted-list"><li style="list-style-type:disc">A<strong>cquista e consuma </strong>→<strong> cliente</strong></li></ul><h1 id="c6fd1772-4c93-4304-b7ef-1b68656366f0" class="">Azienda e impresa</h1><h3 id="4ed9f08f-f66c-4995-8a74-033b52c5a917" class="">Impresa</h3><blockquote id="162691aa-9525-4211-8149-73039035b39c" class="">Riferimento all&#x27;attività professionale organizzata per produrre o scambiare beni/servizi</blockquote><h3 id="d97c7ecd-53cd-4fae-98f1-510f50dd2113" class="">Azienda</h3><blockquote id="ee30a018-269b-4343-bd21-f3ff85b12fff" class="">Complesso di beni organizzati dall&#x27;imprenditore per l&#x27;esercizio di un&#x27;attività d&#x27;impresa.</blockquote><p id="e01df055-3547-4716-9b8e-dd00988a042e" class="">Si <strong>parla di azienda</strong> quando si fa riferimento a:</p><ol type="1" id="5dfde759-3cb6-4ae3-9487-5c9f55bdbf26" class="numbered-list" start="1"><li>L&#x27;organizzazione dei fattori produttivi</li></ol><ol type="1" id="ed881dd1-b465-4abb-b49e-e020ea125166" class="numbered-list" start="2"><li>La gestione dell&#x27;impresa, con relativi componenti:<ul id="051c3858-5cda-4d33-9599-9b6da7a0425b" class="bulleted-list"><li style="list-style-type:disc">uomini e loro interrelazioni</li></ul><ul id="7b65826b-7719-4ac0-95ef-1558404f6940" class="bulleted-list"><li style="list-style-type:disc">prodotti e servizi</li></ul><ul id="8748f1ff-0cba-41af-8f4a-3e528cad7c6b" class="bulleted-list"><li style="list-style-type:disc">beni aziendali</li></ul></li></ol><p id="1c378a25-347f-477b-b5d5-a3b6b2ae8055" class="">In un&#x27;azienda si può <strong>individuare</strong>:</p><ul id="d89acae0-8973-46e6-ab9e-ea98c983bdee" class="bulleted-list"><li style="list-style-type:disc">Un&#x27;<strong>organizzazione di beni e persone:</strong><ul id="8932665d-b53f-4530-8f01-aecf15776dc1" class="bulleted-list"><li style="list-style-type:circle">Le <strong>persone</strong>: proprietario, lavoratori interni (dipendenti) ed esterni (collaboratori), clienti e fornitori, pubblica amministrazione</li></ul><ul id="3a68f4eb-97e9-414c-8b5d-d1d3151d16b6" class="bulleted-list"><li style="list-style-type:circle">I <strong>beni</strong>: materiali, immateriali (marchi, idee)</li></ul><ul id="b19cffbc-48e2-4a68-a402-e70063e8f65b" class="bulleted-list"><li style="list-style-type:circle"><strong>L&#x27;organizzazione</strong>: delle persone e dei beni</li></ul></li></ul><ul id="7d813093-7c06-482a-bcd9-751653900d5f" class="bulleted-list"><li style="list-style-type:disc">Un <strong>complesso di operazioni</strong> compiute per il raggiungimento del <strong>fine</strong> <strong>aziendale</strong></li></ul><p id="a79b4724-b7c7-4c7b-97a1-a5f35ecb7013" class="">Consideriamo l&#x27;azienda come un <strong>sistema di forze</strong>:</p><ul id="be6426ec-1808-4342-a4d5-94ed0bc453ec" class="bulleted-list"><li style="list-style-type:disc"><strong>mezzi</strong>: beni destinati alla produzione e al consumo (finanziamenti, macchinari, etc...)</li></ul><ul id="b0103ee4-820e-46cf-977b-64cd2cd27acb" class="bulleted-list"><li style="list-style-type:disc"><strong>persone</strong>: soggetti che partecipano all&#x27;attività aziendale</li></ul><ul id="15156944-ddb3-4468-9d40-f5bdb228b1f0" class="bulleted-list"><li style="list-style-type:disc"><strong>organizzazione</strong>: la struttura, rappresentata dall&#x27;<strong>organigramma aziendale</strong></li></ul><h1 id="0fae716c-8e1d-4a0a-98ad-ccd317d0f7c0" class="">Classificazione del sistema azienda</h1><p id="e38202bf-57f4-4fcf-a3c5-3f7a15ecfbea" class="">Può essere classificato in base:</p><ol type="1" id="747a0428-a106-4eda-bfb5-8ee2ec960e9a" class="numbered-list" start="1"><li><strong>profitto </strong>(erogazione, consumo, produzione)</li></ol><ol type="1" id="c69a18a0-4f56-4175-8d93-78a247dd61e8" class="numbered-list" start="2"><li><strong>natura</strong> (pubbliche, private)</li></ol><ol type="1" id="656827c6-ad6d-47fa-946c-0d6c18247567" class="numbered-list" start="3"><li><strong>settore</strong> (primario, secondario, terziario)</li></ol><h3 id="94f09eeb-7270-41ad-985c-d180da308194" class="">Profitto</h3><p id="103ca32a-703e-4b39-9a3d-47999dc5d008" class="">Il profitto rappresenta il fine dell&#x27;impresa</p><ul id="1e152f72-2163-4cbc-9608-558417e9b8aa" class="toggle"><li><details open=""><summary><strong>Erogazione e consumo</strong></summary><p id="25561bd5-a59d-438c-8ba8-80fecb2b0a47" class="">Non hanno come fine il conseguimento di un lucro, bensì il soddisfacimento dei bisogni dei propri membri.</p><ul id="2e2a1b43-4b19-4f8c-ab1b-a9278e22d77c" class="bulleted-list"><li style="list-style-type:disc"><strong>erogazione</strong>: soddisfacimento bisogno persone esterne → assistenza, beneficienza, ricerca etc...</li></ul><ul id="43a1f595-6949-4071-a8e7-5aecd3d129c0" class="bulleted-list"><li style="list-style-type:disc"><strong>consumo</strong>: soddisfacimento bisogno persone interne → famiglie, circoli ricreativi e sportivi, club</li></ul></details></li></ul><ul id="6617cc80-4665-44f2-818a-dbf098e81d1d" class="toggle"><li><details open=""><summary><strong>Produzione</strong></summary><p id="ace39807-fa79-47fc-951e-864de095517b" class="">Hanno come scopo il conseguimento del profitto</p><ul id="7fa9148a-bee5-4de1-bf68-66c034f24e47" class="bulleted-list"><li style="list-style-type:disc"><strong>Produzione diretta</strong>: processi di trasformazione di materie prime e altri fattori produttivi in prodotti finiti o servizi.</li></ul><ul id="60066a48-c27b-4335-b9a8-7401f5f5f130" class="bulleted-list"><li style="list-style-type:disc"><strong>Produzione indiretta</strong>: funzione di distribuzione e di trasferimento dei beni nel tempo e nello spazio, senza far subire agli stessi modificazioni materiali</li></ul></details></li></ul><h3 id="76ad2e42-f65b-420d-9d8f-0bac785648c7" class="">Natura</h3><ul id="8b8dbd39-1387-4fa9-a69a-4547d0391bbd" class="toggle"><li><details open=""><summary><strong>Private</strong></summary><p id="ccc1cee4-f4eb-4b88-8c90-5cb8c5003d92" class="">Soggetto giuridico una persona fisica o giuridica con fini privati</p></details></li></ul><ul id="8b664884-66f5-4261-a3e8-c14260bb46d2" class="toggle"><li><details open=""><summary><strong>Pubbliche</strong></summary><p id="148a45db-22c6-4dee-8335-377b6e8ef403" class="">Soggetto giuridico un ente pubblico che persegue gli interessi della collettività</p></details></li></ul><h3 id="41dbd83f-15b2-44d1-aac8-5c007a8fdb18" class="">Settore</h3><ul id="7bce512e-333a-40c0-b717-fb949c0ec5a4" class="toggle"><li><details open=""><summary><strong>Primario</strong></summary><p id="c163baae-e1df-4089-8af8-d3ae6b6eabb7" class="">Sfruttamento delle risorse naturali</p></details></li></ul><ul id="fe582c6a-3f9b-4beb-94ed-7eea25188b12" class="toggle"><li><details open=""><summary><strong>Secondario</strong></summary><p id="e063c0c1-10d5-45af-840c-59246c40d976" class="">Trasformazione più o meno complessa dei prodotti materiali</p></details></li></ul><ul id="d759f886-1d36-4778-8b66-c15b7a78d6e4" class="toggle"><li><details open=""><summary><strong>Terziario</strong></summary><p id="3a59bf4e-490e-4d40-a7d1-4a68e3f4c0d8" class="">Fornitura di servizi immateriali</p></details></li></ul><h1 id="f6af28c8-3edc-4436-bbd7-181814dfe306" class="">Gestione di un&#x27;azienda</h1><h3 id="e60e8d91-7728-4c70-85a8-0f2b44733e00" class="">Gestione in base alle attività</h3><p id="59366437-30a7-4a55-a16c-03fe97f2e8c5" class="">I momenti fondamentali dell&#x27;attività aziendale si identificano nelle seguenti quattro operazioni di gestione</p><figure id="9bec62fc-9c79-42af-ae7d-d430fe6487bf" class="image"><a href="L&#x27;azienda%20e%20le%20sue%20attivita%CC%80%203855cc5487324a8d924a1dc0429a4ae0/Screenshot_2021-12-14_at_23.55.26.png"><img style="width:906px" src="L&#x27;azienda%20e%20le%20sue%20attivita%CC%80%203855cc5487324a8d924a1dc0429a4ae0/Screenshot_2021-12-14_at_23.55.26.png"/></a></figure><ol type="1" id="81ce1d5c-5071-4bea-9ef3-9001ef219cad" class="numbered-list" start="1"><li><strong>Finanziamento</strong>, mediante:<ul id="71e346ce-ea7b-4dfc-9974-87926fb161d4" class="bulleted-list"><li style="list-style-type:disc">capitale di <strong>rischio</strong> apportato dai soci (capitale proprio)</li></ul><ul id="0c942b09-6868-4805-88de-8c25f32f37be" class="bulleted-list"><li style="list-style-type:disc">capitale di <strong>debito</strong> connesso da soggetti esterni (capitale esterno</li></ul></li></ol><ol type="1" id="2d3dd005-acec-40e4-9614-545a24a49bd4" class="numbered-list" start="2"><li><strong>Impiego / Investimento</strong> → <strong>operazioni esterne</strong> all&#x27;azienda per l&#x27;approvvigionamento delle merci e materie prime dai fornitori</li></ol><ol type="1" id="3acda501-9ab3-4026-9572-ba8c030ebedf" class="numbered-list" start="3"><li><strong>Trasformazione economica </strong>→ <strong>operazioni interne</strong> all&#x27;azienda per produrre beni / servizi da destinare alla vendita</li></ol><ol type="1" id="16abbf46-dcdb-4fd6-b5c1-1e4d8123e1c0" class="numbered-list" start="4"><li><strong>Vendita </strong>→ Il costo della produzione rappresenta il valore interno della produzione mentre alla vendita si forma il valore esterno della produzione. <code>Reddito = valore esterno - valore interno</code></li></ol><h3 id="598f1d61-d43a-483b-afa9-76e0da1c9e91" class="">Gestione in base agli aspetti</h3><ol type="1" id="1061c6ca-7885-4c82-971c-d56ab7bec4e1" class="numbered-list" start="1"><li><strong>Tecnico </strong>→ punto di vista della trasformazione dei beni</li></ol><ol type="1" id="b1ffed19-ffd8-4cee-b834-3fa2bd46b90d" class="numbered-list" start="2"><li><strong>Finanziario</strong> → monitorando i <strong>movimenti di moneta</strong>: <ul id="5acc39bb-2849-43e3-bcf1-607109c3f3ce" class="bulleted-list"><li style="list-style-type:disc"><strong>uscite</strong> (debiti)</li></ul><ul id="ea71cd16-04d0-4ad0-91b1-a843e4928ff9" class="bulleted-list"><li style="list-style-type:disc"><strong>entrate</strong> (crediti)</li></ul></li></ol><ol type="1" id="4cad9871-8e11-495b-97c5-35f5b279fac7" class="numbered-list" start="3"><li><strong>Economico</strong> → contributo delle operazioni alla produzione di ricchezza</li></ol><h1 id="d0466692-42f7-4d78-a437-5ffb3f619a49" class="">Le aziende di produzione: il sistema produttivo</h1><p id="1885bc1a-37c7-4ac2-af16-8b5e6e6a2306" class="">Per produrre beni è necessario l&#x27;impiego di risorse che si definiscono <strong>fattori produttivi originari</strong>:</p><ul id="f0d04e2a-7241-4a3e-b964-b3174cea6ee9" class="toggle"><li><details open=""><summary><strong>Capitale</strong></summary><ul id="fd529ab7-d9cb-49a2-8d01-8dc4847a42e8" class="bulleted-list"><li style="list-style-type:disc"><strong>fattori produttivi generici </strong>→ denaro</li></ul><ul id="9a5befe7-7dd5-4344-9b17-54d2e181333d" class="bulleted-list"><li style="list-style-type:disc"><strong>fattori produttivi specifici </strong>→ beni e servizi destinati alla produzione (materiali ed immateriali)</li></ul></details></li></ul><ul id="7385939d-4c03-4bd7-a231-56a1a7ca6c8b" class="toggle"><li><details open=""><summary> <strong>Lavoro</strong></summary><p id="90f3e603-b8af-4da9-8613-185edfb8e780" class="">Trasforma il capitale in produzione</p></details></li></ul><p id="2e3a1e0a-46a1-4e3b-a006-de2f74d49f3d" class="">La produzione può essere quindi schematizzata:</p><figure id="ffc7987a-6278-400d-a161-8d185447ebc2" class="image"><a href="L&#x27;azienda%20e%20le%20sue%20attivita%CC%80%203855cc5487324a8d924a1dc0429a4ae0/Screenshot_2021-12-15_at_00.10.41.png"><img style="width:922px" src="L&#x27;azienda%20e%20le%20sue%20attivita%CC%80%203855cc5487324a8d924a1dc0429a4ae0/Screenshot_2021-12-15_at_00.10.41.png"/></a></figure><h1 id="a7d6495b-9ea8-4df9-8a4a-f7b3134752cb" class="">Classificazione delle attività e della trasformazione sui materiali</h1><h3 id="fadf3864-7024-4e18-b4a8-bf49033efe70" class="">Classificazione delle attività dell&#x27;Agenzia delle Entrate</h3><p id="ab2cb61d-399e-4589-809d-5fa07388b6e3" class="">La classificazione delle attività economiche in Italia avviene sulla base di specifici codici di attività in sede di compilazione e presentazione della dichiarazione di inizio attività, per la quale si deve indicare il codice <strong>ATECO</strong>.
+L&#x27;Agenzia dell&#x27;Entrate ha provveduto ad approvare la nuova tabella codice <strong>ATECO 2007</strong> ed è stato poi riorganizzata in quella chiamata <strong>Classificazione delle attività 2017</strong>.</p><h3 id="a35b83d9-a6c6-4fd1-8f7c-64516cee90bb" class="">Classificazione dei processi industriali</h3><ul id="c8043c0b-197a-44a4-a202-36ec220496d2" class="bulleted-list"><li style="list-style-type:disc">Produzione di materiale amorfo</li></ul><ul id="cebff002-5e8c-4e8f-b354-6d623d140d5f" class="bulleted-list"><li style="list-style-type:disc">Trasformazione/deformazione plastica</li></ul><ul id="13982a54-27b3-46d4-8a41-a5cd183ceeb0" class="bulleted-list"><li style="list-style-type:disc">Unione</li></ul><ul id="5064cc69-c55b-4f95-9670-fc92934d6577" class="bulleted-list"><li style="list-style-type:disc">Separazione</li></ul><ul id="ef736239-1386-422b-a3a4-5d079a260f86" class="bulleted-list"><li style="list-style-type:disc">Trattamento di superficie</li></ul><p id="cc671a86-12d1-42ca-8a1c-8918433706b0" class="">Questi sono descritti dall&#x27;ente normatore tedesco in un tentativo di classificazione ma l&#x27;<strong>Ente nazionale italiano di Unificazione</strong> non ha redatto alcun documento ufficiale.</p></div></article></body></html>

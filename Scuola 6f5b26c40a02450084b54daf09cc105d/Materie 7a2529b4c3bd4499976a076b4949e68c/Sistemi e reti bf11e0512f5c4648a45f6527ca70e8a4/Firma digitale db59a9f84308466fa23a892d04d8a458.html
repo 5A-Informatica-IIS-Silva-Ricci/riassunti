@@ -1,0 +1,672 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Firma digitale</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="db59a9f8-4308-466f-a23a-892d04d8a458" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🔏</span></div><h1 class="page-title">Firma digitale</h1></header><div class="page-body"><p id="9a442118-080e-4377-a99b-3d86e67c6614" class="">La firma digitale garantisce le seguenti caratteristiche:</p><ul id="ed9de4c8-4b34-4d75-904d-675e393026d6" class="bulleted-list"><li style="list-style-type:disc"><strong>integrità</strong> → assicura che il documento digitale non abbia subito modifiche successive alla sottoscrizione</li></ul><ul id="4bdeb33e-10a5-45bb-a7d2-29c967c0429f" class="bulleted-list"><li style="list-style-type:disc"><strong>autenticità</strong> → garantisce l&#x27;identità del firmatario</li></ul><ul id="9c962e1e-a839-4d16-b583-17ff4df4ac47" class="bulleted-list"><li style="list-style-type:disc"><strong>non ripudio</strong> → impedisce al sottoscrittore di negare la paternità del documento, dato che la firma digitale gli attribuisce piena validità legale</li></ul><h1 id="30963252-46b4-4fe8-9c8a-2e6d63da2069" class="">Funzionamento</h1><figure id="8381446a-c883-4fab-9ec9-aa61da3e5f7b" class="image"><a href="Firma%20digitale%20db59a9f84308466fa23a892d04d8a458/Screenshot_2021-11-19_at_16.11.25.png"><img style="width:583px" src="Firma%20digitale%20db59a9f84308466fa23a892d04d8a458/Screenshot_2021-11-19_at_16.11.25.png"/></a></figure><ol type="1" id="6a090159-01f8-4622-a0ad-2a72d8812887" class="numbered-list" start="1"><li>Si genera, attraverso funzioni hash, un riassunto del documento digitale chiamato <em>finger-print</em></li></ol><ol type="1" id="7b6e78a0-752d-4a2c-b88e-403ccd48de4e" class="numbered-list" start="2"><li>Viene crittografata la <em>finger-print</em> attraverso la chiave privata del mittente ottenendo la <em>firma digitale.</em></li></ol><ol type="1" id="9ef4089b-63f7-4595-ae9b-61491b11017b" class="numbered-list" start="3"><li>Si allega la firma digitale al documento originale ed il tutto viene crittografato con la chiave pubblica del destinatario</li></ol><ol type="1" id="30cf3338-e480-49b5-86dd-94110e568e0c" class="numbered-list" start="4"><li>Il destinatario decripta il messaggio con la sua chiave privata ottenendo il documento originale e la firma</li></ol><ol type="1" id="2556a3ea-685f-4bae-9efa-2fd338461716" class="numbered-list" start="5"><li>Il destinatario utilizza la chiave pubblica del mittente per ricavare l&#x27;impronta digitale</li></ol><ol type="1" id="26b3c7a1-9df8-47e0-b971-b850047e633d" class="numbered-list" start="6"><li>Viene confrontata la finger-print con quella calcolata in modo autonomo dal destinatario</li></ol><p id="17b299d8-fda0-4982-abd5-3ea0e19e7ae4" class="">
+</p><p id="90219d45-f5c6-445f-b52c-498b5d73a766" class="">In genere per eseguire tutto ciò si viene forniti di un kit per la firma digitale composto da:</p><ul id="b0ff8a93-4288-46e0-8e88-7698d1885f49" class="bulleted-list"><li style="list-style-type:disc">dispositivo di generazione delle firme (smart card o pen drive)</li></ul><ul id="0306f109-e139-4078-afa2-13de23d70f34" class="bulleted-list"><li style="list-style-type:disc">lettore di smart card / pen drive</li></ul><ul id="71631100-a2b7-4389-8a02-413817994f36" class="bulleted-list"><li style="list-style-type:disc">software di firma e verifica</li></ul><p id="f114e176-ab9f-48f3-a04c-ef747fa61b11" class="">Con il software di firma sarà possibile scegliere il certificato con il quale si intende firmare e selezionare il documento elettronico da sottoporre a firma digitale.
+Al momento della firma del documento il software richiederà l&#x27;inserimento di un codice di protezione del dispositivo (PIN).</p><h2 id="3ba60c8a-f4ca-482a-bc22-9125b11716fe" class="">Certificati</h2><p id="9aabcb26-e3cb-4e09-bbfb-3d00ab4c41be" class="">Il certificato di sottoscrizione rappresenta l&#x27;elemento chiave della firma digitale, non è altro che un file rilasciato dall&#x27;ente certificatore contenente tutti i dati identificativi del titolare.</p><p id="33214f4c-895f-4e96-95bc-d6824b30f1bb" class="">L&#x27;Agenzia per l&#x27;Italia Digitale (AGID) si occupa di:</p><ul id="fba2ea1f-89dc-4992-9032-0823b31ed53b" class="bulleted-list"><li style="list-style-type:disc">offrire l&#x27;elenco di certificatori accreditati a cui si può richiedere la firma digitale</li></ul><ul id="433b080f-eb4b-40f0-88ec-59cae95ab7b7" class="bulleted-list"><li style="list-style-type:disc">sottoscrivere una lista dei certificati delle chiavi di certificazione</li></ul><ul id="b5372ff4-c26d-41c0-95b2-da4db60202a9" class="bulleted-list"><li style="list-style-type:disc">definire le linee guida per la vigilanza sui gestori qualificati</li></ul><ul id="767570a7-8114-4d02-83fd-36ac5ef4b34f" class="bulleted-list"><li style="list-style-type:disc">autorizza i certificatori a svolgere la propria attività conferendogli il ruolo di <em>certificatori accreditati</em></li></ul><ul id="6b15a8db-3a37-4e4d-b213-064f035dcb05" class="bulleted-list"><li style="list-style-type:disc">effettua vigilanza sui certificatori accreditati</li></ul><h3 id="e2516025-97b1-40d7-913f-03c765dec893" class="">Il problema della condivisione della chiave pubblica</h3><p id="f0c5bbf2-50a9-469e-9c23-46b868ec2330" class="">È necessario infatti certificare il mittente della chiave pubblica attivando una particolare procedura per la consegna della chiave pubblica: essa viene racchiusa all&#x27;interno di un certificato digitale che oltre a essa contiene le informazioni sul mittente. Questo certificato deve essere a sua volta validato da un ente certificatore (CA, Certification Authority) che garantisce l&#x27;identità del proprietario del certificato firmandone la chiave pubblica e privata con la propria chiave privata.</p><p id="677fd7a8-bff6-4e5a-bb2b-8f01d04c7881" class="">Il Certificato Digitale è quindi un documento informatico contenuto nella smartcard del titolare e firmato digitalmente dal certificatore ed i dati contenuti all&#x27;interno di esso sono i seguenti:</p><ul id="ae25bb4d-7eeb-45e4-a563-9b2cceb46578" class="bulleted-list"><li style="list-style-type:disc">dati del proprietario</li></ul><ul id="ae194cb7-315e-42e4-8d08-1c84f37e1dc5" class="bulleted-list"><li style="list-style-type:disc">dati del certificato → data di scadenza e numero di serie del certificato</li></ul><ul id="462a7642-edf0-409e-8200-44c7b4c996e9" class="bulleted-list"><li style="list-style-type:disc">dati della Certification Authority → ragione sociale certificatore, codice identificativo del titolare presso il certificatore e la firma digitale</li></ul><p id="e2afcb84-c17d-47d3-98a2-f7b682310cde" class="">Vi sono quindi due enti:</p><ol type="1" id="449bb7c9-10ed-4f52-ac44-89e119a3d6d0" class="numbered-list" start="1"><li>Registration Authority che identifica il richiedente di un certificato</li></ol><ol type="1" id="c16dfcd6-cb61-43f1-8350-49832f473ef8" class="numbered-list" start="2"><li>Certification Authority che si occupa di gestire il ciclo di vita del certificato</li></ol><p id="fea1e863-c3b1-4396-968d-f33da08d84e4" class="">Entrambi visto il loro ruolo chiave sono enti pubblici o privati accreditati.</p><h3 id="d17f2545-395e-4d83-be6f-6e02f24f3718" class="">Richiedere un certificato digitale</h3><ol type="1" id="9ba3c0a5-f499-4c58-8563-0d87993b4924" class="numbered-list" start="1"><li>Generazione della coppia di chiavi asimmetriche → le comunicazione tra CA e richiedente devono essere protette</li></ol><ol type="1" id="710bd1c5-8b38-499f-bab5-83ad360d6917" class="numbered-list" start="2"><li>Il richiedente comunica informazioni circa la propria identita1 alla CA</li></ol><ol type="1" id="49e163df-1193-4e1a-92b7-a1a5eed209a6" class="numbered-list" start="3"><li>La Registration Authority inizia la verifica dei dati ricevuti</li></ol><ol type="1" id="2c70b1fe-e163-4641-81f1-879099db8da7" class="numbered-list" start="4"><li>La CA genera il certificato e lo firma digitalmente con la propria chiave privata</li></ol><ol type="1" id="51ab1c7d-b542-4698-8b67-2c4eba5e9502" class="numbered-list" start="5"><li>Il certificato firmato viene inviato al richiedente</li></ol><p id="3b51ca7c-2303-4ec4-9d85-cb1907c8d40c" class="">
+</p></div></article></body></html>

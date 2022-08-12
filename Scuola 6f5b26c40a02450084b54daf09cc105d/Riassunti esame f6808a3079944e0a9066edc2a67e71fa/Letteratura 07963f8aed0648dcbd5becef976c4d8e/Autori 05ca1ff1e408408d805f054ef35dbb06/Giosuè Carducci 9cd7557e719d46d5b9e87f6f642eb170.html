@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Giosuè Carducci</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="9cd7557e-719d-46d5-b9e8-7f6f642eb170" class="page serif"><header><div class="page-header-icon undefined"><span class="icon">🏛️</span></div><h1 class="page-title">Giosuè Carducci</h1><table class="properties"><tbody><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data nascita</th><td>1835</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Anni vita</th><td>72</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesNumber"><path d="M4.46191,0 C3.8667,0 3.38428,0.482422 3.38428,1.07751 L3.38428,3.38425 L1.07764,3.38425 C0.482422,3.38425 0,3.86667 0,4.46179 C0,5.05688 0.482422,5.53931 1.07764,5.53931 L3.38428,5.53931 L3.38428,8.46063 L1.07764,8.46063 C0.482422,8.46063 0,8.94308 0,9.53818 C0,10.1333 0.482422,10.6157 1.07764,10.6157 L3.38428,10.6157 L3.38428,12.9224 C3.38428,13.5175 3.8667,13.9999 4.46191,13.9999 C5.05664,13.9999 5.53906,13.5175 5.53906,12.9224 L5.53906,10.6157 L8.46045,10.6157 L8.46045,12.9224 C8.46045,13.5175 8.94287,13.9999 9.53809,13.9999 C10.1333,13.9999 10.6157,13.5175 10.6157,12.9224 L10.6157,10.6157 L12.9224,10.6157 C13.5176,10.6157 14,10.1333 14,9.53818 C14,8.94308 13.5176,8.46063 12.9224,8.46063 L10.6157,8.46063 L10.6157,5.53931 L12.9224,5.53931 C13.5176,5.53931 14,5.05688 14,4.46179 C14,3.86667 13.5176,3.38425 12.9224,3.38425 L10.6157,3.38425 L10.6157,1.07751 C10.6157,0.482422 10.1333,0 9.53809,0 C8.94287,0 8.46045,0.482422 8.46045,1.07751 L8.46045,3.38425 L5.53906,3.38425 L5.53906,1.07751 C5.53906,0.482422 5.05664,0 4.46191,0 Z M5.53906,8.46063 L5.53906,5.53931 L8.46045,5.53931 L8.46045,8.46063 L5.53906,8.46063 Z"></path></svg></span>Data morte</th><td>1907</td></tr></tbody></table></header><div class="page-body"><nav id="c2defd05-e9bd-45d1-a612-8660d07e19a4" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#8e98dcc0-dbaf-4f66-a24b-5368b3fe8b35">Biografia</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#84846b85-4bdd-4855-bd8d-ee709c4984d2">L’ideologia e le opere poetiche</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#28f6e535-cec6-496f-ade8-9815c0c65e05">Brani</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#7e65b87e-14f5-41a5-a640-6cc227ee83bb">Riassunto</a></div></nav><h1 id="8e98dcc0-dbaf-4f66-a24b-5368b3fe8b35" class="">Biografia</h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2050a4ba-c52a-420a-8603-9f0293a34a34"><div style="font-size:1.5em"><span class="icon">🐣</span></div><div style="width:100%">Nasce il 27 luglio <strong>1835</strong> in provincia di Lucca in una famiglia della media borghesia.</div></figure><p id="f5450aee-5b68-41db-9a70-19d3419e4fea" class="">Il padre medico liberale e carbonaro trasmette al figlio idee democratiche e filorisorgimentali.</p><p id="66872e4c-536f-44b5-b58f-9c6794f3016d" class="">Trascorre l’infanzia in <strong>Maremma</strong>, a contatto con<strong>natura libera e selvaggia</strong> che lascia un forte segno sul suo carattere.</p><p id="e958f645-77be-4592-9390-bbc0f1f938ae" class="">La famiglia si trasferisce a Firenze dove Giosue inizia a frequentare il licelo e dimostra subito una notevole <strong>inclinazione allo studio della retorica e delle lingue classiche</strong>.</p><p id="874d0ede-f07b-4f38-82ab-56826a3fb578" class="">Qui conosce Elvira <strong>Menicucci</strong> cui dedica i prima versi d’amore.</p><p id="58b98c3b-c84e-4225-9e57-b3a50b346248" class="">Carducci si dedica con impegno e passione agli studi letterari e si laurea in Filosofia e Filologia, nello stesso anno inizia a insegnare nei licei.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="dcd65075-b771-40cc-a440-0faba78f3f54"><div style="font-size:1.5em"><span class="icon">♥️</span></div><div style="width:100%">Nel 1859 sposa Elivra da cui ha quattro figli: <strong>Beatrice, Laura, Libertà e Dante.</strong></div></figure><p id="4decc7eb-15da-41d7-ac83-3892d18d9450" class="">I nomi non sono casuali, dimostra infatti quanto fosse forte l’attaccamento del poeta alla tradizione letteraria.</p><p id="140b7ad5-e830-4166-a401-c615b6ea98c3" class="">Nel 1860 ottiene la cattedra di <strong>Letteratura italiano</strong>persso l’Università di Bologna.</p><p id="b79b5459-0d7f-4929-b4a3-4506bfb27ce6" class="">Negli stessi anni si avvicina alla <strong>massoneria</strong> (inizialmente divulgare le idee illuministe ma poi si trasformano in gruppi occulti di pressione).</p><p id="44ea0c33-68fb-4ea7-983d-93f816317d3d" class="">La <strong>delusione per il governo postunitario</strong> lo induce ad assumere posizioni apertamente giacobine e anticlericali, e poi socialiste e anarchiche.</p><p id="6a185fb3-5958-453d-af09-6cc29b042cf7" class="">Il 1870 segna per Carducci una svolta sul piano personale e famigliare: muoiono infatti la madre e il giovane figlio <strong>Dante, </strong>eventi che determinano un profondo e duraturo ripiegamento interiore nel poeta.</p><p id="3f906ea4-caf7-4101-af83-33f3d1db76ee" class="">Nel 1872 Carducci inizia un’intensa realzione amorosa con <strong>Cristofori Piva - </strong>chiamata “Lidia” <strong>, </strong>una donna di grande cultura e una fervente ammiratrice dei versi carducciani.</p><p id="2dbfdedf-8aa3-40e8-852f-0a9ea841c9fc" class="">IL carteggio intercorso tra i due amanti rivela un Carduccio <strong>dolcemnete innamorato.</strong></p><p id="2c843306-ed4f-4e7b-9777-18b925001dbb" class="">Da questa relazione nasce anche un figlio, <strong>Gino</strong>.</p><p id="d5e3f0cc-711c-45e3-a0ef-ff0ce4820c13" class="">La relazione dura fino al <strong>1881 </strong>, anno della morte della donna.</p><p id="d2af465b-bcd3-4b8a-a572-4aabe5cdb4b6" class="">Negli ultimi anni della sua vita il poeta si lega invece ad <strong>Annie Vivanti</strong>, una giovane poetessa.</p><p id="8000df69-8aec-4d2c-b1b1-1cf21038013a" class="">Anche in questo caso un fitto carteggio tra i due testimonia un <strong>legame profondo, </strong>talvolta <strong>conflittuale e tormentato.</strong></p><p id="49f1ffd3-654c-44cc-9f27-a2924049ef38" class="">Sul piano politico Carducci abbandona progressivamente le posizioni libertarie e socialiste per avvicinarsi a quelle conservatrici e infine nazionalistiche.</p><p id="9db9e6b8-1158-481b-bae1-4ffdee85e376" class="">Incontra personalmente i sovrani d’Italia ed è colpito dal fascino della <strong>regina Margherita di Savoia</strong> alla quale dedica l’ode <em>Alla regine d’Italia.</em></p><p id="a498e149-1e9e-4b3e-9c99-8228bf3f6914" class="">Poi si guadagnerà il titolo di “<strong>Poeta Vate dell’Italia Umbertina”</strong>.</p><p id="7f3b2ca7-520f-4005-9ffd-e34ea7792d32" class="">Nel 1890 è nominatore <strong>senatore</strong>, quindi <strong>Cavaliere di Gran Croce</strong>.</p><p id="f581a940-356f-462a-a878-34d10f3d28d7" class="">Nel 1906 vince il <strong>premio Nobel</strong> per la letteratura.</p><p id="9357e49c-5437-43f7-ac58-d90f32206761" class="">Carducci poi <strong>cura personalmente</strong> l’edizione completa delle sue opere.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ab99bbb5-f462-457d-8d5e-2f56aa04cf57"><div style="font-size:1.5em"><span class="icon">🪦</span></div><div style="width:100%">Carducci muore il 16 febbraio <strong>1907.</strong></div></figure><hr id="82319a85-bd6e-4276-a19a-267dd81f4397"/><h2 id="84846b85-4bdd-4855-bd8d-ee709c4984d2" class="">L’ideologia e le opere poetiche</h2><p id="da5304a6-9b6c-42f8-b0ff-5ed749c50e0b" class="">Carducci è stato definito come “poeta della storia” non solo per la presenza massiccia di fatti e personaggi storici all’interno della sua produzione poetica, ma anche perché ha copiuto una <strong>parabola ideologia</strong> che da appassionato repubblicano risorgimentale lo ha visto progessivamente aderire al nazionalismo monarchico.</p><p id="c06cac50-6f95-40b7-baf2-66de9dbd3d88" class="">I mutamenti di pensiero di Carducci testimoniano infatti un’<strong>epoca di transizione.</strong></p><p id="27acf079-11ac-4ddc-a7bd-2e2be461a739" class="">All’interno della poesia di Carducci si possono individuare alcuni nuclei tematici costanti:<div class="indented"><ul id="28cb7dec-eed0-4ff2-99e9-e96255fce622" class="bulleted-list"><li style="list-style-type:disc">il <strong>rimpianto</strong> per il <strong>mondo classico</strong> ormai perduto;</li></ul><ul id="8b744328-45cb-4844-9781-7ca6bbdb8d18" class="bulleted-list"><li style="list-style-type:disc">la rivisitazione dell’<strong>età comunale</strong> come periodo di virtù civile.</li></ul><ul id="e97bce22-0c6a-4166-8201-6e26c488d124" class="bulleted-list"><li style="list-style-type:disc">l’esaltazione delle <strong>passioni risorgimentali e patriottiche;</strong></li></ul><ul id="26a59358-4960-4bf5-85cd-59a850a03bd3" class="bulleted-list"><li style="list-style-type:disc">la <strong>nostalgia</strong> per i luoghi della giovinezza</li></ul><ul id="01ed1df6-14cd-4c9c-bb3b-debb3035d2e7" class="bulleted-list"><li style="list-style-type:disc">l’incombere della <strong>morte</strong> sulla vita dell’uomo.</li></ul></div></p><p id="e3d2fe7b-f815-4777-a79f-ae894bb8eaff" class="">Durante il periodo in cui insegna nei lici fonda insieme ad alcuni letterati il gruppo “<strong>Amici pedanti”, </strong>ovvero un gruppo di difensori dei valori e dei modelli della poetica classica.</p><p id="76e61b44-7a0a-4363-bc9c-37aea56d9079" class="">Inizia così la sua battaglia contro una poesia imitatrice degli autori stranieri.</p><p id="905e8037-f73e-4144-b5e2-77ec6703541e" class="">In questo periodo pubblica le prime raccolte poetiche:<div class="indented"><ul id="461c5dbb-dbf0-4b89-8594-e217600da475" class="bulleted-list"><li style="list-style-type:disc"><em><strong>Rime</strong></em></li></ul><ul id="63711b44-87a0-4d39-ba57-9efdd84cf2f8" class="bulleted-list"><li style="list-style-type:disc"><em><strong>Juvenilia</strong></em></li></ul><ul id="bf3805c4-2e97-4969-afe6-612aa3b38784" class="bulleted-list"><li style="list-style-type:disc"><em><strong>Levia gravia</strong></em></li></ul></div></p><p id="f34af420-36c8-446c-959d-388789a3df66" class="">Sono esercizi di stile in cui ciò che conta più di tutto è la <strong>ricercatezza del linguaggio</strong></p><p id="dcebb6c9-43d9-4d14-a664-9eb3d718fc92" class="">La prima poesia carducciana che ottiene risonanza è <em>L’inno a Satana</em>.</p><p id="e8d3efd6-55ee-4ea8-aba3-5a6c78130b73" class="">Si tratta di un esempio di risoluto <strong>anticlericalismo</strong> in cui l’autore arriva a identificare Satana con il <strong>progresso moderno</strong> e la forza rivoluzionaria del lavoro umano.</p><p id="b613500c-1e24-419f-8df8-5a5562bbc876" class="">Sono riconducibili al filone del classicismo anche le poesie di <em><strong>Giambi ed Epodi.</strong></em></p><p id="d8b603a3-8916-4041-81b1-49d7b8fc90f4" class="">Successivamente le poesie di Carducci subiscono un’<strong>ulteriore evoluzione</strong>, cui contribuiscono anche le vicende biografiche.</p><p id="ec1e3738-8d94-4b7d-81fe-3cc182f9595f" class="">A Lidia sono dedicate le liriche di <em><strong> Rime nuove</strong></em>: il <strong>tema dell’amore </strong>si accompagna a quello del <strong>sogno</strong>, inteso come fuga dal presente e dalla realtà contaminata e corrotta.</p><p id="8a03dabc-3498-40ef-96f4-ddd95653e888" class="">Allo stesso periodo delle <em><strong>Rime nuove </strong></em>risale la composizione delle <em><strong> Odi barbare, </strong></em>così intitolate perchè abbandona i metri tradizionali della poesia per riprodurre il <strong>ritmo della poesia greco - latina.</strong></p><p id="baa3ca6a-4c09-423b-8655-dbcd660fa9c9" class="">Si tratta di un <strong>esperimento metrico</strong>, che sarebbe senz’altro sembrato rozzo e “barbaro” ai poeti classici.</p><p id="202963ce-f542-4ca7-9a31-443a1d69b32a" class="">Con esso cerca di riprodurre il ritmo della poesia antica, basato su un <strong>sistema metrico quantitativo.</strong></p><p id="f228be9d-35d4-485d-a86d-ff1924db1309" class="">Carducci tenta con queste raccolta di <strong>restaurare la poesia aulica della classicità.</strong></p><p id="fffcf0d8-3a4a-4192-a904-03daa5a387ec" class=""><em><strong>Rime e ritmi</strong></em> è pubblicata nel 1899 ed è la raccolta di poesie che consacra Carducci come Poeta Vate.</p><p id="0ad362cb-cf21-4d56-9492-b0fa0a2fef49" class="">Nei testi di questa raccolta prevalgono le <strong>odi celebrative</strong> oppure componimenti che inneggiano al <strong>valore della patria.</strong></p><p id="d4e3b29a-9457-4222-8b6d-9c97fa352b18" class="">
+</p><h2 id="28f6e535-cec6-496f-ade8-9815c0c65e05" class="">Brani</h2><p id="de5c8f2b-8d1d-4754-aea6-27bf69dcd3cc" class="">→ “Alla stazione in una mattina d’autunno” - 68/72</p><hr id="ec08b255-7572-4795-ac9e-bf9298d37067"/><h1 id="7e65b87e-14f5-41a5-a640-6cc227ee83bb" class="">Riassunto</h1><figure id="fb988dff-27c4-4552-89b7-c664419804e2" class="image"><a href="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20117.png"><img style="width:872px" src="../../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20117.png"/></a></figure></div></article></body></html>

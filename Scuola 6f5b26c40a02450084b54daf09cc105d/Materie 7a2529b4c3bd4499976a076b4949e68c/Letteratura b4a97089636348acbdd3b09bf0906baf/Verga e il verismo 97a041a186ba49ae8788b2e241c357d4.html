@@ -1,0 +1,672 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Verga e il verismo</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="97a041a1-86ba-49ae-8788-b2e241c357d4" class="page serif"><header><h1 class="page-title">Verga e il verismo</h1></header><div class="page-body"><h1 id="88d9431e-36aa-40ca-80e6-3562392279b1" class="">Il pessimismo di Verga</h1><p id="b625d709-d045-45b7-b19c-feabe2934913" class="">Giovanni Verga è fortemente <strong>legato</strong> ai <strong>luoghi</strong> e alle <strong>tradizioni</strong> <strong>culturali</strong> della <strong>Sicilia</strong>. Essendo appartenente alla media proprietà terriera della provincia siciliana avversa la politica protezionistica della sinistra storica che favorisce le attività imprenditoriali del Nord e che ostacola gli interessi dei latifondisti meridionali. <strong>Diffida</strong> quindi <strong>nella</strong> <strong>modernizzazione</strong> <strong>economica</strong> a cui l&#x27;Italia si era avviata.</p><p id="d6d43d72-0a77-41c4-885c-6125cef8df5a" class="">Da ragazzo inoltre aveva sostenuto il processo di unificazione dell&#x27;Italia ma progressivamente si accentuò la sua <strong>estraneità nei confronti dei partiti al governo del paese</strong>. La sua <strong>visione</strong> del <strong>mondo</strong> <strong>si</strong> <strong>incupisce</strong> <strong>e tende a evidenziare gli aspetti negativi delle relazioni sociali tra gli uomini,</strong> che sono secondo lui sempre <strong>dettati dalla legge dell&#x27;utile economico</strong>. Ogni individuo secondo l&#x27;autore è in lotta per l&#x27;affermazione di sè, la vede come una legge naturale. La sua visione del mondo è quindi di <strong>pessimismo materialista e assoluto</strong>.</p><p id="0d71fb68-9aa0-472c-a577-04f0b6db00ff" class="">La sua opinione si consolida con la lettura della <strong><em>questione meridionale</em></strong> pubblicata alla fine degli anni &#x27;70: la consapevolezza della degradazione e della meseria delle popolazioni del Sud accrescita il suo pessimismo, e non fa cavillare in lui la convinzione che la <strong>legge del più forte</strong> valga a ogni livello sociale, che però guarda sempre con sguardo oggettivo da scienziato, senza pietà ne indignazione.</p><h1 id="06bd7e52-56e7-44f5-9e83-b17595fb5bf0" class="">Zola come ispirazione</h1><p id="171d2258-eec8-4e99-9d95-81ea41e74489" class="">Verga inizia a leggere soprattutto romanzieri francesi dei quali discute con l&#x27;amico Capuana ed intorno al 1876, con la <strong>scoperta dei testi di Zola</strong>, <strong>Verga cambia stile letterario</strong>, in quanto <strong>ammira il naturalismo di Zola</strong> e le sue opere. Inizia così il periodo italiano letterario chiamato da Verga e Capuana <strong><em>verismo</em></strong>, ossia l&#x27;<strong>imitare i romanzieri naturalisti francesi</strong> e documentare la realtà del vero. <strong>Oggi</strong> invece con <strong><em>verismo</em></strong> si <strong>indica</strong> nello specifico l&#x27;<strong>arte letteraria di Capuana e Verga</strong>.</p><hr id="1f638918-7369-48b2-bc19-a880c2e46d83"/><h1 id="1ddb25eb-b442-4e37-a79a-b509e2508169" class="">Lo stile verista</h1><p id="47411b5a-33f6-49c2-a340-775fcd7e23c6" class="">Le modalità narrative e stilistiche scelte per questo stile furono:</p><ul id="8dda0996-9b87-4422-bf7b-d12d930816da" class="toggle"><li><details open=""><summary><strong>Prevalenza dei fatti minori</strong> e rinuncia al romanzesco</summary><p id="06600e30-c12e-4b8d-af6e-3f3a812f21bd" class="">Si da la precedenza a fatti ordinari ed eventi minori</p></details></li></ul><ul id="e4b216ba-359d-45df-97d8-0a0727a7aff1" class="toggle"><li><details open=""><summary><strong>Arretramento del narratore onnisciente</strong>, focalizzazione variabile, straniamento</summary><p id="8c5afecc-34e4-4333-807b-ce94dc479e18" class=""><strong>Scompare la figura del narratore tradizionale onnisciente</strong> e la narrazione viene affidata a diverse voci che si alternano e si sovrappongono (focalizzazione variabile).</p></details></li></ul><ul id="96acc4c7-3c29-4d19-ae38-a3d36ee65c4f" class="toggle"><li><details open=""><summary><strong>Minime descrizioni dell&#x27;ambiente</strong></summary><p id="4887293a-230a-40d5-bb0c-85fcea3061b6" class="">
+</p></details></li></ul><ul id="66abdc9f-b54a-4eb4-9a05-2c57a8bb905a" class="toggle"><li><details open=""><summary><strong>Assenza di una descrizione introduttiva dei personaggi</strong></summary><p id="cc9d9905-047b-4070-8f93-c289d22d3a4f" class="">I personaggi entrano in scena direttamente, con pochissima introduzione da parte del narratore.</p></details></li></ul><ul id="1c47b942-ad85-41e9-b498-01994818ee98" class="toggle"><li><details open=""><summary>Uso di una forma adatta alla materia da rappresentare</summary><p id="afd46278-4ff7-4614-8335-1d7b9361f8e0" class="">Richiede una<strong> lingua adeguata all&#x27;ambiente e ai personaggi</strong>.
+Ne <em>I Malavoglia</em> poi interviene anche sulla sintassi e sul lessico, dove vi è inoltre uso del discorso indiretto libero. Alcune delle irregolarità linguistiche principali risultano quindi:</p><ul id="7eeecac1-6961-4648-a79d-beb042ec26df" class="bulleted-list"><li style="list-style-type:disc">il &quot;ci&quot; rafforzativo (&quot;lui non ci ha colpa&quot;)</li></ul><ul id="b25a2fa3-1f89-4a86-b51d-042316b0d4d8" class="bulleted-list"><li style="list-style-type:disc">il &quot;che&quot; generico</li></ul><ul id="6c399fd3-4c6e-4834-b799-5aa6ac6ee242" class="bulleted-list"><li style="list-style-type:disc">presenza di pronomi rafforzativi (&quot;va a dirle a quella poveretta&quot;)</li></ul><ul id="06db40d7-6088-49f7-97f0-bf1eec69c0fd" class="bulleted-list"><li style="list-style-type:disc">mancata concordanza grammaticale e uso dell&#x27;indicativo al posto del congiuntivo (&quot;non c&#x27;è tasse che bastano&quot;)</li></ul></details></li></ul><h1 id="757cb5b0-e076-4e61-80cb-f4569807f37b" class="">I testi veristi principali</h1><p id="3ab047ef-c7d5-48af-bde9-52770678d473" class="">Questa <strong>fase verista durerà</strong> pero per Verga <strong>solo dieci anni</strong>, in cui alterna testi tradizionali a romanzi veristi, e <strong>non scrisse mai un saggio contente le regole del nuovo stile</strong>.</p><p id="cf7cae99-2b7c-4dc7-be45-0cdcecf464ae" class="">Gli unici testi in cui esprime i principi della poetica verista sono tre:</p><ol type="1" id="ddc9bcb7-7499-4068-b6dd-1ee893330c68" class="numbered-list" start="1"><li>la novella <strong><em>Fantasticheria</em></strong> (1879)</li></ol><ol type="1" id="f266583e-5889-4f15-b40a-9a87492d9f39" class="numbered-list" start="2"><li><strong>la lettera a Farina</strong>, premessa alla novella <em>L&#x27;amante di Gramigna</em></li></ol><ol type="1" id="122f9924-fd80-425c-b7c3-a39cf2ca7318" class="numbered-list" start="3"><li><strong>la </strong><strong><em>Prefazione</em></strong><strong> al romanzo </strong><strong><em>I Malavoglia</em></strong></li></ol><p id="fa316b23-add3-42bf-b278-0da40d804fd4" class="">Sono semplicemente testi inseriti in opere letterarie di cui costituiscono una parte integrante.</p><hr id="531d341a-2fad-4c81-8919-bb8174275ba2"/><h1 id="0fbe3fa8-6d61-43d9-8710-59ba251de37e" class="">Zola e Verga a confronto</h1><table id="596b869f-d001-40c7-a9c5-996f67dffe39" class="simple-table"><thead class="simple-table-header"><tr id="37e80caa-5d75-4e7a-9ab0-4dbd0037000f"><th id="lLtP" class="simple-table-header-color simple-table-header" style="width:193px"></th><th id="XMUU" class="simple-table-header-color simple-table-header" style="width:232.66666666666666px"><strong>Zola</strong></th><th id="BcU~" class="simple-table-header-color simple-table-header" style="width:278px"><strong>Verga</strong></th></tr></thead><tbody><tr id="62224b3e-0a73-49e1-beaf-dbc5223592af"><th id="lLtP" class="simple-table-header-color simple-table-header" style="width:193px"><strong>Ideologia</strong></th><td id="XMUU" class="" style="width:232.66666666666666px">scienza può migliorare la condizione delle classi popolari</td><td id="BcU~" class="" style="width:278px">scienza e progresso non possono migliorare la società</td></tr><tr id="82c05462-c5a2-4cb4-bd01-d419b070365c"><th id="lLtP" class="simple-table-header-color simple-table-header" style="width:193px"><strong>Realtà rappresentata</strong></th><td id="XMUU" class="" style="width:232.66666666666666px">protagonisti romanzi sono gli operai, i minatori e  le masse cittadine</td><td id="BcU~" class="" style="width:278px">mondo dei pescatori e dei contadini siciliani, il più arretrato d&#x27;Italia</td></tr><tr id="728ce239-24a9-4e35-a878-640088159c47"><th id="lLtP" class="simple-table-header-color simple-table-header" style="width:193px"><strong>La serie dei romanzi</strong></th><td id="XMUU" class="" style="width:232.66666666666666px">vicende di diversi personaggi di una stessa famiglia</td><td id="BcU~" class="" style="width:278px">vicende di personaggi di condizione sociale via via più elevata</td></tr><tr id="d600d853-5788-4d78-b015-50922bf857aa"><th id="lLtP" class="simple-table-header-color simple-table-header" style="width:193px"><strong>Attività preliminare</strong></th><td id="XMUU" class="" style="width:232.66666666666666px">numerose schede dei personaggi e si reca personalmente sui luoghi da rappresentare</td><td id="BcU~" class="" style="width:278px">lavoro preparatorio più modesto e preferisce scrivere &quot;da lontano&quot;</td></tr><tr id="3a0136ef-31dd-4a88-b02e-3b4640b6f1cf"><th id="lLtP" class="simple-table-header-color simple-table-header" style="width:193px"><strong>Tecnica dell&#x27;impersonalità</strong></th><td id="XMUU" class="" style="width:232.66666666666666px">adotta il punto di vista dei personaggi, ma a volte è possibile percepire il giudizio di una voce narrante esterna alla vicenda rappresentata</td><td id="BcU~" class="" style="width:278px">usa questa tecnica in modo più rigoroso, eclissandosi quasi completamente</td></tr><tr id="fa0171d5-c210-4652-aee4-3b185fd631a6"><th id="lLtP" class="simple-table-header-color simple-table-header" style="width:193px"><strong>Descrizioni</strong></th><td id="XMUU" class="" style="width:232.66666666666666px">descrive i personaggi e gli ambienti piuttosto diffusamente</td><td id="BcU~" class="" style="width:278px">riduce al minimo le descrizioni di personaggi e ambienti</td></tr><tr id="4e62baea-d2ac-41c3-a011-fa6bc24c0e29"><th id="lLtP" class="simple-table-header-color simple-table-header" style="width:193px"><strong>Lingua</strong></th><td id="XMUU" class="" style="width:232.66666666666666px">accanto alla lingua caratteristica dei ceti rappresentati, usa - soprattutto nelle descrizioni - un linguaggio di livello medio e borghese</td><td id="BcU~" class="" style="width:278px">nei Malavoglia si avvale del parlato popolare in modo più omogeneo nei diversi livelli della narrazione, mentre in Mastro-don Gesualdo la voce narrante appartiene a un ambiente sociale medio-alto</td></tr></tbody></table><p id="ac3a2a60-2bc5-4289-b3c7-d9ef10b900ff" class="">
+</p></div></article></body></html>

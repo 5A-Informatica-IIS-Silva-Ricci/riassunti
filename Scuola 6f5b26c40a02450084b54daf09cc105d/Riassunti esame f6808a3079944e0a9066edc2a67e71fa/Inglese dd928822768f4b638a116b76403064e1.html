@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Inglese</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="dd928822-768f-4b63-8a11-6b76403064e1" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🏰</span></div><h1 class="page-title">Inglese</h1><table class="properties"><tbody></tbody></table></header><div class="page-body"><h1 id="0272b409-60fa-40ad-ad23-af135bfbdb32" class=""><details open=""><summary>🪨 Standing Stones</summary></details></h1><div class="indented"><h1 id="3ea7223e-a30f-4ffa-ac87-3762d343498d" class="">Stonehenge</h1><figure id="ce8e46a5-0819-4498-8737-5f004d4d5bc3" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2084.png"><img style="width:432px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2084.png"/></a></figure><p id="75f55fd7-569b-4f73-8052-d44043d8e836" class="">Stonehenge (pietra sospesa, da stone, pietra, e henge, che deriva da hang, sospendere: in riferimento agli architravi) è un sito neolitico che si trova vicino ad Amesbury nello Wiltshire, Inghilterra, circa 13 chilometri a nord-ovest di Salisbury.</p><p id="f7191b17-048c-47b2-961c-5fd6df7439bc" class="">È il più celebre e imponente cromlech («circolo di pietra»): composto da un insieme circolare di colossali pietre erette, conosciute come megaliti, sormontate da consistenti architravi orizzontali di collegamento di cui alcune sono in quota ed è uno dei più antichi sistemi trilitici conosciuti (trilitico: sistema costituito da tri = tre + lithos = pietra, due montanti verticali ed un architrave orizzontale).</p><p id="b6c7b2d7-2617-49da-a2e9-4349dc10d4fb" class="">Ipotizzando che l&#x27;attuale allineamento riproduca fedelmente il precedente, alcuni sostengono che Stonehenge rappresenti un &quot;antico osservatorio astronomico&quot;, con un significato particolare ai punti di solstizio ed equinozio, anche se l&#x27;importanza del suo uso per tale scopo è dibattuta.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="48a6a7ef-361f-42a7-99bb-745891c8b8ea"><div style="font-size:1.5em"><span class="icon">⛰️</span></div><div style="width:100%">Il sito fu aggiunto alla lista dei patrimoni dell&#x27;umanità dell&#x27;UNESCO nel 1986.</div></figure><p id="35ba2a3e-60b9-4108-bde0-bed8e4d020c4" class="">Oltre che meta del turismo di massa, Stonehenge è luogo di pellegrinaggio per molti seguaci del celtismo, della wicca e di altre religioni neopagane, e fu teatro di un festival musicale libero tra il 1972 e il 1984.</p><h3 id="86d11933-e979-4bda-8f4d-fcdf620bc5bc" class=""><details open=""><summary>Translation</summary></details></h3><div class="indented"><p id="370dab10-2d07-4f41-9d4b-06d7e387a878" class="">Stonehenge is a prehistoric monument on Salisbury Plain in Wiltshire, England, two miles (3 km) west of Amesbury.</p><p id="796aeec7-c7b8-4cc5-9012-9c55ded11bb9" class="">It consists of an outer ring of vertical sarsen standing stones, each around 13 feet (4.0 m) high, seven feet (2.1 m) wide, and weighing around 25 tons, topped by connecting horizontal lintel stones. Inside is a ring of smaller bluestones. Inside these are free-standing trilithons, two bulkier vertical Sarsens joined by one lintel. The whole monument, now ruinous, is aligned towards the sunrise on the summer solstice. </p><p id="e669bc8c-80a7-4973-978a-a761c410c6f8" class="">Archaeologists believe that Stonehenge was constructed from 3000 BC to 2000 BC.
+One of the most famous landmarks in the United Kingdom, Stonehenge is regarded as a British cultural icon. It has been a legally protected Scheduled Ancient Monument since 1882, when legislation to protect historic monuments was first successfully introduced in Britain. The site and its surroundings were added to UNESCO&#x27;s list of World Heritage Sites in 1986. Stonehenge is owned by the Crown and managed by English Heritage.</p></div><hr id="dca1fb18-0527-4244-8064-8ab909e05063"/><h1 id="71a86d98-0026-4caa-a6cb-92978211a57f" class="">The Nine Ladies</h1><figure id="5ea14a04-9be6-4097-8c9b-4803dc935d6c" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2085.png"><img style="width:440px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2085.png"/></a></figure><p id="8cde4aab-3a46-45bc-a569-c8400f0678ce" class="">The Nine Ladies is a stone circle located on Stanton Moor in Derbyshire in the English East Midlands. The Nine Ladies is part of a tradition of stone circle construction that spread throughout much of Britain, Ireland, and Brittany during the Late Neolithic and Early Bronze Ages, over a period between 3300 and 900 BCE. The purpose of such monuments is unknown, although archaeologists speculate that the stones represented supernatural entities for the circles&#x27; builders.</p><p id="f5d69cdd-225a-44ac-aa8d-4b4cfb93390f" class="">Measuring 10.8 metres in diameter, the stone circle consists of ten millstone grit stones, although for several centuries one of these was buried, providing the impression that there had been nine stones. Whether the tenth was part of the original prehistoric design or a later addition is unknown. A single monolith, the King Stone, stands to the southwest of the circle; it is unknown if this was placed there in deliberate reference to the Nine Ladies circle or whether their proximity is incidental.</p><hr id="c6c7188f-86cf-4dc8-9f1c-bf392444e17a"/><h1 id="419fd05d-3508-40dd-a762-99b526a5638a" class="">Roll Right Stones</h1><figure id="02603ef7-bd96-49bd-835b-4beb0159f865" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2086.png"><img style="width:440px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2086.png"/></a></figure><p id="61db59b0-640c-40ed-865d-4bdc4b4aa15d" class="">The Rollright Stones are a complex of three Neolithic and Bronze Age megalithic monuments near the village of Long Compton, on the borders of Oxfordshire and Warwickshire. </p><p id="ceb74441-b3c1-4eeb-b765-320c78a6877d" class="">They were built at different periods in late prehistory. During the period when the three monuments were erected, there was a continuous tradition of ritual behaviour on sacred ground, from the 4th to the 2nd millennium BCE.</p><p id="a96390ea-95af-4e72-aa3c-c93f13c40a31" class="">The first to be constructed was the Whispering Knights, a dolmen that dates to the Early or Middle Neolithic period. It was likely to have been used as a place of burial. This was followed by the King&#x27;s Men, a stone circle that was constructed in the Late Neolithic or Early Bronze Age, it has parallels to other circles located further north, in the Lake District, implying a trade-based or ritual connection. The third monument, the King Stone, is a single monolith. </p><p id="164021cd-ad3e-4138-8088-e114dbe16606" class="">By the Early Modern period, folkloric stories had developed about the Stones, telling of how they had once been a king and his knights who had been turned to stone by a witch. Such stories continued to be taught amongst local people well into the 19th century.</p><p id="0f49a7ad-7b3d-427b-94e9-84aef5c558b7" class="">In the 20th century, the stones became an important site for adherents of various forms of Contemporary Paganism, as well as for other esotericists, who hold magico-religious ceremonies there. They also began to be referred to more widely in popular culture, being featured in television, literature, music and art.</p><hr id="fced22b9-3c92-4220-93e1-e61ee03a9c55"/><h1 id="38892110-8c49-4c92-be0c-b1683bde78b5" class="">Avebury</h1><figure id="995fd92a-8112-4c83-8c48-aaca21dea6f0" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2087.png"><img style="width:520px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2087.png"/></a></figure><p id="25fa6c6d-c75c-43ff-91fe-b131082ff769" class="">Ad Avebury, nella contea inglese dello Wiltshire, nei dintorni dell&#x27;omonimo villaggio, si trovano un grande henge e numerosi cerchi di pietre. Si tratta di uno dei monumenti neolitici europei meglio conservati ed è databile attorno a 5000 anni fa. È più antico del sito megalitico di Stonehenge, che si trova a circa 32 km a sud, anche se i due siti sono quasi contemporanei. Si trova approssimativamente a metà strada tra Marlborough e Calne, poco distante dalla A4 a nord della A361 verso Wroughton.</p><p id="e795e820-eba9-4e75-aea6-2636cf3418c7" class="">Avebury è di proprietà della National Trust.</p><h3 id="7c06eda1-4b3a-46a0-a2ef-4b6567c74aba" class=""><details open=""><summary>Translation</summary></details></h3><div class="indented"><p id="0a9bffee-8cc0-4eaf-a354-e30fafc272ef" class="">Avebury is a Neolithic henge monument containing three stone circles, around the village of Avebury in Wiltshire, in southwest England. One of the best known prehistoric sites in Britain, it contains the largest megalithic stone circle in the world. It is both a tourist attraction and a place of religious importance to contemporary pagans.</p><p id="d798fcec-07d0-4fee-8ff4-becedb0aa8df" class="">Constructed over several hundred years in the third millennium BC, during the Neolithic, or New Stone Age, the monument comprises a large henge (a bank and a ditch) with a large outer stone circle and two separate smaller stone circles situated inside the centre of the monument.</p><p id="1dc01128-c5b0-41ea-9134-f4b1167927ee" class="">Avebury is owned and managed by the National Trust. It has been designated a Scheduled Ancient Monument, as well as a World Heritage Site, in the latter capacity being seen as a part of the wider prehistoric landscape of Wiltshire known as Stonehenge, Avebury and Associated Sites.</p></div><hr id="befc902b-6029-48b7-afdf-195f5a501503"/><h2 id="3ebe9dc2-b8f8-4de4-bbe9-3fb196c8b0b8" class=""><details open=""><summary>Resources</summary></details></h2><div class="indented"><figure id="330d0b32-5b9a-4eda-ae12-0d0e16375a7f"><div class="source"><a href="https://www.youtube.com/watch?v=nqz0pyNqY14">https://www.youtube.com/watch?v=nqz0pyNqY14</a></div></figure></div></div><h1 id="16c66709-aa38-45bf-a363-922b541c5069" class=""><details open=""><summary>⚔️ The Falkland/Malvinas War</summary></details></h1><div class="indented"><p id="554593a0-616c-42e8-b892-25384704e190" class="">La guerra delle Falkland o guerra delle Malvine fu un conflitto militare combattuto tra aprile e giugno 1982 tra Argentina e Regno Unito per il controllo e il possesso delle isole Falkland e della Georgia del Sud e Isole Sandwich Australi.</p><p id="c32d7c9c-1c47-49cf-9dfc-a2f49d965200" class="">Alla vigilia della guerra l&#x27;Argentina si trovava nel pieno di una devastante crisi economica e di una contestazione civile su larga scala contro la giunta militare che governava il Paese. Il governo, guidato dal generale Leopoldo Galtieri, l&#x27;allora presidente, decise di giocare la carta del sentimento nazionalistico lanciando quella che considerava una guerra facile e veloce per reclamare le Falkland, su cui l&#x27;Argentina (che le chiama Malvinas, Malvine) rivendicava la sovranità. Sebbene colto di sorpresa dall&#x27;attacco, il Regno Unito organizzò una task force navale per respingere le forze argentine che avevano occupato gli arcipelaghi. Dopo pesanti combattimenti, i britannici prevalsero e le isole tornarono sotto il controllo del Regno Unito.</p><p id="54b17f22-d49f-43d8-9a25-713284caba2b" class="">Le conseguenze politiche della guerra furono profonde: in Argentina crebbero dissenso e proteste contro il governo militare, avviandolo alla caduta definitiva, mentre un&#x27;ondata di patriottismo si diffuse nel Regno Unito, ridando forza al governo del primo ministro Margaret Thatcher. Il vittorioso conflitto diede fiato alle ambizioni britanniche di potenza post imperiale (dopo la grave delusione seguita alla decolonizzazione), dimostrando che il Regno Unito aveva ancora la capacità di proiettare con successo la propria potenza militare anche in una guerra a enorme distanza dalla madrepatria.</p><h3 id="017831f9-454e-4e7f-baab-59be8d3b6153" class=""><details open=""><summary>Translation</summary></details></h3><div class="indented"><p id="a3496941-e63c-4a62-9191-52d19117b568" class="">The Falklands War was a ten-week undeclared war between Argentina and the United Kingdom in 1982 over two British dependent territories in the South Atlantic: the Falkland Islands and its territorial dependency, South Georgia and the South Sandwich Islands.</p><p id="04e8fe63-be49-4c4f-9dc8-806aced009c8" class="">The conflict began on 2 April, when Argentina invaded and occupied the Falkland Islands, followed by the invasion of South Georgia the next day. The British government dispatched a naval task force to engage the Argentine Navy and Air Force before making an amphibious assault on the islands. The conflict lasted 74 days and ended with an Argentine surrender on 14 June, returning the islands to British control. In total, 649 Argentine military personnel, 255 British military personnel, and three Falkland Islanders died during the hostilities.</p><p id="9ec227cf-a1bf-4e0b-aae4-6cf58d3088bd" class="">The conflict was a major episode in the protracted dispute over the territories&#x27; sovereignty. Argentina asserted (and maintains) that the islands are Argentine territory, and the Argentine government thus characterised its military action as the reclamation of its own territory. The British government regarded the action as an invasion of a territory that had been a Crown colony since 1841. Falkland Islanders, who have inhabited the islands since the early 19th century, are predominantly descendants of British settlers, and strongly favour British sovereignty. Neither state officially declared war, although both governments declared the islands a war zone.</p><p id="e7fb505a-ca48-49de-b23e-1fa84becd181" class="">The conflict has had a strong effect in both countries and has been the subject of various books, articles, films, and songs. Patriotic sentiment ran high in Argentina, but the unfavourable outcome prompted large protests against the ruling military government, hastening its downfall and the democratisation of the country. In the United Kingdom, the Conservative government, bolstered by the successful outcome, was re-elected with an increased majority the following year. The cultural and political effect of the conflict has been less in the UK than in Argentina, where it has remained a common topic for discussion.</p></div><h2 id="5c820f82-73bd-4386-8e7b-7ad874ebfa80" class=""><details open=""><summary>Resources</summary></details></h2><div class="indented"><figure id="e646703b-739c-4563-918b-884fdb8db7d1"><div class="source"><a href="https://www.youtube.com/watch?v=MNFjYm3UlvE">https://www.youtube.com/watch?v=MNFjYm3UlvE</a></div></figure><figure id="c397547e-5229-4ee7-b41b-dffa54a13060"><div class="source"><a href="https://www.youtube.com/watch?v=jLR7-hJZEBc">https://www.youtube.com/watch?v=jLR7-hJZEBc</a></div></figure></div></div><h1 id="e7595bc9-9708-4502-8da9-a28266a50e87" class=""><details open=""><summary>🤖 AI</summary></details></h1><div class="indented"><h3 id="ab4369b4-8ebf-4c53-8cbc-1e72a9ff118c" class="">History</h3><figure id="88852288-f7dd-4ed4-966c-b391bdf03ace" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2088.png"><img style="width:2752px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2088.png"/></a></figure><h3 id="a647150e-f0e4-4fb0-a91d-864e9205de7e" class="">What is it?</h3><figure id="9e70b9a9-9415-4ff0-8a0c-2d6200dc6245" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2089.png"><img style="width:2778px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2089.png"/></a></figure><h3 id="52e02632-fb60-441f-854c-d4cf91bc526b" class="">Different types</h3><figure id="4acae7dd-15f4-4dbd-8147-30dfab86fe0c" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2090.png"><img style="width:2592px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2090.png"/></a></figure><ol type="1" id="db21197d-1833-40cd-a1cf-8cbc93114d59" class="numbered-list" start="1"><li>Purely reactive: just reacts to some inputs (chess)</li></ol><ol type="1" id="f459e94e-8fab-46c0-a96b-8190d0d9b496" class="numbered-list" start="2"><li>Limited memory: uses some kind of data to create useful suggestions or intelligent answers</li></ol><ol type="1" id="937b1b39-7609-40df-801d-5af66c6459f3" class="numbered-list" start="3"><li>Theory of mind: has the capacity to understand thoughts and emotions and interact socially (still in the process of being invented</li></ol><ol type="1" id="e32f6274-c9db-4003-b55f-7813fc96aa13" class="numbered-list" start="4"><li>Self aware: (not invented yet)</li></ol><h3 id="465cf14f-83bf-4fce-a798-0d902159de98" class="">Applications of AI</h3><ol type="1" id="5d2b7123-e8c8-4f8d-b915-f23fd0b63156" class="numbered-list" start="1"><li>Banking Fraud Detection</li></ol><ol type="1" id="20ad868b-12ba-4ef3-9913-f6164b6ce8b1" class="numbered-list" start="2"><li>Online customer support</li></ol><ol type="1" id="bd1b1435-f463-4fea-acac-1a02c438adb5" class="numbered-list" start="3"><li>Cyber security</li></ol><ol type="1" id="d65a5a4b-e964-4e2b-af96-f0d711060f9c" class="numbered-list" start="4"><li>Virtual Assistants</li></ol><h3 id="90147098-cc3d-476c-9e41-7e98590781bf" class="">The future</h3><figure id="d3d61405-81bd-420a-9461-1e65cfeaaaac" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2091.png"><img style="width:2518px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2091.png"/></a></figure><h3 id="27bcd4c9-461f-4664-bd05-9af0cfd9c8c5" class=""><details open=""><summary>Resources</summary></details></h3><div class="indented"><figure id="66210c7b-6e4a-457e-b007-97429eeb14b1"><div class="source"><a href="https://www.youtube.com/watch?v=cW9shEB8h5E">https://www.youtube.com/watch?v=cW9shEB8h5E</a></div></figure></div></div><h1 id="9bf45d63-0449-4521-8c77-dbace74068fc" class=""><details open=""><summary>💡 The development of computers</summary></details></h1><div class="indented"><h1 id="984e60de-fcf0-4570-8bf9-a2ef16b8c5e5" class="">Diagram</h1><figure id="35e28bc5-28f9-49fb-8ec8-dfc9b29ae8a1" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2092.png"><img style="width:768px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2092.png"/></a></figure><h1 id="19f17889-9949-4cea-8380-1f14dd280ee3" class=""><em>Analytical engine</em></h1><p id="75ffdf43-660a-4c4b-a737-8ec4974c3296" class="">La macchina analitica (Analytical engine in inglese) è stato il primo prototipo di un computer meccanico sviluppato per eseguire compiti generici. Il progetto fu sviluppato dal matematico, filosofo e scienziato inglese Charles Babbage (1791–1871), che cercò anche di realizzarlo praticamente. Rappresenta un importante passo nella storia dell&#x27;informatica.</p><figure id="cfffc237-64c6-44f3-8071-07b6668518fe" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2093.png"><img style="width:192px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2093.png"/></a></figure><h3 id="df560078-7f9d-4665-8b23-95d1d3971829" class=""><details open=""><summary>Translation</summary></details></h3><div class="indented"><p id="f8bca55a-6666-4af5-a18b-f8eb390a1e35" class="">The Analytical Engine was a proposed mechanical general-purpose computer designed by English mathematician and computer pioneer Charles Babbage. It was first described in 1837 as the successor to Babbage&#x27;s difference engine, which was a design for a simpler mechanical calculator.</p><p id="f8955ac1-135c-4c2b-a4b7-0f108087b09f" class="">The Analytical Engine incorporated an arithmetic logic unit, control flow in the form of conditional branching and loops, and integrated memory, making it the first design for a general-purpose computer that could be described in modern terms as Turing-complete.</p><p id="25846dc8-d90a-47f7-b1a6-446213e45943" class="">In other words, the logical structure of the Analytical Engine was essentially the same as that which has dominated computer design in the electronic era The Analytical Engine is one of the most successful achievements of Charles Babbage.</p><p id="4e387807-ec0f-434b-ad4b-b880090492a0" class="">Babbage was never able to complete construction of any of his machines due to conflicts with his chief engineer and inadequate funding.</p></div><hr id="ff9e3d59-b45d-4caa-b350-af6424b6425c"/><h1 id="a965ab5c-d6ca-4766-87d3-60a620638787" class="">Colossus</h1><figure id="a9e6514e-c4d2-494e-ba42-9dce81bcd31e" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2094.png"><img style="width:336px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2094.png"/></a></figure><p id="572cd169-d549-4933-aadc-f93d13d7d594" class="">Il Colossus è stato uno dei primi computer elettronici programmabili nella storia dell&#x27;informatica. Costruito e messo in opera nel Regno Unito, durante la seconda guerra mondiale, fu in grado di decifrare i codici sviluppati dalla cifratrice Lorenz SZ 40/42 usata dai nazisti per proteggere la corrispondenza fra Adolf Hitler e i suoi capi di stato maggiore, oltre che alle comunicazioni Purple e Red giapponesi, basate sulla tecnologia di Enigma.</p><p id="3b12b449-9934-40c3-9fd3-a01e1b94cc2d" class="">I servizi segreti britannici fecero di tutto per interpretare i codici dei nazisti, che però venivano cambiati quotidianamente.</p><p id="e36e9ac0-835d-44be-b1f8-53369a908e9f" class="">Il Colossus, costruito in segreto per la Royal Navy, è stato il primo a usare le valvole termoioniche, fino ad allora usate solo da amplificatori, al posto dei relè: sfruttandone ben 1500, fu in grado di aumentare notevolmente la potenza di calcolo.</p><p id="336f41bc-3306-423d-adc8-8a29d2aafc54" class="">Il suo primato cronologico, tuttavia, è stato riconosciuto in ritardo a causa del rigoroso segreto imposto dal Regno Unito, resistito per decenni anche dopo la conclusione della guerra.</p><h3 id="9c951025-66df-405e-bf91-6d2b38c29925" class=""><details open=""><summary>Translation</summary></details></h3><div class="indented"><p id="b7a9dc66-408d-49ca-908f-24e2173900ef" class="">Colossus was a set of computers developed by British codebreakers in the years 1943–1945 to help in the cryptanalysis of the Lorenz cipher. Colossus used thermionic valves (vacuum tubes) to perform Boolean and counting operations. Colossus is thus regarded as the world&#x27;s first programmable, electronic, digital computer, although it was programmed by switches and plugs and not by a stored program.</p><p id="2033cb9f-8166-46dd-b814-7a5384bfdc94" class="">Colossus was designed by General Post Office (GPO) research telephone engineer Tommy Flowers to solve a problem posed by mathematician Max Newman at the Government Code and Cypher School (GC&amp;CS) at Bletchley Park. Alan Turing&#x27;s use of probability in cryptanalysis contributed to its design. It has sometimes been erroneously stated that Turing designed Colossus to aid the cryptanalysis of the Enigma. (Turing&#x27;s machine that helped decode Enigma was the electromechanical Bombe, not Colossus.)</p><p id="1fdcfcee-db87-4d42-be4f-b080eb67b5b6" class="">Use of these machines allowed the Allies to obtain a vast amount of high-level military intelligence from intercepted radiotelegraphy messages between the German High Command (OKW) and their army commands throughout occupied Europe.</p><p id="25f396c9-cc90-4a5a-953c-36c2bb1d7343" class="">The existence of the Colossus machines was kept secret until the mid-1970s. All but two machines were dismantled into such small parts that their use could not be inferred. The two retained machines were eventually dismantled in the 1960s.</p></div><hr id="5c20bb99-bdcc-4ce8-b166-dfb2c9c72089"/><h1 id="bc434c86-3531-4bee-957d-00571d1e6ada" class="">Elea 9000</h1><figure id="2f1a48fe-2260-4e5d-9b33-e84de17a76ae" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2095.png"><img style="width:288px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2095.png"/></a></figure><p id="0bb4135b-aa5b-4724-b21f-32435cf1ad34" class="">Elea è il nome di una serie di elaboratori elettronici mainframe sviluppati da Olivetti nella seconda metà degli anni cinquanta la cui terza generazione, denominata Elea 9003, fu il primo della storia interamente realizzato con componenti a stato solido. Fu concepito, progettato e sviluppato da un piccolo gruppo di giovani ricercatori guidati da Mario Tchou.</p><p id="48534037-9177-43ff-b458-e1f2b2a47e4a" class="">Fu commercializzato alcuni mesi dopo l&#x27;uscita del concorrente 2002 della Siemens, che, però, ancora utilizzava alcune valvole, e vari mesi prima del lancio del 7090, il primo computer interamente a transistor realizzato dalla IBM.</p><p id="f751cf92-da9b-4b58-8ff7-3d97036f1b30" class="">L&#x27;acronimo ELEA stava per Elaboratore Elettronico Aritmetico (quest&#x27;ultimo aggettivo poi modificato in &quot;Automatico&quot; per ragioni di marketing).</p><h3 id="722619af-a4c6-480b-9ad0-1a327212fa11" class=""><details open=""><summary>Translation</summary></details></h3><div class="indented"><p id="2397c194-31fa-4d63-8ad9-9ecb0ba1303e" class="">The Elea 9003 is one of a series of mainframe computers Olivetti developed starting in the late 1950s. The system, made entirely with transistors for high performance, was conceived, designed and developed by a small group of researchers led by Mario Tchou (1924–1961).</p><p id="fffa6f54-a88c-4408-81fe-e85a802014fe" class="">It was the first solid-state computer designed and manufactured in Italy.</p><p id="c4a151f2-51a3-4b9c-89fe-85d509514448" class="">The acronym ELEA stood for Elaboratore Elettronico Aritmetico (Arithmetical Electronic Computer, then changed to Elaboratore Elettronico Automatico for marketing reasons).</p></div><hr id="792c4e78-aecf-4e85-8a4f-a191511c7fa4"/><h1 id="b084635a-3355-4dc1-9363-5a2b755cf70f" class="">Sinclair Spectrum</h1><p id="87e59853-17c0-42ba-b70a-43448f4067b4" class="">Lo ZX Spectrum è un home computer creato e prodotto dal 1982 fino al 1986 dalla Sinclair Research Ltd, e dal 1986 al 1992 dalla Amstrad.</p><p id="dc2d8b2b-c9ad-40c4-acd4-b2a983b44fc3" class="">In Europa fu il principale antagonista del Commodore 64 e conquistò un discreto settore di mercato grazie ad un prezzo di listino più economico; infatti le piccole dimensioni, la velocità di calcolo e il prezzo relativamente basso lo resero popolare negli anni ottanta in vari Stati del mondo.</p><figure id="9738a3fa-2e02-43ac-b643-ae986174fa8f" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2096.png"><img style="width:336px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2096.png"/></a></figure><h3 id="383c75ec-c371-4bbe-8f52-4d3e710d3ca5" class=""><details open=""><summary>Translation</summary></details></h3><div class="indented"><p id="f69ec30a-afb3-4e51-afa2-e20faaf2fe9a" class="">The ZX Spectrum is an 8-bit personal home computer developed by Sinclair Research. It was first released in the United Kingdom on 23 April 1982 and went on to become Britain&#x27;s best-selling microcomputer.</p><p id="39eee68b-4958-4277-8da4-2638152b86ea" class="">Referred to during development as the ZX81 Colour and ZX82, it was launched as the ZX Spectrum to highlight the machine&#x27;s colour display, compared with the black and white display of its predecessor, the ZX81. The Spectrum was released as eight different models, altogether they sold over 5 million units worldwide.</p><p id="e9f79feb-c711-4276-b58f-2375ebff921a" class="">The Spectrum was among the first home computers in the United Kingdom aimed at a mainstream audience, similar in significance to the Commodore 64 in the US or the MO5 in France. The introduction of the ZX Spectrum led to a boom in companies producing software and hardware for the machine, the effects of which are still seen.</p><p id="93a57b49-b882-4521-acd2-772db9101947" class="">The machine was officially discontinued in 1992.</p></div></div><h1 id="f3c6c2f0-26e2-474d-8189-1e913b5e7823" class=""><details open=""><summary>📠 Alan Turing e la macchina Enigma</summary></details></h1><div class="indented"><h1 id="c2818efe-bb1a-4eff-9d58-5074b185f23d" class="">Alan Turing</h1><figure id="7bc2ca76-d6a5-4a5e-978b-aaff672f352e" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2097.png"><img style="width:192px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2097.png"/></a></figure><p id="db8b9ec1-e47c-4a65-94d3-7403e69cdf4b" class="">Alan Mathison Turing (Londra 1912 – Manchester 1954) è stato un matematico, logico, crittografo e filosofo britannico, considerato uno dei padri dell&#x27;informatica e uno dei più grandi matematici del XX secolo.</p><p id="2588f824-80af-464e-a81b-3249a7b6228c" class="">Il suo lavoro ebbe una vasta influenza sulla nascita della disciplina dell&#x27;informatica, grazie alla sua formalizzazione dei concetti di algoritmo e calcolo mediante l&#x27;omonima macchina, che a sua volta costituì un significativo passo avanti nell&#x27;evoluzione verso il moderno computer.</p><p id="7128117a-787a-4a12-aa85-e332bf9a084d" class="">Per questo contributo è solitamente considerato il padre della scienza informatica e dell&#x27;intelligenza artificiale, da lui teorizzate già negli anni trenta del &#x27;900, ed anche uno dei più brillanti crittoanalisti che operarono nel Regno Unito durante la seconda guerra mondiale, per decifrare i messaggi scambiati da diplomatici e militari delle Potenze dell&#x27;Asse.</p><p id="1cc79754-6e56-4eb1-84ec-e551f7336619" class="">Turing lavorò infatti a Bletchley Park, il principale centro di crittoanalisi del Regno Unito, dove ideò una serie di tecniche per violare i cifrari tedeschi, incluso l&#x27;utilizzo di una macchina elettromeccanica (chiamata &quot;Bomba&quot;) in grado di decodificare codici creati dalla macchina crittografica Enigma. Morì, suicida, a soli 41 anni.</p><h3 id="9a6a2b7b-4396-4a34-a488-e6804863c2b1" class=""><details open=""><summary>Translation</summary></details></h3><div class="indented"><p id="d64053e1-42e1-4665-9a6c-699ed7fa02ef" class="">Alan Mathison Turing OBE FRS (1912 – 1954) was an English mathematician, computer scientist, logician, cryptanalyst, philosopher, and theoretical biologist. Turing was highly influential in the development of theoretical computer science, providing a formalisation of the concepts of algorithm and computation with the Turing machine, which can be considered a model of a general-purpose computer. He is widely considered to be the father of theoretical computer science and artificial intelligence.</p><p id="861cf3a0-2828-4dab-bef0-89677f038438" class="">In 1938, he obtained his PhD from the Department of Mathematics at Princeton University. During the Second World War, Turing worked for the Government Code and Cypher School (GC&amp;CS) at Bletchley Park, Britain&#x27;s codebreaking centre that produced Ultra intelligence. For a time he led Hut 8, the section that was responsible for German naval cryptanalysis. Here, he devised a number of techniques for speeding the breaking of German ciphers, including improvements to the pre-war Polish bombe method, an electromechanical machine that could find settings for the Enigma machine. Turing played a crucial role in cracking intercepted coded messages that enabled the Allies to defeat the Axis powers in many crucial engagements, including the Battle of the Atlantic.</p><p id="5ae33aa5-7647-401b-84b4-3dc06a0fda69" class="">Turing was prosecuted in 1952 for homosexual acts. He accepted hormone treatment with DES, a procedure commonly referred to as chemical castration, as an alternative to prison. Turing died on 7 June 1954 from cyanide poisoning. An inquest determined his death as a suicide, but it has been noted that the known evidence is also consistent with accidental poisoning.</p></div><h1 id="cb702cc7-2906-4c62-b80e-256fd2dbe436" class="">Enigma</h1><figure id="aa821c04-1b43-410a-9d9d-c22aead19714" class="image"><a href="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2098.png"><img style="width:336px" src="../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%2098.png"/></a></figure><p id="34013095-669b-4a46-9d73-6a694c428fcd" class="">Enigma fu un dispositivo elettromeccanico per cifrare e decifrare messaggi. Macchina nata da un tentativo di commercializzazione poi fallito, fu ampiamente utilizzata dalle forze armate tedesche durante il periodo nazista e della seconda guerra mondiale. La facilità d&#x27;uso e la presunta indecifrabilità furono le maggiori ragioni del suo ampio utilizzo.</p><p id="1c1c4c5f-a92d-4c92-838c-76aa1a4ebbe3" class="">Nonostante fosse stata modificata e potenziata nell&#x27;arco del suo periodo di utilizzo, un nutrito gruppo di esperti riuscì a violarla dopo essersi impegnato a lungo con questo intento. I primi a decifrarla nel 1932 furono alcuni matematici polacchi: Marian Rejewski, Jerzy Różycki e Henryk Zygalski. Il loro lavoro ha permesso di ottenere ulteriori informazioni sulla sempre più aggiornata macchina dei tedeschi &quot;Enigma&quot;, prima in Polonia e, dopo lo scoppio della guerra, anche in Francia e Gran Bretagna. La decrittazione dei messaggi cifrati con Enigma fornì per quasi tutta la seconda guerra mondiale importantissime informazioni alle forze alleate.</p><h3 id="3119e8d6-460f-4169-8870-c7d450c2fe19" class=""><details open=""><summary>Translation</summary></details></h3><div class="indented"><p id="b7174ec4-f7a9-4cfb-8fc2-b6ac9aba3073" class="">The Enigma machine is a cipher device developed and used in the early- to mid-20th century to protect commercial, diplomatic, and military communication. It was employed extensively by Nazi Germany during World War II, in all branches of the German military. The Enigma machine was considered so secure that it was used to encipher the most top-secret messages.</p><p id="3109cc67-1879-4d23-b8fb-7178eebb98c2" class="">The Enigma has an electromechanical rotor mechanism that scrambles the 26 letters of the alphabet. In typical use, one person enters text on the Enigma&#x27;s keyboard and another person writes down which of the 26 lights above the keyboard illuminated at each key press. If plain text is entered, the illuminated letters are the ciphertext. Entering ciphertext transforms it back into readable plaintext. The rotor mechanism changes the electrical connections between the keys and the lights with each keypress.</p><p id="a1a685c8-6e05-4e34-b021-0d2d51fb8596" class="">The security of the system depends on machine settings that were generally changed daily, based on secret key lists distributed in advance, and on other settings that were changed for each message. The receiving station would have to know and use the exact settings employed by the transmitting station to successfully decrypt a message.</p><p id="f3adbc0a-427c-4f9a-aab9-aa1fa5a9d41b" class="">While Nazi Germany introduced a series of improvements to the Enigma over the years, and these hampered decryption efforts, they did not prevent Poland from cracking the machine prior to the war, enabling the Allies to exploit Enigma-enciphered messages as a major source of intelligence.</p></div><h2 id="21d6e948-06b8-41c7-93fe-1c56c14380ca" class=""><details open=""><summary>Resources</summary></details></h2><div class="indented"><figure id="3bc294e7-70f4-4036-a0ae-15853379f5a0"><div class="source"><a href="https://www.youtube.com/watch?v=ybkkiGtJmkM">https://www.youtube.com/watch?v=ybkkiGtJmkM</a></div></figure></div></div><h1 id="aa306bfd-5486-473a-bee6-94d10e5ccdd4" class=""><details open=""><summary>🦠 Ransomware</summary></details></h1><div class="indented"><p id="9d761ec0-14c0-4b2c-bdc1-4b03e1c79eb2" class="">Ransomware is a type of malware from cryptovirology that threatens to publish the victim&#x27;s personal data or perpetually block access to it unless a ransom is paid. While some simple ransomware may lock the system without damaging any files, more advanced malware uses a technique called cryptoviral extortion. It encrypts the victim&#x27;s files, making them inaccessible, and demands a ransom payment to decrypt them. In a properly implemented cryptoviral extortion attack, recovering the files without the decryption key is an intractable problem – and difficult to trace digital currencies such as paysafecard or Bitcoin and other cryptocurrencies are used for the ransoms, making tracing and prosecuting the perpetrators difficult.</p><p id="08d0ada2-0653-41b3-af1c-f6e3d7f02d2b" class="">Ransomware attacks are typically carried out using a Trojan disguised as a legitimate file that the user is tricked into downloading or opening when it arrives as an email attachment. However, one high-profile example, the WannaCry worm, traveled automatically between computers without user interaction.</p><p id="c614827f-5029-48a7-b503-0bfebd00ba9c" class="">Starting as early as 1989 with the first documented ransomware known as the AIDS trojan, the use of ransomware scams has grown internationally. There were 181.5 million ransomware attacks in the first six months of 2018. This record marks a 229% increase over this same time frame in 2017. In June 2014, vendor McAfee released data showing that it had collected more than double the number of ransomware samples that quarter than it had in the same quarter of the previous year. CryptoLocker was particularly successful, procuring an estimated US$3 million before it was taken down by authorities, and CryptoWall was estimated by the US Federal Bureau of Investigation (FBI) to have accrued over US$18 million by June 2015. In 2020, the IC3 received 2,474 complaints identified as ransomware with adjusted losses of over $29.1 million. The losses could be more than that, according to the FBI. According to a report by SonicWall, there were around 623 million ransomware attacks in 2021.</p><h2 id="992d5bc4-043d-4d66-921c-b4b5170e9011" class="">Operation</h2><p id="50ebc3a3-0e99-433b-8a97-bacbc80ecc35" class="">The concept of file-encrypting ransomware was invented and implemented by Young and Yung at Columbia University and was presented at the 1996 IEEE Security &amp; Privacy conference. It is called cryptoviral extortion and it was inspired by the fictional facehugger in the movie Alien. Cryptoviral extortion is the following three-round protocol carried out between the attacker and the victim.</p><p id="822b4142-0959-4f2a-a390-b5d5f962631b" class="">[attacker→victim] The attacker generates a key pair and places the corresponding public key in the malware. The malware is released.</p><p id="fc5f1b3c-372d-469d-b3f8-e5b77d3a1d75" class="">[victim→attacker] To carry out the cryptoviral extortion attack, the malware generates a random symmetric key and encrypts the victim&#x27;s data with it. It uses the public key in the malware to encrypt the symmetric key. This is known as hybrid encryption and it results in a small asymmetric ciphertext as well as the symmetric ciphertext of the victim&#x27;s data. It zeroizes the symmetric key and the original plaintext data to prevent recovery. It puts up a message to the user that includes the asymmetric ciphertext and how to pay the ransom. The victim sends the asymmetric ciphertext and e-money to the attacker.</p><p id="6f7a68e0-72e0-4df2-8133-911f4fddb2a6" class="">[attacker→victim] The attacker receives the payment, deciphers the asymmetric ciphertext with the attacker&#x27;s private key, and sends the symmetric key to the victim. The victim deciphers the encrypted data with the needed symmetric key thereby completing the cryptovirology attack.</p><p id="c2269d05-14dc-4142-a5dc-7b8f97473c8f" class="">The symmetric key is randomly generated and will not assist other victims. At no point is the attacker&#x27;s private key exposed to victims and the victim need only send a very small ciphertext (the encrypted symmetric-cipher key) to the attacker.</p><p id="00133488-c1a3-4224-a111-c67e1a58c4b6" class="">Ransomware attacks are typically carried out using a Trojan, entering a system through, for example, a malicious attachment, embedded link in a Phishing email, or a vulnerability in a network service. The program then runs a payload, which locks the system in some fashion, or claims to lock the system but does not (e.g., a scareware program). Payloads may display a fake warning purportedly by an entity such as a law enforcement agency, falsely claiming that the system has been used for illegal activities, contains content such as pornography and &quot;pirated&quot; media.</p><p id="667d06e6-fd0b-459d-8a50-3fc7678d5ed4" class="">Some payloads consist simply of an application designed to lock or restrict the system until payment is made, typically by setting the Windows Shell to itself, or even modifying the master boot record and/or partition table to prevent the operating system from booting until it is repaired. The most sophisticated payloads encrypt files, with many using strong encryption to encrypt the victim&#x27;s files in such a way that only the malware author has the needed decryption key.</p><p id="b855e13f-85af-45fc-8ef1-9d3398e33f49" class="">Payment is virtually always the goal, and the victim is coerced into paying for the ransomware to be removed either by supplying a program that can decrypt the files, or by sending an unlock code that undoes the payload&#x27;s changes. While the attacker may simply take the money without returning the victim&#x27;s files, it is in the attacker&#x27;s best interest to perform the decryption as agreed, since victims will stop sending payments if it becomes known that they serve no purpose. A key element in making ransomware work for the attacker is a convenient payment system that is hard to trace. A range of such payment methods have been used, including wire transfers, premium-rate text messages, pre-paid voucher services such as paysafecard, and the Bitcoin cryptocurrency.</p><p id="61f11429-c3ed-4c05-a348-d7648750b77b" class="">In May 2020, vendor Sophos reported that the global average cost to remediate a ransomware attack (considering downtime, people time, device cost, network cost, lost opportunity and ransom paid) was $761,106. Ninety-five percent of organizations that paid the ransom had their data restored.</p><h2 id="78114e03-8c78-47ae-b142-2a5764f99446" class="">Mitigation</h2><p id="f3a45a75-e2f0-4bd5-aa52-458bdf8c344e" class="">If an attack is suspected or detected in its early stages, it takes some time for encryption to take place; immediate removal of the malware (a relatively simple process) before it has completed would stop further damage to data, without salvaging any already lost.</p><p id="bc5354a2-38b7-4845-90a3-62d7e3329b8e" class="">Security experts have suggested precautionary measures for dealing with ransomware. Using software or other security policies to block known payloads from launching will help to prevent infection, but will not protect against all attacks As such, having a proper backup solution is a critical component to defending against ransomware. Note that, because many ransomware attackers will not only encrypt the victim&#x27;s live machine but it will also attempt to delete any hot backups stored locally or on accessible over the network on a NAS, it&#x27;s also critical to maintain &quot;offline&quot; backups of data stored in locations inaccessible from any potentially infected computer, such as external storage drives or devices that do not have any access to any network (including the Internet), prevents them from being accessed by the ransomware. Moreover, if using a NAS or Cloud storage, then the computer should have append-only permission to the destination storage, such that it cannot delete or overwrite previous backups. According to comodo, applying two Attack Surface Reduction on OS/Kernel provides a materially-reduced attack surface which results in a heightened security posture.</p><p id="4efaaec6-3e45-4ec7-bca7-88cbb84ccf58" class="">Installing security updates issued by software vendors can mitigate the vulnerabilities leveraged by certain strains to propagate. Other measures include cyber hygiene − exercising caution when opening e-mail attachments and links, network segmentation, and keeping critical computers isolated from networks. Furthermore, to mitigate the spread of ransomware measures of infection control can be applied. Such may include disconnecting infected machines from all networks, educational programs, effective communication channels, malware surveillance and ways of collective participation</p><h3 id="35fcec20-03df-405e-9706-694e2c5dcabe" class="">File system defenses against ransomware</h3><p id="1b627aaf-faff-4b39-a51d-00e7a83e72f9" class="">A number of file systems keep snapshots of the data they hold, which can be used to recover the contents of files from a time prior to the ransomware attack in the event the ransomware does not disable it.</p><p id="2bcc4eea-916b-4a7c-8e97-1af33343e2d7" class="">On Windows, the Volume shadow copy (VSS) is often used to store backups of data; ransomware often targets these snapshots to prevent recovery and therefore it is often advisable to disable user access to the user tool VSSadmin.exe to reduce the risk that ransomware can disable or delete past copies.</p><p id="d38d9389-6703-49d6-8a3c-5b06827d3aed" class="">On Windows 10, users can add specific directories or files to Controlled Folder Access in Windows Defender to protect them from ransomware. It is advised to add backup and other important directories to Controlled Folder Access.</p><p id="aa4a6db9-cdbb-4715-a151-fbedc67eb1be" class="">Unless malware gains root on the ZFS host system in deploying an attack coded to issue ZFS administrative commands, file servers running ZFS are broadly immune to ransomware, because ZFS is capable of snapshotting even a large file system many times an hour, and these snapshots are immutable (read only) and easily rolled back or files recovered in the event of data corruption. In general, only an administrator can delete (but cannot modify) snapshots.</p><h3 id="a415b4d9-b445-47ef-94a0-b99cb192f8a0" class="">File decryption and recovery</h3><p id="cb9b0ef4-7112-4102-84f8-956c472f5b1b" class="">There are a number of tools intended specifically to decrypt files locked by ransomware, although successful recovery may not be possible. If the same encryption key is used for all files, decryption tools use files for which there are both uncorrupted backups and encrypted copies (a known-plaintext attack in the jargon of cryptanalysis. But, it only works when the cipher the attacker used was weak to begin with, being vulnerable to known-plaintext attack); recovery of the key, if it is possible, may take several days. Free ransomware decryption tools can help decrypt files encrypted by the following forms of ransomware: AES_NI, Alcatraz Locker, Apocalypse, BadBlock, Bart, BTCWare, Crypt888, CryptoMix, CrySiS, EncrypTile, FindZip, Globe, Hidden Tear, Jigsaw, LambdaLocker, Legion, NoobCrypt, Stampado, SZFLocker, TeslaCrypt, XData. The No More Ransom Project is an initiative by the Netherlands&#x27; police&#x27;s National High Tech Crime Unit, Europol’s European Cybercrime Centre, Kaspersky Lab and McAfee to help ransomware victims recover their data without paying a ransom. They offer a free CryptoSheriff tool to analyze encrypted files and search for decryption tools.</p><p id="9b7a3405-5885-4198-b10e-4e9011d5514a" class="">In addition, old copies of files may exist on the disk, which has been previously deleted. In some cases, these deleted versions may still be recoverable using software designed for that purpose.</p></div></div></article></body></html>

@@ -1,0 +1,686 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Gabriele D’Annunzio</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="eadb4ec4-c288-4f76-8114-3671206ae6ad" class="page sans"><header><h1 class="page-title">Gabriele D’Annunzio</h1></header><div class="page-body"><nav id="515cebbd-1a33-41f1-9155-2395a61c3598" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#bde965a8-8215-4cfa-ae1f-7aec00ceeb10">Biografia (1863, 1938)</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#b738a4fd-ca24-4bad-9178-fc8e4a397223">Poetica</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#dc96524e-52a1-49af-814b-8d62341f5824">Tradizione e modernità</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#928e1426-f688-4a13-8682-ec324e41474e">Le arti</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ec36fee7-a701-4fcd-9b6e-adfa349ddb14">Le tre fasi</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#8652addc-e41d-4df6-828d-fddbc83df07c">Il bisogno della comunicazione con la folla sconosciuta</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#cc0747ef-f657-428a-9a0f-0eac7200faed">Il lessico e la lingua</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1147d219-d006-48e7-9f3b-88e08d791c00">Un modello</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#298b9b55-b757-4377-bcb1-7e0388a4cfb6">Il Piacere</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ccda8d17-3e6c-4dbc-9b0e-3b2bd116d2ee">Le Laudi</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ac22a204-d71a-4887-bef7-84471f6b3195">Alcyone</a></div></nav><hr id="35de2499-611d-4088-a4fe-96d13e3019fe"/><h2 id="bde965a8-8215-4cfa-ae1f-7aec00ceeb10" class="">Biografia (1863, 1938)</h2><p id="cfec27e9-f237-49a4-be80-1fedb8366e5d" class="">Nato a Pescara nel 1863 da Francesco D&#x27;Annunzio e Luisa de Benedictis, Gabriele é il terzogenito di cinque fratelli. Fin dalla più tenera età spicca tra i coetanei per intelligenza e per una precocissima capacità amatoria.</p><p id="752a85e8-92c0-4bdf-9f8a-427d2d11a6aa" class="">Il padre lo iscrive ad un costoso collegio famoso per gli studi severi e rigorosi. La sua é una figura di allievo irrequieto, ribelle e insofferente alle regole collegiali, ma studioso, brillante, intelligente e deciso a primeggiare. Nel 1879 scrive una lettera al Carducci, nella quale chiede di poter inviare al «gran vate» della poesia italiana, alcuni suoi versi; nello stesso anno a spese del padre pubblica l&#x27;opera «Primo Vere», che viene però sequestrato ai convittori del Cicognini per i suoi accenti eccessivamente sensuali e scandalistici; il libro fu però recensito favorevolmente sul «Fanfulla della domenica».</p><p id="fc086e41-0945-4c92-904f-83a31abd35db" class="">Al termine degli studi liceali consegue la licenza d&#x27;onore, nel novembre 1881 D&#x27;Annunzio si trasferisce a Roma per frequentare la facoltà di lettere e filosofia, ma si immerge con entusiasmo negli ambienti letterari e giornalistici della capitale, trascurando lo studio universitario.</p><p id="523f0029-619d-479a-a69d-0c8e8d3094be" class="">L’anno successivo è quello del suo matrimonio con la duchessina Maria Altemps Hordouin di Gallese di cui il giovane D&#x27;Annunzio frequentava assiduamente i salotti. Il matrimonio è osteggiato dai genitori di lei, ma viene ugualmente celebrato. Da segnalare che già in quest&#x27;epoca D&#x27;Annunzio è perseguitato dai creditori, a causa del suo stile di vita eccessivamente dispondioso.</p><p id="80d344e9-7d55-4ba2-a873-187c59a9f9cf" class="">Nasce il suo primogenito Mario, mentre lo scrittore continua la collaborazione con il Fanfulla, occupandosi più che altro di costume e aneddoti sulla società dei salotti. Nell&#x27;aprile 1886 nasce il secondo figlio, ma D&#x27;Annunzio riacquista l&#x27;entusiasmo artistico e creativo solo quando incontra ad un concerto il grande amore, Barbara Leoni, ossia Elvira Natalia Fraternali.</p><p id="ff8f3b47-d6f5-49c2-8baa-6b3bf2299579" class="">La relazione con la Leoni crea non poche difficoltà a D&#x27;Annunzio che, desideroso di dedicarsi alla sua nuova passione, il romanzo, e di allontanare dalla mente le difficoltà familiari, si ritira in un convento a Francavilla dove elabora in sei mesi <em>Il Piacere</em>.</p><p id="8d2f315a-e416-4ed9-bcaa-6a6c41609e50" class="">Nel 1893 la coppia affronta un processo per adulterio, che non fa altro che far nascere nuove avversità nei confronti del poeta negli ambienti aristocratici. I problemi economici spronano D&#x27;Annunzio ad affrontare un intenso lavoro (infatti, oltre ai debiti da lui contratti si sommano quelli del padre deceduto nel 1893).</p><p id="ccffb0f9-3518-4f89-ae73-d8190c24e3aa" class="">Il nuovo anno si apre nuovamente nel segno della solitudine del convento, dove D&#x27;Annunzio elabora il &quot;Trionfo della morte&quot;. In settembre, trovandosi a Venezia, conosce Eleonora Duse.</p><p id="e4db7f26-b11e-4558-9b06-1f4355b1b3c3" class="">Gli anni dell’inizio del ‘900 sono prevalentemente contrassegnati dall&#x27;intensa produzione delle liriche di <em>Alcyone</em>, e del ciclo delle <em>Laudi</em>.</p><p id="c4d7450e-7bf4-4f02-bc3d-092c35bfe210" class="">Venuto meno il sentimento tra la Duse e D&#x27;Annunzio e incrinatosi definitivamente il loro rapporto, il poeta ospita alla Capponcina, una residenza estiva, Alessandra di Rudinì, vedova Carlotti, con la quale instaura un tenore di vita oltremodo lussuoso e mondano, trascurando l&#x27;impegno letterario. La bella Nike, così era denominata la Di Rudinì, lungi dall&#x27;essere la nuova musa ispiratrice favorisce lo snobismo del poeta, spronandolo ad un oneroso indebitamento, che decreta in seguito l&#x27;imponente crisi finanziaria. Nel maggio del 1905 Alessandra si ammala gravemente, travolta dal vizio della morfina: D&#x27;Annunzio la assiste affettuosamente ma, dopo la sua guarigione, la abbandona. Lo choc per Nike è enorme, tanto che decide di ritirarsi a vita conventuale. Segue poi un rapporto tormentato e drammatico con la contessa Giuseppina Mancini, rievocato nel diario postumo &quot;Solum ad Solam&quot;. Le immense difficoltà economiche costringono D&#x27;Annunzio ad abbandonare l&#x27;Italia e a recarsi nel marzo 1910 in Francia.</p><p id="b6b6fe3c-b5e7-4c1e-b498-3549c78789b2" class="">Assediato dai creditori, fugge in Francia, dove si reca nel marzo 1910, accompagnato dal nuovo amore, la giovane russa Natalia Victor de Goloubeff. Trascorre anche qui cinque anni immerso negli ambienti mondani intellettuali. La permanenza è allietata non solo dalla russa, ma anche dalla pittrice Romaine Brooks, da Isadora Duncan e dalla danzatrice Ida Rubinstein, a cui dedica il dramma &quot;Le martyre de Saint Sébastien&quot;, musicato in seguito dal superbo genio di <a href="https://biografieonline.it/biografia.htm?BioID=3004&amp;biografia=Claude+Debussy">Debussy</a>.</p><p id="57ae1776-06f7-4067-b834-ea1cb8259131" class="">Il canale che permette a D&#x27;Annunzio di conservare la presenza artistica in Italia è &quot;Il <a href="https://cultura.biografieonline.it/corriere-della-sera-storia/">Corriere della sera</a>&quot; di <a href="https://biografieonline.it/biografia.htm?BioID=2580&amp;biografia=Luigi+Albertini">Luigi Albertini</a> (dove fra l&#x27;altro sono state pubblicate le &quot;Faville del maglio&quot;). L&#x27;esilio francese è stato artisticamente proficuo. Nel 1912 compone la tragedia in versi &quot;Parisina&quot;, musicata da <a href="https://biografieonline.it/biografia.htm?BioID=2690&amp;biografia=Pietro+Mascagni">Mascagni</a>; dopo aver collaborato alla realizzazione del film &quot;Cabiria&quot; (di Pastrone) scrive la sua prima opera cinematografica, &quot;La crociata degli innocenti&quot;. Il soggiorno francese termina all&#x27;inizio della guerra, considerata da D&#x27;Annunzio l&#x27;occasione atta ad esprimere con l&#x27;azione gli ideali superomistici ed estetizzanti, affidati, sino ad allora, alla produzione letteraria.</p><p id="228fe39d-9cc6-4c5b-a137-2fc4babf949e" class="">Inviato dal governo italiano a inaugurare il monumento dei Mille a Quarto, D&#x27;Annunzio, il 14 maggio 1915 rientra in Italia presentandosi con una orazione interventista e antigovernativa. Dopo aver sostenuto a gran voce l&#x27;entrata in guerra contro l&#x27;impero Austro-ungarico, non esita ad indossare i panni del soldato l&#x27;indomani della dichiarazione. Si arruola come tenente dei Lancieri di Novara e partecipa a numerose imprese militari. Nel 1916 un incidente aereo gli causa la perdita dell&#x27;occhio destro; assistito dalla figlia Renata, nella «casetta rossa» di Venezia, D&#x27;Annunzio trascorre tre mesi nella immobilità e al buio, componendo su liste di carta la prosa memoriale e frammentaria del &quot;Notturno&quot;. Tornato all&#x27;azione e desiderando gesti eroici si distingue nella Beffa di Buccari e nel volo su Vienna con il lancio di manifestini tricolori. Insignito al valor militare, il &quot;soldato&quot; D&#x27;Annunzio considera l&#x27;esito della guerra una vittoria mutilata. Caldeggiando l&#x27;annessione dell&#x27;Istria e della Dalmazia e considerando la staticità del governo italiano, decide di passare all&#x27;azione: guida la marcia su Fiume e la occupa il 12 settembre 1919. Dopo l&#x27;esperienza militare D&#x27;Annunzio elegge come sua dimora la villa Cargnacco sul lago di Garda, cura <a href="https://cultura.biografieonline.it/opere-di-dannunzio/">la pubblicazione delle opere più recenti</a>, i già citati &quot;Notturno&quot; e i due tomi delle &quot;Faville del maglio&quot;.</p><p id="7183d8e8-cd0f-4998-a8e1-ee6ae0bb8c9f" class="">I rapporti di D&#x27;Annunzio con il fascismo non sono ben definiti: se in un primo tempo la sua posizione è contraria all&#x27;ideologia di <a href="https://biografieonline.it/biografia.htm?BioID=229&amp;biografia=Benito%20Mussolini">Mussolini</a>, in seguito la adesione scaturisce da motivi di convenienza, consoni allo stato di spossatezza fisica e psicologica, nonché a un modus vivendi elitario ed estetizzante. Non rifiuta, quindi, gli onori e gli omaggi del regime: nel 1924, dopo l&#x27;annessione di Fiume il re, consigliato da <a href="https://biografieonline.it/biografia.htm?BioID=229&amp;biografia=Benito%20Mussolini">Mussolini</a>, lo nomina principe di Montenevoso, nel 1926 nasce il progetto dell&#x27;edizione &quot;Opera Omnia&quot; curato dallo stesso Gabriele; i contratti con la casa editrice &quot;L&#x27; Oleandro&quot; garantiscono ottimi profitti a cui si aggiungono sovvenzioni elargite da <a href="https://biografieonline.it/biografia.htm?BioID=229&amp;biografia=Benito%20Mussolini">Mussolini</a>: D&#x27;Annunzio, assicurando allo stato l&#x27;eredità della villa di Cargnacco, riceve i finanziamenti per renderla una residenza monumentale: nasce così il «Vittoriale degli Italiani», emblema del vivere inimitabile di D&#x27;Annunzio. Al Vittoriale l&#x27;anziano Gabriele ospita la pianista Luisa Bàccara, Elena Sangro che gli rimane accanto dal 1924 al 1933, inoltre la pittrice polacca <a href="https://biografieonline.it/biografia.htm?BioID=153&amp;biografia=Tamara%20De%20Lempicka">Tamara De Lempicka</a>.</p><p id="490caef6-5f90-46ff-adfd-ef21625fef38" class="">Entusiasta della <a href="https://cultura.biografieonline.it/guerra-di-etiopia/">guerra di Etiopia</a>, D&#x27;Annunzio dedica a <a href="https://biografieonline.it/biografia.htm?BioID=229&amp;biografia=Benito%20Mussolini">Mussolini</a> il volume &quot;Teneo te Africa&quot;.</p><p id="fa81abcc-56b0-4c5f-bd99-ebb196803e25" class="">Ma l&#x27;opera più autentica dell&#x27;ultimo D&#x27;Annunzio è il &quot;Libro segreto&quot;, a cui affida riflessioni e ricordi nati da un ripiegamento interiore ed espressi in una prosa frammentaria. L&#x27;opera testimonia la capacità del poeta di rinnovarsi artisticamente anche alle soglie della morte, giunta l&#x27;1 marzo 1938.</p><hr id="5a0ad8a8-a9c6-4c08-837d-c27548ae041a"/><h1 id="b738a4fd-ca24-4bad-9178-fc8e4a397223" class="">Poetica</h1><h3 id="dc96524e-52a1-49af-814b-8d62341f5824" class="">Tradizione e modernità</h3><p id="69669ca6-22ae-4960-a2c7-e55bfbb1eefd" class="">Si dichiara orgogliosamente profeta di un “nuovo rinascimento”, il quale compito è quello di coniugare tra loro la tradizione nota e la modernità ignota, ovvero accrescere il passato illustre di nuova bellezza.
+D’Annunzio accoglie quindi la modernità a patto che le opere nuove si armonizzino con le auguste vestigia storiche.
+Questo ricongiungimento tra classicità e modernità lo si ha in <em>Maia</em> (primo libro delle <em>Laudi</em>) in cui D’Annunzio trasfigura in chiave mitica un viaggio in Grecia (realmente compiuto nel 1895) come percorso di un eroe “ulisside” (novello Ulisse).</p><h3 id="928e1426-f688-4a13-8682-ec324e41474e" class="">Le arti</h3><p id="f98d4db1-9a2f-4a4e-8323-27edc7d05c27" class="">L’autore rivendica la libertà di non essere soltanto un poeta, difatti i suoi interessi spaziano dal film alla fotografia tanto da auspicare l’invenzione di un oggetto che conservi le recitazioni degli attori.</p><p id="b5a5c4f0-0872-444c-9d18-d977ad6d4fa7" class="">Ha quindi una sconfinata fiducia nel progresso tecnico.</p><p id="40356678-d2c7-493c-b8cc-c1b4c11bdb43" class="">Si batte inoltre contro il degrado artistico e ambientale, ovvero per la salvaguardia delle bellezze artistiche e naturali italiani. L’approfondita conoscenza in materia lo porta a introdurre alcuni scritti con descrizioni dettagliate i notizie storiche delle grandi città d’Italia.</p><p id="35f7cdba-ac19-43cb-8952-67d7db1d0043" class="">D’Annunzio considera l’arte un’elevazione dell’esistenza. La forma più adatta a esprimere questa continuità vitale è il romanzo, e d’Annunzio ne espone la scrittura narrativa ideale: </p><ul id="030c200a-54aa-420e-a333-64c8ef94156f" class="bulleted-list"><li style="list-style-type:disc">La musicalità</li></ul><ul id="691010ae-7141-44a9-bc6a-eccc2e0e6770" class="bulleted-list"><li style="list-style-type:disc">Armonizzare la varietà della conoscenza e quella del mistero</li></ul><p id="09079acf-3bf2-453b-82ff-f4a5544b5531" class="">Qualità che sviluppa il compositore Wagner: tento di superare la separazione tra arte e vita e la rottura dei confini tra le varie arti, chiamate a comunicare fra loro sotto la guida della musica. Wagner mirava ad un coinvolgimento dei sensi in un’unica esperienza totalizzante.</p><p id="c5f14bc0-424b-4da3-8551-d3e93ffde9b5" class="">La vita stessa dell’autore assume l’aspetto di un’opera d’arte (come proclama Sperelli “Bisogna fare la propria vita, come si fa un’opera d’arte”). I personaggi di d’Annunzio si configurano come proiezioni dell’autore, della sua ambizione a superare i limiti della propria esistenza attraverso l’arte.</p><h3 id="ec36fee7-a701-4fcd-9b6e-adfa349ddb14" class="">Le tre fasi</h3><p id="b1942e36-a8fa-4979-854f-fe6ea67cdade" class=""><strong>Estetismo
+</strong>È il culto quasi religiose dell’arte e della bellezza, a cui vengono subordinati tutti gli altri valori, compresi quelli morali.
+Un esempio ne è Andrea Sperelli, protagonista del <a href="Gabriele%20D%E2%80%99Annunzio%20eadb4ec4c2884f7681143671206ae6ad.html"><em>Piacere</em></a><em>.</em></p><p id="15bfc133-550b-4a09-80ad-f585b2f9fa2b" class=""><strong>Sperimentazioni (fase della </strong><em><strong>Bontà</strong></em><strong>)</strong>
+Stanco dell’estetismo, si lancia in un periodo di sperimentazioni in cui nascono opere dal contatto con altri ambienti sociali (servizio militare) e lettura narratori russi dell’Ottocento.
+È una fase caratterizzata dalla rigenerazione, purezza e dallo studio delle passioni più buie dell’animo umano, ma di breve durata.</p><p id="24c9dacf-66fa-4e47-84cd-2e3abae546fa" class=""><strong>Superuomo
+</strong>Mito ricavato dalla lettura di Nietzsche, dal quale il poeta prende un nuovo compito: agire sulla realtà imponendo il dominio di un’elite aristocratica raffinata e violenta sul mondo borghese mediocre.
+I principi cardini del filosofo che d’Annunzio privilegia sono</p><ul id="8c34c2c6-df72-4be3-ad9e-2c7864060fb9" class="bulleted-list"><li style="list-style-type:disc">Il vitalismo dionisiaco (la teoria del superuomo)
+Per Nietzsche però il superuomo consiste nel superamento dell’umano ma non la supremazia dell’uomo, in d’Annunzio diventa azione pratica e politica, tradotta in violenza, rifiuto della democrazia, bellicismo e disprezzo delle masse. Politica che si accorda con i sogni di riscatto di parte di intellettuali italiani, per i quali soltanto una politica di dominio sul mondo, di militarismo aggressivo e di colonialismo potrà portare l’Italia verso il suo glorioso passato.</li></ul><ul id="14d5c8d3-3d9e-477a-acb7-bf541db3ee25" class="bulleted-list"><li style="list-style-type:disc">la libertà d’azione dell’individuo superiore (al di là del bene e del male)</li></ul><ul id="4ddcb801-4285-4dac-b4c2-4f46799c759e" class="bulleted-list"><li style="list-style-type:disc">il culto della bellezza</li></ul><ul id="9964e22d-916c-4a18-97b7-1acf117f9ec8" class="bulleted-list"><li style="list-style-type:disc">il rifiuto del conformismo borghese e dell’etica della pietà</li></ul><p id="802969b5-187b-48cb-aff7-5be9e54a7087" class=""><strong>Fase delle Laudi</strong>
+Il poeta non si contrappone più al mondo moderno, ma ne egregia la segreta bellezza.
+Con Alcyone il tema centrale è quello della metamorfosi panica: la fusione dell’io lirico con la natura, con il Tutto. Si identifica con le diverse presenze animali, vegetali e minerali attingendo ad una condizione divina.</p><p id="a9cd4de2-d712-4fbe-a020-683b0fcc8a07" class=""><strong>Notturna
+</strong>Prende il nome dal titolo della sua opera più significativa (Notturno), composta da prose frammentarie, impressioni, visioni e ricordi che l’autore annota nell’immobilitò del suo letto afflitto da una provvisoria cecità.</p><h3 id="8652addc-e41d-4df6-828d-fddbc83df07c" class="">Il bisogno della comunicazione con la folla sconosciuta</h3><p id="e1a3d048-2fb2-492d-9834-1a9951c62b2e" class="">Per questa sua attenzione alla velocissima propagazione delle idee nella società industriale d’Annunzio viene considerato un precursore della comunicazione di massa. Tra le sue doti vi è quella di inventore di nuovi nomi, motti, slogan e messaggi pubblicitari di grande successo (”vittoria mutilata”) il più delle volte di calchi tratti dal latino o da etimologie antiche.</p><p id="5f6389ac-7dd8-45ba-a88b-512f1ba1f78a" class="">Un esempio è “La Rinascente”, un nome immaginario per un grande magazzino milanese, che armonizza l’antico, il rinascimento e la modernità degli scambi commerciali in una sola parola.</p><h3 id="cc0747ef-f657-428a-9a0f-0eac7200faed" class="">Il lessico e la lingua</h3><p id="1a8656cd-cfc1-4567-97be-2621d404062b" class="">L’autore ha una padronanza dello strumento espressivo fin dai suoi primi versi.</p><p id="a17224fb-210e-456a-8994-c474e21fb510" class="">Sostiene che la lingua italiana debba essere riscoperta in tuta la sua infinita ricchezza, la modernità non coincide con l’invenzione di nuove parole ma con l’armonizzazione e la combinazione nuova di elementi che sono caduti in disuso e che l’artefice deve riattivare.</p><p id="6436274d-402b-46af-bd01-b2f0a784aa42" class="">Il suo vocabolo è frutto del contatto con eruditi di fama che gli forniscono interi repertori di parole rare e preziose. L’obbiettivo è quello di creare un linguaggio fuori dal tempo.</p><p id="fdc071f6-3372-4fc6-8e0b-79a445e4f0d2" class="">Si appropria inoltre di temi, espressioni e immagini tratte da naturalisti, parnassiani o simbolisti Francesi e li adatta alla tradizione italiana semplificandoli per renderli accessibili al vasto pubblico (per cui subisce l’accusa di plagio).</p><p id="46573c98-5831-484d-b51c-04c724fd2a8b" class="">Si lamenta infine dell’assenza di un registro medio nella lingua italiana, che risulta o dialettale o artificiosa.</p><h3 id="1147d219-d006-48e7-9f3b-88e08d791c00" class="">Un modello</h3><p id="ba2fd3cb-13ed-402a-b94e-b90209b53ce8" class="">I più importanti poeti del Novecento accolgono e fanno loro numerose scelte formali di d’Annunzio, ad esempio frasi prive di verbi, analogie esplicite o implicite, assonanze, rime imperfette ed il procedimento sinestico (rapporto di parole di sfere sensoriali differenti).</p><hr id="15252d5a-f7ab-413b-bb13-69b9cfa049f2"/><h1 id="298b9b55-b757-4377-bcb1-7e0388a4cfb6" class="">Il Piacere</h1><p id="1c785cf9-3cab-4279-824b-d701558ff8d3" class="">È il primo romanzo scritto da d’Annunzio.
+Il protagonista Andrea Sperelli è un giovane aristocratico raffinato e coltissimo, discendente da una famiglia di artisti, coinvolto da un senso di inadeguatezza rispetto all’epoca moderna segnata dalla volgarità dei borghesi che esso disprezza.</p><p id="a5eb10c4-d4cd-4a10-9d40-22a30b18aa36" class="">Si isola quindi nel culto di una bellezza raffinata e artificiosa con uno stile di vita eccezionale e stravagante, distante dalla morale comune.</p><p id="e4d7ac42-c8c4-4e49-9ff7-75764873f380" class="">Il protagonista è diviso tra due figure femminili antitetiche</p><ul id="54d43588-4b59-428c-ab1b-f01efd2ec5fb" class="bulleted-list"><li style="list-style-type:disc">Elena → incarna la passione erotica (da Elena di Troia, la quale bellezza è origine di terribili sciagure)</li></ul><ul id="d2733bda-0479-48e8-bbea-08f7f9c6821d" class="bulleted-list"><li style="list-style-type:disc">Maria Ferres → donna pura simbolo dell’amore spirituale (rinvia alla vergine)</li></ul><p id="6611678d-918f-4d1f-aad8-24f216b2142d" class="">La sua aspirazione continua a sostituire un amore con un altro è segno del suo carattere illusorio e menzognero.</p><p id="b8c1ad83-fef1-41a1-92f9-9056cd8ae88c" class="">Sperelli rappresenta l’alter ego di d’Annunzio il quale nutre nei confronti del personaggio un sentimento duplice: ammirazione e coscienza critica.</p><p id="5c3d809c-2364-4aa6-9905-7be239b3fb38" class=""><strong>Lo stile
+</strong>Vi è l’ambizione di ricostruire un preciso ambiente sociale, che indicata che il superamento del verismo non è ancora avvenuto.</p><p id="f6bb5330-47d3-455c-8856-03238cdd660e" class="">Il romanzo è d’altra parte dominato dall’introspezione psicologica dei personaggi e dei loro processi interiori. Per d’Annunzio la narrativa deve mettere in contatto l’analisi psicologica e la descrizione dei luoghi e degli avvenimenti.</p><p id="574d4830-c8f3-4677-92a4-4818160c9836" class="">La lingua è aulica, ricca di suggestioni sinestiche, e l’opera si colloca sulla linea dell’Estetismo, corrente del Decandentismo. Il romanzo condivide un particolare tipo di eroe decandente, raffinato cultore del piacere, gelido spegiatore delle convenzioni umane e del gusto corrotto della società borghese. Il lato negativo è sicuramente l’assenza delle regole morali che il culto della bellezza oscura totalmente, rendendo debole la forza di volontà di Sperelli.</p><hr id="0cd2bd25-1369-46d4-a303-a64cec4e6e3a"/><h1 id="ccda8d17-3e6c-4dbc-9b0e-3b2bd116d2ee" class="">Le Laudi</h1><p id="b0c4d51e-b96f-4f13-a1e7-15cea0028f6b" class="">Le Laudi del cielo della terra del mare e degli eroi sarebbero dovute essere sette libri con il nome delle stelle più luminose delle Pleiadi.
+I primi tre libri escono nel 1903 mentre gli ultimi due non saranno mai scritti.</p><p id="e703fed4-bccd-44cb-b68c-628b5a325f50" class="">L’intento del poeta è  di dare voce all’ambizione panica celebrando le molteplici forme di vita e del mondo e la comunione con la natura, centrata sul primato dei sensi e del piacere.</p><p id="0703332e-f900-4bb6-8ca6-5524228051e5" class="">I primi tre complementi alludono alla molteplice bellezza del mondo (cielo, terra, mare) mentre l’ultimo al superuomo ancora molto presente.</p><p id="b2240d3c-ffbd-4edd-a721-f4dc7000ee23" class="">Il soggetto che unifica i libri è la trasfigurazione mitica del viaggio in Grecia compiuto da d’Annunzio nel 1895, in cui l’io lirico si presenta come un novello Ulisse in grado di superare qualsiasi  limite per vivere le molteplici esperienze sensibili e spirituali.</p><p id="912105d1-e25d-4b5d-a9da-b5f9a474c330" class="">Fin dalla prima opera adopera il verso libero senza schema fisso ed un linguaggio aulico.</p><h2 id="ac22a204-d71a-4887-bef7-84471f6b3195" class="">Alcyone</h2><p id="2b7de7dd-e323-4da5-9a6a-db2104808de2" class="">Nell’estate del 1902 in compagnia di Eleonara Duse compone Alcyone.
+Lontano dai toni celebrativi e politici dei primi due libri delle Laudi, l’atmosfera è contemplativa ed a volte malinconica. Il tema principale è la metamorfosi panica, ossia la fusione dell’io lirico con la natura, proteso a conseguire l’immortalità identificandosi con gli elementi naturali fino a raggiungere una quasi condizione divina. </p><p id="38c881b0-4e7f-47ec-8a17-b1b968bbfdca" class="">Il tema del superuomo è presente in quanto la possibilità di accedere alla comunione con il tutto presuppone una sensibilità più che umana ma viene inserita in un contesto mitologico segnato dal declino, in quanto questa dimensione mitica è destinata a finire.</p><p id="e6340f10-2c3b-4615-bfbe-ccbbe735697b" class="">Sul piano linguistico-espressivo offre alcuni dei risultati più alti della poesia dannunziana, il culmine della lunga ricerca poetica di d’Annunzio, libera dall’artificio estetizzante e dalla retorica del superuomo, che fa delle Laudi un testo capitale del primo Novecento.</p><p id="0d0eefc5-4e95-4c66-9b4d-119f4ea2ae1d" class="">
+</p></div></article></body></html>

@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Capitolo 3 - La Prima guerra mondiale</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="43ec03d1-a050-42e8-b24e-1bfc9a10d224" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📓</span></div><h1 class="page-title">Capitolo 3 - La Prima guerra mondiale</h1></header><div class="page-body"><p id="304a0c73-cf12-4cf3-bd99-0402e6f8efe2" class="">La prima guerra mondiale (1914-1918) ebbe varie cause, alcune delle ascrivibili a situazioni presenti in Europa da molto tempo.</p><p id="8f63ea22-2f3f-436d-a3d3-997233bd9849" class="">Queste <strong>cause remote</strong> erano di carattere politico, economico e militare.</p><p id="b297735f-e4ba-458a-a32c-e2979f345c36" class="">Le <strong>cause politiche</strong> riguardavano i contrasti fra gli Stati europei e alcuni problemi presenti al loro interno, come:<div class="indented"><ul id="6751a7da-5bfe-499a-8739-841349fdd941" class="bulleted-list"><li style="list-style-type:disc">il desiderio di rivincita dei Francesi rispetto alla sconfitta subita dai Tedeschi.</li></ul><ul id="c58fbae8-a9d1-4db9-afd6-7c5e10e2e04b" class="bulleted-list"><li style="list-style-type:disc">la secolare rivalità tra Austria e Russia.</li></ul><ul id="c6def015-c1bf-46a6-aca5-4bd1db351cdf" class="bulleted-list"><li style="list-style-type:disc">la presenza di due schiermanete di Stati contrapposti: la <strong>Triplice Alleanza </strong>(Germania, Austria, Italia) e la <strong>Triplice Intesa</strong> (Gran Bretagna, Francia, Russia).</li></ul></div></p><hr id="0388c7df-daf1-444b-bef8-c1c5f0244504"/><p id="227faa59-b918-4755-aae0-1471d8e4d719" class="">Le principali cause <strong>economiche </strong>furono:<div class="indented"><ul id="4a4cf931-b03d-4ac7-bcfd-c986c81f125e" class="bulleted-list"><li style="list-style-type:disc">La rivalità economica fra la <strong>Gran Bretagna</strong> e la <strong>Germania</strong>, procovata soprattutto dalla rapida crescita industriale di quest’ultima.</li></ul><ul id="36af85ab-e55e-472c-98fc-3a7911ba8483" class="bulleted-list"><li style="list-style-type:disc">La necessità per tutte le potenze industriali di espandere il proprio mercato e di garantirsi il rifornimento delle <strong>materie prime.</strong></li></ul></div></p><hr id="f92d33f2-693d-46ed-9420-dddc07bd6535"/><p id="16944f67-5a4d-4b1a-a566-ad2573d7369f" class="">La scelta dei governi di dichiarare la guerra o di entrare nel conflitto in atto fu facilitata:<div class="indented"><ul id="159ee734-bd73-4f24-b395-80b4a63c1d48" class="bulleted-list"><li style="list-style-type:disc">Dal dilagante <strong>nazionalismo</strong>;</li></ul><ul id="317f42ba-efb5-4ab1-9402-b4bb69f4e7f5" class="bulleted-list"><li style="list-style-type:disc">dalle tesi <strong>razziste</strong>;</li></ul><ul id="2c7fc453-a8f6-4688-827b-dd413d423d18" class="bulleted-list"><li style="list-style-type:disc">dall’applicazione del <strong>darwinismo</strong>;</li></ul><ul id="025a7dab-5679-4bab-94cb-25fc692effb3" class="bulleted-list"><li style="list-style-type:disc">dal fatto che molti <strong>giovani</strong> vedessero nella guerra l’unica possibilità di cambiamento.</li></ul></div></p><hr id="28cc8d7d-9387-4c50-8afb-eb0dce679deb"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d3c25341-2de8-4425-9c90-0b500cf2f10f"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">La scintilla scoccò il <strong>28 giugno 1914, </strong>quando un nazionalista serbo uccise a <strong>Sarajevo</strong> l’erede al trono d’Austria, l’arciduca <em>Francesco Ferdinando</em> e sua moglie.</div></figure><p id="300a9cd2-e75a-4a79-9958-6cc3e4e48bd2" class="">L’Austria il <strong>23 luglio</strong> inviò alla Serbia un <em><strong>ultimatum</strong></em> che richiedeva entro 48 ore lo svolgimento di richieste umilianti.</p><p id="0daefbd2-25bd-4563-ab02-41530c7504bd" class="">Il governo serbo non poteva che respingerle.</p><p id="93eb3915-a60b-4d27-9c5c-9cd418aeb1d0" class="">Di conseguenza il <strong>28 luglio </strong>l’Austria dichiarò guerra alla Serbia.</p><hr id="03122a17-440f-4ee9-831b-35b69d2838a7"/><p id="a3508349-e0d6-464a-92eb-dd6aa668710f" class="">Immediatamente scattarono le clausole delle alleanze stabilite negli anni precedenti e, nel giro di appena due giorni, si passò a una guerra europea.</p><p id="222026a8-a174-426a-bccf-f9232d8266b0" class="">All’ordine di mobilitazione generale impartito all’esercito il <strong>29 luglio</strong> dallo zar di Russia, rispose la Germania, che dichiarò guerra alla Russia e alla Francia, perchè si dava per scontato l’intervento di quest’ultima a fianco dell’alleato russo.</p><p id="3cc2e0ca-adc0-44a3-84a8-9993b0b44897" class="">Le truppe tedesche diedero immediatamente attuazione al piano “Schlieffen”, attraversando il Beglio e il Lussemburgo per arrivare in Francia, determinando l’entrata in guerra della Gran Bretagna a fianco della Francia e della RUssia contro l’Austria e la Germania.</p><p id="95fe03f6-aaa8-4680-93de-1e91d0faa144" class="">Solo l’Italia si dichiarò neutrale.</p><hr id="b4bd3bc7-4be5-4008-8a80-b90c5d69d0e1"/><p id="87f286b4-6459-4cf5-a40a-cd96c49f38e7" class="">Il <strong>31 ottobre</strong> entrava in guerra anche la Turchia, in appoggio degli imperi centrali.</p><hr id="8a2be14e-ff96-4c73-b795-af95a0266c19"/><h2 id="942a4690-7234-4bc4-944a-4e2715d70866" class="">📍2. L’Italia in guerra</h2><p id="e8047d4f-e748-44d3-89a2-c1a30ab9afaa" class="">Nell’<strong>agosto del 1914</strong> il governo presieduto da <em>Antonio Salandra</em> proclamò la neutralità del nostroa PAese, appellandosi alle clausole della Triplice Alleanza.</p><p id="506850bd-ef3a-4d72-8847-9c9203fb1398" class="">Si formarono così due schieramenti contrapposti e, al tempo stesso, eterogenei al loro interno: i <strong>neutralisti</strong> e gli <strong>interventisti.</strong></p><hr id="823ae412-b1a9-42d7-ae6f-2f502da4b5f2"/><p id="ffc59b94-f0b2-4574-9a6f-321fde21805e" class="">Fra i pareri favorevoli alla pace spiccava quelllo autorevole di <strong>Giovanni Giolitti</strong>, che voleva ottenere dall’Austria Trento e Trieste offrendo proprio la <em>neutralità italiana.</em></p><p id="8eb83f23-3877-4a89-8a23-5c7c91a35156" class="">Oltre ai <em>liberali</em> che si ispiravano al pensiero di Giolitti, era schierata contro la guerra la maggioranza dei socialisti.</p><p id="798d04b2-638c-4b8e-811b-1df650539399" class="">Anche la maggior parte dei cattoliti rifiutava la prospettiva di guerra.</p><p id="e4590560-ccfb-40ef-9465-b1049f36963a" class="">Lo stesso papa <strong>Benedetto XV</strong> aveva condannato ogni tipo di conflitto.</p><hr id="79f0eec3-a187-4686-8c79-4f2f7a121cd7"/><p id="209e83e6-18fa-4c79-825f-95506421295b" class="">La posizione favorevole all’intervento in guerra era sostenuta soprattutto dai <em>nazionalisti</em> e dagli <em>irredentisti</em>, convinti che la violenza bellica fosse un segno di vitalità della nazione.</p><p id="daca1c1a-53c7-4de1-806e-de3c2e0a171a" class="">Fra gli intellettuali troviamo <strong>Gabriele D’Annunzio e Giovanni Papini.</strong></p><p id="ef19151d-02e9-4707-a851-492de9b098f4" class="">Gli interventisti di destra avevano come obiettivo prioritario la liberazione di Trento e Trieste dal dominio austriaco.</p><p id="ebe14b0d-d1de-4c01-99f7-4a9392cacb55" class="">Anche gli <em>alti ufficiali</em> dell’esercito e <em>l’ambiente della corte</em> intorno al re Vittorio Emanuele III vedevano nella guerra un’occasione per conseguire maggiore prestigio.</p><p id="bbbd4223-36eb-4987-90e3-404107dfd82c" class="">L’organo principale dell’interventismo di sinistra divenne ben presto il quotidiano diretto da <strong>Benito Mussolini, </strong>che era stato un importante dirigente del Partito Socialista.</p><hr id="e8e2a5d2-a599-4b01-a3df-231ffe1a542d"/><p id="a871a8ed-de28-43f2-9bee-324f6180da45" class="">Mentre nel Paese il dibattito pro o contro l’intervento assumeva toni sempre più accesi, il governo italiano agiva per via diplomatiche.</p><p id="e4422888-d3ad-4366-a787-8ed05812cf68" class="">Il tentativo di ottenere dall’Austria il riscatto dei territori italiano fu inutile, perchè il governo austriaco intendeva attendere la fine del conflitto.</p><p id="bccefffa-3f04-4f86-9058-f03de81b3b6a" class="">Il <strong>26 aprile 1915</strong>, il ministro degli Esteri Sonnino sottoscrisse a nome del governo il <strong>Patto di Londra</strong>.</p><p id="e7a989a2-3d17-48e8-a363-db4bf75a3ba7" class="">Il patto impegnava l’Italia a entrare in guerra nel giro di un mese e le garantiva, in caso di vittoria dell’Intesa, diversi territori; inoltre fu concordata la possibilità di partecipare all’eventuale spartizione delle colonie tedesche.</p><p id="c71403b0-dfad-4733-b8ba-a395755da50c" class="">Il 3 maggio l’Italia uscì dalla triplice Alleanza.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e427cf5b-dc08-44a8-8d90-9f4e74604f34"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Il <strong>24 maggio 1915</strong> l’Italia dichiarò guerra all’Austria - Ungheria.</div></figure><hr id="41b9f15e-f047-49c1-b6a7-828c55a73067"/><h2 id="22d17c99-a292-436e-8781-146e30ba7d7d" class="">📍3. La grande guerra</h2><p id="01d56f98-3d8e-4d4d-b468-f7eb3d2c05bb" class="">L’esercito italiano non era ancora pronto a sostenere un conflitto impegnativo.</p><p id="a282a5f6-47c1-4513-bee8-85eb13979e96" class="">Comandante supremo dell’esercito italiano fu nominato il generale <strong>Luigi Cadorna</strong>, che si distinse subito per la durissima disciplina imposta ai soldati.</p><p id="7f5200d3-2c48-4a3a-8d81-6194784060a5" class="">Non si fidava dell’esercito di massa, formato da militari di leva, e ricorse a gravi punizioni per ogni mancanza.</p><p id="dba24594-758f-4140-bee4-440900d7b9fe" class="">Il generale Cadorna decise di portare un attacco frontale alle posizioni tenute dagli Austriaci.</p><p id="f770795a-baa8-464a-ba38-876ae459ef40" class="">Fra <strong>giugno e dicembre 1915</strong> si svolsero le prime quattro <em>battaglie dell’Isonzo</em><strong><em><em>.</em></em></strong></p><p id="ed6ec51b-1682-4752-a988-ed583aabccfb" class="">Nel <strong>giugno del 1916</strong> gli Austriaci scatenarono la <strong>Strafexpedition</strong>, la <em>spedizione punitiva</em> contro l’ex alleato ritenuto colpevole di tradimento.</p><hr id="f7cc6e85-674f-4887-b1d6-2b5c9f29da2a"/><p id="640a4118-6f5c-4188-b4ce-bd37e25b366a" class="">Intanto i Tedeschi riuscirono a occupare importanti zone industriali della Francia e a controllare le attività produttive ed estrattive del Belgio.</p><p id="14c94fca-fa40-4dd8-ba85-9c10751b2c98" class="">All’inizio del 1916 i Tedeschi prepararono, contro l’esercito francese, un’offensiva che sfociò nella battaglia di <em>Verdun.</em></p><p id="bb0d543f-5bc2-4250-8d45-f93f3783eaf9" class="">Sin dall’inizio del conflitto la Gran Bretagna aveva attuato un <strong>blocco navale</strong>, al fine di impedire che ai porti tedeschi giungessero materie prime e derrate alimentari.</p><p id="a9b44160-bd12-4964-8aae-e0eb21d0df26" class=""> </p><hr id="9defc42c-ad28-4500-937a-8abf7b5813aa"/><p id="d931396a-c7e6-4c23-9b3c-5a282af5c89b" class="">La prospettiva di una lunga durata della guerra faceva prevedere un aumento delle difficoltà economiche per gli imperi centrali.</p><p id="fbe2e88a-1eaf-4fd3-858b-76ccba7ecdbc" class="">Perciò, fin dal mese di <strong>febbraio</strong> <strong>1917</strong> i Tedeschi decisero di intensificare la <strong>guerra sottomarina, </strong>per bloccare tutti i rifornimenti ai Paesi nemici.</p><p id="a20ff452-0646-4add-a6ff-41a2677482b4" class="">Particolare scalpore aveva già destato l’affondamento del transatlantico <em>Lusitania.</em></p><p id="ef643707-100f-4428-9f8e-f9430720dfa9" class="">Ciò spinse gli <strong>USA</strong> a <strong>entrare nel conflitto</strong> al fianco dell’Intesa (<strong>1917</strong>).</p><p id="4c230d6f-ec5e-41bf-bdae-9d04328200b7" class="">Il 1917 fu un anno decisivo per le sorti del conflitto, non solo per l’intervento degli USA.</p><p id="e935cfa4-fb7b-4fc2-a57c-38014708efc1" class="">Nel <strong>marzo</strong> il regime zarista russo fu rovesciato e sostituito da una repubblica, il governo provvisorio decise di proseguire la guerra.</p><p id="46bf91fd-f07b-4baf-b35a-ce8890572849" class="">Ma i Tedeschi riuscirono a penetrare nel territorio russo, perchè i soldati russi abbandonavano il fronte.</p><p id="e54ef454-94aa-4ac8-8133-519e018eee9c" class="">La situazione interna divenne sempre più confusa sino alla <strong>rivoluzione</strong> dell’<strong>ottobre 1917.</strong></p><p id="b4d7278e-8e56-4a46-a6cf-f0f2ae6474a4" class="">Il nuovo governo decise di uscire dalla guerra e avviò con gli imperi centrali le trattative di pace, che si conclusero con l’accordo di <em>Brest-Litovsk</em>.</p><p id="a40f6457-215c-45dc-9852-3d1634415a10" class="">La Russia fu obbligata a pesanti concessioni.</p><hr id="7e3db1c3-30e1-4696-a3b4-cc506243b3d8"/><p id="ce79df4a-18d6-4dec-9fbd-0c5aba618faf" class="">In seguito alla crisi della Russia, l’Austria e la Germania poterono spostare delle truppe sul fronte occidentale e su quello italiano.</p><p id="f4c17283-7857-4259-8e8b-1276cd26bc14" class="">Con un grande sforzo offensivo gli Austriaci, appoggiati dai Tedecshi, sfondarono le linee italiane a <strong>Caporetto.</strong></p><p id="09f71a36-c7bb-495e-8129-b4425673dad0" class="">Il generale Cadorna dovette lasciare il comando dell’esercito e fu sostituito dal generale <strong>Armando Diaz</strong>, che decise di sistemare una nuova linea sul fiume <em>Piave</em>.</p><p id="0b513908-2cc7-4189-9c42-d3099213b35b" class="">Il nuovo comandante impose una disciplina meno rigida e ne curò meglio l’addestramento.Le ragioni <em>militari</em> della disfatta di Caporetto sono da ricercarsi in un’offensiva ben condotta da parte degli Austriaci, ma la sconfitta fu generata da motivi ben più profondi: dal clima di sfiducia e di disagio, peraltro comune a tutti gli Stati belligeranti, diffuso al fronte e nel Paese.</p><p id="89fb51f8-5412-4374-9255-b005d303d33a" class="">I soldati erano ormai logorati, nel fisico e nello spirito.</p><p id="27bf85c0-907a-4967-ab17-c247d6ab665e" class="">Il <strong>rifiuto della guerra</strong> si manifestava soprattutto in comportamenti individuali, come la diserzione, la fuga, la simulazione di malattie.</p><hr id="ab48ce33-03b6-4972-a2c4-eb3924132b35"/><p id="e8220052-c300-4a83-b63f-4b19f031c0af" class="">Anche le popolazioni civili, oltre ai combattenti, furono coinvolte nel conflitto.</p><p id="10beb1a3-024a-44db-a697-9c02cf0015df" class="">Pesanti limitazioni della <strong>libertà personale</strong>, razionamento del cibo, rialzo dei prezzi, aumento dei carichi di lavoro.</p><p id="08eac273-6612-4af9-bc4a-ff99b9ef3d79" class="">Le industrie ebbero uno sciluppo imponente, finanziato dallo Stato.</p><p id="8882b2d5-aa84-4bbe-86a2-17af625525f8" class="">In pratica tutta la popolazione fu militarizzata: non solo i soldati che combattevano e che costituivano il <strong>fronte esterno</strong>, ma anche le persone che lavoravano nelle fabbriche e che formavano il <strong>fronte interno.</strong></p><hr id="28f188bb-cd60-4a58-8f99-84b674dadf50"/><p id="a0468c9e-4d7d-4106-8eb8-61c58b1f1100" class="">Per mobilitare la popolazione i governi ricorserso massicciamente alla <strong>propaganda</strong>, rivolta alle truppe per sostenerne il morale, ma anche ai civili.</p><p id="662d214c-c989-44d0-adea-6c93b8d009f8" class="">Vennero stampati in ernomi quantità <strong>manifesti</strong> e cartoline che esaltavano le doti e le vittorie del proprio esercito.</p><hr id="e2b5a21e-831f-4578-938d-642302262445"/><p id="4560671a-eabf-45fb-93d9-a218c78d6538" class="">La Germania e l’Austria avvertivano sempre più chiaramente che il blocco economico, attuato dall’Intesa, impediva di prolungare ulteriormente lo sforzo bellico.</p><p id="5b39bf94-5a3a-4166-93a0-1767a09c6690" class="">Il 29 settembre la Bulgaria si arrese; l’Ungheria, la Cecoslovacchia e la Iugoslavia si dichiararono indipendenti dall’Austria, che dovette subire la <strong>controffensiva italiana</strong>.</p><p id="247b9bdd-154d-4947-afd0-aac9faab13ca" class="">Il <strong>29 ottobre 1918</strong> l’esercito austriaco fu sconfitto nella battaglia di <strong>Vittorio Veneto</strong> e costretto alla ritirata.</p><p id="838fd1cf-1616-4496-9a2e-be9100509ede" class="">il <strong>3 novembre</strong> venne firmato l’armistizio che siglava la vittoria dell’Italia.</p><p id="be31a6c4-f828-4ea2-bca3-9a23aaecbfa1" class="">L’11 novembre l’imperatore Carlo I abdicò e venne proclamata la repubblica.</p><p id="746c5ff3-7880-4d8c-80d1-9d3ba8ad0815" class="">Anche la Germania a sua volta si preparò alla resa definitiva.</p><p id="0dca5d7f-df3f-4f83-a989-24a8e7773790" class="">Il 9 novembre l’imperatore Guglielmo II lasciò il trono e anche a Berlino fu proclamata la repubblica.</p><hr id="1c388af4-af74-413b-97d7-52626b3f7761"/><h2 id="540963f3-e82b-4d22-965c-c0ae20db0b17" class="">📍4. L’inferno delle trincee</h2><p id="b363972e-8fc8-49c6-9faa-a36bd4722e1d" class="">La prima guerra mondiale fu segnata dall’uso della trincea, un antichissimo sistema difensivo utilizzato nelle guerre di posizoine.</p><p id="424e0236-69f6-47b6-be80-4c7c34f5eedf" class="">Si trattava di un <strong>fossato</strong> più o meno profondo.</p><p id="91e89250-6750-4445-9314-34be4d931bb4" class="">I militari erano costretti a viverci in uno stato di tensione continua, esposti alle <strong>intermperie</strong>, dalle quali era ipossibile difendersi.</p><p id="564f8437-1388-4ec1-8da3-5abeb0db4f4b" class="">I combattenti dovettero sopportare <strong>condizioni estreme di vita.</strong></p><p id="59d2d124-4281-4512-9064-cee3e69b7ef9" class="">Le <strong>condizioni igieniche</strong> erano pessime.</p><p id="fa5ccbbc-39ba-40e1-b744-b80b4812431d" class="">Frequenti e viruelente erano le <strong>epidemie</strong>.</p><hr id="3e49f4dc-a464-4a7e-b107-258dd7be9a94"/><p id="ad4f1184-fbe0-42cf-a3ae-4cf1f3790e1e" class="">Una delle caratteristiche peculiari del primo conflitto fu la tragica presenza della morte, con la quale i soldati dovevano costanetmente vivere.</p><p id="96881500-0485-4774-856c-5954017795c7" class=""><strong>Numerosi cadaveri</strong> di compagni e di nemici restavano nell’area compresa fra le opposte trincee per più giorni.</p><p id="ff32b50e-1367-40ef-a202-7a901d55379c" class="">La loro resistenza nervosa era spesso messa a dura prova dai <strong>bombardamenti</strong> dell’artiglieria.</p><p id="96e21940-47ce-45cb-acea-1183efe63026" class="">Il momento peggiore era però quello dell’<strong>assalto alle trincee</strong> dei nemici.</p><p id="a7c8dd94-00d5-4d96-bb74-0f1b530f7fb2" class="">La <strong>paura</strong> non risparmiava nessuno.</p><hr id="692a2989-c401-4c9f-ab0a-b0c372ee616c"/><h2 id="9d8b3138-0c7e-495d-834f-cbb11b84b83a" class="">📍5. La tecnologia al servizio della guerra</h2><p id="f6ebf98c-23bf-4de9-bc5d-3491d65e10de" class="">Oltre alle armi tradizionali, usate comunque con un dispiegamento mai visto, gli eserciti poterono utilizzare nuove armi e applicazioni tecnologiche messe a disposizione dai grandi progressi della scienza.</p><p id="649f2fc6-e127-4759-b313-ba103a48c473" class="">II mezzi che maggiormente sconvolsero i combattenti furono le <strong>armi chimiche.</strong></p><p id="5d5dba29-5710-49d1-885e-ecc22e59d93b" class="">Le necessitò belliche stimolarono lo sviluppo di settori industriali e scientifici di nascita recente.</p><p id="c9af1e83-36c9-4e38-a7dd-7b988c053adb" class="">Come ad esempio le <strong>autoambulanze, la radiofonia</strong>.</p><hr id="9d31da00-4ac3-46fa-93c6-cf182f041eaa"/><p id="3b820061-5892-4309-9fd2-40f416095c18" class="">Un impatto più limitato ebbe l’utilizzo dell’<strong>aviazione</strong>.</p><p id="fd6e387b-ae46-47c0-a23d-014ff7cc4935" class="">Anche il <strong>carro armato </strong>fu scarsamente utilizzato.</p><p id="8f9946c9-d23c-47a0-9d7b-07d298a63b48" class="">Nella <strong>guerra navale</strong> fece la sua comparsa il <strong>sottomarino</strong>, furono i Tedeschi a utilizzarlo su grande scala.</p><p id="d62d63ac-7deb-496f-ac34-10fddcc6daa8" class="">Troviamo anche il <strong>dirigibile</strong> e la <strong>mitragliatrice.</strong></p><hr id="8dc79146-2309-40e3-8225-2a15ed830a8b"/><h2 id="73a7552b-dae5-4372-b0bc-11d8afa26dcd" class="">📍7. I trattati di pace</h2><p id="55e4922f-8072-44b5-90c1-d2287738451a" class="">I ministri dei Paesi vincitori si riunirono a <em>Parigi</em> il <strong>18 gennaio 1919</strong>, in una <strong>Conferenza per la pace; </strong>i delegati degli Stati vinti furono convocati, a cose fatte, solo per la firma finale.</p><p id="eb91932a-7e2d-490b-bd16-22cd2517cad1" class="">Il più importante protagonista fu <strong>Wilson</strong> per gli Stati Uniti e <strong>Orlando</strong> per l’Italia.</p><p id="0e243f7e-0d9c-4781-9cec-940b7178001b" class="">→ Quattordici punti di Wilson</p><p id="f8438c17-4d25-4f61-9277-9d460ad6bd01" class="">La <strong>Francia</strong> puntava a indebolire la Germania per assumere una posizione dominante nel continente europeo.</p><p id="560d57ba-c1c8-4170-80a7-6b59d2dfb58c" class="">La <strong>Gran Bretagna</strong> voleva evitare la rovina della Germania perchè temeva che la Francia divenisse troppo potente.</p><hr id="4aee843f-c744-4c47-978d-1a925c2c497b"/><p id="42181f71-4af5-44d8-85f6-6e91b04761da" class="">I trattati di pace furono firmati tra il <strong>1919</strong> e il <strong>1920</strong>.</p><p id="71404aee-0876-4d9e-bb72-dfde66a5abdb" class="">L’<strong>Italia</strong> ricevette dall’Austria il <strong>Trentino, l’Alto Adige, la Venezia Giulia e Trieste.</strong></p><p id="c8271732-4ca3-4872-91be-033baf215257" class="">Il primo ministro Orlando e il ministro degli Esteri Sonnino avevano chiesto anche i territori promessi col Patto di Londra, le altre potenze riteneva però che queste concessioni avrebbero violato il nono punto di wilson, il principio di autodeterminazione e si opposero alla richiesta.</p><hr id="7190434c-f682-4152-b28f-fa0ed454630e"/><p id="39d4ccbc-3bbe-4740-af3a-90e71c0d55de" class="">Le reazioni ai trattati di pace furono particolarmente violente in <strong>Germania</strong>, ritenevano di essere stati sottoposti a condizioni troppo dure.</p><p id="561d54a4-29fd-428b-b68c-7ad8fbf2d4a0" class="">L<strong>’Italia</strong> non evve i vantaggi sperati e questo fatto causò il risentimento nei confronti degli alleati e grandi proteste, soprattuto da parte di nazionalisti e interventisti.</p><p id="0d8a1dc6-f878-4d65-8fe7-c18d7f498a9c" class="">Furono infatti gli <strong>Stati Uniti</strong> i veri vincitori della guerra: divennero la prima potenza politica ed economica del mondo e i principali creditori degli Stati europei.</p><hr id="4f874d4b-34f4-484b-95cc-39ab0b07f142"/><h1 id="d6412b0a-a8e2-4f6c-82b3-ef1d470bd29e" class="">Cronologia essenziale prima guerra mondiale</h1><h3 id="c26d9046-c7df-4ddb-9385-3420f7d1481e" class=""><strong>1914</strong></h3><p id="8819759d-ec85-40b3-a1f7-58b38d964968" class="">28 giugno: l&#x27;<strong>arciduca Francesco Ferdinando</strong> d&#x27;Austria viene assassinato a <strong>Sarajevo</strong> dal nazionalista serbo <strong>Gavrilo Princip</strong>.</p><p id="53485553-2486-46bb-8b1a-78c13412b43d" class="">28 luglio: dopo l&#x27;<a href="http://www.oilproject.org/lezione/attentato-di-sarajevo-francesco-ferdinando-gavrilo-princip-6825.html">attentato di Sarajevo</a> e un ultimatum caduto nel vuoto (23 luglio), <strong>l&#x27;Austria-Ungheria muove guerra contro la Serbia</strong>.</p><p id="01e82983-e892-4b2c-bda7-2744b1761785" class="">1 agosto: la <strong>Germania</strong>, alleata dell&#x27;Austria e dopo la mobilitazione delle truppe dello zar alla frontiera, <strong>dichiara guerra alla Russia</strong>.</p><p id="55863e9a-761b-40d0-9ec6-9075e41f67e6" class="">2 agosto: i tedeschi mirano all&#x27;attuazione del <strong>Piano Schlieffen</strong>, che prevede l&#x27;apertura di un fronte occidentale contro la Francia: occupano il territorio del <strong>Lussemburgo</strong> e procedono verso il <strong>Belgio</strong>, violandone la neutralità.</p><p id="9ef88799-c9fa-4a1c-81d7-738faba20ccb" class="">3 agosto: <strong>dichiarazione di guerra della Germania contro la Francia</strong>, alleata della Russia; l&#x27;Italia, pur essendo alleata nella <strong>Triplice Alleanza</strong> di Germania e Austria, persiste nella scelta della neutralità.</p><p id="47d1389a-332b-4bc3-b704-a05aacdc3207" class="">4 agosto: anche la <strong>Gran Bretagna</strong>, alleata della Francia, <strong>dichiara guerra alla Germania</strong>.</p><p id="4ab13057-ab1b-4649-a3bf-de5d8076c039" class="">6-13 agosto: le reciproche dichiarazioni di guerra (della Serbia e della Francia contro l&#x27;impero austro-ungarico e dell&#x27;Austria-Ungheria contro la Gran Bretagna) definiscono il confronto tra le forze della <strong>Triplice Intesa</strong> (Gran Bretagna, Francia, Impero russo) e della <strong>Triplice Alleanza</strong> (Austria-Ungheria, Germania e l&#x27;Italia per ora neutrale). Il 23 agosto il Giappone dichiarerà guerra agli Imperi centrali, ampliando la <strong>dimensione &quot;mondiale&quot; del conflitto</strong>.</p><p id="c5347add-97a7-403e-a391-3dab571f4616" class="">agosto-settembre: le truppe tedesche registrano i primi successi, occupando Bruxelles sul fronte occidentale e bloccando l&#x27;avanzata dei francesi presso il Reno; sul fronte orientale, i generali <strong>Ludendorff</strong> e <strong>Hindenburg</strong> ottengono considerevoli vittorie sui russi a <strong>Tannenberg</strong> (17 agosto - 2 settembre) e ai <strong>Laghi Masuri</strong> (7 - 14 settembre).</p><p id="74545427-6315-4aee-a2ce-4e184dd4c723" class="">12 settembre: i francesi bloccano l&#x27;avanzata tedesca nella prima <a href="http://www.oilproject.org/lezione/riassunto-prima-guerra-mondiale-battaglia-verdun-somme-dardanelli-7190.html"><strong>battaglia della Marna</strong></a>; finisce la <strong>guerra di movimento</strong> (o &quot;guerra-lampo&quot; dal tedesco <em>Blitzkrieg</em>) e si passa alla <strong>guerra di trincea</strong>. Il comando delle truppe tedesche ad ovest passa da Von Moltke a Von Falkenhayn.</p><p id="dcf92939-723a-4971-a578-32e22e84971c" class="">31 ottobre: anche l&#x27;<strong>Impero ottomano</strong> entra nelle ostilità, alleandosi all&#x27;Austria-Ungheria e alla Germania.</p><h3 id="eede4581-3cda-4188-b206-94f3db5cfef1" class=""><strong>1915</strong></h3><p id="6421348c-57a5-4c8c-90df-850db522badd" class="">26 aprile: dopo il <strong>fallimento delle trattative con l&#x27;Austria</strong> (cui l&#x27;Italia chiede compensazioni territoriali per entrare in guerra a fianca degli Imperi centrali) il governo italiano stipula segretamente e all&#x27;insaputa del Parlamento il <a href="http://www.oilproject.org/lezione/grande-guerra-italia-interventisti-neutralisti-strafexpedition-7503.html"><strong>Patto di Londra</strong></a>, con il quale l&#x27;Italia accetta di entrare in guerra di lì ad un mese alleandosi con la <strong>Triplice Intesa</strong>, ottenendo, in cambio di vittoria, il Trentino, l&#x27;Alto Adige, l&#x27;Istria, la Dalmazia (eccetto Fiume), la base navale albanese di Valona e il riconoscimento di sovranità sui possedimenti del 1912 nel Dodecaneso.</p><p id="4f289d61-ade3-4f86-8293-a906d152441f" class="">7 maggio: l&#x27;affondamento del <strong>transatlantico Lusitania</strong>, ad opera di un <strong>sottomarino tedesco</strong>, è il primo passo per l&#x27;entrata in guerra degli Stati Uniti.</p><p id="c063fb67-1161-4b64-954d-434676d7ec2b" class="">24 maggio: dopo le pressanti <strong>manifestazioni di piazza dei nazionalisti</strong> - alla cui testa si pone <a href="http://www.oilproject.org/lezione/d-annunzio-poesia-5774.html">Gabriele D&#x27;Annunzio</a> - affinché l&#x27;Italia entri in guerra, si arriva alla <strong>dichiarazione formale di guerra</strong> contro l&#x27;Austria.</p><p id="e41b5693-76b1-4b61-bc6f-1ddca082c1b3" class="">giugno-dicembre: le prime <a href="http://www.oilproject.org/lezione/grande-guerra-italia-interventisti-neutralisti-strafexpedition-7503.html">quattro battaglie dell&#x27;Isonzo</a> (23 giugno-7 luglio; 18 luglio-4 agosto; 18 ottobre-4 novembre; 10 novembre-2 dicembre) lungo il fronte italo-austriaco portano minimi avanzamenti territoriali, ad <strong>un prezzo altissimo in termini di vite umane</strong>.</p><h3 id="da4edf53-76b4-4d6e-a1c9-353cc2b43a7f" class=""><strong>1916</strong></h3><p id="a20d6505-497c-4243-bd4c-47c1b8a0c302" class="">21 febbraio: i tedeschi iniziano la controffensiva contro i francesi a <strong>Verdun</strong>. Si tratta di una delle  principali battaglie sul <strong>fronte occidentale</strong>, che vede contrapposti francesi e inglesi da una parte e tedeschi dall&#x27;altra in una logorante <a href="http://www.oilproject.org/lezione/riassunto-prima-guerra-mondiale-battaglia-verdun-somme-dardanelli-7190.html">guerra di posizione</a> dagli ingenti costi umani.</p><p id="e276cc73-d4c3-49ba-abd5-2a2ececacefb" class="">15-31 maggio: l&#x27;<strong>esercito austriaco</strong> dà il via alla <em>Strafexpedition</em> (cioè <strong>&quot;spedizione punitiva&quot;</strong>) contro l&#x27;Italia <strong>per accerchiare le truppe schierate sull&#x27;Isonzo</strong>. Nonostante il grande impegno di uomini la spedizione fallisce.</p><p id="504f89a6-0026-4c25-b2fa-f2c10122d635" class="">31 maggio-2 giugno: <strong>scontro navale</strong> tra la flotta britannica e quella tedesca nella storica <strong>battaglia dello Jutland</strong>.</p><p id="d9d87484-797b-42ae-b030-43c55ec0cb02" class="">27 agosto: la Romania dichiara guerra all&#x27;Austria-Ungheria. Il giorno successivo l&#x27;Italia muove guerra contro la Germania e quest&#x27;ultima contro la Romania.</p><p id="4ae12415-0700-44f0-b37d-40a4457df394" class="">21 novembre: Carlo I d&#x27;Asburgo succede a <strong>Francesco Giuseppe</strong>.</p><h3 id="2b45155a-4c8f-4a2c-88f1-b7b0a930de13" class=""><strong>1917</strong></h3><p id="89864218-174f-4b79-85df-3062eed1d578" class="">3 febbraio: gli <strong>Stati Uniti</strong>, in reazione alla <strong>guerra sottomarina tedesca</strong>, interrompono le relazioni diplomatiche e si preparano all&#x27;ingresso nelle ostilità.</p><p id="2066738c-894d-4793-a7c5-1e96ae4fcaf8" class="">12 marzo: nella Russia zarista, scoppia la <strong>&quot;rivoluzione di febbraio&quot;</strong> (secondo il calendario giuliano, è il 23 febbraio), che costringe Nicola II all&#x27;abidicazione e porta all&#x27;instaurazione di un governo provvisiorio.</p><p id="ab5727fd-bb90-4c06-90c4-b35808a2120b" class="">2 aprile: <strong>gli USA muovono guerra contro la Germania</strong>.</p><p id="ad39d489-4082-4164-8ab7-bb7790164f1d" class="">(27 giugno: anche la <strong>Grecia</strong> entra in guerra, schierandosi contro Bulgaria, Germania, Austria-Ungheria, Impero Ottomano. Il 14 agosto la <strong>Cina</strong> dichiara guerra alla Germania e all&#x27;Austria-Ungheria, seguita il 26 dal <strong>Brasile</strong>.)</p><p id="dcf04df1-8884-4345-ae8d-206a9863aeaf" class="">24 ottobre: le truppe austriache e tedesche sfondano il fronte italiano a <a href="http://www.oilproject.org/lezione/sintesi-prima-guerra-mondiale-luigi-cadorna-armando-diaz-trattato-di-versailles-8184.html">Caporetto</a>, causando notevolissime perdite all&#x27;esercito italiano e portando la linea dei combattimenti lungo il <strong>fiume Piave</strong>. Si tratta del <strong>momento più drammatico per l&#x27;Italia</strong> nel corso di tutto il conflitto.</p><p id="dcf4e365-414b-4015-ac0a-69251b4ef036" class="">6 novembre (24 ottobre nel calendario russo): con la <a href="http://www.oilproject.org/lezione/riassunto-rivoluzione-russa-bolscevichi-menscevichi-tesi-di-aprile-7655.html">&quot;Rivoluzione di Ottobre&quot;</a> <strong>i bolscevichi prendono il potere</strong> e instaurano il <strong>Congresso dei Soviet</strong>.</p><p id="812258be-9433-42c1-8658-d0a1367cab1b" class="">8 novembre: dopo la disfatta militare di Caporetto, il <strong>generale Diaz</strong> sostituisce Cadorna, noto per i suoi duri metodi repressivi nei confronti delle truppe.</p><h3 id="3b77fc7e-d083-46ad-bb55-422beb837259" class=""><strong>1918</strong></h3><p id="efdf9507-04f8-4c41-a603-8b81543f6ad1" class="">8 gennaio: il presidente americano Woodrow <strong>Wilson</strong> presenta i <strong>quattordici punti</strong> il suo programma per l&#x27;<strong>assetto mondiale post-bellico</strong>.</p><p id="dffded86-3e35-4cf1-bb66-d6fc10daf166" class="">3 marzo: con il <strong>trattato di Brest-Litovsk</strong>, la Russia comunista firma la resa verso gli Imperi centrali.</p><p id="9aad554d-d599-4516-bb3a-eacec7fae2ef" class="">luglio-agosto: <strong>offensiva dell&#x27;Intesa</strong> lungo il fronte occidentale</p><p id="ac0129fe-4419-4206-95c8-40e0d651dcbf" class="">24 ottobre-3 novembre: con un&#x27;offensiva sul Piave e sul Grappa <strong>le truppe italiane conquistano Vittorio Veneto</strong>. L&#x27;Austria-Ungheria , stremata e al collasso su tutti i fronti, chiede l&#x27;armistizio.</p><p id="e12189a9-d583-4f1d-bbcc-42ee58141155" class="">4 novembre: <strong>armistizio fra Italia e Austria-Ungheria</strong>.</p><p id="b6a067e5-8664-4856-b935-88c53c227135" class="">11 novembre: con l&#x27;armistizio fra il resto degli alleati e la Germania, si conclude il primo conflitto mondiale. La <strong>Conferenza di pace di Parigi</strong> (18 gennaio 1919 - 21 gennaio 1920) e il <a href="http://www.oilproject.org/lezione/sintesi-prima-guerra-mondiale-luigi-cadorna-armando-diaz-trattato-di-versailles-8184.html">Trattato di Versailles</a> definiranno i nuovi assetti territoriali europei.</p></div></article></body></html>

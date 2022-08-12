@@ -1,0 +1,675 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Capitolo 9 - La Seconda guerra mondiale</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="a0f63394-a3c8-4062-a94c-9dd9f0a86eab" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📙</span></div><h1 class="page-title">Capitolo 9 - La Seconda guerra mondiale</h1></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ec05579d-0c23-4529-abbe-bc924e43a2d1"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong>L’1 settembre 1939</strong> la Germania attaccò la Polonia e la costrinse alla resa nel giro di sole tre settimane.</div></figure><p id="0de77f41-1692-4bd3-b530-21e5696dd00e" class="">Il <strong>3 settembre</strong> la Francia e la Gran Bretagna dichiararono guerra alla Germania.</p><p id="b7b716d8-627f-4add-be36-6e9819caf035" class="">Il <strong>17 settembre</strong> anche l’Unione Sovietica, rivendicando i diritti derivanti dal Patto Molotov - Ribebentrop iniziò l’occupazione della parte orientale della Polonia.</p><p id="a878c0a5-bd7c-4fa2-b64b-16eea89bd306" class="">Nei mesi successivi sul fronte occidenatale le operazioni militari attraversarono una fase di stallo.</p><hr id="99847a46-dd85-4ae7-ad68-cc3c152f5018"/><p id="9c1427c3-17be-4f96-bb49-761cd6a0316f" class="">Nella fase di stallo i Tedeschi ebbero modo di riorganizzare le proprie forze e in primavera ripresero le operazioni.</p><p id="ce205871-ed65-4daf-aef6-b939660784bc" class="">Il <strong>9 aprile 1940</strong> la Germani attaccò la <em>Danimarca </em>e la <em>Norvegia</em>.</p><p id="8b964bc9-4475-4b4e-a7a1-3c63d9389260" class="">La prima venne subito occupata senza difficoltà, la seconda si arrese due mesi dopo.</p><blockquote id="5b2d8b04-a6e8-4978-9ab0-483190e005e8" class="">La Germania sembrava davvero in grado di realizzare una <strong>guerra lampo.</strong></blockquote><p id="b64481cb-bdd0-4243-94b8-99fd8b7c4e76" class="">D’altra parte era l0uinca strategia che offrisse possibilità di successo alla Germania.</p><hr id="81a1a8a3-6c5f-468e-95a1-3a6940dba60b"/><p id="3cf1763f-ae7a-4d86-98e6-a89330f819e2" class="">Mentre l’esercito tedesco stava ancora completando l’invasione della Norvegia, il <strong>10 maggio 1940</strong> Hitler decise di attaccare a sorpresa la <em>Francia.</em></p><p id="f8fb8410-a494-4a0e-a995-ee0bd53f6d9a" class="">L’esercito tedesco occupò rapidamente il Nord della Francia e raggiunse <em>Parigi </em>il 14 giugno.</p><p id="7b03fa89-9b59-48f9-a1b7-2d5e47976a5b" class="">Per la Francia ora si aprivano due strade: o continuare il conflitto con la Germania o scendere a patti con essa.</p><p id="38966f82-2bed-4410-9c0b-da1f445c18ed" class="">Precalse la seconda ipotesi.</p><p id="7485d1ca-fa49-4fff-a623-e3c3ddfc9fd4" class="">L’armistizio tra Francia e Germania fu concluso il <strong>22 giugno 1940</strong> e il territorio francese venne diviso in due parti:<div class="indented"><ul id="1b6451da-c91e-4574-9dbc-afc5d48e8457" class="bulleted-list"><li style="list-style-type:disc">La francia centro - nord sotto l’occupazione tedesca;</li></ul><ul id="623193a6-62c0-4a2d-b8ea-780fe7ada715" class="bulleted-list"><li style="list-style-type:disc">La Francia centro - sud istituì un <strong>governo collaborazionista</strong> con sede a V<strong>ichy </strong>e guidato da Pétain.</li></ul></div></p><p id="e2098727-e916-45b0-b50c-b2669d910c62" class="">Il generale <strong>Charles de Gaulle</strong>, rifugiatosi a Londra, lanciò attraverso la radio inglese un invito ai Francesi affichè resistessero agli invasori.</p><hr id="f5d80206-ee90-47af-a5bd-c50af74a0204"/><p id="942cbaee-d388-48d0-b90f-1b8233d854f1" class="">Nel 1939 l’Italia si trovò in una posizione difficile.</p><p id="073cb02a-bb5c-4154-96bc-786e48421e1e" class="">Mussolini si era impegnato con il <em><strong>Patto d’acciaio</strong></em> ad aiutare la Germania in caso di guerra.</p><p id="5050cd6b-b13f-411f-8dd4-a61c934d84ee" class="">Però non era pronta ad affrontare un conflitto poichè la guerra di Etiopia e quella di Spagna avevano gravemente compromesso sia le finanze che l’esercito.</p><p id="e2e9b6f0-c848-4047-9050-d26fd63aa03e" class="">I successi della Germania e soprattutto il crollo della Francia indussero Mussolini a pensare che la guerra si sarebbe risolta in fretta a vantaggio dei Tedeschi e che per l’Italia sarebbe stato uno smacco non partecipare ai profitti della vittoria.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4d8c371c-56c7-4f3e-850a-94fd94ab0bd5"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Il <strong>10 giugno 1940</strong> l’Italia entrò in guerra contro la Francia e l’Inghilterra.</div></figure><hr id="ace04050-f725-459b-838e-6e9b4fbeb7bb"/><p id="31f7baec-6327-480e-ad61-c71bd7bc2838" class="">Dopo la sconfitta della Francia, solo la Gran Bretagna poteva continuare la guerra contro la Germania.</p><p id="17db9e86-cee4-4ff6-811a-c274613a858e" class="">Nel <strong>maggio 1940</strong> divenne Primo ministro <strong>Winston Churchill, </strong>che aveva disapprovato la politica di <em>appeasement</em>.</p><p id="b5efd611-83ed-4ac0-b018-eda614738f04" class="">Hitler cercò di aprire le trattative con la Gran Bretagna, mostrandosi disposto a firmare la pace purchè gli venissero riconosciute le conquiste.</p><p id="acee8d11-f290-4bc8-9636-af29199ac77e" class="">Ma nessuno era d’accorrdo.</p><p id="6c2e03e8-c2dd-401a-b131-67a9bee15441" class="">Tra <strong>agosto</strong> e <strong>settembre</strong> i Tedeschi tentarono la mossa decisiva: lo sbarco sulle coste britanniche.</p><p id="57aded6e-32e1-4165-8c5c-48e0f4b1d1e0" class="">Per due mesi la <strong>RAF</strong> inglese e l’aviazione Tedesca si scontrarono nella<strong> “battaglia d’Inghilterra</strong>”.</p><p id="4f56f46b-1825-435c-9fb3-b25c404c1f69" class="">Ma la RAF riuscì a infliggere ai Tedeschi pesanti perdite.</p><p id="24c40727-dbe3-4ac0-961b-5b9e6f7821e7" class="">Perciò il <strong>17 settembre</strong> Hitler dovette rinunciare all’invasione della Gran Bretagna.</p><p id="32822e0d-a6cc-4200-8b32-42a835fb115b" class="">Erano stati rafforzati anche i legami con il <strong>Giappone</strong>, giungendo alla firma del <strong>Patto tripartito (</strong>Germania, Italia, Giappone).</p><hr id="1f522e63-6573-4616-b7f6-e1d4f4c11920"/><h2 id="d941bea0-e0aa-4877-9eb3-64553646e9d2" class="">📍2. 1941: la guerra mondiale.</h2><p id="111b0b8e-d50b-4799-91c5-2f3aac307fc9" class="">Nella <strong>primavera</strong> del <strong>1941</strong> la Germania fu costretta a intervenire a sostegno dell’Italia, che stava rischiando una pericolosa disfatta militare:<div class="indented"><ul id="191dacc6-0f2e-427e-a48c-a0da6ffdc429" class="bulleted-list"><li style="list-style-type:disc">nel <strong>Nord Africa</strong></li></ul><ul id="b66ba70b-1f5e-4372-8db6-7e979a72248b" class="bulleted-list"><li style="list-style-type:disc">nei <strong>Balcani.</strong></li></ul></div></p><p id="96786613-4178-44b1-ba55-32188aaa1c1e" class="">L’Italia rinunciò così a qualsiasi illusione di poter svolgere un ruolo autonomo nella guerra.</p><p id="2dd73a10-c777-4580-91bf-00971f6f0eef" class="">Hitler aveva sconfitto tutti i rivali in Europa e poteva puntare all’estensione delle conquiste del Reich.</p><hr id="b3f95486-2748-4dd4-bbf8-0c2ce014684d"/><p id="2a786f29-7f28-4c83-a4d6-33e39bc2f9c3" class="">Il progetto di hitler era quello di conquistare lo “spazio vitale” per la Germania occupando le regioni dell’Est europeo.</p><p id="4ee2d1fe-8a21-4478-9bf8-3f110ae7aae3" class="">In questa prospettiva era evidente che il patto tra URSS e Germania per la sprtizione della Polonia aveva un carattere solo temporaneo.</p><p id="7a79f092-ae58-46ba-b214-febf89b66ef2" class="">I motivi che inducevano Hitler alla conquista dell’Unione Sovietica erano molteplici:<div class="indented"><ul id="749125f6-c21e-4042-943b-e7b00e887f2a" class="bulleted-list"><li style="list-style-type:disc">i popoli slavi erano ritenuti inferiori;</li></ul><ul id="bccac2cf-b9f0-49a2-b707-ecf34434e9c3" class="bulleted-list"><li style="list-style-type:disc">L’Unione Sovietica era la patria del comunismo;</li></ul><ul id="68d3d769-2387-4fee-bcb1-4e84abcfa8fe" class="bulleted-list"><li style="list-style-type:disc">La Russia era un territorio ricchissimo di materie prime.</li></ul></div></p><p id="5cde2eb1-8375-4baf-bc3f-d42bd1932e48" class="">Il <strong>22 giugno 1941</strong> la Germania invase la Russia seguendo il <em>piano Barbarossa.</em></p><p id="354f5701-21ec-4a7e-97d0-446f47343023" class="">All’impresa partecipò anche l’Italia inviando il CSIR (Corpo Spedizione Italiano in Russia).</p><p id="28c9dc5b-0b4c-4f6b-a7ce-c3dce28a667b" class="">Alla fine dell’autunno l’avanzata si arrestò, anche se non definitivamente, Col sopraggiungere del lungo e freddo inverno russo, si passò anche qui dalla “guerra lampo” alla guerra di logoramento.</p><hr id="890b65b4-7c54-4728-a737-ff3192b25f5c"/><p id="f796c18f-7ffd-49e4-bf7d-329e945d5e76" class="">Nel corso degli anni Trenta, il Giappone aveva intrapreso a spese della Cina una aggresiva politica espansionistica.</p><p id="42eb8107-c111-4df6-a5fb-c8866fa06beb" class="">Le conquiste misero il Giappone in contrasto con la Gran Bretagna, la Francia e soprattutto gli Stati Uniti.</p><p id="0e9e8a02-ef31-4394-b0a5-a53c80614ed5" class="">Nel quadro di questa politica espansionistica, nel <strong>luglio 1941</strong>, approfittando della situazione di debolezza della Francia, i Giapponesi occuparono l’indocina francese.</p><p id="93255a99-b71c-42fb-998d-f59eebec0a69" class="">Il <strong>7 dicembre 1941</strong> i Giapponesi attaccarono, senza formale dichiarazione di guerra, la flotta degli Stati Uniti ancorata a <em>Pearl Harbor </em>(FILM).</p><p id="bee6cf8f-9860-4e5c-9cf1-345af024ad3c" class="">Il giorno dopo, l’<strong>8 dicembre 1941, </strong>gli Stati Uniti e la Gran Bretaga dichiararono guerra al Giappone, che veniva subito sostenuto dalla Germania e dall’Italia.</p><hr id="54e0f87f-a92c-4d80-8db0-63284965022f"/><p id="7a9693ef-c577-4278-9a6f-c0f1c8caaa0b" class="">Negli anni Trenta gli Stati Uniti avevano proseguito la propria politica di isolamento intrapresa alla fine della prima guerra mondiale e accentuata in seguito alla crisi del 1929.</p><p id="8aa28901-410c-4e5c-94e8-79df9a03d1d5" class="">Il presidente <strong>Roosvelt</strong> si impegnò invece in senso opposto.</p><p id="b6e503fc-2059-428c-beeb-1f318539d47a" class="">L’avvicinamento fra la Gran Bretagna e gli USA si concretizzò nella redazione della <strong>Carta Atlantica (1941).</strong></p><p id="e33f5ed4-7099-45c0-a65d-e24ad81bfbd0" class="">L’attaccio giapponese di Pearl Harbor indusse gli Stati uniti ad abbandonare definitivamente l’isolazionismo.</p><hr id="e653c858-4be9-4a94-89b1-ebb888204e09"/><h2 id="b66ede46-ffdb-47e7-b556-5932be9e5d89" class="">📍3. Il dominio nazista in Europa.</h2><p id="937cf4ad-990a-4b16-b238-b9df864de8e4" class="">Nel <strong>1942</strong> il dominio della Germania nazista in Europa rraggiunse la sua massima espansione.</p><p id="ab07591e-b521-454c-9d84-fa6adf856db7" class="">Il nazismo intendeva costruire una<strong> “nuova Europa”</strong> basata sulla supremazia della Germania.</p><p id="4abc854b-7b3c-42b9-a64d-d3404e04d901" class="">I popoli slavi dovevano semplicemente fornire la manodopera e le risorse necessarie a sostenere l’economia del Reich. Per questo il dominio nazista fu particolarmente brutale in Polonia e in Unione Sovietica.</p><p id="2bfb63a7-a7b9-49c5-a30b-39d3de9cf3a0" class="">Se gli Slavi dovevano essere tenuti in condizione di schiavità, gli Ebrei andavano completamente sterminati. Perciò i nazisti crearono i <strong>lager</strong>, cioè campi di concentramento e di sterminio.</p><p id="ca39bf1f-ede1-45ca-9521-6f0878e3738b" class="">In Germani gli Ebrei erano già stati sottoposti a discriminazioni e persecuzioni, poi, nel 1938, dopo la “notte dei cristalli” iniziò la deportazione.</p><p id="0cb6e2c5-7e4c-43fd-9294-4fde07e0a592" class="">Nel <strong>1942</strong> Hitler decise di mettere in atto la<strong> “soluzione finale</strong>”, cioè lo sterminio organizzato di tutti gli Ebrei d’Europa.</p><p id="575c177b-a5ea-4f1e-981f-7c53577c8b9a" class="">Si realizzò così l’Olocausto, oppure, come preferiscono dire gli Ebrei stessi, la <em>Shoah.</em></p><p id="f3dff60d-cbda-433e-9c9d-95247bd01ccf" class="">Si tratta di un vero e proprio <strong>genocidio.</strong></p><p id="90b94685-7e73-4f3a-af34-57ccc4659472" class="">Questo termine venne usato per la prima volta al processo di Norimberga, in cui i capi nazisti vennero condannati.</p><hr id="b2dd3e27-ca30-4118-9fe9-ab2a8388bda2"/><p id="a8362df8-8802-4e11-9c8f-065c16781c25" class="">In tutti i Paesi occupati dall’esercito nazista si sviluppavano movimenti di opposizione e di liberazione.</p><p id="cf88c558-34c1-436f-98a6-4318286d99f7" class="">La <strong>resistenza</strong> al nazismo ebbe modalità, tempi ed esiti molto diversi.</p><p id="e0f523a2-d349-43e6-b0e4-1292d98a37c5" class="">In <strong>Francia</strong> la resistenza venne guidata da <em>de Gaulle.</em></p><p id="56da1e2f-09f0-4a5b-8783-27a90f55f25a" class="">In <strong>Iugoslavia</strong> da <em>Tito.</em></p><p id="bda9531d-99f7-4777-b559-7f78ea52fe94" class="">Nella stessa Germania una parte dell’esercito si oppose al regime, arrivando a organizzare un <strong>attentato a Hitler.</strong></p><p id="21dae6ed-2b74-4e66-87a5-3d60858da72e" class="">In <strong>Italia</strong> la Resistenza fu un fenomeno complesso al cui interno si manifestarono profondi contrasti politici.</p><hr id="365120b6-78d6-421f-b9aa-d9e3ff124cd3"/><p id="dd2e15e8-18b1-4d99-8fc0-9087638c47b0" class="">Fenomeno opposto alla resistenza fu il <strong>collaborazionismo</strong>.</p><p id="12209744-8b6c-4ce5-907b-46874e55dc23" class="">In tutti i Paesi ci furono persone o gruppi che appoggiarono gli invasori, in modo diverso e secondo le proprie possibilità.</p><p id="55d6e25e-02de-4e2a-8c26-9f375cc28175" class="">il primo clamoroso esempio al riguardo fu quello del norvegese <strong>Vidkun Quisling.</strong></p><hr id="3e430720-7a20-4673-b75b-6ff23033c0f7"/><h2 id="fbf63327-40dc-416f-bd47-cbcbd63aabd7" class="">📍4. 1942-43: la svolta.</h2><p id="f8fd7218-b3e7-41ff-be1e-467a5f408320" class="">L’entrata in guerra degli Stati Uniti determinò le prime sconfitte per gli eserciti del Patto Tripartito.</p><p id="af2f1afc-de4f-4fe5-9313-ca56fe8eb0a6" class="">Tra il l1942-43 il l’andamento del conflitto subì una svolta decisiva a vantaggio degli Alleati, cioè degli Anglo - Americani.</p><p id="1b15a78b-6c7c-42c1-bbf8-d77fb8b4f8c2" class="">Anche nell’area dell’Atlantico si manifestò la superiorità degli Alleati.</p><p id="bb49aeaa-9126-428d-aca7-c8f54446657f" class="">Gli Anglo Americani riuscirono a difendere efficacemente la propria flotta e a spezzare l’accerchiamento die Tedeschi.</p><p id="3e2212d2-8d16-493c-91fb-cc513ee63d75" class="">Dopo aver vinto i nazisti nella “battaglia dell’Atlantico”, gli Alleati volsero il loro impegno in Africa.</p><hr id="f8794224-50c7-4c9c-ac21-12af71e2a4be"/><p id="5bc28208-61da-4308-b543-706cc62ea732" class="">Sul fronte orientale, lo scontro tra Russi e Tedeschi diventava molto più lungo e difficile.</p><p id="8233b083-e1ce-4f34-a9b3-173c606c8316" class="">Nel <strong>giugno 1942</strong> la Germania lanciò un’offensiva con l’oviettivo di conquistare le regioni del Caucaso, ricche di petrolio.</p><p id="e2f9168b-8d2c-4b19-9587-2256af39e281" class="">Le forze dell’Asse riportarono alcuni iniziali successi, ma poi i Sovietici passarono al contrattacco.</p><p id="876173c9-ff03-4c0b-8dd0-eae6d17214fd" class="">Nel <strong>luglio 1942</strong> iniziò la <strong>battaglia di Stalingrado.</strong></p><p id="c584a464-943a-4088-9f02-b09a366e3d01" class="">La città venne assediata per sette mesi, Hitler ordinò la resistenza a oltranza, ma nel <strong>febbraio 1943</strong> i Sovietici costrinsero i Tedeschi alla resa.</p><p id="81bd634e-0baa-457b-b2f7-f555bf5aa8ae" class="">A Stalingrado i Tedeschi subirono la più grande sconfitta, una sconfitta che mostrò chiaramente come le sorti del conflitto si fossero ormai capovolte.</p><hr id="6c063ca7-8620-4538-84c8-594f04885218"/><p id="18022bda-f743-4a58-a07a-37eb1eb6d7fb" class="">Dopo la vittoria in Africa, gli Anglo-Americani avevano assunto il controllo del Mediterraneo e poterono rivolgersi all’Italia.</p><p id="b414fe00-fe14-4e29-a008-7d5de573aa54" class="">Il <strong>10 luglio 1943</strong> gli Alleati sbaracono in <em>Sicilia</em>.</p><p id="8dfbaabf-886a-4a23-b45e-764c7923b91b" class="">Il <strong>23 luglio</strong> occuparono Palermo e nel giro di un mese si impadronirono di tutta l’isola.</p><p id="066b5051-66af-4e56-b135-f75a07f4dc6b" class="">Gli Alleati vennero accolti come liberatori.</p><p id="a7027f41-4f07-4a5e-baae-0377f4f9b81d" class="">La guerra voluta da Mussolini aveva portato alla popolazione sofferenze enormi.</p><hr id="1e75853d-8d06-4ce2-9986-d77001ec0836"/><p id="740c92fb-deb6-4d38-8085-332a9c19dc32" class="">La caduta del fascismo non fu determinata però dalle proteste popolari né dalle forze politiche antifasciste.</p><p id="0564b191-3bc1-49d1-a83d-0905027b66f5" class="">Mussolini fu esautorata dalla monarchia, che intedeva a quel punto dissociarsi dalla prevedibile disfatta del regime.</p><p id="be4c1aa9-b348-445b-9813-8fe17b2a1902" class="">Nella notte tra il <strong>24 e il 25 luglio 1943</strong> il duce venne messo in minoranza dal Gran Consiglio del fascismo.</p><p id="5747caa6-66ac-4eca-b175-90bd97e55c8b" class="">Il re Vittorio Emanuele III esonerò Mussolini dalla carica di Primo Ministro e lo fece arrestare.</p><p id="d6439bc4-08df-4905-818a-5f6fa9bb4a51" class="">L’incarico di formare un nuovo governo venne affidato a <strong>Pietro Badoglio.</strong></p><p id="66c4ee13-41bb-4b21-b421-4832d2f51d5b" class="">Badoglio prese contatto con gli Alleati e il <strong>3 settembre 1943</strong> a Cassibile firmò l’<strong>armistizio </strong>che fu reso <strong>pubblico</strong> solo l’<strong>8 settembre</strong>.</p><p id="5819e5cc-cafd-43e1-8fe1-c1e46023f6ad" class="">Il <strong>9 settembre</strong> gli Alleati sbarcarono a Salerno, la loro avanzata venne fermata dai Tedeschi che si attestarono lungo la <em>linea Gustav</em><strong><em><em>.</em></em></strong></p><p id="e4111e6b-394f-45dc-9ad0-06e071e4706f" class="">Il <strong>12 settembre</strong> i tedeschi liberarono Mussolini, pochi giorni dopo il duce costituì al Nord un uovo stato fascista sottomesso alla Germania, la <strong>Repubblica Sociale Italiana (RSI) </strong>con capitale a Salò.</p><hr id="2397fab0-8278-4de9-b7b6-9f2ef3ec99e2"/><h2 id="08fe0635-f977-4575-aaea-148d64495ef2" class="">📍5. 1944-45: la vittoria degli Alleati.</h2><p id="ef1d642d-5bf8-498e-8c71-bc5251fac103" class="">Nel <strong>1944</strong> gli eserciti anglo - americani proseguirono la loro avanzata.</p><p id="e18b1665-f8c4-462f-9d8d-7fe250770a06" class="">In Italia gli Alleati sfondarono la linea Gustav e liberarono Roma.</p><p id="c687a793-05fb-489d-b0c3-cd000fa5eb8b" class="">I tedeschi furono costretti a ritirarsi verso nord e si attestarono lungo la linea gotica.</p><p id="e1a80dce-99ef-41dd-ab88-7441a03b94c6" class="">Dopoa ver liberato tutto il territorio russo, l’Armata Rossa si spinse verso l’Europa centrale puntando sulla Germania.</p><hr id="ed4eb617-f06e-4077-8965-6c96d4628ac5"/><p id="bf09ce94-0963-4caa-8a04-e54e85fb16f1" class="">Il <strong>2944</strong> per gli Alleati fu l’anno dell’apertura in Europa di un<strong> “secondo fronte</strong>”.</p><p id="ebe5f411-5419-4b8d-ad7a-2b7310d3f376" class="">I tre alleati scelsero di attuare uno <strong>sbarco in Normandia</strong>, nel Nord della Francia.</p><p id="37fea0a4-2ec5-4b83-992c-8b6cf9c3e610" class="">Nella notte tra il <strong>5 e il 6 giugno, </strong>sotto il comando del generale <strong>Eisenhower</strong> un esercito iniziò a invadere la Normandia.</p><p id="701a443b-2e21-4357-8dfd-d421487d64f1" class="">I Tedeschi resistettero accanitamente.</p><p id="043ff0cd-b7b7-4816-bd90-ed22f58d56e5" class="">Ma dopo due mesi di combattimenti gli Alleati riuscirono a sfondare le difese.</p><p id="86e2bd45-64d4-4296-9b3c-a499c0de0ef2" class="">Il <strong>26 agosto 1944</strong> gli Alleati e il generale de Gaulle entravano a Parigi.</p><hr id="9e59c81c-aa8c-459e-b82b-511de81e01cc"/><p id="cb04266c-a542-4e70-8de5-d8a0d8f11274" class="">il <strong>25 aprile 1945</strong> le avanguardie americane si incontrarono con le avanguardie sovietiche.</p><p id="5550d28b-54a2-4903-9d9b-665379b18714" class="">Negli stessi giorni l’Italia veniva liberata e i Tedeschi iniziavano la ritirata.</p><p id="b200d4c4-1d55-4b5c-a289-69edbba90377" class="">Il <strong>30 aprile</strong> Hitler si suicidò.</p><p id="a7558421-22a8-4422-8a2b-47b645664f39" class="">Il suo successore, <strong>Karl Donitz</strong>, firmò <strong>il 7 maggio 1945</strong> la <strong>resa senza condizinoi.</strong></p><hr id="eeb8f926-92d8-4ba1-bab1-da0051d67e46"/><p id="2baed0f9-dcdd-41be-924e-0ebbb22c95de" class="">Nella primavera del 1945 la guerra era ormai finita in Europa, ma continuava nell’Oceano pacifico.</p><p id="62d0357c-e4ae-4205-8c1d-66296b591e5a" class="">I Giapponesi resistevano accanitamente affidandosi anche ai <em>kamikaze</em>.</p><p id="5327d679-beab-4d66-99bb-63a24a9d7914" class="">Il Giappone era ormai militarmente sconfitto, la resa appariva inevitabile ma no nimminente,</p><p id="e114c4bf-2ea8-40ad-88b6-ce3b26e7d867" class="">Il presidente americano Roosvelt morì e gli succedette <strong>Harry Truman</strong>, che decise di piegare definitivamente il Giappone usando la <strong>bomba atomica.</strong></p><p id="f3e43322-6a49-4c40-9418-bbc3ba16022e" class="">Il <strong>6 agosto 1945</strong> una bomba rase quasi completamente al suolo la città di <strong>Hiroshima</strong>.</p><p id="91199978-67d6-49b1-8a73-51a8e7e0ba95" class="">Il <strong>9 agosto 1945</strong> fu la volta di <strong>Nagasaki.</strong></p><p id="b842864e-e878-4045-b02f-3eeb6987f3e0" class="">Al Giappone non restava che chiedere la <strong>resa senza condizioni, </strong>che venne firmata il <strong>2 settembre 1945.</strong></p><hr id="aaa50e39-40ff-4a78-8fca-64f607412e5f"/><h2 id="77c9e4cd-3e95-481f-9dab-3e8f9d84603e" class="">📍6. Dalla guerra totale ai progetti di pace.</h2><p id="a10b7fa1-0523-469d-b98c-de42ee2ca657" class="">Con la prima guerra mondiale si affermò un nuovo tipo di conflitto: la <strong>guerra totale</strong>.</p><p id="d7e1c9ec-bcc6-4130-908d-94d341c80406" class="">Con il secondo conflitto mondiale l’umanità sperimentò l’esasperazione di tale motivo.</p><p id="8e6d45e6-b8db-40f1-b7ac-6335c05885f7" class="">Fu una <strong>guerra tecnologica</strong>: vennero utilizzato strumenti nuovi e nuove armi e tecniche d’attacco sempre più distruttive.</p><hr id="770c7f48-7b5c-4ce6-9b3d-fecaa905fcf1"/><p id="57cc85c5-0c94-47a6-9224-a1efb1071c0c" class="">Le potenze alleate raggiunsero progressivamente l’accordo di massima che avrebbe poi caratterizzato le soluzioni post-belliche.</p><p id="2fc7bb93-4af2-4f49-8a8c-b45b4a0722ca" class="">Il primo passo al riguardo fu la firma da parte di <em>Roosvelt e Churchill</em>, nell’<strong>agosto del 1941</strong>, della <strong>Carta Atlantica</strong>, che san la solidarietà ideale e politica tra gli Stati Uniti e la Gran Bretagna.</p><hr id="d907c927-31b2-468b-b47c-4cecf2f5c726"/><p id="fe1f4ec0-431b-45d2-b021-59ebb0ac9672" class=""><strong>Conferenza di Teheran</strong></p><p id="f1c0702e-6998-4250-a17b-f8c3b40247d6" class="">Verso la fine del 1943 apparve chiaro che la guerra era giunta a una svolta favorevole per gli Alleati.</p><p id="353cb3dc-f666-4a4a-bf6f-15c6dabc657b" class="">Nel <strong>novembre-dicembre 1943</strong> si svolse a <strong>Teheran</strong> un importante incontro a cui parteciparono i “tre grandi” (Roosvelt, Churchill, Stalin).</p><p id="bc839f08-cdc9-4760-8df4-cfdfb4e0a9d4" class="">Concordarono l’apertura di un nuovo fronte in Francia, che sarebbe poi diventato lo sbarco in Normandia.</p><hr id="26e4eb10-70f6-48eb-a4c5-97b3a43a911a"/><p id="6cf2dde6-abb2-492a-8e07-a9c17d11b946" class=""><strong>Conferenza di Yalta</strong></p><p id="0897bd00-eca5-4801-bae8-90095b03af6b" class="">I “tre grandi” si incontrarono a Yalta nel <strong>febbraio 1945</strong>.</p><p id="7a2df865-3214-435a-b028-aed3fe793b60" class="">in questa occasione l’URSS si impegnò a entrare in guerra contro il Giappone.</p><p id="777f6c66-9517-4235-9efa-c4d4a02ce7bf" class="">La <strong>Germania</strong> venne divisa in <strong>quattro zone di occupazione</strong> controllate da <strong>Stati Uniti, Unione Sovietica, Gran Bretagna e Francia.</strong></p><p id="8d907344-b2ea-4384-9588-a817e9ac031f" class="">Vennero prese anche importanti decisioni riguardanti lo scioglimento dell’esercito tedesco e la “denazificazione” del Paese e il pagamento da parte della Germania dei danni di guerra.</p><hr id="afe652f5-5a85-4740-9907-9be7fdbf0bd9"/><p id="83c2b45e-379c-432d-b431-fdb52e5945e0" class=""><strong>La conferenza di Potsdam</strong></p><p id="171773ff-5b49-4913-90dd-dce7dc6354e2" class="">Roosvelt, già malato e prossimo alla morte, venne sostituito da <em>Harry Truman</em>, che assunse un atteggiamento ben più rigido alla conferenza di Potsdam, nel <strong>luglio-agosto 1945.</strong></p><p id="4b4cee0a-8369-4124-8b32-429a8d514f47" class="">Il disaccordo tra Stati Uniti e Unione Sovietica determinò un certo stallo nelle trattative.</p><p id="5294e8f1-553f-42e1-af83-77f35a9803a6" class="">Venne comunque deciso di non procedere, per il momento, allo smembramento della Germania.</p><p id="91be9276-13ab-4bd4-a47e-95bd22b07e65" class="">Era l’inizio dell’esplodere di quella rivalità internazionale che avrebbe portato le due superpotenze alla “guerra fredda”.</p><hr id="ee1c4950-53a4-462f-8f6a-1b4739e7821c"/><h2 id="7e4a4c17-8739-422a-87dd-a71b63ec64e5" class="">📍7. La guerra e la Resistenza in Italia dal 1943 al 1945.</h2><p id="6daba66a-6463-475b-b1e0-9cb1c06eacea" class="">L’<strong>8 settembre 1943</strong> fu dato l’annuncio dell’armistizio che l’Italia aveva concluso con gli Anglo Americani, ma nessuno si preoccupò di chiarire come i soldati dovessero comportarsi nei confronti dei vecchi alleati tedeschi.</p><p id="c618702c-fa5a-459a-8fff-c244ed4c3919" class="">I Tedeschi catturarono migliaia di militari, inviandoli nei campi di prigionia in Germania.</p><p id="e666692f-481a-4261-b4d0-4e5ab613fbb4" class="">Alla fine di settembre il Paese era diviso in due:<div class="indented"><ul id="c8677ad4-8f26-4bb2-8ae5-cc287c2daaba" class="bulleted-list"><li style="list-style-type:disc">Centro Nord governato dalla <strong>Repubblica di Salò</strong>, fondata da Mussolini.</li></ul><ul id="58aa5436-266c-4946-a003-92ce7f3ed514" class="bulleted-list"><li style="list-style-type:disc">Centro Sud sotto il <strong>Regno d’Italia</strong>, appoggiato dagli Alleati.</li></ul></div></p><p id="2c793886-a5a8-41a6-9bf3-c355026904fd" class="">Il Regno d’Italia il <strong>13 settembre</strong> dichiarò guerra alla Germania, da questo nacque la Resistenza.</p><p id="d3efd2f7-5bc7-4c5d-8d41-e846a33e6610" class="">Alcuni italiano, specie tra i giovani, giudicarono un “tradimento” il voltafaccia della monarchia e la rottura dell’alleanza con i Tedeschi e si schierarono dalla parte di Mussolini.</p><p id="76d655b8-072f-4bb1-88e2-d5d374050cde" class="">Altri scelsero di schierarsi contro i fascisti e contro i Tedeschi, divenendo “partigiani”.</p><p id="ec77a368-1a52-4612-9052-a947f342a7f2" class="">Così anche in Italia iniziò la <strong>Resistenza.</strong></p><hr id="001c720e-fdf9-4fa1-bd77-ac9a39d437e9"/><p id="fe44d908-e5aa-4e76-93f7-511f8c34d56c" class="">Fra il <strong>settembre e dicembre 1943</strong> diverse bande partigiane entrarono in azione al Centro e al Nord.</p><p id="cc103e85-bd48-4a69-8727-933332c33e00" class="">I partigiani agivano con sabotaggi, azioni di disturbo, attentati a cui i Tedeschi spesso risposero con feroci rappresaglie.</p><hr id="04009073-47d3-45e8-b0e9-2972d35ae466"/><p id="9ed03b64-cca4-44c4-9d63-e11bcbbea870" class="">Si costituì a Roma il <strong>Comitato di Liberazione Nazionale (CLN)</strong> che cercò soprattutto di coordinare l’azione dei partigiani.</p><p id="e92faa5f-a581-40da-af07-5b47706d6f55" class="">ADerirono al CLN il Partito ocmunista e quello socialista, il Partito liberale, il Partito d’Azione, la Democrazia Cristiana e la Democrazia del Lavoro.</p><p id="09ef1c22-c6a3-40f3-9dc9-3556ea7f0c21" class="">Queste forze politiche era accomunate dal’idele antifascista ma erano molto eterogenee per altri aspetti.</p><hr id="e2a1df65-829e-4d58-b1d0-c858b77e1528"/><p id="4dce3a4b-f67c-48df-a820-af024707cbdc" class="">Gli esponenti del CLN erano divisi anche sulla questione <em>istituzionale</em>, cioè sulla sorte della monarchia italiana.</p><p id="9a86aa5b-5f6a-4964-9160-2c293b91f131" class="">La situazione si sblocco nel <strong>marzo 1944</strong>, quando il segretario del partito comunista <strong>Palmiro Togliatti</strong> dichiarò in un celebre discorso tenuto a <strong>Salerno</strong> che per il momento era necessario unire tutte le forze per librerare l’Italia dai nazisti.</p><hr id="325926df-4861-446b-bdfe-70b8ca880057"/><p id="a1f6fefc-35de-4e40-8a9a-a53cd6568eb8" class="">Nel <strong>giugno 1944</strong> Roma venne liberata dagli Alleati.</p><p id="0e2d8601-6e42-4603-9af5-955c96a8fb54" class="">Badoglio si dimise e venne affidato a <strong>Ivanoe Bonomi</strong> l’incarico di formare un nuovo governo.</p><p id="c068e280-8298-4235-851d-0dad5637104a" class="">La repubblica di Salò inasprì la persecuzione nei confronti degli <strong>Ebrei</strong>, il <strong>30 novembre 1943</strong> venne ordinato che tutti gli Ebrei fossero internati in campi di concentramento nazionali.</p><hr id="db9a8e56-c6f2-4e59-b32b-51f08ba4d323"/><p id="6ec4e722-9b63-4b03-9bab-2cb0398ffdf8" class="">Con la caduta del fascismo, si aprì il periodo più buio per gli Ebrei italiani.</p><p id="e3a40f1b-7dbe-46e6-9b20-9e1f1e9ddd8b" class="">Gli ebrei italiani deportati furono più di ottomila, e solo mille fecero ritorno.</p><hr id="bdbbcfbb-d47e-479d-9ee1-7cfd38e18f1b"/><p id="2fd391ac-0916-4bec-9175-c4e263d11f93" class="">Nel <strong>1944</strong> il numero dei partigiani aumentò e la loro azione divenne particolarmente incisiva.</p><p id="f312f807-74e3-4c17-9c15-f6b7ad3014ef" class="">Alcune città, come <strong>Firenze</strong>, vennero liberate senza l’intervento Anglo Americano.</p><p id="0cafcfc4-c815-45e2-b990-15739d23efc2" class="">→ Episodio delle <strong>fosse ardeatine</strong>.</p><hr id="e64b88b6-c1f4-4c79-a49c-5d2bd789fab9"/><p id="2776b8c5-4ca7-4265-983d-d4768688fc6d" class="">La Resistenza visse il suo momento più difficile fra il 1944 e il 1945.</p><p id="db51decb-625a-4660-91dd-eb9ea71bf533" class="">La situazione si fece estremamente difficile, sia perchè gli aiuto inviati dagli Alleati non sempre erano sufficienti, sia perchè i Tedeschi attuarono una violenta controffensiva.</p><hr id="bf07d492-1b8a-45ff-9046-ee5760a36d84"/><p id="949a7849-560f-4962-b59f-9b77ee7d3885" class="">Nella <strong>primavera del 1945</strong> gli Alleati ripresero l’offensiva e aumentarono in qualità e quantità i rifornimenti ai partigiani.</p><p id="68c45a43-3b84-4300-9274-ccc9b23c0fd8" class="">A metà aprile gli Anglo Americani sfondarono la linea gotica e, <em>Genova e Milano</em> il <strong>25 aprile 1945</strong> insorsero e si liberarono.</p><p id="ba6b99bf-84eb-4f72-bfdf-8a9d68694e01" class="">A <strong>Mussolini</strong> non restava che la fuga.</p><p id="38c41497-d427-46dd-92c8-fd4800e4834e" class="">Cercò di fuggire vestito da soldato Tedecso, ma venne riconosciuto e fucilato da una formazione partigiana.</p><p id="4232355f-3dc6-46bb-b5f2-83eae7e95822" class="">Il 30 aprile moriva suicida anche Hitler.</p><hr id="21460213-6f54-419c-a75b-73b01f640f72"/><p id="e96cf87e-d28b-48ed-a63d-2d7778d6dfdf" class="">→ Sogno di un’Unione Europea, <em>Manifesto di Ventotene</em><strong><em><em> </em></em></strong><strong>(Rossi, Spinelli).</strong></p><hr id="993dd561-3b43-44d8-9cdd-94cf6a7adf0e"/><h1 id="614414ff-38f5-4adf-a1f9-42e938a3183a" class="">Cronologia essenziale della Seconda Guerra Mondiale</h1><table id="7e0cbc1e-914c-41b5-89f1-9c740489320c" class="simple-table"><thead class="simple-table-header"><tr id="3316fe0c-9877-4bc5-be42-2f61f1c34176"><th id="Qc{?" class="simple-table-header-color simple-table-header">Data</th><th id="i@pI" class="simple-table-header-color simple-table-header" style="width:520.2307739257812px">Evento</th></tr></thead><tbody><tr id="4b71d2a5-0bdc-4878-9868-3ccc5daac821"><td id="Qc{?" class=""><strong>1 settembre 1939</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">La Germania invade la Polonia. Inizia la Seconda Guerra Mondiale.</td></tr><tr id="d8d02070-3fd8-41b9-a252-ae41c1637d44"><td id="Qc{?" class=""><strong>3 settembre 1939</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Francia e Gran Bretagna dichiarano guerra alla Germania.
+Mussolini dichiara la «non belligeranza» dell&#x27;Italia.</td></tr><tr id="89ffcc75-13e1-4eb2-9857-a0e68252ffce"><td id="Qc{?" class=""><strong>novembre 1939</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Attacco sovietico alla Finlandia.</td></tr><tr id="5eaa6e94-37d4-454b-a17f-8ebb7504542c"><td id="Qc{?" class=""><strong>apr.-giu. 1940</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">La Germania occupa la Danimarca e la Norvegia.</td></tr><tr id="a70fcd78-6bb1-4b04-b37e-0a37d0ff8adb"><td id="Qc{?" class=""><strong>10 maggio 1940</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">La Germania attacca la Francia.</td></tr><tr id="f3d0b01e-70b8-4577-a99b-78e7a252fc82"><td id="Qc{?" class=""><strong>13 maggio 1940</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">In Gran Bretagna Winston Churchill diventa primo ministro.</td></tr><tr id="e85157b9-fa59-4178-a635-92530d2a6014"><td id="Qc{?" class=""><strong>10 giugno 1940</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">L&#x27;Italia entra in guerra a fianco della Germania.</td></tr><tr id="9c23fe51-ad6b-49fb-90a1-76c05402d8cc"><td id="Qc{?" class=""><strong>14 giugno 1940</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">I Tedeschi entrano a Parigi. Armistizio e Governo di Vichy.</td></tr><tr id="d7ac0bd6-9b4e-42c9-a418-c8a8799a9f7e"><td id="Qc{?" class=""><strong>estate 1940</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Offensiva italiana in Africa.</td></tr><tr id="142e4d47-3d3d-42bc-a011-93e6e9dd5084"><td id="Qc{?" class=""><strong>ago.-set. 1940</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Battaglia aerea d&#x27;Inghilterra («Operazione Leone Marino»).</td></tr><tr id="45336ae7-4134-44a3-94de-a7a7a9e7b7a9"><td id="Qc{?" class=""><strong>27 settembre 1940</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Patto tripartito tra Germania, Italia e Giappone.</td></tr><tr id="06fec7ed-8760-462c-a894-87a41878bdd8"><td id="Qc{?" class=""><strong>28 ottobre 1940</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">L&#x27;Italia attacca la Grecia, senza successo.</td></tr><tr id="59418050-c65e-4862-8388-ddf9c7b4eefa"><td id="Qc{?" class=""><strong>ott. &#x27;40-feb. &#x27;41</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Controffensiva inglese in Africa.</td></tr><tr id="4e4cdb52-a6a3-4f10-a84f-a7a02b87b29e"><td id="Qc{?" class=""><strong>aprile 1941</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">L&#x27;esercito tedesco interviene nei Balcani e in Africa.
+Italiani e Tedeschi occupano la Jugoslavia, la Grecia e riconquistano parte della Libia. Fine della “guerra parallela”.</td></tr><tr id="67ca223c-5a42-45de-91d8-faa2843270b5"><td id="Qc{?" class=""><strong>maggio 1941</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Gli Inglesi occupano Addis Abeba (Etiopia), sottraendola agli Italiani.</td></tr><tr id="0a28549c-8ccb-4990-88f2-263dbf464ad0"><td id="Qc{?" class=""><strong>22 giugno 1941</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">I Tedeschi invadono l&#x27;URSS («Operazione Barbarossa»).</td></tr><tr id="213bae53-1c3e-497e-85a3-9b41161bcedc"><td id="Qc{?" class=""><strong>7 dicembre 1941</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Il Giappone attacca la flotta americana a Pearl Harbor. Gli Stati Uniti entrano in guerra.</td></tr><tr id="81d01e8e-5abb-4e8e-b764-66cb894fdd90"><td id="Qc{?" class=""><strong>11 dicembre 1941</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Germania e Italia dichiarano guerra agli Stati Uniti d&#x27;America.</td></tr><tr id="d72b82e6-9dec-40cf-9ea8-f9a6756ac31e"><td id="Qc{?" class=""><strong>20 gennaio 1942</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Conferenza di Wannsee: i nazisti decidono la soluzione finale del problema ebraico.</td></tr><tr id="bf10eb28-e0a0-4479-9d80-b5716c45c1e7"><td id="Qc{?" class=""><strong>gen.-mag. 1942</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Avanzata giapponese in Asia.</td></tr><tr id="373fcd90-0b5d-4a43-a5ab-6b35f72154b5"><td id="Qc{?" class=""><strong>gen.-giu. 1942</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Avanzata italo-tedesca in Africa.</td></tr><tr id="845851b3-99a0-4a17-a97f-e1d773df40aa"><td id="Qc{?" class=""><strong>mag.-giu. 1942</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Battaglie navali nell&#x27;Oceano Pacifico (Mar dei Coralli e Midway). Prime sconfitte del Giappone.</td></tr><tr id="a9bdd1af-f2cc-47da-a008-d44dcb5d9978"><td id="Qc{?" class=""><strong>set. &#x27;42-feb. &#x27;43</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Battaglia di Stalingrado. Sconfitta dell&#x27;esercito tedesco.</td></tr><tr id="a438e5ab-14d8-4d3c-a8d4-284804e780ed"><td id="Qc{?" class=""><strong>23 ott.-3 nov. 1942</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Battaglia di El Alamein. Sconfitta italo-tedesca.</td></tr><tr id="073b2e1b-401e-4dd9-a537-62921e88fdc6"><td id="Qc{?" class=""><strong>8 novembre 1942</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Sbarco anglo-americano in Marocco.</td></tr><tr id="9058391a-ce2b-475e-84bd-df2223e0a743"><td id="Qc{?" class=""><strong>23 gennaio 1943</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Conferenza di Casablanca (Inglesi e Americani decidono lo sbarco in Italia e il principio della resa incondizionata da imporre agli avversari)</td></tr><tr id="db36cec0-a4a1-4bcd-af22-9c7707910d26"><td id="Qc{?" class=""><strong>15 maggio 1943</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Resa italo-tedesca in Tunisia. Gli Anglo-Americani preparano lo sbarco in Italia.</td></tr><tr id="e953e159-e42b-4a04-9d72-1122125bb231"><td id="Qc{?" class=""><strong>10 luglio 1943</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Sbarco anglo-americano in Sicilia («Operazione Husky»)</td></tr><tr id="ebfe7fa2-b959-4355-a2b1-4e4272a8a18b"><td id="Qc{?" class=""><strong>25 luglio 1943</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Il Gran consiglio del fascismo destituisce Mussolini, il Re lo fa imprigionare e affida il governo al Generale Badoglio.</td></tr><tr id="ee0e0d9a-8fdf-4d17-ae14-2d7698192218"><td id="Qc{?" class=""><strong>3 settembre 1943</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">A Cassibile (Siracusa) firma segreta dell&#x27;armistizio “corto” dell&#x27;Italia con gli anglo-americani.</td></tr><tr id="eae49671-6fa0-4015-8359-f969eccba4e5"><td id="Qc{?" class=""><strong>8 settembre 1943</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Proclamazione alla radio dell&#x27;armistizio. Fuga del Re e di Badoglio a Brindisi.
+Nasce il “Regno del Sud”. Sbarco a Salerno degli anglo-americani. I Tedeschi occupano l&#x27;Italia
+fino a Salerno. Circa 800.000 soldati italiani, lasciati senza direttive, vengono deportati nei Lager nazisti.</td></tr><tr id="97884458-f2ad-4403-b13f-c13da3f6ac74"><td id="Qc{?" class=""><strong>9 settembre 1943</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Nasce a Roma il C.L.N. (Comitato di Liberazione Nazionale) organismo politico della Resistenza italiana.</td></tr><tr id="8d74ab59-accb-462b-9f5c-0defd5055061"><td id="Qc{?" class=""><strong>12 settembre 1943</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Mussolini liberato dai Tedeschi a Campo Imperatore sul Gran Sasso.</td></tr><tr id="2afc0808-9682-4636-ad48-9919c3a11095"><td id="Qc{?" class=""><strong>23 settembre 1943</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Nasce la Repubblica Sociale Italiana (R.S.I.) con capitale a Salò.</td></tr><tr id="d9acb758-0e3d-4093-a8de-b14eca8bb272"><td id="Qc{?" class=""><strong>29 settembre 1943</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Firma a Malta dell&#x27;armistizio “lungo” (strumento di resa incondizionata dell&#x27;Italia).</td></tr><tr id="cd063346-7f70-4fc2-aef3-2518b8a3253b"><td id="Qc{?" class=""><strong>13 ottobre 1943</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">L&#x27;Italia dichiara guerra alla Germania. Formazione del Corpo di liberazione italiano.</td></tr><tr id="a0bf35ee-37ca-4014-9b78-753e782265bc"><td id="Qc{?" class=""><strong>gennaio 1944</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Gli Alleati sbarcano ad Anzio.</td></tr><tr id="853c930b-2872-4be3-a05c-6729d6fd966a"><td id="Qc{?" class=""><strong>marzo 1944</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Svolta di Salerno (Togliatti convince i membri del C.L.N. ad entrare nel governo Badoglio; la questione istituzionale viene rimandata alla fine della guerra).</td></tr><tr id="42b7593d-9abe-4951-919c-f39aafc943a5"><td id="Qc{?" class=""><strong>4 giugno 1944</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Liberazione di Roma. Formazione del governo del C.L.N. presieduto da Ivanoe Bonomi.</td></tr><tr id="24cdcf01-b6e0-43de-b7de-b395fbf09d67"><td id="Qc{?" class=""><strong>6 giugno 1944</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Sbarco degli Alleati in Normandia («Operazione Overlord»).</td></tr><tr id="781a83d5-6e72-4282-b501-579b41fb2d3d"><td id="Qc{?" class=""><strong>10 giugno 1944</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Comando unificato delle forze partigiane. Nasce il C.V.L.</td></tr><tr id="f92b367e-bf97-4d90-acea-917f2d3e5a53"><td id="Qc{?" class=""><strong>24 agosto 1944</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Liberazione di Parigi.</td></tr><tr id="303068a4-9cda-4b82-a937-3b987ee347f7"><td id="Qc{?" class=""><strong>set.-ott. 1944</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Le truppe sovietiche avanzano nell&#x27;Europa orientale.</td></tr><tr id="1fd13639-e3b1-4383-bf9a-6ae7cfba994f"><td id="Qc{?" class=""><strong>febbraio 1945</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Conferenza di Yalta.</td></tr><tr id="df053da4-8e93-46e1-9313-923795ef5e01"><td id="Qc{?" class=""><strong>25 aprile 1945</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Insurrezione generale proclamata dal C.L.N.A.I
+I partigiani liberano Milano</td></tr><tr id="1c2a184e-bd71-41e1-b5fe-80a5c2dd0244"><td id="Qc{?" class=""><strong>28 aprile 1945</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Fucilazione di Mussolini a Giulino di Mezzegra (Como)</td></tr><tr id="9290ed65-8f30-4813-adaa-143d6e19b4a0"><td id="Qc{?" class=""><strong>29 aprile 1945</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Resa dei tedeschi in Italia (effettiva dal 2 maggio).</td></tr><tr id="a8c64546-3bd9-428c-8aed-4a325bf42fc5"><td id="Qc{?" class=""><strong>30 aprile 1945</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Adolf Hitler si suicida nel suo bunker a Berlino.</td></tr><tr id="9e292be6-470c-4417-afd6-e45b1d3f870f"><td id="Qc{?" class=""><strong>2 maggio 1945</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">I Russi entrano a Berlino.</td></tr><tr id="48a2519f-9c8b-44cc-86c8-b6ac2e373f15"><td id="Qc{?" class=""><strong>8 maggio 1945</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Resa incondizionata della Germania.</td></tr><tr id="03a11e54-7551-44c2-8197-46701f182081"><td id="Qc{?" class=""><strong>17 lug.-2 ago. 1945</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Conferenza di Potsdam.</td></tr><tr id="67001f92-6504-4368-a1ff-ad819a166c2e"><td id="Qc{?" class=""><strong>6 agosto 1945</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Bomba atomica su Hiroshima (Giappone).</td></tr><tr id="72d56eb9-da5d-45d6-ac33-aebd381d4d92"><td id="Qc{?" class=""><strong>9 agosto 1945</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Bomba atomica su Nagasaki (Giappone).</td></tr><tr id="1639691e-c9ba-47b4-9620-c948ac39de5c"><td id="Qc{?" class=""><strong>2 settembre 1945</strong></td><td id="i@pI" class="" style="width:520.2307739257812px">Resa del Giappone. Fine della Seconda Guerra Mondiale.</td></tr></tbody></table><hr id="95b5e87e-a843-494d-b46d-3edb9013a0e9"/><h1 id="152084d1-158b-4142-a8a8-945bca748497" class="">La Seconda Guerra Mondiale in Sintesi</h1><figure id="31101deb-2a18-4524-8d2a-795f25ea9315" class="image"><a href="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20135.png"><img style="width:936px" src="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20135.png"/></a></figure><figure id="4cf5dba1-d67d-4a83-b909-dda7c5180f66" class="image"><a href="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20136.png"><img style="width:940px" src="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20136.png"/></a></figure><figure id="4d303aa6-cbd2-4d0c-b7f5-e1d97f231202" class="image"><a href="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20137.png"><img style="width:1036px" src="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20137.png"/></a></figure><figure id="33d6987e-543c-4871-ad4a-ffb2a7e5783e" class="image"><a href="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20138.png"><img style="width:976px" src="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20138.png"/></a></figure><figure id="43c4bcfd-2cd9-487d-8556-e4ea79b8ec49" class="image"><a href="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20139.png"><img style="width:998px" src="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20139.png"/></a></figure><figure id="aa10ccf4-bbc7-4435-9d9c-8bd81b09fe91" class="image"><a href="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20140.png"><img style="width:970px" src="../../Esame%20di%20Stato%20-%20Terza%20prova%20-%205Ai%20IIS%20Silva%20Ricci%20b95bc3258db24c59bbc78eba1beb1a1c/Untitled%20140.png"/></a></figure><p id="5818b5fb-a60f-489d-a544-c1d7be99673a" class="">
+</p></div></article></body></html>
